@@ -1,0 +1,3 @@
+- DONE upload initial logo
+- DOING ensure that logo shows up upon upload
+- TODO add "Ghost in the Patch" to the logo and upload
