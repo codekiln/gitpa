@@ -133,7 +133,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Set "home" as the home page and display multiple pages in the right sidebar:
  ;; :default-home {:page "home", :sidebar ["Page A" "Page B"]}
- :default-home {:page "Ghost in the Patch"}
+ :default-home {:page "GitP"}
 
  ;; Set the default location for storing notes.
  ;; Default value: "pages"
