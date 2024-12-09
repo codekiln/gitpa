@@ -29,5 +29,4 @@ jobs:
           folder: www
           clean: true
           clean-exclude: |
-            # CNAME
             .nojekyll
