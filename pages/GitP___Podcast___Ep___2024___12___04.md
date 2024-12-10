@@ -1,4 +1,5 @@
-# Ghost in the Patch Episode - [[2024-12-04 Wednesday]]
+# Ghost in the Patch Episode 2024-12-04
+date-created:: [[2024-12-04 Wednesday]]
 	- ![GitP.2024.12.04.mix.128kbps_CBR.mp3](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.mix.128kbps_CBR.mp3)
 - [[GitP/Microfreak/Patch]] files
 	- [GitP.2024.12.04.A.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.A.mfpz)
