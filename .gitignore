@@ -3,3 +3,40 @@ bak/
 pages-metadata.edn
 logseq/graphs-txid.edn
 logseq/.recycle/
+# 💻 Visual Studio Code-specific files
+.vscode/                 # Workspace settings, unless shared (e.g., settings.json)
+*.code-workspace         # Workspace configuration files
+
+# 🔥 Logs and debug files
+*.log                    # Log files
+logs/                    # Log directories
+
+# 🚀 Node.js or other environments
+node_modules/            # Dependencies (if applicable)
+dist/                    # Build output
+.out/                    # Other build output
+
+# ⚙️ OS-specific files
+.DS_Store                # macOS metadata
+Thumbs.db                # Windows thumbnail cache
+
+# 📜 Temporary files
+*.tmp                    # Temporary files
+*.temp                   # Temporary files
+*.swp                    # Swap files (e.g., from Vim)
+
+# 🛠 Development and build tools
+.env                     # Environment variables
+.env.*                   # Other environment variable files
+.idea/                   # JetBrains IDE files (if accidentally added)
+*.iml                    # JetBrains project files
+
+# 🚧 Miscellaneous
+*.bak                    # Backup files
+*.old                    # Old versions
+*.orig                   # Merge conflict files
+
+# 💡 Optional: Include shared VS Code settings if relevant
+# Uncomment this section if your team uses shared settings or tasks
+# !.vscode/settings.json  # Shared project settings
+# !.vscode/tasks.json     # Shared task configurations
