@@ -133,7 +133,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Set "home" as the home page and display multiple pages in the right sidebar:
  ;; :default-home {:page "home", :sidebar ["Page A" "Page B"]}
- :default-home {:page "GitP"}
+ :default-home {:page "Home"}
 
  ;; Set the default location for storing notes.
  ;; Default value: "pages"
@@ -300,7 +300,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["GitP"]
+ :favorites ["home" "ghostpatch" "GitP"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -315,7 +315,7 @@
 
  ;; Hide specific block properties.
  ;; Example usage:
- ;; :block-hidden-properties #{:public :icon}
+ :block-hidden-properties #{:public :icon}
 
  ;; Create a page for all properties.
  ;; Default value: true
@@ -423,4 +423,4 @@
  :journal/page-title-format "yyyy-MM-dd EEEE"
  :editor/logical-outdenting? true
  :feature/enable-timetracking? false
- :publishing/all-pages-public? true}
+ :publishing/all-pages-public? false}
