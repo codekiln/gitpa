@@ -1,4 +1,4 @@
-- DONE create an episode page under [[Home/Podcast/Ep]] for each episode
+- DONE create an episode page under [[Ceremony]] for each episode
   id:: 67581897-4c89-46e9-a788-53591efbf3ee
 - TODO import [[Ceremony/2024/11/16]]
 - TODO import [[Ceremony/2024/11/17]]
