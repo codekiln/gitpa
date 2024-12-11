@@ -5,7 +5,7 @@ date-created:: [[2024-12-04 Wednesday]]
 	- Messing with the [[GitP/Microfreak/Sequencer]]
 - ## Files
 	- [[GitP/Microfreak/Patch]] files
-		- [GitP.2024.12.04.A.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.A.mfpz)
+		- [GitP.2024.12.04.A.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.A.mfpz) - [Download GitP.2024.12.04.A.mfpz](https://raw.githubusercontent.com/codekiln/gitpa/main/assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.A.mfpz)
 		- [GitP.2024.12.04.B.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.B.mfpz)
 		- [GitP.2024.12.04.C.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.2024.12.04.C.mfpz)
 		- [GitP.24.12.04.D.mfpz](../assets/gitp/Podcast/Ep/2024/12/04/GitP.24.12.04.D.mfpz)
