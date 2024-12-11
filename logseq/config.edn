@@ -300,7 +300,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["home" "ghostpatch" "GitP"]
+ :favorites ["ghostpatch"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -315,7 +315,7 @@
 
  ;; Hide specific block properties.
  ;; Example usage:
- :block-hidden-properties #{:public :icon}
+ ;; :block-hidden-properties #{:public :icon}
 
  ;; Create a page for all properties.
  ;; Default value: true
