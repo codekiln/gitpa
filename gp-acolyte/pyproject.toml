@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gp-acolyte"
+version = "0.1.0"
+description = "A set of scripts for compiling the ghostpatch podcast and website"
+authors = ["Codekiln <codekliln@pm.me>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/codekiln/gitpa"
+repository = "https://github.com/codekiln/gitpa"
+documentation = "https://github.com/codekiln/gitpa"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+black = "^21.9b0"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
