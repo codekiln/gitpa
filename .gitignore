@@ -40,3 +40,4 @@ Thumbs.db                # Windows thumbnail cache
 # Uncomment this section if your team uses shared settings or tasks
 # !.vscode/settings.json  # Shared project settings
 # !.vscode/tasks.json     # Shared task configurations
+.python-version
