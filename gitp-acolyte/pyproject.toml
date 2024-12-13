@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gp-acolyte"
+name = "gitp-acolyte"
 version = "0.1.0"
 description = "A set of scripts for compiling the ghostpatch podcast and website"
 authors = ["Codekiln <codekliln@pm.me>"]
