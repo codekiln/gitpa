@@ -133,7 +133,7 @@
  ;; :default-home {:page "Jun 3rd, 2021"}
  ;; 3. Set "home" as the home page and display multiple pages in the right sidebar:
  ;; :default-home {:page "home", :sidebar ["Page A" "Page B"]}
- :default-home {:page "Ghostpatch"}
+ :default-home {:page "Ghost in the Patch"}
 
  ;; Set the default location for storing notes.
  ;; Default value: "pages"
@@ -300,7 +300,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["ghostpatch"]
+ :favorites ["ghost in the patch" "ghostpatch"]
 
  ;; Set flashcards interval.
  ;; Expected value:
