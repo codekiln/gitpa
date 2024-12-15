@@ -1,1 +1,1 @@
-# gp-acolyte
+# gitp-acolyte

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "gitp-acolyte"
 version = "0.1.0"
-description = "A set of scripts for compiling the ghostpatch podcast and website"
+description = "A set of scripts for compiling the Ghost in the Patch podcast and website"
 authors = ["Codekiln <codekliln@pm.me>"]
 license = "MIT"
 readme = "README.md"
