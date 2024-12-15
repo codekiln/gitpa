@@ -300,7 +300,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["ghost in the patch" "ghostpatch"]
+ :favorites ["acolyte" "ghost in the patch" "ghostpatch"]
 
  ;; Set flashcards interval.
  ;; Expected value:

@@ -1,6 +1,19 @@
 # `gitp-acolyte`
 - Python package that assists in conducting ceremonies and making offerings
-- [[Acolyte/Reference]] - [[Reference]] documentation.
-- [[Acolyte/How To]] - [[How To Guide]]s for using `gitp-acolyte`
-- [[Acolyte/Tutorial]] - [[Tutorial]]s for learning `gitp-acolyte`
-- [[Acolyte/Concept]] - [[Conceptual Guide]]s for understanding `gitp-acolyte`
+- ## [[Acolyte/Reference]] - [[Reference]] documentation
+	- [[Acolyte/Reference/gitp_acolyte]] **package root**
+	- [[Acolyte/Reference/gitp_acolyte/ceremonial]] **tools for creating [[Ceremonies]]**
+	- [[Acolyte/Reference/gitp_acolyte/ceremonial/grimoire]] **spellbook for conducting [[Ceremonies]]**
+		- move files from Zoom H5 to Ableton project dir
+		- create Ableton Project dir
+		- audio processing of episode
+		- transcription
+		- creating episode yaml
+	- [[Acolyte/Reference/gitp_acolyte/ceremonial/offering]] **tools for converting conducted [[Ceremonies]] into offerings to the spirits**
+		- convert episode yml into RSS XML
+- ## [[Acolyte/How To]] - [[How To Guide]]s for using `gitp-acolyte`
+	-
+- ## [[Acolyte/Tutorial]] - [[Tutorial]]s for learning `gitp-acolyte`
+	-
+- ## [[Acolyte/Concept]] - [[Conceptual Guide]]s for understanding `gitp-acolyte`
+	-
