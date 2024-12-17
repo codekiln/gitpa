@@ -2,6 +2,7 @@ from pathlib import Path
 import argparse
 from datetime import datetime
 import yaml
+import logging
 
 RECORDINGS_ROOT_FOLDER = Path('~/Documents/ableton/GitP')
 
@@ -13,15 +14,17 @@ DATE_FORMAT = '%Y-%m-%d'
 SHORT_DATE_FORMAT = '%y.%m.%d'
 EPISODE_YAML_FILENAME = 'episode.yml'
 
+logging.basicConfig(level=logging.DEBUG)
+
 def validate_directories():
     directories = [RECORDINGS_ROOT_FOLDER.expanduser(), LOGSEQ_FOLDER, LOGSEQ_ASSETS_FOLDER]
     
     for directory in directories:
         if directory.exists() and directory.is_dir():
-            # print(f"Directory {directory} exists and is accessible.")
+            # logging.debug(f"Directory {directory} exists and is accessible.")
             pass
         else:
-            print(f"Directory {directory} does not exist or is not accessible.")
+            logging.warning(f"Directory {directory} does not exist or is not accessible.")
 
 def define_argparse_that_takes_a_date():
     """
@@ -126,16 +129,16 @@ if __name__ == "__main__":
     validate_directories()
     args = define_argparse_that_takes_a_date()
     episode_date = args.date
-    print(f"Episode date: {episode_date}")
+    logging.debug(f"Episode date: {episode_date}")
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(episode_date)
-    print(f"Path to episode recording directory: {path_to_episode_recording_dir}")
+    logging.debug(f"Path to episode recording directory: {path_to_episode_recording_dir}")
     episode_recording_dir_exists = episode_recording_dir_exists(episode_date)
-    print(f"Episode recording directory exists: {episode_recording_dir_exists}")
+    logging.debug(f"Episode recording directory exists: {episode_recording_dir_exists}")
     path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
-    print(f"Path to episode publishing directory: {path_to_episode_publishing_dir}")
+    logging.debug(f"Path to episode publishing directory: {path_to_episode_publishing_dir}")
     episode_publishing_dir_exists = episode_publishing_dir_exists(episode_date)
-    print(f"Episode publishing directory exists: {episode_publishing_dir_exists}")
+    logging.debug(f"Episode publishing directory exists: {episode_publishing_dir_exists}")
     episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date)
-    print(f"Episode publishing directory created: {episode_publishing_dir_created}")
+    logging.debug(f"Episode publishing directory created: {episode_publishing_dir_created}")
     episode_yaml_created = ensure_episode_yaml(episode_date)
-    print(f"Episode YAML created or updated: {episode_yaml_created}")
+    logging.debug(f"Episode YAML created or updated: {episode_yaml_created}")
