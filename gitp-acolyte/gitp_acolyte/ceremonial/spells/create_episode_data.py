@@ -1,6 +1,7 @@
 from pathlib import Path
 import argparse
 from datetime import datetime
+import yaml
 
 RECORDINGS_ROOT_FOLDER = Path('~/Documents/ableton/GitP')
 
@@ -60,7 +61,59 @@ def episode_recording_dir_exists(episode_date):
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(episode_date)
     return path_to_episode_recording_dir.exists()
 
+def construct_path_to_episode_publishing_dir(episode_date):
+    """
+    Constructs the path to the episode publishing directory.
+    """
+    year = episode_date.strftime('%Y')
+    month = episode_date.strftime('%m')
+    day = episode_date.strftime('%d')
+    episode_publishing_dir = LOGSEQ_ASSETS_FOLDER / "Ceremony" / year / month / day
+    return episode_publishing_dir
 
+def episode_publishing_dir_exists(episode_date):
+    """
+    Checks if the episode publishing directory exists.
+    """
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    return path_to_episode_publishing_dir.exists()
+
+def ensure_episode_publishing_dir(episode_date):
+    """
+    Ensures the episode publishing directory exists.
+    Returns True if the directory was created, False if it already existed.
+    """
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    if not path_to_episode_publishing_dir.exists():
+        path_to_episode_publishing_dir.mkdir(parents=True, exist_ok=True)
+        return True
+    return False
+
+def ensure_episode_yaml(episode_date):
+    """
+    Ensures that episode.yml exists in the episode publishing directory
+    and contains a recording_date following DATE_FORMAT.
+    """
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    episode_yaml_path = path_to_episode_publishing_dir / 'episode.yml'
+    
+    if not episode_yaml_path.exists():
+        episode_data = {
+            'recording_date': episode_date.strftime(DATE_FORMAT)
+        }
+        with episode_yaml_path.open('w') as file:
+            yaml.dump(episode_data, file)
+        return True
+    else:
+        with episode_yaml_path.open('r') as file:
+            episode_data = yaml.safe_load(file)
+        
+        if 'recording_date' not in episode_data or episode_data['recording_date'] != episode_date.strftime(DATE_FORMAT):
+            episode_data['recording_date'] = episode_date.strftime(DATE_FORMAT)
+            with episode_yaml_path.open('w') as file:
+                yaml.dump(episode_data, file)
+            return True
+    return False
 
 if __name__ == "__main__":
     validate_directories()
@@ -71,3 +124,11 @@ if __name__ == "__main__":
     print(f"Path to episode recording directory: {path_to_episode_recording_dir}")
     episode_recording_dir_exists = episode_recording_dir_exists(episode_date)
     print(f"Episode recording directory exists: {episode_recording_dir_exists}")
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    print(f"Path to episode publishing directory: {path_to_episode_publishing_dir}")
+    episode_publishing_dir_exists = episode_publishing_dir_exists(episode_date)
+    print(f"Episode publishing directory exists: {episode_publishing_dir_exists}")
+    episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date)
+    print(f"Episode publishing directory created: {episode_publishing_dir_created}")
+    episode_yaml_created = ensure_episode_yaml(episode_date)
+    print(f"Episode YAML created or updated: {episode_yaml_created}")
