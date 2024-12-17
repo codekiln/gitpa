@@ -1,7 +1,8 @@
-# `gitp-acolyte`
-- Python package that assists in conducting ceremonies and making offerings
+# Python package `gitp-acolyte` documentation
+- assists in conducting ceremonies and making offerings
 - ## [[Acolyte/Reference]] - [[Reference]] documentation
-	- [[Acolyte/Reference/gitp_acolyte]] **package root**
+	- [[Acolyte/How To/acolyte-cli]] a command line application implemented in [[Acolyte/Reference/gitp_acolyte]] and its sub-packages
+	- [[Acolyte/Reference/gitp_acolyte]] **python package root**
 	- [[Acolyte/Reference/gitp_acolyte/ceremonial]] **tools for creating [[Ceremonies]]**
 	- [[Acolyte/Reference/gitp_acolyte/ceremonial/grimoire]] **spellbook for conducting [[Ceremonies]]**
 		- move files from Zoom H5 to Ableton project dir
@@ -16,4 +17,4 @@
 - ## [[Acolyte/Tutorial]] - [[Tutorial]]s for learning `gitp-acolyte`
 	-
 - ## [[Acolyte/Concept]] - [[Conceptual Guide]]s for understanding `gitp-acolyte`
-	-
+	- [[Acolyte/Concept/acolyte-cli Overview]]
