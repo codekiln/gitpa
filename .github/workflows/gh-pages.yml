@@ -16,6 +16,7 @@ jobs:
       - name: Logseq Publish
         uses: logseq/publish-spa@main
         with:
+          graph-directory: gitp-garden
           output-directory: www
           accent-color: indigo
 
