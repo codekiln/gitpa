@@ -89,13 +89,19 @@ def ensure_episode_publishing_dir(episode_date):
         return True
     return False
 
+def path_to_episode_publishing_yml(episode_date):
+    """
+    Constructs the path to the episode.yml file in the episode publishing directory.
+    """
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    return path_to_episode_publishing_dir / 'episode.yml'
+
 def ensure_episode_yaml(episode_date):
     """
     Ensures that episode.yml exists in the episode publishing directory
     and contains a recording_date following DATE_FORMAT.
     """
-    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
-    episode_yaml_path = path_to_episode_publishing_dir / 'episode.yml'
+    episode_yaml_path = path_to_episode_publishing_yml(episode_date)
     
     if not episode_yaml_path.exists():
         episode_data = {
