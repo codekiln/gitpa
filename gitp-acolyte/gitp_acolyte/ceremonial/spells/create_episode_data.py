@@ -11,6 +11,7 @@ LOGSEQ_ASSETS_FOLDER = LOGSEQ_FOLDER / 'assets'
 
 DATE_FORMAT = '%Y-%m-%d'
 SHORT_DATE_FORMAT = '%y.%m.%d'
+EPISODE_YAML_FILENAME = 'episode.yml'
 
 def validate_directories():
     directories = [RECORDINGS_ROOT_FOLDER.expanduser(), LOGSEQ_FOLDER, LOGSEQ_ASSETS_FOLDER]
@@ -94,7 +95,7 @@ def path_to_episode_publishing_yml(episode_date):
     Constructs the path to the episode.yml file in the episode publishing directory.
     """
     path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
-    return path_to_episode_publishing_dir / 'episode.yml'
+    return path_to_episode_publishing_dir / EPISODE_YAML_FILENAME
 
 def ensure_episode_yaml(episode_date):
     """
