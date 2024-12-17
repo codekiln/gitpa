@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime
 import yaml
 import logging
+import coloredlogs
 
 RECORDINGS_ROOT_FOLDER = Path('~/Documents/ableton/GitP')
 
@@ -15,14 +16,8 @@ SHORT_DATE_FORMAT = '%y.%m.%d'
 EPISODE_YAML_FILENAME = 'episode.yml'
 
 # Configure logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler()
-    ]
-)
 logger = logging.getLogger(__name__)
+coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 def validate_directories():
     directories = [RECORDINGS_ROOT_FOLDER.expanduser(), LOGSEQ_FOLDER, LOGSEQ_ASSETS_FOLDER]

@@ -12,6 +12,7 @@ documentation = "https://github.com/codekiln/gitpa"
 [tool.poetry.dependencies]
 python = "^3.12"
 pyyaml = "^6.0.2"
+coloredlogs = "^15.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
