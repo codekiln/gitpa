@@ -1,5 +1,5 @@
 
-public:: True
+public:: true
 date-created:: [[2024-12-04 Wed]]
 type:: [[Podcast/Episode]]
 
