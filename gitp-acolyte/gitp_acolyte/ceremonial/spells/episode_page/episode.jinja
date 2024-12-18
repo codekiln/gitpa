@@ -1,19 +1,21 @@
 {# episode.jinja #}
-
+{%- macro download_line(file, base_url, date) -%}
+[Download {{ file }}]({{ base_url }}{{ date|replace('-', '/') }}/{{ file }})
+{%- endmacro -%}
 public:: {{ public | lower }}
 date-created:: [[{{ date_created }}]]
 type:: [[{{ type }}]]
 
 - # {{ episode_title }} {{ episode_date }}
-    - ![{{ audio_file }}](../assets/Ceremony/{{ episode_date|replace('-', '/') }}/{{ audio_file }})
+	- ![{{ audio_file }}](../assets/Ceremony/{{ episode_date|replace('-', '/') }}/{{ audio_file }})
 - ## Description
-    - {{ description }}
+	- {{ description }}
 - ## Files
-    - [[Microfreak/Patch]] files
-{% for patch in patches %}
-        - [Download {{ patch }}]({{ assets_base_url }}{{ episode_date|replace('-', '/') }}/{{ patch }})
-{% endfor %}
-    - [[Microfreak/MIDI]] files
-{% for midi in midi_files %}
-        - [Download {{ midi }}]({{ assets_base_url }}{{ episode_date|replace('-', '/') }}/{{ midi }})
-{% endfor %}
+	- [[Microfreak/Patch]] files
+{%- for patch in patches %}
+		- {{ download_line(patch, assets_base_url, episode_date) }}
+{%- endfor %}
+	- [[Microfreak/MIDI]] files
+{%- for midi in midi_files %}
+		- {{ download_line(midi, assets_base_url, episode_date) }}
+{%- endfor %}
