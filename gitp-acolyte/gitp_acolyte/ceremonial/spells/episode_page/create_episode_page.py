@@ -9,14 +9,14 @@ logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 def main():
-    # Determine the path to episode.yml
+    # Determine the path to reference_episode.yml
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    episode_yml_path = os.path.join(script_dir, 'episode.yml')
+    reference_yml_path = os.path.join(script_dir, 'reference_episode.yml')
 
-    # Load episode.yml
-    with open(episode_yml_path, 'r') as f:
+    # Load reference_episode.yml
+    with open(reference_yml_path, 'r') as f:
         data = yaml.safe_load(f)
-        logger.debug("Loaded episode.yml")
+        logger.debug("Loaded reference_episode.yml")
 
     # Setup Jinja environment
     env = Environment(loader=FileSystemLoader(script_dir))
