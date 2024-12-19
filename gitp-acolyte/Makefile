@@ -16,3 +16,13 @@ create-ep-page:
 		exit 1; \
 	fi
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_page.create_episode_page $(epdate)
+
+# create-ep-page-force: Generates an episode page for the given date, forcing the creation of the page.
+# Usage:
+#   epdate=2024-12-05 make create-ep-page
+create-ep-page-force: 
+	@if [ -z "$(epdate)" ]; then \
+		echo "Error: epdate is not set. Usage: epdate=YYYY-MM-DD make create-ep-page"; \
+		exit 1; \
+	fi
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_page.create_episode_page $(epdate) --force
