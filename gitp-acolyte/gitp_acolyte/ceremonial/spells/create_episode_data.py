@@ -106,13 +106,13 @@ def path_to_episode_publishing_yml(episode_date):
 def ensure_episode_yaml(episode_date):
     """
     Ensures that episode.yml exists in the episode publishing directory
-    and contains a recording_date following DATE_FORMAT.
+    and contains an episode_date following DATE_FORMAT.
     """
     episode_yaml_path = path_to_episode_publishing_yml(episode_date)
     
     if not episode_yaml_path.exists():
         episode_data = {
-            'recording_date': episode_date.strftime(DATE_FORMAT)
+            'episode_date': episode_date.strftime(DATE_FORMAT)
         }
         with episode_yaml_path.open('w') as file:
             yaml.dump(episode_data, file)
@@ -121,8 +121,8 @@ def ensure_episode_yaml(episode_date):
         with episode_yaml_path.open('r') as file:
             episode_data = yaml.safe_load(file)
         
-        if 'recording_date' not in episode_data or episode_data['recording_date'] != episode_date.strftime(DATE_FORMAT):
-            episode_data['recording_date'] = episode_date.strftime(DATE_FORMAT)
+        if 'episode_date' not in episode_data or episode_data['episode_date'] != episode_date.strftime(DATE_FORMAT):
+            episode_data['episode_date'] = episode_date.strftime(DATE_FORMAT)
             with episode_yaml_path.open('w') as file:
                 yaml.dump(episode_data, file)
             return True
