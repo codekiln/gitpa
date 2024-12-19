@@ -85,7 +85,7 @@ def main():
         # Load episode YAML
         with open(episode_yaml_path, 'r') as f:
             data = yaml.safe_load(f)
-            logger.debug(f"Loaded episode YAML for date {episode_date}")
+            logger.debug(f"Loaded episode YAML for date {episode_date} from {episode_yaml_path}")
 
     # Setup Jinja environment
     env = Environment(loader=FileSystemLoader(script_dir))
