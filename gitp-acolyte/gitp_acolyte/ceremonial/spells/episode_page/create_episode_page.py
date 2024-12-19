@@ -11,8 +11,6 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-RECORDINGS_ROOT_FOLDER = Path('~/Documents/ableton/GitP')
-
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent
 LOGSEQ_FOLDER = REPO_ROOT / 'gitp-garden'
 LOGSEQ_ASSETS_FOLDER = LOGSEQ_FOLDER / 'assets'
@@ -38,9 +36,21 @@ def get_argparse_args():
     )
     return parser.parse_args()
 
+def get_episode_page_filename(episode_date):
+    """
+    Constructs the episode page filename.
+    """
+    return f"Ceremony___{episode_date.strftime('%Y')}___{episode_date.strftime('%m')}___{episode_date.strftime('%d')}.md"
+
+def get_episode_page_path(episode_date):
+    """
+    Constructs the full path to the episode page.
+    """
+    filename = get_episode_page_filename(episode_date)
+    return LOGSEQ_PAGES_FOLDER / filename
+
 def main():
     args = get_argparse_args()
-
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     if args.reference:
@@ -50,7 +60,13 @@ def main():
     else:
         if not args.date:
             raise ValueError("Date is required if --reference is not supplied.")
-        raise NotImplementedError("Non-reference mode is not implemented yet.")
+        
+        episode_date = args.date
+        output_file = get_episode_page_path(episode_date)
+        
+        if output_file.exists():
+            logger.warning(f"Episode page {output_file} already exists.")
+            exit(1)
 
     # Load reference_episode.yml
     with open(reference_yml_path, 'r') as f:
