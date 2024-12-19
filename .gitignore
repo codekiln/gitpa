@@ -41,3 +41,7 @@ Thumbs.db                # Windows thumbnail cache
 # !.vscode/settings.json  # Shared project settings
 # !.vscode/tasks.json     # Shared task configurations
 .python-version
+
+# 🐍 Python cache files
+__pycache__/             # Python bytecode cache directories
+*.py[cod]                # Python bytecode files
