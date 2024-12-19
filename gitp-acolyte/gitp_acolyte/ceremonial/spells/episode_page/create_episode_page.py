@@ -13,7 +13,7 @@ from gitp_acolyte.ceremonial.spells.create_episode_data import (
 
 # Configure logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent
 LOGSEQ_FOLDER = REPO_ROOT / 'gitp-garden'
