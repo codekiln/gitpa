@@ -6,6 +6,10 @@ import coloredlogs
 import argparse
 from datetime import datetime
 from pathlib import Path
+from gitp_acolyte.ceremonial.spells.create_episode_data import (
+    path_to_episode_publishing_yml,
+    ensure_episode_yaml
+)
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -27,6 +31,11 @@ def get_argparse_args():
         '--reference',
         action='store_true',
         help='Use reference_episode.yml and generate reference_output.md'
+    )
+    parser.add_argument(
+        '--force',
+        action='store_true',
+        help='Force overwrite if the episode page already exists.'
     )
     parser.add_argument(
         'date',
@@ -64,14 +73,19 @@ def main():
         episode_date = args.date
         output_file = get_episode_page_path(episode_date)
         
-        if output_file.exists():
-            logger.warning(f"Episode page {output_file} already exists.")
+        if output_file.exists() and not args.force:
+            logger.warning(f"Episode page {output_file} already exists. Use --force to overwrite.")
+            exit(1)
+        
+        episode_yaml_path = path_to_episode_publishing_yml(episode_date)
+        if not episode_yaml_path.exists():
+            logger.warning(f"Episode YAML {episode_yaml_path} does not exist.")
             exit(1)
 
-    # Load reference_episode.yml
-    with open(reference_yml_path, 'r') as f:
-        data = yaml.safe_load(f)
-        logger.debug("Loaded reference_episode.yml")
+        # Load episode YAML
+        with open(episode_yaml_path, 'r') as f:
+            data = yaml.safe_load(f)
+            logger.debug(f"Loaded episode YAML for date {episode_date}")
 
     # Setup Jinja environment
     env = Environment(loader=FileSystemLoader(script_dir))
