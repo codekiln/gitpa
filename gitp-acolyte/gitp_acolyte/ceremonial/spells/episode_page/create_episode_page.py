@@ -58,14 +58,33 @@ def get_episode_page_path(episode_date):
     filename = get_episode_page_filename(episode_date)
     return LOGSEQ_PAGES_FOLDER / filename
 
+def load_episode_yaml(episode_yaml_path):
+    """
+    Loads the episode YAML data from the given path.
+    """
+    with open(episode_yaml_path, 'r') as f:
+        data = yaml.safe_load(f)
+        # Derive date_created from episode_date to avoid duplication
+        if 'episode_date' in data:
+            episode_dt = datetime.strptime(data['episode_date'], '%Y-%m-%d')
+            data['date_created'] = episode_dt.strftime('%Y-%m-%d %a')
+        else:
+            logger.error("episode_date not found in YAML.")
+            exit(1)
+
+        logger.debug(f"Loaded episode YAML for date {episode_dt} from {episode_yaml_path}")
+        logger.debug(f"Episode Data: {data}")
+    return data
+
 def main():
     args = get_argparse_args()
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     if args.reference:
         # Determine the path to reference_episode.yml
-        reference_yml_path = os.path.join(script_dir, 'reference_episode.yml')
+        episode_yaml_path = os.path.join(script_dir, 'reference_episode.yml')
         output_file = os.path.join(script_dir, 'reference_output.md')
+        episode_date = None
     else:
         if not args.date:
             raise ValueError("Date is required if --reference is not supplied.")
@@ -82,11 +101,8 @@ def main():
             logger.warning(f"Episode YAML {episode_yaml_path} does not exist.")
             exit(1)
 
-        # Load episode YAML
-        with open(episode_yaml_path, 'r') as f:
-            data = yaml.safe_load(f)
-            logger.debug(f"Loaded episode YAML for date {episode_date} from {episode_yaml_path}")
-            logger.debug(f"Episode Data: {data}")
+    # Load episode YAML
+    data = load_episode_yaml(episode_yaml_path)
 
     # Setup Jinja environment
     env = Environment(loader=FileSystemLoader(script_dir))
