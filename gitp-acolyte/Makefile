@@ -17,6 +17,13 @@ create-ep-page:
 	fi
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_page.create_episode_page $(epdate)
 
+
+# create-ref-ep-page: Generates an episode page for the given date.
+# Usage:
+#   make create-ref-ep-page
+create-ref-ep-page: 
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_page.create_episode_page --reference
+
 # create-ep-page-force: Generates an episode page for the given date, forcing the creation of the page.
 # Usage:
 #   epdate=2024-12-05 make create-ep-page
