@@ -2,11 +2,11 @@
 {%- macro download_line(file, base_url, date) -%}
 [Download {{ file }}]({{ base_url }}{{ date|replace('-', '/') }}/{{ file }})
 {%- endmacro -%}
-public:: {{ public | lower }}
+public:: true
 date-created:: [[{{ date_created }}]]
-type:: [[{{ type }}]]
+type:: [[Podcast/Episode]]
 
-- # {{ episode_title }} {{ episode_date }}
+- # {{ episode_title }} - {{ episode_date }}
 	- ![{{ audio_file }}](../assets/Ceremony/{{ episode_date|replace('-', '/') }}/{{ audio_file }})
 - ## Description
 	- {{ description }}
