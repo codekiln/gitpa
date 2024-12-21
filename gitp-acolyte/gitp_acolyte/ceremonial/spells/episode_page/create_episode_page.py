@@ -6,6 +6,15 @@ import coloredlogs
 import argparse
 from datetime import datetime
 from pathlib import Path
+from gitp_acolyte.constants import (
+    REPO_ROOT,
+    LOGSEQ_FOLDER,
+    LOGSEQ_ASSETS_FOLDER,
+    LOGSEQ_PAGES_FOLDER,
+    DATE_FORMAT,
+    SHORT_DATE_FORMAT,
+    EPISODE_YAML_FILENAME
+)
 from gitp_acolyte.ceremonial.spells.create_episode_data import (
     path_to_episode_publishing_yml,
     ensure_episode_yaml
@@ -14,16 +23,6 @@ from gitp_acolyte.ceremonial.spells.create_episode_data import (
 # Configure logging
 logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
-
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent.parent
-LOGSEQ_FOLDER = REPO_ROOT / 'gitp-garden'
-LOGSEQ_ASSETS_FOLDER = LOGSEQ_FOLDER / 'assets'
-LOGSEQ_PAGES_FOLDER = LOGSEQ_FOLDER / 'pages'
-
-DATE_FORMAT = '%Y-%m-%d'
-SHORT_DATE_FORMAT = '%y.%m.%d'
-EPISODE_YAML_FILENAME = 'episode.yml'
-
 
 def get_argparse_args():
     parser = argparse.ArgumentParser(description="Generate episode page.")

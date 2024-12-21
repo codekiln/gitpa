@@ -4,16 +4,15 @@ from datetime import datetime
 import yaml
 import logging
 import coloredlogs
-
-RECORDINGS_ROOT_FOLDER = Path('~/Documents/ableton/GitP')
-
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent.parent
-LOGSEQ_FOLDER = REPO_ROOT / 'gitp-garden'
-LOGSEQ_ASSETS_FOLDER = LOGSEQ_FOLDER / 'assets'
-
-DATE_FORMAT = '%Y-%m-%d'
-SHORT_DATE_FORMAT = '%y.%m.%d'
-EPISODE_YAML_FILENAME = 'episode.yml'
+from gitp_acolyte.constants import (
+    RECORDINGS_ROOT_FOLDER,
+    REPO_ROOT,
+    LOGSEQ_FOLDER,
+    LOGSEQ_ASSETS_FOLDER,
+    DATE_FORMAT,
+    SHORT_DATE_FORMAT,
+    EPISODE_YAML_FILENAME
+)
 
 # Configure logging
 logger = logging.getLogger(__name__)
