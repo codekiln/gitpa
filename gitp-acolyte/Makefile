@@ -1,4 +1,4 @@
-.PHONY: pyclean create-ep-page
+.PHONY: pyclean create-ep-page create-ep-data create-ep-data-force
 
 export PYTHONDONTWRITEBYTECODE=1
 
@@ -33,3 +33,14 @@ create-ep-page-force:
 		exit 1; \
 	fi
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_page.create_episode_page $(epdate) --force
+
+# create-ep-data: Generates episode data for the given date.
+# Usage:
+#   epdate=2024-12-05 make create-ep-data
+create-ep-data:
+	@if [ -z "$(epdate)" ]; then \
+		echo "Error: epdate is not set. Usage: epdate=YYYY-MM-DD make create-ep-data"; \
+		exit 1; \
+	fi
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.create $(epdate)
+
