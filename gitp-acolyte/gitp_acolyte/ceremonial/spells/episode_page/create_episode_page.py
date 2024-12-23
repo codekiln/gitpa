@@ -15,7 +15,7 @@ from gitp_acolyte.constants import (
     SHORT_DATE_FORMAT,
     EPISODE_YAML_FILENAME
 )
-from gitp_acolyte.ceremonial.spells.create_episode_data import (
+from gitp_acolyte.ceremonial.spells.episode_data.create import (
     path_to_episode_publishing_yml,
     ensure_episode_yaml
 )
@@ -81,8 +81,8 @@ def main():
 
     if args.reference:
         # Determine the path to reference_episode.yml
-        episode_yaml_path = os.path.join(script_dir, 'reference_episode.yml')
-        output_file = os.path.join(script_dir, 'reference_output.md')
+        episode_yaml_path = os.path.join(script_dir, '../episode_reference/reference_episode.yml')
+        output_file = os.path.join(script_dir, '../episode_reference/reference_output.md')
         episode_date = None
     else:
         if not args.date:
