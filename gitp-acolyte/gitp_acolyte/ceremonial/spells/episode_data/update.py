@@ -1,3 +1,0 @@
-"""
-The purpose of 
-"""
