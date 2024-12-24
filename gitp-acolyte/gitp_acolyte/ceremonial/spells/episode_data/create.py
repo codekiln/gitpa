@@ -142,7 +142,6 @@ def ensure_episode_yaml(episode_date, args):
             return True
     return False
 
-
 def recording_dir_exists(episode_date, args):
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(episode_date)
     logger.debug(f"Path to episode recording directory: {path_to_episode_recording_dir}")
@@ -171,6 +170,18 @@ def episode_publishing_dir_exists(episode_date, args) -> tuple[Path, bool]:
         return path_to_episode_publishing_dir, False
     return path_to_episode_publishing_dir, True
 
+def ensure_episode_dir_and_yaml_exists(episode_date, args):
+    """
+    Ensures the episode publishing directory and episode.yml file exist.
+    """
+    ep_pub_dir, ep_pub_dir_exists = episode_publishing_dir_exists(episode_date, args)
+    
+    if not ep_pub_dir_exists:
+        episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date, args)
+    
+    episode_yaml_created = ensure_episode_yaml(episode_date, args)
+    logger.debug(f"Episode YAML created or updated: {episode_yaml_created}")
+
 def main():
     validate_directories()
     args = define_args()
@@ -186,13 +197,7 @@ def main():
     # eventually, maybe call a script to create the recording dir
     recording_dir_exists(episode_date, args)
 
-    ep_pub_dir, ep_pub_dir_exists = episode_publishing_dir_exists(episode_date, args)
-    
-    if not ep_pub_dir_exists:
-        episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date, args)
-    
-    episode_yaml_created = ensure_episode_yaml(episode_date, args)
-    logger.debug(f"Episode YAML created or updated: {episode_yaml_created}")
+    ensure_episode_dir_and_yaml_exists(episode_date, args)
 
 if __name__ == "__main__":
     main()
