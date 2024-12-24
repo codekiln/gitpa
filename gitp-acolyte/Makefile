@@ -47,6 +47,12 @@ create-ep-data:
 create-ep-data-reference:
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.create --reference
 
+# create-ep-data-ref-recreate: Generates episode data for the reference date, recreating the episode.yml file if it already exists.
+# Usage:
+#   make create-ep-data-ref-recreate
+create-ep-data-ref-recreate:
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.create --reference --recreate
+
 # update-ep-data-file-attrs-reference: Updates the file attributes for the reference episode.
 # Usage:
 #   make update-ep-data-file-attrs-reference

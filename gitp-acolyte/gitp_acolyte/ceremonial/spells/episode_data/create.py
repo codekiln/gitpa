@@ -48,6 +48,11 @@ def define_args():
         action='store_true',
         help='Use the reference episode date.'
     )
+    parser.add_argument(
+        '--recreate',
+        action='store_true',
+        help='Recreate the episode.yml file if it already exists.'
+    )
     args = parser.parse_args()
     return args
 
@@ -115,6 +120,10 @@ def ensure_episode_yaml(episode_date, args):
     """
     episode_yaml_path = path_to_episode_publishing_yml(episode_date, args)
     
+    if episode_yaml_path.exists() and args.recreate:
+        episode_yaml_path.unlink()
+        logger.info(f"--recreate: Removed existing episode.yml file: {episode_yaml_path}")
+
     if not episode_yaml_path.exists():
         episode_data = {
             'episode_date': episode_date.strftime(DATE_FORMAT)
