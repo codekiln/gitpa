@@ -1,6 +1,4 @@
 from pathlib import Path
-import argparse
-from datetime import datetime
 import yaml
 import logging
 import coloredlogs
@@ -15,6 +13,7 @@ from gitp_acolyte.constants import (
     SHORT_DATE_FORMAT,
 )
 from gitp_acolyte.ceremonial.spells.episode_reference.constants import REFERENCE_EPISODE_DATE
+from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -33,28 +32,9 @@ def validate_directories():
 def define_args():
     """
     Defines argparse arguments.
-    The default date should be today.
     """
-    parser = argparse.ArgumentParser(description="Process a date.")
-    parser.add_argument(
-        'date',
-        type=lambda s: datetime.strptime(s, DATE_FORMAT),
-        default=datetime.today().strftime(DATE_FORMAT),
-        nargs='?',
-        help=f'Date in {DATE_FORMAT} format. Default is today.'
-    )
-    parser.add_argument(
-        '--reference',
-        action='store_true',
-        help='Use the reference episode date.'
-    )
-    parser.add_argument(
-        '--recreate',
-        action='store_true',
-        help='Recreate the episode.yml file if it already exists.'
-    )
-    args = parser.parse_args()
-    return args
+    parser = define_common_args()
+    return parser.parse_args()
 
 def construct_episode_recording_dir_name(episode_date):
     """
@@ -182,18 +162,14 @@ def ensure_episode_dir_and_yaml_exists(episode_date, args) -> tuple[Path, Path]:
     if not ep_pub_dir_exists:
         episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date, args)
     
-    episode_yaml_created = ensure_episode_yaml(episode_date, args):
+    episode_yaml_created = ensure_episode_yaml(episode_date, args)
     logger.debug(f"Episode YAML created or updated: {episode_yaml_created}")
     return ep_pub_dir, path_to_episode_publishing_yml(episode_date, args)
 
 def main():
     validate_directories()
     args = define_args()
-    if args.reference:
-        episode_date = REFERENCE_EPISODE_DATE
-        logger.warning(f"Using reference episode.")
-    else:
-        episode_date = args.date
+    episode_date = get_episode_date(args)
     logger.debug(f"Episode date: {episode_date}")
 
     # check the episode recording dir
