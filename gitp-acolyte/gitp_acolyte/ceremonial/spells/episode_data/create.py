@@ -170,17 +170,21 @@ def episode_publishing_dir_exists(episode_date, args) -> tuple[Path, bool]:
         return path_to_episode_publishing_dir, False
     return path_to_episode_publishing_dir, True
 
-def ensure_episode_dir_and_yaml_exists(episode_date, args):
+def ensure_episode_dir_and_yaml_exists(episode_date, args) -> tuple[Path, Path]:
     """
     Ensures the episode publishing directory and episode.yml file exist.
+    Returns a tuple of:
+    - the path to the episode publishing directory
+    - the path to the episode.yml file
     """
     ep_pub_dir, ep_pub_dir_exists = episode_publishing_dir_exists(episode_date, args)
     
     if not ep_pub_dir_exists:
         episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date, args)
     
-    episode_yaml_created = ensure_episode_yaml(episode_date, args)
+    episode_yaml_created = ensure_episode_yaml(episode_date, args):
     logger.debug(f"Episode YAML created or updated: {episode_yaml_created}")
+    return ep_pub_dir, path_to_episode_publishing_yml(episode_date, args)
 
 def main():
     validate_directories()
