@@ -6,7 +6,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # gitp-acolyte paths
 ACOLYTE_DIR = REPO_ROOT / 'gitp-acolyte'
-CEREMONIAL_DIR = ACOLYTE_DIR / 'ceremonial'
+ACOLYTE_PACKAGE_DIR = ACOLYTE_DIR / 'gitp_acolyte'
+CEREMONIAL_DIR = ACOLYTE_PACKAGE_DIR / 'ceremonial'
 SPELLS_DIR = CEREMONIAL_DIR / 'spells'
 REFERENCE_DIR = SPELLS_DIR / 'episode_reference'
 REFERENCE_EPISODE_DIR = REFERENCE_DIR / 'ref_ep_dir'

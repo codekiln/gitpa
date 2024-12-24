@@ -79,6 +79,9 @@ def construct_path_to_episode_publishing_dir(episode_date, args):
     Constructs the path to the episode publishing directory.
     """
     if args.reference:
+        ref_ep_dir = REFERENCE_EPISODE_DIR
+        expected_ref_ep_dir = REPO_ROOT / "gitp-acolyte/gitp_acolyte/ceremonial/spells/episode_reference/ref_ep_dir"
+        assert ref_ep_dir == expected_ref_ep_dir, f"Reference episode directory is not as expected: \nactual:   '{ref_ep_dir}' \nexpected: '{expected_ref_ep_dir}'"
         return REFERENCE_EPISODE_DIR
     year = episode_date.strftime('%Y')
     month = episode_date.strftime('%m')
