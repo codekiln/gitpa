@@ -5,14 +5,16 @@ import yaml
 import logging
 import coloredlogs
 from gitp_acolyte.constants import (
-    RECORDINGS_ROOT_FOLDER,
-    REPO_ROOT,
-    LOGSEQ_FOLDER,
-    LOGSEQ_ASSETS_FOLDER,
     DATE_FORMAT,
+    EPISODE_YAML_FILENAME,
+    LOGSEQ_ASSETS_FOLDER,
+    LOGSEQ_FOLDER,
+    RECORDINGS_ROOT_FOLDER,
+    REFERENCE_EPISODE_DIR,
+    REPO_ROOT,
     SHORT_DATE_FORMAT,
-    EPISODE_YAML_FILENAME
 )
+from gitp_acolyte.ceremonial.spells.episode_reference.constants import REFERENCE_EPISODE_DATE
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -28,9 +30,9 @@ def validate_directories():
         else:
             logger.warning(f"Directory {directory} does not exist or is not accessible.")
 
-def define_argparse_that_takes_a_date():
+def define_args():
     """
-    Defines an argparse that takes a date as an argument.
+    Defines argparse arguments.
     The default date should be today.
     """
     parser = argparse.ArgumentParser(description="Process a date.")
@@ -40,6 +42,11 @@ def define_argparse_that_takes_a_date():
         default=datetime.today().strftime(DATE_FORMAT),
         nargs='?',
         help=f'Date in {DATE_FORMAT} format. Default is today.'
+    )
+    parser.add_argument(
+        '--reference',
+        action='store_true',
+        help='Use the reference episode date.'
     )
     args = parser.parse_args()
     return args
@@ -67,47 +74,43 @@ def episode_recording_dir_exists(episode_date):
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(episode_date)
     return path_to_episode_recording_dir.exists()
 
-def construct_path_to_episode_publishing_dir(episode_date):
+def construct_path_to_episode_publishing_dir(episode_date, args):
     """
     Constructs the path to the episode publishing directory.
     """
+    if args.reference:
+        return REFERENCE_EPISODE_DIR
     year = episode_date.strftime('%Y')
     month = episode_date.strftime('%m')
     day = episode_date.strftime('%d')
     episode_publishing_dir = LOGSEQ_ASSETS_FOLDER / "Ceremony" / year / month / day
     return episode_publishing_dir
 
-def episode_publishing_dir_exists(episode_date):
-    """
-    Checks if the episode publishing directory exists.
-    """
-    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
-    return path_to_episode_publishing_dir.exists()
-
-def ensure_episode_publishing_dir(episode_date):
+def ensure_episode_publishing_dir(episode_date, args):
     """
     Ensures the episode publishing directory exists.
     Returns True if the directory was created, False if it already existed.
     """
-    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date, args)
     if not path_to_episode_publishing_dir.exists():
         path_to_episode_publishing_dir.mkdir(parents=True, exist_ok=True)
+        logger.debug(f"Episode publishing directory created: {path_to_episode_publishing_dir}")
         return True
+    logger.debug(f"Episode publishing directory already exists: {path_to_episode_publishing_dir}")
     return False
 
-def path_to_episode_publishing_yml(episode_date):
+def path_to_episode_publishing_yml(episode_date, args):
     """
     Constructs the path to the episode.yml file in the episode publishing directory.
     """
-    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date, args)
     return path_to_episode_publishing_dir / EPISODE_YAML_FILENAME
 
-def ensure_episode_yaml(episode_date):
+def ensure_episode_yaml(episode_date, args):
     """
     Ensures that episode.yml exists in the episode publishing directory
-    and contains an episode_date following DATE_FORMAT.
     """
-    episode_yaml_path = path_to_episode_publishing_yml(episode_date)
+    episode_yaml_path = path_to_episode_publishing_yml(episode_date, args)
     
     if not episode_yaml_path.exists():
         episode_data = {
@@ -127,20 +130,57 @@ def ensure_episode_yaml(episode_date):
             return True
     return False
 
-if __name__ == "__main__":
-    validate_directories()
-    args = define_argparse_that_takes_a_date()
-    episode_date = args.date
-    logger.debug(f"Episode date: {episode_date}")
+
+def recording_dir_exists(episode_date, args):
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(episode_date)
     logger.debug(f"Path to episode recording directory: {path_to_episode_recording_dir}")
-    episode_recording_dir_exists = episode_recording_dir_exists(episode_date)
-    logger.debug(f"Episode recording directory exists: {episode_recording_dir_exists}")
-    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date)
+    if not path_to_episode_recording_dir.exists():
+        if args.reference:
+            logger.info(
+                "Will not create reference episode recording directory. "
+                f"It would have been at {path_to_episode_recording_dir}. "
+            )
+        else:
+            logger.error(f"Episode recording directory does not exist: {path_to_episode_recording_dir}")
+            logger.error("Please create the episode recording directory.")
+        return False
+    return True
+
+def episode_publishing_dir_exists(episode_date, args) -> tuple[Path, bool]:
+    path_to_episode_publishing_dir = construct_path_to_episode_publishing_dir(episode_date, args)
     logger.debug(f"Path to episode publishing directory: {path_to_episode_publishing_dir}")
-    episode_publishing_dir_exists = episode_publishing_dir_exists(episode_date)
-    logger.debug(f"Episode publishing directory exists: {episode_publishing_dir_exists}")
-    episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date)
-    logger.debug(f"Episode publishing directory created: {episode_publishing_dir_created}")
-    episode_yaml_created = ensure_episode_yaml(episode_date)
+    if not path_to_episode_publishing_dir.exists():
+        if args.reference:
+            logger.info(
+                "Reference episode directory does not exist. "
+            )
+        else:
+            logger.debug(f"Episode publishing directory does not exist: {path_to_episode_publishing_dir}")
+        return path_to_episode_publishing_dir, False
+    return path_to_episode_publishing_dir, True
+
+def main():
+    validate_directories()
+    args = define_args()
+    if args.reference:
+        episode_date = REFERENCE_EPISODE_DATE
+        logger.warning(f"Using reference episode.")
+    else:
+        episode_date = args.date
+    logger.debug(f"Episode date: {episode_date}")
+
+    # check the episode recording dir
+    # we're not doing any info with this for now
+    # eventually, maybe call a script to create the recording dir
+    recording_dir_exists(episode_date, args)
+
+    ep_pub_dir, ep_pub_dir_exists = episode_publishing_dir_exists(episode_date, args)
+    
+    if not ep_pub_dir_exists:
+        episode_publishing_dir_created = ensure_episode_publishing_dir(episode_date, args)
+    
+    episode_yaml_created = ensure_episode_yaml(episode_date, args)
     logger.debug(f"Episode YAML created or updated: {episode_yaml_created}")
+
+if __name__ == "__main__":
+    main()

@@ -44,6 +44,9 @@ create-ep-data:
 	fi
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.create $(epdate)
 
+create-ep-data-reference:
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.create --reference
+
 # update-ep-data-file-attrs-reference: Updates the file attributes for the reference episode.
 # Usage:
 #   make update-ep-data-file-attrs-reference
