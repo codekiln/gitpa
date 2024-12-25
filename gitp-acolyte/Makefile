@@ -1,4 +1,4 @@
-.PHONY: pyclean create-ep-page create-ep-data create-ep-data-force
+.PHONY: pyclean create-ep-page create-ep-data create-ep-data-force test-openai
 
 export PYTHONDONTWRITEBYTECODE=1
 
@@ -64,4 +64,10 @@ update-ep-data-file-attrs-reference:
 #   make update-ep-data-ref-recreate
 update-ep-data-ref-recreate:
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.update.file_attrs.update_file_attrs --reference --recreate
+
+# test-openai: Tests connectivity to the OpenAI API.
+# Usage:
+#   make test-openai
+test-openai:
+	poetry run python -m gitp_acolyte.utils.ai.test_openai
 
