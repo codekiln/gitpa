@@ -19,3 +19,9 @@ LOGSEQ_PAGES_FOLDER = LOGSEQ_FOLDER / 'pages'
 DATE_FORMAT = '%Y-%m-%d'
 SHORT_DATE_FORMAT = '%y.%m.%d'
 EPISODE_YAML_FILENAME = 'episode.yml'
+
+def get_relative_path(path: Path) -> Path:
+    """
+    Get the path relative to the repository root.
+    """
+    return path.relative_to(REPO_ROOT)

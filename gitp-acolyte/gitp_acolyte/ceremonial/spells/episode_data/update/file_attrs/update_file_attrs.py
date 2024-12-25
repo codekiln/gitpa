@@ -14,10 +14,14 @@ Usage:
 import argparse
 from datetime import datetime
 from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
-from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR
+from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, get_relative_path
 from gitp_acolyte.ceremonial.spells.episode_data.create import ensure_episode_dir_and_yaml_exists
 import logging
 import coloredlogs
+from dotenv import load_dotenv
+from openai import OpenAI
+import os
+from pathlib import Path
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -28,7 +32,43 @@ def get_args():
     return parser.parse_args()
 
 
+def get_system_prompt() -> str:
+    """
+    Load the system prompt from update_file_attrs_prompt.md
+    """
+    script_dir = Path(__file__).parent
+    prompt_path = script_dir / "update_file_attrs_prompt.md"
+    logger.debug(f"Loading system prompt from {get_relative_path(prompt_path)}")
+    with prompt_path.open() as f:
+        return f.read()
+
+
+def call_openai(user_query: str) -> dict:
+    load_dotenv()
+    client = OpenAI()
+
+    system_prompt = get_system_prompt()
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": system_prompt,
+            },
+            {
+                "role": "user",
+                "content": user_query,
+            }
+        ],
+        model="gpt-4o-mini",
+    )
+    return chat_completion
+
+
 def update_file_attrs(episode_dir, args):
+    logger.info("Calling OpenAI ...")
+    query = "What is the meaning of life?"
+    openai_response = call_openai(query)
+    logger.debug(f"{openai_response=}")
     raise NotImplementedError("This function is not implemented yet.")
 
 
@@ -38,7 +78,7 @@ def main():
     episode_date = get_episode_date(args)
     logger.debug(f"Episode date: {episode_date}")
     episode_dir, _ = ensure_episode_dir_and_yaml_exists(episode_date, args)
-    logger.debug(f"Episode directory: {episode_dir}")
+    logger.debug(f"Episode directory: {get_relative_path(episode_dir)}")
     update_file_attrs(episode_dir, args)
     logger.info("File attributes updated successfully.")
 
