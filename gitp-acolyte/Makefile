@@ -59,3 +59,9 @@ create-ep-data-ref-recreate:
 update-ep-data-file-attrs-reference:
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.update.file_attrs.update_file_attrs --reference
 
+# update-ep-data-ref-recreate: Updates the file attributes for the reference episode, recreating the episode.yml file if it already exists.
+# Usage:
+#   make update-ep-data-ref-recreate
+update-ep-data-ref-recreate:
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.update.file_attrs.update_file_attrs --reference --recreate
+
