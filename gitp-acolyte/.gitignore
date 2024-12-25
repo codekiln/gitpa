@@ -1,0 +1,33 @@
+# Python specific ignores
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+.env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm specific ignores
+.idea/
+
+# VS Code specific ignores
+.vscode/
+
+# macOS specific ignores
+.DS_Store
+
+# Ignore .env file
+.env
