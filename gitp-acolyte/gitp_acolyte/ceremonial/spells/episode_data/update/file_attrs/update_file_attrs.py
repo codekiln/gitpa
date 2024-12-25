@@ -64,13 +64,36 @@ def call_openai(user_query: str) -> dict:
     return chat_completion
 
 
+def get_episode_dir_ai_info(pathlib_dir_obj: Path) -> dict:
+    """
+    Get directory information similar to `ls -la`.
+    Returns a dictionary with directory name, and for each file, a file name, 
+    the size of the file, the created and last modified date in a standard ISO time format.
+    """
+    dir_info = {
+        "directory_name": pathlib_dir_obj.name,
+        "files": []
+    }
+    for file in pathlib_dir_obj.iterdir():
+        if file.is_file():
+            file_info = {
+                "file_name": file.name,
+                "size": file.stat().st_size,
+                "created": datetime.fromtimestamp(file.stat().st_ctime).isoformat(),
+                "last_modified": datetime.fromtimestamp(file.stat().st_mtime).isoformat()
+            }
+            dir_info["files"].append(file_info)
+    return dir_info
+
+
 def update_file_attrs(episode_dir, args):
     logger.info("Calling OpenAI ...")
+    dir_info = get_episode_dir_ai_info(episode_dir)
+    logger.debug(f"Directory info: {dir_info}")
     query = "What is the meaning of life?"
     openai_response = call_openai(query)
     logger.debug(f"{openai_response=}")
     raise NotImplementedError("This function is not implemented yet.")
-
 
 
 def main():
