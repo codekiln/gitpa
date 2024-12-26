@@ -13,7 +13,9 @@ Usage:
 
 import argparse
 from datetime import datetime
+import json
 from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
+from gitp_acolyte.ceremonial.spells.episode_reference.episode_schema import PodcastEpisodePublicationData
 from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, get_relative_path
 from gitp_acolyte.ceremonial.spells.episode_data.create import ensure_episode_dir_and_yaml_exists
 import logging
@@ -34,21 +36,34 @@ def get_args():
 
 def get_system_prompt() -> str:
     """
-    Load the system prompt from update_file_attrs_prompt.md
+    Load the system prompt from update_file_attrs_system_prompt.md
     """
     script_dir = Path(__file__).parent
-    prompt_path = script_dir / "update_file_attrs_prompt.md"
+    prompt_path = script_dir / "update_file_attrs_system_prompt.md"
     logger.debug(f"Loading system prompt from {get_relative_path(prompt_path)}")
     with prompt_path.open() as f:
         return f.read()
 
+def get_user_prompt(podcast_directory_info: str) -> str:
+    """
+    Load the user prompt from update_file_attrs_user_prompt.md
+    """
+    script_dir = Path(__file__).parent
+    prompt_path = script_dir / "update_file_attrs_user_prompt.md"
+    logger.debug(f"Loading user prompt from {get_relative_path(prompt_path)}")
+    with prompt_path.open() as f:
+        prompt = f.read()
+    return prompt.format(podcast_directory_info=podcast_directory_info)
 
-def call_openai(user_query: str) -> dict:
+
+def call_openai(podcast_directory_info: str) -> dict:
     load_dotenv()
     client = OpenAI()
 
     system_prompt = get_system_prompt()
-    chat_completion = client.chat.completions.create(
+    user_prompt = get_user_prompt(podcast_directory_info)
+
+    chat_completion = client.beta.chat.completions.parse(
         messages=[
             {
                 "role": "system",
@@ -56,10 +71,11 @@ def call_openai(user_query: str) -> dict:
             },
             {
                 "role": "user",
-                "content": user_query,
+                "content": user_prompt,
             }
         ],
         model="gpt-4o-mini",
+        response_format=PodcastEpisodePublicationData
     )
     return chat_completion
 
@@ -85,13 +101,19 @@ def get_episode_dir_ai_info(pathlib_dir_obj: Path) -> dict:
             dir_info["files"].append(file_info)
     return dir_info
 
+def serialize_episode_dir_ai_info(dir_info: dict) -> str:
+    """
+    Serialize the directory information to a string.
+    """
+    return json.dumps(dir_info, indent=4)
+
 
 def update_file_attrs(episode_dir, args):
-    logger.info("Calling OpenAI ...")
     dir_info = get_episode_dir_ai_info(episode_dir)
-    logger.debug(f"Directory info: {dir_info}")
-    query = "What is the meaning of life?"
-    openai_response = call_openai(query)
+    serialized_dir_info = serialize_episode_dir_ai_info(dir_info)
+    logger.debug(f"{serialized_dir_info=}")
+    logger.info("Calling OpenAI ...")
+    openai_response = call_openai(serialized_dir_info)
     logger.debug(f"{openai_response=}")
     raise NotImplementedError("This function is not implemented yet.")
 
