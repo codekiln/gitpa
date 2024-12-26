@@ -25,6 +25,7 @@ from openai import OpenAI
 import os
 from pathlib import Path
 import yaml
+from openai.types.chat.parsed_chat_completion import ParsedChatCompletion
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -57,7 +58,7 @@ def get_user_prompt(podcast_directory_info: str) -> str:
     return prompt.format(podcast_directory_info=podcast_directory_info)
 
 
-def call_openai(podcast_directory_info: str) -> PodcastEpisodePublicationData:
+def call_openai(podcast_directory_info: str) -> ParsedChatCompletion[PodcastEpisodePublicationData]:
     load_dotenv()
     client = OpenAI()
 
@@ -115,11 +116,11 @@ def serialize_episode_dir_ai_info(dir_info: dict) -> str:
 def update_file_attrs(episode_dir, args):
     dir_info = get_episode_dir_ai_info(episode_dir)
     serialized_dir_info = serialize_episode_dir_ai_info(dir_info)
-    podcast_episode_publication_data = call_openai(serialized_dir_info)
+    podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData] = call_openai(serialized_dir_info)
     write_episode_yaml(podcast_episode_publication_data, episode_dir, args)    
 
 
-def write_episode_yaml(podcast_episode_publication_data: PodcastEpisodePublicationData, episode_dir: Path, args):
+def write_episode_yaml(podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData], episode_dir: Path, args):
     """
     Write the episode data to the episode.yml file.
     If args.reference is True, write to the reference episode directory.
@@ -136,12 +137,17 @@ def write_episode_yaml(podcast_episode_publication_data: PodcastEpisodePublicati
     logger.debug(f"Written episode data to {get_relative_path(yaml_path)}")
 
 
-def serialize_pydantic_to_yaml(podcast_episode_publication_data: PodcastEpisodePublicationData) -> str:
+def serialize_pydantic_to_yaml(podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData]) -> str:
     """
     Serialize the PodcastEpisodePublicationData to a YAML string.
     """
     data_dict = podcast_episode_publication_data.model_dump()
-    yaml_string = yaml.dump(data_dict, sort_keys=False, default_flow_style=False)
+    data_dict_str = json.dumps(data_dict, indent=4)
+    logger.debug(f"podcast_episode_publication_data: {data_dict_str}")
+
+    parsed_response_json = podcast_episode_publication_data.choices[0].message.content
+    episode_dict = json.loads(parsed_response_json)
+    yaml_string = yaml.dump(episode_dict, sort_keys=True, default_flow_style=False)
     return yaml_string
 
 
