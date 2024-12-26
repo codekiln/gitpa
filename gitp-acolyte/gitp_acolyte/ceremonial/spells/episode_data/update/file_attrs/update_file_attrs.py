@@ -16,7 +16,7 @@ from datetime import datetime
 import json
 from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
 from gitp_acolyte.ceremonial.spells.episode_reference.episode_schema import PodcastEpisodePublicationData
-from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, get_relative_path
+from gitp_acolyte.constants import DATE_FORMAT, EPISODE_YAML_FILENAME, REFERENCE_EPISODE_DIR, get_relative_path
 from gitp_acolyte.ceremonial.spells.episode_data.create import ensure_episode_dir_and_yaml_exists
 import logging
 import coloredlogs
@@ -24,6 +24,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import os
 from pathlib import Path
+import yaml
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -56,14 +57,15 @@ def get_user_prompt(podcast_directory_info: str) -> str:
     return prompt.format(podcast_directory_info=podcast_directory_info)
 
 
-def call_openai(podcast_directory_info: str) -> dict:
+def call_openai(podcast_directory_info: str) -> PodcastEpisodePublicationData:
     load_dotenv()
     client = OpenAI()
 
     system_prompt = get_system_prompt()
     user_prompt = get_user_prompt(podcast_directory_info)
 
-    chat_completion = client.beta.chat.completions.parse(
+    logger.debug("Calling OpenAI ...")
+    podcast_episode_publication_data: PodcastEpisodePublicationData = client.beta.chat.completions.parse(
         messages=[
             {
                 "role": "system",
@@ -77,7 +79,7 @@ def call_openai(podcast_directory_info: str) -> dict:
         model="gpt-4o-mini",
         response_format=PodcastEpisodePublicationData
     )
-    return chat_completion
+    return podcast_episode_publication_data
 
 
 def get_episode_dir_ai_info(pathlib_dir_obj: Path) -> dict:
@@ -105,17 +107,42 @@ def serialize_episode_dir_ai_info(dir_info: dict) -> str:
     """
     Serialize the directory information to a string.
     """
-    return json.dumps(dir_info, indent=4)
+    serialized_episode_directory_info = json.dumps(dir_info, indent=4)
+    logger.debug(f"{serialized_episode_directory_info=}")
+    return serialized_episode_directory_info
 
 
 def update_file_attrs(episode_dir, args):
     dir_info = get_episode_dir_ai_info(episode_dir)
     serialized_dir_info = serialize_episode_dir_ai_info(dir_info)
-    logger.debug(f"{serialized_dir_info=}")
-    logger.info("Calling OpenAI ...")
-    openai_response = call_openai(serialized_dir_info)
-    logger.debug(f"{openai_response=}")
-    raise NotImplementedError("This function is not implemented yet.")
+    podcast_episode_publication_data = call_openai(serialized_dir_info)
+    write_episode_yaml(podcast_episode_publication_data, episode_dir, args)    
+
+
+def write_episode_yaml(podcast_episode_publication_data: PodcastEpisodePublicationData, episode_dir: Path, args):
+    """
+    Write the episode data to the episode.yml file.
+    If args.reference is True, write to the reference episode directory.
+    """
+    if args.reference:
+        yaml_path = REFERENCE_EPISODE_DIR / EPISODE_YAML_FILENAME
+    else:
+        yaml_path = episode_dir / EPISODE_YAML_FILENAME
+
+    with yaml_path.open('w') as f:
+        pydantic_serialized_to_yaml_string = serialize_pydantic_to_yaml(podcast_episode_publication_data)
+        f.write(pydantic_serialized_to_yaml_string)
+
+    logger.debug(f"Written episode data to {get_relative_path(yaml_path)}")
+
+
+def serialize_pydantic_to_yaml(podcast_episode_publication_data: PodcastEpisodePublicationData) -> str:
+    """
+    Serialize the PodcastEpisodePublicationData to a YAML string.
+    """
+    data_dict = podcast_episode_publication_data.model_dump()
+    yaml_string = yaml.dump(data_dict, sort_keys=False, default_flow_style=False)
+    return yaml_string
 
 
 def main():
