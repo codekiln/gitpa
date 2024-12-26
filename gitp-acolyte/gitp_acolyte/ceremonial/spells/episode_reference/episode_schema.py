@@ -8,7 +8,8 @@ class PodcastEpisodePublicationData(BaseModel):
     """
 
     episode_title: str = Field(
-        default="Ceremony",
+        #  fix BadRequestError 400 because `'default'` is not permitted in structured output
+        # default="Ceremony",
         description="The title of the podcast episode; defaults to 'Ceremony' if no further information is available."
     )
     episode_date: str = Field(..., description="The publication date of the episode in YYYY-MM-DD format.")
