@@ -19,28 +19,19 @@ from gitp_acolyte.ceremonial.spells.episode_data.create import (
     path_to_episode_publishing_yml,
     ensure_episode_yaml
 )
+from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date  # Import common argparse arguments
 
 # Configure logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
+coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - (levelname)s - %(message)s')
 
 def get_argparse_args():
     parser = argparse.ArgumentParser(description="Generate episode page.")
-    parser.add_argument(
-        '--reference',
-        action='store_true',
-        help='Use reference_episode.yml and generate reference_output.md'
-    )
+    define_common_args(parser)  # Use common argparse arguments
     parser.add_argument(
         '--force',
         action='store_true',
         help='Force overwrite if the episode page already exists.'
-    )
-    parser.add_argument(
-        'date',
-        type=lambda s: datetime.strptime(s, DATE_FORMAT),
-        nargs='?',
-        help=f'Date in {DATE_FORMAT} format. Required if --reference is not supplied.'
     )
     return parser.parse_args()
 
@@ -85,10 +76,7 @@ def main():
         output_file = os.path.join(script_dir, '../episode_reference/reference_output.md')
         episode_date = None
     else:
-        if not args.date:
-            raise ValueError("Date is required if --reference is not supplied.")
-        
-        episode_date = args.date
+        episode_date = get_episode_date(args)
         output_file = get_episode_page_path(episode_date)
         
         if output_file.exists() and not args.force:
