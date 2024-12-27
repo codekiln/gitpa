@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 def get_args():
+    parser = argparse.ArgumentParser(description="Update Episode yaml data attributes, inferring from the filesystem.")
     parser = define_common_args()
     return parser.parse_args()
 

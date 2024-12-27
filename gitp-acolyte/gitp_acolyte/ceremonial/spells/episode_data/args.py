@@ -3,12 +3,13 @@ from datetime import datetime
 from gitp_acolyte.constants import DATE_FORMAT
 from gitp_acolyte.ceremonial.spells.episode_reference.constants import REFERENCE_EPISODE_DATE
 
-def define_common_args():
+def define_common_args(parser: argparse.ArgumentParser | None = None) -> argparse.ArgumentParser:
     """
     Defines common argparse arguments.
     The default date should be today.
     """
-    parser = argparse.ArgumentParser(description="Process a date.")
+    if parser is None:
+        parser = argparse.ArgumentParser(description="Process a date.")
     parser.add_argument(
         'date',
         type=lambda s: datetime.strptime(s, DATE_FORMAT),

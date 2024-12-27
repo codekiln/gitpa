@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 import yaml
 import logging
@@ -33,6 +34,7 @@ def define_args():
     """
     Defines argparse arguments.
     """
+    parser = argparse.ArgumentParser(description="Create Episode Data File.")
     parser = define_common_args()
     return parser.parse_args()
 
