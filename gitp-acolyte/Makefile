@@ -3,8 +3,22 @@
 export PYTHONDONTWRITEBYTECODE=1
 
 pyclean:
-	find . -type d -name "__pycache__" -exec rm -r {} +
-	find . -type f -name "*.py[cod]" -exec rm -f {} +
+	@echo "Cleaning up __pycache__ directories and .pyc, .pyo, .pyd files..."
+	@pycache_count=$$(find . -type d -name "__pycache__" | wc -l); \
+	if [ $$pycache_count -eq 0 ]; then \
+		echo "No __pycache__ directories found"; \
+	else \
+		echo "Found $$pycache_count __pycache__ directories"; \
+		find . -type d -name "__pycache__" -exec rm -r {} +; \
+	fi
+	@pyc_count=$$(find . -type f -name "*.py[cod]" | wc -l); \
+	if [ $$pyc_count -eq 0 ]; then \
+		echo "No .pyc, .pyo, .pyd files found"; \
+	else \
+		echo "Found $$pyc_count .pyc, .pyo, .pyd files"; \
+		find . -type f -name "*.py[cod]" -exec rm -f {} +; \
+	fi
+	@echo "Cleanup complete."
 
 
 # create-ep-page: Generates an episode page for the given date.
