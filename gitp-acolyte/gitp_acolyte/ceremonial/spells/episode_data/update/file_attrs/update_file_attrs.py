@@ -80,6 +80,7 @@ def call_openai(podcast_directory_info: str) -> ParsedChatCompletion[PodcastEpis
         model="gpt-4o-mini",
         response_format=PodcastEpisodePublicationData
     )
+    # podcast_ep_info = podcast_episode_publication_data.choices[0].message.model_dump()['parsed']
     return podcast_episode_publication_data
 
 
