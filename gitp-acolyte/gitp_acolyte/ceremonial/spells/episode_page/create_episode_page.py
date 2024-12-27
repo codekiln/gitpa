@@ -71,9 +71,9 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     if args.reference:
-        # Determine the path to reference_episode.yml
-        episode_yaml_path = os.path.join(script_dir, '../episode_reference/reference_episode.yml')
-        output_file = os.path.join(script_dir, '../episode_reference/reference_output.md')
+        # Determine the path to reference_episode.yml using reference-dir argument
+        episode_yaml_path = args.reference_dir / EPISODE_YAML_FILENAME
+        output_file = args.reference_dir / 'reference_output.md'
         episode_date = None
     else:
         episode_date = get_episode_date(args)
