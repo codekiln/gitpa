@@ -1,3 +1,4 @@
+from gitp_acolyte.ceremonial.spells.episode_reference.constants import DEFAULT_REFERENCE_EPISODE_YML_PATH
 import yaml
 from jinja2 import Environment, FileSystemLoader
 import os
@@ -75,6 +76,9 @@ def main():
         episode_yaml_path = args.reference_dir / EPISODE_YAML_FILENAME
         output_file = args.reference_dir / 'reference_output.md'
         episode_date = None
+        if args.use_ref_ep_yml:
+            episode_yaml_path = DEFAULT_REFERENCE_EPISODE_YML_PATH
+            episode_date = get_episode_date(args)
     else:
         episode_date = get_episode_date(args)
         output_file = get_episode_page_path(episode_date)
