@@ -4,6 +4,29 @@ from pathlib import Path
 from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, get_relative_path
 from gitp_acolyte.ceremonial.spells.episode_reference.constants import REFERENCE_EPISODE_DATE
 
+
+def define_common_reference_file_args(parser: argparse.ArgumentParser | None = None) -> argparse.ArgumentParser:
+    """
+    Defines common argparse arguments for operating on reference versions of the files.
+    """
+    parser.add_argument(
+        '--reference',
+        action='store_true',
+        help='Use the reference episode. Used for testing the script.'
+    )
+
+    ref_ep_dir_relpath = str(get_relative_path(REFERENCE_EPISODE_DIR))
+    ref_ep_dir_help = f'Path to the reference episode directory. Default is {ref_ep_dir_relpath}.'
+    parser.add_argument(
+        '--reference-dir',
+        type=Path,
+        default=REFERENCE_EPISODE_DIR,
+        help=ref_ep_dir_help
+    )
+    
+    return parser
+
+
 def define_common_args(parser: argparse.ArgumentParser | None = None) -> argparse.ArgumentParser:
     """
     Defines common argparse arguments.
@@ -18,19 +41,9 @@ def define_common_args(parser: argparse.ArgumentParser | None = None) -> argpars
         nargs='?',
         help=f'Date in {{DATE_FORMAT}} format. Default is today.'
     )
-    parser.add_argument(
-        '--reference',
-        action='store_true',
-        help='Use the reference episode. Used for testing the script.'
-    )
-    ref_ep_dir_relpath = str(get_relative_path(REFERENCE_EPISODE_DIR))
-    ref_ep_dir_help = f'Path to the reference episode directory. Default is {ref_ep_dir_relpath}.'
-    parser.add_argument(
-        '--reference-dir',
-        type=Path,
-        default=REFERENCE_EPISODE_DIR,
-        help=ref_ep_dir_help
-    )
+
+    define_common_reference_file_args(parser)
+
     parser.add_argument(
         '--recreate',
         action='store_true',
