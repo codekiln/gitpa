@@ -43,7 +43,7 @@ def get_episode_page_path(episode_date):
     filename = get_episode_page_filename(episode_date)
     return LOGSEQ_PAGES_FOLDER / filename
 
-def load_episode_yaml(episode_yaml_path):
+def load_episode_yaml_and_ensure_context(episode_yaml_path):
     """
     Loads the episode YAML data from the given path.
     """
@@ -85,7 +85,7 @@ def main():
             exit(1)
 
     # Load episode YAML
-    data = load_episode_yaml(episode_yaml_path)
+    data = load_episode_yaml_and_ensure_context(episode_yaml_path)
 
     # Setup Jinja environment
     env = Environment(loader=FileSystemLoader(script_dir))
