@@ -18,7 +18,7 @@
             }
         },
         {
-            "name": "Run create_episode_page with reference and use-ref-ep-yml",
+            "name": "create_episode_page --reference --use-ref-ep-yml",
             "type": "debugpy",
             "request": "launch",
             "module": "gitp_acolyte.ceremonial.spells.episode_page.create_episode_page",
@@ -26,6 +26,19 @@
             "args": [
                 "--reference",
                 "--use-ref-ep-yml"
+            ],
+            "env": {
+                "PYTHONDONTWRITEBYTECODE": "1"
+            }
+        },
+        {
+            "name": "create_episode_page --reference",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "gitp_acolyte.ceremonial.spells.episode_page.create_episode_page",
+            "console": "integratedTerminal",
+            "args": [
+                "--reference"
             ],
             "env": {
                 "PYTHONDONTWRITEBYTECODE": "1"
