@@ -1,4 +1,4 @@
-from gitp_acolyte.ceremonial.spells.episode_reference.constants import DEFAULT_REFERENCE_EPISODE_YML_PATH, REFERENCE_PAGE_OUTPUT_PATH
+from gitp_acolyte.ceremonial.spells.episode_reference.constants import DEFAULT_REFERENCE_EPISODE_YML_PATH, DRAFT_REFERENCE_EPISODE_OUTPUT_PATH, REFERENCE_EPISODE_DATE
 import yaml
 from jinja2 import Environment, FileSystemLoader
 import os
@@ -6,21 +6,15 @@ import logging
 import coloredlogs
 import argparse
 from datetime import datetime
-from pathlib import Path
 from gitp_acolyte.constants import (
-    REPO_ROOT,
-    LOGSEQ_FOLDER,
-    LOGSEQ_ASSETS_FOLDER,
     LOGSEQ_PAGES_FOLDER,
-    DATE_FORMAT,
-    SHORT_DATE_FORMAT,
-    EPISODE_YAML_FILENAME
+    EPISODE_YAML_FILENAME,
+    get_relative_path
 )
 from gitp_acolyte.ceremonial.spells.episode_data.create import (
-    path_to_episode_publishing_yml,
-    ensure_episode_yaml
+    path_to_episode_publishing_yml
 )
-from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date  # Import common argparse arguments
+from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -72,13 +66,11 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     if args.reference:
-        # Determine the path to reference_episode.yml using reference-dir argument
+        output_file = DRAFT_REFERENCE_EPISODE_OUTPUT_PATH
+        episode_date = REFERENCE_EPISODE_DATE
         episode_yaml_path = args.reference_dir / EPISODE_YAML_FILENAME
-        output_file = REFERENCE_PAGE_OUTPUT_PATH
-        episode_date = None
         if args.use_ref_ep_yml:
             episode_yaml_path = DEFAULT_REFERENCE_EPISODE_YML_PATH
-            episode_date = get_episode_date(args)
     else:
         episode_date = get_episode_date(args)
         output_file = get_episode_page_path(episode_date)
@@ -107,7 +99,7 @@ def main():
     # Write to file
     with open(output_file, 'w') as f:
         f.write(output)
-        logger.info(f"Output written to {output_file}")
+        logger.info(f"Output written to {get_relative_path(output_file)}")
 
 if __name__ == "__main__":
     main()
