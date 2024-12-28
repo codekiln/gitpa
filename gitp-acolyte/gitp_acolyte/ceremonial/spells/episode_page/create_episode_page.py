@@ -24,7 +24,7 @@ from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args,
 
 # Configure logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - (levelname)s - %(message)s')
+coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(module)s - %(levelname)s - %(message)s')
 
 def get_argparse_args():
     parser = argparse.ArgumentParser(description="Generate episode page.")
