@@ -74,12 +74,11 @@ def main():
     if args.reference:
         # Determine the path to reference_episode.yml using reference-dir argument
         episode_yaml_path = args.reference_dir / EPISODE_YAML_FILENAME
-        output_file = args.reference_dir / 'reference_output.md'
+        output_file = REFERENCE_PAGE_OUTPUT_PATH
         episode_date = None
         if args.use_ref_ep_yml:
             episode_yaml_path = DEFAULT_REFERENCE_EPISODE_YML_PATH
             episode_date = get_episode_date(args)
-            output_file = REFERENCE_PAGE_OUTPUT_PATH
     else:
         episode_date = get_episode_date(args)
         output_file = get_episode_page_path(episode_date)
