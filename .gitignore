@@ -45,3 +45,5 @@ Thumbs.db                # Windows thumbnail cache
 # 🐍 Python cache files
 __pycache__/             # Python bytecode cache directories
 *.py[cod]                # Python bytecode files
+
+/gitp-acolyte/gitp_acolyte/ceremonial/spells/episode_reference/new_reference_episode.yml
