@@ -1,7 +1,7 @@
 import argparse
 from datetime import datetime
 from pathlib import Path
-from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, get_relative_path
+from gitp_acolyte.constants import DATE_FORMAT, REFERENCE_EPISODE_DIR, DEFAULT_REFERENCE_EPISODE_YML_PATH, get_relative_path
 from gitp_acolyte.ceremonial.spells.episode_reference.constants import REFERENCE_EPISODE_DATE
 
 
@@ -22,6 +22,15 @@ def define_common_reference_file_args(parser: argparse.ArgumentParser | None = N
         type=Path,
         default=REFERENCE_EPISODE_DIR,
         help=ref_ep_dir_help
+    )
+
+    ref_ep_yml_relpath = str(get_relative_path(DEFAULT_REFERENCE_EPISODE_YML_PATH))
+    ref_ep_yml_help = f'Use the reference episode YAML file. Default is "{ref_ep_yml_relpath}".'
+    parser.add_argument(
+        '--use-ref-ep-yml',
+        action='store_true',
+        help=ref_ep_yml_help,
+        default=False
     )
     
     return parser
