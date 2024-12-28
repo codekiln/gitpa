@@ -43,6 +43,7 @@ def define_common_args(parser: argparse.ArgumentParser | None = None) -> argpars
     """
     if parser is None:
         parser = argparse.ArgumentParser(description="Process a date.")
+    
     parser.add_argument(
         'date',
         type=lambda s: datetime.strptime(s, DATE_FORMAT),
@@ -50,7 +51,6 @@ def define_common_args(parser: argparse.ArgumentParser | None = None) -> argpars
         nargs='?',
         help=f'Date in {{DATE_FORMAT}} format. Default is today.'
     )
-
     define_common_reference_file_args(parser)
 
     parser.add_argument(
