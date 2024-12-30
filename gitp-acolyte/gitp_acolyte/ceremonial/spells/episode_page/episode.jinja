@@ -8,8 +8,10 @@ type:: [[Podcast/Episode]]
 
 - # {{ episode_title }} - {{ episode_date }}
 	- ![{{ audio_file }}](../assets/Ceremony/{{ episode_date|replace('-', '/') }}/{{ audio_file }})
+{%- if description %}
 - ## Description
 	- {{ description }}
+{%- endif %}
 {%- if patch_files or midi_files %}
 - ## Files
 {%- if patch_files %}
