@@ -10,6 +10,7 @@ type:: [[Podcast/Episode]]
 	- ![{{ audio_file }}](../assets/Ceremony/{{ episode_date|replace('-', '/') }}/{{ audio_file }})
 - ## Description
 	- {{ description }}
+{%- if patch_files or midi_files %}
 - ## Files
 {%- if patch_files %}
 	- [[Microfreak/Patch]] files
@@ -17,7 +18,10 @@ type:: [[Podcast/Episode]]
 		- {{ download_line(patch, assets_base_url, episode_date) }}
 {%- endfor %}
 {%- endif %}
+{%- if midi_files %}
 	- [[Microfreak/MIDI]] files
 {%- for midi in midi_files %}
 		- {{ download_line(midi, assets_base_url, episode_date) }}
 {%- endfor %}
+{%- endif %}
+{%- endif %}
