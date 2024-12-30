@@ -11,10 +11,12 @@ type:: [[Podcast/Episode]]
 - ## Description
 	- {{ description }}
 - ## Files
+{%- if patch_files %}
 	- [[Microfreak/Patch]] files
-{%- for patch in patches %}
+{%- for patch in patch_files %}
 		- {{ download_line(patch, assets_base_url, episode_date) }}
 {%- endfor %}
+{%- endif %}
 	- [[Microfreak/MIDI]] files
 {%- for midi in midi_files %}
 		- {{ download_line(midi, assets_base_url, episode_date) }}
