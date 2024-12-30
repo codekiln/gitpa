@@ -21,6 +21,7 @@ from gitp_acolyte.ceremonial.spells.episode_reference.constants import (
 )
 from gitp_acolyte.constants import (
     EPISODE_YAML_FILENAME,
+    GITHUB_USER_CONTENT_ASSETS_BASE_URL,
     LOGSEQ_PAGES_FOLDER,
     get_relative_path,
 )
@@ -73,6 +74,9 @@ def load_episode_yaml_and_ensure_context(episode_yaml_path):
         else:
             logger.error("episode_date not found in YAML.")
             exit(1)
+
+        # Add assets_base_url to the context
+        data["assets_base_url"] = GITHUB_USER_CONTENT_ASSETS_BASE_URL
 
         logger.debug(
             f"Loaded episode YAML for date {episode_dt} from {episode_yaml_path}"
