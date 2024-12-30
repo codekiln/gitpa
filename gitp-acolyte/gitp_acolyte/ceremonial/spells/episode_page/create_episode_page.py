@@ -105,7 +105,7 @@ def main():
             )
             exit(1)
 
-        episode_yaml_path = path_to_episode_publishing_yml(episode_date)
+        episode_yaml_path = path_to_episode_publishing_yml(episode_date, args)
         if not episode_yaml_path.exists():
             logger.warning(f"Episode YAML {episode_yaml_path} does not exist.")
             exit(1)
