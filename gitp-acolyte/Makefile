@@ -79,6 +79,16 @@ update-ep-data-file-attrs-reference:
 update-ep-data-ref-recreate:
 	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.update.file_attrs.update_file_attrs --reference --recreate
 
+# update-ep-data-file-attrs: Updates the file attributes for the given date.
+# Usage:
+#   epdate=2024-11-19 make update-ep-data-file-attrs
+update-ep-data-file-attrs:
+	@if [ -z "$(epdate)" ]; then \
+		echo "Error: epdate is not set. Usage: epdate=YYYY-MM-DD make update-ep-data-file-attrs"; \
+		exit 1; \
+	fi
+	poetry run python -m gitp_acolyte.ceremonial.spells.episode_data.update.file_attrs.update_file_attrs $(epdate)
+
 # test-openai: Tests connectivity to the OpenAI API.
 # Usage:
 #   make test-openai
