@@ -12,27 +12,46 @@ Usage:
 """
 
 import argparse
-from datetime import datetime
 import json
-from gitp_acolyte.ceremonial.spells.episode_data.args import define_common_args, get_episode_date
-from gitp_acolyte.ceremonial.spells.episode_reference.episode_schema import PodcastEpisodePublicationData
-from gitp_acolyte.constants import DATE_FORMAT, EPISODE_YAML_FILENAME, REFERENCE_EPISODE_DIR, get_relative_path
-from gitp_acolyte.ceremonial.spells.episode_data.create import ensure_episode_dir_and_yaml_exists
 import logging
+from datetime import datetime
+from pathlib import Path
+
 import coloredlogs
+import yaml
 from dotenv import load_dotenv
 from openai import OpenAI
-import os
-from pathlib import Path
-import yaml
 from openai.types.chat.parsed_chat_completion import ParsedChatCompletion
+
+from gitp_acolyte.ceremonial.spells.episode_data.args import (
+    define_common_args,
+    get_episode_date,
+)
+from gitp_acolyte.ceremonial.spells.episode_data.create import (
+    ensure_episode_dir_and_yaml_exists,
+)
+from gitp_acolyte.ceremonial.spells.episode_reference.episode_schema import (
+    PodcastEpisodePublicationData,
+)
+from gitp_acolyte.constants import (
+    EPISODE_YAML_FILENAME,
+    REFERENCE_EPISODE_DIR,
+    get_relative_path,
+)
 
 # Configure logging
 logger = logging.getLogger(__name__)
-coloredlogs.install(level='DEBUG', logger=logger, fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+coloredlogs.install(
+    level="DEBUG",
+    logger=logger,
+    fmt="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
+
 
 def get_args():
-    parser = argparse.ArgumentParser(description="Update Episode yaml data attributes, inferring from the filesystem.")
+    parser = argparse.ArgumentParser(
+        description="Update Episode yaml data attributes, inferring from the filesystem."
+    )
     parser = define_common_args()
     return parser.parse_args()
 
@@ -47,6 +66,7 @@ def get_system_prompt() -> str:
     with prompt_path.open() as f:
         return f.read()
 
+
 def get_user_prompt(podcast_directory_info: str) -> str:
     """
     Load the user prompt from update_file_attrs_user_prompt.md
@@ -59,7 +79,9 @@ def get_user_prompt(podcast_directory_info: str) -> str:
     return prompt.format(podcast_directory_info=podcast_directory_info)
 
 
-def call_openai(podcast_directory_info: str) -> ParsedChatCompletion[PodcastEpisodePublicationData]:
+def call_openai(
+    podcast_directory_info: str,
+) -> ParsedChatCompletion[PodcastEpisodePublicationData]:
     load_dotenv()
     client = OpenAI()
 
@@ -67,19 +89,21 @@ def call_openai(podcast_directory_info: str) -> ParsedChatCompletion[PodcastEpis
     user_prompt = get_user_prompt(podcast_directory_info)
 
     logger.debug("Calling OpenAI ...")
-    podcast_episode_publication_data: PodcastEpisodePublicationData = client.beta.chat.completions.parse(
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": user_prompt,
-            }
-        ],
-        model="gpt-4o-mini",
-        response_format=PodcastEpisodePublicationData
+    podcast_episode_publication_data: PodcastEpisodePublicationData = (
+        client.beta.chat.completions.parse(
+            messages=[
+                {
+                    "role": "system",
+                    "content": system_prompt,
+                },
+                {
+                    "role": "user",
+                    "content": user_prompt,
+                },
+            ],
+            model="gpt-4o-mini",
+            response_format=PodcastEpisodePublicationData,
+        )
     )
     # podcast_ep_info = podcast_episode_publication_data.choices[0].message.model_dump()['parsed']
     return podcast_episode_publication_data
@@ -88,23 +112,23 @@ def call_openai(podcast_directory_info: str) -> ParsedChatCompletion[PodcastEpis
 def get_episode_dir_ai_info(pathlib_dir_obj: Path) -> dict:
     """
     Get directory information similar to `ls -la`.
-    Returns a dictionary with directory name, and for each file, a file name, 
+    Returns a dictionary with directory name, and for each file, a file name,
     the size of the file, the created and last modified date in a standard ISO time format.
     """
-    dir_info = {
-        "directory_name": pathlib_dir_obj.name,
-        "files": []
-    }
+    dir_info = {"directory_name": pathlib_dir_obj.name, "files": []}
     for file in pathlib_dir_obj.iterdir():
         if file.is_file():
             file_info = {
                 "file_name": file.name,
                 "size": file.stat().st_size,
                 "created": datetime.fromtimestamp(file.stat().st_ctime).isoformat(),
-                "last_modified": datetime.fromtimestamp(file.stat().st_mtime).isoformat()
+                "last_modified": datetime.fromtimestamp(
+                    file.stat().st_mtime
+                ).isoformat(),
             }
             dir_info["files"].append(file_info)
     return dir_info
+
 
 def serialize_episode_dir_ai_info(dir_info: dict) -> str:
     """
@@ -118,11 +142,19 @@ def serialize_episode_dir_ai_info(dir_info: dict) -> str:
 def update_file_attrs(episode_dir, args):
     dir_info = get_episode_dir_ai_info(episode_dir)
     serialized_dir_info = serialize_episode_dir_ai_info(dir_info)
-    podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData] = call_openai(serialized_dir_info)
-    write_episode_yaml(podcast_episode_publication_data, episode_dir, args)    
+    podcast_episode_publication_data: ParsedChatCompletion[
+        PodcastEpisodePublicationData
+    ] = call_openai(serialized_dir_info)
+    write_episode_yaml(podcast_episode_publication_data, episode_dir, args)
 
 
-def write_episode_yaml(podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData], episode_dir: Path, args):
+def write_episode_yaml(
+    podcast_episode_publication_data: ParsedChatCompletion[
+        PodcastEpisodePublicationData
+    ],
+    episode_dir: Path,
+    args,
+):
     """
     Write the episode data to the episode.yml file.
     If args.reference is True, write to the reference episode directory.
@@ -132,14 +164,20 @@ def write_episode_yaml(podcast_episode_publication_data: ParsedChatCompletion[Po
     else:
         yaml_path = episode_dir / EPISODE_YAML_FILENAME
 
-    with yaml_path.open('w') as f:
-        pydantic_serialized_to_yaml_string = serialize_pydantic_to_yaml(podcast_episode_publication_data)
+    with yaml_path.open("w") as f:
+        pydantic_serialized_to_yaml_string = serialize_pydantic_to_yaml(
+            podcast_episode_publication_data
+        )
         f.write(pydantic_serialized_to_yaml_string)
 
     logger.debug(f"Written episode data to {get_relative_path(yaml_path)}")
 
 
-def serialize_pydantic_to_yaml(podcast_episode_publication_data: ParsedChatCompletion[PodcastEpisodePublicationData]) -> str:
+def serialize_pydantic_to_yaml(
+    podcast_episode_publication_data: ParsedChatCompletion[
+        PodcastEpisodePublicationData
+    ],
+) -> str:
     """
     Serialize the PodcastEpisodePublicationData to a YAML string.
     """
@@ -161,6 +199,7 @@ def main():
     logger.debug(f"Episode directory: {get_relative_path(episode_dir)}")
     update_file_attrs(episode_dir, args)
     logger.info("File attributes updated successfully.")
+
 
 if __name__ == "__main__":
     main()
