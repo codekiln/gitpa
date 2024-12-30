@@ -1,12 +1,11 @@
-episode_title: "More Sequencer Fun"
-episode_date: "2024-12-04"
-audio_file: "GP.2024.12.04.mix.128kbps_CBR.mp3"
-description: "Messing with the [[Microfreak/Sequencer]]"
-assets_base_url: "https://raw.githubusercontent.com/codekiln/gitpa/main/assets/Ceremony/"
-patches:
-  - "GP.2024.12.04.A.mfpz"
-  - "GP.2024.12.04.B.mfpz"
-  - "GP.2024.12.04.C.mfpz"
-  - "GP.2024.12.04.D.mfpz"
+audio_file: GP.2024.12.04.mix.128kbps_CBR.mp3
+description: ''
+episode_date: '2024-12-04'
+episode_title: Ceremony
 midi_files:
-  - "GP.2024.12.04.microfreak.mid"
+- GP.2024.12.04.microfreak.mid
+patch_files:
+- GP.2024.12.04.A.mfpz
+- GP.2024.12.04.B.mfpz
+- GP.2024.12.04.C.mfpz
+- GP.2024.12.04.D.mfpz
