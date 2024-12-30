@@ -43,6 +43,19 @@
             "env": {
                 "PYTHONDONTWRITEBYTECODE": "1"
             }
+        },
+        {
+            "name": "update_file_attrs 2024-12-04",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gitp-acolyte/gitp_acolyte/ceremonial/spells/episode_data/update/file_attrs/update_file_attrs.py",
+            "console": "integratedTerminal",
+            "args": [
+                "2024-12-04"
+            ],
+            "env": {
+                "PYTHONDONTWRITEBYTECODE": "1"
+            }
         }
     ]
 }
