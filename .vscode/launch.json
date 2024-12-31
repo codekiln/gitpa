@@ -56,6 +56,19 @@
             "env": {
                 "PYTHONDONTWRITEBYTECODE": "1"
             }
+        },
+        {
+            "name": "create_episode_data 2024-11-19",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "gitp_acolyte.ceremonial.spells.episode_data.create",
+            "console": "integratedTerminal",
+            "args": [
+                "2024-11-19"
+            ],
+            "env": {
+                "PYTHONDONTWRITEBYTECODE": "1"
+            }
         }
     ]
 }
