@@ -167,7 +167,13 @@ def ensure_episode_yaml(episode_date, args):
     return False
 
 
-def recording_dir_exists(episode_date, args):
+def recording_dir_exists(episode_date, args) -> tuple[Path, bool]:
+    """
+    Checks if the episode recording directory exists.
+    Returns a tuple of:
+    - the path to the episode recording directory
+    - a boolean indicating if the directory exists
+    """
     path_to_episode_recording_dir = construct_path_to_episode_recording_dir(
         episode_date
     )
@@ -185,8 +191,8 @@ def recording_dir_exists(episode_date, args):
                 f"Episode recording directory does not exist: {path_to_episode_recording_dir}"
             )
             logger.error("Please create the episode recording directory.")
-        return False
-    return True
+        return path_to_episode_recording_dir, False
+    return path_to_episode_recording_dir, True
 
 
 def episode_publishing_dir_exists(episode_date, args) -> tuple[Path, bool]:
