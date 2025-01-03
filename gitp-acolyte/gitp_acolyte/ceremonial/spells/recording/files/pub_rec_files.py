@@ -1,5 +1,6 @@
 import argparse
 import logging
+import re
 import sys
 from pathlib import Path
 
@@ -49,15 +50,33 @@ def define_args():
 def filter_files_to_publish(src_dir: Path) -> list[Path]:
     """
     Iterates through files in src_dir and any subdirectories in
-    REC_DIR_SUBDIRS_TO_SEARCH, and only returns files with extensions
-    in FILE_SUFFIXES_TO_SYNC.
+    REC_DIR_SUBDIRS_TO_SEARCH, and only returns files
+    whose file names end with any of the strings in FILE_SUFFIXES_TO_SYNC.
     """
-    files_to_sync = []
+
+    def is_valid_file(file: Path) -> bool:
+        return file.is_file() and any(
+            file.name.endswith(suffix) for suffix in FILE_SUFFIXES_TO_SYNC
+        )
+
+    files_to_sync = [item for item in src_dir.iterdir() if is_valid_file(item)]
+
     for subdir in REC_DIR_SUBDIRS_TO_SEARCH:
-        for item in (src_dir / subdir).iterdir():
-            if item.is_file() and item.suffix in FILE_SUFFIXES_TO_SYNC:
-                files_to_sync.append(item)
+        subdir_path = src_dir / subdir
+        if subdir_path.exists() and subdir_path.is_dir():
+            files_to_sync.extend(
+                item for item in subdir_path.iterdir() if is_valid_file(item)
+            )
+
     return files_to_sync
+
+
+def sanitize_destination_filename(path: Path) -> Path:
+    """
+    Replaces emojis and other complex UTF-8 characters in the filename with underscores.
+    """
+    sanitized_name = re.sub(r"[^\w\-.]", "_", path.name)
+    return path.with_name(sanitized_name)
 
 
 def sync_files(src_dir: Path, dest_dir: Path, dry_run: bool):
@@ -72,7 +91,7 @@ def sync_files(src_dir: Path, dest_dir: Path, dry_run: bool):
     """
     files_to_publish = filter_files_to_publish(src_dir)
     for file in files_to_publish:
-        dest_file = dest_dir / file.name
+        dest_file = sanitize_destination_filename(dest_dir / file.name)
         if not dest_file.exists():
             if dry_run:
                 logger.info(f"Would copy '{file}' to '{get_relative_path(dest_file)}'")

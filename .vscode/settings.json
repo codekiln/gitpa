@@ -1,6 +1,7 @@
 {
     "python.testing.pytestArgs": [
-        "gitp-acolyte"
+        "gitp-acolyte",
+        "--cache-clear",
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true
