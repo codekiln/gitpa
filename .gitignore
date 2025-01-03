@@ -45,4 +45,4 @@ Thumbs.db                # Windows thumbnail cache
 # 🐍 Python cache files
 __pycache__/             # Python bytecode cache directories
 *.py[cod]                # Python bytecode files
-
+.pytest_cache/           # Python test cache
