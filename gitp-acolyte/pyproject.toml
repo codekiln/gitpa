@@ -17,14 +17,14 @@ jinja2 = "^3.1.4"
 python-dotenv = "^1.0.1"
 openai = "^1.58.1"
 
-[tool.poetry.dev-dependencies]
-pytest = "^6.2"
+[tool.poetry.group.dev.dependencies]
+pytest-xdist = { version = "^3.6.1", extras = ["psutil"] }
 black = "^21.9b0"
 flake8 = "^3.9.2"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+ [tool.pytest.ini_options]
+ addopts="-n 4"
