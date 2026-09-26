@@ -1,6 +1,6 @@
 public:: true
 
-- This is a Synth Animism acolytes' log. The [[Ghostpatch Guild]] tinker with [[Etherial Receivers]] like the [[Microfreak]], tuning into the signals of the [[Sound Spirits]] of the Misty Soundwood. Ghosts are in the garden, growing things, so be aware.
+- Acolytes of the [[Ghostpatch Guild]], tinkering with [[Etherial Receivers]] such as the [[Microfreak]], tuning into the signals of the [[Sound Spirits]] of the Misty Soundwood. Ghosts in the garden, growing signal *awareness*.
 - ![gitp_logo_raw_fly.JPG](../assets/gitp/logo/gitp_logo_raw_fly.JPG){:height 778, :width 770}
 - query-table:: false
   query-properties:: [:page]
