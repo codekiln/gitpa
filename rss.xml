@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Ghost in the Patch</title>
+    <link>https://codekiln.github.io/gitpa/</link>
+    <atom:link href="https://codekiln.github.io/gitpa/rss.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <description>Synth animism. Live-patching, learning, and listening for ghosts in the machine.</description>
+    <itunes:author>Codekiln</itunes:author>
+    <itunes:summary>Synth animism. Live-patching, learning, and listening for ghosts in the machine.</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:category text="Music" />
+    <itunes:image href="https://codekiln.github.io/gitpa/assets/gitp/logo/gitp_logo_raw_fly.JPG" />
+    <image>
+      <url>https://codekiln.github.io/gitpa/assets/gitp/logo/gitp_logo_raw_fly.JPG</url>
+      <title>Ghost in the Patch</title>
+      <link>https://codekiln.github.io/gitpa/</link>
+    </image>
+    <itunes:owner>
+      <itunes:name>Codekiln</itunes:name>
+      <itunes:email>codekiln@pm.me</itunes:email>
+    </itunes:owner>
+    <item>
+      <title>GitP.26.09.25</title>
+      <link>https://codekiln.github.io/gitpa/#/page/Ceremony%2F2026%2F09%2F25</link>
+      <description>MicroFreak SAWX and WaveUser preset 1910, with a Novation Launchpad sequence.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>MicroFreak SAWX and WaveUser preset 1910, with a Novation Launchpad sequence.</itunes:summary>
+      <pubDate>Sat, 03 Oct 2026 12:00:00 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20260925</guid>
+      <enclosure url="https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-25/GitP.26.09.25.mp3" length="23569806" type="audio/mpeg" />
+    </item>
+  </channel>
+</rss>

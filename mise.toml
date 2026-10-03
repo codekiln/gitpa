@@ -1,0 +1,11 @@
+[tasks."rss:build"]
+description = "Build the public podcast feed from published episode records"
+run = "uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py"
+
+[tasks."rss:check"]
+description = "Check that rss.xml matches published episode records"
+run = "uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py --check"
+
+[tasks."rss:test"]
+description = "Test podcast feed generation"
+run = "uv run --no-project --with PyYAML==6.0.2 python -m unittest discover -s tests"

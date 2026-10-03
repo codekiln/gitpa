@@ -3,6 +3,7 @@ name: Publish
 on:
   push:
     branches: [ main ]
+  pull_request:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -12,6 +13,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Scan published source for secrets and local paths
+        run: |
+          npm install --prefix "$RUNNER_TEMP/secretlint" --no-audit --no-fund secretlint@13.0.6 @secretlint/secretlint-rule-preset-recommend@13.0.6 @secretlint/secretlint-rule-pattern@13.0.6
+          "$RUNNER_TEMP/secretlint/node_modules/.bin/secretlint" --secretlintrc .secretlintrc.json --maskSecrets "**/*"
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Check podcast RSS
+        run: uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py --check
 
       - name: Logseq Publish
         uses: logseq/publish-spa@main
@@ -23,7 +38,11 @@ jobs:
       - name: Add .nojekyll file
         run: touch www/.nojekyll
 
+      - name: Publish podcast RSS
+        run: cp rss.xml www/rss.xml
+
       - name: Deploy to gh-pages
+        if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
