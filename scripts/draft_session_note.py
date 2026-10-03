@@ -42,7 +42,10 @@ def find_note(garden: Path, day: date, explicit: Path | None) -> Path:
     if explicit:
         return explicit.resolve()
     marker = f"{day:%y}___{day:%m}___{day:%d}"
-    matches = sorted(garden.glob(f"pages/*{marker}*GitP*.md"))
+    matches = [
+        path for path in sorted(garden.glob(f"pages/*{marker}*.md"))
+        if re.search(r"\bGitP\b|\bGitpa\b", path.read_text(encoding="utf-8"), re.IGNORECASE)
+    ]
     if len(matches) != 1:
         raise ValueError(f"Expected one GitP garden note for {day}; found {len(matches)}. Pass --note.")
     return matches[0]
@@ -56,6 +59,11 @@ def note_facts(note: Path) -> tuple[str, str]:
     two_op = re.search(r"started with (?:\d+ )?two (?:operator fm|op\.?fm) on (?:an? )?initialized patch", readable, re.IGNORECASE)
     detail = "two-operator FM on an initialized patch" if two_op else ""
     return devices, detail
+
+
+def explicit_description(note: Path) -> str:
+    match = re.search(r"^\s*-\s*Description:\s*(.+)$", note.read_text(encoding="utf-8"), re.MULTILINE)
+    return match.group(1).strip() if match else ""
 
 
 def description_from_note(devices: str, detail: str) -> str:
@@ -183,7 +191,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None, tran
         raise FileNotFoundError(f"Prepare the MP3 before drafting: {mp3}")
     duration = duration_seconds(mp3)
     devices, detail = note_facts(note)
-    description = description_from_note(devices, detail)
+    description = explicit_description(note) or description_from_note(devices, detail)
     if not description:
         raise ValueError(f"No usable description facts in {note}; add a session note first")
     tracks, has_program_changes = ableton_tracks(project)
@@ -195,6 +203,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None, tran
     manual_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(manual.name)
     journal = garden / "journals" / f"{day:%Y_%m_%d}.md"
     journal_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/journals/" + quote(journal.name)
+    note_summary = "; ".join(value for value in (devices, detail) if value) or f"description supplied in the garden note: {description}"
     lines = [
         GENERATED,
         f"# GitP.{day:%y.%m.%d}",
@@ -202,7 +211,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None, tran
         f"Proposed description: {description}",
         "",
         "## Evidence",
-        f"- [Garden session note]({note_url}): {devices}{'; ' + detail if detail else ''}.",
+        f"- [Garden session note]({note_url}): {note_summary}.",
         f"- Prepared MP3: `{mp3.name}`, {duration / 60:.1f} minutes.",
         f"- Ableton tracks: {', '.join(tracks) if tracks else 'none named'}.",
     ]

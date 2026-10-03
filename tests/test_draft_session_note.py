@@ -1,10 +1,13 @@
 import json
+from datetime import date
 from pathlib import Path
 import tempfile
 import unittest
 
 from scripts.draft_session_note import (
     description_from_note,
+    explicit_description,
+    find_note,
     note_facts,
     transcript_quality,
     update_empty_description,
@@ -34,6 +37,15 @@ class DraftSessionNoteTests(unittest.TestCase):
                 encoding="utf-8",
             )
             self.assertFalse(transcript_quality(transcript)[0])
+
+    def test_note_discovery_uses_contents_when_filename_lacks_gitpa(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            pages = Path(temporary) / "pages"
+            pages.mkdir()
+            note = pages / "Music___Composition___Log___26___09___25 Fri.md"
+            note.write_text("- Podcast title: GitP.26.09.25\n\t- Description: A synth session.\n", encoding="utf-8")
+            self.assertEqual(find_note(Path(temporary), date(2026, 9, 25), None), note)
+            self.assertEqual(explicit_description(note), "A synth session.")
 
     def test_draft_never_overwrites_a_written_description(self):
         with tempfile.TemporaryDirectory() as temporary:
