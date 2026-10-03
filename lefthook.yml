@@ -1,0 +1,4 @@
+pre-commit:
+  commands:
+    identity-guard:
+      run: mise run secrets:scan {staged_files}
