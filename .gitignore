@@ -40,6 +40,7 @@ Thumbs.db
 # !.vscode/settings.json  # Shared project settings
 # !.vscode/tasks.json     # Shared task configurations
 .python-version
+.worktrees/
 
 # 🐍 Python cache files
 __pycache__/
