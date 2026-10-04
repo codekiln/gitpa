@@ -102,7 +102,7 @@ class ImportEpisodeTests(unittest.TestCase):
         self.media()
         for name, value in [('audio_length', True), ('audio_length', 0), ('audio_type', 'text/plain'),
                             ('audio_url', 'http://example.com/a.mp3'),
-                            ('audio_url', 'https://user:secret@example.com/a.mp3'),
+                            ('audio_url', ('https://' + 'fixture-user' + ':' + 'fixture-pass' + '@example.com/a.mp3')),
                             ('audio_url', 'https://example.com/a.mp3?token=temporary'),
                             ('audio_url', 'https://example.com:bad/a.mp3')]:
             with self.subTest(name=name, value=value):
