@@ -33,7 +33,7 @@ class ImportEpisodeTests(unittest.TestCase):
         self.data['description'] += '\n- More listening notes.'
         self.run_import()
         record = yaml.safe_load(self.record.read_text())
-        self.assertFalse(record['published'])
+        self.assertNotIn('published', record)
         self.assertEqual(record['description'], self.data['description'])
         self.assertNotIn('guid', record)
         self.assertIn('public:: false', self.page.read_text())
@@ -42,7 +42,7 @@ class ImportEpisodeTests(unittest.TestCase):
 
     def test_repeat_preserves_front_copy_page_and_publication_identity(self):
         self.run_import()
-        self.record.write_text("# Human note\npublished: true\nepisode_title: Final title\n"
+        self.record.write_text("# Human note\nepisode_title: Final title\n"
                                "description: Final copy\nrecorded_on: '2026-09-24'\n"
                                "guid: permanent-guid\npublished_at: '2026-10-01T12:00:00-04:00'\n"
                                "page: Custom/Episode\npage_url: https://example.com/episode\n")
@@ -132,7 +132,7 @@ class ImportEpisodeTests(unittest.TestCase):
 
     def test_published_missing_page_does_not_gain_a_private_draft(self):
         self.run_import()
-        self.record.write_text(self.record.read_text().replace('published: false', 'published: true'))
+        self.record.write_text(self.record.read_text() + 'guid: existing-episode\n')
         self.page.unlink()
         self.media()
         before = self.record.read_bytes()

@@ -106,7 +106,7 @@ def import_episode(handoff: Path, root: Path = ROOT) -> tuple[Path, Path]:
         raise ValueError("Episode record escapes the front garden")
     original_record = record_path.read_bytes() if record_path.exists() else None
     if original_record is None:
-        record = {"published": False, "episode_title": data["episode_title"],
+        record = {"episode_title": data["episode_title"],
                   "description": data["description"], "recorded_on": day.isoformat(),
                   "page": f"Ceremony/{day:%Y/%m/%d}"}
         record.update({name: data[name] for name in MEDIA if name in data})
@@ -140,7 +140,7 @@ def import_episode(handoff: Path, root: Path = ROOT) -> tuple[Path, Path]:
     if new_record != original_record:
         changes[record_path] = new_record
     if original_page is None:
-        if record.get("published") is True:
+        if record.get("guid") or record.get("published_at"):
             raise ValueError("Published episode page is missing; restore the reviewed page before importing")
         title = record.get("episode_title", data["episode_title"])
         description = record.get("description", data["description"])

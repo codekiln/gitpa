@@ -42,6 +42,19 @@ def https_url(record: dict, name: str, path: Path) -> str:
     return value
 
 
+def public_page(path: Path) -> bool:
+    """Read Logseq's page property, excluding occurrences in body blocks."""
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        if "::" not in line or line.startswith(("-", "\t", " ")):
+            break
+        key, value = line.split("::", 1)
+        if key.strip() == "public":
+            return value.strip() == "true"
+    return False
+
+
 def load_episodes(garden: Path = GARDEN) -> list[dict]:
     episodes = []
     guids = set()
@@ -50,7 +63,16 @@ def load_episodes(garden: Path = GARDEN) -> list[dict]:
         record = yaml.safe_load(path.read_text(encoding="utf-8"))
         if not isinstance(record, dict):
             raise ValueError(f"{path}: expected a YAML mapping")
-        if record.get("published") is not True:
+        # Production records without a page reference are not RSS records.
+        if "page" not in record:
+            continue
+        page_name = required(record, "page", path)
+        if page_name.startswith("/") or ".." in page_name.split("/"):
+            raise ValueError(f"{path}: invalid page name")
+        page_path = garden / "pages" / (page_name.replace("/", "___") + ".md")
+        if not page_path.is_file():
+            raise ValueError(f"{path}: episode page is missing: {page_path}")
+        if not public_page(page_path):
             continue
 
         for name in ("episode_title", "description", "recorded_on", "guid", "page"):
@@ -71,12 +93,6 @@ def load_episodes(garden: Path = GARDEN) -> list[dict]:
         if published_at.tzinfo is None or published_at.utcoffset() is None:
             raise ValueError(f"{path}: published_at needs a timezone offset")
 
-        page_name = record["page"]
-        if page_name.startswith("/") or ".." in page_name.split("/"):
-            raise ValueError(f"{path}: invalid page name")
-        page_path = garden / "pages" / (page_name.replace("/", "___") + ".md")
-        if not page_path.is_file() or "public:: true" not in page_path.read_text(encoding="utf-8").splitlines()[:5]:
-            raise ValueError(f"{path}: public episode page is missing: {page_path}")
         if record["guid"] in guids:
             raise ValueError(f"{path}: duplicate GUID {record['guid']}")
         if record["audio_url"] in audio_urls:

@@ -19,7 +19,6 @@ class FeedTest(unittest.TestCase):
 
     def write_record(self, extra=""):
         self.record.write_text(
-            "published: true\n"
             "episode_title: 'Synth & Signal'\n"
             "description: 'Sounds <and> notes'\n"
             "recorded_on: '2026-09-25'\n"
@@ -46,15 +45,29 @@ class FeedTest(unittest.TestCase):
         self.assertEqual(rss.find(f"channel/{{{ATOM}}}link").attrib["href"], "https://codekiln.github.io/gitpa/rss.xml")
         self.assertIsNotNone(rss.find(f"channel/{{{ITUNES}}}image"))
 
-    def test_legacy_record_remains_unpublished(self):
+    def test_production_record_without_page_is_not_a_feed_record(self):
         self.record.write_text("episode_title: Ceremony\nepisode_date: '2024-12-04'\n")
         self.assertEqual(load_episodes(self.garden), [])
 
     def test_missing_public_page_blocks_publication(self):
         self.write_record()
         (self.garden / "pages" / "Ceremony___2026___09___25.md").unlink()
-        with self.assertRaisesRegex(ValueError, "public episode page is missing"):
+        with self.assertRaisesRegex(ValueError, "episode page is missing"):
             load_episodes(self.garden)
+
+    def test_private_page_is_excluded_without_a_second_switch(self):
+        self.write_record()
+        page = self.garden / "pages" / "Ceremony___2026___09___25.md"
+        page.write_text("public:: false\n- Draft\n")
+        self.assertEqual(load_episodes(self.garden), [])
+        page.write_text("public:: true\n- Approved\n")
+        self.assertEqual(len(load_episodes(self.garden)), 1)
+
+    def test_public_marker_in_body_does_not_publish(self):
+        self.write_record()
+        page = self.garden / "pages" / "Ceremony___2026___09___25.md"
+        page.write_text("- Example\npublic:: true\n")
+        self.assertEqual(load_episodes(self.garden), [])
 
     def test_publication_date_needs_timezone(self):
         self.write_record()
