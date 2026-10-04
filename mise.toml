@@ -10,6 +10,6 @@ run = "uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py --ch
 description = "Test podcast feed generation"
 run = "uv run --no-project --with PyYAML==6.0.2 python -m unittest discover -s tests"
 
-[tasks."episode:draft"]
-description = "Draft a sourced session note and episode description from an Ableton project"
-run = "python scripts/draft_session_note.py"
+[tasks."episode:import"]
+description = "Import a reviewed episode handoff from the knowledge garden"
+run = "uv run --no-project --with PyYAML==6.0.2 python scripts/import_episode.py"
