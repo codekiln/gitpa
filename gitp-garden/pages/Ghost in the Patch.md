@@ -11,7 +11,10 @@ public:: true
   {:title [:h2 "Recent Ceremonies"]
    :query [:find (pull ?b [*])
            :where
-           (property ?b :type "Podcast/Episode")]
+           [?b :block/properties ?props]
+           [(get ?props :logseq-entity) ?entities]
+           [(contains? ?entities "Logseq/Entity/Podcast/Episode")]
+           [(get ?props :public) true]]
   :table-view? true
   }
   #+END_QUERY

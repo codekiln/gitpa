@@ -1,4 +1,4 @@
-"""Build the published podcast feed from episode.yml records."""
+"""Build the podcast feed from public Logseq episode proxies."""
 
 from __future__ import annotations
 
@@ -6,10 +6,12 @@ import argparse
 from datetime import datetime
 from email.utils import format_datetime
 from pathlib import Path
-from urllib.parse import urlparse
-import xml.etree.ElementTree as ET
+from urllib.parse import urlparse, quote
+from urllib.request import Request, urlopen
+import re
 
-import yaml
+from sync_episode import split_page, properties, page_path
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,68 +44,56 @@ def https_url(record: dict, name: str, path: Path) -> str:
     return value
 
 
-def public_page(path: Path) -> bool:
-    """Read Logseq's page property, excluding occurrences in body blocks."""
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        if "::" not in line or line.startswith(("-", "\t", " ")):
-            break
-        key, value = line.split("::", 1)
-        if key.strip() == "public":
-            return value.strip() == "true"
-    return False
+def audio_metadata(url: str) -> tuple[int, str]:
+    with urlopen(Request(url, method="HEAD"), timeout=30) as response:
+        length = int(response.headers.get("Content-Length", "0"))
+        content_type = response.headers.get("Content-Type", "").split(";", 1)[0]
+        if length <= 0 or content_type != "audio/mpeg":
+            raise ValueError(f"{url}: expected a nonempty public audio/mpeg file")
+        return length, content_type
 
 
-def load_episodes(garden: Path = GARDEN) -> list[dict]:
+def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
     episodes = []
-    guids = set()
-    audio_urls = set()
-    for path in sorted((garden / "assets").rglob("episode.yml")):
-        record = yaml.safe_load(path.read_text(encoding="utf-8"))
-        if not isinstance(record, dict):
-            raise ValueError(f"{path}: expected a YAML mapping")
-        # Production records without a page reference are not RSS records.
-        if "page" not in record:
+    guids, audio_urls = set(), set()
+    for path in sorted((garden / "pages").glob("*.md")):
+        lines, body = split_page(path.read_text(encoding="utf-8"))
+        props = properties(lines)
+        if props.get("public") != "true":
             continue
-        page_name = required(record, "page", path)
-        if page_name.startswith("/") or ".." in page_name.split("/"):
-            raise ValueError(f"{path}: invalid page name")
-        page_path = garden / "pages" / (page_name.replace("/", "___") + ".md")
-        if not page_path.is_file():
-            raise ValueError(f"{path}: episode page is missing: {page_path}")
-        if not public_page(page_path):
+        if "[[Logseq/Entity/Podcast/Episode]]" not in props.get("logseq-entity", ""):
             continue
-
-        for name in ("episode_title", "description", "recorded_on", "guid", "page"):
-            required(record, name, path)
-        for name in ("audio_url", "page_url"):
-            https_url(record, name, path)
-        if urlparse(record["audio_url"]).query or urlparse(record["audio_url"]).fragment:
-            raise ValueError(f"{path}: audio_url must be a permanent public URL")
-        if record.get("audio_type") != "audio/mpeg":
-            raise ValueError(f"{path}: audio_type must be audio/mpeg")
-        if type(record.get("audio_length")) is not int or record["audio_length"] <= 0:
-            raise ValueError(f"{path}: audio_length must be a positive integer")
-        try:
-            datetime.strptime(record["recorded_on"], "%Y-%m-%d")
-            published_at = datetime.fromisoformat(required(record, "published_at", path))
-        except ValueError as error:
-            raise ValueError(f"{path}: invalid recording or publication date: {error}") from error
-        if published_at.tzinfo is None or published_at.utcoffset() is None:
-            raise ValueError(f"{path}: published_at needs a timezone offset")
-
-        if record["guid"] in guids:
-            raise ValueError(f"{path}: duplicate GUID {record['guid']}")
-        if record["audio_url"] in audio_urls:
-            raise ValueError(f"{path}: duplicate audio URL {record['audio_url']}")
-        guids.add(record["guid"])
-        audio_urls.add(record["audio_url"])
-        record["_published_at"] = published_at
-        episodes.append(record)
-
-    episodes.sort(key=lambda episode: episode["_published_at"], reverse=True)
-    return episodes
+        guid = required(props, "podcast-guid", path)
+        published = datetime.fromisoformat(required(props, "podcast-published-at", path))
+        if published.tzinfo is None or published.utcoffset() is None:
+            raise ValueError(f"{path}: podcast-published-at needs a timezone offset")
+        heading = re.search(r"^- # ([^\n]+)\n\t- ([^\n]+)", body, re.MULTILINE)
+        if not heading:
+            raise ValueError(f"{path}: expected an H1 followed by the episode description")
+        embeds = re.findall(r"\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}", body)
+        audio = []
+        for name in embeds:
+            asset_path = page_path(garden, name)
+            _, asset_body = split_page(asset_path.read_text(encoding="utf-8"))
+            audio.extend(re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", asset_body))
+        if len(audio) != 1:
+            raise ValueError(f"{path}: expected one embedded MP3 asset page")
+        url = https_url({"audio_url": audio[0]}, "audio_url", path)
+        if urlparse(url).query or urlparse(url).fragment:
+            raise ValueError(f"{path}: audio URL must be permanent")
+        if guid in guids or url in audio_urls:
+            raise ValueError(f"{path}: duplicate GUID or audio URL")
+        guids.add(guid)
+        audio_urls.add(url)
+        length, content_type = probe(url)
+        page_name = path.stem.replace("___", "/")
+        episodes.append({
+            "episode_title": heading[1], "description": heading[2],
+            "guid": guid, "_published_at": published,
+            "page_url": SITE_URL + "#/page/" + quote(page_name, safe=""),
+            "audio_url": url, "audio_length": length, "audio_type": content_type,
+        })
+    return sorted(episodes, key=lambda episode: episode["_published_at"], reverse=True)
 
 
 def render_feed(episodes: list[dict]) -> bytes:
@@ -153,7 +143,7 @@ def render_feed(episodes: list[dict]) -> bytes:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Fail if rss.xml differs from episode records")
+    parser.add_argument("--check", action="store_true", help="Fail if rss.xml differs from episode pages")
     args = parser.parse_args()
     episodes = load_episodes()
     if not episodes:

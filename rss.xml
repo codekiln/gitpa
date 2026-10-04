@@ -22,8 +22,28 @@
       <itunes:email>codekiln@pm.me</itunes:email>
     </itunes:owner>
     <item>
+      <title>GitP.24.12.04</title>
+      <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F24%2F12%2F04-Wed</link>
+      <description>A MicroFreak session recorded on December 4, 2024.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>A MicroFreak session recorded on December 4, 2024.</itunes:summary>
+      <pubDate>Sun, 04 Oct 2026 14:46:20 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20241204</guid>
+      <enclosure url="https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___24___12___04-Wed___Asset___Synth___Full.mp3" length="45960645" type="audio/mpeg" />
+    </item>
+    <item>
+      <title>GitP.24.11.19</title>
+      <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F24%2F11%2F19-Tue</link>
+      <description>A MicroFreak session recorded on November 19, 2024.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>A MicroFreak session recorded on November 19, 2024.</itunes:summary>
+      <pubDate>Sun, 04 Oct 2026 14:46:19 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20241119</guid>
+      <enclosure url="https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___24___11___19-Tue___Asset___Synth___Full.mp3" length="6771538" type="audio/mpeg" />
+    </item>
+    <item>
       <title>GitP.26.09.24</title>
-      <link>https://codekiln.github.io/gitpa/#/page/Ceremony%2F2026%2F09%2F24</link>
+      <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F26%2F09%2F24-Thu</link>
       <description>A MicroFreak and Launchpad session beginning with two-operator FM on an initialized patch.</description>
       <itunes:author>Codekiln</itunes:author>
       <itunes:summary>A MicroFreak and Launchpad session beginning with two-operator FM on an initialized patch.</itunes:summary>
@@ -33,13 +53,13 @@
     </item>
     <item>
       <title>GitP.26.09.25</title>
-      <link>https://codekiln.github.io/gitpa/#/page/Ceremony%2F2026%2F09%2F25</link>
+      <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F26%2F09%2F25-Fri</link>
       <description>MicroFreak SAWX and WaveUser preset 1910, with a Novation Launchpad sequence.</description>
       <itunes:author>Codekiln</itunes:author>
       <itunes:summary>MicroFreak SAWX and WaveUser preset 1910, with a Novation Launchpad sequence.</itunes:summary>
       <pubDate>Sat, 03 Oct 2026 12:00:00 -0400</pubDate>
       <guid isPermaLink="false">gitpa20260925</guid>
-      <enclosure url="https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-25/GitP.26.09.25.mp3" length="23569806" type="audio/mpeg" />
+      <enclosure url="https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___25-Fri___Asset___Synth___Full.mp3" length="23569806" type="audio/mpeg" />
     </item>
   </channel>
 </rss>

@@ -26,12 +26,15 @@ jobs:
       - uses: astral-sh/setup-uv@v6
 
       - name: Check podcast RSS
-        run: uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py --check
+        run: uv run --no-project python scripts/build_rss.py --check
+
+      - name: Prepare episode and asset visibility
+        run: uv run --no-project python scripts/prepare_site.py --output "$RUNNER_TEMP/gitp-site"
 
       - name: Logseq Publish
         uses: logseq/publish-spa@main
         with:
-          graph-directory: gitp-garden
+          graph-directory: ${{ runner.temp }}/gitp-site
           output-directory: www
           accent-color: indigo
 
