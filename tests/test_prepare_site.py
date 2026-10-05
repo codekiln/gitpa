@@ -73,6 +73,24 @@ class PresentationTests(unittest.TestCase):
     def test_excluded_notes_do_not_resolve_embeds(self):
         body = '- # Episode\n\t- ## Notes\n\t\t- {{embed [[Missing/Page]]}}\n'
         self.assertEqual('- # Episode\n', listener_body('Episode', body, {}))
+    def test_hidden_notes_do_not_publish_unused_assets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            name = 'GitP/A/Session/Test/Asset/Synth/Full/mp3'
+            asset = source / 'pages' / (name.replace('/', '___') + '.md')
+            asset.write_text('- ![Recording](https://example.com/test.mp3)\n')
+            (source / 'pages/Episode.md').write_text('public:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\n- # Episode\n\t- ## Notes\n\t\t- {{embed [[' + name + ']]}}\n')
+            prepare(source, output)
+            self.assertTrue((output / 'pages' / asset.name).read_text().startswith('public:: false\n'))
+    def test_invalid_publication_aborts_before_copy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            (source / 'pages/Episode.md').write_text('public:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\npodcast-published-at:: 2026-01-01\n- # Episode\n')
+            with self.assertRaisesRegex(ValueError, 'timezone'):
+                prepare(source, output)
+            self.assertFalse(output.exists())
     def test_proxy_properties_removed_from_generated_episode(self):
         with tempfile.TemporaryDirectory() as directory:
             source, output = Path(directory) / 'source', Path(directory) / 'output'

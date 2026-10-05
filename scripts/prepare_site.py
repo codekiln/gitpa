@@ -82,7 +82,7 @@ def prepare(source, output):
         pending.extend(asset_links(pages[name][1]))
     rendered = {name: listener_body(name, body, pages) for name, (lines, body) in pages.items()
                 if properties(lines).get('public') == 'true' and '[[Logseq/Entity/Podcast/Episode]]' in properties(lines).get('logseq-entity', '')}
-    shutil.copytree(source, output)
+    changes = {}
     for name, (lines, body) in pages.items():
         if name in rendered:
             keep = {'public', 'logseq-entity', 'podcast-published-at'}
@@ -94,13 +94,16 @@ def prepare(source, output):
                     raise ValueError(f'Missing publication timezone: {name}')
                 utc = date.astimezone(timezone.utc).isoformat()
                 lines = [f'podcast-published-at:: {utc}\n' if line.startswith('podcast-published-at::') else line for line in lines]
-            page_path(output, name).write_text(''.join(lines) + rendered[name], encoding='utf-8')
+            changes[name] = ''.join(lines) + rendered[name]
             continue
         if not name.startswith('GitP/A/Session/') or '/Asset/' not in name:
             continue
         lines = [line for line in lines if not line.startswith('public:: ')]
         lines.insert(0, f'public:: {str(name in visible).lower()}\n')
-        page_path(output, name).write_text(''.join(lines) + body, encoding='utf-8')
+        changes[name] = ''.join(lines) + body
+    shutil.copytree(source, output)
+    for name, content in changes.items():
+        page_path(output, name).write_text(content, encoding='utf-8')
     return output
 
 def main():

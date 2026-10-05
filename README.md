@@ -12,4 +12,4 @@ Run `mise run rss:build` and commit `rss.xml` with a publication PR. `mise run r
 
 Install the staged-file guard with `lefthook install`. It uses the machine's `mise run secrets:scan` task. GitHub Actions scans the public source before publishing.
 
-The homepage lists published episodes by publication time, newest first. Run `mise install` and `npm ci`, then `mise run site:query:check` to test the actual query and result transform using the same Logseq file parser version as the publishing action. The check includes false and string-valued publication fixtures. PR builds upload a `gitpa-website` artifact for browser review.
+The homepage lists published episodes by publication time, newest first. Preparation normalizes publication timestamps to UTC in the temporary website graph so different timezone offsets sort chronologically. Run `mise install` and `npm ci`, then `mise run site:query:check` to test the actual query and result transform using the same Logseq file parser version as the publishing action. The check includes false and string-valued publication fixtures. PR builds upload a `gitpa-website` artifact for browser review.
