@@ -85,7 +85,7 @@ def prepare(source, output):
     changes = {}
     for name, (lines, body) in pages.items():
         if name in rendered:
-            keep = {'public', 'logseq-entity', 'podcast-published-at'}
+            keep = {'public', 'logseq-entity', 'podcast-published-at', 'tags'}
             lines = [line for line in lines if line.split('::', 1)[0] in keep]
             published = properties(lines).get('podcast-published-at')
             if published:

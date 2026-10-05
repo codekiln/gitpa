@@ -96,10 +96,11 @@ class PresentationTests(unittest.TestCase):
             source, output = Path(directory) / 'source', Path(directory) / 'output'
             (source / 'pages').mkdir(parents=True)
             path = source / 'pages/Episode.md'
-            original = 'public:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\npodcast-published-at:: 2026-01-01T00:00:00Z\nlogseq-proxy-url:: logseq://graph/source\n- # Episode\n'
+            original = 'tags:: [[Music]]\npublic:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\npodcast-published-at:: 2026-01-01T00:00:00Z\nlogseq-proxy-url:: logseq://graph/source\n- # Episode\n'
             path.write_text(original)
             prepare(source, output)
             self.assertNotIn('logseq-proxy-url', (output / 'pages/Episode.md').read_text())
+            self.assertTrue((output / 'pages/Episode.md').read_text().startswith('tags:: [[Music]]\n'))
             self.assertEqual(original, path.read_text())
 
 if __name__ == '__main__':
