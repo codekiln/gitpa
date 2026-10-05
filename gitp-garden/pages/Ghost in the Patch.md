@@ -1,7 +1,7 @@
 public:: true
 
 - Acolytes of the [[Ghostpatch Guild]], tinkering with [[Etherial Receivers]] such as the [[Microfreak]], tuning into the signals of the [[Sound Spirits]] of the Misty Soundwood. Ghosts in the garden, growing signal *awareness*.
-- [Subscribe to the podcast RSS feed](https://codekiln.github.io/gitpa/rss.xml)
+- Subscribe to the podcast RSS feed at https://codekiln.github.io/gitpa/rss.xml
 - ![gitp_logo_raw_fly.JPG](../assets/gitp/logo/gitp_logo_raw_fly.JPG){:height 778, :width 770}
 - query-table:: false
   query-properties:: [:page]
