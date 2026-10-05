@@ -3,4 +3,4 @@ logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___24___12___04-Wed___Asset___Preset___A___mfpz.md
 logseq-proxy-last-sync-date:: [[2026-10-05]]
 - # GitP.24.12.04 preset A
-	- [Download MicroFreak preset A](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___24___12___04-Wed___Asset___Preset___A.mfpz)
+	- [Download MicroFreak preset A](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___24___12___04-Wed___Asset___Preset___A.mfpz)
