@@ -1,3 +1,8 @@
+[tools]
+java = "temurin-21"
+babashka = "1.3.191"
+"npm:@logseq/nbb-logseq" = "1.2.173"
+
 [tasks."rss:build"]
 description = "Build the public podcast feed from episode pages"
 run = "uv run --no-project python scripts/build_rss.py"
@@ -9,3 +14,7 @@ run = "uv run --no-project python scripts/build_rss.py --check"
 [tasks."rss:test"]
 description = "Test episode proxy sync and podcast feed generation"
 run = "uv run --no-project python -m unittest discover -s tests"
+
+[tasks."site:query:check"]
+description = "Validate the real homepage query against the graph"
+run = "nbb-logseq scripts/check_homepage.cljs"

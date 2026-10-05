@@ -18,6 +18,13 @@ jobs:
         with:
           node-version: '22'
 
+      - uses: jdx/mise-action@v2
+
+      - name: Validate homepage query against parsed graph
+        run: |
+          npm ci --no-audit --no-fund
+          mise run site:query:check
+
       - name: Scan published source for secrets and local paths
         run: |
           npm install --prefix "$RUNNER_TEMP/secretlint" --no-audit --no-fund secretlint@13.0.6 @secretlint/secretlint-rule-preset-recommend@13.0.6 @secretlint/secretlint-rule-pattern@13.0.6
@@ -37,6 +44,12 @@ jobs:
           graph-directory: ${{ runner.temp }}/gitp-site
           output-directory: www
           accent-color: indigo
+
+      - name: Save website preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitpa-website
+          path: www
 
       - name: Add .nojekyll file
         run: touch www/.nojekyll
