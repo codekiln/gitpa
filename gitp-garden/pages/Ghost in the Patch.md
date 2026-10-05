@@ -16,6 +16,10 @@ public:: true
            [(get ?props :public) ?public]
            [(= ?public true)]]
    :result-transform (fn [rows] (sort-by (fn [row] (get-in row [:block/properties :podcast-published-at])) (fn [a b] (compare b a)) rows))
+   :view (fn [rows]
+           [:ul (for [row rows]
+                  [:li [:a {:href (str "#/page/" (clojure.string/replace (:block/name row) "/" "%2F"))}
+                         (:block/original-name row)]])])
    :table-view? false
   }
   #+END_QUERY
