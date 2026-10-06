@@ -10,7 +10,7 @@ from urllib.parse import urlparse, quote
 from urllib.request import Request, urlopen
 import re
 
-from sync_episode import split_page, properties, page_path
+from logseq_page import split_page, properties, page_path
 import xml.etree.ElementTree as ET
 
 
