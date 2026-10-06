@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode.md
-logseq-proxy-last-sync-date:: [[2026-10-05]]
+logseq-proxy-last-sync-date:: [[2026-10-06]]
 
 - # Podcast Episode
 	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as listening notes or a recording prepared for publication.

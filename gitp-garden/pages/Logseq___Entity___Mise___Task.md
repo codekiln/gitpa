@@ -1,0 +1,49 @@
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+see-also:: [[mise/Task]], [[Logseq/Entity/CLI/Command]], [[Logseq/Entity/Diataxis/How To]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FMise%2FTask
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Mise___Task.md
+logseq-proxy-last-sync-date:: [[2026-10-06]]
+- # Mise Task
+	- In this garden, **Mise Task** pages model named jobs supplied by a repository or configuration scope and invoked through [[mise]].
+	- ## Identity
+		- A task is identified by its owning repository or configuration collection, config root, and exact task name. Identical names in separate repositories or config roots identify separate tasks.
+		- The task definition can be an executable file or a TOML task. A helper module, package, fixture, or test file becomes part of a task's implementation rather than a separate task entity.
+		- Built-in mise subcommands such as `mise run` are [[Logseq/Entity/CLI/Command]] instances. Jobs invoked through them are Mise Task instances.
+	- ## Naming and links
+		- Task reference pages belong to the topic served by the job: `Topic/mise/Task/<task-name-with-colons-as-slashes>`. A namespace prefix already expressed by the topic can be omitted from the page name while remaining in `task-name::`.
+		- For example, `episode:sync` lives at [[GitP/mise/Task/episode/sync]]. Repository ownership remains explicit in frontmatter.
+		- If the topic contains distinct implementations of the same task name, add a repository or config-scope segment before the task path. Displayed invocation text retains the exact runnable name.
+	- ## Frontmatter
+		- `logseq-entity::` marks the page as a Mise Task instance.
+		- `task-owner::` links the owning repository or configuration collection.
+		- `task-config-root::` gives the config directory relative to its repository; `.` denotes the repository root.
+		- `task-name::` records the exact local task name, preserving colons and spelling.
+		- `source-link::` links the executable file or TOML definition. A review branch or commit link identifies an implementation under review; the repository's default branch identifies the maintained task after it lands.
+		- Shared page attributes follow [[Logseq/Frontmatter]].
+	- ## Companion-file contract
+		- A portable file task declares `task-entrypoint::`, `task-files::`, and any `task-dependencies::` in its reference page's frontmatter. These properties let [[Logseq/Entity/Proxy/Page/mise/Task/sync]] bring the task's implementation into another garden.
+		- `task-entrypoint::` is the executable file's path relative to the source repository root, using forward slashes.
+		- `task-files::` is a single-line JSON object mapping each source repository-relative path to its destination graph-relative path. The object lists the entrypoint and every helper, package file, or isolated configuration file needed at runtime. Destination values remain under `mise-tasks/`. Each path is explicit; wildcards have no meaning.
+		- The entrypoint maps to `mise-tasks/<task-name with colons replaced by slashes>`. For example, `task-name:: logseq:entity:proxy:page:sync` maps to `mise-tasks/logseq/entity/proxy/page/sync`. The imported entrypoint retains its executable mode.
+		- Paths are relative, remain inside their respective roots, and identify regular files. Parent traversal and absolute paths are invalid. A source graph nested inside a repository still uses repository-relative source keys; destination values start at the destination graph root.
+		- `task-config-root::` retains the source task's configuration identity. Runtime tools are declared in the file task's mise metadata. A shared runtime configuration or package is transferable when its required files are explicitly mapped under `mise-tasks/`. Runtime file lookup is relative to the imported entrypoint or its helpers, so the task works after relocation. The destination garden supplies its root mise configuration.
+		- `task-dependencies::` is an optional comma-separated list of wikilinks to required Mise Task reference pages. Each dependency supplies its own file mapping, and dependencies are followed recursively with a visited set. A missing task page, invalid declaration, or missing mapped file stops application before writes.
+		- The imported task reference retains `task-owner::`, `task-config-root::`, `task-name::`, and `source-link::` from its source identity. Proxy metadata and the destination manifest record where the imported copy came from.
+		- Destination paths shared by tasks must describe the same source file. Conflicting sources claiming one destination path stop application. Previously imported implementation files update when their destination content still matches the last import; a local edit stops application and appears in the preview.
+		- Files removed from the source mapping are reported as cleanup candidates. Re-sync keeps those destination files for review.
+	- ## Reference content
+		- A single H1 names the job in plain language. Its first child states what the task accomplishes and when it is useful.
+		- **Invocation** gives the working directory or repository, the exact command, and one realistic example. Monorepo tasks show their project-qualified invocation.
+		- **Inputs and outputs** describe required files or arguments, created files and pages, and the result a successful run establishes.
+		- **Side effects** describes local writes, overwrites, deletion, uploads, and publication when present. Read-only tasks can state their read-only behavior briefly.
+		- **Dependencies and access** explains tools supplied by mise, Python dependencies supplied by the package manager, platform limits, and credential sources. Version numbers and full argument listings remain in the executable definition, package metadata, and generated help.
+		- **Failure and recovery** names the failures a reader is likely to meet and the action that resolves each one.
+		- **Source and help** links the implementation and provides the task's `--help` invocation. Material behavior changes are reflected in the reference page.
+		- A short task can combine adjacent sections. A task with substantial side effects gives those effects their own section.
+	- ## How-to pages
+		- Task pages describe one job. [[Logseq/Entity/Diataxis/How To]] pages describe a goal and may combine several jobs, editorial decisions, and manual checks.
+		- A how-to links its task reference pages; each task page links relevant how-tos through `see-also::`. The task reference holds the interface and side effects, while the how-to holds the sequence of actions.
+		- Examples use reusable input paths. Session results and release-specific evidence live on the relevant session pages.
+	- ## Finding and deduplicating
+		- Compare `task-owner::`, `task-config-root::`, and `task-name::` before creating a task page. The source path supports the match but can change during a refactor.
+		- An alias or monorepo path alias that invokes the same job belongs in the existing task reference. A task rename or implementation move updates the existing reference when the job retains its identity.

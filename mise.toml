@@ -18,3 +18,8 @@ run = "uv run --no-project python -m unittest discover -s tests"
 [tasks."site:query:check"]
 description = "Validate the real homepage query against the graph"
 run = "nbb-logseq scripts/check_homepage.cljs"
+
+[task_config]
+# gitp-garden/mise-tasks holds companion tasks imported with garden proxy pages,
+# such as logseq:entity:proxy:page:sync.
+includes = ["mise-tasks", "gitp-garden/mise-tasks"]
