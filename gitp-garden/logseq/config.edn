@@ -315,7 +315,12 @@
 
  ;; Hide specific block properties.
  ;; Example usage:
- ;;:block-hidden-properties #{:public :icon}
+ :block-hidden-properties #{:public :tags :alias :created-by :duration-seconds
+                            :podcast-guid :podcast-published-at :see-also :source-link
+                            :logseq-proxy-url :logseq-proxy-codeforge-url
+                            :logseq-proxy-last-sync-date :entity-proxy-destination-properties
+                            :entity-tasks :task-owner :task-config-root :task-name
+                            :task-entrypoint :task-files}
 
  ;; Create a page for all properties.
  ;; Default value: true

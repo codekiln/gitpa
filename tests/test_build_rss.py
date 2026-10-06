@@ -26,6 +26,16 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(episode['description'], 'Music from a patch.')
         self.assertEqual(episode['audio_url'], 'https://example.org/audio.mp3')
         self.assertIn(b'length="1234"', render_feed([episode]))
+    def test_direct_recording_keeps_feed_identity(self):
+        self.page.write_text(self.props + self.body.replace("{{embed [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]]}}", "![Listen](https://example.org/audio.mp3)"))
+        self.asset.unlink()
+        episode = self.load()[0]
+        self.assertEqual(episode["audio_url"], "https://example.org/audio.mp3")
+        self.assertEqual(episode["guid"], "stable")
+    def test_duplicate_recording_link_fails(self):
+        self.page.write_text(self.props + self.body + "\t- ![Listen](https://example.org/audio.mp3)\n")
+        with self.assertRaisesRegex(ValueError, "one MP3"):
+            self.load()
     def test_draft_not_probed(self):
         self.page.write_text(self.props.replace('public:: true', 'public:: false') + self.body)
         self.assertEqual(self.load(), [])

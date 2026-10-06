@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 see-also:: [[mise/Task]], [[Logseq/Entity/CLI/Command]], [[Logseq/Entity/Diataxis/How To]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FMise%2FTask
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Mise___Task.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F189-proxy-worktree-identity/pages/Logseq___Entity___Mise___Task.md
 logseq-proxy-last-sync-date:: [[2026-10-06]]
 - # Mise Task
 	- In this garden, **Mise Task** pages model named jobs supplied by a repository or configuration scope and invoked through [[mise]].

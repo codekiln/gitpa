@@ -71,13 +71,13 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         if not heading:
             raise ValueError(f"{path}: expected an H1 followed by the episode description")
         embeds = re.findall(r"\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}", body)
-        audio = []
+        audio = re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", body)
         for name in embeds:
             asset_path = page_path(garden, name)
             _, asset_body = split_page(asset_path.read_text(encoding="utf-8"))
             audio.extend(re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", asset_body))
         if len(audio) != 1:
-            raise ValueError(f"{path}: expected one embedded MP3 asset page")
+            raise ValueError(f"{path}: expected one MP3 recording link")
         url = https_url({"audio_url": audio[0]}, "audio_url", path)
         if urlparse(url).query or urlparse(url).fragment:
             raise ValueError(f"{path}: audio URL must be permanent")

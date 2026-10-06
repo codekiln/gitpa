@@ -3,7 +3,7 @@ entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 entity-proxy-destination-properties:: public
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FProxy%2FPage
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Proxy___Page.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F189-proxy-worktree-identity/pages/Logseq___Entity___Proxy___Page.md
 logseq-proxy-last-sync-date:: [[2026-10-06]]
 - # Proxy Page
 	- In this garden, **Proxy Page** marks a page whose body is mirrored from a page in another [[Logseq/Garden]], so one garden can read a page that lives in another without that page being moved or duplicated by hand. See [[Logseq/Idea/Proxy]] for the motivation.

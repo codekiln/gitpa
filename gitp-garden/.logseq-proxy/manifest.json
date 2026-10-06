@@ -92,7 +92,7 @@
     },
     "mise-tasks/logseq/entity/proxy/page/lib/core.py": {
       "mode": 420,
-      "sha256": "b29946f9062c099cc0c7c3a8077b5300b8582796674b919b4e273323b781b3df",
+      "sha256": "162f58b6461b5d6b37ea9a23a75e17013b5d03ec7049b065b56c8347ff2d95ee",
       "source": [
         "github.com/codekiln/logseq-encode-garden",
         ".",
