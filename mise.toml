@@ -12,7 +12,7 @@ description = "Check that rss.xml matches public episode pages"
 run = "uv run --no-project python scripts/build_rss.py --check"
 
 [tasks."rss:test"]
-description = "Test episode proxy sync and podcast feed generation"
+description = "Test podcast feed generation and website preparation"
 run = "uv run --no-project python -m unittest discover -s tests"
 
 [tasks."site:query:check"]
@@ -22,4 +22,4 @@ run = "nbb-logseq scripts/check_homepage.cljs"
 [task_config]
 # gitp-garden/mise-tasks holds companion tasks imported with garden proxy pages,
 # such as logseq:entity:proxy:page:sync.
-includes = ["mise-tasks", "gitp-garden/mise-tasks"]
+includes = ["gitp-garden/mise-tasks"]

@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import shutil
 from urllib.parse import urlparse
-from sync_episode import split_page, properties, page_path
+from logseq_page import split_page, properties, page_path
 
 ROOT = Path(__file__).resolve().parents[1]
 

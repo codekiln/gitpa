@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+entity-proxy-destination-properties:: podcast-guid, podcast-published-at
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode.md
 logseq-proxy-last-sync-date:: [[2026-10-06]]
@@ -28,7 +29,7 @@ logseq-proxy-last-sync-date:: [[2026-10-06]]
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this definition page collects backlinks to every episode.
 		- Set **`created-by::`** to the host.
 		- Set **`date-created::`** to the air date for listening notes, or the recording date for a producer-owned session.
-		- The publishing garden records feed identity with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-guid]] and publication time with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-published-at]].
+		- The publishing garden records feed identity with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-guid]] and publication time with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-published-at]]. When the episode page there is a [[Logseq/Entity/Proxy/Page]], re-syncing it keeps both.
 		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
 		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
 	- ## Page shape
