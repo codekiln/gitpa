@@ -7,10 +7,10 @@ public:: true
   query-properties:: [:page]
   #+BEGIN_QUERY
   {:title [:h2 "Recent Ceremonies"]
-   :query [:find (pull ?b [*])
+   :query [:find (pull ?p [*])
            :where
-           [?b :block/name]
-           [?b :block/properties ?props]
+           [?p :block/name]
+           [?p :block/properties ?props]
            [(get ?props :logseq-entity) ?entities]
            [(contains? ?entities "Logseq/Entity/Podcast/Episode")]
            [(get ?props :public) ?public]

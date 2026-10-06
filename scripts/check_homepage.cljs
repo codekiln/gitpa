@@ -4,6 +4,7 @@
             ["path" :as path]
             ["child_process" :as child]
             [clojure.string :as str]
+            [clojure.walk :as walk]
             [cljs.reader :as reader]
             [datascript.core :as d]
             [logseq.graph-parser.cli :as parser]))
@@ -18,8 +19,26 @@
 (def transform (eval (:result-transform query-map)))
 (def view (eval (:view query-map)))
 (def conn (:conn (parser/parse-graph graph {:verbose false})))
+;; Logseq rewrites (pull ?b [*]) to a fixed block attribute list before running
+;; an advanced query, so ?b results lose :block/name and :block/original-name.
+;; Source: frontend.db.query-custom/replace-star-with-block-attrs! and
+;; frontend.db.model/block-attrs at logseq 0.10.6, the publish-spa default.
+(def logseq-block-attrs
+  '[:db/id :block/uuid :block/parent :block/left :block/collapsed? :block/format
+    :block/refs :block/_refs :block/path-refs :block/tags :block/content :block/marker
+    :block/priority :block/properties :block/properties-order :block/properties-text-values
+    :block/pre-block? :block/scheduled :block/deadline :block/repeated? :block/created-at
+    :block/updated-at :block/heading-level :block/file
+    {:block/page [:db/id :block/name :block/original-name :block/journal-day]}])
+(defn logseq-query [query]
+  (walk/postwalk
+    (fn [form]
+      (if (and (seq? form) (= 'pull (first form)) (= '?b (second form)) (= '[*] (nth form 2 nil)))
+        (list 'pull '?b logseq-block-attrs)
+        form))
+    query))
 (defn result [db]
-  (transform (map first (d/q (:query query-map) db))))
+  (transform (map first (d/q (logseq-query (:query query-map)) db))))
 (def expected
   (->> (d/q '[:find (pull ?p [*]) :where [?p :block/name]] @conn)
        (map first)
