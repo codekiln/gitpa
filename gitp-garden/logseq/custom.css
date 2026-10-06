@@ -1,4 +1,6 @@
 /* This uses the logseq-dev-theme but the url can be changed to any theme's github url */
 @import url("https://cdn.jsdelivr.net/gh/henices/logseq-flow-nord@main/nord.css");
-/* Publication properties are used by queries, not by the episode layout. */
-.page-properties { display: none; }
+/* Publication properties are used by queries, not by the episode layout.
+   Hiding the whole property block also removes its empty bullet. The desktop
+   app keeps showing properties so they stay editable. */
+.is-publish-mode .ls-block.pre-block:has(.page-properties) { display: none; }
