@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 entity-proxy-destination-properties:: podcast-guid, podcast-published-at
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F197-listener-episode-pages/pages/Logseq___Entity___Podcast___Episode.md
-logseq-proxy-last-sync-date:: [[2026-10-06]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode.md
+logseq-proxy-last-sync-date:: [[2026-10-07]]
 
 - # Podcast Episode
 	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as listening notes or a recording prepared for publication.
@@ -35,10 +35,7 @@ logseq-proxy-last-sync-date:: [[2026-10-06]]
 	- ## Page shape
 		- Logseq Flavored Markdown.
 		- The first body block is the H1 heading with the episode title linked to the episode when a URL is known: `- # [Episode Title](https://example.com/episode)`. Without a URL, use a plain `- # Episode Title`.
-		- A producer-owned session opens with an optional short description, artwork when available, and a directly playable MP3 recording. Artwork and audio use Markdown media embeds with the asset URLs: `![Episode artwork](https://example.com/artwork.gif)` and `![Episode recording](https://example.com/recording.mp3)`.
-		- Downloadable MicroFreak patches use labeled Markdown links to the files, such as `[Download MicroFreak preset A](https://example.com/preset-A.mfpz)`, so listeners can download them from the episode page. Episode media and download details use the direct URLs rather than asset page embeds or asset wikilinks.
-		- Session notes follow the media and downloads. Technical notes may be collapsed so the recording and patches remain immediately visible.
-		- In the Gitpa publishing garden, the visible episode properties are `logseq-entity` and `date-created`.
+		- A producer-owned session starts with a short episode description beneath the H1, followed by an embed of its recording's [[Logseq/Entity/Asset]] page. Notes and downloadable presets follow when available.
 		- Recommended body sections are **Notes**, **Highlights**, and **Transcript**, kept only when there is something to put in them.
 		- Prefer synthesis over pasting a full transcript unless the author asks for the full text.
 	- ## Combined with YouTube

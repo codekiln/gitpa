@@ -54,6 +54,12 @@
     "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
+    "GitP/A/Session/26/10/06-Thu": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Logseq/Entity/Asset/B2": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
@@ -200,6 +206,11 @@
       "page": "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/06-Thu",
+      "source_graph": "."
+    },
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset/B2": {
       "files": [],
       "page": "Logseq/Entity/Asset/B2",
@@ -310,6 +321,16 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3"
+    ],
+    "GitP/A/Session/26/10/06-Thu": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/06-Thu"
+    ],
+    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3"
     ],
     "Logseq/Entity/Asset/B2": [
       "github.com/codekiln/logseq-encode-garden",
