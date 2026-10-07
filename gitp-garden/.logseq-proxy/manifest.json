@@ -1,0 +1,362 @@
+{
+  "declarations": {
+    "GitP/A/Session/24/11/19-Tue": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/A/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/B/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/C/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/11/19-Tue/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Artwork/Overview/gif": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/A/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/B/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/C/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/24/12/04-Wed/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/26/09/24-Thu": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/26/09/25-Fri": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Logseq/Entity/Asset/B2": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Definition": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Mise/Task": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Podcast/Episode": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Proxy/Page": {
+      "entity-tasks": "[[Logseq/Entity/Proxy/Page/mise/Task/sync]]",
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Proxy/Page/mise/Task/sync": {
+      "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
+      "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync",
+      "task-config-root": ".",
+      "task-entrypoint": "mise-tasks/logseq/entity/proxy/page/sync",
+      "task-files": "{\"mise-tasks/logseq/entity/proxy/page/sync\":\"mise-tasks/logseq/entity/proxy/page/sync\",\"mise-tasks/logseq/entity/proxy/page/lib/core.py\":\"mise-tasks/logseq/entity/proxy/page/lib/core.py\",\"mise-tasks/logseq/entity/proxy/page/lib/companions.py\":\"mise-tasks/logseq/entity/proxy/page/lib/companions.py\"}",
+      "task-name": "logseq:entity:proxy:page:sync",
+      "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
+    }
+  },
+  "files": {
+    "mise-tasks/logseq/entity/proxy/page/lib/companions.py": {
+      "mode": 420,
+      "sha256": "9527f6bca636edf9c9425c5c774c4333ed028025cdc56de849e0828dc703fc87",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py"
+      ]
+    },
+    "mise-tasks/logseq/entity/proxy/page/lib/core.py": {
+      "mode": 420,
+      "sha256": "162f58b6461b5d6b37ea9a23a75e17013b5d03ec7049b065b56c8347ff2d95ee",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py"
+      ]
+    },
+    "mise-tasks/logseq/entity/proxy/page/sync": {
+      "mode": 493,
+      "sha256": "4dc4adbcd690cb3d37fac58a7471454dc019d57160e8afc609d2508b1632a5ff",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/sync"
+      ]
+    }
+  },
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Preset/A/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Preset/A/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Preset/B/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Preset/B/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Preset/C/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Preset/C/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Artwork/Overview/gif": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Artwork/Overview/gif",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Preset/A/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/A/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Preset/B/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/B/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Preset/C/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/C/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/09/24-Thu": {
+      "files": [],
+      "page": "GitP/A/Session/26/09/24-Thu",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/09/25-Fri": {
+      "files": [],
+      "page": "GitP/A/Session/26/09/25-Fri",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset/B2": {
+      "files": [],
+      "page": "Logseq/Entity/Asset/B2",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Podcast/Episode": {
+      "files": [],
+      "page": "Logseq/Entity/Podcast/Episode",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Proxy/Page": {
+      "files": [
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/sync"
+      ],
+      "page": "Logseq/Entity/Proxy/Page",
+      "source_graph": "."
+    }
+  },
+  "pages": {
+    "GitP/A/Session/24/11/19-Tue": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue"
+    ],
+    "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif"
+    ],
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/A/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue/Asset/Preset/A/mfpz"
+    ],
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/B/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue/Asset/Preset/B/mfpz"
+    ],
+    "GitP/A/Session/24/11/19-Tue/Asset/Preset/C/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue/Asset/Preset/C/mfpz"
+    ],
+    "GitP/A/Session/24/11/19-Tue/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/11/19-Tue/Asset/Synth/Full/mp3"
+    ],
+    "GitP/A/Session/24/12/04-Wed": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Artwork/Overview/gif": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Artwork/Overview/gif"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/A/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Preset/A/mfpz"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/B/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Preset/B/mfpz"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/C/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Preset/C/mfpz"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz"
+    ],
+    "GitP/A/Session/24/12/04-Wed/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/24/12/04-Wed/Asset/Synth/Full/mp3"
+    ],
+    "GitP/A/Session/26/09/24-Thu": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/09/24-Thu"
+    ],
+    "GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3"
+    ],
+    "GitP/A/Session/26/09/25-Fri": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/09/25-Fri"
+    ],
+    "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3"
+    ],
+    "Logseq/Entity/Asset/B2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Asset/B2"
+    ],
+    "Logseq/Entity/Definition": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Definition"
+    ],
+    "Logseq/Entity/Mise/Task": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Mise/Task"
+    ],
+    "Logseq/Entity/Podcast/Episode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Podcast/Episode"
+    ],
+    "Logseq/Entity/Proxy/Page": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Proxy/Page"
+    ],
+    "Logseq/Entity/Proxy/Page/mise/Task/sync": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Proxy/Page/mise/Task/sync"
+    ]
+  },
+  "tasks": {
+    "Logseq/Entity/Proxy/Page/mise/Task/sync": {
+      "identity": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "[[Person/codekiln/GitHub/logseq-encode-garden]]",
+        ".",
+        "logseq:entity:proxy:page:sync"
+      ],
+      "mapping": {
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py": "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py": "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/sync": "mise-tasks/logseq/entity/proxy/page/sync"
+      }
+    }
+  },
+  "version": 1
+}

@@ -1,15 +1,25 @@
+[tools]
+java = "temurin-21"
+babashka = "1.3.191"
+"npm:@logseq/nbb-logseq" = { version = "1.2.173", allow_low_downloads = true }
+
 [tasks."rss:build"]
-description = "Build the public podcast feed from published episode records"
-run = "uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py"
+description = "Build the public podcast feed from episode pages"
+run = "uv run --no-project python scripts/build_rss.py"
 
 [tasks."rss:check"]
-description = "Check that rss.xml matches published episode records"
-run = "uv run --no-project --with PyYAML==6.0.2 python scripts/build_rss.py --check"
+description = "Check that rss.xml matches public episode pages"
+run = "uv run --no-project python scripts/build_rss.py --check"
 
 [tasks."rss:test"]
-description = "Test podcast feed generation"
-run = "uv run --no-project --with PyYAML==6.0.2 python -m unittest discover -s tests"
+description = "Test podcast feed generation and website preparation"
+run = "uv run --no-project python -m unittest discover -s tests"
 
-[tasks."episode:import"]
-description = "Import a reviewed episode handoff from the knowledge garden"
-run = "uv run --no-project --with PyYAML==6.0.2 python scripts/import_episode.py"
+[tasks."site:query:check"]
+description = "Validate the real homepage query against the graph"
+run = "nbb-logseq scripts/check_homepage.cljs"
+
+[task_config]
+# gitp-garden/mise-tasks holds companion tasks imported with garden proxy pages,
+# such as logseq:entity:proxy:page:sync.
+includes = ["gitp-garden/mise-tasks"]

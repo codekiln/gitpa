@@ -1,0 +1,71 @@
+alias:: [[Proxy Page]], [[Logseq Proxy Page]]
+entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+entity-proxy-destination-properties:: public
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FProxy%2FPage
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F189-proxy-worktree-identity/pages/Logseq___Entity___Proxy___Page.md
+logseq-proxy-last-sync-date:: [[2026-10-06]]
+- # Proxy Page
+	- In this garden, **Proxy Page** marks a page whose body is mirrored from a page in another [[Logseq/Garden]], so one garden can read a page that lives in another without that page being moved or duplicated by hand. See [[Logseq/Idea/Proxy]] for the motivation.
+	- ## What counts as an instance
+		- A page in this garden whose content was copied from a source graph and is kept in step with it by re-syncing.
+		- A proxy is identified **only** by its `logseq-proxy-url::` frontmatter. Nothing about where the page sits, or what it is named, marks it as a proxy — a page without `logseq-proxy-url::` is a real, unrelated page even when it shares a name with something in a source graph.
+		- The marker is **additive**. It rides on whatever entity the mirrored page already is, listed after the primary one: `logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Proxy/Page]]`.
+		- Not an instance: a page written here that merely links to another garden; a journal day page, which is out of scope — proxies target `pages/` only.
+	- ## Naming and links
+		- A proxy mirrors the source page's **exact** logical name and namespace. Source page `[[My/Page/Here]]` becomes `[[My/Page/Here]]` here — same `___`-encoded filename, no added prefix, no dedicated namespace. This is what lets a whole namespace proxy cleanly: every page keeps its identity across gardens.
+		- The `page=` value maps to a filename the same way every other page does: `/` becomes `___`, per [[Logseq/Pref/Page/Name]] and the `logseq-get-page-file` command. `page=Logseq/Entity/Podcast` → `pages/Logseq___Entity___Podcast.md`.
+		- **Legacy shape:** a few early proxies were filed under `Logseq/Proxy/<graph_name>/<source name>`, for example [[Person/Thomas Parr/Book/2022/Active Inference]]. Leave them where they are; do not file new ones that way.
+	- ## Frontmatter
+		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-url]] — required; the source page's [[logseq-url]]. This property is what makes the page a proxy.
+		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-codeforge-url]] — set when the source graph is pushed to a code forge; the source file's URL there.
+		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-last-sync-date]] — required; the day the body was last mirrored.
+		- The proxy keys are owned by the sync process. Do not rename them, and do not treat any other `*::` line on the page as belonging to the proxy.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- No shape of its own. The body is the source page's body, so the source's shape — and the shape of whatever entity the page is primarily — governs.
+	- ## Invariants
+		- **`tags::` on an existing page is never touched.** On re-sync the destination's `tags::` win outright and the source's are discarded. On first create, the source's `tags::` come across with the copy unless the user says otherwise.
+		- **The source owns the properties, except those the destination owns.** A re-sync adds properties the source gained since the last sync, updates those whose value changed, and removes those the source no longer has. The **body** is replaced wholesale by the source's.
+		- **The destination owns** `tags::`, the proxy keys, and every property an entity definition names in `entity-proxy-destination-properties::`. The definitions consulted are the ones in the source page's `logseq-entity::`, plus this one, which names `public::`: whether a page is published is the destination garden's decision. A re-sync keeps the destination's value of an owned property and never takes the source's, including when the destination has none.
+		- **A property only the destination has goes on re-sync** unless the destination owns it. A garden that wants to keep a local property declares it on the entity definition. The preview names every property it adds, updates or removes.
+		- **A name collision is never resolved silently.** If the destination page exists and has no `logseq-proxy-url::`, it is a real page that happens to share the name — stop and ask before writing anything.
+	- ## Finding and deduplicating
+		- Proxies scatter across `pages/` wherever their mirrored names fall, so there is no namespace to narrow a search to. Always search repo-wide from the garden root.
+		- **Every proxy:** `rg -n 'logseq-proxy-url::' pages/ --glob '*.md'`
+		- **Proxies from one graph:** `rg -n 'logseq://graph/<graph_name>' pages/ --glob '*.md'`
+		- **Which gardens we proxy from:** `rg -o 'logseq://graph/[^?]+' pages/ --glob '*.md' | sort -u`
+		- **Which repositories we proxy from:** `rg -o 'logseq-proxy-codeforge-url:: https://[^/]+/[^/]+/[^/]+' pages/ --glob '*.md' | sort -u`
+		- Before creating one, check the destination path directly — the page name is fully determined by `page=`, so a collision is a file test, not a fuzzy search.
+	- ## Relationship to other entity types
+		- **Any entity type** can be proxied; this marker never replaces the primary one, it accompanies it.
+		- **[[Logseq/Entity/Definition]]** — entity definition pages proxy like anything else, which is how two gardens can share one set of modeling rules.
+	- ## Locating the source
+		- **With a code forge URL:** the host, owner and repository in [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-codeforge-url]] form a `ghq` address, and `ghq list --full-path --exact <address>` gives the local clone. One path is the clone; no path means the repository is not cloned here, and cloning waits for the human; several paths wait for the human to pick one. The part of the URL between the branch and `pages/` is the graph's folder inside the clone, empty when the graph sits at the repository root.
+		- **Without one:** the graph name in [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-url]] resolves through Logseq desktop's own graph list, `~/.logseq/graphs/`, which holds one file per graph with the graph's path in the file name. The graph is the one whose folder carries that name. This resolves only on a machine where Logseq has the graph.
+		- A graph root holds `pages/` and `logseq/`.
+	- ## Dependent work across repositories
+		- `--source` may name a linked source worktree, and `--destination` may name a graph inside a linked destination worktree. Content and companion implementations are read from the selected source checkout.
+		- The Logseq graph name comes from the primary checkout at the same repository-relative graph path. A graph at the repository root keeps the registered checkout's name; a nested graph keeps its folder name. A linked worktree therefore shares its source graph's logical identity.
+		- Source ownership combines the repository address, repository-relative graph path, and logical page or implementation path. Branch names and local checkout paths are excluded from ownership, so imports can refresh from a source worktree and later from the merged primary checkout.
+		- A source worktree's code forge URLs name its branch, or its commit when detached. Push the source branch before opening a dependent destination PR so its source links are followable. After the source PR merges, re-sync from the primary checkout to refresh the links to the default branch.
+		- Keep the destination's `.logseq-proxy/manifest.json` and imported task files together in its PR. Record the source PR dependency, source and destination branches, and worktree paths in the issue discussion. A relocated clone resolves the same ownership through its repository address and graph path.
+	- ## Syncing an instance
+		- **Source file:** the file the code forge URL names, or else `pages/<page>.md` under the graph root, with `page=` decoded (`%2F` is `/`) and each `/` written as `___`.
+		- **First copy:** the whole source file, with the proxy keys set in its property block.
+		- **Re-sync:** the source's body under a property block merged per **Invariants** above. Properties already on the destination keep their order; properties new from the source follow them, and the proxy keys come last.
+		- **Property block:** the run of `key:: value` lines from the top of the file, ending at the first line of any other kind — a blank line, a `- # Heading`, or plain text. A destination with no property block gains one above its first line, holding the proxy keys.
+		- **Assets:** every `../assets/<path>` the source body links to is copied to the same `assets/<path>` here, replacing what is there. A missing source asset is reported and the sync goes on.
+		- **Embeds:** with `--follow-embeds`, each page embedded with the `embed` macro is synced as a proxy too, recursively, so a page and the pages it embeds sync in one batch. A missing embedded page is reported and the sync goes on.
+		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, the properties added, updated or removed, and the assets copied.
+	- ## Executable sync
+		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] previews the page, entity definitions, companion task references, implementation files, and assets imported by a sync. `--apply` applies the previewed changes.
+		- An instance's `logseq-entity::` links lead to its source entity definitions. Each definition's `entity-tasks::` declares companion task references, whose file mappings and task dependencies follow [[Logseq/Entity/Mise/Task]]. The sync visits shared and cyclic dependencies once.
+		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph root, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes.
+		- The manifest retains the latest source companion declarations. When a proxy becomes the source for another garden, task discovery uses those declarations and resolves imported implementation paths through the source manifest.
+		- Re-sync refreshes source changes where imported implementation files still match their recorded hashes. Local implementation edits, unowned destination files, and competing source claims produce conflicts before application.
+		- Page properties and bodies refresh from the source per **Invariants** above. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
+		- A preview reports logical entity definitions without files separately from missing declared tasks or implementation files. Missing source assets remain warnings; missing task requirements stop application.
+	- ## Examples in this garden
+		- [[Book/ML with PyTorch and Scikit-Learn]]
+		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)

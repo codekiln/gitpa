@@ -1,0 +1,38 @@
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+see-also:: [[Logseq/Entity/Definition/Discussion]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FDefinition
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F189-proxy-worktree-identity/pages/Logseq___Entity___Definition.md
+logseq-proxy-last-sync-date:: [[2026-10-06]]
+- # Entity Definition
+	- Each Entity Definition page describes a type of real-world entity that may be tracked in a page [[Knowledge Garden]] page. Entity here means something roughly analagous
+	- ## [[Logseq/Entity/Definition/Discussion]]
+	- ,  uniquely modeled in each garden are.
+	- the garden tracks — each describes how to recognize, name, deduplicate, and shape instances of one kind of entity.
+	- ## Examples in this garden
+		- [[Logseq/Entity/Person]], [[Logseq/Entity/Software/Project]], [[Logseq/Entity/Book]], and the other pages under the `Logseq/Entity/` namespace.
+	- ## What counts as an Entity Definition
+		- A page under the `Logseq/Entity/` namespace whose job is to define one entity type: what counts as an instance, what does not, how to name and deduplicate it, and what shape its instance pages take.
+		- Not an Entity Definition: an instance page (an actual person, project, book, …), or [[Logseq/Entity]] itself, which is the general conceptual model rather than a single type.
+	- ## Page shape
+		- **Frontmatter** — `logseq-entity:: [[Logseq/Entity/Definition]]` marks the page as an entity definition, so this page collects a backlink to every entity type. Add `alias::` for plural or contextual forms when useful. Never alter `tags::`.
+		- **H1** — a single bullet-wrapped heading in human-friendly Title Case, with abbreviations expanded and no namespace path: `- # Software Plugin`, `- # Security Vulnerability`, `- # CLI Command`. The page's namespace already carries it.
+		- **First line** — one sentence directly under the H1 in the form `In this garden, **<Name>** pages model <description>.` These first lines read together as a self-describing index of the garden's entity types.
+		- **Body sections** — describe what is specific to recognizing, naming, deduplicating, and shaping that type. Adapt to the type; short definitions do not need every section. Common sections:
+			- what counts as an instance, and what does not
+			- naming and links
+			- finding and deduplicating
+			- frontmatter expectations
+			- page shape
+			- relationships to other types
+			- examples
+		- Keep shared conventions on [[Logseq/Frontmatter]] and [[Logseq/Pref]] rather than repeating them on each type page.
+	- ## Companion tasks
+		- `entity-tasks::` declares the [[Logseq/Entity/Mise/Task]] reference pages needed to work with instances of this entity. The property is a comma-separated list of wikilinks in the definition's frontmatter; an absent property declares no companion tasks.
+		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] follows an instance's `logseq-entity::` links, imports its entity definitions, and follows each definition's `entity-tasks::` links. Task references declare their executable files and required task dependencies through the companion-file contract on [[Logseq/Entity/Mise/Task]].
+		- Shared entity definitions and task dependencies are visited once per sync. Cyclic relationships are allowed and terminate after their pages have been visited.
+		- A referenced entity definition with no source file is reported as a logical page. A declared companion task or task dependency requires a source reference page and its mapped implementation files; missing task content stops application.
+	- ## Properties a proxy's destination owns
+		- `entity-proxy-destination-properties::` names, as a comma-separated list of property keys, the properties on an instance that belong to the garden holding a [[Logseq/Entity/Proxy/Page]] of it rather than to the source page. Re-syncing that proxy keeps the destination's values for them. An absent property names none.
+		- For example, [[Logseq/Entity/Podcast/Episode]] names `podcast-guid` and `podcast-published-at`, which the publishing garden records.
+	- ## Relationship to [[Logseq/Entity]]
+		- [[Logseq/Entity]] is the general conceptual model — what an entity is and how any page is marked as one. This page is the entity type whose instances are the definition pages themselves, so the garden's set of entity types is queryable through its backlinks rather than kept as a hand-maintained list.
