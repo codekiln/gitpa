@@ -320,7 +320,7 @@
                             :logseq-proxy-url :logseq-proxy-codeforge-url
                             :logseq-proxy-last-sync-date :entity-proxy-destination-properties
                             :entity-tasks :task-owner :task-config-root :task-name
-                            :task-entrypoint :task-files}
+                            :task-entrypoint :task-files :task-dependencies}
 
  ;; Create a page for all properties.
  ;; Default value: true
