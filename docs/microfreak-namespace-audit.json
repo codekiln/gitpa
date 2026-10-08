@@ -948,7 +948,8 @@
     "Missing asset: codekiln/logseq-encode-garden@34bb6ba171b3995412fe7224bbf10138a73a75a5:assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png"
   ],
   "source_dependency": "https://github.com/codekiln/logseq-encode-garden/pull/211",
-  "source_head": "34bb6ba171b3995412fe7224bbf10138a73a75a5",
+  "source_head": "29d523c9ddf3a48a32d7c09f84668a39af4e54f1",
   "b2_images_verified": 130,
-  "local_guide_pngs_remaining": 0
+  "local_guide_pngs_remaining": 0,
+  "source_ref": "main"
 }
