@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 see-also:: [[Logseq/Entity/Definition/Discussion]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FDefinition
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Entity___Definition.md
-logseq-proxy-last-sync-date:: [[2026-10-07]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-session-26-10-07/pages/Logseq___Entity___Definition.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Entity Definition
 	- Each Entity Definition page describes a type of real-world entity that may be tracked in a page [[Knowledge Garden]] page. Entity here means something roughly analagous
 	- ## [[Logseq/Entity/Definition/Discussion]]
