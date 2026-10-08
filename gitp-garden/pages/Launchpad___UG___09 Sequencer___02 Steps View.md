@@ -1,0 +1,23 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Launchpad/UG/09 Sequencer]]
+prev:: [[Launchpad/UG/09 Sequencer/01 Overview]]
+next:: [[Launchpad/UG/09 Sequencer/03 Patterns View]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F02%20Steps%20View
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___09%20Sequencer___02%20Steps%20View.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+
+- # 9.2 Steps View
+	- The top half of the grid shows a pattern’s 32 steps. Press Play to start the white playhead at the beginning; press Play again to stop it.
+	- The bottom half is the Play Area, where pads play notes.
+	- Steps View layout
+		- ![01 Steps View layout](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___02%20Steps%20View___Asset___01-Steps-View-layout.png)
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/02 Assign Notes]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/03 Clear Steps]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/04 Duplicate Steps]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/05 Playback]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/08 Tracks]]}}
+	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/09 Ableton Live]]}}

@@ -1,0 +1,14 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]], [[Logseq/Entity/Proxy/Page]]
+preset-synth-microfreak-number:: 200
+preset-synth-microfreak-name:: Saw Bass
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+prev:: [[Microfreak/Preset/199 FM Bass]]
+next:: [[Microfreak/Preset/201 Square Bass]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F200%20Saw%20Bass
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___200%20Saw%20Bass.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # Notes

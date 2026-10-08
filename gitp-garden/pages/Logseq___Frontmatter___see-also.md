@@ -1,0 +1,17 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Fsee-also
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Frontmatter___see-also.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
+	- The purpose of `see-also::` is to aid discovery of genuinely related pages that do not appear in the body of the page.
+	- ## Standards
+		- Order links strongest-tie first.
+		- Only add a link if it is truly related — not merely adjacent in namespace or topic space.
+		- If a page has a `## Related` section, it should contain only external hyperlinks. Related Logseq pages belong in `see-also::` frontmatter, not in a body section.
+	- ## Avoid obvious or tautological links
+		- Do not list parent namespace pages that only restate context already encoded in the page title.
+	- ## Be parsimonious
+		- [[Bad Examples]]
+			- While creating [[Programming/Language/Concept/Declarative vs Imperative]], an AI agent added `see-also:: [[Programming/Language/Func]], [[Programming/Language/Concept/Object-Oriented]]`.
+				- **Why these are bad**: functional programming and OOP are lexicographically adjacent and structurally similar, but they are not actually related to the declarative-vs-imperative distinction. Proximity is not relatedness.
