@@ -63,6 +63,15 @@
     "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
+    "GitP/A/Session/26/10/07-Wed": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/26/10/07-Wed/Asset/MIDI/Full/mid": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/26/10/07-Wed/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Launchpad": {},
     "Launchpad/UG": {
       "logseq-entity": "[[Logseq/Entity/Book]], [[Logseq/Entity/Series]]"
@@ -2586,6 +2595,21 @@
       "page": "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/07-Wed": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/07-Wed",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/07-Wed/Asset/MIDI/Full/mid": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/07-Wed/Asset/MIDI/Full/mid",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/07-Wed/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/07-Wed/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
     "github.com/codekiln/logseq-encode-garden::.::Launchpad": {
       "files": [],
       "page": "Launchpad",
@@ -2745,6 +2769,21 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3"
+    ],
+    "GitP/A/Session/26/10/07-Wed": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/07-Wed"
+    ],
+    "GitP/A/Session/26/10/07-Wed/Asset/MIDI/Full/mid": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/07-Wed/Asset/MIDI/Full/mid"
+    ],
+    "GitP/A/Session/26/10/07-Wed/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/07-Wed/Asset/Synth/Full/mp3"
     ],
     "Launchpad": [
       "github.com/codekiln/logseq-encode-garden",
