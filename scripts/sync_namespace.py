@@ -76,18 +76,20 @@ def plan_namespace(source, destination, namespace):
         if 'public' not in props:
             plan.writes[relative] = ('public:: true\n' + ''.join(lines) + body).encode()
     imported = plan.pages
+    available = imported | names(destination).keys()
     external = set()
     broken_embeds = set()
     for name in imported:
         for ref in REF.findall(files[name].read_text()):
-            if ref not in imported:
+            if ref not in available:
                 external.add(ref)
         for ref in core.EMBED.findall(files[name].read_text()):
-            if ref not in imported:
+            if ref not in available:
                 broken_embeds.add(ref)
     report = {'namespace': namespace, 'source_pages': len([n for n in selected if within(n, namespace)]),
               'imported_pages': sorted(imported), 'missing_namespace_content': missing,
               'missing_support_content': support_missing, 'external_references': sorted(external),
+              'external_references_without_source_content': sorted(external - files.keys()),
               'unresolved_embeds': sorted(broken_embeds), 'warnings': plan.warnings}
     return core, plan, report
 
