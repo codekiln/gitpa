@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Fsee-also
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Frontmatter___see-also.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Frontmatter___see-also.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
 	- The purpose of `see-also::` is to aid discovery of genuinely related pages that do not appear in the body of the page.

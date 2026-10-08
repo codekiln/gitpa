@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/09 Sequencer]]
 next:: [[Launchpad/UG/11 Appendix]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F10%20Setup
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___10%20Setup.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___10%20Setup.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 10. Setup

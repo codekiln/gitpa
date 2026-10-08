@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/09 Sequencer]]
 prev:: [[Launchpad/UG/09 Sequencer/12 Projects]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F13%20Settings
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___09%20Sequencer___13%20Settings.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___09%20Sequencer___13%20Settings.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 9.13 Sequencer Settings

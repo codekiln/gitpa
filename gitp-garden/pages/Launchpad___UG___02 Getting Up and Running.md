@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/01 Introduction]]
 next:: [[Launchpad/UG/03 Hardware Overview]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F02%20Getting%20Up%20and%20Running
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___02%20Getting%20Up%20and%20Running.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___02%20Getting%20Up%20and%20Running.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 2. Getting Up and Running

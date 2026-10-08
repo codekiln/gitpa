@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/05 Session Mode]]
 prev:: [[Launchpad/UG/05 Session Mode/03 Clip Functions]]
 next:: [[Launchpad/UG/05 Session Mode/05 Record Arm and Recording]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F05%20Session%20Mode%2F04%20Track%20Controls
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___05%20Session%20Mode___04%20Track%20Controls.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___05%20Session%20Mode___04%20Track%20Controls.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 5.4 Track Controls

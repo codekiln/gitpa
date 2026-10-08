@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/10 Setup]]
 prev:: [[Launchpad/UG/10 Setup/02 LED Settings]]
 next:: [[Launchpad/UG/10 Setup/04 Aftertouch Settings]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F10%20Setup%2F03%20Velocity%20Settings
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___10%20Setup___03%20Velocity%20Settings.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___10%20Setup___03%20Velocity%20Settings.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 10.3 Velocity Settings
