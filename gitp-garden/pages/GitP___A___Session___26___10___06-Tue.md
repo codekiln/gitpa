@@ -4,12 +4,13 @@ podcast-published-at:: 2026-10-07T05:28:02-04:00
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-06 Tue]]
-logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F06-Thu
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___06-Thu.md
-logseq-proxy-last-sync-date:: [[2026-10-07]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F06-Tue
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___06-Tue.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+
 - # GitP.26.10.06 — Chords, Formants, and Sequencers
 	- A MicroFreak improvisation starting from an initialized patch: chord oscillators, cycling-envelope and LFO modulation, and a turn toward formant sounds. Shimmering textures give way to a gruff emergence, a ballpark organ, and a trippy denouement, with the Launchpad sequencer and MicroFreak arpeggiator along the way.
-	- ![GitP.26.10.06 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Thu___Asset___Synth___Full.mp3)
+	- ![GitP.26.10.06 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___Synth___Full.mp3)
 	- ## Chapters
 		- 02:11.388 — pull back on cutofff
 		- 07:44.587 — shimmering glittering
@@ -30,7 +31,7 @@ logseq-proxy-last-sync-date:: [[2026-10-07]]
 		- I didn't end up recording any [[Microfreak/Preset]] this time.
 		- When looking through the recording later, I made a few notes. AI transcribed these as chapters.
 	- ## Downloads
-		- [Full-session MIDI — notes and controller changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Thu___Asset___MIDI___Full.mid)
+		- [Full-session MIDI — notes and controller changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___MIDI___Full.mid)
 	- ## Recording
 		- [[Making/Music/Log/26/10/06 Tue GitP]]
 		- Recorded October 6, 2026, in Ableton Live at 109 BPM.

@@ -54,13 +54,13 @@
     "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
-    "GitP/A/Session/26/10/06-Thu": {
+    "GitP/A/Session/26/10/06-Tue": {
       "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
     },
-    "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": {
+    "GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
-    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
+    "GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "GitP/A/Session/26/10/07-Wed": {
@@ -255,19 +255,19 @@
       "page": "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
-    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Tue": {
       "files": [],
-      "page": "GitP/A/Session/26/10/06-Thu",
+      "page": "GitP/A/Session/26/10/06-Tue",
       "source_graph": "."
     },
-    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid": {
       "files": [],
-      "page": "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid",
+      "page": "GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid",
       "source_graph": "."
     },
-    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3": {
       "files": [],
-      "page": "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3",
+      "page": "GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
     "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/07-Wed": {
@@ -420,20 +420,20 @@
       ".",
       "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3"
     ],
-    "GitP/A/Session/26/10/06-Thu": [
+    "GitP/A/Session/26/10/06-Tue": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
-      "GitP/A/Session/26/10/06-Thu"
+      "GitP/A/Session/26/10/06-Tue"
     ],
-    "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": [
+    "GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
-      "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid"
+      "GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid"
     ],
-    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": [
+    "GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
-      "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3"
+      "GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3"
     ],
     "GitP/A/Session/26/10/07-Wed": [
       "github.com/codekiln/logseq-encode-garden",
