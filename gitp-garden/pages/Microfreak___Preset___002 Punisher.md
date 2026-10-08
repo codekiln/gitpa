@@ -1,0 +1,18 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]], [[Logseq/Entity/Proxy/Page]]
+preset-synth-microfreak-number:: 002
+preset-synth-microfreak-name:: Punisher
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-microfreak-parameter-payload-sha256:: 1c600055f38d742904241c11459a455acdad5eb551160f102bcde71b577f5153
+preset-synth-microfreak-vco-type-raw-hex:: 0x0c2a15
+preset-synth-microfreak-vcf-cutoff-raw-hex:: 0x00bb5d
+preset-synth-microfreak-vcf-reso-raw-hex:: 0x00c361
+prev:: [[Microfreak/Preset/001 NervousKeys]]
+next:: [[Microfreak/Preset/003 Trance]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F002%20Punisher
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___Preset___002%20Punisher.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # Notes

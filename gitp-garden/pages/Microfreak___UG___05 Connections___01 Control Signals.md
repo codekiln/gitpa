@@ -1,0 +1,22 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UG/05 Connections]]
+next:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F01%20Control%20Signals
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___05%20Connections___01%20Control%20Signals.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # 05.1 Control Signals
+	- The Matrix connects control signals from the MicroFreak's modules. These signals move more slowly than audio and are suited to controlling sound.
+	- The MicroFreak Matrix
+		- ![01 The MicroFreak Matrix](../assets/Microfreak___UG___05-Connections___01-Control-Signals___01-The-MicroFreak-Matrix.png)
+	- Control signals usually move between 0 and 100 Hz. They can modulate the Digital Oscillator, Analog Filter, and other destinations. The Matrix encoder sets their amount from -100% to +100%.
+	- The MicroFreak's modules generate control signals in different ways.
+		- The LFO makes slow, regular waves. Routed to oscillator pitch, it makes the pitch rise and fall; it can reach 100 Hz.
+		- An envelope rises once, then gradually fades. Routed to oscillator pitch, it creates a quick rise followed by a descent. The Cycling Envelope can repeat, acting as a second LFO with more complex modulation waves.
+	- A gate rises at Note On and falls at Note Off. The keyboard sends gates that start the MicroFreak's envelope.
+	- Three kinds of control signals are used: triggers, gates, and waves.
+		- **Triggers** are very short spikes that start an envelope, LFO, or sequencer. Clocks generate triggers.
+		- **Gates** last longer and keep something active, such as an envelope's hold stage. A keyboard sends a gate while a key is held.
+		- **Waves** can last any length and usually cycle from high to low and back. The MicroFreak's LFO and two envelopes create slow waves.
+	- Control signals give a MicroFreak performer room to develop a personal style, as color and line do for a painter.
+	- **Note for advanced users:** Analog synthesizers and modular systems use control voltages for modulation. Mostly digital synthesizers such as the MicroFreak use digital signals that mimic those voltages; this manual calls them control signals.

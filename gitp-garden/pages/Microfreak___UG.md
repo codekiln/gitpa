@@ -1,0 +1,32 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/User Guide]], [[Logseq/Entity/Book]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # MicroFreak User Guide
+	- The MicroFreak user guide documents the instrument and its controls.
+	- ## Sections
+		- [[Microfreak/UG/01 Welcome and Introduction]]
+		- [[Microfreak/UG/02 Installation]]
+		- [[Microfreak/UG/03 Overview]]
+		- [[Microfreak/UG/04 Presets]]
+		- [[Microfreak/UG/05 Connections]]
+		- [[Microfreak/UG/06 Dig Osc]]
+		- [[Microfreak/UG/07 Filter]]
+		- [[Microfreak/UG/08 LFO]]
+		- [[Microfreak/UG/09 Envelope Gen]]
+		- [[Microfreak/UG/10 Keyboard]]
+		- [[Microfreak/UG/11 Icon Strip]]
+		- [[Microfreak/UG/12 Arpeggiator]]
+		- [[Microfreak/UG/13 Sequencer]]
+		- [[Microfreak/UG/14 Config]]
+		- [[Microfreak/UG/15 Using Scales]]
+		- [[Microfreak/UG/16 Paraphonic Chord Mode]]
+		- [[Microfreak/UG/17 Ext Gear]]
+		- [[Microfreak/UG/18 Appendix A Speech Osc]]
+		- [[Microfreak/UG/19 Appendix B Vocoder]]
+		- [[Microfreak/UG/20 Appendix C - Cheat Sheet]]
+		- [[Microfreak/UG/21 Appendix D - CC Values]]
+		- [[Microfreak/UG/22 Declaration of Conformity]]
+		- [[Microfreak/UG/23 Software License Agreement]]

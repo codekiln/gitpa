@@ -1,0 +1,16 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
+prev:: [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
+next:: [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types%2F06%20VAnalog
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___06%20VAnalog.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # 06.03.06 Virtual Analog (V.Analog)
+	- Virtual Analog Model
+		- ![01 Virtual Analog Model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___06-VAnalog___01-Virtual-Analog-Model.png)
+	- **Description:** Emulates the classic triangle, sawtooth, and square synthesis waveforms.
+	- **Detune:** Sets the detuning between the two waves.
+	- **Shape:** Morphs a variable square wave from a narrow pulse through a full square wave to hard-sync formants.
+	- **Wave:** Morphs a variable saw wave from triangle to sawtooth with an increasingly wide notch.
+	- **Tip:** Combine Detune with keyboard or arpeggio modulation for changing scale variations. On the Matrix, route Key/Arp to Wave.

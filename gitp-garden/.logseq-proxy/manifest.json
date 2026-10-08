@@ -499,7 +499,13 @@
     "Logseq/Entity/Book/Section/Level 4": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
+    "Logseq/Entity/Book/User Guide": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
     "Logseq/Entity/Definition": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Frontmatter/Definition": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
     "Logseq/Entity/Mise/Task": {
@@ -507,6 +513,54 @@
     },
     "Logseq/Entity/Podcast/Episode": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file-sha256": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Custom": {},
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory": {},
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown": {},
+    "Logseq/Entity/Preset/Synth/Microfreak": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Brass": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Organ": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder": {},
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-initialized": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-name": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-number": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-on-device": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+    },
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type": {
+      "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
     },
     "Logseq/Entity/Proxy/Page": {
       "entity-tasks": "[[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]",
@@ -542,7 +596,1824 @@
     "Logseq/Frontmatter/logseq-entity": {},
     "Logseq/Frontmatter/see-also": {},
     "Logseq/Frontmatter/tags": {},
-    "Logseq/Frontmatter/via": {}
+    "Logseq/Frontmatter/via": {},
+    "Microfreak": {},
+    "Microfreak/CLI/Episode patch workflow": {},
+    "Microfreak/CLI/Preset metadata over USB": {},
+    "Microfreak/CLI/Validation/26-10-03 slot 397": {},
+    "Microfreak/Log/26/09/27 Sun Preset Manager Knowledge Gardening": {},
+    "Microfreak/Log/26/09/28 Mon Preset Management": {},
+    "Microfreak/Meta/Structure": {},
+    "Microfreak/Preset": {},
+    "Microfreak/Preset/001 NervousKeys": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/002 Punisher": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/003 Trance": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/004 Ether": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/005 MotivSeq": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/006 Aft-WavPad": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/007 Brd But Arp": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/008 Invitation": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/009 261e": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/010 Raverz": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/011 Club V": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/012 Darkstream": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/013 Pikdown": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/014 Bontempis": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/015 PolyBells": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/016 Voidom": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/017 Tubular": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/018 Chip": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/019 BrightBinary": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/020 Arp-fi": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/021 Short Strings": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/022 BouncKeyPara": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/023 AliGoop": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/024 Stan2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/025 808 St8 M8": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/026 L9n1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/027 Nost": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/028 Daft": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/029 Number Station": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/030 HarmonicTuneUp": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/031 Ixos": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/032 Chord Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/033 Organism": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/034 Corrosion": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/035 FM Seq": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/036 Rollie Lov": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/037 Chunk": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/038 Classist": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/039 Nostromo": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/040 Disrespectful": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/041 Madtraker": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/042 Hoss": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/043 IDm5": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/044 FM-it": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/045 Lottreux": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/046 XnastX": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/047 White Calx": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/048 VintageEdge": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/049 Sci Organ": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/050 Death": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/051 Solitude": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/052 Ringussion": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/053 Crystal": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/054 Michtack": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/055 Analordic": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/056 PowerStab": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/057 Hollows": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/058 Junk.J": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/059 Suby Rainbow": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/060 Unstable Solo": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/061 AftrBlush": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/062 Mood Strings": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/063 Kendrok": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/064 Mood": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/065 Cafe Chord": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/066 Vanarx": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/067 Angels": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/068 Canadian Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/069 3opeR": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/070 Cliched Things": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/071 Sweep SQ": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/072 Buzzsaw": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/073 S.H Ld": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/074 Sneaker": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/075 Saying Goodbye": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/076 AutoCHILL": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/077 Eonz": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/078 A Juno Vibe": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/079 ArpZap": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/080 Traditon": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/081 Gaming": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/082 Over Me": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/083 Leeds Strings": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/084 Press So": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/085 Arp 2ol9": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/086 Whimsy": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/087 ATSpookBass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/088 D-Funk": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/089 Kleo": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/090 Guisky": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/091 Cathil": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/092 Smooth Pd": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/093 Blind": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/094 Gloudal": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/095 Boers": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/096 Trapeurz": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/097 SH Stutter": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/098 Lo-FiOrgan": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/099 Tout Doux": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/100 Tinnendo": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/101 Etna 01": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/102 Braine Storm": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/103 Padel": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/104 Wait...": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/105 SlowBurn": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/106 Clave String": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/107 Arame": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/108 ATZap": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/109 VeloSparklz": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/110 F-Back": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/111 AcidFrog": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/112 Anlg": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/113 D3 Chords": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/114 Fate In Freaks": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/115 Notobeat": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/116 Analog Chaser": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/117 Minor Pad": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/118 Fight": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/119 NoiseBusters": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/120 Jobs 4 Rhythm": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/121 Fat Moves": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/122 Simon Says": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/123 TaBass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/124 Luna5": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/125 Amigras": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/126 Snitch 5": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/127 Filicophyta": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/128 KickBass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/129 Opst": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/130 Sprt Brth": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/131 Colik": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/132 Hold Riser": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/133 Malfunction": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/134 Qbit Brass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/135 No Sleep": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/136 Chip Thunder": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/137 Solide": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/138 Metallic Talk": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/139 Long FM Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/140 Hats maker": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/141 Digital Sea": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/142 Kick A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/143 Kick B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/144 Hihat A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/145 Hihat B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/146 Snare Seq 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/147 Drum Grit Seq": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/148 Mad Drums": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/149 Colt": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/150 Stab One": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/151 The Unstable": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/152 B3": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/153 Pig": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/154 Old Tapes": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/155 Paralex": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/156 Prosper": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/157 Ice Cold": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/158 Grimy Beat": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/159 Snow Man": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/160 Incoming Ship": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/161 Crackle Sleep": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/162 Roid": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/163 Sausage Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/164 Space Alert": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/165 Kick N Hard": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/166 Rnd Rytm Arp": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/167 Chordrone It": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/168 Arpic": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/169 Pats": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/170 Shaka": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/171 Prof": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/172 Snare Four": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/173 AfterBurner": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/174 Auster": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/175 Wuuut": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/176 Sayan 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/177 Square Poly": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/178 Keys 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/179 Keys 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/180 7th Keys": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/181 Toy Piano": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/182 Vibra": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/183 JP Strings": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/184 Xylophone": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/185 Strings 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/186 Strings 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/187 KarpluStrings": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/188 Karpad": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/189 Brass 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/190 Brass 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/191 Soft Brass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/192 Organ 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/193 Organ 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/194 Glass Organ": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/195 Night Organ": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/196 Chorgan": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/197 Fusion Lead": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/198 Lucky Lead": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/199 FM Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/200 Saw Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/201 Square Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/202 Acid Bass 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/203 Acid Bass 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/204 Simple Sub": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/205 Exotic Perc": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/206 Bells 1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/207 Bells 2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/208 Boarding": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/209 Dirty": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/210 Movie Chase": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/211 Motorway": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/212 Raver": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/213 Hypno Chaos": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/214 Gaia": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/215 Subby": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/216 Rubber Band": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/217 Rectify": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/218 Metal Sequence": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/219 Dusty Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/220 Planetary Dial": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/221 My Sweet Ai": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/222 Systemshock": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/223 Aphexian Kick": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/224 Talk About D": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/225 Neutrino A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/226 Lowride": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/227 Midnight Pad": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/228 Last Days": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/229 Japan Xeno": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/230 Cristal Church": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/231 KataKick": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/232 LektrO": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/233 Cryda Chords": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/234 Stillbass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/235 Shy Robot": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/236 Fastrun": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/237 Funk Blaster": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/238 Deep Sea Call": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/239 70s Dracula": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/240 Move U Head": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/241 Numnum Yoy": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/242 93s  Rave": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/243 Noisy": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/244 Nebem": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/245 GivemeSub": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/246 Queity": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/247 Laity": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/248 GrowLing": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/249 RisoLFO": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/250 Organic Random": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/251 Trinity": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/252 Monotron": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/253 Carrytron": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/254 Comb-Me": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/255 WubbliDub": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/256 Fmit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/257 Power Touch": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/258 Glip": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/259 Infini Pad": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/260 8bitfi": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/261 Eurgon Lead": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/262 Pled": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/263 Giraf": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/264 Disaster": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/265 Bliss": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/266 Cloque": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/267 Tracteur": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/268 Melon": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/269 Poireau": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/270 Emo": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/271 Debout": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/272 Maison": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/273 Good": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/274 Sardine": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/275 Malin": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/276 Dandi": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/277 Profet": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/278 Joan": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/279 Woody": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/280 Clark": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/281 Smooth IPA": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/282 Cosy Evening": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/283 Far Away": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/284 Synz Today": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/285 70s Resolution": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/286 Driftsynchros": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/287 Holistic": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/288 Solo Trancer": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/289 Down For Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/290 Qrazy Press": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/291 Poisoned 0scs": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/292 Moving Cars": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/293 Digital Roads": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/294 Synchronizer": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/295 Tactile Techno": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/296 Kick It": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/297 Shiny Hat": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/298 King Snap": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/299 I Saw It B4": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/300 MfCheese": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/301 Perculiar Bass": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/302 No Rush": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/303 2020 Behind": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/304 Saw Vox": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/305 Vibrato Treble": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/306 Low Battery": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/307 Acetous Com": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/308 Gated Com": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/309 Low Noisy Vox": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/310 Arp Sing": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/311 The Eyes": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/312 Shy Timbre": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/313 Tremolo Saw": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/314 Gliding Vox": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/315 Crying": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/316 PWM vox": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/317 Low Square Bot": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/318 Sequenced": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/319 SnH Voicing": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/320 Munks": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/350 Smooth IPA": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/351 Hoit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/352 Lait": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/353 Work": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/354 Fjit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/355 PersnikT": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/356 Ridiance": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/357 2024-11-10_Sun": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/358 20241116.1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/359 Init": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/360 TMF.24.11.18.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/361 TMF.24.11.18.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/362 TMF.24.11.18.C": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/363 TMF.24.11.20.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/364 TMF.24.11.20.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/365 TMF.24.11.21.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/366 TMF.24.11.21.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/367 TMF.24.11.23.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/368 TMF.24.11.23.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/369 TMF.24.11.23.C": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/370 TMF.24.11.23.D": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/371 TMF.24.11.25.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/372 TMF.24.11.25.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/373 TMF.24.11.25.C": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/374 TMF.24.12.04.A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/375 TMF.24.12.04.B": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/376 TMF.24.12.04.C": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/377 TMF.24.12.04.D": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/378 Anit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/379 Bnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/380 Cnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/381 Dnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/382 Anit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/384 Bnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/385 Cnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/386 Dnit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/387 Enit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/388 Anit1": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/389 Bnit2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/390 Cnit2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/391 Dnit2": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/392 Blithrifi": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/393 answ er": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/394 Jing A": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/395 26.06.25": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/396 Anit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/Preset/397 Imit": {
+      "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+    },
+    "Microfreak/UG": {
+      "logseq-entity": "[[Logseq/Entity/Book/User Guide]], [[Logseq/Entity/Book]]"
+    },
+    "Microfreak/UG/01 Welcome and Introduction": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/01 Welcome and Introduction/01 A Fascinating Adventure": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/01 Welcome and Introduction/03 About Reading Manuals": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/02 Installation/01 Usage Precautions": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/02 Warning": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/03 Notice": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/04 Precautions": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/05 Register Instrument": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/06 Connecting to the World": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/02 Installation/07 Latest Firmware": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/03 Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/03 Signal Flow": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/04 Presets/01 Load Presets": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets/02 Save Presets": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets/03 Preset Config": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets/04 Panel": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets/05 Digital Control": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/05 Connections": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/05 Connections/01 Control Signals": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/05 Connections/03 Freaky Ideas": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/06 Dig Osc": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/06 Dig Osc/01 as Soundgen": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]] "
+    },
+    "Microfreak/UG/06 Dig Osc/02 Param Controls": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/06 Dig Osc/02 Param Controls/01 Knob Speed": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/09 Formant": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/10 Chords": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/11 Speech": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/12 Modal": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/13 Noise": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/14 BASS": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/16 HARM": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound/02 Band Pass Filter": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/02 Animating Sound": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/07 Filter/02 Animating Sound/01 Cutoff Modulation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/07 Filter/02 Animating Sound/02 Emphasis Resonance Modulation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/08 LFO": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/08 LFO/01 LFO Shape": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/08 LFO/02 LFO Rate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/08 LFO/02 LFO Rate/01 LFO Retriggering": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/08 LFO/03 Freaky Tips": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/01 What an Envelope Does": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/02 Gates and Triggers": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/01 Attack": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/02 Decay Release": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/03 Sustain": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/04 Filter Amount": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/05 Amp Mod Button": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/01 Cycling Envelope Stages": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/10 Keyboard/01 Gates and Triggers": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness/01 Using Responsiveness": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/10 Keyboard/03 Glide": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard/04 Octave Buttons": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/11 Icon Strip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/12 Arpeggiator": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/01 Using Patterns": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/01 Using Patterns/01 Creating Pattern Variations": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/02 Gates and Triggers": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/04 Making it Swing": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/07 Arp Fun": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/07 Arp Fun/01 Spicing up Arpeggios": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/01 Select & Play": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/02 Keyboard": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/02 Edit": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/03 Real Time": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/04 Copy": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/05 Arp": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/03 Smoothing": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/03 Fun": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/13 Sequencer/03 Fun/01 Hidden Feature": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/03 Fun/02 Mix Pitches": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/03 Fun/03 Hoketus": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/14 Config/01 Utility & MCC": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/14 Config/01 Utility & MCC/01 Preset": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config/01 Utility & MCC/02 Global": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/15 Using Scales": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/15 Using Scales/01 Scale Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/15 Using Scales/02 The Scale Root": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/16 Paraphonic Chord Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/16 Paraphonic Chord Mode/01 Unison": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/16 Paraphonic Chord Mode/03 Spread Modulation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/02 CV Gate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/04 Control External Gear": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/05 Local Control": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/06 MIDI Channels": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/06 MIDI Channels/01 DAW Configuration": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/17 Ext Gear/07 MIDI Tutorial MINI V": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/09 MIDI CC Control": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/11 MIDI CC Values": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/18 Appendix A Speech Osc": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/01 Intro": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/01 Resolution": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/02 Voice": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/03 Connect Mic": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/04 Headset Mic": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/05 Vocoder Preset": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/06 Play & Sing": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/07 Config": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/07 Config/01 Preset Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/01 Mic Levels": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/02 Gain": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/01 Noise Gate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 Mic Detection": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/09 Package": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/20 Appendix C - Cheat Sheet": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/21 Appendix D - CC Values": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/21 Appendix D - CC Values/01 What are CC Values": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/01 FCC": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/02 Canada": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/03 CE": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/04 UKCA": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/05 RoHS": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/06 WEEE": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/01 Software Ownership": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/02 Grant of License": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/03 Activation of Software": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/04 Support, Upgrades, and Updates": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/05 No Unbundling": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/06 Assignment of Rights": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/07 Upgrades and Updates": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/08 Limited Warranty": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/09 Remedies": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/10 No Other Warranties": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/23 Software License Agreement/11 Consequential Damages": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    }
   },
   "files": {
     "mise-tasks/logseq/entity/proxy/page/docs/index.html": {
@@ -737,6 +2608,11 @@
         "mise-tasks/logseq/entity/proxy/page/sync"
       ],
       "page": "Logseq/Entity/Proxy/Page/mise/Task/sync",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak": {
+      "files": [],
+      "page": "Microfreak",
       "source_graph": "."
     }
   },
@@ -1586,10 +3462,20 @@
       ".",
       "Logseq/Entity/Book/Section/Level 4"
     ],
+    "Logseq/Entity/Book/User Guide": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/User Guide"
+    ],
     "Logseq/Entity/Definition": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Logseq/Entity/Definition"
+    ],
+    "Logseq/Entity/Frontmatter/Definition": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Frontmatter/Definition"
     ],
     "Logseq/Entity/Mise/Task": [
       "github.com/codekiln/logseq-encode-garden",
@@ -1600,6 +3486,136 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Logseq/Entity/Podcast/Episode"
+    ],
+    "Logseq/Entity/Preset/Synth": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file-sha256": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file-sha256"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Custom": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Custom"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory"
+    ],
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Brass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Brass"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Organ": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Organ"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-initialized": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-initialized"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-name": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-name"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-number": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-number"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-on-device": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-on-device"
+    ],
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type"
     ],
     "Logseq/Entity/Proxy/Page": [
       "github.com/codekiln/logseq-encode-garden",
@@ -1665,6 +3681,3061 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Logseq/Frontmatter/via"
+    ],
+    "Microfreak": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak"
+    ],
+    "Microfreak/CLI/Episode patch workflow": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/CLI/Episode patch workflow"
+    ],
+    "Microfreak/CLI/Preset metadata over USB": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/CLI/Preset metadata over USB"
+    ],
+    "Microfreak/CLI/Validation/26-10-03 slot 397": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/CLI/Validation/26-10-03 slot 397"
+    ],
+    "Microfreak/Log/26/09/27 Sun Preset Manager Knowledge Gardening": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Log/26/09/27 Sun Preset Manager Knowledge Gardening"
+    ],
+    "Microfreak/Log/26/09/28 Mon Preset Management": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Log/26/09/28 Mon Preset Management"
+    ],
+    "Microfreak/Meta/Structure": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Meta/Structure"
+    ],
+    "Microfreak/Preset": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset"
+    ],
+    "Microfreak/Preset/001 NervousKeys": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/001 NervousKeys"
+    ],
+    "Microfreak/Preset/002 Punisher": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/002 Punisher"
+    ],
+    "Microfreak/Preset/003 Trance": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/003 Trance"
+    ],
+    "Microfreak/Preset/004 Ether": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/004 Ether"
+    ],
+    "Microfreak/Preset/005 MotivSeq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/005 MotivSeq"
+    ],
+    "Microfreak/Preset/006 Aft-WavPad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/006 Aft-WavPad"
+    ],
+    "Microfreak/Preset/007 Brd But Arp": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/007 Brd But Arp"
+    ],
+    "Microfreak/Preset/008 Invitation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/008 Invitation"
+    ],
+    "Microfreak/Preset/009 261e": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/009 261e"
+    ],
+    "Microfreak/Preset/010 Raverz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/010 Raverz"
+    ],
+    "Microfreak/Preset/011 Club V": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/011 Club V"
+    ],
+    "Microfreak/Preset/012 Darkstream": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/012 Darkstream"
+    ],
+    "Microfreak/Preset/013 Pikdown": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/013 Pikdown"
+    ],
+    "Microfreak/Preset/014 Bontempis": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/014 Bontempis"
+    ],
+    "Microfreak/Preset/015 PolyBells": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/015 PolyBells"
+    ],
+    "Microfreak/Preset/016 Voidom": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/016 Voidom"
+    ],
+    "Microfreak/Preset/017 Tubular": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/017 Tubular"
+    ],
+    "Microfreak/Preset/018 Chip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/018 Chip"
+    ],
+    "Microfreak/Preset/019 BrightBinary": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/019 BrightBinary"
+    ],
+    "Microfreak/Preset/020 Arp-fi": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/020 Arp-fi"
+    ],
+    "Microfreak/Preset/021 Short Strings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/021 Short Strings"
+    ],
+    "Microfreak/Preset/022 BouncKeyPara": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/022 BouncKeyPara"
+    ],
+    "Microfreak/Preset/023 AliGoop": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/023 AliGoop"
+    ],
+    "Microfreak/Preset/024 Stan2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/024 Stan2"
+    ],
+    "Microfreak/Preset/025 808 St8 M8": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/025 808 St8 M8"
+    ],
+    "Microfreak/Preset/026 L9n1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/026 L9n1"
+    ],
+    "Microfreak/Preset/027 Nost": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/027 Nost"
+    ],
+    "Microfreak/Preset/028 Daft": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/028 Daft"
+    ],
+    "Microfreak/Preset/029 Number Station": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/029 Number Station"
+    ],
+    "Microfreak/Preset/030 HarmonicTuneUp": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/030 HarmonicTuneUp"
+    ],
+    "Microfreak/Preset/031 Ixos": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/031 Ixos"
+    ],
+    "Microfreak/Preset/032 Chord Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/032 Chord Bass"
+    ],
+    "Microfreak/Preset/033 Organism": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/033 Organism"
+    ],
+    "Microfreak/Preset/034 Corrosion": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/034 Corrosion"
+    ],
+    "Microfreak/Preset/035 FM Seq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/035 FM Seq"
+    ],
+    "Microfreak/Preset/036 Rollie Lov": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/036 Rollie Lov"
+    ],
+    "Microfreak/Preset/037 Chunk": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/037 Chunk"
+    ],
+    "Microfreak/Preset/038 Classist": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/038 Classist"
+    ],
+    "Microfreak/Preset/039 Nostromo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/039 Nostromo"
+    ],
+    "Microfreak/Preset/040 Disrespectful": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/040 Disrespectful"
+    ],
+    "Microfreak/Preset/041 Madtraker": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/041 Madtraker"
+    ],
+    "Microfreak/Preset/042 Hoss": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/042 Hoss"
+    ],
+    "Microfreak/Preset/043 IDm5": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/043 IDm5"
+    ],
+    "Microfreak/Preset/044 FM-it": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/044 FM-it"
+    ],
+    "Microfreak/Preset/045 Lottreux": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/045 Lottreux"
+    ],
+    "Microfreak/Preset/046 XnastX": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/046 XnastX"
+    ],
+    "Microfreak/Preset/047 White Calx": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/047 White Calx"
+    ],
+    "Microfreak/Preset/048 VintageEdge": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/048 VintageEdge"
+    ],
+    "Microfreak/Preset/049 Sci Organ": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/049 Sci Organ"
+    ],
+    "Microfreak/Preset/050 Death": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/050 Death"
+    ],
+    "Microfreak/Preset/051 Solitude": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/051 Solitude"
+    ],
+    "Microfreak/Preset/052 Ringussion": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/052 Ringussion"
+    ],
+    "Microfreak/Preset/053 Crystal": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/053 Crystal"
+    ],
+    "Microfreak/Preset/054 Michtack": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/054 Michtack"
+    ],
+    "Microfreak/Preset/055 Analordic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/055 Analordic"
+    ],
+    "Microfreak/Preset/056 PowerStab": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/056 PowerStab"
+    ],
+    "Microfreak/Preset/057 Hollows": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/057 Hollows"
+    ],
+    "Microfreak/Preset/058 Junk.J": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/058 Junk.J"
+    ],
+    "Microfreak/Preset/059 Suby Rainbow": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/059 Suby Rainbow"
+    ],
+    "Microfreak/Preset/060 Unstable Solo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/060 Unstable Solo"
+    ],
+    "Microfreak/Preset/061 AftrBlush": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/061 AftrBlush"
+    ],
+    "Microfreak/Preset/062 Mood Strings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/062 Mood Strings"
+    ],
+    "Microfreak/Preset/063 Kendrok": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/063 Kendrok"
+    ],
+    "Microfreak/Preset/064 Mood": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/064 Mood"
+    ],
+    "Microfreak/Preset/065 Cafe Chord": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/065 Cafe Chord"
+    ],
+    "Microfreak/Preset/066 Vanarx": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/066 Vanarx"
+    ],
+    "Microfreak/Preset/067 Angels": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/067 Angels"
+    ],
+    "Microfreak/Preset/068 Canadian Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/068 Canadian Bass"
+    ],
+    "Microfreak/Preset/069 3opeR": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/069 3opeR"
+    ],
+    "Microfreak/Preset/070 Cliched Things": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/070 Cliched Things"
+    ],
+    "Microfreak/Preset/071 Sweep SQ": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/071 Sweep SQ"
+    ],
+    "Microfreak/Preset/072 Buzzsaw": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/072 Buzzsaw"
+    ],
+    "Microfreak/Preset/073 S.H Ld": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/073 S.H Ld"
+    ],
+    "Microfreak/Preset/074 Sneaker": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/074 Sneaker"
+    ],
+    "Microfreak/Preset/075 Saying Goodbye": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/075 Saying Goodbye"
+    ],
+    "Microfreak/Preset/076 AutoCHILL": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/076 AutoCHILL"
+    ],
+    "Microfreak/Preset/077 Eonz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/077 Eonz"
+    ],
+    "Microfreak/Preset/078 A Juno Vibe": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/078 A Juno Vibe"
+    ],
+    "Microfreak/Preset/079 ArpZap": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/079 ArpZap"
+    ],
+    "Microfreak/Preset/080 Traditon": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/080 Traditon"
+    ],
+    "Microfreak/Preset/081 Gaming": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/081 Gaming"
+    ],
+    "Microfreak/Preset/082 Over Me": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/082 Over Me"
+    ],
+    "Microfreak/Preset/083 Leeds Strings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/083 Leeds Strings"
+    ],
+    "Microfreak/Preset/084 Press So": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/084 Press So"
+    ],
+    "Microfreak/Preset/085 Arp 2ol9": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/085 Arp 2ol9"
+    ],
+    "Microfreak/Preset/086 Whimsy": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/086 Whimsy"
+    ],
+    "Microfreak/Preset/087 ATSpookBass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/087 ATSpookBass"
+    ],
+    "Microfreak/Preset/088 D-Funk": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/088 D-Funk"
+    ],
+    "Microfreak/Preset/089 Kleo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/089 Kleo"
+    ],
+    "Microfreak/Preset/090 Guisky": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/090 Guisky"
+    ],
+    "Microfreak/Preset/091 Cathil": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/091 Cathil"
+    ],
+    "Microfreak/Preset/092 Smooth Pd": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/092 Smooth Pd"
+    ],
+    "Microfreak/Preset/093 Blind": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/093 Blind"
+    ],
+    "Microfreak/Preset/094 Gloudal": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/094 Gloudal"
+    ],
+    "Microfreak/Preset/095 Boers": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/095 Boers"
+    ],
+    "Microfreak/Preset/096 Trapeurz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/096 Trapeurz"
+    ],
+    "Microfreak/Preset/097 SH Stutter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/097 SH Stutter"
+    ],
+    "Microfreak/Preset/098 Lo-FiOrgan": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/098 Lo-FiOrgan"
+    ],
+    "Microfreak/Preset/099 Tout Doux": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/099 Tout Doux"
+    ],
+    "Microfreak/Preset/100 Tinnendo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/100 Tinnendo"
+    ],
+    "Microfreak/Preset/101 Etna 01": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/101 Etna 01"
+    ],
+    "Microfreak/Preset/102 Braine Storm": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/102 Braine Storm"
+    ],
+    "Microfreak/Preset/103 Padel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/103 Padel"
+    ],
+    "Microfreak/Preset/104 Wait...": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/104 Wait..."
+    ],
+    "Microfreak/Preset/105 SlowBurn": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/105 SlowBurn"
+    ],
+    "Microfreak/Preset/106 Clave String": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/106 Clave String"
+    ],
+    "Microfreak/Preset/107 Arame": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/107 Arame"
+    ],
+    "Microfreak/Preset/108 ATZap": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/108 ATZap"
+    ],
+    "Microfreak/Preset/109 VeloSparklz": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/109 VeloSparklz"
+    ],
+    "Microfreak/Preset/110 F-Back": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/110 F-Back"
+    ],
+    "Microfreak/Preset/111 AcidFrog": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/111 AcidFrog"
+    ],
+    "Microfreak/Preset/112 Anlg": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/112 Anlg"
+    ],
+    "Microfreak/Preset/113 D3 Chords": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/113 D3 Chords"
+    ],
+    "Microfreak/Preset/114 Fate In Freaks": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/114 Fate In Freaks"
+    ],
+    "Microfreak/Preset/115 Notobeat": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/115 Notobeat"
+    ],
+    "Microfreak/Preset/116 Analog Chaser": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/116 Analog Chaser"
+    ],
+    "Microfreak/Preset/117 Minor Pad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/117 Minor Pad"
+    ],
+    "Microfreak/Preset/118 Fight": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/118 Fight"
+    ],
+    "Microfreak/Preset/119 NoiseBusters": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/119 NoiseBusters"
+    ],
+    "Microfreak/Preset/120 Jobs 4 Rhythm": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/120 Jobs 4 Rhythm"
+    ],
+    "Microfreak/Preset/121 Fat Moves": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/121 Fat Moves"
+    ],
+    "Microfreak/Preset/122 Simon Says": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/122 Simon Says"
+    ],
+    "Microfreak/Preset/123 TaBass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/123 TaBass"
+    ],
+    "Microfreak/Preset/124 Luna5": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/124 Luna5"
+    ],
+    "Microfreak/Preset/125 Amigras": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/125 Amigras"
+    ],
+    "Microfreak/Preset/126 Snitch 5": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/126 Snitch 5"
+    ],
+    "Microfreak/Preset/127 Filicophyta": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/127 Filicophyta"
+    ],
+    "Microfreak/Preset/128 KickBass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/128 KickBass"
+    ],
+    "Microfreak/Preset/129 Opst": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/129 Opst"
+    ],
+    "Microfreak/Preset/130 Sprt Brth": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/130 Sprt Brth"
+    ],
+    "Microfreak/Preset/131 Colik": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/131 Colik"
+    ],
+    "Microfreak/Preset/132 Hold Riser": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/132 Hold Riser"
+    ],
+    "Microfreak/Preset/133 Malfunction": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/133 Malfunction"
+    ],
+    "Microfreak/Preset/134 Qbit Brass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/134 Qbit Brass"
+    ],
+    "Microfreak/Preset/135 No Sleep": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/135 No Sleep"
+    ],
+    "Microfreak/Preset/136 Chip Thunder": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/136 Chip Thunder"
+    ],
+    "Microfreak/Preset/137 Solide": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/137 Solide"
+    ],
+    "Microfreak/Preset/138 Metallic Talk": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/138 Metallic Talk"
+    ],
+    "Microfreak/Preset/139 Long FM Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/139 Long FM Bass"
+    ],
+    "Microfreak/Preset/140 Hats maker": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/140 Hats maker"
+    ],
+    "Microfreak/Preset/141 Digital Sea": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/141 Digital Sea"
+    ],
+    "Microfreak/Preset/142 Kick A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/142 Kick A"
+    ],
+    "Microfreak/Preset/143 Kick B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/143 Kick B"
+    ],
+    "Microfreak/Preset/144 Hihat A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/144 Hihat A"
+    ],
+    "Microfreak/Preset/145 Hihat B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/145 Hihat B"
+    ],
+    "Microfreak/Preset/146 Snare Seq 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/146 Snare Seq 1"
+    ],
+    "Microfreak/Preset/147 Drum Grit Seq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/147 Drum Grit Seq"
+    ],
+    "Microfreak/Preset/148 Mad Drums": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/148 Mad Drums"
+    ],
+    "Microfreak/Preset/149 Colt": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/149 Colt"
+    ],
+    "Microfreak/Preset/150 Stab One": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/150 Stab One"
+    ],
+    "Microfreak/Preset/151 The Unstable": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/151 The Unstable"
+    ],
+    "Microfreak/Preset/152 B3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/152 B3"
+    ],
+    "Microfreak/Preset/153 Pig": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/153 Pig"
+    ],
+    "Microfreak/Preset/154 Old Tapes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/154 Old Tapes"
+    ],
+    "Microfreak/Preset/155 Paralex": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/155 Paralex"
+    ],
+    "Microfreak/Preset/156 Prosper": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/156 Prosper"
+    ],
+    "Microfreak/Preset/157 Ice Cold": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/157 Ice Cold"
+    ],
+    "Microfreak/Preset/158 Grimy Beat": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/158 Grimy Beat"
+    ],
+    "Microfreak/Preset/159 Snow Man": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/159 Snow Man"
+    ],
+    "Microfreak/Preset/160 Incoming Ship": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/160 Incoming Ship"
+    ],
+    "Microfreak/Preset/161 Crackle Sleep": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/161 Crackle Sleep"
+    ],
+    "Microfreak/Preset/162 Roid": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/162 Roid"
+    ],
+    "Microfreak/Preset/163 Sausage Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/163 Sausage Bass"
+    ],
+    "Microfreak/Preset/164 Space Alert": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/164 Space Alert"
+    ],
+    "Microfreak/Preset/165 Kick N Hard": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/165 Kick N Hard"
+    ],
+    "Microfreak/Preset/166 Rnd Rytm Arp": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/166 Rnd Rytm Arp"
+    ],
+    "Microfreak/Preset/167 Chordrone It": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/167 Chordrone It"
+    ],
+    "Microfreak/Preset/168 Arpic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/168 Arpic"
+    ],
+    "Microfreak/Preset/169 Pats": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/169 Pats"
+    ],
+    "Microfreak/Preset/170 Shaka": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/170 Shaka"
+    ],
+    "Microfreak/Preset/171 Prof": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/171 Prof"
+    ],
+    "Microfreak/Preset/172 Snare Four": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/172 Snare Four"
+    ],
+    "Microfreak/Preset/173 AfterBurner": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/173 AfterBurner"
+    ],
+    "Microfreak/Preset/174 Auster": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/174 Auster"
+    ],
+    "Microfreak/Preset/175 Wuuut": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/175 Wuuut"
+    ],
+    "Microfreak/Preset/176 Sayan 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/176 Sayan 2"
+    ],
+    "Microfreak/Preset/177 Square Poly": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/177 Square Poly"
+    ],
+    "Microfreak/Preset/178 Keys 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/178 Keys 1"
+    ],
+    "Microfreak/Preset/179 Keys 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/179 Keys 2"
+    ],
+    "Microfreak/Preset/180 7th Keys": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/180 7th Keys"
+    ],
+    "Microfreak/Preset/181 Toy Piano": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/181 Toy Piano"
+    ],
+    "Microfreak/Preset/182 Vibra": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/182 Vibra"
+    ],
+    "Microfreak/Preset/183 JP Strings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/183 JP Strings"
+    ],
+    "Microfreak/Preset/184 Xylophone": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/184 Xylophone"
+    ],
+    "Microfreak/Preset/185 Strings 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/185 Strings 1"
+    ],
+    "Microfreak/Preset/186 Strings 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/186 Strings 2"
+    ],
+    "Microfreak/Preset/187 KarpluStrings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/187 KarpluStrings"
+    ],
+    "Microfreak/Preset/188 Karpad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/188 Karpad"
+    ],
+    "Microfreak/Preset/189 Brass 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/189 Brass 1"
+    ],
+    "Microfreak/Preset/190 Brass 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/190 Brass 2"
+    ],
+    "Microfreak/Preset/191 Soft Brass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/191 Soft Brass"
+    ],
+    "Microfreak/Preset/192 Organ 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/192 Organ 1"
+    ],
+    "Microfreak/Preset/193 Organ 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/193 Organ 2"
+    ],
+    "Microfreak/Preset/194 Glass Organ": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/194 Glass Organ"
+    ],
+    "Microfreak/Preset/195 Night Organ": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/195 Night Organ"
+    ],
+    "Microfreak/Preset/196 Chorgan": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/196 Chorgan"
+    ],
+    "Microfreak/Preset/197 Fusion Lead": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/197 Fusion Lead"
+    ],
+    "Microfreak/Preset/198 Lucky Lead": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/198 Lucky Lead"
+    ],
+    "Microfreak/Preset/199 FM Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/199 FM Bass"
+    ],
+    "Microfreak/Preset/200 Saw Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/200 Saw Bass"
+    ],
+    "Microfreak/Preset/201 Square Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/201 Square Bass"
+    ],
+    "Microfreak/Preset/202 Acid Bass 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/202 Acid Bass 2"
+    ],
+    "Microfreak/Preset/203 Acid Bass 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/203 Acid Bass 1"
+    ],
+    "Microfreak/Preset/204 Simple Sub": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/204 Simple Sub"
+    ],
+    "Microfreak/Preset/205 Exotic Perc": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/205 Exotic Perc"
+    ],
+    "Microfreak/Preset/206 Bells 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/206 Bells 1"
+    ],
+    "Microfreak/Preset/207 Bells 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/207 Bells 2"
+    ],
+    "Microfreak/Preset/208 Boarding": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/208 Boarding"
+    ],
+    "Microfreak/Preset/209 Dirty": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/209 Dirty"
+    ],
+    "Microfreak/Preset/210 Movie Chase": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/210 Movie Chase"
+    ],
+    "Microfreak/Preset/211 Motorway": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/211 Motorway"
+    ],
+    "Microfreak/Preset/212 Raver": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/212 Raver"
+    ],
+    "Microfreak/Preset/213 Hypno Chaos": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/213 Hypno Chaos"
+    ],
+    "Microfreak/Preset/214 Gaia": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/214 Gaia"
+    ],
+    "Microfreak/Preset/215 Subby": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/215 Subby"
+    ],
+    "Microfreak/Preset/216 Rubber Band": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/216 Rubber Band"
+    ],
+    "Microfreak/Preset/217 Rectify": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/217 Rectify"
+    ],
+    "Microfreak/Preset/218 Metal Sequence": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/218 Metal Sequence"
+    ],
+    "Microfreak/Preset/219 Dusty Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/219 Dusty Bass"
+    ],
+    "Microfreak/Preset/220 Planetary Dial": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/220 Planetary Dial"
+    ],
+    "Microfreak/Preset/221 My Sweet Ai": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/221 My Sweet Ai"
+    ],
+    "Microfreak/Preset/222 Systemshock": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/222 Systemshock"
+    ],
+    "Microfreak/Preset/223 Aphexian Kick": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/223 Aphexian Kick"
+    ],
+    "Microfreak/Preset/224 Talk About D": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/224 Talk About D"
+    ],
+    "Microfreak/Preset/225 Neutrino A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/225 Neutrino A"
+    ],
+    "Microfreak/Preset/226 Lowride": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/226 Lowride"
+    ],
+    "Microfreak/Preset/227 Midnight Pad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/227 Midnight Pad"
+    ],
+    "Microfreak/Preset/228 Last Days": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/228 Last Days"
+    ],
+    "Microfreak/Preset/229 Japan Xeno": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/229 Japan Xeno"
+    ],
+    "Microfreak/Preset/230 Cristal Church": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/230 Cristal Church"
+    ],
+    "Microfreak/Preset/231 KataKick": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/231 KataKick"
+    ],
+    "Microfreak/Preset/232 LektrO": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/232 LektrO"
+    ],
+    "Microfreak/Preset/233 Cryda Chords": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/233 Cryda Chords"
+    ],
+    "Microfreak/Preset/234 Stillbass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/234 Stillbass"
+    ],
+    "Microfreak/Preset/235 Shy Robot": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/235 Shy Robot"
+    ],
+    "Microfreak/Preset/236 Fastrun": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/236 Fastrun"
+    ],
+    "Microfreak/Preset/237 Funk Blaster": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/237 Funk Blaster"
+    ],
+    "Microfreak/Preset/238 Deep Sea Call": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/238 Deep Sea Call"
+    ],
+    "Microfreak/Preset/239 70s Dracula": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/239 70s Dracula"
+    ],
+    "Microfreak/Preset/240 Move U Head": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/240 Move U Head"
+    ],
+    "Microfreak/Preset/241 Numnum Yoy": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/241 Numnum Yoy"
+    ],
+    "Microfreak/Preset/242 93s  Rave": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/242 93s  Rave"
+    ],
+    "Microfreak/Preset/243 Noisy": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/243 Noisy"
+    ],
+    "Microfreak/Preset/244 Nebem": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/244 Nebem"
+    ],
+    "Microfreak/Preset/245 GivemeSub": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/245 GivemeSub"
+    ],
+    "Microfreak/Preset/246 Queity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/246 Queity"
+    ],
+    "Microfreak/Preset/247 Laity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/247 Laity"
+    ],
+    "Microfreak/Preset/248 GrowLing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/248 GrowLing"
+    ],
+    "Microfreak/Preset/249 RisoLFO": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/249 RisoLFO"
+    ],
+    "Microfreak/Preset/250 Organic Random": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/250 Organic Random"
+    ],
+    "Microfreak/Preset/251 Trinity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/251 Trinity"
+    ],
+    "Microfreak/Preset/252 Monotron": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/252 Monotron"
+    ],
+    "Microfreak/Preset/253 Carrytron": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/253 Carrytron"
+    ],
+    "Microfreak/Preset/254 Comb-Me": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/254 Comb-Me"
+    ],
+    "Microfreak/Preset/255 WubbliDub": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/255 WubbliDub"
+    ],
+    "Microfreak/Preset/256 Fmit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/256 Fmit"
+    ],
+    "Microfreak/Preset/257 Power Touch": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/257 Power Touch"
+    ],
+    "Microfreak/Preset/258 Glip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/258 Glip"
+    ],
+    "Microfreak/Preset/259 Infini Pad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/259 Infini Pad"
+    ],
+    "Microfreak/Preset/260 8bitfi": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/260 8bitfi"
+    ],
+    "Microfreak/Preset/261 Eurgon Lead": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/261 Eurgon Lead"
+    ],
+    "Microfreak/Preset/262 Pled": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/262 Pled"
+    ],
+    "Microfreak/Preset/263 Giraf": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/263 Giraf"
+    ],
+    "Microfreak/Preset/264 Disaster": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/264 Disaster"
+    ],
+    "Microfreak/Preset/265 Bliss": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/265 Bliss"
+    ],
+    "Microfreak/Preset/266 Cloque": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/266 Cloque"
+    ],
+    "Microfreak/Preset/267 Tracteur": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/267 Tracteur"
+    ],
+    "Microfreak/Preset/268 Melon": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/268 Melon"
+    ],
+    "Microfreak/Preset/269 Poireau": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/269 Poireau"
+    ],
+    "Microfreak/Preset/270 Emo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/270 Emo"
+    ],
+    "Microfreak/Preset/271 Debout": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/271 Debout"
+    ],
+    "Microfreak/Preset/272 Maison": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/272 Maison"
+    ],
+    "Microfreak/Preset/273 Good": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/273 Good"
+    ],
+    "Microfreak/Preset/274 Sardine": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/274 Sardine"
+    ],
+    "Microfreak/Preset/275 Malin": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/275 Malin"
+    ],
+    "Microfreak/Preset/276 Dandi": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/276 Dandi"
+    ],
+    "Microfreak/Preset/277 Profet": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/277 Profet"
+    ],
+    "Microfreak/Preset/278 Joan": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/278 Joan"
+    ],
+    "Microfreak/Preset/279 Woody": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/279 Woody"
+    ],
+    "Microfreak/Preset/280 Clark": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/280 Clark"
+    ],
+    "Microfreak/Preset/281 Smooth IPA": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/281 Smooth IPA"
+    ],
+    "Microfreak/Preset/282 Cosy Evening": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/282 Cosy Evening"
+    ],
+    "Microfreak/Preset/283 Far Away": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/283 Far Away"
+    ],
+    "Microfreak/Preset/284 Synz Today": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/284 Synz Today"
+    ],
+    "Microfreak/Preset/285 70s Resolution": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/285 70s Resolution"
+    ],
+    "Microfreak/Preset/286 Driftsynchros": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/286 Driftsynchros"
+    ],
+    "Microfreak/Preset/287 Holistic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/287 Holistic"
+    ],
+    "Microfreak/Preset/288 Solo Trancer": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/288 Solo Trancer"
+    ],
+    "Microfreak/Preset/289 Down For Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/289 Down For Bass"
+    ],
+    "Microfreak/Preset/290 Qrazy Press": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/290 Qrazy Press"
+    ],
+    "Microfreak/Preset/291 Poisoned 0scs": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/291 Poisoned 0scs"
+    ],
+    "Microfreak/Preset/292 Moving Cars": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/292 Moving Cars"
+    ],
+    "Microfreak/Preset/293 Digital Roads": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/293 Digital Roads"
+    ],
+    "Microfreak/Preset/294 Synchronizer": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/294 Synchronizer"
+    ],
+    "Microfreak/Preset/295 Tactile Techno": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/295 Tactile Techno"
+    ],
+    "Microfreak/Preset/296 Kick It": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/296 Kick It"
+    ],
+    "Microfreak/Preset/297 Shiny Hat": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/297 Shiny Hat"
+    ],
+    "Microfreak/Preset/298 King Snap": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/298 King Snap"
+    ],
+    "Microfreak/Preset/299 I Saw It B4": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/299 I Saw It B4"
+    ],
+    "Microfreak/Preset/300 MfCheese": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/300 MfCheese"
+    ],
+    "Microfreak/Preset/301 Perculiar Bass": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/301 Perculiar Bass"
+    ],
+    "Microfreak/Preset/302 No Rush": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/302 No Rush"
+    ],
+    "Microfreak/Preset/303 2020 Behind": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/303 2020 Behind"
+    ],
+    "Microfreak/Preset/304 Saw Vox": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/304 Saw Vox"
+    ],
+    "Microfreak/Preset/305 Vibrato Treble": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/305 Vibrato Treble"
+    ],
+    "Microfreak/Preset/306 Low Battery": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/306 Low Battery"
+    ],
+    "Microfreak/Preset/307 Acetous Com": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/307 Acetous Com"
+    ],
+    "Microfreak/Preset/308 Gated Com": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/308 Gated Com"
+    ],
+    "Microfreak/Preset/309 Low Noisy Vox": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/309 Low Noisy Vox"
+    ],
+    "Microfreak/Preset/310 Arp Sing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/310 Arp Sing"
+    ],
+    "Microfreak/Preset/311 The Eyes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/311 The Eyes"
+    ],
+    "Microfreak/Preset/312 Shy Timbre": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/312 Shy Timbre"
+    ],
+    "Microfreak/Preset/313 Tremolo Saw": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/313 Tremolo Saw"
+    ],
+    "Microfreak/Preset/314 Gliding Vox": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/314 Gliding Vox"
+    ],
+    "Microfreak/Preset/315 Crying": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/315 Crying"
+    ],
+    "Microfreak/Preset/316 PWM vox": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/316 PWM vox"
+    ],
+    "Microfreak/Preset/317 Low Square Bot": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/317 Low Square Bot"
+    ],
+    "Microfreak/Preset/318 Sequenced": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/318 Sequenced"
+    ],
+    "Microfreak/Preset/319 SnH Voicing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/319 SnH Voicing"
+    ],
+    "Microfreak/Preset/320 Munks": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/320 Munks"
+    ],
+    "Microfreak/Preset/350 Smooth IPA": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/350 Smooth IPA"
+    ],
+    "Microfreak/Preset/351 Hoit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/351 Hoit"
+    ],
+    "Microfreak/Preset/352 Lait": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/352 Lait"
+    ],
+    "Microfreak/Preset/353 Work": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/353 Work"
+    ],
+    "Microfreak/Preset/354 Fjit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/354 Fjit"
+    ],
+    "Microfreak/Preset/355 PersnikT": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/355 PersnikT"
+    ],
+    "Microfreak/Preset/356 Ridiance": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/356 Ridiance"
+    ],
+    "Microfreak/Preset/357 2024-11-10_Sun": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/357 2024-11-10_Sun"
+    ],
+    "Microfreak/Preset/358 20241116.1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/358 20241116.1"
+    ],
+    "Microfreak/Preset/359 Init": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/359 Init"
+    ],
+    "Microfreak/Preset/360 TMF.24.11.18.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/360 TMF.24.11.18.A"
+    ],
+    "Microfreak/Preset/361 TMF.24.11.18.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/361 TMF.24.11.18.B"
+    ],
+    "Microfreak/Preset/362 TMF.24.11.18.C": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/362 TMF.24.11.18.C"
+    ],
+    "Microfreak/Preset/363 TMF.24.11.20.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/363 TMF.24.11.20.A"
+    ],
+    "Microfreak/Preset/364 TMF.24.11.20.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/364 TMF.24.11.20.B"
+    ],
+    "Microfreak/Preset/365 TMF.24.11.21.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/365 TMF.24.11.21.A"
+    ],
+    "Microfreak/Preset/366 TMF.24.11.21.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/366 TMF.24.11.21.B"
+    ],
+    "Microfreak/Preset/367 TMF.24.11.23.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/367 TMF.24.11.23.A"
+    ],
+    "Microfreak/Preset/368 TMF.24.11.23.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/368 TMF.24.11.23.B"
+    ],
+    "Microfreak/Preset/369 TMF.24.11.23.C": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/369 TMF.24.11.23.C"
+    ],
+    "Microfreak/Preset/370 TMF.24.11.23.D": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/370 TMF.24.11.23.D"
+    ],
+    "Microfreak/Preset/371 TMF.24.11.25.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/371 TMF.24.11.25.A"
+    ],
+    "Microfreak/Preset/372 TMF.24.11.25.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/372 TMF.24.11.25.B"
+    ],
+    "Microfreak/Preset/373 TMF.24.11.25.C": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/373 TMF.24.11.25.C"
+    ],
+    "Microfreak/Preset/374 TMF.24.12.04.A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/374 TMF.24.12.04.A"
+    ],
+    "Microfreak/Preset/375 TMF.24.12.04.B": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/375 TMF.24.12.04.B"
+    ],
+    "Microfreak/Preset/376 TMF.24.12.04.C": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/376 TMF.24.12.04.C"
+    ],
+    "Microfreak/Preset/377 TMF.24.12.04.D": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/377 TMF.24.12.04.D"
+    ],
+    "Microfreak/Preset/378 Anit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/378 Anit"
+    ],
+    "Microfreak/Preset/379 Bnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/379 Bnit"
+    ],
+    "Microfreak/Preset/380 Cnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/380 Cnit"
+    ],
+    "Microfreak/Preset/381 Dnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/381 Dnit"
+    ],
+    "Microfreak/Preset/382 Anit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/382 Anit"
+    ],
+    "Microfreak/Preset/384 Bnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/384 Bnit"
+    ],
+    "Microfreak/Preset/385 Cnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/385 Cnit"
+    ],
+    "Microfreak/Preset/386 Dnit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/386 Dnit"
+    ],
+    "Microfreak/Preset/387 Enit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/387 Enit"
+    ],
+    "Microfreak/Preset/388 Anit1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/388 Anit1"
+    ],
+    "Microfreak/Preset/389 Bnit2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/389 Bnit2"
+    ],
+    "Microfreak/Preset/390 Cnit2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/390 Cnit2"
+    ],
+    "Microfreak/Preset/391 Dnit2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/391 Dnit2"
+    ],
+    "Microfreak/Preset/392 Blithrifi": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/392 Blithrifi"
+    ],
+    "Microfreak/Preset/393 answ er": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/393 answ er"
+    ],
+    "Microfreak/Preset/394 Jing A": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/394 Jing A"
+    ],
+    "Microfreak/Preset/395 26.06.25": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/395 26.06.25"
+    ],
+    "Microfreak/Preset/396 Anit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/396 Anit"
+    ],
+    "Microfreak/Preset/397 Imit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/Preset/397 Imit"
+    ],
+    "Microfreak/UG": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG"
+    ],
+    "Microfreak/UG/01 Welcome and Introduction": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/01 Welcome and Introduction"
+    ],
+    "Microfreak/UG/01 Welcome and Introduction/01 A Fascinating Adventure": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/01 Welcome and Introduction/01 A Fascinating Adventure"
+    ],
+    "Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0"
+    ],
+    "Microfreak/UG/01 Welcome and Introduction/03 About Reading Manuals": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/01 Welcome and Introduction/03 About Reading Manuals"
+    ],
+    "Microfreak/UG/02 Installation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation"
+    ],
+    "Microfreak/UG/02 Installation/01 Usage Precautions": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/01 Usage Precautions"
+    ],
+    "Microfreak/UG/02 Installation/02 Warning": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/02 Warning"
+    ],
+    "Microfreak/UG/02 Installation/03 Notice": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/03 Notice"
+    ],
+    "Microfreak/UG/02 Installation/04 Precautions": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/04 Precautions"
+    ],
+    "Microfreak/UG/02 Installation/05 Register Instrument": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/05 Register Instrument"
+    ],
+    "Microfreak/UG/02 Installation/06 Connecting to the World": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/06 Connecting to the World"
+    ],
+    "Microfreak/UG/02 Installation/07 Latest Firmware": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/07 Latest Firmware"
+    ],
+    "Microfreak/UG/03 Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector"
+    ],
+    "Microfreak/UG/03 Overview/03 Signal Flow": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/03 Signal Flow"
+    ],
+    "Microfreak/UG/04 Presets": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets"
+    ],
+    "Microfreak/UG/04 Presets/01 Load Presets": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/01 Load Presets"
+    ],
+    "Microfreak/UG/04 Presets/02 Save Presets": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/02 Save Presets"
+    ],
+    "Microfreak/UG/04 Presets/03 Preset Config": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/03 Preset Config"
+    ],
+    "Microfreak/UG/04 Presets/04 Panel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/04 Panel"
+    ],
+    "Microfreak/UG/04 Presets/05 Digital Control": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/05 Digital Control"
+    ],
+    "Microfreak/UG/05 Connections": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections"
+    ],
+    "Microfreak/UG/05 Connections/01 Control Signals": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/01 Control Signals"
+    ],
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/02 Matrix and Encoder"
+    ],
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations"
+    ],
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations"
+    ],
+    "Microfreak/UG/05 Connections/03 Freaky Ideas": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/03 Freaky Ideas"
+    ],
+    "Microfreak/UG/06 Dig Osc": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc"
+    ],
+    "Microfreak/UG/06 Dig Osc/01 as Soundgen": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/01 as Soundgen"
+    ],
+    "Microfreak/UG/06 Dig Osc/02 Param Controls": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/02 Param Controls"
+    ],
+    "Microfreak/UG/06 Dig Osc/02 Param Controls/01 Knob Speed": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/02 Param Controls/01 Knob Speed"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/09 Formant": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/09 Formant"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/10 Chords": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/10 Chords"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/11 Speech": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/11 Speech"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/12 Modal": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/12 Modal"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/13 Noise": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/13 Noise"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/14 BASS": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/14 BASS"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/16 HARM": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/16 HARM"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/18 Sample"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder"
+    ],
+    "Microfreak/UG/07 Filter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound/02 Band Pass Filter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound/02 Band Pass Filter"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency"
+    ],
+    "Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance"
+    ],
+    "Microfreak/UG/07 Filter/02 Animating Sound": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/02 Animating Sound"
+    ],
+    "Microfreak/UG/07 Filter/02 Animating Sound/01 Cutoff Modulation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/02 Animating Sound/01 Cutoff Modulation"
+    ],
+    "Microfreak/UG/07 Filter/02 Animating Sound/02 Emphasis Resonance Modulation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/02 Animating Sound/02 Emphasis Resonance Modulation"
+    ],
+    "Microfreak/UG/08 LFO": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO"
+    ],
+    "Microfreak/UG/08 LFO/01 LFO Shape": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO/01 LFO Shape"
+    ],
+    "Microfreak/UG/08 LFO/02 LFO Rate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO/02 LFO Rate"
+    ],
+    "Microfreak/UG/08 LFO/02 LFO Rate/01 LFO Retriggering": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO/02 LFO Rate/01 LFO Retriggering"
+    ],
+    "Microfreak/UG/08 LFO/03 Freaky Tips": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO/03 Freaky Tips"
+    ],
+    "Microfreak/UG/09 Envelope Gen": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen"
+    ],
+    "Microfreak/UG/09 Envelope Gen/01 What an Envelope Does": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/01 What an Envelope Does"
+    ],
+    "Microfreak/UG/09 Envelope Gen/02 Gates and Triggers": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/02 Gates and Triggers"
+    ],
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/03 Envelope Stages"
+    ],
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/01 Attack": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/01 Attack"
+    ],
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/02 Decay Release": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/02 Decay Release"
+    ],
+    "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/03 Sustain": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/03 Envelope Stages/03 Sustain"
+    ],
+    "Microfreak/UG/09 Envelope Gen/04 Filter Amount": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/04 Filter Amount"
+    ],
+    "Microfreak/UG/09 Envelope Gen/05 Amp Mod Button": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/05 Amp Mod Button"
+    ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope"
+    ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/01 Cycling Envelope Stages": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/01 Cycling Envelope Stages"
+    ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes"
+    ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options"
+    ],
+    "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions"
+    ],
+    "Microfreak/UG/10 Keyboard": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard"
+    ],
+    "Microfreak/UG/10 Keyboard/01 Gates and Triggers": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/01 Gates and Triggers"
+    ],
+    "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness"
+    ],
+    "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness/01 Using Responsiveness": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness/01 Using Responsiveness"
+    ],
+    "Microfreak/UG/10 Keyboard/03 Glide": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/03 Glide"
+    ],
+    "Microfreak/UG/10 Keyboard/04 Octave Buttons": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/04 Octave Buttons"
+    ],
+    "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial"
+    ],
+    "Microfreak/UG/11 Icon Strip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip"
+    ],
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/01 Key Hold Button"
+    ],
+    "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator"
+    ],
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/03 Touch Strip"
+    ],
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice"
+    ],
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend"
+    ],
+    "Microfreak/UG/12 Arpeggiator": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator"
+    ],
+    "Microfreak/UG/12 Arpeggiator/01 Using Patterns": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/01 Using Patterns"
+    ],
+    "Microfreak/UG/12 Arpeggiator/01 Using Patterns/01 Creating Pattern Variations": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/01 Using Patterns/01 Creating Pattern Variations"
+    ],
+    "Microfreak/UG/12 Arpeggiator/02 Gates and Triggers": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/02 Gates and Triggers"
+    ],
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate"
+    ],
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync"
+    ],
+    "Microfreak/UG/12 Arpeggiator/04 Making it Swing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/04 Making it Swing"
+    ],
+    "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range"
+    ],
+    "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq"
+    ],
+    "Microfreak/UG/12 Arpeggiator/07 Arp Fun": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/07 Arp Fun"
+    ],
+    "Microfreak/UG/12 Arpeggiator/07 Arp Fun/01 Spicing up Arpeggios": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/07 Arp Fun/01 Spicing up Arpeggios"
+    ],
+    "Microfreak/UG/13 Sequencer": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/01 Select & Play": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/01 Select & Play"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/02 Keyboard": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/02 Keyboard"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/02 Edit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record/02 Edit"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/03 Real Time": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record/03 Real Time"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/04 Copy": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record/04 Copy"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/03 Record/05 Arp": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/03 Record/05 Arp"
+    ],
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/02 Mod Tracks"
+    ],
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time"
+    ],
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time"
+    ],
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/03 Smoothing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/02 Mod Tracks/03 Smoothing"
+    ],
+    "Microfreak/UG/13 Sequencer/03 Fun": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/03 Fun"
+    ],
+    "Microfreak/UG/13 Sequencer/03 Fun/01 Hidden Feature": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/03 Fun/01 Hidden Feature"
+    ],
+    "Microfreak/UG/13 Sequencer/03 Fun/02 Mix Pitches": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/03 Fun/02 Mix Pitches"
+    ],
+    "Microfreak/UG/13 Sequencer/03 Fun/03 Hoketus": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/03 Fun/03 Hoketus"
+    ],
+    "Microfreak/UG/14 Config": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config"
+    ],
+    "Microfreak/UG/14 Config/01 Utility & MCC": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/01 Utility & MCC"
+    ],
+    "Microfreak/UG/14 Config/01 Utility & MCC/01 Preset": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/01 Utility & MCC/01 Preset"
+    ],
+    "Microfreak/UG/14 Config/01 Utility & MCC/02 Global": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/01 Utility & MCC/02 Global"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting"
+    ],
+    "Microfreak/UG/15 Using Scales": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales"
+    ],
+    "Microfreak/UG/15 Using Scales/01 Scale Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales/01 Scale Settings"
+    ],
+    "Microfreak/UG/15 Using Scales/02 The Scale Root": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales/02 The Scale Root"
+    ],
+    "Microfreak/UG/16 Paraphonic Chord Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/16 Paraphonic Chord Mode"
+    ],
+    "Microfreak/UG/16 Paraphonic Chord Mode/01 Unison": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/16 Paraphonic Chord Mode/01 Unison"
+    ],
+    "Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults"
+    ],
+    "Microfreak/UG/16 Paraphonic Chord Mode/03 Spread Modulation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/16 Paraphonic Chord Mode/03 Spread Modulation"
+    ],
+    "Microfreak/UG/17 Ext Gear": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear"
+    ],
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/01 Computer Connection"
+    ],
+    "Microfreak/UG/17 Ext Gear/02 CV Gate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/02 CV Gate"
+    ],
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure"
+    ],
+    "Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations"
+    ],
+    "Microfreak/UG/17 Ext Gear/04 Control External Gear": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/04 Control External Gear"
+    ],
+    "Microfreak/UG/17 Ext Gear/05 Local Control": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/05 Local Control"
+    ],
+    "Microfreak/UG/17 Ext Gear/06 MIDI Channels": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/06 MIDI Channels"
+    ],
+    "Microfreak/UG/17 Ext Gear/06 MIDI Channels/01 DAW Configuration": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/06 MIDI Channels/01 DAW Configuration"
+    ],
+    "Microfreak/UG/17 Ext Gear/07 MIDI Tutorial MINI V": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/07 MIDI Tutorial MINI V"
+    ],
+    "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack"
+    ],
+    "Microfreak/UG/17 Ext Gear/09 MIDI CC Control": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/09 MIDI CC Control"
+    ],
+    "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC"
+    ],
+    "Microfreak/UG/17 Ext Gear/11 MIDI CC Values": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/11 MIDI CC Values"
+    ],
+    "Microfreak/UG/18 Appendix A Speech Osc": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/18 Appendix A Speech Osc"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/01 Intro": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/01 Intro"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/01 Resolution": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/01 Resolution"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/02 Voice": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/02 Voice"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/03 Connect Mic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/03 Connect Mic"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/04 Headset Mic": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/04 Headset Mic"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/05 Vocoder Preset": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/05 Vocoder Preset"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/06 Play & Sing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/06 Play & Sing"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/07 Config": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/07 Config"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/07 Config/01 Preset Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/07 Config/01 Preset Settings"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/01 Mic Levels": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/01 Mic Levels"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/02 Gain": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/02 Gain"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/01 Noise Gate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/01 Noise Gate"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 Mic Detection": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 Mic Detection"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/09 Package": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/09 Package"
+    ],
+    "Microfreak/UG/20 Appendix C - Cheat Sheet": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/20 Appendix C - Cheat Sheet"
+    ],
+    "Microfreak/UG/21 Appendix D - CC Values": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/21 Appendix D - CC Values"
+    ],
+    "Microfreak/UG/21 Appendix D - CC Values/01 What are CC Values": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/21 Appendix D - CC Values/01 What are CC Values"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/01 FCC": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/01 FCC"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/02 Canada": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/02 Canada"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/03 CE": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/03 CE"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/04 UKCA": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/04 UKCA"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/05 RoHS": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/05 RoHS"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/06 WEEE": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/06 WEEE"
+    ],
+    "Microfreak/UG/23 Software License Agreement": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement"
+    ],
+    "Microfreak/UG/23 Software License Agreement/01 Software Ownership": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/01 Software Ownership"
+    ],
+    "Microfreak/UG/23 Software License Agreement/02 Grant of License": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/02 Grant of License"
+    ],
+    "Microfreak/UG/23 Software License Agreement/03 Activation of Software": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/03 Activation of Software"
+    ],
+    "Microfreak/UG/23 Software License Agreement/04 Support, Upgrades, and Updates": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/04 Support, Upgrades, and Updates"
+    ],
+    "Microfreak/UG/23 Software License Agreement/05 No Unbundling": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/05 No Unbundling"
+    ],
+    "Microfreak/UG/23 Software License Agreement/06 Assignment of Rights": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/06 Assignment of Rights"
+    ],
+    "Microfreak/UG/23 Software License Agreement/07 Upgrades and Updates": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/07 Upgrades and Updates"
+    ],
+    "Microfreak/UG/23 Software License Agreement/08 Limited Warranty": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/08 Limited Warranty"
+    ],
+    "Microfreak/UG/23 Software License Agreement/09 Remedies": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/09 Remedies"
+    ],
+    "Microfreak/UG/23 Software License Agreement/10 No Other Warranties": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/10 No Other Warranties"
+    ],
+    "Microfreak/UG/23 Software License Agreement/11 Consequential Damages": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/23 Software License Agreement/11 Consequential Damages"
     ]
   },
   "tasks": {

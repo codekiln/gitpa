@@ -1,0 +1,14 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
+next:: [[Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F16%20Paraphonic%20Chord%20Mode%2F01%20Unison
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode___01%20Unison.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # 16.1. Unison
+	- The MicroFreak has four oscillators. In standard Paraphonic mode, play them as chords on the keyboard.
+	- Hold Shift and press the Paraphonic button to enter Unison mode. The button blinks. Keep the Paraphonic button held, release Shift, and turn the Preset encoder to set oscillator detune (unison spread).
+	- All four oscillators play together at slightly different pitches, creating a thicker sound.
+	- > [[Note/Info]] Press Hold to free both hands.
+	- The display shows spread from 0.001 to 12.000, with 12.000 equal to an octave.
+	- Press the Paraphonic button to turn off Unison mode.
