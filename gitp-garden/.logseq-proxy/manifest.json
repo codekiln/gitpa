@@ -54,7 +54,449 @@
     "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
+    "Launchpad": {},
+    "Launchpad/UG": {
+      "logseq-entity": "[[Logseq/Entity/Book]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/01 Introduction": {},
+    "Launchpad/UG/01 Introduction/01 Key Features": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/01 Introduction/02 In the Box": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start/01 Mac": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start/02 Windows": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/02 Launchpad Intro": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/03 Ableton Live": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/04 Other Software": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/05 Standalone": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/02 Getting Up and Running/06 Help": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/03 Hardware Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/04 Launchpad Pro Interface": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/04 Launchpad Pro Interface/01 Modes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/04 Launchpad Pro Interface/02 Shift": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/05 Session Mode/01 Ableton Live Session View": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/02 Session Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/01 Select a Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/02 Clear a Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/03 Duplicate a Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/04 Double Clip Length": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/05 Quantise a Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/06 Record Quantise": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/07 Fixed Length": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/01 Record Arm": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/02 Mute": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/03 Solo": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/04 Volume": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/05 Pan": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/06 Send": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/07 Device": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/08 Stop Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/04 Track Controls/09 Fader Orientation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/05 Record Arm and Recording": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/06 Production Controls": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/05 Session Mode/06 Production Controls/01 Undo": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/06 Production Controls/02 Redo": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/06 Production Controls/03 Tap Tempo": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/06 Production Controls/04 Click": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/05 Session Mode/07 Momentary View Switching": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/06 Note Mode/01 Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode/02 Chromatic Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode/03 Scale Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode/04 Note Mode Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode/05 Overlap": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/06 Note Mode/06 Drum Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/07 Chord Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/07 Chord Mode/01 Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/07 Chord Mode/02 Triads": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/07 Chord Mode/03 Note Area": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/07 Chord Mode/04 Save and Play Chords": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/07 Chord Mode/05 Sustain Control": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/08 Custom Modes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/08 Custom Modes/01 Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/08 Custom Modes/02 Default Custom Modes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/08 Custom Modes/03 Master MIDI Channel": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/09 Sequencer/01 Overview": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/02 Assign Notes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/03 Clear Steps": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/04 Duplicate Steps": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/05 Playback": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/06 Record": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/08 Tracks": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/02 Steps View/09 Ableton Live": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View/01 Chain": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View/02 Queue": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View/03 Clear": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View/04 Duplicate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/03 Patterns View/05 Instant Change": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes/01 Assign": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes/02 Chain": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes/03 Queue": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes/04 Clear": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/04 Scenes/05 Duplicate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/02 Direction": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/06 Velocity": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/07 Probability": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/07 Probability/01 Edit": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/07 Probability/02 Print": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/08 Mutation": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/08 Mutation/01 Edit": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/08 Mutation/02 Print": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/09 Micro Steps": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/01 Edit": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/02 Clear": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/03 Duplicate": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/10 Tempo and Swing": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/11 Print to Clip": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/12 Projects": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/12 Projects/01 Save": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/12 Projects/02 Backup": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings/01 Access": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings/02 Track Types": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/10 Setup": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/10 Setup/01 Setup Menu": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/02 LED Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/03 Velocity Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/04 Aftertouch Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/05 MIDI Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/06 Fader Settings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/07 Live and Programmer Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/10 Setup/08 Bootloader Menu": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/11 Appendix": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/01 Custom 1": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/02 Custom 2": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/04 Custom 4": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/05 Custom 5": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/06 Custom 6": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/07 Custom 7": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/08 Custom 8": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/09 Programmer Mode": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/01 Five Finger": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/02 Four Finger": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/03 Sequential": {
+      "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Logseq": {},
+    "Logseq/Entity": {},
     "Logseq/Entity/Asset/B2": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book/Section": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book/Section/Level 1": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book/Section/Level 2": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book/Section/Level 3": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Book/Section/Level 4": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
     "Logseq/Entity/Definition": {
@@ -88,7 +530,19 @@
       "task-files": "{\"mise-tasks/logseq/entity/proxy/page/sync\":\"mise-tasks/logseq/entity/proxy/page/sync\",\"mise-tasks/logseq/entity/proxy/page/lib/core.py\":\"mise-tasks/logseq/entity/proxy/page/lib/core.py\",\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\":\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\"}",
       "task-name": "logseq:entity:proxy:page:sync",
       "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
-    }
+    },
+    "Logseq/Entity/Series": {
+      "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Frontmatter": {},
+    "Logseq/Frontmatter/alias": {},
+    "Logseq/Frontmatter/date-created": {},
+    "Logseq/Frontmatter/github-link": {},
+    "Logseq/Frontmatter/logseq-created-time-year": {},
+    "Logseq/Frontmatter/logseq-entity": {},
+    "Logseq/Frontmatter/see-also": {},
+    "Logseq/Frontmatter/tags": {},
+    "Logseq/Frontmatter/via": {}
   },
   "files": {
     "mise-tasks/logseq/entity/proxy/page/docs/index.html": {
@@ -237,6 +691,11 @@
       "page": "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
+    "github.com/codekiln/logseq-encode-garden::.::Launchpad": {
+      "files": [],
+      "page": "Launchpad",
+      "source_graph": "."
+    },
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset/B2": {
       "files": [],
       "page": "Logseq/Entity/Asset/B2",
@@ -372,10 +831,760 @@
       ".",
       "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3"
     ],
+    "Launchpad": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad"
+    ],
+    "Launchpad/UG": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG"
+    ],
+    "Launchpad/UG/01 Introduction": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/01 Introduction"
+    ],
+    "Launchpad/UG/01 Introduction/01 Key Features": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/01 Introduction/01 Key Features"
+    ],
+    "Launchpad/UG/01 Introduction/02 In the Box": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/01 Introduction/02 In the Box"
+    ],
+    "Launchpad/UG/02 Getting Up and Running": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/01 Easy Start"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start/01 Mac": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/01 Easy Start/01 Mac"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/01 Easy Start/02 Windows": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/01 Easy Start/02 Windows"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/02 Launchpad Intro": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/02 Launchpad Intro"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/03 Ableton Live": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/03 Ableton Live"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/04 Other Software": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/04 Other Software"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/05 Standalone": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/05 Standalone"
+    ],
+    "Launchpad/UG/02 Getting Up and Running/06 Help": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/02 Getting Up and Running/06 Help"
+    ],
+    "Launchpad/UG/03 Hardware Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/03 Hardware Overview"
+    ],
+    "Launchpad/UG/04 Launchpad Pro Interface": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/04 Launchpad Pro Interface"
+    ],
+    "Launchpad/UG/04 Launchpad Pro Interface/01 Modes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/04 Launchpad Pro Interface/01 Modes"
+    ],
+    "Launchpad/UG/04 Launchpad Pro Interface/02 Shift": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/04 Launchpad Pro Interface/02 Shift"
+    ],
+    "Launchpad/UG/05 Session Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode"
+    ],
+    "Launchpad/UG/05 Session Mode/01 Ableton Live Session View": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/01 Ableton Live Session View"
+    ],
+    "Launchpad/UG/05 Session Mode/02 Session Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/02 Session Overview"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/01 Select a Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/01 Select a Clip"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/02 Clear a Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/02 Clear a Clip"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/03 Duplicate a Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/03 Duplicate a Clip"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/04 Double Clip Length": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/04 Double Clip Length"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/05 Quantise a Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/05 Quantise a Clip"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/06 Record Quantise": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/06 Record Quantise"
+    ],
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/07 Fixed Length": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/03 Clip Functions/07 Fixed Length"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/01 Record Arm": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/01 Record Arm"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/02 Mute": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/02 Mute"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/03 Solo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/03 Solo"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/04 Volume": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/04 Volume"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/05 Pan": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/05 Pan"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/06 Send": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/06 Send"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/07 Device": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/07 Device"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/08 Stop Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/08 Stop Clip"
+    ],
+    "Launchpad/UG/05 Session Mode/04 Track Controls/09 Fader Orientation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/04 Track Controls/09 Fader Orientation"
+    ],
+    "Launchpad/UG/05 Session Mode/05 Record Arm and Recording": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/05 Record Arm and Recording"
+    ],
+    "Launchpad/UG/05 Session Mode/06 Production Controls": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/06 Production Controls"
+    ],
+    "Launchpad/UG/05 Session Mode/06 Production Controls/01 Undo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/06 Production Controls/01 Undo"
+    ],
+    "Launchpad/UG/05 Session Mode/06 Production Controls/02 Redo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/06 Production Controls/02 Redo"
+    ],
+    "Launchpad/UG/05 Session Mode/06 Production Controls/03 Tap Tempo": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/06 Production Controls/03 Tap Tempo"
+    ],
+    "Launchpad/UG/05 Session Mode/06 Production Controls/04 Click": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/06 Production Controls/04 Click"
+    ],
+    "Launchpad/UG/05 Session Mode/07 Momentary View Switching": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/05 Session Mode/07 Momentary View Switching"
+    ],
+    "Launchpad/UG/06 Note Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode"
+    ],
+    "Launchpad/UG/06 Note Mode/01 Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/01 Overview"
+    ],
+    "Launchpad/UG/06 Note Mode/02 Chromatic Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/02 Chromatic Mode"
+    ],
+    "Launchpad/UG/06 Note Mode/03 Scale Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/03 Scale Mode"
+    ],
+    "Launchpad/UG/06 Note Mode/04 Note Mode Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/04 Note Mode Settings"
+    ],
+    "Launchpad/UG/06 Note Mode/05 Overlap": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/05 Overlap"
+    ],
+    "Launchpad/UG/06 Note Mode/06 Drum Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/06 Note Mode/06 Drum Mode"
+    ],
+    "Launchpad/UG/07 Chord Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode"
+    ],
+    "Launchpad/UG/07 Chord Mode/01 Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode/01 Overview"
+    ],
+    "Launchpad/UG/07 Chord Mode/02 Triads": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode/02 Triads"
+    ],
+    "Launchpad/UG/07 Chord Mode/03 Note Area": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode/03 Note Area"
+    ],
+    "Launchpad/UG/07 Chord Mode/04 Save and Play Chords": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode/04 Save and Play Chords"
+    ],
+    "Launchpad/UG/07 Chord Mode/05 Sustain Control": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/07 Chord Mode/05 Sustain Control"
+    ],
+    "Launchpad/UG/08 Custom Modes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes"
+    ],
+    "Launchpad/UG/08 Custom Modes/01 Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes/01 Overview"
+    ],
+    "Launchpad/UG/08 Custom Modes/02 Default Custom Modes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes/02 Default Custom Modes"
+    ],
+    "Launchpad/UG/08 Custom Modes/03 Master MIDI Channel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes/03 Master MIDI Channel"
+    ],
+    "Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode"
+    ],
+    "Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI"
+    ],
+    "Launchpad/UG/09 Sequencer": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer"
+    ],
+    "Launchpad/UG/09 Sequencer/01 Overview": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/01 Overview"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/02 Assign Notes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/02 Assign Notes"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/03 Clear Steps": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/03 Clear Steps"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/04 Duplicate Steps": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/04 Duplicate Steps"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/05 Playback": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/05 Playback"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/06 Record": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/06 Record"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/08 Tracks": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/08 Tracks"
+    ],
+    "Launchpad/UG/09 Sequencer/02 Steps View/09 Ableton Live": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/02 Steps View/09 Ableton Live"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View/01 Chain": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View/01 Chain"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View/02 Queue": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View/02 Queue"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View/03 Clear": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View/03 Clear"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View/04 Duplicate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View/04 Duplicate"
+    ],
+    "Launchpad/UG/09 Sequencer/03 Patterns View/05 Instant Change": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/03 Patterns View/05 Instant Change"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes/01 Assign": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes/01 Assign"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes/02 Chain": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes/02 Chain"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes/03 Queue": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes/03 Queue"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes/04 Clear": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes/04 Clear"
+    ],
+    "Launchpad/UG/09 Sequencer/04 Scenes/05 Duplicate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/04 Scenes/05 Duplicate"
+    ],
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/05 Pattern Settings"
+    ],
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate"
+    ],
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/02 Direction": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/05 Pattern Settings/02 Direction"
+    ],
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End"
+    ],
+    "Launchpad/UG/09 Sequencer/06 Velocity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/06 Velocity"
+    ],
+    "Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity"
+    ],
+    "Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record"
+    ],
+    "Launchpad/UG/09 Sequencer/07 Probability": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/07 Probability"
+    ],
+    "Launchpad/UG/09 Sequencer/07 Probability/01 Edit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/07 Probability/01 Edit"
+    ],
+    "Launchpad/UG/09 Sequencer/07 Probability/02 Print": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/07 Probability/02 Print"
+    ],
+    "Launchpad/UG/09 Sequencer/08 Mutation": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/08 Mutation"
+    ],
+    "Launchpad/UG/09 Sequencer/08 Mutation/01 Edit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/08 Mutation/01 Edit"
+    ],
+    "Launchpad/UG/09 Sequencer/08 Mutation/02 Print": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/08 Mutation/02 Print"
+    ],
+    "Launchpad/UG/09 Sequencer/09 Micro Steps": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/09 Micro Steps"
+    ],
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/01 Edit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/09 Micro Steps/01 Edit"
+    ],
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/02 Clear": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/09 Micro Steps/02 Clear"
+    ],
+    "Launchpad/UG/09 Sequencer/09 Micro Steps/03 Duplicate": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/09 Micro Steps/03 Duplicate"
+    ],
+    "Launchpad/UG/09 Sequencer/10 Tempo and Swing": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/10 Tempo and Swing"
+    ],
+    "Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit"
+    ],
+    "Launchpad/UG/09 Sequencer/11 Print to Clip": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/11 Print to Clip"
+    ],
+    "Launchpad/UG/09 Sequencer/12 Projects": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/12 Projects"
+    ],
+    "Launchpad/UG/09 Sequencer/12 Projects/01 Save": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/12 Projects/01 Save"
+    ],
+    "Launchpad/UG/09 Sequencer/12 Projects/02 Backup": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/12 Projects/02 Backup"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings/01 Access": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings/01 Access"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings/02 Track Types": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings/02 Track Types"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale"
+    ],
+    "Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel"
+    ],
+    "Launchpad/UG/10 Setup": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup"
+    ],
+    "Launchpad/UG/10 Setup/01 Setup Menu": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/01 Setup Menu"
+    ],
+    "Launchpad/UG/10 Setup/02 LED Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/02 LED Settings"
+    ],
+    "Launchpad/UG/10 Setup/03 Velocity Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/03 Velocity Settings"
+    ],
+    "Launchpad/UG/10 Setup/04 Aftertouch Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/04 Aftertouch Settings"
+    ],
+    "Launchpad/UG/10 Setup/05 MIDI Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/05 MIDI Settings"
+    ],
+    "Launchpad/UG/10 Setup/06 Fader Settings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/06 Fader Settings"
+    ],
+    "Launchpad/UG/10 Setup/07 Live and Programmer Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/07 Live and Programmer Mode"
+    ],
+    "Launchpad/UG/10 Setup/08 Bootloader Menu": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/10 Setup/08 Bootloader Menu"
+    ],
+    "Launchpad/UG/11 Appendix": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/01 Custom 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/01 Custom 1"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/02 Custom 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/02 Custom 2"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/04 Custom 4": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/04 Custom 4"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/05 Custom 5": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/05 Custom 5"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/06 Custom 6": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/06 Custom 6"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/07 Custom 7": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/07 Custom 7"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/08 Custom 8": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/08 Custom 8"
+    ],
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/09 Programmer Mode": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/09 Programmer Mode"
+    ],
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/02 Overlap Layouts"
+    ],
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/01 Five Finger": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/02 Overlap Layouts/01 Five Finger"
+    ],
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/02 Four Finger": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/02 Overlap Layouts/02 Four Finger"
+    ],
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/03 Sequential": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Launchpad/UG/11 Appendix/02 Overlap Layouts/03 Sequential"
+    ],
+    "Logseq": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq"
+    ],
+    "Logseq/Entity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity"
+    ],
     "Logseq/Entity/Asset/B2": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Logseq/Entity/Asset/B2"
+    ],
+    "Logseq/Entity/Book": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book"
+    ],
+    "Logseq/Entity/Book/Section": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/Section"
+    ],
+    "Logseq/Entity/Book/Section/Level 1": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/Section/Level 1"
+    ],
+    "Logseq/Entity/Book/Section/Level 2": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/Section/Level 2"
+    ],
+    "Logseq/Entity/Book/Section/Level 3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/Section/Level 3"
+    ],
+    "Logseq/Entity/Book/Section/Level 4": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Book/Section/Level 4"
     ],
     "Logseq/Entity/Definition": [
       "github.com/codekiln/logseq-encode-garden",
@@ -406,6 +1615,56 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Logseq/Entity/Proxy/Page/mise/Task/sync"
+    ],
+    "Logseq/Entity/Series": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Series"
+    ],
+    "Logseq/Frontmatter": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter"
+    ],
+    "Logseq/Frontmatter/alias": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/alias"
+    ],
+    "Logseq/Frontmatter/date-created": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/date-created"
+    ],
+    "Logseq/Frontmatter/github-link": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/github-link"
+    ],
+    "Logseq/Frontmatter/logseq-created-time-year": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/logseq-created-time-year"
+    ],
+    "Logseq/Frontmatter/logseq-entity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/logseq-entity"
+    ],
+    "Logseq/Frontmatter/see-also": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/see-also"
+    ],
+    "Logseq/Frontmatter/tags": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/tags"
+    ],
+    "Logseq/Frontmatter/via": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Frontmatter/via"
     ]
   },
   "tasks": {
