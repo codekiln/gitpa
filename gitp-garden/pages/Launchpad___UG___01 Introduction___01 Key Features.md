@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/01 Introduction]]
 next:: [[Launchpad/UG/01 Introduction/02 In the Box]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F01%20Introduction%2F01%20Key%20Features
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___01%20Introduction___01%20Key%20Features.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___01%20Introduction___01%20Key%20Features.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 1.1 Launchpad Pro Key Features

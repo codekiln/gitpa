@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/11 Appendix]]
 next:: [[Launchpad/UG/11 Appendix/02 Overlap Layouts]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F11%20Appendix%2F01%20Default%20MIDI%20Mappings
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___11%20Appendix___01%20Default%20MIDI%20Mappings.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___11%20Appendix___01%20Default%20MIDI%20Mappings.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # A.1 Default MIDI Mappings

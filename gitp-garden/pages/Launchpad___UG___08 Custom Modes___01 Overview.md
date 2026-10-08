@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/08 Custom Modes]]
 next:: [[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F08%20Custom%20Modes%2F01%20Overview
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___08%20Custom%20Modes___01%20Overview.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___08%20Custom%20Modes___01%20Overview.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 8.1 Overview

@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/04 Launchpad Pro Interface]]
 next:: [[Launchpad/UG/06 Note Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F05%20Session%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___05%20Session%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___05%20Session%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 5. Session Mode

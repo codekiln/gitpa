@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/09 Sequencer/07 Probability]]
 next:: [[Launchpad/UG/09 Sequencer/07 Probability/02 Print]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F07%20Probability%2F01%20Edit
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 9.7.1 Editing Step Probability
@@ -12,4 +12,4 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 	- Every note on a step shares one probability setting, but each note is evaluated independently. At 50%, a two-note step may play both notes, one note, or neither.
 	- Assigned or recorded notes default to 100%. Clearing a step, Pattern, or Project also resets its probability to 100%.
 	- Probability view
-		- ![01 Probability view](../assets/Launchpad___UG___09-Sequencer___07-Probability___01-Edit___01-Probability-View.png)
+		- ![01 Probability view](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit___Asset___01-Probability-view.png)

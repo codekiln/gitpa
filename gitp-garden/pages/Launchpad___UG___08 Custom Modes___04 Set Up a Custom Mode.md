@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/08 Custom Modes]]
 prev:: [[Launchpad/UG/08 Custom Modes/03 Master MIDI Channel]]
 next:: [[Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F08%20Custom%20Modes%2F04%20Set%20Up%20a%20Custom%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___08%20Custom%20Modes___04%20Set%20Up%20a%20Custom%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___08%20Custom%20Modes___04%20Set%20Up%20a%20Custom%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 8.4 Setting Up a Custom Mode
