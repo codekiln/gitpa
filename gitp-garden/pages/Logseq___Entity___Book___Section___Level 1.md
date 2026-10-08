@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FBook%2FSection%2FLevel%201
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Entity___Book___Section___Level%201.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Entity___Book___Section___Level%201.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Book Section Level 1
 	- In this garden, **Book Section Level 1** pages model the topmost numbered parts of a book or manual.

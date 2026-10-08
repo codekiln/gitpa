@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/03 Hardware Overview]]
 next:: [[Launchpad/UG/05 Session Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F04%20Launchpad%20Pro%20Interface
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___04%20Launchpad%20Pro%20Interface.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___04%20Launchpad%20Pro%20Interface.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 4. Launchpad Pro Interface

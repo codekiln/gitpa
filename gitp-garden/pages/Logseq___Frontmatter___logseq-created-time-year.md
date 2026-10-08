@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Flogseq-created-time-year
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Frontmatter___logseq-created-time-year.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Frontmatter___logseq-created-time-year.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 ## `logseq-created-time-year::` - links an entity to its creation year, decade, or century
 

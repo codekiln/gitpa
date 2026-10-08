@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/07 Chord Mode]]
 prev:: [[Launchpad/UG/07 Chord Mode/03 Note Area]]
 next:: [[Launchpad/UG/07 Chord Mode/05 Sustain Control]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F07%20Chord%20Mode%2F04%20Save%20and%20Play%20Chords
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___07%20Chord%20Mode___04%20Save%20and%20Play%20Chords.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___07%20Chord%20Mode___04%20Save%20and%20Play%20Chords.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 7.4 Saving Chords & Playing Them Back

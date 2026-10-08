@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/10 Setup]]
 next:: [[Launchpad/UG/10 Setup/02 LED Settings]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F10%20Setup%2F01%20Setup%20Menu
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___10%20Setup___01%20Setup%20Menu.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___10%20Setup___01%20Setup%20Menu.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 10.1 Setup Menu

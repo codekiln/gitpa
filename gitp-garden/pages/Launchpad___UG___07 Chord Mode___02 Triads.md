@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/07 Chord Mode]]
 prev:: [[Launchpad/UG/07 Chord Mode/01 Overview]]
 next:: [[Launchpad/UG/07 Chord Mode/03 Note Area]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F07%20Chord%20Mode%2F02%20Triads
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___07%20Chord%20Mode___02%20Triads.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___07%20Chord%20Mode___02%20Triads.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 7.2 Triads

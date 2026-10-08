@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/09 Sequencer/05 Pattern Settings]]
 prev:: [[Launchpad/UG/09 Sequencer/05 Pattern Settings/02 Direction]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F05%20Pattern%20Settings%2F03%20Start%20End
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___09%20Sequencer___05%20Pattern%20Settings___03%20Start%20End.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___09%20Sequencer___05%20Pattern%20Settings___03%20Start%20End.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 9.5.3 Pattern start and end points

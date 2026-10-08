@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FBook%2FSection%2FLevel%202
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Entity___Book___Section___Level%202.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Entity___Book___Section___Level%202.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Book Section Level 2
 	- In this garden, **Book Section Level 2** pages model sections directly beneath a book's topmost part.

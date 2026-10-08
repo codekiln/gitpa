@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/06 Note Mode]]
 prev:: [[Launchpad/UG/06 Note Mode/04 Note Mode Settings]]
 next:: [[Launchpad/UG/06 Note Mode/06 Drum Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F06%20Note%20Mode%2F05%20Overlap
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___06%20Note%20Mode___05%20Overlap.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___06%20Note%20Mode___05%20Overlap.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 6.5 Overlap

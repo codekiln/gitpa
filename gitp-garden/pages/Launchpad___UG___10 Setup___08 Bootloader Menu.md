@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/10 Setup]]
 prev:: [[Launchpad/UG/10 Setup/07 Live and Programmer Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F10%20Setup%2F08%20Bootloader%20Menu
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Launchpad___UG___10%20Setup___08%20Bootloader%20Menu.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___10%20Setup___08%20Bootloader%20Menu.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 10.8 Bootloader Menu
@@ -13,4 +13,4 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 	- Set a different Device ID on each Launchpad Pro when using several with Live. Each unit then has an independent Session View outline.
 	- MSD Mode controls whether the device appears as a mass storage drive. It is on by default; the bright pad means enabled and the dim pad means disabled. The LAUNCHPAD drive contains a link to the Easy Start Tool.
 	- 10.8.A — Bootloader menu
-		- ![Bootloader controls](../assets/Launchpad___UG___10-Setup___08-Bootloader-Menu___01-Bootloader-Menu.png)
+		- ![Bootloader controls](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___10%20Setup___08%20Bootloader%20Menu___Asset___Bootloader-controls.png)
