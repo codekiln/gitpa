@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 4]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc]]
 next:: [[Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F19%20Appendix%20B%20Vocoder%2F02%20How%20It%20Works%2F03%20Vocoder%20Osc%2F01%20Timbre
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___02%20How%20It%20Works___03%20Vocoder%20Osc___01%20Timbre.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___02%20How%20It%20Works___03%20Vocoder%20Osc___01%20Timbre.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 19.2.3.1. Timbre Encoder
 	- **Timbre** selects the frequency range used for analysis and resynthesis. Vowel formants peak at different frequencies: for example, a “u” may have peaks near 330 and 1260 Hz, with variation across voices.

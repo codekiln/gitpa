@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/04 Presets]]
 prev:: [[Microfreak/UG/04 Presets/04 Panel]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F04%20Presets%2F05%20Digital%20Control
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___04%20Presets___05%20Digital%20Control.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___04%20Presets___05%20Digital%20Control.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 04.05 Understanding Digitally-Controlled Analog
 	- Every MicroFreak module, including the analog filter, is controlled digitally. This combines the warmth and direct control of analog sound with the ability to save and recall presets and settings.

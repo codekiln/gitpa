@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/04 Presets]]
 prev:: [[Microfreak/UG/04 Presets/02 Save Presets]]
 next:: [[Microfreak/UG/04 Presets/04 Panel]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F04%20Presets%2F03%20Preset%20Config
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___04%20Presets___03%20Preset%20Config.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___04%20Presets___03%20Preset%20Config.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 04.03 Tweaking the Preset Configurations
 	- Utility contains settings that change how the current preset behaves. Each preset saves its own settings, so presets can differ in voice mode, pressure response, sequence length, and other behavior.

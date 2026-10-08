@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row]]
 prev:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select]]
 next:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F01%20Front%20Panel%2F01%20Top%20Row%2F04%20Display%20Preset
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___04%20Display%20Preset.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___04%20Display%20Preset.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.01.01.04 The Display and the Preset encoder
 	- The OLED display shows information about knobs and buttons. Turn the Preset encoder beside it to browse presets; the display shows each preset's name and category.

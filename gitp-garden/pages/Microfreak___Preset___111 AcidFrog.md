@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/110 F-Back]]
 next:: [[Microfreak/Preset/112 Anlg]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F111%20AcidFrog
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___111%20AcidFrog.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___111%20AcidFrog.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

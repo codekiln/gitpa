@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/19 Appendix B Vocoder/02 How It Works]]
 prev:: [[Microfreak/UG/19 Appendix B Vocoder/02 How It Works/02 Voice]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F19%20Appendix%20B%20Vocoder%2F02%20How%20It%20Works%2F03%20Vocoder%20Osc
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___02%20How%20It%20Works___03%20Vocoder%20Osc.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___02%20How%20It%20Works___03%20Vocoder%20Osc.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 19.2.3. The Vocoder Oscillator
 	- A carrier rich in overtones gives the vocoder more material to shape. Use the **Wave** knob to move through sawtooth, pulse width, and noise waves; see also [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]].

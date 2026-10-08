@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/05 Connections]]
 next:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F01%20Control%20Signals
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___01%20Control%20Signals.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___05%20Connections___01%20Control%20Signals.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.1 Control Signals
 	- The Matrix connects control signals from the MicroFreak's modules. These signals move more slowly than audio and are suited to controlling sound.

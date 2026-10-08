@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/11 Icon Strip/03 Touch Strip]]
 next:: [[Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F11%20Icon%20Strip%2F03%20Touch%20Strip%2F01%20Spice%20and%20Dice
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___11%20Icon%20Strip___03%20Touch%20Strip___01%20Spice%20and%20Dice.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___11%20Icon%20Strip___03%20Touch%20Strip___01%20Spice%20and%20Dice.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 11.3.1 Spice & Dice
 	- Spice and Dice work together, though their musical effect can be enjoyed without knowing the details.

@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/308 Gated Com]]
 next:: [[Microfreak/Preset/310 Arp Sing]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F309%20Low%20Noisy%20Vox
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___309%20Low%20Noisy%20Vox.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___309%20Low%20Noisy%20Vox.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

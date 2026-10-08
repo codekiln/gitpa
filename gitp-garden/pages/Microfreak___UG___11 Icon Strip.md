@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/10 Keyboard]]
 next:: [[Microfreak/UG/12 Arpeggiator]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F11%20Icon%20Strip
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___11%20Icon%20Strip.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___11%20Icon%20Strip.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 11 Using the Icon Strip
 	- Just above the keyboard, the Icon Strip has function icons and a touch strip.

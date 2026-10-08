@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types%2F18%20Sample
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___18%20Sample.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___18%20Sample.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 06.03.18 Sample
 	- Sample Oscillator Model

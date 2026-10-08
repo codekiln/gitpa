@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/158 Grimy Beat]]
 next:: [[Microfreak/Preset/160 Incoming Ship]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F159%20Snow%20Man
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___159%20Snow%20Man.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___159%20Snow%20Man.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

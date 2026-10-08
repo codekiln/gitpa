@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/02 Installation]]
 prev:: [[Microfreak/UG/02 Installation/03 Notice]]
 next:: [[Microfreak/UG/02 Installation/05 Register Instrument]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F02%20Installation%2F04%20Precautions
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___02%20Installation___04%20Precautions.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___02%20Installation___04%20Precautions.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 02.04 Precautions include, but are not limited to, the following:
 	- Read and understand all instructions. Follow the instructions printed on the instrument.

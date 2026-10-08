@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/05 Connections]]
 prev:: [[Microfreak/UG/05 Connections/01 Control Signals]]
 next:: [[Microfreak/UG/05 Connections/03 Freaky Ideas]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F02%20Matrix%20and%20Encoder
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.2 The Matrix and its encoder
 	- The Matrix links control signals from sources to destinations.

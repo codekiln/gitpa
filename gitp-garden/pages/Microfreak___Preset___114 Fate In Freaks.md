@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/113 D3 Chords]]
 next:: [[Microfreak/Preset/115 Notobeat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F114%20Fate%20In%20Freaks
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___114%20Fate%20In%20Freaks.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___114%20Fate%20In%20Freaks.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

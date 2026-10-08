@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/03 Overview]]
 next:: [[Microfreak/UG/05 Connections]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F04%20Presets
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___04%20Presets.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___04%20Presets.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 04 The MicroFreak Presets
 	- Arturia invites you to create your own presets. Making sounds yourself helps you learn how to shape sounds toward what you want to hear.

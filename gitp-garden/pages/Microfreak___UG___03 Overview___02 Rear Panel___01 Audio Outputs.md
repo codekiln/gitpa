@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/03 Overview/02 Rear Panel]]
 next:: [[Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F02%20Rear%20Panel%2F01%20Audio%20Outputs
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___02%20Rear%20Panel___01%20Audio%20Outputs.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___02%20Rear%20Panel___01%20Audio%20Outputs.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.02.01 Audio outputs
 	- The headphone output is a 3.5 mm TS or TRS jack. The MicroFreak sends the same mono signal to both sides of stereo headphones.

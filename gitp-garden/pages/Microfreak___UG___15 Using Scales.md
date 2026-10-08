@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/14 Config]]
 next:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F15%20Using%20Scales
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___15%20Using%20Scales.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___15%20Using%20Scales.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 15 Using Scales
 	- Scales can shape the emotion of a melody. Adding chord notes from the melody's scale strengthens its character: major notes may sound forceful and happy, while minor notes may sound sad. Responses to major and minor scales vary across musical cultures.

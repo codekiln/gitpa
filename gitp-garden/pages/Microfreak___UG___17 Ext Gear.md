@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
 next:: [[Microfreak/UG/18 Appendix A Speech Osc]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___17%20Ext%20Gear.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17 Connecting external gear
 	- The MicroFreak connects to a range of vintage and modern equipment through the ports on its rear panel.

@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/03 Overview]]
 prev:: [[Microfreak/UG/03 Overview/02 Rear Panel]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F03%20Signal%20Flow
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___03%20Signal%20Flow.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___03%20Signal%20Flow.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.03 Signal Flow
 	- The Digital Oscillator sends its waveform to the Filter and an analog VCA. The main Envelope has a fixed connection to the VCA. With **Amp Mod** on, the main Envelope controls the VCA; with **Amp Mod** off, the keyboard Gate controls it.

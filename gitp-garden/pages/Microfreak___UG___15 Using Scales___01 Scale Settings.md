@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/15 Using Scales]]
 next:: [[Microfreak/UG/15 Using Scales/02 The Scale Root]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F15%20Using%20Scales%2F01%20Scale%20Settings
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___15%20Using%20Scales___01%20Scale%20Settings.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___15%20Using%20Scales___01%20Scale%20Settings.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 15.1 Scale settings
 	- Utility offers scale selection in two places:

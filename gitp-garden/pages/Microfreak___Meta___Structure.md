@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FMeta%2FStructure
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Meta___Structure.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Meta___Structure.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 # [[Ghost Gardener]] Project - Turn the Microfreak namespace in a logseq translation of the docs pdf - [[2026-09-25 Fri]]
 	- I'd like to try something relatively new. I have  `~/Downloads/microfreak_Manual_5_0_1_EN.pdf`, which is the latest version of the documentation for the arturia microfreak. I'd like to have this determine the structure of the Microfreak namespace in logseq that you should fill out.

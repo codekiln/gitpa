@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/07 Filter]]
 next:: [[Microfreak/UG/09 Envelope Gen]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F08%20LFO
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___08%20LFO.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___08%20LFO.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 08 The LFO

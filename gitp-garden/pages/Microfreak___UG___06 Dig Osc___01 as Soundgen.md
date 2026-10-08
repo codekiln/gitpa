@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]] , [[Logseq/Entity/Proxy/P
 up:: [[Microfreak/UG/06 Dig Osc]]
 next:: [[Microfreak/UG/06 Dig Osc/02 Param Controls]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F01%20as%20Soundgen
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___01%20as%20Soundgen.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___01%20as%20Soundgen.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 06.01 The oscillator as a sound generator

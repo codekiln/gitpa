@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/22 Declaration of Conformity]]
 prev:: [[Microfreak/UG/22 Declaration of Conformity/05 RoHS]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F22%20Declaration%20of%20Conformity%2F06%20WEEE
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___22%20Declaration%20of%20Conformity___06%20WEEE.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___22%20Declaration%20of%20Conformity___06%20WEEE.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 22.6 WEEE
 	- The crossed-out wheeled-bin symbol

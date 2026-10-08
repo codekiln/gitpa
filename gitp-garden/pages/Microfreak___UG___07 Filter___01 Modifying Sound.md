@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/07 Filter]]
 next:: [[Microfreak/UG/07 Filter/02 Animating Sound]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F07%20Filter%2F01%20Modifying%20Sound
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___07%20Filter___01%20Modifying%20Sound.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___07%20Filter___01%20Modifying%20Sound.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 07.01 Modifying sound
 	- The MicroFreak has a Low Pass Filter (LPF), a Band Pass Filter (BPF), and a High Pass Filter (HPF). The Type button switches between them.

@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/13 Sequencer/01 Use]]
 next:: [[Microfreak/UG/13 Sequencer/01 Use/02 Keyboard]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F13%20Sequencer%2F01%20Use%2F01%20Select%20%26%20Play
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___13%20Sequencer___01%20Use___01%20Select%20%26%20Play.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___13%20Sequencer___01%20Use___01%20Select%20%26%20Play.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 13.1.1. Selecting and Playing a Sequence Pattern
 	- A new preset has empty patterns. A factory or saved preset may contain data in A or B. Press A or B to load that pattern; the display shows “Sequence X Loaded.”

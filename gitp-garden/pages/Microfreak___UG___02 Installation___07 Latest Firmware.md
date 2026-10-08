@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/02 Installation]]
 prev:: [[Microfreak/UG/02 Installation/06 Connecting to the World]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F02%20Installation%2F07%20Latest%20Firmware
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___02%20Installation___07%20Latest%20Firmware.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___02%20Installation___07%20Latest%20Firmware.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 02.07 Get the Latest Firmware
 	- The latest MicroFreak firmware adds features described in [[Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0]]. Install the latest firmware to get the full MicroFreak experience.

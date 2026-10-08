@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/13 Sequencer/02 Mod Tracks]]
 next:: [[Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F13%20Sequencer%2F02%20Mod%20Tracks%2F01%20Step%20Time
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___13%20Sequencer___02%20Mod%20Tracks___01%20Step%20Time.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___13%20Sequencer___02%20Mod%20Tracks___01%20Step%20Time.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 13.2.1. Step-Time Recording of Modulation
 	- Select a pattern, stop playback, and press Record. Turn Rate/Swing to select the step where modulation should begin.

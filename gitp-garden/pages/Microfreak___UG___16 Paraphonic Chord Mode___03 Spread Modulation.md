@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
 prev:: [[Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F16%20Paraphonic%20Chord%20Mode%2F03%20Spread%20Modulation
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode___03%20Spread%20Modulation.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode___03%20Spread%20Modulation.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 16.3. Unison Spread as a modulation target
 	- Assign modulation to Unison spread in the Matrix by holding an Assign button and pressing the Paraphonic button.

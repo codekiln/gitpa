@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/07 MIDI Tutorial MINI V]]
 next:: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F08%20MIDI%20Tutorial%20VCV%20Rack
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___08%20MIDI%20Tutorial%20VCV%20Rack.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___17%20Ext%20Gear___08%20MIDI%20Tutorial%20VCV%20Rack.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.7 Tutorial 2: Using MIDI to control modules on VCV Rack
 	- This example uses the MicroFreak's arpeggiator to control an oscillator and envelope generator in VCV Rack, a free virtual modular system.

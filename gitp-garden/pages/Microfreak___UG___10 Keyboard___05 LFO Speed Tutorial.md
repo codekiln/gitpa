@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/10 Keyboard]]
 prev:: [[Microfreak/UG/10 Keyboard/04 Octave Buttons]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard%2F05%20LFO%20Speed%20Tutorial
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard___05%20LFO%20Speed%20Tutorial.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___10%20Keyboard___05%20LFO%20Speed%20Tutorial.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10.5 Tutorial: Modulating LFO Speed
 	- Use keyboard pressure to control the LFO rate. More finger contact sends more pressure; less contact sends less.

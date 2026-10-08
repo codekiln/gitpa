@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/13 Sequencer/03 Fun]]
 prev:: [[Microfreak/UG/13 Sequencer/03 Fun/02 Mix Pitches]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F13%20Sequencer%2F03%20Fun%2F03%20Hoketus
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___13%20Sequencer___03%20Fun___03%20Hoketus.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___13%20Sequencer___03%20Fun___03%20Hoketus.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 13.3.3. Second Experiment: Hoketus
 	- Hoketus keeps one pitch while changing timbre, articulation, and rhythm. On the MicroFreak, use modulation tracks to change parameters while the sequence repeats that pitch.

@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/17 Ext Gear]]
 next:: [[Microfreak/UG/19 Appendix B Vocoder]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F18%20Appendix%20A%20Speech%20Osc
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___18%20Appendix%20A%20Speech%20Osc.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___18%20Appendix%20A%20Speech%20Osc.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 18 Appendix A: Speech Oscillator: Internal and External Control
 	- The Speech Oscillator generates six sound categories. Choose a category with the Wave encoder, then a word in that category with the Shape encoder. Adjust the selected word's timbre with the Time encoder.

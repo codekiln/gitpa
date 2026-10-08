@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack]]
 next:: [[Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F09%20MIDI%20CC%20Control
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___09%20MIDI%20CC%20Control.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___17%20Ext%20Gear___09%20MIDI%20CC%20Control.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.8 Using MIDI CC# codes for control
 	- MicroFreak encoders send MIDI CC# data as you turn them. CC# codes control parameters on external synthesizers, modular systems, and software such as VCV Rack. They are parameter-control messages, separate from note messages.

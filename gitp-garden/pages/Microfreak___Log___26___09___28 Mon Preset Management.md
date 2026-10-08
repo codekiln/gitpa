@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 prev:: [[Microfreak/Log/26/09/27 Sun Preset Manager Knowledge Gardening]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FLog%2F26%2F09%2F28%20Mon%20Preset%20Management
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Log___26___09___28%20Mon%20Preset%20Management.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Log___26___09___28%20Mon%20Preset%20Management.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # [[2026-09-28 Mon]]

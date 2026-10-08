@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/12 Arpeggiator]]
 next:: [[Microfreak/UG/14 Config]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F13%20Sequencer
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___13%20Sequencer.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___13%20Sequencer.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 13. The Sequencer
 	- The MicroFreak sequencer records and plays up to four notes at once in paraphonic mode. It captures pitch, velocity, and note duration, along with movements of up to four controls in modulation tracks.

@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/10 Keyboard]]
 prev:: [[Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness]]
 next:: [[Microfreak/UG/10 Keyboard/04 Octave Buttons]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard%2F03%20Glide
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard___03%20Glide.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___10%20Keyboard___03%20Glide.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10.3 Glide
 	- The Glide knob controls how quickly pitch moves between notes. It smooths the abrupt pitch change from one key to another, with a time from off to about 10 seconds.

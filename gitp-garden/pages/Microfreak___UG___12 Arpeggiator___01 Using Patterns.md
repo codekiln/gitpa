@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/12 Arpeggiator]]
 next:: [[Microfreak/UG/12 Arpeggiator/02 Gates and Triggers]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator%2F01%20Using%20Patterns
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator___01%20Using%20Patterns.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___12%20Arpeggiator___01%20Using%20Patterns.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12.1 Using Patterns
 	- Press **Pattern** to generate a semi-random arpeggio from keys played legato. Each new key press generates a new pattern.

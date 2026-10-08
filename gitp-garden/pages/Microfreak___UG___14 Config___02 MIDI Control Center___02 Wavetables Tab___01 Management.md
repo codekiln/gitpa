@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 4]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
 next:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F02%20MIDI%20Control%20Center%2F02%20Wavetables%20Tab%2F01%20Management
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.2.2.1 Wavetable Management
 	- The buttons above the computer and MicroFreak panes move and manage wavetables.

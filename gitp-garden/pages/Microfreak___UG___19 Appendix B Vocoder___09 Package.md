@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/19 Appendix B Vocoder]]
 prev:: [[Microfreak/UG/19 Appendix B Vocoder/08 Global Settings]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F19%20Appendix%20B%20Vocoder%2F09%20Package
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___09%20Package.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___09%20Package.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 19.9. MicroFreak Vocoder Package content
 	- The Vocoder Edition package includes:

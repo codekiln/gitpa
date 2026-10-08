@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/20 Appendix C - Cheat Sheet]]
 next:: [[Microfreak/UG/22 Declaration of Conformity]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F21%20Appendix%20D%20-%20CC%20Values
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___21%20Appendix%20D%20-%20CC%20Values.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___21%20Appendix%20D%20-%20CC%20Values.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 21. Appendix D: CC# Values
 	- {{embed [[Microfreak/UG/21 Appendix D - CC Values/01 What are CC Values]]}}

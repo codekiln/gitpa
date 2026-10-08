@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]]
 next:: [[Microfreak/UG/17 Ext Gear/11 MIDI CC Values]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F10%20Tutorial%20MIDI%20CC
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.9 Tutorial 3: sending CC# codes from the MicroFreak
 	- Turning a MicroFreak knob sends a CC# code. If you know the code for a dial, slider, or switch, you can use it to control an external parameter.

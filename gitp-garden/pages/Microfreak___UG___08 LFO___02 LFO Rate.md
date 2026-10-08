@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/08 LFO]]
 prev:: [[Microfreak/UG/08 LFO/01 LFO Shape]]
 next:: [[Microfreak/UG/08 LFO/03 Freaky Tips]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F08%20LFO%2F02%20LFO%20Rate
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___08%20LFO___02%20LFO%20Rate.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___08%20LFO___02%20LFO%20Rate.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 08.2 LFO Rate

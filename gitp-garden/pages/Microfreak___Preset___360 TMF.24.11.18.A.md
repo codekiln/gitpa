@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/359 Init]]
 next:: [[Microfreak/Preset/361 TMF.24.11.18.B]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F360%20TMF.24.11.18.A
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___360%20TMF.24.11.18.A.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___360%20TMF.24.11.18.A.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

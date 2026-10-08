@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/09 Envelope Gen]]
 prev:: [[Microfreak/UG/09 Envelope Gen/05 Amp Mod Button]]
 next:: [[Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen%2F06%20Cycling%20Envelope
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen___06%20Cycling%20Envelope.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___09%20Envelope%20Gen___06%20Cycling%20Envelope.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09.6 The Cycling Envelope Generator
 	- Unlike a standard envelope that runs through its stages once, the Cycling Envelope can retrigger itself after its final stage. It can act as a complex LFO, producing wave shapes that a standard LFO cannot.

@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/12 Arpeggiator]]
 prev:: [[Microfreak/UG/12 Arpeggiator/04 Making it Swing]]
 next:: [[Microfreak/UG/12 Arpeggiator/06 Transfer to Seq]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator%2F05%20Arpeggio%20Range
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator___05%20Arpeggio%20Range.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___12%20Arpeggiator___05%20Arpeggio%20Range.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12.5 Arpeggio Range
 	- The Arpeggiator initially plays the held notes within one octave. Press **Oct | Mod** to choose how many octaves above the held notes are added:

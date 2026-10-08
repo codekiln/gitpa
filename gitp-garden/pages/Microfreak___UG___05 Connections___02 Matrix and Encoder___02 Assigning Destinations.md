@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 prev:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F02%20Matrix%20and%20Encoder%2F02%20Assigning%20Destinations
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.2.2 Assigning destinations
 	- Assign1, Assign2, and Assign3 are user-defined destinations. They can turn nearly any MicroFreak knob into a modulation destination.

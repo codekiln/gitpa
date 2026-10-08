@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/08 LFO]]
 next:: [[Microfreak/UG/10 Keyboard]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___09%20Envelope%20Gen.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09 The Envelope Generator
 	- The Envelope Generator is one of the MicroFreak's basic building blocks. It shapes a sound's overall loudness or timbre and can send modulation to any Matrix destination, including destinations you create.

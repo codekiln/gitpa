@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FCLI%2FEpisode%20patch%20workflow
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___CLI___Episode%20patch%20workflow.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___CLI___Episode%20patch%20workflow.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Episode patch workflow
 	- [[GitP]] episode pages record the MicroFreak presets created during recording. Each recorded patch keeps its saved slot, downloadable preset file and connection to the episode's audio, then receives a convention-based or creative name after recording.

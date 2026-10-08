@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/11 Icon Strip]]
 next:: [[Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F11%20Icon%20Strip%2F01%20Key%20Hold%20Button
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___11%20Icon%20Strip___01%20Key%20Hold%20Button.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___11%20Icon%20Strip___01%20Key%20Hold%20Button.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 11.1 The Key Hold Button
 	- Key Hold locks a key or chord so both hands are free to adjust the MicroFreak's controls.

@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/12 Arpeggiator]]
 prev:: [[Microfreak/UG/12 Arpeggiator/05 Arpeggio Range]]
 next:: [[Microfreak/UG/12 Arpeggiator/07 Arp Fun]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator%2F06%20Transfer%20to%20Seq
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator___06%20Transfer%20to%20Seq.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___12%20Arpeggiator___06%20Transfer%20to%20Seq.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12.6 Transferring an arpeggio to the Sequencer
 	- To transfer an arpeggio to a sequence pattern:

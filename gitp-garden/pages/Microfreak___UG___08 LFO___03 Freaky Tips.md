@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/08 LFO]]
 prev:: [[Microfreak/UG/08 LFO/02 LFO Rate]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F08%20LFO%2F03%20Freaky%20Tips
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___08%20LFO___03%20Freaky%20Tips.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___08%20LFO___03%20Freaky%20Tips.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 08.3 Freaky Tips and Tricks

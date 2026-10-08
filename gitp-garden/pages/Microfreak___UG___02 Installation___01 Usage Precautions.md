@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/02 Installation]]
 next:: [[Microfreak/UG/02 Installation/02 Warning]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F02%20Installation%2F01%20Usage%20Precautions
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___02%20Installation___01%20Usage%20Precautions.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___02%20Installation___01%20Usage%20Precautions.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 02.01 Usage Precautions
 	- Use only the power adapter supplied by Arturia. Arturia is not responsible for damage caused by an unauthorized power supply.

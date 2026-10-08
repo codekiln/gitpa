@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/11 Icon Strip]]
 next:: [[Microfreak/UG/13 Sequencer]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___12%20Arpeggiator.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12 The Arpeggiator
 	- An arpeggiator breaks a chord into individual notes and plays them one by one.

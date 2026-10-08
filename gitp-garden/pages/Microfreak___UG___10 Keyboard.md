@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/09 Envelope Gen]]
 next:: [[Microfreak/UG/11 Icon Strip]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___10%20Keyboard.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10 The Keyboard Section
 	- One of the first capacitive keyboards appeared on the EMS Synthi AKS. In 1972, Don Buchla introduced the Buchla Easel, whose touch-sensitive keys did not move and could produce accurate pressure and voltage-controlled portamento. The capacitive keyboard became a hallmark of the Easel, though few people could afford one. Decades later, the Arturia MicroFreak brought the capacitive keyboard back.

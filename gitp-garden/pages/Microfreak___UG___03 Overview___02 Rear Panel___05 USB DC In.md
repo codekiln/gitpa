@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/03 Overview/02 Rear Panel]]
 prev:: [[Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI]]
 next:: [[Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F02%20Rear%20Panel%2F05%20USB%20DC%20In
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___02%20Rear%20Panel___05%20USB%20DC%20In.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___02%20Rear%20Panel___05%20USB%20DC%20In.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.02.05 USB/DC IN
 	- The USB connector supplies power and exchanges data with a computer. A 5 V, 500 mA USB phone charger can also power the MicroFreak without a computer.

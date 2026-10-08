@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/13 Sequencer]]
 next:: [[Microfreak/UG/15 Using Scales]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___14%20Config.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14 MicroFreak Configuration
 	- Utility settings can change how a sequence and preset behave. Try switching Glide Mode between Time and Rate, enabling Envelope Legato, or changing smoothing on a sequencer modulation track.

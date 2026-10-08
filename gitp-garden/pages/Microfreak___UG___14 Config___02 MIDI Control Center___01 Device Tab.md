@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config/02 MIDI Control Center]]
 next:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F02%20MIDI%20Control%20Center%2F01%20Device%20Tab
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.2.1 Device Tab
 	- The Device tab contains MIDI and configuration settings for the MicroFreak.

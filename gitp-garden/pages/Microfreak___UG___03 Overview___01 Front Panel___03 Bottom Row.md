@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/03 Overview/01 Front Panel]]
 prev:: [[Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F01%20Front%20Panel%2F03%20Bottom%20Row
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___01%20Front%20Panel___03%20Bottom%20Row.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___01%20Front%20Panel___03%20Bottom%20Row.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.01.03 Bottom Row
 	- Bottom row of the MicroFreak

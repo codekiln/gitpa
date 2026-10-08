@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/289 Down For Bass]]
 next:: [[Microfreak/Preset/291 Poisoned 0scs]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F290%20Qrazy%20Press
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___290%20Qrazy%20Press.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___290%20Qrazy%20Press.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

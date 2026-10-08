@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/120 Jobs 4 Rhythm]]
 next:: [[Microfreak/Preset/122 Simon Says]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F121%20Fat%20Moves
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___121%20Fat%20Moves.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___121%20Fat%20Moves.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

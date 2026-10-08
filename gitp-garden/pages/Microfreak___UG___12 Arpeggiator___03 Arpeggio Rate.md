@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/12 Arpeggiator]]
 prev:: [[Microfreak/UG/12 Arpeggiator/02 Gates and Triggers]]
 next:: [[Microfreak/UG/12 Arpeggiator/04 Making it Swing]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator%2F03%20Arpeggio%20Rate
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator___03%20Arpeggio%20Rate.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___12%20Arpeggiator___03%20Arpeggio%20Rate.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12.3 Arpeggio Rate
 	- **Rate** sets the arpeggio speed. With Sync off, the display shows BPM; the default is 120 BPM, and the Arpeggiator runs independently of internal or external clock.

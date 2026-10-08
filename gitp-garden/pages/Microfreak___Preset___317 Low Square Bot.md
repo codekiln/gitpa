@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/316 PWM vox]]
 next:: [[Microfreak/Preset/318 Sequenced]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F317%20Low%20Square%20Bot
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___317%20Low%20Square%20Bot.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___317%20Low%20Square%20Bot.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

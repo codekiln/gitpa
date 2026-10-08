@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FCLI%2FValidation%2F26-10-03%20slot%20397
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___CLI___Validation___26-10-03%20slot%20397.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___CLI___Validation___26-10-03%20slot%20397.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # USB download validation — slot 397
 	- On [[2026-10-03 Sat]], the connected MicroFreak returned saved preset [[Microfreak/Preset/397 Imit]], named Imit, category Keys, with populated sound data.

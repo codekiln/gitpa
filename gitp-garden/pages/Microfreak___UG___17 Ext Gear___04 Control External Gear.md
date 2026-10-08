@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]]
 next:: [[Microfreak/UG/17 Ext Gear/05 Local Control]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F04%20Control%20External%20Gear
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___04%20Control%20External%20Gear.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___17%20Ext%20Gear___04%20Control%20External%20Gear.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.3 Controlling external and modular gear
 	- Arturia's MicroBrute, MiniBrute, and MatrixBrute helped renew interest in analog synthesizers. Many musicians also use Eurorack modules to build individual instruments; Arturia's RackBrute provides a Eurorack case.

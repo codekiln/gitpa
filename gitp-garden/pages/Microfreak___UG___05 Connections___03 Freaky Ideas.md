@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/05 Connections]]
 prev:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F03%20Freaky%20Ideas
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___03%20Freaky%20Ideas.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___05%20Connections___03%20Freaky%20Ideas.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.3 Freaky ideas
 	- Modulation often works best below full strength; the right amount can add subtlety and expression to a patch. The Matrix offers many ways to find unusual sounds.

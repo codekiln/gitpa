@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types%2F04%20Harmo
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___04%20Harmo.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___04%20Harmo.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 06.03.04 Harmonic OSC (Harmo)
 	- Harmonic Oscillator Model

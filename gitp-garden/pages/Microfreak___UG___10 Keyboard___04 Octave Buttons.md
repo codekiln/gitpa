@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/10 Keyboard]]
 prev:: [[Microfreak/UG/10 Keyboard/03 Glide]]
 next:: [[Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard%2F04%20Octave%20Buttons
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard___04%20Octave%20Buttons.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___10%20Keyboard___04%20Octave%20Buttons.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10.4 Octave Buttons
 	- The Octave buttons transpose the keyboard's output up or down by octaves.

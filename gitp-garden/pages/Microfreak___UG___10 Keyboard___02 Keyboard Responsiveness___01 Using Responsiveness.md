@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
 up:: [[Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard%2F02%20Keyboard%20Responsiveness%2F01%20Using%20Responsiveness
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard___02%20Keyboard%20Responsiveness___01%20Using%20Responsiveness.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___10%20Keyboard___02%20Keyboard%20Responsiveness___01%20Using%20Responsiveness.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10.2.1 Using Keyboard Responsiveness
 	- The small variations of a capacitive keyboard make timbre and pitch useful modulation targets. Modulating the Cycling Envelope's rise and fall times can also produce interesting results.

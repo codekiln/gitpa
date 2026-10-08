@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/06 Dig Osc]]
 prev:: [[Microfreak/UG/06 Dig Osc/01 as Soundgen]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F02%20Param%20Controls
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___02%20Param%20Controls.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___02%20Param%20Controls.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 06.02 The Parameter Controls
 	- The parameter controls bring the Digital Oscillator to life in different ways.

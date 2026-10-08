@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config]]
 prev:: [[Microfreak/UG/14 Config/01 Utility & MCC]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F02%20MIDI%20Control%20Center
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.2 MIDI Control Center
 	- MIDI Control Center (MCC) is an Arturia application for macOS and Windows. It transfers presets between the MicroFreak and a computer and changes MicroFreak settings. Download the latest version from [Arturia](https://www.arturia.com/).

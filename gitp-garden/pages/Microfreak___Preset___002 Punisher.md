@@ -13,6 +13,6 @@ preset-synth-microfreak-vcf-reso-raw-hex:: 0x00c361
 prev:: [[Microfreak/Preset/001 NervousKeys]]
 next:: [[Microfreak/Preset/003 Trance]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F002%20Punisher
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___002%20Punisher.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___002%20Punisher.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes
