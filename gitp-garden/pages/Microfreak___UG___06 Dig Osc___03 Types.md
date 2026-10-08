@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/06 Dig Osc]]
 prev:: [[Microfreak/UG/06 Dig Osc/02 Param Controls]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 06.03 Oscillator Types: An Overview
 	- {{embed [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]}}

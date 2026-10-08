@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
 next:: [[Microfreak/UG/16 Paraphonic Chord Mode/02 Unison Defaults]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F16%20Paraphonic%20Chord%20Mode%2F01%20Unison
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode___01%20Unison.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode___01%20Unison.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 16.1. Unison
 	- The MicroFreak has four oscillators. In standard Paraphonic mode, play them as chords on the keyboard.

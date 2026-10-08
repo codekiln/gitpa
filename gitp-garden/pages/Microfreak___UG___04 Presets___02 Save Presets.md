@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/04 Presets]]
 prev:: [[Microfreak/UG/04 Presets/01 Load Presets]]
 next:: [[Microfreak/UG/04 Presets/03 Preset Config]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F04%20Presets%2F02%20Save%20Presets
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___04%20Presets___02%20Save%20Presets.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___04%20Presets___02%20Save%20Presets.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 04.02 Saving Presets
 	- Press Save to enter save mode. From there you can save to the current slot or another location, change the category, or rename the preset.

@@ -2,9 +2,9 @@
 
 Gitpa imports the complete `Microfreak` namespace under its source names, including the guide, presets, CLI notes and metadata pages. [Issue #18](https://github.com/codekiln/gitpa/issues/18) tracks the import; [the audit](microfreak-namespace-audit.json) lists imported definitions and references that need follow-up.
 
-The source inventory contains 611 namespace pages. The shared planner includes their entity definitions and supporting dictionaries, giving 657 pages in this import. All imported bodies and protected tags match the source. Destination publication properties expose the reference pages while retaining existing local choices; proxy provenance and ownership remain in the checked-in manifest.
+The source inventory includes the original 611 reference pages and 130 matching Asset/B2 pages. The shared planner includes their entity definitions and supporting dictionaries; the audit records the complete current inventory. All imported bodies and protected tags match the source. Destination publication properties expose the reference pages while retaining existing local choices; proxy provenance and ownership remain in the checked-in manifest.
 
-The user guide has 594 navigation targets and the namespace has 212 page embeds. All resolve in the imported graph. All 130 linked local assets are copied from the source and remain available in the prepared website graph. The logical references `Microfreak/Docs` and `Microfreak/Preset/Initialized` have no source files and remain references without invented content.
+The user guide has 594 navigation targets and the namespace has 212 page embeds. All resolve in the imported graph. All 130 guide images use verified public B2 URLs. Their former local PNGs are removed; the source retains page-named DVC backups and restoration metadata. The logical references `Microfreak/Docs` and `Microfreak/Preset/Initialized` have no source files and remain references without invented content.
 
 ## Refresh
 
@@ -20,7 +20,7 @@ Apply the validated batch:
 mise run namespace:sync --source /path/to/logseq-encode-garden --namespace Microfreak --report /tmp/microfreak-audit.json --apply
 ```
 
-The current source is the explicit `codex/202-proxy-task-import-docs` worktree, supplying the reviewed importer from [garden PR #203](https://github.com/codekiln/logseq-encode-garden/pull/203). Its selected instrument content matches garden main. After that dependency merges, select the registered garden checkout and refresh source URLs to the default branch.
+The current source is the explicit `codex/204-guide-images-b2` worktree from [garden PR #211](https://github.com/codekiln/logseq-encode-garden/pull/211), supplying the verified B2 guide image URLs. After that dependency merges, select the registered garden checkout and refresh source URLs to the default branch.
 
 ## References for follow-up
 

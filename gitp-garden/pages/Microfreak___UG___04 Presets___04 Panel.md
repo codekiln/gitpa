@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/04 Presets]]
 prev:: [[Microfreak/UG/04 Presets/03 Preset Config]]
 next:: [[Microfreak/UG/04 Presets/05 Digital Control]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F04%20Presets%2F04%20Panel
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___04%20Presets___04%20Panel.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___04%20Presets___04%20Panel.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 04.04 Panel
 	- After loading a preset, the MicroFreak plays the sound stored in memory. The panel's current knob positions may differ from those saved positions, so moving a knob may not immediately match the sound you hear.
@@ -13,4 +13,4 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 	- For example, after loading a preset with a slow attack, turn the Attack knob to make it snappier. The knob's position becomes part of the current preset.
 	- Panel works once after each preset load. After it applies the knob positions, it has no further effect until another preset is loaded.
 	- The Panel button
-		- ![01 Panel Button](../assets/Microfreak___UG___04-Presets___04-Panel___01-Panel-Button.png)
+		- ![01 Panel Button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___04%20Presets___04%20Panel___Asset___01-Panel-Button.png)

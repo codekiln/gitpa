@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/09 Envelope Gen]]
 next:: [[Microfreak/UG/09 Envelope Gen/02 Gates and Triggers]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen%2F01%20What%20an%20Envelope%20Does
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___09%20Envelope%20Gen___01%20What%20an%20Envelope%20Does.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen___01%20What%20an%20Envelope%20Does.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09.1 What does an Envelope Generator do?
 	- An instrument's envelope and timbre help make it recognizable. An organ reaches full volume at once, stays there while a key is held, then decays quickly. A piano has a slower attack and longer decay. A string section builds and fades more gradually.

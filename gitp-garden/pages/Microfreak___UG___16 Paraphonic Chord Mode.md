@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/15 Using Scales]]
 next:: [[Microfreak/UG/17 Ext Gear]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F16%20Paraphonic%20Chord%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___16%20Paraphonic%20Chord%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 16. Paraphonic Chord Mode
 	- Paraphonic Chord Mode lets you transpose a chord through the current scale.

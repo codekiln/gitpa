@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/12 Arpeggiator]]
 prev:: [[Microfreak/UG/12 Arpeggiator/06 Transfer to Seq]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator%2F07%20Arp%20Fun
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___12%20Arpeggiator___07%20Arp%20Fun.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator___07%20Arp%20Fun.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12.7 Arpeggiator fun
 	- The Arpeggiator can act as a modulation source. The effect is subtle, so increase the modulation amount and extend the octave range. Routing it to two destinations can make the movement easier to hear.

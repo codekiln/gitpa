@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/21 Appendix D - CC Values]]
 next:: [[Microfreak/UG/23 Software License Agreement]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F22%20Declaration%20of%20Conformity
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___22%20Declaration%20of%20Conformity.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___22%20Declaration%20of%20Conformity.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 22. Declaration of Conformity
 	- {{embed [[Microfreak/UG/22 Declaration of Conformity/01 FCC]]}}

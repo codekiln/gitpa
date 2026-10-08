@@ -4,11 +4,11 @@ up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types%2F11%20Speech
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___11%20Speech.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___11%20Speech.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 06.03.11 Vowel and speech synthesis (Speech)
 	- Vowel and speech synthesis Oscillator Model
-		- ![01 Vowel and speech synthesis Oscillator Model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___11-Speech___01-Vowel-And-Speech-Synthesis-Oscillator-Model.png)
+		- ![01 Vowel and speech synthesis Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___11%20Speech___Asset___01-Vowel-and-speech-synthesis-Oscillator-Model.png)
 	- **Description:** The Speech oscillator draws on speech synthesis research begun by Texas Instruments in the late 1970s, which led to the Speak & Spell talking toy. Vowels use unrestricted airflow while the throat and tongue shape their sound; consonants delimit and shape vowels.
 	- **Type:** The Wave knob scans formants from 0 to about 100, then libraries of colors, numbers, letters, and words.
 	- **Timbre:** Shifts the speech formants up or down.

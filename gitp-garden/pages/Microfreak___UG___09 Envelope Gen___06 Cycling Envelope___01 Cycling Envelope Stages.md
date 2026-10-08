@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
 next:: [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen%2F06%20Cycling%20Envelope%2F01%20Cycling%20Envelope%20Stages
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___09%20Envelope%20Gen___06%20Cycling%20Envelope___01%20Cycling%20Envelope%20Stages.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen___06%20Cycling%20Envelope___01%20Cycling%20Envelope%20Stages.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09.6.1 The stages of the Cycling Envelope
 	- The Cycling Envelope has three stages:

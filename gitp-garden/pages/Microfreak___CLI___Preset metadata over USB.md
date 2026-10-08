@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FCLI%2FPreset%20metadata%20over%20USB
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___CLI___Preset%20metadata%20over%20USB.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___CLI___Preset%20metadata%20over%20USB.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Preset metadata over USB
 	- Direct preset renaming is feasible through MIDI SysEx over USB. Elektroid implements the write sequence; the garden already has Python/RtMidi readers and full-preset backup support.

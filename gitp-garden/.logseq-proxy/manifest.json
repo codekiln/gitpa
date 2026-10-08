@@ -1913,6 +1913,12 @@
     "Microfreak/UG/02 Installation/07 Latest Firmware": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/01-MIDI-Control-Center-device-and-firmware-revision/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/02-Firmware-revision-dialog/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
     },
@@ -1925,23 +1931,47 @@
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix/Asset/01-The-matrix/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic/Asset/01-Selecting-paraphonic-mode/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select/Asset/01-Panel-Select/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset/Asset/01-The-Preset-manager/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save/Asset/01-Saving-Presets/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility/Asset/01-Access-to-the-Utility-settings/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume/Asset/01-The-Volume-knob/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/Asset/01-Top-Row/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
@@ -1949,14 +1979,29 @@
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide/Asset/01-The-Glide-knob/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc/Asset/01-The-Digital-Oscillator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter/Asset/01-The-Analog-Filter/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env/Asset/01-The-Cycling-Envelope-Generator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/Asset/01-Middle-row-of-the-MicroFreak/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
@@ -1964,23 +2009,50 @@
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select/Asset/01-Octave-select/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift/Asset/01-The-shift-button/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq/Asset/01-The-Arpeggiator-and-the-Sequencers/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO/Asset/01-The-LFO/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env/Asset/01-The-Envelope-Generator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard/Asset/01-The-Keyboard/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/01-The-icon-strip/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/02-Spice-&-Dice/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/Asset/01-Bottom-row-of-the-MicroFreak/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/02 Rear Panel": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -1988,32 +2060,62 @@
     "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs/Asset/01-Audio-output/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure/Asset/01-CV,-Gate-and-Pressure-outputs/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock/Asset/01-Clock-input-and-output/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI/Asset/01-MIDI-input-and-output/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In/Asset/01-The-USB-connector/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch/Asset/01-The-On-Off-switch/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector/Asset/01-The-power-connector/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/03 Overview/02 Rear Panel/Asset/01-Rear-Panel-Overview/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/03 Overview/03 Signal Flow": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/03 Overview/03 Signal Flow/Asset/01-The-signal-flow-of-the-MicroFreak/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/04 Presets": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
     },
     "Microfreak/UG/04 Presets/01 Load Presets": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/04 Presets/01 Load Presets/Asset/01-Preset-Encoder/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/04 Presets/02 Save Presets": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2024,6 +2126,9 @@
     "Microfreak/UG/04 Presets/04 Panel": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/04 Presets/04 Panel/Asset/01-Panel-Button/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/04 Presets/05 Digital Control": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
@@ -2032,6 +2137,9 @@
     },
     "Microfreak/UG/05 Connections/01 Control Signals": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/05 Connections/01 Control Signals/Asset/01-The-MicroFreak-Matrix/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/05 Connections/02 Matrix and Encoder": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2042,6 +2150,12 @@
     "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations/Asset/01-Sample-assigned-as-a-Matrix-destination/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/Asset/01-The-Matrix-and-its-encoder/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/05 Connections/03 Freaky Ideas": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
@@ -2050,6 +2164,9 @@
     },
     "Microfreak/UG/06 Dig Osc/01 as Soundgen": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]] "
+    },
+    "Microfreak/UG/06 Dig Osc/01 as Soundgen/Asset/01-The-Digital-Oscillator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/02 Param Controls": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2063,68 +2180,137 @@
     "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves/Asset/01-Classic-Waveforms-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave/Asset/01-The-Superwave-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable/Asset/01-The-Wavetable-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo/Asset/01-Harmonic-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr/Asset/01-Karplus-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog/Asset/01-Virtual-Analog-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper/Asset/01-Waveshaper-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM/Asset/01-Two-operator-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/09 Formant": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/09 Formant/Asset/01-Granular-formant-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/10 Chords": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/10 Chords/Asset/01-Chords-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/11 Speech": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/11 Speech/Asset/01-Vowel-and-speech-synthesis-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/12 Modal": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/12 Modal/Asset/01-Modal-Resonator-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/13 Noise": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/13 Noise/Asset/01-Noise-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/14 BASS": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/14 BASS/Asset/01-BASS-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX/Asset/01-SAWX-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/16 HARM": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/16 HARM/Asset/01-HARM-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser/Asset/01-User-Wavetable-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/18 Sample": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/01-Sample-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/02-Sample-display-showing-the-sample-select-menu-and-Start-value/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains/Asset/01-Scan-grains-oscillator-model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains/Asset/01-Cloud-grains-oscillator-model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains/Asset/01-Hit-grains-oscillator-model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder/Asset/01-Vocoder-Oscillator-Model/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/07 Filter": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2156,6 +2342,9 @@
     "Microfreak/UG/07 Filter/02 Animating Sound/02 Emphasis Resonance Modulation": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/07 Filter/Asset/01-The-Analogue-Filter/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/08 LFO": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
     },
@@ -2170,6 +2359,9 @@
     },
     "Microfreak/UG/08 LFO/03 Freaky Tips": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/08 LFO/Asset/01-The-MicroFreak-LFO/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/09 Envelope Gen": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2207,11 +2399,20 @@
     "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes/Asset/01-Velocity-Curves/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/Asset/01-The-Cycling-Envelope-Generator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/09 Envelope Gen/Asset/01-The-Envelope-Generator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/10 Keyboard": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2228,11 +2429,23 @@
     "Microfreak/UG/10 Keyboard/03 Glide": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/10 Keyboard/03 Glide/Asset/01-The-Glide-Knob/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/10 Keyboard/04 Octave Buttons": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/10 Keyboard/04 Octave Buttons/Asset/01-The-Octave-Buttons/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/10 Keyboard/Asset/01-The-Touch-Capacitive-Keyboard/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/10 Keyboard/Asset/02-A-Key-in-Close-Up/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/11 Icon Strip": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2240,8 +2453,17 @@
     "Microfreak/UG/11 Icon Strip/01 Key Hold Button": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/01-The-Hold-Icon/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/02-The-alternative-functions-of-the-Hold-Icon/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator/Asset/01-Arpeggio-and-Sequencer-Control-Icons/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/11 Icon Strip/03 Touch Strip": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2251,6 +2473,15 @@
     },
     "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend/Asset/01-The-Bend-Strip/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/Asset/01-Spice-and-Dice-and-Bend/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/11 Icon Strip/Asset/01-The-Icon-Strip/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/12 Arpeggiator": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2270,11 +2501,17 @@
     "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/Asset/01-The-Arpeggiator-and-the-Rate-Knob/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/12 Arpeggiator/04 Making it Swing": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
     "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range/Asset/01-The-Arpeggiator-and-Range/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2284,6 +2521,12 @@
     },
     "Microfreak/UG/12 Arpeggiator/07 Arp Fun/01 Spicing up Arpeggios": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/Asset/01-The-Arpeggiator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/12 Arpeggiator/Asset/02-Arpeggiator-Pattern-Icons/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/13 Sequencer": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2315,11 +2558,23 @@
     "Microfreak/UG/13 Sequencer/01 Use/03 Record/05 Arp": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/01-The-Sequencer-Controls/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/02-The-Sequencer-Controls-Stop-and-Start/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/03-The-Tie-Rest-Icon/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/13 Sequencer/02 Mod Tracks": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
     "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time/Asset/01-The-Rate-Knob/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
@@ -2339,6 +2594,12 @@
     "Microfreak/UG/13 Sequencer/03 Fun/03 Hoketus": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/13 Sequencer/Asset/01-The-Arpeggio-and-Sequencer-Section/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/13 Sequencer/Asset/02-The-Shift-Button/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/14 Config": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
     },
@@ -2357,14 +2618,47 @@
     "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/01-Left-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/02-Right-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/03-Velocity-curve-settings/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
     "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/01-Wavetable-management-buttons/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/02-New-Bank-name-prompt/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/03-Import-choices/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/04-Export-choices/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/05-Delete-confirmation/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/06-Wavetable-transfer-progress/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging/Asset/01-Dragging-a-wavetable-between-computer-and-MicroFreak/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/Asset/01-Tab-for-loading-user-Wavetables/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
@@ -2372,11 +2666,47 @@
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/01-Sample-management-buttons/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/02-New-Bank-name-prompt/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/03-Import-choices/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/04-Export-choices/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/05-Delete-confirmation/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/06-Sample-transfer-progress/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging/Asset/01-Dragging-a-sample-between-computer-and-MicroFreak/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/01-Delete-button-in-the-computer-pane/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/02-Delete-button-in-the-MicroFreak-pane/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/01-Tab-for-loading-user-samples/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/02-Sample-information-area/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/14 Config/Asset/01-Access-to-the-configuration-setting-in-Utility/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/15 Using Scales": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2386,6 +2716,15 @@
     },
     "Microfreak/UG/15 Using Scales/02 The Scale Root": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/15 Using Scales/Asset/01-C-Major-Intervals/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/15 Using Scales/Asset/02-C-Major-Scale,-Root-D/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/15 Using Scales/Asset/03-C-Dorian-Scale/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/16 Paraphonic Chord Mode": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2405,11 +2744,29 @@
     "Microfreak/UG/17 Ext Gear/01 Computer Connection": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/01-MicroFreak-Computer-connection/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/02-MicroFreak-with-power-bank/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/03-MIDI-to-Modular/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/17 Ext Gear/02 CV Gate": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
     "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+    },
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/01-CV-Gate-outputs/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/02-CV-Gate-setting-in-the-MIDI-Control-Center/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/03-CV-setting-in-the-MIDI-Control-Center/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2432,14 +2789,23 @@
     "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack/Asset/01-VCV-Rack-MIDI-CV-patch/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/17 Ext Gear/09 MIDI CC Control": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
     "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
     },
+    "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC/Asset/01-VCV-Rack-MIDI-CC-patch/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/17 Ext Gear/11 MIDI CC Values": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/17 Ext Gear/Asset/01-MicroFreak-Rear-Panel/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/18 Appendix A Speech Osc": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -2465,8 +2831,20 @@
     "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre/Asset/01-Vocoder-filter-bands/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/01-The-Digital-Oscillator/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/02-Vocoder-waveforms/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/Asset/01-Vocoder-signal-path/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/19 Appendix B Vocoder/03 Connect Mic": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2507,11 +2885,20 @@
     "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
     },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/01-Headphone-Microphone-Splitter/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/02-CTIA-AHJ-Connector/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
     },
     "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+    },
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings/Asset/01-MIDI-Control-Center-Vocoder-Settings/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/19 Appendix B Vocoder/09 Package": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
@@ -2545,6 +2932,9 @@
     },
     "Microfreak/UG/22 Declaration of Conformity/06 WEEE": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+    },
+    "Microfreak/UG/22 Declaration of Conformity/06 WEEE/Asset/01-Crossed-out-Wheeled-Bin/png": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
     "Microfreak/UG/23 Software License Agreement": {
       "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
@@ -6100,6 +6490,16 @@
       ".",
       "Microfreak/UG/02 Installation/07 Latest Firmware"
     ],
+    "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/01-MIDI-Control-Center-device-and-firmware-revision/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/01-MIDI-Control-Center-device-and-firmware-revision/png"
+    ],
+    "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/02-Firmware-revision-dialog/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/02 Installation/07 Latest Firmware/Asset/02-Firmware-revision-dialog/png"
+    ],
     "Microfreak/UG/03 Overview": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6120,35 +6520,75 @@
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix/Asset/01-The-matrix/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix/Asset/01-The-matrix/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic/Asset/01-Selecting-paraphonic-mode/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic/Asset/01-Selecting-paraphonic-mode/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select/Asset/01-Panel-Select/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select/Asset/01-Panel-Select/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset/Asset/01-The-Preset-manager/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset/Asset/01-The-Preset-manager/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save/Asset/01-Saving-Presets/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save/Asset/01-Saving-Presets/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility/Asset/01-Access-to-the-Utility-settings/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/06 Utility/Asset/01-Access-to-the-Utility-settings/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume/Asset/01-The-Volume-knob/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/07 Master Volume/Asset/01-The-Volume-knob/png"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/Asset/01-Top-Row/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/Asset/01-Top-Row/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6160,20 +6600,45 @@
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide/Asset/01-The-Glide-knob/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/01 Keyboard Glide/Asset/01-The-Glide-knob/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc/Asset/01-The-Digital-Oscillator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/02 Digital Osc/Asset/01-The-Digital-Oscillator/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter/Asset/01-The-Analog-Filter/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter/Asset/01-The-Analog-Filter/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env/Asset/01-The-Cycling-Envelope-Generator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/04 Cycling Env/Asset/01-The-Cycling-Envelope-Generator/png"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/Asset/01-Middle-row-of-the-MicroFreak/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/Asset/01-Middle-row-of-the-MicroFreak/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6185,35 +6650,80 @@
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select/Asset/01-Octave-select/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select/Asset/01-Octave-select/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift/Asset/01-The-shift-button/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/02 Shift/Asset/01-The-shift-button/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq/Asset/01-The-Arpeggiator-and-the-Sequencers/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/03 Arp Seq/Asset/01-The-Arpeggiator-and-the-Sequencers/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO/Asset/01-The-LFO/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/04 LFO/Asset/01-The-LFO/png"
     ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env/Asset/01-The-Envelope-Generator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/05 Gen Env/Asset/01-The-Envelope-Generator/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard"
     ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard/Asset/01-The-Keyboard/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/06 Keyboard/Asset/01-The-Keyboard/png"
+    ],
     "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/01-The-icon-strip/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/01-The-icon-strip/png"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/02-Spice-&-Dice/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/07 Icon Strip/Asset/02-Spice-&-Dice/png"
+    ],
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/Asset/01-Bottom-row-of-the-MicroFreak/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/Asset/01-Bottom-row-of-the-MicroFreak/png"
     ],
     "Microfreak/UG/03 Overview/02 Rear Panel": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6225,40 +6735,85 @@
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs"
     ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs/Asset/01-Audio-output/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/01 Audio Outputs/Asset/01-Audio-output/png"
+    ],
     "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure/Asset/01-CV,-Gate-and-Pressure-outputs/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/02 Pitch Gate Pressure/Asset/01-CV,-Gate-and-Pressure-outputs/png"
     ],
     "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock"
     ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock/Asset/01-Clock-input-and-output/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock/Asset/01-Clock-input-and-output/png"
+    ],
     "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI/Asset/01-MIDI-input-and-output/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI/Asset/01-MIDI-input-and-output/png"
     ],
     "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In"
     ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In/Asset/01-The-USB-connector/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/05 USB DC In/Asset/01-The-USB-connector/png"
+    ],
     "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch/Asset/01-The-On-Off-switch/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch/Asset/01-The-On-Off-switch/png"
     ],
     "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector"
     ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector/Asset/01-The-power-connector/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector/Asset/01-The-power-connector/png"
+    ],
+    "Microfreak/UG/03 Overview/02 Rear Panel/Asset/01-Rear-Panel-Overview/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/02 Rear Panel/Asset/01-Rear-Panel-Overview/png"
+    ],
     "Microfreak/UG/03 Overview/03 Signal Flow": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/03 Overview/03 Signal Flow"
+    ],
+    "Microfreak/UG/03 Overview/03 Signal Flow/Asset/01-The-signal-flow-of-the-MicroFreak/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/03 Overview/03 Signal Flow/Asset/01-The-signal-flow-of-the-MicroFreak/png"
     ],
     "Microfreak/UG/04 Presets": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6269,6 +6824,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/04 Presets/01 Load Presets"
+    ],
+    "Microfreak/UG/04 Presets/01 Load Presets/Asset/01-Preset-Encoder/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/01 Load Presets/Asset/01-Preset-Encoder/png"
     ],
     "Microfreak/UG/04 Presets/02 Save Presets": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6285,6 +6845,11 @@
       ".",
       "Microfreak/UG/04 Presets/04 Panel"
     ],
+    "Microfreak/UG/04 Presets/04 Panel/Asset/01-Panel-Button/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/04 Presets/04 Panel/Asset/01-Panel-Button/png"
+    ],
     "Microfreak/UG/04 Presets/05 Digital Control": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6299,6 +6864,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/05 Connections/01 Control Signals"
+    ],
+    "Microfreak/UG/05 Connections/01 Control Signals/Asset/01-The-MicroFreak-Matrix/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/01 Control Signals/Asset/01-The-MicroFreak-Matrix/png"
     ],
     "Microfreak/UG/05 Connections/02 Matrix and Encoder": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6315,6 +6885,16 @@
       ".",
       "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations"
     ],
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations/Asset/01-Sample-assigned-as-a-Matrix-destination/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations/Asset/01-Sample-assigned-as-a-Matrix-destination/png"
+    ],
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder/Asset/01-The-Matrix-and-its-encoder/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/05 Connections/02 Matrix and Encoder/Asset/01-The-Matrix-and-its-encoder/png"
+    ],
     "Microfreak/UG/05 Connections/03 Freaky Ideas": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6329,6 +6909,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/01 as Soundgen"
+    ],
+    "Microfreak/UG/06 Dig Osc/01 as Soundgen/Asset/01-The-Digital-Oscillator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/01 as Soundgen/Asset/01-The-Digital-Oscillator/png"
     ],
     "Microfreak/UG/06 Dig Osc/02 Param Controls": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6350,110 +6935,225 @@
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves/Asset/01-Classic-Waveforms-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves/Asset/01-Classic-Waveforms-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave/Asset/01-The-Superwave-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave/Asset/01-The-Superwave-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable/Asset/01-The-Wavetable-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable/Asset/01-The-Wavetable-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo/Asset/01-Harmonic-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/04 Harmo/Asset/01-Harmonic-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr/Asset/01-Karplus-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr/Asset/01-Karplus-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog/Asset/01-Virtual-Analog-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog/Asset/01-Virtual-Analog-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper/Asset/01-Waveshaper-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper/Asset/01-Waveshaper-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM/Asset/01-Two-operator-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM/Asset/01-Two-operator-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/09 Formant": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/09 Formant"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/09 Formant/Asset/01-Granular-formant-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/09 Formant/Asset/01-Granular-formant-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/10 Chords": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/10 Chords"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/10 Chords/Asset/01-Chords-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/10 Chords/Asset/01-Chords-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/11 Speech": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/11 Speech"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/11 Speech/Asset/01-Vowel-and-speech-synthesis-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/11 Speech/Asset/01-Vowel-and-speech-synthesis-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/12 Modal": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/12 Modal"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/12 Modal/Asset/01-Modal-Resonator-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/12 Modal/Asset/01-Modal-Resonator-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/13 Noise": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/13 Noise"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/13 Noise/Asset/01-Noise-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/13 Noise/Asset/01-Noise-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/14 BASS": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/14 BASS"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/14 BASS/Asset/01-BASS-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/14 BASS/Asset/01-BASS-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX/Asset/01-SAWX-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/15 SAWX/Asset/01-SAWX-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/16 HARM": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/16 HARM"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/16 HARM/Asset/01-HARM-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/16 HARM/Asset/01-HARM-Oscillator-Model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser/Asset/01-User-Wavetable-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser/Asset/01-User-Wavetable-Oscillator-Model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/18 Sample": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/18 Sample"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/01-Sample-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/01-Sample-Oscillator-Model/png"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/02-Sample-display-showing-the-sample-select-menu-and-Start-value/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/18 Sample/Asset/02-Sample-display-showing-the-sample-select-menu-and-Start-value/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains/Asset/01-Scan-grains-oscillator-model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains/Asset/01-Scan-grains-oscillator-model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains/Asset/01-Cloud-grains-oscillator-model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains/Asset/01-Cloud-grains-oscillator-model/png"
     ],
     "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains"
     ],
+    "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains/Asset/01-Hit-grains-oscillator-model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains/Asset/01-Hit-grains-oscillator-model/png"
+    ],
     "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder"
+    ],
+    "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder/Asset/01-Vocoder-Oscillator-Model/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder/Asset/01-Vocoder-Oscillator-Model/png"
     ],
     "Microfreak/UG/07 Filter": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6505,6 +7205,11 @@
       ".",
       "Microfreak/UG/07 Filter/02 Animating Sound/02 Emphasis Resonance Modulation"
     ],
+    "Microfreak/UG/07 Filter/Asset/01-The-Analogue-Filter/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/07 Filter/Asset/01-The-Analogue-Filter/png"
+    ],
     "Microfreak/UG/08 LFO": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6529,6 +7234,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/08 LFO/03 Freaky Tips"
+    ],
+    "Microfreak/UG/08 LFO/Asset/01-The-MicroFreak-LFO/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/08 LFO/Asset/01-The-MicroFreak-LFO/png"
     ],
     "Microfreak/UG/09 Envelope Gen": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6590,15 +7300,30 @@
       ".",
       "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes"
     ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes/Asset/01-Velocity-Curves/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes/Asset/01-Velocity-Curves/png"
+    ],
     "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/03 Legato Options"
     ],
+    "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/Asset/01-The-Cycling-Envelope-Generator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/Asset/01-The-Cycling-Envelope-Generator/png"
+    ],
     "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/09 Envelope Gen/07 Cycling Envelope Suggestions"
+    ],
+    "Microfreak/UG/09 Envelope Gen/Asset/01-The-Envelope-Generator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/09 Envelope Gen/Asset/01-The-Envelope-Generator/png"
     ],
     "Microfreak/UG/10 Keyboard": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6625,15 +7350,35 @@
       ".",
       "Microfreak/UG/10 Keyboard/03 Glide"
     ],
+    "Microfreak/UG/10 Keyboard/03 Glide/Asset/01-The-Glide-Knob/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/03 Glide/Asset/01-The-Glide-Knob/png"
+    ],
     "Microfreak/UG/10 Keyboard/04 Octave Buttons": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/10 Keyboard/04 Octave Buttons"
     ],
+    "Microfreak/UG/10 Keyboard/04 Octave Buttons/Asset/01-The-Octave-Buttons/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/04 Octave Buttons/Asset/01-The-Octave-Buttons/png"
+    ],
     "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial"
+    ],
+    "Microfreak/UG/10 Keyboard/Asset/01-The-Touch-Capacitive-Keyboard/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/Asset/01-The-Touch-Capacitive-Keyboard/png"
+    ],
+    "Microfreak/UG/10 Keyboard/Asset/02-A-Key-in-Close-Up/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/10 Keyboard/Asset/02-A-Key-in-Close-Up/png"
     ],
     "Microfreak/UG/11 Icon Strip": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6645,10 +7390,25 @@
       ".",
       "Microfreak/UG/11 Icon Strip/01 Key Hold Button"
     ],
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/01-The-Hold-Icon/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/01-The-Hold-Icon/png"
+    ],
+    "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/02-The-alternative-functions-of-the-Hold-Icon/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/01 Key Hold Button/Asset/02-The-alternative-functions-of-the-Hold-Icon/png"
+    ],
     "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator"
+    ],
+    "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator/Asset/01-Arpeggio-and-Sequencer-Control-Icons/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/02 Sequencer and Arpeggiator/Asset/01-Arpeggio-and-Sequencer-Control-Icons/png"
     ],
     "Microfreak/UG/11 Icon Strip/03 Touch Strip": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6664,6 +7424,21 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend"
+    ],
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend/Asset/01-The-Bend-Strip/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend/Asset/01-The-Bend-Strip/png"
+    ],
+    "Microfreak/UG/11 Icon Strip/03 Touch Strip/Asset/01-Spice-and-Dice-and-Bend/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/03 Touch Strip/Asset/01-Spice-and-Dice-and-Bend/png"
+    ],
+    "Microfreak/UG/11 Icon Strip/Asset/01-The-Icon-Strip/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/11 Icon Strip/Asset/01-The-Icon-Strip/png"
     ],
     "Microfreak/UG/12 Arpeggiator": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6695,6 +7470,11 @@
       ".",
       "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync"
     ],
+    "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/Asset/01-The-Arpeggiator-and-the-Rate-Knob/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/Asset/01-The-Arpeggiator-and-the-Rate-Knob/png"
+    ],
     "Microfreak/UG/12 Arpeggiator/04 Making it Swing": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6704,6 +7484,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range"
+    ],
+    "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range/Asset/01-The-Arpeggiator-and-Range/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/05 Arpeggio Range/Asset/01-The-Arpeggiator-and-Range/png"
     ],
     "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6719,6 +7504,16 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/12 Arpeggiator/07 Arp Fun/01 Spicing up Arpeggios"
+    ],
+    "Microfreak/UG/12 Arpeggiator/Asset/01-The-Arpeggiator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/Asset/01-The-Arpeggiator/png"
+    ],
+    "Microfreak/UG/12 Arpeggiator/Asset/02-Arpeggiator-Pattern-Icons/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/12 Arpeggiator/Asset/02-Arpeggiator-Pattern-Icons/png"
     ],
     "Microfreak/UG/13 Sequencer": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6770,6 +7565,21 @@
       ".",
       "Microfreak/UG/13 Sequencer/01 Use/03 Record/05 Arp"
     ],
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/01-The-Sequencer-Controls/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/Asset/01-The-Sequencer-Controls/png"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/02-The-Sequencer-Controls-Stop-and-Start/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/Asset/02-The-Sequencer-Controls-Stop-and-Start/png"
+    ],
+    "Microfreak/UG/13 Sequencer/01 Use/Asset/03-The-Tie-Rest-Icon/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/01 Use/Asset/03-The-Tie-Rest-Icon/png"
+    ],
     "Microfreak/UG/13 Sequencer/02 Mod Tracks": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6779,6 +7589,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time"
+    ],
+    "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time/Asset/01-The-Rate-Knob/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/02 Mod Tracks/01 Step Time/Asset/01-The-Rate-Knob/png"
     ],
     "Microfreak/UG/13 Sequencer/02 Mod Tracks/02 Real Time": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6810,6 +7625,16 @@
       ".",
       "Microfreak/UG/13 Sequencer/03 Fun/03 Hoketus"
     ],
+    "Microfreak/UG/13 Sequencer/Asset/01-The-Arpeggio-and-Sequencer-Section/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/Asset/01-The-Arpeggio-and-Sequencer-Section/png"
+    ],
+    "Microfreak/UG/13 Sequencer/Asset/02-The-Shift-Button/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/13 Sequencer/Asset/02-The-Shift-Button/png"
+    ],
     "Microfreak/UG/14 Config": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6840,6 +7665,21 @@
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab"
     ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/01-Left-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/01-Left-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/02-Right-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/02-Right-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/03-Velocity-curve-settings/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab/Asset/03-Velocity-curve-settings/png"
+    ],
     "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6850,10 +7690,50 @@
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management"
     ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/01-Wavetable-management-buttons/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/01-Wavetable-management-buttons/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/02-New-Bank-name-prompt/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/02-New-Bank-name-prompt/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/03-Import-choices/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/03-Import-choices/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/04-Export-choices/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/04-Export-choices/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/05-Delete-confirmation/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/05-Delete-confirmation/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/06-Wavetable-transfer-progress/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/06-Wavetable-transfer-progress/png"
+    ],
     "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging/Asset/01-Dragging-a-wavetable-between-computer-and-MicroFreak/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging/Asset/01-Dragging-a-wavetable-between-computer-and-MicroFreak/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/Asset/01-Tab-for-loading-user-Wavetables/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/Asset/01-Tab-for-loading-user-Wavetables/png"
     ],
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6865,15 +7745,75 @@
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management"
     ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/01-Sample-management-buttons/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/01-Sample-management-buttons/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/02-New-Bank-name-prompt/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/02-New-Bank-name-prompt/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/03-Import-choices/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/03-Import-choices/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/04-Export-choices/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/04-Export-choices/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/05-Delete-confirmation/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/05-Delete-confirmation/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/06-Sample-transfer-progress/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management/Asset/06-Sample-transfer-progress/png"
+    ],
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging"
     ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging/Asset/01-Dragging-a-sample-between-computer-and-MicroFreak/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging/Asset/01-Dragging-a-sample-between-computer-and-MicroFreak/png"
+    ],
     "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/01-Delete-button-in-the-computer-pane/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/01-Delete-button-in-the-computer-pane/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/02-Delete-button-in-the-MicroFreak-pane/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting/Asset/02-Delete-button-in-the-MicroFreak-pane/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/01-Tab-for-loading-user-samples/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/01-Tab-for-loading-user-samples/png"
+    ],
+    "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/02-Sample-information-area/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/Asset/02-Sample-information-area/png"
+    ],
+    "Microfreak/UG/14 Config/Asset/01-Access-to-the-configuration-setting-in-Utility/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/14 Config/Asset/01-Access-to-the-configuration-setting-in-Utility/png"
     ],
     "Microfreak/UG/15 Using Scales": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6889,6 +7829,21 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/15 Using Scales/02 The Scale Root"
+    ],
+    "Microfreak/UG/15 Using Scales/Asset/01-C-Major-Intervals/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales/Asset/01-C-Major-Intervals/png"
+    ],
+    "Microfreak/UG/15 Using Scales/Asset/02-C-Major-Scale,-Root-D/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales/Asset/02-C-Major-Scale,-Root-D/png"
+    ],
+    "Microfreak/UG/15 Using Scales/Asset/03-C-Dorian-Scale/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/15 Using Scales/Asset/03-C-Dorian-Scale/png"
     ],
     "Microfreak/UG/16 Paraphonic Chord Mode": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6920,6 +7875,21 @@
       ".",
       "Microfreak/UG/17 Ext Gear/01 Computer Connection"
     ],
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/01-MicroFreak-Computer-connection/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/01-MicroFreak-Computer-connection/png"
+    ],
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/02-MicroFreak-with-power-bank/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/02-MicroFreak-with-power-bank/png"
+    ],
+    "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/03-MIDI-to-Modular/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/01 Computer Connection/Asset/03-MIDI-to-Modular/png"
+    ],
     "Microfreak/UG/17 Ext Gear/02 CV Gate": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6929,6 +7899,21 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure"
+    ],
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/01-CV-Gate-outputs/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/01-CV-Gate-outputs/png"
+    ],
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/02-CV-Gate-setting-in-the-MIDI-Control-Center/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/02-CV-Gate-setting-in-the-MIDI-Control-Center/png"
+    ],
+    "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/03-CV-setting-in-the-MIDI-Control-Center/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/02 CV Gate/01 Pitch Gate and Pressure/Asset/03-CV-setting-in-the-MIDI-Control-Center/png"
     ],
     "Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations": [
       "github.com/codekiln/logseq-encode-garden",
@@ -6965,6 +7950,11 @@
       ".",
       "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack"
     ],
+    "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack/Asset/01-VCV-Rack-MIDI-CV-patch/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack/Asset/01-VCV-Rack-MIDI-CV-patch/png"
+    ],
     "Microfreak/UG/17 Ext Gear/09 MIDI CC Control": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -6975,10 +7965,20 @@
       ".",
       "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC"
     ],
+    "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC/Asset/01-VCV-Rack-MIDI-CC-patch/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC/Asset/01-VCV-Rack-MIDI-CC-patch/png"
+    ],
     "Microfreak/UG/17 Ext Gear/11 MIDI CC Values": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/17 Ext Gear/11 MIDI CC Values"
+    ],
+    "Microfreak/UG/17 Ext Gear/Asset/01-MicroFreak-Rear-Panel/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/17 Ext Gear/Asset/01-MicroFreak-Rear-Panel/png"
     ],
     "Microfreak/UG/18 Appendix A Speech Osc": [
       "github.com/codekiln/logseq-encode-garden",
@@ -7020,10 +8020,30 @@
       ".",
       "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre"
     ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre/Asset/01-Vocoder-filter-bands/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre/Asset/01-Vocoder-filter-bands/png"
+    ],
     "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/02 Shape"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/01-The-Digital-Oscillator/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/01-The-Digital-Oscillator/png"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/02-Vocoder-waveforms/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/Asset/02-Vocoder-waveforms/png"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/Asset/01-Vocoder-signal-path/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/Asset/01-Vocoder-signal-path/png"
     ],
     "Microfreak/UG/19 Appendix B Vocoder/03 Connect Mic": [
       "github.com/codekiln/logseq-encode-garden",
@@ -7090,6 +8110,16 @@
       ".",
       "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources"
     ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/01-Headphone-Microphone-Splitter/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/01-Headphone-Microphone-Splitter/png"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/02-CTIA-AHJ-Connector/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/03 External Sources/Asset/02-CTIA-AHJ-Connector/png"
+    ],
     "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -7099,6 +8129,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings"
+    ],
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings/Asset/01-MIDI-Control-Center-Vocoder-Settings/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/04 MIDI Control Center/01 Settings/Asset/01-MIDI-Control-Center-Vocoder-Settings/png"
     ],
     "Microfreak/UG/19 Appendix B Vocoder/09 Package": [
       "github.com/codekiln/logseq-encode-garden",
@@ -7154,6 +8189,11 @@
       "github.com/codekiln/logseq-encode-garden",
       ".",
       "Microfreak/UG/22 Declaration of Conformity/06 WEEE"
+    ],
+    "Microfreak/UG/22 Declaration of Conformity/06 WEEE/Asset/01-Crossed-out-Wheeled-Bin/png": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Microfreak/UG/22 Declaration of Conformity/06 WEEE/Asset/01-Crossed-out-Wheeled-Bin/png"
     ],
     "Microfreak/UG/23 Software License Agreement": [
       "github.com/codekiln/logseq-encode-garden",

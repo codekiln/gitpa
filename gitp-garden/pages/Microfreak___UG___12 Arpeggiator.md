@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/11 Icon Strip]]
 next:: [[Microfreak/UG/13 Sequencer]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F12%20Arpeggiator
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___12%20Arpeggiator.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___12%20Arpeggiator.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 12 The Arpeggiator
 	- An arpeggiator breaks a chord into individual notes and plays them one by one.
@@ -16,9 +16,9 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 		- **Random** plays the notes in a random order.
 		- **Pattern** generates a semi-random pattern from legato key presses.
 	- The Arpeggiator
-		- ![01 The Arpeggiator](../assets/Microfreak___UG___12-Arpeggiator___01-The-Arpeggiator.png)
+		- ![01 The Arpeggiator](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___Asset___01-The-Arpeggiator.png)
 	- Arpeggiator pattern icons
-		- ![02 Arpeggiator Pattern Icons](../assets/Microfreak___UG___12-Arpeggiator___02-Arpeggiator-Pattern-Icons.png)
+		- ![02 Arpeggiator Pattern Icons](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___Asset___02-Arpeggiator-Pattern-Icons.png)
 	- {{embed [[Microfreak/UG/12 Arpeggiator/01 Using Patterns]]}}
 	- {{embed [[Microfreak/UG/12 Arpeggiator/02 Gates and Triggers]]}}
 	- {{embed [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate]]}}

@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/22 Declaration of Conformity]]
 next:: [[Microfreak/UG/22 Declaration of Conformity/02 Canada]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F22%20Declaration%20of%20Conformity%2F01%20FCC
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___22%20Declaration%20of%20Conformity___01%20FCC.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___22%20Declaration%20of%20Conformity___01%20FCC.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 22.1 FCC
 	- > [[Note/Warning]] Unapproved modifications can void the user's authority to operate the equipment.

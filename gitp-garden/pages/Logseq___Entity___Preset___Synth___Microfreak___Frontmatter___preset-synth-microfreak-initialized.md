@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]], [[Logseq/Entity/Proxy/Page]]
 alias:: preset-synth-microfreak-initialized
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPreset%2FSynth%2FMicrofreak%2FFrontmatter%2Fpreset-synth-microfreak-initialized
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Entity___Preset___Synth___Microfreak___Frontmatter___preset-synth-microfreak-initialized.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Entity___Preset___Synth___Microfreak___Frontmatter___preset-synth-microfreak-initialized.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Initialized Preset
 	- Owning type: [[Logseq/Entity/Preset/Synth/Microfreak]].

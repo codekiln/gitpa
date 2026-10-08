@@ -3,11 +3,11 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/03 Overview]]
 prev:: [[Microfreak/UG/03 Overview/02 Rear Panel]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F03%20Signal%20Flow
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___03%20Overview___03%20Signal%20Flow.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___03%20Overview___03%20Signal%20Flow.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 03.03 Signal Flow
 	- The Digital Oscillator sends its waveform to the Filter and an analog VCA. The main Envelope has a fixed connection to the VCA. With **Amp Mod** on, the main Envelope controls the VCA; with **Amp Mod** off, the keyboard Gate controls it.
 	- The signal flow of the MicroFreak
-		- ![01 The signal flow of the MicroFreak](../assets/Microfreak___UG___03-Overview___03-Signal-Flow___01-The-signal-flow-of-the-MicroFreak.png)
+		- ![01 The signal flow of the MicroFreak](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___03%20Signal%20Flow___Asset___01-The-signal-flow-of-the-MicroFreak.png)
 	- In Paraphonic mode with **Amp Mod** on, copies of the envelope control internal digital VCAs, one for each voice set in Utility.
 	- The main Envelope also controls Filter cutoff through the **Filter Amount** knob. Turning the knob lights the envelope-to-filter connection in the Matrix.

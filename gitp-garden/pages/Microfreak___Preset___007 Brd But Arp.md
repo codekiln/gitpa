@@ -9,6 +9,6 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/006 Aft-WavPad]]
 next:: [[Microfreak/Preset/008 Invitation]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F007%20Brd%20But%20Arp
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___Preset___007%20Brd%20But%20Arp.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___007%20Brd%20But%20Arp.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

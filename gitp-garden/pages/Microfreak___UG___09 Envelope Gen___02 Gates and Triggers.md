@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/09 Envelope Gen]]
 prev:: [[Microfreak/UG/09 Envelope Gen/01 What an Envelope Does]]
 next:: [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen%2F02%20Gates%20and%20Triggers
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___09%20Envelope%20Gen___02%20Gates%20and%20Triggers.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen___02%20Gates%20and%20Triggers.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09.2 Gates and Triggers
 	- An envelope needs a trigger or a gate to start.

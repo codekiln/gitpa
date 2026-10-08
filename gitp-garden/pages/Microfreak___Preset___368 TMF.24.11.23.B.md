@@ -9,7 +9,7 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/367 TMF.24.11.23.A]]
 next:: [[Microfreak/Preset/369 TMF.24.11.23.C]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F368%20TMF.24.11.23.B
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___Preset___368%20TMF.24.11.23.B.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___368%20TMF.24.11.23.B.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # TMF.24.11.23.B

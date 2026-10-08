@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG]]
 next:: [[Microfreak/UG/02 Installation]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F01%20Welcome%20and%20Introduction
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___01%20Welcome%20and%20Introduction.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___01%20Welcome%20and%20Introduction.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 01 Welcome and Introduction

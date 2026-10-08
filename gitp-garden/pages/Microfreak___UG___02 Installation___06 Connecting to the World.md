@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/02 Installation]]
 prev:: [[Microfreak/UG/02 Installation/05 Register Instrument]]
 next:: [[Microfreak/UG/02 Installation/07 Latest Firmware]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F02%20Installation%2F06%20Connecting%20to%20the%20World
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___02%20Installation___06%20Connecting%20to%20the%20World.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___02%20Installation___06%20Connecting%20to%20the%20World.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 02.06 Connecting the MicroFreak to the World
 	- Turn off all audio equipment before connecting anything to avoid damage to speakers, the MicroFreak, or other equipment.

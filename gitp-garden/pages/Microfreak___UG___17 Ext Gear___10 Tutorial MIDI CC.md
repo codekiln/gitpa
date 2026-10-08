@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]]
 next:: [[Microfreak/UG/17 Ext Gear/11 MIDI CC Values]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F10%20Tutorial%20MIDI%20CC
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.9 Tutorial 3: sending CC# codes from the MicroFreak
 	- Turning a MicroFreak knob sends a CC# code. If you know the code for a dial, slider, or switch, you can use it to control an external parameter.
@@ -15,7 +15,7 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 	- Select the first entry, 0; it changes to a dash. Turn the MicroFreak's Cyclic Envelope Rise knob. The first field displays 5, the Rise parameter's CC#.
 	- Repeat for Fall, Hold, and Amount. Their CC# values appear in the connection fields.
 	- VCV Rack MIDI-CC patch
-		- ![01 VCV Rack MIDI-CC patch](../assets/Microfreak___UG___17-Ext-Gear___10-Tutorial-MIDI-CC___01-VCV-Rack-MIDI-CC-Patch.png)
+		- ![01 VCV Rack MIDI-CC patch](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC___Asset___01-VCV-Rack-MIDI-CC-patch.png)
 	- Connect the patch points to the ADSR CV inputs:
 		- First patch point to Attack
 		- Second patch point to Decay

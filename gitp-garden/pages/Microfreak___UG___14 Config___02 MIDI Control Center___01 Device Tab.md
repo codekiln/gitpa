@@ -3,12 +3,12 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config/02 MIDI Control Center]]
 next:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F02%20MIDI%20Control%20Center%2F01%20Device%20Tab
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.2.1 Device Tab
 	- The Device tab contains MIDI and configuration settings for the MicroFreak.
 	- Left column of MicroFreak Device Tab in MIDI Control Center
-		- ![01 Left column of MicroFreak Device Tab in MIDI Control Center](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___01-Device-Tab___01-Left-Column.png)
+		- ![01 Left column of MicroFreak Device Tab in MIDI Control Center](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab___Asset___01-Left-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center.png)
 	- ## MIDI
 		- **MIDI Input Channel**: All, 1–16, or None. Sets the receive channel on the MicroFreak's 16-channel MIDI port.
 		- **MIDI Output Channel**: 1–16. Sets the transmit channel.
@@ -29,7 +29,7 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 		- **CV 0 V reference**: C−1 to G8. Sets the note that outputs zero volts in volts-per-octave pitch formats.
 		- **CV 1 V reference**: C−1 to G8. Sets the note that outputs one volt in Hz/V pitch format.
 	- Right column of MicroFreak Device Tab in MIDI Control Center
-		- ![02 Right column of MicroFreak Device Tab in MIDI Control Center](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___01-Device-Tab___02-Right-Column.png)
+		- ![02 Right column of MicroFreak Device Tab in MIDI Control Center](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab___Asset___02-Right-column-of-MicroFreak-Device-Tab-in-MIDI-Control-Center.png)
 	- ## Controls and browsing
 		- **Knob Catch** sets how a knob's physical position meets its stored value when sending MIDI:
 			- **Jump** sends the physical position as soon as the knob moves, possibly changing the value abruptly.
@@ -48,7 +48,7 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 			- **Logarithmic** reaches louder notes with less force, but makes low-level dynamics harder to control.
 			- **Exponential** gives finer control at low levels, but needs more force for high levels.
 		- Velocity curve settings
-			- ![03 Velocity curve settings](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___01-Device-Tab___03-Velocity-Curve.png)
+			- ![03 Velocity curve settings](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___01%20Device%20Tab___Asset___03-Velocity-curve-settings.png)
 		- **Relative Bend**: When Off, the bend strip's physical center is zero bend. When On, the first point of contact becomes zero, allowing a wider gesture such as a dive bomb.
 	- ## Scale and microphone
 		- **Scale**: Off plays the chromatic scale. Selecting a scale prevents notes outside it; see [[Microfreak/UG/15 Using Scales]].

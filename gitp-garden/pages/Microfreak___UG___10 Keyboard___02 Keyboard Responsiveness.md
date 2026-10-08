@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/10 Keyboard]]
 prev:: [[Microfreak/UG/10 Keyboard/01 Gates and Triggers]]
 next:: [[Microfreak/UG/10 Keyboard/03 Glide]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F10%20Keyboard%2F02%20Keyboard%20Responsiveness
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___10%20Keyboard___02%20Keyboard%20Responsiveness.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___10%20Keyboard___02%20Keyboard%20Responsiveness.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 10.2 Keyboard Responsiveness
 	- Set the keyboard to send aftertouch or velocity at Utility → Preset → Press Mode. This choice changes how the keyboard responds to touch.

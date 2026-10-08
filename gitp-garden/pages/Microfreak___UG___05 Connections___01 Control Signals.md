@@ -3,12 +3,12 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/05 Connections]]
 next:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F01%20Control%20Signals
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___05%20Connections___01%20Control%20Signals.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___01%20Control%20Signals.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.1 Control Signals
 	- The Matrix connects control signals from the MicroFreak's modules. These signals move more slowly than audio and are suited to controlling sound.
 	- The MicroFreak Matrix
-		- ![01 The MicroFreak Matrix](../assets/Microfreak___UG___05-Connections___01-Control-Signals___01-The-MicroFreak-Matrix.png)
+		- ![01 The MicroFreak Matrix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___05%20Connections___01%20Control%20Signals___Asset___01-The-MicroFreak-Matrix.png)
 	- Control signals usually move between 0 and 100 Hz. They can modulate the Digital Oscillator, Analog Filter, and other destinations. The Matrix encoder sets their amount from -100% to +100%.
 	- The MicroFreak's modules generate control signals in different ways.
 		- The LFO makes slow, regular waves. Routed to oscillator pitch, it makes the pitch rise and fall; it can reach 100 Hz.

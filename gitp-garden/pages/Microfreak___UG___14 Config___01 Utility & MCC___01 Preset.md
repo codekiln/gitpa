@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config/01 Utility & MCC]]
 next:: [[Microfreak/UG/14 Config/01 Utility & MCC/02 Global]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F01%20Utility%20%26%20MCC%2F01%20Preset
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___14%20Config___01%20Utility%20%26%20MCC___01%20Preset.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___01%20Utility%20%26%20MCC___01%20Preset.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.1.1 Preset
 	- These settings are saved with each preset and are available in Utility. They are unavailable in MCC.

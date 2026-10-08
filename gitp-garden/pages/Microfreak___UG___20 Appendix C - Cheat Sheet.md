@@ -4,7 +4,7 @@ up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/19 Appendix B Vocoder]]
 next:: [[Microfreak/UG/21 Appendix D - CC Values]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F20%20Appendix%20C%20-%20Cheat%20Sheet
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___20%20Appendix%20C%20-%20Cheat%20Sheet.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___20%20Appendix%20C%20-%20Cheat%20Sheet.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 20 Appendix C: Cheat Sheet
 	- ## Preset

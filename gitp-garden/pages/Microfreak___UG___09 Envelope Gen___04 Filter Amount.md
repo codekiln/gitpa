@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/09 Envelope Gen]]
 prev:: [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
 next:: [[Microfreak/UG/09 Envelope Gen/05 Amp Mod Button]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F09%20Envelope%20Gen%2F04%20Filter%20Amount
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___09%20Envelope%20Gen___04%20Filter%20Amount.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___09%20Envelope%20Gen___04%20Filter%20Amount.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 09.4 Filter amount
 	- The Standard Envelope can control filter cutoff and amplitude. When Amp Mod is off, the envelope controls filter cutoff. When Amp Mod is on, it controls both volume and filter cutoff.

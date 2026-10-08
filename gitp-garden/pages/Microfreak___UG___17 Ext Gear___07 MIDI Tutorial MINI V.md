@@ -4,7 +4,7 @@ up:: [[Microfreak/UG/17 Ext Gear]]
 prev:: [[Microfreak/UG/17 Ext Gear/06 MIDI Channels]]
 next:: [[Microfreak/UG/17 Ext Gear/08 MIDI Tutorial VCV Rack]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F17%20Ext%20Gear%2F07%20MIDI%20Tutorial%20MINI%20V
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___17%20Ext%20Gear___07%20MIDI%20Tutorial%20MINI%20V.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___17%20Ext%20Gear___07%20MIDI%20Tutorial%20MINI%20V.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 17.6 Tutorial 1: Using MIDI to control the MINI V VST synth
 	- This tutorial uses the MicroFreak to control the filter frequency in Arturia MINI V. The same method works with any V Collection instrument that receives MIDI on channel 4.

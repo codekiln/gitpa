@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG]]
 prev:: [[Microfreak/UG/22 Declaration of Conformity]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F23%20Software%20License%20Agreement
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___23%20Software%20License%20Agreement.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___23%20Software%20License%20Agreement.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 23 Software License Agreement
 	- Arturia (the Licensor) grants the Licensee a nonexclusive right to use this copy of the software in return for a license fee included in the purchase price. Arturia SA owns all intellectual property rights in the software. Copying, downloading, installing, and using the software are subject to this agreement.

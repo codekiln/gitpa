@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/19 Appendix B Vocoder]]
 next:: [[Microfreak/UG/19 Appendix B Vocoder/02 How It Works]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F19%20Appendix%20B%20Vocoder%2F01%20Intro
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___01%20Intro.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___19%20Appendix%20B%20Vocoder___01%20Intro.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 19.1. An Introduction to Vocoding
 	- Bell Labs patented the first vocoder in 1939 to speed up telephone connections. Musical vocoders appeared about forty years later and became known for their robotic sound. Artists have since used them in many ways, from Kraftwerk's “Autobahn” to Imogen Heap's “Hide and Seek.”

@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 prev:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F05%20Connections%2F02%20Matrix%20and%20Encoder%2F02%20Assigning%20Destinations
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 05.2.2 Assigning destinations
 	- Assign1, Assign2, and Assign3 are user-defined destinations. They can turn nearly any MicroFreak knob into a modulation destination.
@@ -27,7 +27,7 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 		- **Matrix Modulation Amount:** modulation amount of a Matrix point.
 	- Starting with MicroFreak firmware 5.0.0, Sample can be assigned by opening the Sample select menu, pressing one of the three Assign buttons, and turning the Type knob.
 	- Sample assigned as a Matrix destination
-		- ![01 Sample assigned as a Matrix destination](../assets/Microfreak___UG___05-Connections___02-Matrix-and-Encoder___02-Assigning-Destinations___01-Sample-Assigned-as-a-Matrix-Destination.png)
+		- ![01 Sample assigned as a Matrix destination](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations___Asset___01-Sample-assigned-as-a-Matrix-destination.png)
 	- A Matrix connection's modulation amount can itself be modulated. To vary vibrato depth with the Cycling Envelope:
 		- Route the LFO to oscillator Pitch.
 		- Select CycEnv→Assign1 in the Matrix and hold Assign1.

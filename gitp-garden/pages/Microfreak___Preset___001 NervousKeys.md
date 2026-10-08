@@ -12,6 +12,6 @@ preset-synth-microfreak-vcf-cutoff-raw-hex:: 0x00da3c
 preset-synth-microfreak-vcf-reso-raw-hex:: 0x006851
 next:: [[Microfreak/Preset/002 Punisher]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F001%20NervousKeys
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___Preset___001%20NervousKeys.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___Preset___001%20NervousKeys.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Notes

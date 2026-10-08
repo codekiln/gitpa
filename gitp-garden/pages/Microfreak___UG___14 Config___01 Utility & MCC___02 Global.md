@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Pa
 up:: [[Microfreak/UG/14 Config/01 Utility & MCC]]
 prev:: [[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F14%20Config%2F01%20Utility%20%26%20MCC%2F02%20Global
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Microfreak___UG___14%20Config___01%20Utility%20%26%20MCC___02%20Global.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Microfreak___UG___14%20Config___01%20Utility%20%26%20MCC___02%20Global.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # 14.1.2 Global
 	- Global settings are available in both Utility and MIDI Control Center (MCC), except Reset Setting, which is available only in Utility.
