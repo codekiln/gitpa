@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/06 Note Mode]]
 next:: [[Launchpad/UG/08 Custom Modes]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F07%20Chord%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___07%20Chord%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___07%20Chord%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 7. Chord Mode

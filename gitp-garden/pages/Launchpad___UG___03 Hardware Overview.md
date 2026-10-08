@@ -4,7 +4,7 @@ up:: [[Launchpad/UG]]
 prev:: [[Launchpad/UG/02 Getting Up and Running]]
 next:: [[Launchpad/UG/04 Launchpad Pro Interface]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F03%20Hardware%20Overview
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___03%20Hardware%20Overview.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___03%20Hardware%20Overview.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 3. Hardware Overview

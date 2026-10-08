@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/08 Custom Modes]]
 prev:: [[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]]
 next:: [[Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F08%20Custom%20Modes%2F03%20Master%20MIDI%20Channel
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___08%20Custom%20Modes___03%20Master%20MIDI%20Channel.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___08%20Custom%20Modes___03%20Master%20MIDI%20Channel.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 8.3 Custom Mode Master MIDI Channel

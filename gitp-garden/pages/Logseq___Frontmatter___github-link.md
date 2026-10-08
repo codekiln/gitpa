@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Fgithub-link
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Frontmatter___github-link.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Frontmatter___github-link.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # `github-link::` for the page's own source on [[GitHub]]
 	- `github-link::` holds the GitHub URL of this page's own source file in the garden repo, so a reader of the deployed web garden can open or edit the underlying Markdown.

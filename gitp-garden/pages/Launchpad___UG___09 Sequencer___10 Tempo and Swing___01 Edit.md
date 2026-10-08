@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
 up:: [[Launchpad/UG/09 Sequencer/10 Tempo and Swing]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F10%20Tempo%20and%20Swing%2F01%20Edit
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___09%20Sequencer___10%20Tempo%20and%20Swing___01%20Edit.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___09%20Sequencer___10%20Tempo%20and%20Swing___01%20Edit.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 9.10.1 Editing Tempo and Swing

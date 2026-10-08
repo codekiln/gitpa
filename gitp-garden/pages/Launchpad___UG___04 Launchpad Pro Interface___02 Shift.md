@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/04 Launchpad Pro Interface]]
 prev:: [[Launchpad/UG/04 Launchpad Pro Interface/01 Modes]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F04%20Launchpad%20Pro%20Interface%2F02%20Shift
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___04%20Launchpad%20Pro%20Interface___02%20Shift.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___04%20Launchpad%20Pro%20Interface___02%20Shift.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 4.2 Shift

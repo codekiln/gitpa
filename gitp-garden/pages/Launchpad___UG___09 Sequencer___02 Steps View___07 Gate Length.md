@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/09 Sequencer/02 Steps View]]
 prev:: [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]]
 next:: [[Launchpad/UG/09 Sequencer/02 Steps View/08 Tracks]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F02%20Steps%20View%2F07%20Gate%20Length
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___09%20Sequencer___02%20Steps%20View___07%20Gate%20Length.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___09%20Sequencer___02%20Steps%20View___07%20Gate%20Length.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 9.2.7 Setting gate length

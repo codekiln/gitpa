@@ -4,7 +4,7 @@ up:: [[Launchpad/UG/10 Setup]]
 prev:: [[Launchpad/UG/10 Setup/06 Fader Settings]]
 next:: [[Launchpad/UG/10 Setup/08 Bootloader Menu]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F10%20Setup%2F07%20Live%20and%20Programmer%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___10%20Setup___07%20Live%20and%20Programmer%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___10%20Setup___07%20Live%20and%20Programmer%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 10.7 Live and Programmer Mode

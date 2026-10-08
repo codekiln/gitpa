@@ -1,7 +1,7 @@
 public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FAsset%2FB2
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Logseq___Entity___Asset___B2.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Asset___B2.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 - # Backblaze B2 Asset
 	- In this garden, **Backblaze B2 Asset** pages represent files stored in Backblaze B2, following [[Logseq/Entity/Asset]] for filenames, ownership, and page contents.

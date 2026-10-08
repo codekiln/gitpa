@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/06 Note Mode]]
 prev:: [[Launchpad/UG/06 Note Mode/05 Overlap]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F06%20Note%20Mode%2F06%20Drum%20Mode
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___06%20Note%20Mode___06%20Drum%20Mode.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___06%20Note%20Mode___06%20Drum%20Mode.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 6.6 Drum Mode

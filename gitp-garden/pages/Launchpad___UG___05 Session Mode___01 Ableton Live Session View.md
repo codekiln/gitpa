@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Proxy/Pa
 up:: [[Launchpad/UG/05 Session Mode]]
 next:: [[Launchpad/UG/05 Session Mode/02 Session Overview]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F05%20Session%20Mode%2F01%20Ableton%20Live%20Session%20View
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F204-guide-images-b2/pages/Launchpad___UG___05%20Session%20Mode___01%20Ableton%20Live%20Session%20View.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___05%20Session%20Mode___01%20Ableton%20Live%20Session%20View.md
 logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # 5.1 Ableton Live’s Session View
