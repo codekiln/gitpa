@@ -27,19 +27,31 @@ def select(source, namespace):
         for file in (source / directory).glob('*.md'):
             logical.update(n for n in REF.findall(file.read_text()) if within(n, namespace))
     missing = logical - files.keys()
+    entity_roots = set()
+    for name in selected:
+        for line in files[name].read_text().splitlines():
+            if line.startswith("logseq-entity::"):
+                entity_roots.update("/".join(ref.split("/")[:3]) for ref in REF.findall(line))
+    for ref in list(files):
+        if within(ref, "Logseq/Frontmatter"):
+            selected.add(ref)
     queue = list(selected)
     support_missing = set()
     while queue:
         name = queue.pop()
         # Supporting entity and frontmatter dictionaries may live outside the namespace.
-        refs = REF.findall(files[name].read_text())
+        text = files[name].read_text()
+        if name in ("Logseq/Entity/Definition", "Logseq/Entity/Frontmatter/Definition", "Logseq/Entity/Proxy/Page"):
+            text = text.split("- #", 1)[0]
+        refs = REF.findall(text)
         for ref in refs:
-            if any(within(ref, p) for p in SUPPORT):
+            if within(ref, "Logseq/Frontmatter") or any(within(ref, p) for p in entity_roots) or ref in ("Logseq/Entity/Definition", "Logseq/Entity/Frontmatter/Definition") or "/Frontmatter/" in ref and within(ref, "Logseq/Entity"):
                 candidates = [ref] + [ref.rsplit('/', i)[0] for i in range(1, ref.count('/') + 1)]
                 for candidate in candidates:
                     if candidate in files and candidate not in selected:
                         selected.add(candidate)
-                        queue.append(candidate)
+                        if candidate not in SUPPORT and any(within(candidate, hub) for hub in SUPPORT):
+                            queue.append(candidate)
                     elif candidate not in files:
                         support_missing.add(candidate)
     return files, selected, sorted(missing), sorted(support_missing)
