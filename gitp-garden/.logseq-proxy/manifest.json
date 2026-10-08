@@ -54,6 +54,15 @@
     "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3": {
       "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
     },
+    "GitP/A/Session/26/10/06-Thu": {
+      "logseq-entity": "[[Logseq/Entity/Podcast/Episode]]"
+    },
+    "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
+    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
+      "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+    },
     "Logseq/Entity/Asset/B2": {
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
@@ -67,20 +76,48 @@
       "logseq-entity": "[[Logseq/Entity/Definition]]"
     },
     "Logseq/Entity/Proxy/Page": {
-      "entity-tasks": "[[Logseq/Entity/Proxy/Page/mise/Task/sync]]",
+      "entity-tasks": "[[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]",
       "logseq-entity": "[[Logseq/Entity/Definition]]"
+    },
+    "Logseq/Entity/Proxy/Page/mise/Task/docs/serve": {
+      "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
+      "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/docs/serve",
+      "task-config-root": ".",
+      "task-entrypoint": "mise-tasks/logseq/entity/proxy/page/docs/serve",
+      "task-files": "{\"mise-tasks/logseq/entity/proxy/page/docs/serve\":\"mise-tasks/logseq/entity/proxy/page/docs/serve\",\"mise-tasks/logseq/entity/proxy/page/docs/index.html\":\"mise-tasks/logseq/entity/proxy/page/docs/index.html\"}",
+      "task-name": "logseq:entity:proxy:page:docs:serve",
+      "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
     },
     "Logseq/Entity/Proxy/Page/mise/Task/sync": {
       "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
       "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync",
       "task-config-root": ".",
+      "task-dependencies": "[[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]",
       "task-entrypoint": "mise-tasks/logseq/entity/proxy/page/sync",
-      "task-files": "{\"mise-tasks/logseq/entity/proxy/page/sync\":\"mise-tasks/logseq/entity/proxy/page/sync\",\"mise-tasks/logseq/entity/proxy/page/lib/core.py\":\"mise-tasks/logseq/entity/proxy/page/lib/core.py\",\"mise-tasks/logseq/entity/proxy/page/lib/companions.py\":\"mise-tasks/logseq/entity/proxy/page/lib/companions.py\"}",
+      "task-files": "{\"mise-tasks/logseq/entity/proxy/page/sync\":\"mise-tasks/logseq/entity/proxy/page/sync\",\"mise-tasks/logseq/entity/proxy/page/lib/core.py\":\"mise-tasks/logseq/entity/proxy/page/lib/core.py\",\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\":\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\"}",
       "task-name": "logseq:entity:proxy:page:sync",
       "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
     }
   },
   "files": {
+    "mise-tasks/logseq/entity/proxy/page/docs/index.html": {
+      "mode": 420,
+      "sha256": "832ce80b4e705a9a25933ce10fabd69b3e7d8f3eface1eb2f26d27c46bc15d08",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html"
+      ]
+    },
+    "mise-tasks/logseq/entity/proxy/page/docs/serve": {
+      "mode": 493,
+      "sha256": "e13bef969fc38baced4f9a4129a684595b979481eff73037e07526764ed11d85",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve"
+      ]
+    },
     "mise-tasks/logseq/entity/proxy/page/lib/companions.py": {
       "mode": 420,
       "sha256": "9527f6bca636edf9c9425c5c774c4333ed028025cdc56de849e0828dc703fc87",
@@ -99,9 +136,18 @@
         "mise-tasks/logseq/entity/proxy/page/lib/core.py"
       ]
     },
+    "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py": {
+      "mode": 420,
+      "sha256": "11b952bac59727a617009e0692f2b4c41ea1739c7aa486296830b864b7b3415a",
+      "source": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py"
+      ]
+    },
     "mise-tasks/logseq/entity/proxy/page/sync": {
       "mode": 493,
-      "sha256": "4dc4adbcd690cb3d37fac58a7471454dc019d57160e8afc609d2508b1632a5ff",
+      "sha256": "d67da47d08b33cb0fba54f60555cfe9c7a87ba17257fd97b937e123629c32b0f",
       "source": [
         "github.com/codekiln/logseq-encode-garden",
         ".",
@@ -200,9 +246,34 @@
       "page": "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3",
       "source_graph": "."
     },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/06-Thu",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3",
+      "source_graph": "."
+    },
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset/B2": {
       "files": [],
       "page": "Logseq/Entity/Asset/B2",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Definition": {
+      "files": [],
+      "page": "Logseq/Entity/Definition",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Mise/Task": {
+      "files": [],
+      "page": "Logseq/Entity/Mise/Task",
       "source_graph": "."
     },
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Podcast/Episode": {
@@ -212,11 +283,25 @@
     },
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Proxy/Page": {
       "files": [
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve",
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py",
+        "mise-tasks/logseq/entity/proxy/page/sync"
+      ],
+      "page": "Logseq/Entity/Proxy/Page",
+      "source_graph": "."
+    },
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Proxy/Page/mise/Task/sync": {
+      "files": [
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve",
         "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
         "mise-tasks/logseq/entity/proxy/page/lib/core.py",
         "mise-tasks/logseq/entity/proxy/page/sync"
       ],
-      "page": "Logseq/Entity/Proxy/Page",
+      "page": "Logseq/Entity/Proxy/Page/mise/Task/sync",
       "source_graph": "."
     }
   },
@@ -311,6 +396,21 @@
       ".",
       "GitP/A/Session/26/09/25-Fri/Asset/Synth/Full/mp3"
     ],
+    "GitP/A/Session/26/10/06-Thu": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/06-Thu"
+    ],
+    "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/06-Thu/Asset/MIDI/Full/mid"
+    ],
+    "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3"
+    ],
     "Logseq/Entity/Asset/B2": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -336,6 +436,11 @@
       ".",
       "Logseq/Entity/Proxy/Page"
     ],
+    "Logseq/Entity/Proxy/Page/mise/Task/docs/serve": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "Logseq/Entity/Proxy/Page/mise/Task/docs/serve"
+    ],
     "Logseq/Entity/Proxy/Page/mise/Task/sync": [
       "github.com/codekiln/logseq-encode-garden",
       ".",
@@ -343,6 +448,19 @@
     ]
   },
   "tasks": {
+    "Logseq/Entity/Proxy/Page/mise/Task/docs/serve": {
+      "identity": [
+        "github.com/codekiln/logseq-encode-garden",
+        ".",
+        "[[Person/codekiln/GitHub/logseq-encode-garden]]",
+        ".",
+        "logseq:entity:proxy:page:docs:serve"
+      ],
+      "mapping": {
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html": "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve": "mise-tasks/logseq/entity/proxy/page/docs/serve"
+      }
+    },
     "Logseq/Entity/Proxy/Page/mise/Task/sync": {
       "identity": [
         "github.com/codekiln/logseq-encode-garden",
@@ -352,8 +470,8 @@
         "logseq:entity:proxy:page:sync"
       ],
       "mapping": {
-        "mise-tasks/logseq/entity/proxy/page/lib/companions.py": "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
         "mise-tasks/logseq/entity/proxy/page/lib/core.py": "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py": "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py",
         "mise-tasks/logseq/entity/proxy/page/sync": "mise-tasks/logseq/entity/proxy/page/sync"
       }
     }

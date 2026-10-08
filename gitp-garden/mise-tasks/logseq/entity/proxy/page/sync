@@ -8,7 +8,11 @@
 #USAGE flag "--follow-embeds" help="Also sync pages the page embeds, recursively"
 #USAGE flag "--apply" help="Apply the previewed import"
 #USAGE flag "--recover" help="Roll back an interrupted import, then exit"
-"""Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]."""
+"""Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]].
+
+Illustrated guide: mise run logseq:entity:proxy:page:docs:serve
+Source: docs/index.html beside this entrypoint.
+"""
 import argparse
 import os
 from pathlib import Path
@@ -47,13 +51,13 @@ def main():
         plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url,
                                options.follow_embeds)
         try:
-            import companions
+            import task_imports
         except ModuleNotFoundError as error:
-            if error.name != 'companions':
+            if error.name != 'task_imports':
                 raise
-            raise SyncError('Missing companion importer lib/companions.py; restore the task implementation before syncing') from error
+            raise SyncError('Missing task importer lib/task_imports.py; restore the task implementation before syncing') from error
         else:
-            companions.extend_plan(plan)
+            task_imports.extend_plan(plan)
         print('\n'.join(plan.details))
         for warning in plan.warnings:
             print('Warning: ' + warning)
