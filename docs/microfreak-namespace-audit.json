@@ -945,7 +945,7 @@
   "warnings": [
     "Missing embedded page: MyPage/MySubPage",
     "Missing embedded page: MyPage/MySubPage/MySubSubPage",
-    "Missing asset: /Users/Myer/ghq/github.com/codekiln/logseq-encode-garden/.worktrees/204-guide-images-b2/assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png"
+    "Missing asset: codekiln/logseq-encode-garden@34bb6ba171b3995412fe7224bbf10138a73a75a5:assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png"
   ],
   "source_dependency": "https://github.com/codekiln/logseq-encode-garden/pull/211",
   "source_head": "34bb6ba171b3995412fe7224bbf10138a73a75a5",
