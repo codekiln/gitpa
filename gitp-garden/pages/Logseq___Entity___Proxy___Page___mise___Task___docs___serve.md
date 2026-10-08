@@ -7,7 +7,7 @@ task-files:: {"mise-tasks/logseq/entity/proxy/page/docs/serve":"mise-tasks/logse
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/docs/serve
 see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FProxy%2FPage%2Fmise%2FTask%2Fdocs%2Fserve
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Proxy___Page___mise___Task___docs___serve.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F202-proxy-task-import-docs/pages/Logseq___Entity___Proxy___Page___mise___Task___docs___serve.md
 logseq-proxy-last-sync-date:: [[2026-10-07]]
 - # Open the Proxy Algorithm Guide
 	- Opens an illustrated guide to proxy imports, refreshes, multiple source gardens, manifest ownership, Git tracking, and parallel work.
