@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c27140cdd37fb7257d1cc9afe3882f9b1a378e18e1451601790553caf9835272",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Frontmatter/Definition"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Frontmatter/Definition",
+  "version": 2
+}

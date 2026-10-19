@@ -1,0 +1,33 @@
+{
+  "body_sha256": "4ebc213134a7d375591d6cb679166451a3ceda03baa255f8f5916f9a61435f3a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
+    "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/docs/serve",
+    "task-config-root": ".",
+    "task-entrypoint": "mise-tasks/logseq/entity/proxy/page/docs/serve",
+    "task-files": "{\"mise-tasks/logseq/entity/proxy/page/docs/serve\":\"mise-tasks/logseq/entity/proxy/page/docs/serve\",\"mise-tasks/logseq/entity/proxy/page/docs/index.html\":\"mise-tasks/logseq/entity/proxy/page/docs/index.html\"}",
+    "task-name": "logseq:entity:proxy:page:docs:serve",
+    "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Proxy/Page/mise/Task/docs/serve"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Proxy/Page/mise/Task/docs/serve",
+  "task": {
+    "identity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "[[Person/codekiln/GitHub/logseq-encode-garden]]",
+      ".",
+      "logseq:entity:proxy:page:docs:serve"
+    ],
+    "mapping": {
+      "mise-tasks/logseq/entity/proxy/page/docs/index.html": "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+      "mise-tasks/logseq/entity/proxy/page/docs/serve": "mise-tasks/logseq/entity/proxy/page/docs/serve"
+    }
+  },
+  "version": 2
+}

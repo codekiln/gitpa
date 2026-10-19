@@ -1,0 +1,11 @@
+{
+  "destination": "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+  "mode": 420,
+  "sha256": "faa16caeb88dd2b6b4263bbfb048db6ca2a73d54eca5722439cad0af0e93617f",
+  "source": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "mise-tasks/logseq/entity/proxy/page/docs/index.html"
+  ],
+  "version": 2
+}

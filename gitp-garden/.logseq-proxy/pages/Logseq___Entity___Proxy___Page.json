@@ -1,0 +1,30 @@
+{
+  "body_sha256": "3caacd088ec734d448c97dfc3520027419c2b918d00a506fef327014773f7421",
+  "declarations": {
+    "entity-proxy-destination-properties": "public",
+    "entity-tasks": "[[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]",
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Proxy/Page"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Proxy/Page": {
+      "files": [
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve",
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/records.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py",
+        "mise-tasks/logseq/entity/proxy/page/sync"
+      ],
+      "page": "Logseq/Entity/Proxy/Page",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Proxy/Page",
+  "version": 2
+}

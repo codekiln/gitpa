@@ -1,0 +1,20 @@
+{
+  "body_sha256": "3877c9e4740a869423f625c6bcf05e3c219b29f333ec49ed5ff8f3bcd0ef8a5e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Podcast/Episode"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Podcast/Episode": {
+      "files": [],
+      "page": "Logseq/Entity/Podcast/Episode",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Podcast/Episode",
+  "version": 2
+}

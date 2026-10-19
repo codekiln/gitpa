@@ -1,0 +1,20 @@
+{
+  "body_sha256": "f5e70a4e2df91b1bbe38da5e0d37fa73d2ca44184862417c6ad3b04aeafff209",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Asset/B2"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset/B2": {
+      "files": [],
+      "page": "Logseq/Entity/Asset/B2",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Asset/B2",
+  "version": 2
+}
