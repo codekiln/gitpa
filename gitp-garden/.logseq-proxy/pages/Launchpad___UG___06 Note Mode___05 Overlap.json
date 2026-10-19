@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2dc8a17354f1fc83f485e2a3339ba26c0dc8d1c10ec8d0167d6ea7312b2a9e8b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/06 Note Mode/05 Overlap"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/06 Note Mode/05 Overlap",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ac7159b6047e5135f5eb693853bd1fa4224daccf74642b509ffc2e3a4f015795",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/04 Presets/03 Preset Config"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/04 Presets/03 Preset Config",
+  "version": 2
+}

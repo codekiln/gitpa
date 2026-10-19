@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode%2FGitP%2FA%2FFrontmatter%2Fpublic
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F229-source-publication-flags/pages/Logseq___Entity___Podcast___Episode___GitP___A___Frontmatter___public.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode___GitP___A___Frontmatter___public.md
 logseq-proxy-last-sync-date:: [[2026-10-19]]
 - # `public::` — Ghost in the Patch Alpha publication selection
 	- The page-level Boolean on a [[Logseq/Entity/Podcast/Episode/GitP/A]] instance in logseq-encode-garden selects whether the episode appears in the downstream podcast feed and website.

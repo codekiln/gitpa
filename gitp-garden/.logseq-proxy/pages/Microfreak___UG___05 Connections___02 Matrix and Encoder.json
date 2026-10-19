@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0e967145b9719c047741b51da909f4f809d3b88be00d57f5544459c56791b5e2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/05 Connections/02 Matrix and Encoder"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/05 Connections/02 Matrix and Encoder",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e25bb1771eb0687319924e591bf140498fa8363d2826ac35c469ba420cce5538",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/11 Appendix"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/11 Appendix",
+  "version": 2
+}

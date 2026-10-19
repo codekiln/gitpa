@@ -1,0 +1,18 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Falias
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Frontmatter___alias.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # `alias::` for more convenient or alternate names
+	- In Logseq, if page `[[Super Long Name]]` has frontmatter `alias:: [[Shortname]]`, then clicking `[[Shortname]]` anywhere in the graph navigates to `[[Super Long Name]]`.
+	- Appropriate uses: real alternate names, plural or contextual link surfaces, handles, acronyms, and other useful discovery forms.
+	- ## Aliases are human-curated, not agent-generated
+		- Agents should suggest alias candidates in the chat response rather than writing them to the page without explicit instruction.
+	- ## Be judicious — do not proliferate aliases
+		- Every alias added to the graph slows down auto-complete and may confuse the human operator about which form is canonical.
+	- ## Use singular canonical names; alias the plural
+		- This garden uses singular canonical page names; plural or contextual references belong in `alias::`.
+	- ## Do not create redundant aliases
+		- Do not create an alias that only repeats parent namespace context already expressed by the page title.
+	- ## Searching for aliases
+		- When auditing or pruning aliases, verify each with `rg '[[Candidate Name]]' pages/ journals/` to check graph usage before keeping it. For a graph-wide audit, [[nbb-logseq]] is more appropriate than ad hoc text search.

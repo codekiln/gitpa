@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b71fa0ca6ed75b8caff26adf18cec3f174db82859f891eec7b5f67b2a9ec907f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/06 Note Mode/06 Drum Mode"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/06 Note Mode/06 Drum Mode",
+  "version": 2
+}

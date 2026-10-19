@@ -1,0 +1,14 @@
+{
+  "body_sha256": "74d3d2f26fe930affe0bf0bbe4830d47a73b237b41fe5d9e8adba1b81bd48e7f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/01 Setup Menu"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/01 Setup Menu",
+  "version": 2
+}

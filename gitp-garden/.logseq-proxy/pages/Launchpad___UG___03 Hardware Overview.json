@@ -1,0 +1,14 @@
+{
+  "body_sha256": "095624900a549296905a920c8a8c6081dd5cc7dd2510a9893c94dd34b9a34d79",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/03 Hardware Overview"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/03 Hardware Overview",
+  "version": 2
+}

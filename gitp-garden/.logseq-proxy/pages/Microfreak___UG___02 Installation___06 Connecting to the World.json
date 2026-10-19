@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3a41d789fc185e0a16a85c7c678d3ee189c284627d4418602f4902f297aa6f8d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/02 Installation/06 Connecting to the World"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/02 Installation/06 Connecting to the World",
+  "version": 2
+}

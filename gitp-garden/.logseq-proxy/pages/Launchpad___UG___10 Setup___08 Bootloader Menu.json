@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ba59dba9a7faaffb0beb3e017a1971a26651bb3e84099564f100fda5efe33d06",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/08 Bootloader Menu"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/08 Bootloader Menu",
+  "version": 2
+}

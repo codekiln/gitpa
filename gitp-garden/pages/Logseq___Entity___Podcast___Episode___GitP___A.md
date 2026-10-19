@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 entity-proxy-source-properties:: public
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode%2FGitP%2FA
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F229-source-publication-flags/pages/Logseq___Entity___Podcast___Episode___GitP___A.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode___GitP___A.md
 logseq-proxy-last-sync-date:: [[2026-10-19]]
 - # Ghost in the Patch Alpha Episode
 	- In this garden, **Ghost in the Patch Alpha Episode** pages model recordings prepared as episodes of [[GitP/A]].

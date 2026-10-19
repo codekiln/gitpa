@@ -8,7 +8,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 task-dependencies:: [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FProxy%2FPage%2Fmise%2FTask%2Fsync
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F229-source-publication-flags/pages/Logseq___Entity___Proxy___Page___mise___Task___sync.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Proxy___Page___mise___Task___sync.md
 logseq-proxy-last-sync-date:: [[2026-10-19]]
 - # Sync a Proxy Page and Its Companion Tasks
 	- Copies a source page into another Logseq garden, together with its entity definitions, declared task references, executable files, helpers, and linked assets. Re-sync refreshes source changes and reports conflicting destination edits before applying changes.

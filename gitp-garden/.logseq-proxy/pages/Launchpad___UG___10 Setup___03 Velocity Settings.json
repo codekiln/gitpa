@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a1301d8ab080a7c382e95e472c5823c7f636ee88fa0de551893cc8e6da3ee68e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/03 Velocity Settings"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/03 Velocity Settings",
+  "version": 2
+}

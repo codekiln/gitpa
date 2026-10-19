@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ca94ef7bfd9fa41d697f65fdd68bd1096eab39a54acf12fddfc66aa10f9b5b91",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/01 Resolution"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/01 Resolution",
+  "version": 2
+}

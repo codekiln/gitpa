@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2e572e004fce4307236373956bc6a0517ec8c9296cb79620fb6bcff3dbd2e166",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/01 Mic Levels"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/01 Mic Levels",
+  "version": 2
+}

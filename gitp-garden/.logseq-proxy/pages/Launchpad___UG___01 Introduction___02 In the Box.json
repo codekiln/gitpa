@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5a21187996cc3a2e229e98cecd2422409b29934a545411836fd0bafdef0a5ac4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/01 Introduction/02 In the Box"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/01 Introduction/02 In the Box",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8b96ecb6cccc776e871b302afb12d4474f680e5d059556a6943c8ebf78f57b4e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/20 Appendix C - Cheat Sheet"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/20 Appendix C - Cheat Sheet",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6dd7f489941b35e38d1713b0fb50b8f12b1b4fc7627bc05d8ce386e517022337",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector",
+  "version": 2
+}

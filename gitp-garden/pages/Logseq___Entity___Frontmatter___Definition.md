@@ -1,7 +1,8 @@
+public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FFrontmatter%2FDefinition
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/codex%2F229-source-publication-flags/pages/Logseq___Entity___Frontmatter___Definition.md
-logseq-proxy-last-sync-date:: [[2026-10-19]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Frontmatter___Definition.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
 
 - # Frontmatter Definition
 	- In this garden, **Frontmatter Definition** pages model a custom frontmatter property that one entity type adds for its instances — the property's meaning, its permitted values, and how instances set it. Global, cross-type conventions stay on [[Logseq/Frontmatter]]; a Frontmatter Definition is scoped to a single entity type.

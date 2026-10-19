@@ -1,0 +1,14 @@
+{
+  "body_sha256": "84ab34c5b26d2f4ba810bce4eab18de288e2837f7bed09acfea9d462aa6eb8df",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/05 Session Mode"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/05 Session Mode",
+  "version": 2
+}

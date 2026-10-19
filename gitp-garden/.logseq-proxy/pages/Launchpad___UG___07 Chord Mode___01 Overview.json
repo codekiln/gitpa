@@ -1,0 +1,14 @@
+{
+  "body_sha256": "980a676997bab36a4eee08b607cd7143792e7c180864fcb98f26850d54bf4c99",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/07 Chord Mode/01 Overview"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/07 Chord Mode/01 Overview",
+  "version": 2
+}

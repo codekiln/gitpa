@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fc9bfe79df0a965724e9a1083e11f8c660999559146c6c3b9bd03d02e3c7027d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0",
+  "version": 2
+}

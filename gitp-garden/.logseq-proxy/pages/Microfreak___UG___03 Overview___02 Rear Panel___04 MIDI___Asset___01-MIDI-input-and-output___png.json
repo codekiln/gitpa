@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d4b0d104ee11dfb07068214b3cf1a14be7dfcba4bd60581a8e234ecdbf149f21",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI/Asset/01-MIDI-input-and-output/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI/Asset/01-MIDI-input-and-output/png",
+  "version": 2
+}

@@ -1,0 +1,13 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 4]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row]]
+next:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F03%20Overview%2F01%20Front%20Panel%2F01%20Top%20Row%2F01%20Matrix
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___01%20Matrix.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # 03.01.01.01 The Matrix
+	- The matrix
+		- ![01 The matrix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___01%20Matrix___Asset___01-The-matrix.png)
+	- The Modulation Matrix is an electronic patchbay that routes modulation sources to destinations. Turning the white Matrix encoder moves the connection LED between patch points; after the last point, it cycles back to the first. Click the encoder to set the selected connection's modulation amount.
+	- Each connection acts like a patch cord with an attenuator for positive or negative modulation. Parameters with knobs can generally be modulation destinations.
+	- Sources occupy rows 1–5. Destinations occupy columns 1–7: columns 1–4 are fixed, while columns 5–7 are assignable.

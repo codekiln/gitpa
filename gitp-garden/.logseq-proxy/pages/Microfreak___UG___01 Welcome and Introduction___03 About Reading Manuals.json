@@ -1,0 +1,14 @@
+{
+  "body_sha256": "590bd825c02220c57d560c114cc96b7ac02a6b5d874fcedb2e43196f114287f7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/01 Welcome and Introduction/03 About Reading Manuals"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/01 Welcome and Introduction/03 About Reading Manuals",
+  "version": 2
+}

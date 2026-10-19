@@ -1,0 +1,12 @@
+{
+  "body_sha256": "35883a80e5c3fc491eba130b76944d995c8288a14a50b021696d4d577c98a426",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Custom"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Custom",
+  "version": 2
+}

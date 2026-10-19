@@ -1,0 +1,20 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
+prev:: [[Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser]]
+next:: [[Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUG%2F06%20Dig%20Osc%2F03%20Types%2F18%20Sample
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___18%20Sample.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+- # 06.03.18 Sample
+	- Sample Oscillator Model
+		- ![01 Sample Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___18%20Sample___Asset___01-Sample-Oscillator-Model.png)
+	- **Description:** The Sample oscillator works like WaveUser, with user samples loaded through MIDI Control Center. The MicroFreak stores 128 samples, with up to 210 seconds of audio in total.
+	- To browse samples, hold Shift and turn the Type knob. This opens the sample select menu for the unit's 128 slots; repeat the gesture to leave the menu.
+	- > [[Note/Info]] When adjusting Sample parameters, `| Smp` at the top of the screen means the sample select menu is still open.
+	- Sample display showing `| Smp` and the Start parameter
+		- ![02 Sample display showing the sample select menu and Start value](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___18%20Sample___Asset___02-Sample-display-showing-the-sample-select-menu-and-Start-value.png)
+	- **Start:** The Wave knob sets the sample's starting point, from 0 at the beginning to 100 at the end.
+	- **Length:** The Timbre knob sets sample length from -100 to 100. Negative values play the sample backward.
+	- > [[Note/Info]] With Start at 100 and Length at -100, the sample plays backward from its end to its start.
+	- **Loop:** After setting Start and End with Length, Loop crossfades between those positions. At 100, only a very short part at the end of the sample loops.

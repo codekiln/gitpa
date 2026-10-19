@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b32be82c01f62916362ac813282a45d0c0c2abdc9b7b34c116a3c8ab0a8f5be3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/03 Hardware Overview/Asset/02-Launchpad-Pro-rear-connections/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/03 Hardware Overview/Asset/02-Launchpad-Pro-rear-connections/png",
+  "version": 2
+}

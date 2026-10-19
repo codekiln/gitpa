@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f6244dae410a40c97e58de8e447291a23ff4e92cbe901734827e8ea6ce1115e9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/04 Launchpad Pro Interface/01 Modes"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/04 Launchpad Pro Interface/01 Modes",
+  "version": 2
+}

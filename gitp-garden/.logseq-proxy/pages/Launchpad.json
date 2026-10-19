@@ -1,0 +1,18 @@
+{
+  "body_sha256": "8dfbf5c21c802725f30698d63cf3b4b33f971773910adf53c9eb4d8e5472aa4c",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Launchpad": {
+      "files": [],
+      "page": "Launchpad",
+      "source_graph": "."
+    }
+  },
+  "page": "Launchpad",
+  "version": 2
+}

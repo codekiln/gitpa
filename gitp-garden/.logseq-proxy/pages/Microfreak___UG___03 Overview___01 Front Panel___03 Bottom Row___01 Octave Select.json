@@ -1,0 +1,14 @@
+{
+  "body_sha256": "55e2db57f7a65ab96370ea140f1e387026fedbe7f6c268adff2db935a1b7ee27",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/01 Front Panel/03 Bottom Row/01 Octave Select",
+  "version": 2
+}

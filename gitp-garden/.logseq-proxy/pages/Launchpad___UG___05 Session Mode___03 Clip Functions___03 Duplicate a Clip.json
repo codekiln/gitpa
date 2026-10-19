@@ -1,0 +1,14 @@
+{
+  "body_sha256": "456d777e37aff9d89dbc40a97ffd68276243e6e92c78e7f46656a3c58bb72aeb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/05 Session Mode/03 Clip Functions/03 Duplicate a Clip"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/05 Session Mode/03 Clip Functions/03 Duplicate a Clip",
+  "version": 2
+}

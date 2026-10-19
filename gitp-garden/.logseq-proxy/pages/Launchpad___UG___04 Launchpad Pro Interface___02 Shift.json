@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2c63a4d3ffe598fddbcaa37bad997ed2949a8d6adcaca6b267000d6b6190f426",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/04 Launchpad Pro Interface/02 Shift"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/04 Launchpad Pro Interface/02 Shift",
+  "version": 2
+}

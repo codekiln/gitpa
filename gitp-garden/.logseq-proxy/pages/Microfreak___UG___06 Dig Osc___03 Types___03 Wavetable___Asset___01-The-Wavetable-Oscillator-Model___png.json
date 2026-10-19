@@ -1,0 +1,14 @@
+{
+  "body_sha256": "db9bdb71e12cb344203bfbb11c58ce863b6a9e1863eae2779c84b839c7a0626e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable/Asset/01-The-Wavetable-Oscillator-Model/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable/Asset/01-The-Wavetable-Oscillator-Model/png",
+  "version": 2
+}

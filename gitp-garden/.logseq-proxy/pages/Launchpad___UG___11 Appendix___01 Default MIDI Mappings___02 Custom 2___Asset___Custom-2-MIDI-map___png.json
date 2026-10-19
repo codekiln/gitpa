@@ -1,0 +1,14 @@
+{
+  "body_sha256": "00ef0d01cbb94adb75b1500caa2666eb674ad7dae5003dd33412f0b29a4654e7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/02 Custom 2/Asset/Custom-2-MIDI-map/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/02 Custom 2/Asset/Custom-2-MIDI-map/png",
+  "version": 2
+}

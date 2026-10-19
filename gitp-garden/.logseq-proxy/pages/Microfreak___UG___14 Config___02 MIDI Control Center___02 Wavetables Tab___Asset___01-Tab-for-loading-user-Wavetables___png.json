@@ -1,0 +1,14 @@
+{
+  "body_sha256": "689d09721e7fb58609ecce0c1b17c94aa4f36149bda778e38fdcf4ed9e60eaa9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/Asset/01-Tab-for-loading-user-Wavetables/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/Asset/01-Tab-for-loading-user-Wavetables/png",
+  "version": 2
+}

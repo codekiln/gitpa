@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ffc8d0b779bea575e80e6c4f508978492965d85b207b8c1dac83f07f0f8593ff",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/03 Signal Flow"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/03 Signal Flow",
+  "version": 2
+}

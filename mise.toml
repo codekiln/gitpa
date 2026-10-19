@@ -22,4 +22,4 @@ run = "nbb-logseq scripts/check_homepage.cljs"
 [task_config]
 # gitp-garden/mise-tasks holds companion tasks imported with garden proxy pages,
 # such as logseq:entity:proxy:page:sync.
-includes = ["gitp-garden/mise-tasks"]
+includes = ["mise-tasks", "gitp-garden/mise-tasks"]

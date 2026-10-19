@@ -1,0 +1,14 @@
+{
+  "body_sha256": "25367533e23fd8a7b10e16208525e4353972084ade84fcd3c84e5581c09ee829",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/06 Fader Settings"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/06 Fader Settings",
+  "version": 2
+}

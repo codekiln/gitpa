@@ -1,0 +1,18 @@
+{
+  "body_sha256": "2c9e07a77c9bb68c2340e1a5f6dee6a27a1c2f4d820831c15ac712673806bab4",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak": {
+      "files": [],
+      "page": "Microfreak",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak",
+  "version": 2
+}

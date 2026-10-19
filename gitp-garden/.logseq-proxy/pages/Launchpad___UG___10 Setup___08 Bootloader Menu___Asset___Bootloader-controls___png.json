@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7daba5064eecea7303ff199092bb69f20da0fc288a6e4ecd9e31a01268b20e86",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/08 Bootloader Menu/Asset/Bootloader-controls/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/08 Bootloader Menu/Asset/Bootloader-controls/png",
+  "version": 2
+}

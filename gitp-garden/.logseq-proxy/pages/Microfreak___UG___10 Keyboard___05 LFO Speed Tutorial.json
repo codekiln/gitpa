@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5b1f4d2144c29e25c76b17f0879097b29c8ff19c4324c31f908f62c8987a28bc",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/10 Keyboard/05 LFO Speed Tutorial",
+  "version": 2
+}

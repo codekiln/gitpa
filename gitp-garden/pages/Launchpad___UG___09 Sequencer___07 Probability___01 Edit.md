@@ -1,0 +1,15 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Launchpad/UG/09 Sequencer/07 Probability]]
+next:: [[Launchpad/UG/09 Sequencer/07 Probability/02 Print]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Launchpad%2FUG%2F09%20Sequencer%2F07%20Probability%2F01%20Edit
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit.md
+logseq-proxy-last-sync-date:: [[2026-10-08]]
+
+- # 9.7.1 Editing Step Probability
+	- Press Probability, then select a step in the top half of the grid. The top row of the Play Area shows the selected step’s probability on an eight-pad slider.
+	- The pads, from left to right, set the chance of a note playing to 13%, 25%, 38%, 50%, 63%, 75%, 88%, or 100%.
+	- Every note on a step shares one probability setting, but each note is evaluated independently. At 50%, a two-note step may play both notes, one note, or neither.
+	- Assigned or recorded notes default to 100%. Clearing a step, Pattern, or Project also resets its probability to 100%.
+	- Probability view
+		- ![01 Probability view](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit___Asset___01-Probability-view.png)

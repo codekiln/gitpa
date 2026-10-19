@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c37b5b3900f53fb6b493ed21c070aa3217111428edbc5f7d8b7908743a8a62b7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/12 Arpeggiator/06 Transfer to Seq",
+  "version": 2
+}

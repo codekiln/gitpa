@@ -1,0 +1,12 @@
+{
+  "body_sha256": "6b4b565fac47f6479c457344792de0a8ccdedf3cae6afae6b88d90c79ca6e168",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Frontmatter/via"
+  ],
+  "imports": {},
+  "page": "Logseq/Frontmatter/via",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7897a7046eb843b70de861a89bf6d2aecb9103423787cc5fab01c2271cd012c6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/01 Noise Gate"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/01 Noise Gate",
+  "version": 2
+}
