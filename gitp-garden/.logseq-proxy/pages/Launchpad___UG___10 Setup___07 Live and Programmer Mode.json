@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3ab1f60324eaabccd60c0213665ba3d6776da6fbfdabd11f12e910f0dd72213a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/07 Live and Programmer Mode"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/07 Live and Programmer Mode",
+  "version": 2
+}

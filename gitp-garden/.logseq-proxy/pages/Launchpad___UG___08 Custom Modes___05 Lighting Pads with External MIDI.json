@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1cd31cf276885d63a37fa3f18a42acfa34f414156fef8c37d5061db16f1b7cfe",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI",
+  "version": 2
+}

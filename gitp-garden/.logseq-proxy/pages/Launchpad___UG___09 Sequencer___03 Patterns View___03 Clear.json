@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2bdc48ca192563607d979a71faba4d4f346254819bb50e37e7b50d9272d567c8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/03 Patterns View/03 Clear"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/03 Patterns View/03 Clear",
+  "version": 2
+}

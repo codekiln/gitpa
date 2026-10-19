@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0fe201bdf1697dfedc15a53df7724a933d504374644978ca03a1fc72a672a520",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/08 Custom Modes/03 Master MIDI Channel"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/08 Custom Modes/03 Master MIDI Channel",
+  "version": 2
+}

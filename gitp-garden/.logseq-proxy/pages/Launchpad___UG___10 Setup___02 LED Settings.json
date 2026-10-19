@@ -1,0 +1,14 @@
+{
+  "body_sha256": "edfe58adbbaa7ff9fdf4e0b64789a1ca2691b24ddbf082f7f47eb80bf950e0e4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/02 LED Settings"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/02 LED Settings",
+  "version": 2
+}

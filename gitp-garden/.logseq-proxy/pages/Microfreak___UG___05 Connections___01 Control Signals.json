@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7d1d4e539c0c19c142f0301b7f59f10cae6130dc0d56730e15d8ab2ed08edd17",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/05 Connections/01 Control Signals"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/05 Connections/01 Control Signals",
+  "version": 2
+}

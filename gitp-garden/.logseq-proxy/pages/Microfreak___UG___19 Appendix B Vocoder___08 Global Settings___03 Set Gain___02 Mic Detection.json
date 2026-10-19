@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e625d377d1649a9135d5f3bce72badd0348fbc1b76a25d5b5d33ede0b357b2a4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 Mic Detection"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 Mic Detection",
+  "version": 2
+}

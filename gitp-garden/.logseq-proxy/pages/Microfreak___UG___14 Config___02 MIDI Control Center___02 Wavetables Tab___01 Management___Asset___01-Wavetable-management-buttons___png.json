@@ -1,0 +1,14 @@
+{
+  "body_sha256": "db2c13b78d0f2ab7a5eaa54755cb4d51ecc988f58bc2342e13e2e908ef3b6bee",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/01-Wavetable-management-buttons/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management/Asset/01-Wavetable-management-buttons/png",
+  "version": 2
+}

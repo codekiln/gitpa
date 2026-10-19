@@ -1,0 +1,20 @@
+{
+  "body_sha256": "a9ee389895d458363d0e9526c213bfa6f85d2ba6104431536f26c68e18616c7c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif": {
+      "files": [],
+      "page": "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/24/11/19-Tue/Asset/Artwork/Overview/gif",
+  "version": 2
+}

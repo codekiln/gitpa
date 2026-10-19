@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a029516ac35f9d04c465e84a7f49b526dfd11aaae28e0ecb71683deff43b838c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/05 MIDI Settings/Asset/MIDI-Settings-grid/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/05 MIDI Settings/Asset/MIDI-Settings-grid/png",
+  "version": 2
+}

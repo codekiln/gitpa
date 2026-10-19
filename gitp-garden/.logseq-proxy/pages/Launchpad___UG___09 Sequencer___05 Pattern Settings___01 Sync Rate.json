@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ca8cfc4aee4b0ab63eb743ec2abf5a29116097c2d1af8ad5731fc1c012efab57",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate",
+  "version": 2
+}

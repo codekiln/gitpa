@@ -1,0 +1,20 @@
+{
+  "body_sha256": "758a2f089efc1043178a1b5f73ce1cf5a8699933851e88ef448cd88cce8a9954",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Mise/Task"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Mise/Task": {
+      "files": [],
+      "page": "Logseq/Entity/Mise/Task",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Mise/Task",
+  "version": 2
+}

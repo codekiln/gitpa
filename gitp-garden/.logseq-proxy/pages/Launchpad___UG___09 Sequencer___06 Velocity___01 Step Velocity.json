@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e9ad96626b702925ab79f6eda0a2b0749bad849a992ef28fdb413a65e932b94d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7c5e04441a131cdc44b307305c85805feb83ab795892313281d318105536f8c2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/06 Note Mode/02 Chromatic Mode"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/06 Note Mode/02 Chromatic Mode",
+  "version": 2
+}

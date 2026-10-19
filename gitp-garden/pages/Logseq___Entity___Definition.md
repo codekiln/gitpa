@@ -3,12 +3,15 @@ logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 see-also:: [[Logseq/Entity/Definition/Discussion]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FDefinition
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Definition.md
-logseq-proxy-last-sync-date:: [[2026-10-12]]
+logseq-proxy-last-sync-date:: [[2026-10-19]]
 - # Entity Definition
 	- Each Entity Definition page describes a type of real-world entity that may be tracked in a page [[Knowledge Garden]] page. Entity here means something roughly analagous
 	- ## [[Logseq/Entity/Definition/Discussion]]
 	- ,  uniquely modeled in each garden are.
 	- the garden tracks — each describes how to recognize, name, deduplicate, and shape instances of one kind of entity.
+	- ## Properties a proxy’s source owns
+		- `entity-proxy-source-properties::` lists property keys that an instance’s source garden controls, even when another entity definition gives those keys to the destination. This explicit source declaration takes precedence over `entity-proxy-destination-properties::`.
+		- Re-sync updates, adds, or removes these properties to match the source. Removing a source property also removes the destination’s value. Protected `tags::` and sync-owned proxy metadata cannot be assigned to the source through this declaration.
 	- ## Examples in this garden
 		- [[Logseq/Entity/Person]], [[Logseq/Entity/Software/Project]], [[Logseq/Entity/Book]], and the other pages under the `Logseq/Entity/` namespace.
 	- ## What counts as an Entity Definition

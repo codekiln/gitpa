@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f6c155f5a3d3080b853eb905c598bc87b89c5d2d4f95f62ed0108aeebdc2f83c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/02 Installation/02 Warning"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/02 Installation/02 Warning",
+  "version": 2
+}

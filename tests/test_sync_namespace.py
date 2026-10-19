@@ -44,7 +44,7 @@ class NamespacePlannerTests(unittest.TestCase):
             (graph / 'pages').mkdir(parents=True); (graph / 'logseq').mkdir()
         library=source/'mise-tasks/logseq/entity/proxy/page/lib';library.mkdir(parents=True)
         bundled=Path(__file__).resolve().parents[1]/'gitp-garden/mise-tasks/logseq/entity/proxy/page/lib'
-        for name in ('core.py','task_imports.py'):
+        for name in ('core.py','records.py','task_imports.py'):
             shutil.copyfile(bundled/name,library/name)
         (source/'pages/Instrument___Guide%3A question%3F.md').write_text('- Encoded heading\n')
         (source/'mise-tasks/fixture').write_text('original task\n'); (source/'mise-tasks/fixture').chmod(0o755)

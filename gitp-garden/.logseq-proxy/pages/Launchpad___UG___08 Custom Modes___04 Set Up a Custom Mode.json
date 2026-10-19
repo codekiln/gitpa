@@ -1,0 +1,14 @@
+{
+  "body_sha256": "322f47425cf8229e37185acfd128d4d4c093899d127ba1234be13beafd40d5c7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode",
+  "version": 2
+}

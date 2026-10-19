@@ -1,0 +1,14 @@
+{
+  "body_sha256": "adfae4ba9880386a701c14be15fdc89417fbdf0e0cb22a7e0ba9dc85c9a9e772",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/11 Print to Clip/Asset/02-Clip-slot-after-Print-to-Clip/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/11 Print to Clip/Asset/02-Clip-slot-after-Print-to-Clip/png",
+  "version": 2
+}

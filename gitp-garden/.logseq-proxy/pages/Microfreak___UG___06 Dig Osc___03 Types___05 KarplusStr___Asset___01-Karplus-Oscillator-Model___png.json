@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6dda8a0ad2d8adcf47f4da063633d83cfdc2281debc54c7ced8f1e77a1118732",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr/Asset/01-Karplus-Oscillator-Model/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr/Asset/01-Karplus-Oscillator-Model/png",
+  "version": 2
+}

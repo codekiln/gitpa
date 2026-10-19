@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2cd910d8e0ddcf510cb29c588c7f85c063935c62a06dd2aa18ca684584a9cbb3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/02 Getting Up and Running/06 Help"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/02 Getting Up and Running/06 Help",
+  "version": 2
+}

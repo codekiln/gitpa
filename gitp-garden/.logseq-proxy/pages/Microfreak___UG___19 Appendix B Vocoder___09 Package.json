@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1cd89929bf6feed5ced9ff58be5335f0f1ae3c621af4b33a47ee294659c2c15b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/09 Package"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/09 Package",
+  "version": 2
+}

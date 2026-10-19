@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8b7d94492ec7ca0dda92e93445988ff9f26fba2419149deab96c6d6b6ed0fd35",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Book/Section/Level 4"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Book/Section/Level 4",
+  "version": 2
+}

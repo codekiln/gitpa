@@ -1,0 +1,12 @@
+{
+  "body_sha256": "dc65cd1ccaf77cf452de511f4797f3dfb549e3f1abcb5bb0134d8d7829c17674",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings",
+  "version": 2
+}

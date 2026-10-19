@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a166ab07e2b5a7c94b58147b75a575ab826ac5cc2e781f584d8532db4e0cd94d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/12 Arpeggiator/01 Using Patterns"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/12 Arpeggiator/01 Using Patterns",
+  "version": 2
+}

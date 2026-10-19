@@ -1,0 +1,14 @@
+{
+  "body_sha256": "34d7ed3ad97d5c13e96273d6cf7191d2974df1f82c2dfc2a0c4db72b7e495d27",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper/Asset/01-Waveshaper-Oscillator-Model/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper/Asset/01-Waveshaper-Oscillator-Model/png",
+  "version": 2
+}

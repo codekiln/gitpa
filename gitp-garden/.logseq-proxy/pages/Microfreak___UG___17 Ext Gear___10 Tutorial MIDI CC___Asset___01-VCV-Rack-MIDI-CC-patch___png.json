@@ -1,0 +1,14 @@
+{
+  "body_sha256": "386c3536438c24c115a6263e70a5aead7c7d35f377e145ce87e55a51fd0d3731",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC/Asset/01-VCV-Rack-MIDI-CC-patch/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/17 Ext Gear/10 Tutorial MIDI CC/Asset/01-VCV-Rack-MIDI-CC-patch/png",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b19817d08f954a7de96609782c95272586b064406632383d50a0b70b3a8d1bb4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter",
+  "version": 2
+}

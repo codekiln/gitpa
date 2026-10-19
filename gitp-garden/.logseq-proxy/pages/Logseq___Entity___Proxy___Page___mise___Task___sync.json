@@ -1,0 +1,48 @@
+{
+  "body_sha256": "2ac69b6b91c1209d6fbec4690ef5ecd93fa04a711ec3b26eb288c6564d22fbe9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
+    "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync",
+    "task-config-root": ".",
+    "task-dependencies": "[[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]",
+    "task-entrypoint": "mise-tasks/logseq/entity/proxy/page/sync",
+    "task-files": "{\"mise-tasks/logseq/entity/proxy/page/sync\":\"mise-tasks/logseq/entity/proxy/page/sync\",\"mise-tasks/logseq/entity/proxy/page/lib/core.py\":\"mise-tasks/logseq/entity/proxy/page/lib/core.py\",\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\":\"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py\",\"mise-tasks/logseq/entity/proxy/page/lib/records.py\":\"mise-tasks/logseq/entity/proxy/page/lib/records.py\"}",
+    "task-name": "logseq:entity:proxy:page:sync",
+    "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Proxy/Page/mise/Task/sync"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Proxy/Page/mise/Task/sync": {
+      "files": [
+        "mise-tasks/logseq/entity/proxy/page/docs/index.html",
+        "mise-tasks/logseq/entity/proxy/page/docs/serve",
+        "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+        "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+        "mise-tasks/logseq/entity/proxy/page/sync"
+      ],
+      "page": "Logseq/Entity/Proxy/Page/mise/Task/sync",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Proxy/Page/mise/Task/sync",
+  "task": {
+    "identity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "[[Person/codekiln/GitHub/logseq-encode-garden]]",
+      ".",
+      "logseq:entity:proxy:page:sync"
+    ],
+    "mapping": {
+      "mise-tasks/logseq/entity/proxy/page/lib/core.py": "mise-tasks/logseq/entity/proxy/page/lib/core.py",
+      "mise-tasks/logseq/entity/proxy/page/lib/records.py": "mise-tasks/logseq/entity/proxy/page/lib/records.py",
+      "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py": "mise-tasks/logseq/entity/proxy/page/lib/task_imports.py",
+      "mise-tasks/logseq/entity/proxy/page/sync": "mise-tasks/logseq/entity/proxy/page/sync"
+    }
+  },
+  "version": 2
+}

@@ -1,0 +1,11 @@
+{
+  "destination": "mise-tasks/logseq/entity/proxy/page/lib/companions.py",
+  "mode": 420,
+  "sha256": "9527f6bca636edf9c9425c5c774c4333ed028025cdc56de849e0828dc703fc87",
+  "source": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "mise-tasks/logseq/entity/proxy/page/lib/companions.py"
+  ],
+  "version": 2
+}

@@ -1,0 +1,20 @@
+{
+  "body_sha256": "201baa4d438aedc463ca4b25d19a44fd701d6280ff5a16cf86cceab9488ec319",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/24/12/04-Wed/Asset/Preset/D/mfpz",
+  "version": 2
+}

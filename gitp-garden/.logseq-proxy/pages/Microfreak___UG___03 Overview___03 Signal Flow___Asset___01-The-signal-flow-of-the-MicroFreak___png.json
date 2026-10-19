@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f64fa5b6e6092bae12dc896cd150faef38d34b496cf452fd9aba325a2cabf634",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/03 Signal Flow/Asset/01-The-signal-flow-of-the-MicroFreak/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/03 Signal Flow/Asset/01-The-signal-flow-of-the-MicroFreak/png",
+  "version": 2
+}

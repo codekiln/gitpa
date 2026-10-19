@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1ab6e0069df989ff5cecfdb593ecccb254a870173d48e2136d033bcf0989f148",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type",
+  "version": 2
+}

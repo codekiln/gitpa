@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3445945eefb8439188f9015bd739e426ec16b603ac5d167be21af7ef2672b90e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/Asset/01-Vocoder-signal-path/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/Asset/01-Vocoder-signal-path/png",
+  "version": 2
+}

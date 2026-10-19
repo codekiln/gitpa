@@ -1,0 +1,14 @@
+{
+  "body_sha256": "504817278775b39ba3710652bc9b35706fd4aaaa1550c6c1652ad7058498d350",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3",
+  "version": 2
+}

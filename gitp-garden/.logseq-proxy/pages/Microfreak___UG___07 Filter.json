@@ -1,0 +1,14 @@
+{
+  "body_sha256": "14100be19327a26c283ed219708116cf332a0e698b55348e1b241f12c4d2d73f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/07 Filter"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/07 Filter",
+  "version": 2
+}

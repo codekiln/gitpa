@@ -1,0 +1,14 @@
+{
+  "body_sha256": "89d65be039c005ae0a4b39b83510e3c0763388d928425fbdca627afbf1a5a6c1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Asset/Frontmatter/duration-seconds"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Asset/Frontmatter/duration-seconds",
+  "version": 2
+}

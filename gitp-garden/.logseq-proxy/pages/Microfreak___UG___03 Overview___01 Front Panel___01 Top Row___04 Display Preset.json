@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e982414c3715725afdf7b96dcbdbf51fd1d89bdc5c74f9117d901c6daf504789",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 4]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/04 Display Preset",
+  "version": 2
+}

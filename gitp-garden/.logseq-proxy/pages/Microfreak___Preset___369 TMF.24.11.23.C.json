@@ -1,0 +1,14 @@
+{
+  "body_sha256": "da50d7fb74c6dd22517442e047ed0994f269ea3f03018db9e1edaaba71b74ab1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/369 TMF.24.11.23.C"
+  ],
+  "imports": {},
+  "page": "Microfreak/Preset/369 TMF.24.11.23.C",
+  "version": 2
+}

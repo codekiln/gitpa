@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5bf3d1d16bfe8d191f425399a5021d354f4af52062e916a68e3de46de4d3b987",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/03 Hardware Overview/Asset/01-Launchpad-Pro-top-panel/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/03 Hardware Overview/Asset/01-Launchpad-Pro-top-panel/png",
+  "version": 2
+}

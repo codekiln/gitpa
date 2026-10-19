@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e777c77d5740164e4eccaa0d7034024e35f4ffeef0b32a5080c61ef8f71b2bce",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI",
+  "version": 2
+}

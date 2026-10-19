@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7fb1362cd0f67d12b947019dcbbb8bd0242dd6ac99961477affe190e21e23f18",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/09 Micro Steps"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/09 Micro Steps",
+  "version": 2
+}

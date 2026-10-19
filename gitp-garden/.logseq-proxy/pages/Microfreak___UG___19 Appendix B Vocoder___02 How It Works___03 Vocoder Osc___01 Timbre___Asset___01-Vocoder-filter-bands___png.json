@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4ca2acdb4b48d47c33720da57ef14ee397633515c623a8231ef299d3b766d10f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre/Asset/01-Vocoder-filter-bands/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/19 Appendix B Vocoder/02 How It Works/03 Vocoder Osc/01 Timbre/Asset/01-Vocoder-filter-bands/png",
+  "version": 2
+}

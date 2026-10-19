@@ -1,0 +1,14 @@
+{
+  "body_sha256": "749f40958daceabc4befe0477a211f92c54b7cbe2f43e5415d6e6f252e1cf2e9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/11 Appendix/02 Overlap Layouts",
+  "version": 2
+}

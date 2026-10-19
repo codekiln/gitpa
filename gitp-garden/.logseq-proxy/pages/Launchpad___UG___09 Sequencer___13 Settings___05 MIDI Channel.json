@@ -1,0 +1,14 @@
+{
+  "body_sha256": "536b547919e3e2c39340335c6a082a59e039817efccb3060ce756bf8877d43aa",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel",
+  "version": 2
+}

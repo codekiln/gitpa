@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f658b4b8fb456783035ec59b485e13c68cd44632c740419b73eb680774abd422",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/11 Appendix/02 Overlap Layouts/01 Five Finger"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/11 Appendix/02 Overlap Layouts/01 Five Finger",
+  "version": 2
+}

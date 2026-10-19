@@ -1,0 +1,20 @@
+{
+  "body_sha256": "8af220532ca6b522785873608be4bb07542ab43a33b3e26469032184bfb23b70",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid": {
+      "files": [],
+      "page": "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/24/12/04-Wed/Asset/MIDI/Microfreak/mid",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "33dee95e5d6ae7e3d33351912af18c2e960ec3bfcdfba8220cd22984c9f61934",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/02 Getting Up and Running/03 Ableton Live"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/02 Getting Up and Running/03 Ableton Live",
+  "version": 2
+}

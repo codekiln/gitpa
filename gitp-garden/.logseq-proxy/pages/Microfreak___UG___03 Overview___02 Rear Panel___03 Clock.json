@@ -1,0 +1,14 @@
+{
+  "body_sha256": "35efd47345ddca77cdd78e1789eee32c0cc5725533d93241ff8a7b89e43f6326",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/03 Overview/02 Rear Panel/03 Clock",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "dc132ba92cd87699522f756d72f0ee1db44f22de6829f62ad5a7651ce876a933",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/02 Installation/07 Latest Firmware"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/02 Installation/07 Latest Firmware",
+  "version": 2
+}

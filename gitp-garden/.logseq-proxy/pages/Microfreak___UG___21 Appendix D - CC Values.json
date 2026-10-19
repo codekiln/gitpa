@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1a4e45a0bdd0ee69abdc17eedb761477b4aa514373a40f7d3a1b8543f811ef96",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UG/21 Appendix D - CC Values"
+  ],
+  "imports": {},
+  "page": "Microfreak/UG/21 Appendix D - CC Values",
+  "version": 2
+}

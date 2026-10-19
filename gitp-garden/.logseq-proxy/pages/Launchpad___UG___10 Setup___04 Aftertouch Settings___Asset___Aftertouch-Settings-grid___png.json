@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f45062bc082dcfa7fb8f9cfc8131a9d580869f7a4ea26bda1ddb8b003cb894ab",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Launchpad/UG/10 Setup/04 Aftertouch Settings/Asset/Aftertouch-Settings-grid/png"
+  ],
+  "imports": {},
+  "page": "Launchpad/UG/10 Setup/04 Aftertouch Settings/Asset/Aftertouch-Settings-grid/png",
+  "version": 2
+}
