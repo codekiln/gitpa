@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
 public:: true
 podcast-guid:: gitpa20261018
-podcast-published-at:: 2026-10-20T12:00:00-04:00
+podcast-published-at:: 2026-10-20T07:35:00-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-18 Sun]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F18-Sun
