@@ -22,6 +22,16 @@
       <itunes:email>codekiln@pm.me</itunes:email>
     </itunes:owner>
     <item>
+      <title>Eonz between two sequencers</title>
+      <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F26%2F10%2F20-Tue</link>
+      <description>A Ghost in the Patch session with MicroFreak preset 77 Eonz and the Launchpad Pro: two-way MIDI, competing clocks, shared filter pulses and recording one sequencer into the other.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>A Ghost in the Patch session with MicroFreak preset 77 Eonz and the Launchpad Pro: two-way MIDI, competing clocks, shared filter pulses and recording one sequencer into the other.</itunes:summary>
+      <pubDate>Tue, 20 Oct 2026 07:36:00 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20261020</guid>
+      <enclosure url="https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3" length="132255353" type="audio/mpeg" />
+    </item>
+    <item>
       <title>Auster without a computer</title>
       <link>https://codekiln.github.io/gitpa/#/page/GitP%2FA%2FSession%2F26%2F10%2F18-Sun</link>
       <description>A Ghost in the Patch session exploring MicroFreak preset 174 Auster with the Launchpad Pro sequencer: touch articulation, two-way MIDI, clock sync, scale modes and layered patterns.</description>

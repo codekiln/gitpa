@@ -1,0 +1,20 @@
+{
+  "body_sha256": "ef877c929a0bc86357c571d6c1c2b9efeba799d11871b585920b3469d1d26b0d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/20-Tue/Asset/Preset/Eonz-Archived-2026-09-28/mbp"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/20-Tue/Asset/Preset/Eonz-Archived-2026-09-28/mbp": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/20-Tue/Asset/Preset/Eonz-Archived-2026-09-28/mbp",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/20-Tue/Asset/Preset/Eonz-Archived-2026-09-28/mbp",
+  "version": 2
+}
