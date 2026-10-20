@@ -1,0 +1,20 @@
+{
+  "body_sha256": "c6a330c9abd705b4462c8558df7f16f900ccacdb8cb6953d9459d0eae80488eb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/20-Tue/Asset/Audio/Synth-Forward/6833-7559/mp3"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/20-Tue/Asset/Audio/Synth-Forward/6833-7559/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/20-Tue/Asset/Audio/Synth-Forward/6833-7559/mp3",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/20-Tue/Asset/Audio/Synth-Forward/6833-7559/mp3",
+  "version": 2
+}

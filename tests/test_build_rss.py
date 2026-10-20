@@ -32,6 +32,14 @@ class FeedTests(unittest.TestCase):
         episode = self.load()[0]
         self.assertEqual(episode["audio_url"], "https://example.org/audio.mp3")
         self.assertEqual(episode["guid"], "stable")
+    def test_chapter_players_do_not_replace_full_recording(self):
+        self.page.write_text(self.props + self.body +
+                             "\t- ## Chapters\n\t\t- ### Opening\n"
+                             "\t\t\t- ![Waveform](https://example.org/chapter.png)\n"
+                             "\t\t\t\t- ![Play](https://example.org/chapter.mp3)\n")
+        self.assertEqual(self.load()[0]["audio_url"], "https://example.org/audio.mp3")
+        self.probe.assert_called_once_with("https://example.org/audio.mp3")
+
     def test_duplicate_recording_link_fails(self):
         self.page.write_text(self.props + self.body + "\t- ![Listen](https://example.org/audio.mp3)\n")
         with self.assertRaisesRegex(ValueError, "one MP3"):

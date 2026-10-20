@@ -1,0 +1,18 @@
+{
+  "body_sha256": "296490aaf17e6cd6a1bd1b19a43f36ecf52ffc8441b51127788ef2fea55ee165",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/Acolyte"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/Acolyte": {
+      "files": [],
+      "page": "GitP/Acolyte",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/Acolyte",
+  "version": 2
+}

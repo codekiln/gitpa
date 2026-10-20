@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "2a2fcbbaf1cfaa034cdf498b31c267beed39809115d96f60d738c716974f14a3",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/077 Eonz"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/077 Eonz": {
+      "files": [],
+      "page": "Microfreak/Preset/077 Eonz",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/077 Eonz",
   "version": 2
 }

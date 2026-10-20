@@ -70,8 +70,13 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         heading = re.search(r"^- # ([^\n]+)\n\t- ([^\n]+)", body, re.MULTILINE)
         if not heading:
             raise ValueError(f"{path}: expected an H1 followed by the episode description")
-        embeds = re.findall(r"\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}", body)
-        audio = re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", body)
+        # The episode recording is a direct child of its title. Chapter
+        # players sit deeper in the outline and do not become RSS enclosures.
+        recording_blocks = "\n".join(
+            line for line in body.splitlines() if line.startswith("\t- ")
+        )
+        embeds = re.findall(r"\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}", recording_blocks)
+        audio = re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", recording_blocks)
         for name in embeds:
             asset_path = page_path(garden, name)
             _, asset_body = split_page(asset_path.read_text(encoding="utf-8"))
