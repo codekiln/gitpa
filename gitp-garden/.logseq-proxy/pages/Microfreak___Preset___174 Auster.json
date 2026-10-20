@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/174 Auster"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/174 Auster": {
+      "files": [],
+      "page": "Microfreak/Preset/174 Auster",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/174 Auster",
   "version": 2
 }

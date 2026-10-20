@@ -1,6 +1,7 @@
 {
   "body_sha256": "3877c9e4740a869423f625c6bcf05e3c219b29f333ec49ed5ff8f3bcd0ef8a5e",
   "declarations": {
+    "entity-proxy-destination-properties": "podcast-guid, podcast-published-at",
     "logseq-entity": "[[Logseq/Entity/Definition]]"
   },
   "identity": [
