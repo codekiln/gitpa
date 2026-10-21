@@ -6,11 +6,12 @@ import argparse
 from datetime import datetime
 from email.utils import format_datetime
 from pathlib import Path
-from urllib.parse import urlparse, quote
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 import re
 
 from logseq_page import split_page, properties, page_path
+from site_routes import page_route
 import xml.etree.ElementTree as ET
 
 
@@ -95,7 +96,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         episodes.append({
             "episode_title": heading[1], "description": heading[2],
             "guid": guid, "_published_at": published,
-            "page_url": SITE_URL + "#/page/" + quote(page_name, safe=""),
+            "page_url": SITE_URL + page_route(props.get('title', page_name)),
             "audio_url": url, "audio_length": length, "audio_type": content_type,
         })
     return sorted(episodes, key=lambda episode: episode["_published_at"], reverse=True)
