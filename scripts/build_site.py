@@ -18,6 +18,7 @@ from logseq_page import properties, split_page
 from prepare_site import prepare
 from site_routes import page_route, page_output
 from build_rss import ARTWORK_URL, SITE_URL
+from audio_chapters import compile_episode
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
@@ -155,6 +156,46 @@ def public_pages(graph):
     return names
 
 
+def compile_episode_pages(graph):
+    episodes = {}
+    for path in (graph / 'pages').glob('*.md'):
+        text = path.read_text(encoding='utf-8')
+        leading, _ = split_page(text)
+        props = properties(leading)
+        if (props.get('public') != 'true'
+                or '[[Logseq/Entity/Podcast/Episode]]' not in props.get('logseq-entity', '')):
+            continue
+        try:
+            text, recording = compile_episode(text)
+        except ValueError as error:
+            raise ValueError(f'{path.name}: {error}') from error
+        path.write_text(text, encoding='utf-8')
+        episodes[normalized(path.stem.replace('___', '/'))] = recording
+    return episodes
+
+
+def install_episode_player(output, episodes):
+    """Enhance episode documents only; copied pretty routes inherit the module."""
+    parser = PageRoutes()
+    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    base = urlsplit(SITE_URL).path
+    for name, recording in episodes.items():
+        route = parser.routes.get(name)
+        if not route:
+            raise ValueError(f'Published episode was not rendered: {name}')
+        path = output / route
+        text = path.read_text(encoding='utf-8')
+        sources = re.findall(r'<audio\b[^>]*\bsrc="([^"]+)"', text)
+        if len(sources) != 1 or html.unescape(sources[0]) != recording:
+            raise ValueError(f'Episode player needs exactly one full recording: {name}')
+        additions = (f'<link rel="stylesheet" href="{base}player.css">'
+                     f'<script type="module" src="{base}player.js"></script>')
+        path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
+    if episodes:
+        for filename in ['player.js', 'player.css']:
+            shutil.copyfile(ROOT / 'site' / filename, output / filename)
+
+
 def package_pages(output):
     """Give rendered pages namespace URLs while retaining hash-file compatibility."""
     parser = PageRoutes()
@@ -178,7 +219,7 @@ def package_pages(output):
             if (output / parent).is_file():
                 raise ValueError(f'Public page path collides with existing output: {title}')
         if path.parts[0].casefold() in {'assets', 'index.html', 'pages.html', 'custom.css',
-                                       'legacy-routes.js', 'rss.xml', '.nojekyll'}:
+                                       'legacy-routes.js', 'player.js', 'player.css', 'rss.xml', '.nojekyll'}:
             raise ValueError(f'Public page path collides with asset namespace: {title}')
         if destination.exists():
             raise ValueError(f'Public page path collides with existing output: {title}')
@@ -253,6 +294,7 @@ def publish(source, output, renderer):
         subprocess.run(['nbb-logseq', str(ROOT / 'scripts/check_homepage.cljs'),
                         str(source), str(query)], cwd=ROOT, check=True)
         prepare_homepage(graph, json.loads(query.read_text(encoding='utf-8')))
+        episodes = compile_episode_pages(graph)
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
                 '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json']
@@ -261,6 +303,7 @@ def publish(source, output, renderer):
         for name in public_pages(graph):
             args.extend(['--include', name])
         subprocess.run(args, check=True)
+        install_episode_player(output, episodes)
         routes = package_pages(output)
         legacy_routes(output, graph, published_routes=routes)
         publish_feed(source, output)
