@@ -14,11 +14,11 @@ Open [the preview homepage](http://localhost:8765/gitpa/). The home page retains
 
 The light Nord stylesheet applies to the homepage, episode pages, and reference pages. Logseq Gardener renders page and block transclusions and recording controls. Episode preparation continues to select public notes and derive asset visibility from published episodes. The build includes explicitly public pages, copies the existing RSS, and adds the GitHub Pages `.nojekyll` marker. Each published page has a readable namespace URL such as `GitP/A/Session/26/10/20-Tue/`. RSS items link directly to these pages. Existing hashed page files and `#/page/...` links remain usable; generated navigation goes to namespace URLs. Recording controls retain native keyboard and seeking support. The original podcast artwork path is copied alongside the renderer’s assets so subscribed podcast clients keep a working image URL. Publication validates every RSS episode link against an emitted page.
 
-Run `python3 -m unittest discover -s tests`, `node --test tests/player.test.js`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, chapter seeking in an episode, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.
+Run `python3 -m unittest discover -s tests`, `node --test tests/*.test.js`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, chapter seeking in an episode, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.
 
 ## Episode chapters
 
-Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls. Selecting a chapter timestamp seeks and plays that recording; the footer shows the selected chapter. Playback starts only after the listener clicks a chapter or the recording controls.
+Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls or follows links within the site. Selecting a chapter timestamp seeks and plays that recording. The footer follows the chapter at the current playback time; selecting the chapter name opens its notes. “Return to start” opens the chapter or episode position where the listener started playback. Playback starts only after the listener clicks a chapter or the recording controls.
 
 Author chapter headings with the published-site `audio-timestamp` extension:
 
@@ -34,7 +34,7 @@ The example uses tabs for outline indentation. Timestamps accept integer seconds
 
 Chapter headings need only the full MP3 and their timestamps. Separate chapter MP3s and waveform images are unnecessary. Publication removes the existing derived chapter media from the temporary episode view while retaining chapter notes and unrelated artwork; checked-in garden pages stay unchanged. Without JavaScript, the recording retains native controls and chapter links open the full recording at a media time fragment.
 
-`scripts/audio_chapters.py` handles timestamp parsing and outline preparation. `site/player.js` controls the existing audio element, and `site/player.css` styles the footer. Player assets are loaded only on published episode pages, including their readable and compatibility URLs. RSS recording URLs and GUIDs remain unchanged.
+`scripts/audio_chapters.py` handles timestamp parsing and outline preparation. `site/player.js` controls the existing audio element and chapter timeline, `site/navigation.js` handles internal navigation and browser history, and `site/player.css` styles the footer. Player and navigation assets load on every published page, including readable and compatibility URLs. Internal navigation replaces the page content while keeping the same audio element alive. Browsing another episode offers a “Play this episode” button and keeps the current recording playing until the listener chooses to switch. External links, downloads, refreshes and leaving the site use normal browser navigation; refreshing or leaving the site stops playback. Without JavaScript, pages and native recording controls still work. RSS recording URLs and GUIDs remain unchanged.
 
 ## Roll back publication
 

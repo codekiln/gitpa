@@ -76,6 +76,8 @@ class HomepageTests(unittest.TestCase):
             self.assertNotIn('private', script)
             self.assertIn('decodeURIComponent', script)
             self.assertIn('legacy-routes.js', (output / 'index.html').read_text())
+            self.assertIn('window.gitpaNavigate(target, {replace: true})', script)
+            self.assertIn('else location.replace(target)', script)
 
     def test_public_parent_never_exposes_unmarked_child(self):
         with tempfile.TemporaryDirectory() as directory:
