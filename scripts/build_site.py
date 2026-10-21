@@ -153,10 +153,25 @@ def public_pages(graph):
     names = []
     for path in sorted((graph / 'pages').glob('*.md')):
         leading, _ = split_page(path.read_text(encoding='utf-8'))
-        if properties(leading).get('public') == 'true':
+        props = properties(leading)
+        if props.get('public') == 'true':
             names.append(path.stem.replace('___', '/'))
         else:
-            path.unlink()
+            # Every stored page outside Gitpa's explicit publication list stays
+            # withheld, even when an included namespace would select it.
+            # Keep only its identity so the renderer cannot recreate it as an
+            # ancestor collection; no source body or aliases reach that marker.
+            title = None
+            for line in path.read_text(encoding='utf-8').splitlines():
+                match = re.fullmatch(r'([A-Za-z][A-Za-z0-9-]*):: (.*)', line)
+                if not match:
+                    break
+                if match[1].lower() == 'title':
+                    title = match[2]
+            marker = 'public:: false\n'
+            if title:
+                marker += f'title:: {title}\n'
+            path.write_text(marker, encoding='utf-8')
     return names
 
 

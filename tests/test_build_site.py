@@ -89,8 +89,22 @@ class HomepageTests(unittest.TestCase):
             for name, content in fixtures.items():
                 (graph / 'pages' / f'{name}.md').write_text(content)
             self.assertEqual(public_pages(graph), ['Notes', 'Notes/Private/Visible'])
-            self.assertFalse((graph / 'pages/Notes___Private.md').exists())
+            self.assertEqual((graph / 'pages/Notes___Private.md').read_text(), 'public:: false\n')
             self.assertTrue((graph / 'pages/Notes___Private___Visible.md').exists())
+
+    def test_private_ancestor_identity_survives_without_body_or_alias(self):
+        with tempfile.TemporaryDirectory() as directory:
+            graph = Path(directory)
+            (graph / 'pages').mkdir()
+            private = graph / 'pages/Hidden.md'
+            private.write_text('Public:: false\nTitle:: Root/Hidden\nalias:: PrivateAlias\n- Secret contents\n')
+            (graph / 'pages/Root___Hidden___Visible.md').write_text('public:: true\n- Public\n')
+            self.assertEqual(public_pages(graph), ['Root/Hidden/Visible'])
+            self.assertEqual(private.read_text(), 'public:: false\ntitle:: Root/Hidden\n')
+            nested = graph / 'pages/Nested.md'
+            nested.write_text('- Secret\n  public:: false\n')
+            public_pages(graph)
+            self.assertEqual(nested.read_text(), 'public:: false\n')
 
     def test_legacy_aliases_require_a_published_unambiguous_page(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -48,6 +48,26 @@ class PublicRoutesTests(unittest.TestCase):
             self.assertIn('GitP/A/Session/26/10/20-Tue/', (root / 'legacy-routes.js').read_text())
             self.assertNotIn('legacy-routes.js', (root / page_output(title)).read_text())
 
+    def test_synthetic_namespace_routes_and_hierarchy_links_are_packaged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root, ['Microfreak', 'Microfreak/Preset', 'Microfreak/Preset/174 Auster'])
+            leaf = root / 'p-0000000000000002.html'
+            leaf.write_text('<head></head><body><nav>Site</nav><main>'
+                            '<nav class="namespace-breadcrumbs" aria-label="Breadcrumb">'
+                            '<a href="p-0000000000000000.html">Microfreak</a>'
+                            '<a href="p-0000000000000001.html">Preset</a></nav></main></body>')
+            parent = root / 'p-0000000000000001.html'
+            parent.write_text('<head></head><main><section class="namespace-hierarchy">'
+                              '<a href="p-0000000000000002.html">174 Auster</a></section></main>')
+            package_pages(root)
+            self.assertTrue((root / 'Microfreak/Preset/index.html').is_file())
+            text = (root / 'Microfreak/Preset/174 Auster/index.html').read_text()
+            self.assertIn('href="/gitpa/Microfreak/Preset/"', text)
+            self.assertIn('href="/gitpa/Microfreak/"', text)
+            self.assertIn('href="/gitpa/Microfreak/Preset/174%20Auster/"',
+                          (root / 'Microfreak/Preset/index.html').read_text())
+
     def test_packaging_rejects_collisions_before_rewriting(self):
         for titles in [['index.html'], ['assets/Page'], ['legacy-routes.js'], ['legacy-routes.json'], ['Navigation.JS'], ['Player.JS'],
                        ['Guide/Café', 'Guide/Cafe\u0301'], ['Guide/A', 'guide/B'],
