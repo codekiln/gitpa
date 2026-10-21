@@ -38,6 +38,9 @@ jobs:
       - name: Test publication preparation
         run: uv run --no-project python -m unittest discover -s tests
 
+      - name: Test episode player lifecycle
+        run: node --test tests/player.test.js
+
       - name: Install Rust for Logseq Gardener
         run: rustup toolchain install 1.97.0 --profile minimal
 

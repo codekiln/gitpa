@@ -12,9 +12,29 @@ python3 -m http.server --directory /private/tmp/gitpa-preview 8765
 
 Open [the preview homepage](http://localhost:8765/gitpa/). The home page retains the introduction, subscription link, fly artwork, and Recent Ceremonies list. The build evaluates the authored Logseq query, result transform, and Hiccup view through the same parser used by `site:query:check`; the prepared publication graph receives ordinary links in the evaluated order. The source query stays in the garden. An unsupported query view or a result linking to a missing or unpublished page stops publication.
 
-The light Nord stylesheet applies to the homepage, episode pages, and reference pages. Logseq Gardener renders page and block transclusions and recording controls. Episode preparation continues to select public notes and derive asset visibility from published episodes. The build includes explicitly public pages, copies the existing RSS, and adds the GitHub Pages `.nojekyll` marker. Each published page has a readable namespace URL such as `GitP/A/Session/26/10/20-Tue/`. RSS items link directly to these pages. Existing hashed page files and `#/page/...` links remain usable; generated navigation goes to namespace URLs. Recording controls and waveform images retain their outline structure with media-item markers hidden. The original podcast artwork path is copied alongside the renderer’s assets so subscribed podcast clients keep a working image URL. Publication validates every RSS episode link against an emitted page.
+The light Nord stylesheet applies to the homepage, episode pages, and reference pages. Logseq Gardener renders page and block transclusions and recording controls. Episode preparation continues to select public notes and derive asset visibility from published episodes. The build includes explicitly public pages, copies the existing RSS, and adds the GitHub Pages `.nojekyll` marker. Each published page has a readable namespace URL such as `GitP/A/Session/26/10/20-Tue/`. RSS items link directly to these pages. Existing hashed page files and `#/page/...` links remain usable; generated navigation goes to namespace URLs. Recording controls retain native keyboard and seeking support. The original podcast artwork path is copied alongside the renderer’s assets so subscribed podcast clients keep a working image URL. Publication validates every RSS episode link against an emitted page.
 
-Run `python3 -m unittest discover -s tests`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, an episode with chapter audio and waveforms, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.
+Run `python3 -m unittest discover -s tests`, `node --test tests/player.test.js`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, chapter seeking in an episode, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.
+
+## Episode chapters
+
+Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls. Selecting a chapter timestamp seeks and plays that recording; the footer shows the selected chapter. Playback starts only after the listener clicks a chapter or the recording controls.
+
+Author chapter headings with the published-site `audio-timestamp` extension:
+
+```markdown
+- # Episode title
+	- ![Full recording](https://example.com/episode.mp3)
+	- ## Chapters
+		- ### {{audio-timestamp 14:42}} Adapters and input modes
+			- Chapter notes.
+```
+
+The example uses tabs for outline indentation. Timestamps accept integer seconds, `M:SS`, or `H:MM:SS`; minutes and seconds after a colon use two digits from `00` through `59`. Integer seconds display as a readable time. This extension is compiled during publication rather than by Logseq itself. Existing time-prefixed chapter headings, including time ranges, also become chapter controls. Macros shown in fenced or inline code remain literal.
+
+Chapter headings need only the full MP3 and their timestamps. Separate chapter MP3s and waveform images are unnecessary. Publication removes the existing derived chapter media from the temporary episode view while retaining chapter notes and unrelated artwork; checked-in garden pages stay unchanged. Without JavaScript, the recording retains native controls and chapter links open the full recording at a media time fragment.
+
+`scripts/audio_chapters.py` handles timestamp parsing and outline preparation. `site/player.js` controls the existing audio element, and `site/player.css` styles the footer. Player assets are loaded only on published episode pages, including their readable and compatibility URLs. RSS recording URLs and GUIDs remain unchanged.
 
 ## Roll back publication
 
