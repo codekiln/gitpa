@@ -1,3 +1,5 @@
+import { createNavigator } from './navigation.js';
+
 /** Match only links into this recording, preserving ordinary links as a fallback. */
 export function chapterTime(href, source, base) {
   try {
@@ -81,63 +83,212 @@ export function createPlayer(audio, update = () => {}) {
   };
 }
 
-export function enhanceEpisode(document) {
-  if (document.querySelector('.episode-player')) return null;
-  const recordings = document.querySelectorAll('audio');
-  if (recordings.length !== 1) return null;
-  const audio = recordings[0];
-  const source = audio.currentSrc || audio.getAttribute('src') || audio.querySelector('source')?.getAttribute('src');
-  if (!source) return null;
-  const footer = document.createElement('footer');
-  footer.className = 'episode-player';
-  footer.setAttribute('aria-label', 'Episode recording');
-  const details = document.createElement('div');
-  details.className = 'episode-player-details';
-  const recording = document.createElement('a');
-  recording.href = source;
-  recording.textContent = 'Full recording';
-  const chapter = document.createElement('span');
-  chapter.className = 'episode-player-chapter';
-  const status = document.createElement('span');
-  status.className = 'episode-player-status';
-  status.setAttribute('role', 'status');
-  status.setAttribute('aria-live', 'polite');
-  details.append(recording, chapter, status);
-  audio.closest?.('li')?.classList.add('episode-recording-origin');
-  audio.controls = true;
-  audio.setAttribute('aria-label', 'Full episode recording');
-  footer.append(details, audio);
-  document.body.append(footer);
-  document.body.classList.add('has-episode-player');
-  const player = createPlayer(audio, state => {
-    chapter.textContent = state.chapter;
-    status.textContent = state.status;
+export function currentChapter(chapters, seconds) {
+  let current = null;
+  for (const chapter of chapters) {
+    if (chapter.seconds > seconds) break;
+    current = chapter;
+  }
+  return current;
+}
+
+/** Playback context survives page changes; changing context is always explicit. */
+export function createEpisodeSession(audio, update = () => {}) {
+  let context = null;
+  let origin = null;
+  let controller = null;
+  let playback = { status: 'Paused' };
+  const publish = () => {
+    if (!context) return;
+    update({ context, origin, current: currentChapter(context.chapters, audio.currentTime), ...playback });
+  };
+  const nativePlay = () => {
+    if (!origin && context) origin = { href: context.startHref || `${context.url}#episode-start`, label: context.title };
+    publish();
+  };
+  for (const name of ['timeupdate', 'seeked', 'loadedmetadata']) audio.addEventListener(name, publish);
+  audio.addEventListener('play', nativePlay);
+  const adopt = (next, replace) => {
+    if (context?.source === next.source) return;
+    controller?.dispose();
+    if (replace) {
+      audio.pause();
+      audio.setAttribute('src', next.source);
+      audio.load();
+    }
+    context = next;
+    origin = null;
+    controller = createPlayer(audio, state => { playback = state; publish(); });
+    publish();
+  };
+  return {
+    adopt(next) { if (!context) adopt(next, false); },
+    activate(next, seconds = 0, start = null) {
+      adopt(next, context !== null);
+      origin = start || { href: next.startHref || `${next.url}#episode-start`, label: next.title };
+      controller.seek(seconds, next.title);
+      publish();
+    },
+    refresh: publish,
+    get context() { return context; },
+    dispose() {
+      controller?.dispose();
+      for (const name of ['timeupdate', 'seeked', 'loadedmetadata']) audio.removeEventListener(name, publish);
+      audio.removeEventListener('play', nativePlay);
+    },
+  };
+}
+
+/** The build marks episodes explicitly so manuals with audio stay ordinary pages. */
+export function readEpisode(document) {
+  const marker = document.querySelector('meta[name="gitpa-episode"]');
+  const main = document.querySelector('main');
+  const raw = marker?.getAttribute('content');
+  if (!raw || !main) return null;
+  const source = new URL(raw, document.baseURI).href;
+  const recordings = [...main.querySelectorAll('audio')].filter(audio => {
+    const value = audio.getAttribute('src');
+    return value && new URL(value, document.baseURI).href === source;
   });
+  if (recordings.length !== 1) return null;
+  const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+  const url = new URL(canonical || document.baseURI, document.baseURI);
+  url.hash = '';
+  const titleHeading = main.querySelector('ul h1') || main.querySelector('h1');
+  const startHeading = main.querySelector('h1');
+  if (startHeading && !startHeading.id) startHeading.id = 'episode-start';
+  const chapters = [];
+  const used = new Map();
+  for (const heading of main.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+    for (const anchor of heading.querySelectorAll('a[href]')) {
+      const seconds = chapterTime(anchor.getAttribute('href'), source, document.baseURI);
+      if (seconds === null) continue;
+      const count = (used.get(seconds) || 0) + 1;
+      used.set(seconds, count);
+      if (!heading.id) heading.id = `chapter-${seconds}${count > 1 ? `-${count}` : ''}`;
+      chapters.push({ seconds, label: heading.textContent.trim(), id: heading.id,
+        href: `${url.href}#${encodeURIComponent(heading.id)}` });
+      break;
+    }
+  }
+  chapters.sort((a, b) => a.seconds - b.seconds);
+  const startHref = startHeading ? `${url.href}#${encodeURIComponent(startHeading.id)}` : url.href;
+  return { source, url: url.href, startHref, title: titleHeading?.textContent.trim() || document.title,
+    chapters, audio: recordings[0] };
+}
+
+const managers = new WeakMap();
+export function createSitePlayer(document) {
+  if (managers.has(document)) return managers.get(document);
+  let audio = null;
+  let footer = null;
+  let session = null;
+  let page = null;
+  let observer = null;
+  let disposeView = () => {};
+  const makeFooter = initial => {
+    audio = initial.audio;
+    footer = document.createElement('footer');
+    footer.className = 'episode-player';
+    footer.setAttribute('aria-label', 'Episode recording');
+    const details = document.createElement('div');
+    details.className = 'episode-player-details';
+    const recording = document.createElement('a');
+    recording.textContent = 'Full recording';
+    const origin = document.createElement('a');
+    origin.className = 'episode-player-origin';
+    origin.textContent = 'Return to start';
+    const chapter = document.createElement('a');
+    chapter.className = 'episode-player-chapter';
+    const status = document.createElement('span');
+    status.className = 'episode-player-status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    details.append(recording, origin, chapter, status);
+    audio.closest('li')?.classList.add('episode-recording-origin');
+    audio.controls = true;
+    audio.setAttribute('aria-label', 'Full episode recording');
+    footer.append(details, audio);
+    document.body.append(footer);
+    document.body.classList.add('has-episode-player');
+    session = createEpisodeSession(audio, state => {
+      recording.href = state.context.source;
+      origin.href = state.origin?.href || state.context.startHref || `${state.context.url}#episode-start`;
+      chapter.href = state.current?.href || state.context.startHref || `${state.context.url}#episode-start`;
+      chapter.textContent = state.current?.label || state.context.title;
+      status.textContent = state.status;
+      const currentPage = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+      const here = new URL(currentPage || document.baseURI, document.baseURI).href.split('#')[0];
+      for (const heading of document.querySelectorAll('main h1, main h2, main h3, main h4, main h5, main h6')) {
+        const selected = here === state.context.url && heading.id === state.current?.id;
+        heading.classList.toggle('is-current-chapter', selected);
+        for (const link of heading.querySelectorAll('a[href]')) {
+          if (selected && chapterTime(link.getAttribute('href'), state.context.source, document.baseURI) === state.current?.seconds) link.setAttribute('aria-current', 'true');
+          else link.removeAttribute('aria-current');
+        }
+      }
+    });
+    session.adopt(initial);
+    const size = () => document.body.style.setProperty('--episode-player-height', `${footer.getBoundingClientRect().height}px`);
+    const Observer = document.defaultView?.ResizeObserver;
+    observer = Observer ? new Observer(size) : null;
+    observer?.observe(footer);
+    size();
+  };
+  const showPage = () => {
+    disposeView();
+    disposeView = () => {};
+    page = readEpisode(document);
+    if (!page) { session?.refresh(); return; }
+    if (!audio) { makeFooter(page); return; }
+    const candidate = page.audio;
+    if (candidate !== audio) {
+      candidate.closest('li')?.classList.add('episode-recording-origin');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'episode-play';
+      button.textContent = 'Play this episode';
+      const play = () => session.activate(page);
+      button.addEventListener('click', play);
+      candidate.replaceWith(button);
+      disposeView = () => button.removeEventListener('click', play);
+    }
+    session.refresh();
+  };
   const click = event => {
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!page || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
     if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
-    const seconds = chapterTime(anchor.getAttribute('href'), source, document.baseURI);
+    const seconds = chapterTime(anchor.getAttribute('href'), page.source, document.baseURI);
     if (seconds === null) return;
-    event.preventDefault();
     const heading = anchor.closest('h1, h2, h3, h4, h5, h6');
-    player.seek(seconds, (heading || anchor).textContent.trim());
+    const chapter = page.chapters.find(item => item.id === heading?.id);
+    event.preventDefault();
+    session.activate(page, seconds, chapter && { href: chapter.href, label: chapter.label });
   };
   document.addEventListener('click', click);
-  // Match padding to the actual footer height, including wrapped status text.
-  const size = () => document.body.style.setProperty('--episode-player-height', `${footer.getBoundingClientRect().height}px`);
-  const Observer = document.defaultView?.ResizeObserver;
-  const observer = Observer ? new Observer(size) : null;
-  observer?.observe(footer);
-  size();
-  return { audio, footer, dispose() {
-    player.dispose();
+  showPage();
+  const manager = { showPage, get audio() { return audio; }, get footer() { return footer; }, dispose() {
+    disposeView();
+    session?.dispose();
     document.removeEventListener('click', click);
     observer?.disconnect();
+    managers.delete(document);
   } };
+  managers.set(document, manager);
+  return manager;
+}
+
+export function enhanceEpisode(document) {
+  if (managers.has(document) || !readEpisode(document)) return null;
+  return createSitePlayer(document);
 }
 
 if (typeof document !== 'undefined') {
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => enhanceEpisode(document), { once: true });
-  else enhanceEpisode(document);
+  const start = () => {
+    const player = createSitePlayer(document);
+    createNavigator({ document, window: document.defaultView, onPage: player.showPage });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
 }
