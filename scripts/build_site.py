@@ -124,7 +124,9 @@ def legacy_routes(output, graph=None, published_routes=None):
         parser.routes = {name: next(iter(routes)) for name, routes in claims.items()
                          if len(routes) == 1}
     routes = json.dumps(parser.routes, ensure_ascii=True).replace('<', '\\u003c')
+    (output / 'legacy-routes.json').write_text(routes, encoding='utf-8')
     script = '''const routes = ROUTES;
+const routeRoot = new URL(SITE_BASE, location.origin);
 function openLegacyPage() {
   if (!location.hash.startsWith('#/page/')) return;
   let name;
@@ -132,12 +134,14 @@ function openLegacyPage() {
   catch { return; }
   name = name.trim().replace(/^\\/+|\\/+$/g, '').normalize('NFC').toLowerCase();
   if (Object.hasOwn(routes, name)) {
-    location.replace(new URL(routes[name], document.baseURI).href);
+    const target = new URL(routes[name], routeRoot).href;
+    if (window.gitpaNavigate) window.gitpaNavigate(target, {replace: true});
+    else location.replace(target);
   }
 }
 window.addEventListener('hashchange', openLegacyPage);
 openLegacyPage();
-'''.replace('ROUTES', routes)
+'''.replace('SITE_BASE', json.dumps(urlsplit(SITE_URL).path)).replace('ROUTES', routes)
     (output / 'legacy-routes.js').write_text(script, encoding='utf-8')
     home = output / 'index.html'
     home.write_text(home.read_text(encoding='utf-8').replace(
@@ -175,7 +179,7 @@ def compile_episode_pages(graph):
 
 
 def install_episode_player(output, episodes):
-    """Enhance episode documents only; copied pretty routes inherit the module."""
+    """Install persistent navigation everywhere and identify playable episodes."""
     parser = PageRoutes()
     parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
     base = urlsplit(SITE_URL).path
@@ -188,12 +192,17 @@ def install_episode_player(output, episodes):
         sources = re.findall(r'<audio\b[^>]*\bsrc="([^"]+)"', text)
         if len(sources) != 1 or html.unescape(sources[0]) != recording:
             raise ValueError(f'Episode player needs exactly one full recording: {name}')
-        additions = (f'<link rel="stylesheet" href="{base}player.css">'
-                     f'<script type="module" src="{base}player.js"></script>')
+        canonical = base + page_route(parser.titles[route])
+        metadata = (f'<meta name="gitpa-episode" content="{html.escape(recording, quote=True)}">'
+                    f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">')
+        path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
+    additions = (f'<link rel="stylesheet" href="{base}player.css">'
+                 f'<script type="module" src="{base}player.js"></script>')
+    for path in output.glob('*.html'):
+        text = path.read_text(encoding='utf-8')
         path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
-    if episodes:
-        for filename in ['player.js', 'player.css']:
-            shutil.copyfile(ROOT / 'site' / filename, output / filename)
+    for filename in ['player.js', 'player.css', 'navigation.js']:
+        shutil.copyfile(ROOT / 'site' / filename, output / filename)
 
 
 def package_pages(output):
@@ -219,7 +228,7 @@ def package_pages(output):
             if (output / parent).is_file():
                 raise ValueError(f'Public page path collides with existing output: {title}')
         if path.parts[0].casefold() in {'assets', 'index.html', 'pages.html', 'custom.css',
-                                       'legacy-routes.js', 'player.js', 'player.css', 'rss.xml', '.nojekyll'}:
+                                       'legacy-routes.js', 'legacy-routes.json', 'player.js', 'player.css', 'navigation.js', 'rss.xml', '.nojekyll'}:
             raise ValueError(f'Public page path collides with asset namespace: {title}')
         if destination.exists():
             raise ValueError(f'Public page path collides with existing output: {title}')

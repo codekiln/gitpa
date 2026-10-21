@@ -23,7 +23,11 @@ body.has-episode-player {
   font-size: .9rem;
   overflow-wrap: anywhere;
 }
-.episode-player-chapter { flex: 1; }
+.episode-player-chapter { flex: 1; font-weight: 650; }
+.episode-player-origin { font-size: .85rem; }
+.is-current-chapter { border-left: 3px solid #5e81ac; padding-left: .5rem; background: #eceff4; }
+.episode-play { padding: .5rem .8rem; color: #3b4252; background: #e5e9f0; border: 1px solid #81a1c1; border-radius: .3rem; cursor: pointer; }
+.navigation-error { padding: .75rem; border: 1px solid #b48ead; background: #eceff4; }
 .episode-player-status { font-size: .8rem; }
 .episode-player audio {
   display: block;

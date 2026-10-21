@@ -49,7 +49,7 @@ class PublicRoutesTests(unittest.TestCase):
             self.assertNotIn('legacy-routes.js', (root / page_output(title)).read_text())
 
     def test_packaging_rejects_collisions_before_rewriting(self):
-        for titles in [['index.html'], ['assets/Page'], ['legacy-routes.js'], ['Player.JS'],
+        for titles in [['index.html'], ['assets/Page'], ['legacy-routes.js'], ['legacy-routes.json'], ['Navigation.JS'], ['Player.JS'],
                        ['Guide/Café', 'Guide/Cafe\u0301'], ['Guide/A', 'guide/B'],
                        ['Guide', 'Guide/index.html/Child'], ['Guide/index.html/Child', 'Guide']]:
             with self.subTest(titles=titles), tempfile.TemporaryDirectory() as directory:

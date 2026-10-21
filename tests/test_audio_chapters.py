@@ -81,17 +81,21 @@ class AudioChapterTests(unittest.TestCase):
         self.assertIn('Select a chapter timestamp', text)
         self.assertIn('Chapter waveforms', original)
 
-    def test_player_is_injected_only_into_single_audio_episode(self):
+    def test_shell_loads_everywhere_but_only_episodes_have_recording_metadata(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / 'pages.html').write_text('<a href="p-abc.html">Episode</a><a href="p-def.html">Asset</a>')
+            (root / 'pages.html').write_text('<head></head><body><a href="p-abc.html">Episode</a><a href="p-def.html">Asset</a></body>')
             (root / 'p-abc.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
             (root / 'p-def.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
             install_episode_player(root, {'episode': FULL})
             text = (root / 'p-abc.html').read_text()
             self.assertIn('/gitpa/player.js', text)
             self.assertIn('/gitpa/player.css', text)
-            self.assertNotIn('player.js', (root / 'p-def.html').read_text())
+            self.assertIn('player.js', (root / 'p-def.html').read_text())
+            self.assertIn('player.js', (root / 'pages.html').read_text())
+            self.assertIn('name="gitpa-episode"', text)
+            self.assertIn('rel="canonical" href="/gitpa/Episode/"', text)
+            self.assertNotIn('name="gitpa-episode"', (root / 'p-def.html').read_text())
             self.assertEqual(text.count('<audio'), 1)
             self.assertTrue((root / 'player.js').is_file())
             (root / 'p-abc.html').write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
