@@ -2,16 +2,22 @@
 from __future__ import annotations
 import argparse
 import json
+import html
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import unicodedata
 from urllib.parse import unquote
+from urllib.parse import urlsplit, urlunsplit
+import xml.etree.ElementTree as ET
 
 from logseq_page import properties, split_page
 from prepare_site import prepare
+from site_routes import page_route, page_output
+from build_rss import ARTWORK_URL, SITE_URL
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
@@ -73,7 +79,7 @@ def prepare_homepage(graph, result):
 class PageRoutes(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.routes, self.href, self.label = {}, None, ''
+        self.routes, self.titles, self.href, self.label = {}, {}, None, ''
 
     def handle_starttag(self, tag, attrs):
         if tag == 'a':
@@ -88,13 +94,17 @@ class PageRoutes(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'a' and self.href:
             self.routes[normalized(self.label)] = self.href
+            self.titles[self.href] = self.label
             self.href = None
 
 
-def legacy_routes(output, graph=None):
+def legacy_routes(output, graph=None, published_routes=None):
     """Preserve published Logseq hash links, including episode URLs in RSS."""
     parser = PageRoutes()
-    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    if published_routes is None:
+        parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    else:
+        parser.routes = dict(published_routes)
     if normalized(HOME) not in parser.routes:
         raise ValueError('Rendered all-pages index does not include the homepage')
     if graph:
@@ -145,6 +155,91 @@ def public_pages(graph):
     return names
 
 
+def package_pages(output):
+    """Give rendered pages namespace URLs while retaining hash-file compatibility."""
+    parser = PageRoutes()
+    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    base = urlsplit(SITE_URL).path
+    destinations, claims, directories = {}, {}, {}
+    for route, title in parser.titles.items():
+        path = page_output(title)
+        claim = unicodedata.normalize('NFC', str(path)).casefold()
+        if claim in claims:
+            raise ValueError(f'Public page path collision: {title} and {claims[claim]}')
+        claims[claim] = title
+        destination = output / path
+        for parent in path.parents:
+            if parent == Path('.'):
+                continue
+            key = unicodedata.normalize('NFC', str(parent)).casefold()
+            if key in directories and directories[key] != str(parent):
+                raise ValueError(f'Public page directory collision: {title}')
+            directories[key] = str(parent)
+            if (output / parent).is_file():
+                raise ValueError(f'Public page path collides with existing output: {title}')
+        if path.parts[0].casefold() in {'assets', 'index.html', 'pages.html', 'custom.css',
+                                       'legacy-routes.js', 'rss.xml', '.nojekyll'}:
+            raise ValueError(f'Public page path collides with asset namespace: {title}')
+        if destination.exists():
+            raise ValueError(f'Public page path collides with existing output: {title}')
+        destinations[route] = (destination, page_route(title))
+
+    for claim in claims.keys() & directories.keys():
+        raise ValueError(f'Public page file/directory collision: {claims[claim]}')
+
+    def rewrite(text):
+        def attribute(match):
+            value = html.unescape(match[2])
+            parsed = urlsplit(value)
+            if parsed.scheme or parsed.netloc or value.startswith(('/', '#')):
+                return match[0]
+            path = parsed.path
+            if path in destinations:
+                path = base + destinations[path][1]
+            elif path == 'index.html':
+                path = base
+            elif path:
+                path = base + path
+            else:
+                return match[0]
+            value = urlunsplit(('', '', path, parsed.query, parsed.fragment))
+            return f'{match[1]}="{html.escape(value, quote=True)}"'
+        return re.sub(r'\b(href|src)="([^"]*)"', attribute, text)
+
+    for path in list(output.glob('*.html')):
+        text = rewrite(path.read_text(encoding='utf-8'))
+        path.write_text(text, encoding='utf-8')
+        if path.name in destinations:
+            destination, _ = destinations[path.name]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(text, encoding='utf-8')
+    return {normalized(title): page_route(title) for title in parser.titles.values()}
+
+
+def publish_feed(source, output, feed=None):
+    """Retain subscribed artwork URLs and require every feed link to exist."""
+    artwork = 'assets/gitp/logo/gitp_logo_raw_fly.JPG'
+    artwork_source = source / artwork
+    if not artwork_source.is_file() or not artwork_source.resolve().is_relative_to((source / 'assets').resolve()):
+        raise ValueError('Podcast artwork is missing or outside graph assets')
+    artwork_output = output / artwork
+    artwork_output.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(artwork_source, artwork_output)
+    content = (feed or ROOT / 'rss.xml').read_bytes()
+    root = ET.fromstring(content)
+    for item in root.findall('./channel/item'):
+        url = item.findtext('link', '')
+        if not url.startswith(SITE_URL):
+            raise ValueError(f'Podcast episode is outside the published site: {url}')
+        route = url[len(SITE_URL):]
+        title = unquote(route.rstrip('/'))
+        if route != page_route(title) or not (output / page_output(title)).is_file():
+            raise ValueError(f'Podcast episode page is missing: {url}')
+    if root.findtext('./channel/image/url') != ARTWORK_URL:
+        raise ValueError('Podcast artwork URL does not match the compatibility asset')
+    (output / 'rss.xml').write_bytes(content)
+
+
 def publish(source, output, renderer):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
@@ -166,8 +261,9 @@ def publish(source, output, renderer):
         for name in public_pages(graph):
             args.extend(['--include', name])
         subprocess.run(args, check=True)
-        legacy_routes(output, graph)
-        (output / 'rss.xml').write_bytes((ROOT / 'rss.xml').read_bytes())
+        routes = package_pages(output)
+        legacy_routes(output, graph, published_routes=routes)
+        publish_feed(source, output)
         (output / '.nojekyll').touch()
     return output
 

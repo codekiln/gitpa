@@ -25,6 +25,8 @@ class FeedTests(unittest.TestCase):
         episode = self.load()[0]
         self.assertEqual(episode['description'], 'Music from a patch.')
         self.assertEqual(episode['audio_url'], 'https://example.org/audio.mp3')
+        self.assertEqual(episode['page_url'], 'https://codekiln.github.io/gitpa/GitP/A/Session/26/09/24-Thu/')
+        self.assertEqual(episode['guid'], 'stable')
         self.assertIn(b'length="1234"', render_feed([episode]))
     def test_direct_recording_keeps_feed_identity(self):
         self.page.write_text(self.props + self.body.replace("{{embed [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]]}}", "![Listen](https://example.org/audio.mp3)"))
