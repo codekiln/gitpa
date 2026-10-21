@@ -1,0 +1,112 @@
+import sys
+from pathlib import Path
+import tempfile
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+from build_site import legacy_routes, prepare_homepage, public_pages, query_outline
+
+
+class HomepageTests(unittest.TestCase):
+    def result(self):
+        return {'title': ['h2', 'Recent Ceremonies'], 'view': ['ul',
+                ['li', ['a', {'href': '#/page/gitp%2Fa%2Fsession%2Fnewest'}, 'GitP/A/Session/Newest']],
+                ['li', ['a', {'href': '#/page/gitp%2Fa%2Fsession%2Folder'}, 'GitP/A/Session/Older']]]}
+
+    def test_view_order_labels_and_targets_are_preserved(self):
+        self.assertEqual(query_outline(self.result()),
+                         '- ## Recent Ceremonies\n'
+                         '\t- [[GitP/A/Session/Newest]]\n'
+                         '\t- [[GitP/A/Session/Older]]\n')
+
+    def test_unexpected_view_fails_instead_of_silently_changing_results(self):
+        result = self.result()
+        result['view'][1][1][1]['href'] = 'https://example.com/'
+        with self.assertRaisesRegex(ValueError, 'page route'):
+            query_outline(result)
+
+    def test_replaces_query_only_in_prepared_copy(self):
+        original = Path(__file__).resolve().parents[1] / 'gitp-garden/pages/Ghost in the Patch.md'
+        before = original.read_text()
+        with tempfile.TemporaryDirectory() as directory:
+            graph = Path(directory)
+            (graph / 'pages').mkdir()
+            home = graph / 'pages/Ghost in the Patch.md'
+            home.write_text(before)
+            for name in ['Newest', 'Older']:
+                (graph / 'pages' / f'GitP___A___Session___{name}.md').write_text('public:: true\n- Episode\n')
+            prepare_homepage(graph, self.result())
+            after = home.read_text()
+            self.assertNotIn('#+BEGIN_QUERY', after)
+            self.assertIn('- ## Recent Ceremonies', after)
+            self.assertIn('gitp_logo_raw_fly.JPG', after)
+            self.assertIn('https://codekiln.github.io/gitpa/rss.xml', after)
+            self.assertEqual(original.read_text(), before)
+
+    def test_query_result_changes_change_publication(self):
+        result = self.result()
+        before = query_outline(result)
+        result['view'] = ['ul', result['view'][2]]
+        after = query_outline(result)
+        self.assertIn('Newest', before)
+        self.assertNotIn('Newest', after)
+        self.assertIn('Older', after)
+
+    def test_query_cannot_publish_missing_or_private_target(self):
+        for publication in [None, 'false']:
+            with self.subTest(publication=publication), tempfile.TemporaryDirectory() as directory:
+                graph = Path(directory)
+                (graph / 'pages').mkdir()
+                home = graph / 'pages/Ghost in the Patch.md'
+                home.write_text('- query-table:: false\n  #+BEGIN_QUERY\n  {}\n  #+END_QUERY\n')
+                if publication:
+                    (graph / 'pages/GitP___A___Session___Newest.md').write_text(f'public:: {publication}\n- Private\n')
+                with self.assertRaisesRegex(ValueError, 'missing or unpublished'):
+                    prepare_homepage(graph, self.result())
+
+    def test_legacy_routes_are_derived_only_from_published_index(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / 'index.html').write_text('<head></head><body>Home</body>')
+            (output / 'pages.html').write_text('<a href="p-abc.html">Ghost in the Patch</a>'
+                                             '<a href="p-def.html">GitP/A/Session/Newest</a>')
+            legacy_routes(output)
+            script = (output / 'legacy-routes.js').read_text()
+            self.assertIn('"gitp/a/session/newest": "p-def.html"', script)
+            self.assertNotIn('private', script)
+            self.assertIn('decodeURIComponent', script)
+            self.assertIn('legacy-routes.js', (output / 'index.html').read_text())
+
+    def test_public_parent_never_exposes_unmarked_child(self):
+        with tempfile.TemporaryDirectory() as directory:
+            graph = Path(directory)
+            (graph / 'pages').mkdir()
+            fixtures = {'Notes': 'public:: true\n- Public\n',
+                        'Notes___Private': '- PRIVATE CONTENT\n',
+                        'Notes___Private___Visible': 'public:: true\n- Public grandchild\n'}
+            for name, content in fixtures.items():
+                (graph / 'pages' / f'{name}.md').write_text(content)
+            self.assertEqual(public_pages(graph), ['Notes', 'Notes/Private/Visible'])
+            self.assertFalse((graph / 'pages/Notes___Private.md').exists())
+            self.assertTrue((graph / 'pages/Notes___Private___Visible.md').exists())
+
+    def test_legacy_aliases_require_a_published_unambiguous_page(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            graph = output / 'graph'
+            (graph / 'pages').mkdir(parents=True)
+            (output / 'index.html').write_text('<head></head>')
+            (output / 'pages.html').write_text('<a href="p-abc.html">Ghost in the Patch</a>'
+                                             '<a href="p-def.html">Episode</a>')
+            (graph / 'pages/Episode.md').write_text('alias:: [[Recording]], Shared\n- Episode\n')
+            (graph / 'pages/Ghost in the Patch.md').write_text('alias:: Shared\n- Home\n')
+            (graph / 'pages/Private.md').write_text('alias:: Secret\n- Private\n')
+            legacy_routes(output, graph)
+            script = (output / 'legacy-routes.js').read_text()
+            self.assertIn('"recording": "p-def.html"', script)
+            self.assertNotIn('"shared":', script)
+            self.assertNotIn('"secret":', script)
+
+
+if __name__ == '__main__':
+    unittest.main()

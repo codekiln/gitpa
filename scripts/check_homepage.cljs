@@ -81,3 +81,9 @@
 (assert (not (some #{"unpublished"} fixture-names)) "Parsed draft leaked into query")
 (.rmSync fs temporary #js {:recursive true :force true})
 (println "Timezone and unpublished fixtures pass")
+
+;; Publication consumes the evaluated authored query, transform, and view.
+;; This output is also exercised by every normal query validation above.
+(when-let [output (second *command-line-args*)]
+  (.writeFileSync fs output
+    (js/JSON.stringify (clj->js {:title (:title query-map) :view rendered-view}) nil 2)))
