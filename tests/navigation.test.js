@@ -140,6 +140,29 @@ test('initial chapter fragment scrolls and focuses IDs assigned before shell set
   assert.equal(fragment.scrolled, true);
 });
 
+test('Gardener reveals fragment ancestors before soft-navigation focus and scroll', async () => {
+  let fetched = 0, revealed = false, calls = 0;
+  const { doc, win, fragment } = fixture(async () => { fetched++; return response(); });
+  const originalMain = doc.nodes.main;
+  win.logseqGardenerRevealFragment = (hash, options) => {
+    assert.equal(hash, '#part');
+    assert.deepEqual(options, { scroll: false });
+    assert.notEqual(doc.nodes.main, originalMain);
+    assert.equal(win.location.hash, '#part');
+    revealed = true; calls++;
+  };
+  fragment.focus = () => { assert.equal(revealed, true); };
+  fragment.scrollIntoView = () => { assert.equal(revealed, true); };
+  const navigator = createNavigator({ document: doc, window: win });
+  assert.equal(await navigator.navigate('/gitpa/one/#part'), true);
+  assert.equal(fetched, 1);
+  revealed = false;
+  assert.equal(await navigator.navigate('#part'), true);
+  assert.equal(fetched, 1);
+  assert.equal(calls, 2);
+  navigator.dispose();
+});
+
 test('initial legacy hash leaves route handling to the legacy bootstrap', () => {
   const { doc, win, fragment } = fixture();
   win.location = new URL('https://example.com/gitpa/#/page/old');

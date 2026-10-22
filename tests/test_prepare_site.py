@@ -51,6 +51,30 @@ class VisibilityTests(unittest.TestCase):
             prepare(self.source, self.source / 'site')
 
 class PresentationTests(unittest.TestCase):
+    def test_collapse_state_survives_preparation_without_exposing_private_notes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            path = source / 'pages/Episode.md'
+            original = ('public:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\n'
+                        '- # Episode\n\t- ![Recording](https://example.com/full.mp3)\n'
+                        '\t- Dialogue\n\t  collapsed:: true\n\t  id:: private-editor-id\n'
+                        '\t\t- Transcript\n\t- Expanded\n\t  collapsed:: false\n'
+                        '\t\t- Visible note\n\t- ## Notes\n\t  collapsed:: true\n'
+                        '\t\t- Private idea\n\t- ## Files\n\t\t- Download\n')
+            path.write_text(original)
+            prepare(source, output)
+            rendered = (output / 'pages/Episode.md').read_text().split('- # Episode', 1)[1]
+            self.assertIn('Dialogue\n\t  collapsed:: true\n', rendered)
+            self.assertIn('Expanded\n\t  collapsed:: false\n', rendered)
+            self.assertIn('Transcript', rendered)
+            self.assertIn('Visible note', rendered)
+            self.assertIn('Download', rendered)
+            self.assertNotIn('Private idea', rendered)
+            self.assertNotIn('id::', rendered)
+            self.assertNotIn('public::', rendered)
+            self.assertEqual(original, path.read_text())
+
     def test_media_and_downloads_use_direct_links(self):
         root = 'GitP/A/Session/24/11/19-Tue/Asset/'
         names = [root + 'Synth/Full/mp3', root + 'Artwork/Overview/gif', root + 'Preset/A/mfpz', root + 'MIDI/Microfreak/mid']
