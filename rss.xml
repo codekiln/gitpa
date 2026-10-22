@@ -22,6 +22,16 @@
       <itunes:email>codekiln@pm.me</itunes:email>
     </itunes:owner>
     <item>
+      <title>Voidom and MIDI clock</title>
+      <link>https://codekiln.github.io/gitpa/GitP/A/Session/26/10/22-Thu/</link>
+      <description>A Ghost in the Patch session with MicroFreak preset 016 Voidom: tracing MIDI connections and clock problems between the Launchpad Pro, MicroFreak and Ableton Live, then combining Launchpad sequencing with recorded Session clips.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>A Ghost in the Patch session with MicroFreak preset 016 Voidom: tracing MIDI connections and clock problems between the Launchpad Pro, MicroFreak and Ableton Live, then combining Launchpad sequencing with recorded Session clips.</itunes:summary>
+      <pubDate>Thu, 22 Oct 2026 12:27:11 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20261022</guid>
+      <enclosure url="https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___22-Thu___Asset___Audio___Full.mp3" length="112558080" type="audio/mpeg" />
+    </item>
+    <item>
       <title>Eonz between two sequencers</title>
       <link>https://codekiln.github.io/gitpa/GitP/A/Session/26/10/20-Tue/</link>
       <description>A Ghost in the Patch session with MicroFreak preset 77 Eonz and the Launchpad Pro: two-way MIDI, competing clocks, shared filter pulses and recording one sequencer into the other.</description>
