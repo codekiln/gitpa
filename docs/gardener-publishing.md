@@ -45,3 +45,11 @@ Chapter headings need only the full MP3 and their timestamps. Separate chapter M
 ## Roll back publication
 
 Before this migration, Gitpa main was [a464812 — publish Eonz](https://github.com/codekiln/gitpa/commit/a46481245680e60411930c966a562eda9a234622) and the deployed site was [92a53eb — previous published site](https://github.com/codekiln/gitpa/commit/92a53eb0763f8cda1dc4d06fe956a2997cbd9bb3). Revert the migration commit on main and run the Publish workflow to regenerate the Logseq SPA from the retained garden. The podcast RSS and episode GUIDs are unchanged by the renderer migration.
+
+## Deployment
+
+The Publish workflow saves a website preview for every pull request. Runs on main publish that artifact to `gh-pages`, request a Pages build, and wait until the public `publication.json` matches the source revision and workflow run. Production jobs run serially and skip a revision when main has advanced before deployment begins. The build job has read access; the production job has repository content and Pages write access.
+
+If generation succeeds but deployment fails, inspect the deploy job before rerunning Publish on main. A Pages build failure or a live revision that stays outdated fails the job. The existing site remains available while Pages builds. `publication.json` records only the public source commit and run ID.
+
+GitHub documents that [workflow pushes using GITHUB_TOKEN do not trigger Pages builds](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site); the workflow uses the [Pages build API](https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build) explicitly.

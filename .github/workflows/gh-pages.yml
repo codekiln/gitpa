@@ -7,6 +7,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -58,8 +61,30 @@ jobs:
           name: gitpa-website
           path: www
 
-      - name: Deploy to gh-pages
-        if: github.event_name != 'pull_request'
+  deploy:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pages: write
+    concurrency:
+      group: production-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: gitpa-website
+          path: www
+      - name: Check production revision
+        id: revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/deploy_pages.py prepare
+      - name: Publish gh-pages
+        if: steps.revision.outputs.current == 'true'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
@@ -67,3 +92,8 @@ jobs:
           clean: true
           clean-exclude: |
             .nojekyll
+      - name: Build Pages and verify the live revision
+        if: steps.revision.outputs.current == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/deploy_pages.py verify
