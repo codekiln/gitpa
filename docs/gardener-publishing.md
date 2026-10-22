@@ -22,17 +22,19 @@ Run `python3 -m unittest discover -s tests`, `node --test tests/*.test.js`, `mis
 
 Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls or follows links within the site. Selecting a chapter timestamp seeks and plays that recording. The footer follows the chapter at the current playback time; selecting the chapter name opens its notes. “Return to start” opens the chapter or episode position where the listener started playback. Playback starts only after the listener clicks a chapter or the recording controls.
 
-Author chapter headings with the published-site `audio-timestamp` extension:
+Keep the episode text in logseq-encode-garden with one direct full-recording embed and plain timestamp chapter headings:
 
 ```markdown
 - # Episode title
 	- ![Full recording](https://example.com/episode.mp3)
 	- ## Chapters
-		- ### {{audio-timestamp 14:42}} Adapters and input modes
+		- ### 14:42 Adapters and input modes
 			- Chapter notes.
 ```
 
-The example uses tabs for outline indentation. Timestamps accept integer seconds, `M:SS`, or `H:MM:SS`; minutes and seconds after a colon use two digits from `00` through `59`. Integer seconds display as a readable time. This extension is compiled during publication rather than by Logseq itself. Existing time-prefixed chapter headings, including time ranges, also become chapter controls. Macros shown in fenced or inline code remain literal.
+The example uses tabs for outline indentation. Plain timestamps remain readable in Logseq and become chapter controls during publication, including time ranges. The published-site `{{audio-timestamp 14:42}}` extension is also supported; its timestamps accept integer seconds, `M:SS`, or `H:MM:SS`, with two-digit minutes and seconds after a colon. Macros shown in fenced or inline code remain literal.
+
+Re-sync the exact episode page with the imported `logseq:entity:proxy:page:sync` task, passing the source garden, `--destination gitp-garden`, `--page GitP/A/Session/26/10/20-Tue`, and `--apply`. Sync copies source text and its `public::` choice while keeping the proxy's `tags::`, `podcast-guid::`, and `podcast-published-at::`. Repeating the same sync keeps the canonical chapter headings and release identity unchanged. Run the RSS and publication checks after syncing.
 
 Chapter headings need only the full MP3 and their timestamps. Separate chapter MP3s and waveform images are unnecessary. Publication removes the existing derived chapter media from the temporary episode view while retaining chapter notes and unrelated artwork; checked-in garden pages stay unchanged. Without JavaScript, the recording retains native controls and chapter links open the full recording at a media time fragment.
 
