@@ -54,9 +54,10 @@ class PublicRoutesTests(unittest.TestCase):
             self.fixture(root, ['Microfreak', 'Microfreak/Preset', 'Microfreak/Preset/174 Auster'])
             leaf = root / 'p-0000000000000002.html'
             leaf.write_text('<head></head><body><nav>Site</nav><main>'
-                            '<nav class="namespace-breadcrumbs" aria-label="Breadcrumb">'
+                            '<h1>Notes</h1><section class="namespace-hierarchy" aria-label="Hierarchy">'
                             '<a href="p-0000000000000000.html">Microfreak</a>'
-                            '<a href="p-0000000000000001.html">Preset</a></nav></main></body>')
+                            '<a href="p-0000000000000001.html">Preset</a>'
+                            '<a href="p-0000000000000002.html">174 Auster</a></section></main></body>')
             parent = root / 'p-0000000000000001.html'
             parent.write_text('<head></head><main><section class="namespace-hierarchy">'
                               '<a href="p-0000000000000002.html">174 Auster</a></section></main>')
