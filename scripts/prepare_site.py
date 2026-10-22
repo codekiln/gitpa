@@ -31,7 +31,7 @@ def selected_body(body):
                 continue
         elif skipping and line.strip() and len(line) - len(line.lstrip()) <= section_indent:
             skipping = False
-        if not skipping and not re.match(r'^\s*(?:id|collapsed|public)::', line):
+        if not skipping and not re.match(r'^\s*(?:id|public)::', line):
             result.append(line)
         index += 1
     return ''.join(result)

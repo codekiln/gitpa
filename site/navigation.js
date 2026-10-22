@@ -108,6 +108,9 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
       element = document.getElementById(fragment) || document.getElementsByName(fragment)[0];
     }
     if (element) {
+      if (typeof window.logseqGardenerRevealFragment === 'function') {
+        window.logseqGardenerRevealFragment(url.hash, { scroll: false });
+      }
       const hadTabindex = element.hasAttribute('tabindex');
       if (!hadTabindex) {
         element.setAttribute('tabindex', '-1');
