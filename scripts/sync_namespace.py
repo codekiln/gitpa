@@ -72,8 +72,10 @@ def plan_namespace(source, destination, namespace):
             continue
         lines, body = core.property_lines(data.decode())
         props, _ = core.parse_properties(data.decode())
-        # public is destination-owned by Proxy/Page. Existing choices remain intact.
-        if 'public' not in props:
+        # Only destination-owned pages inherit the namespace publication default.
+        source_name = unquote(relative[6:-3]).replace('___', '/')
+        source_props, _ = core.parse_properties(files[source_name].read_text())
+        if 'public' not in props and 'public' in core.destination_owned(plan, source_props):
             plan.writes[relative] = ('public:: true\n' + ''.join(lines) + body).encode()
     imported = plan.pages
     available = imported | names(destination).keys()

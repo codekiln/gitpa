@@ -71,6 +71,29 @@ class NamespacePlannerTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'edit|conflict'):
                 plan_namespace(source,dest,'Instrument')
             self.assertFalse((dest/'pages/Instrument___New.md').exists())
+    def test_source_owned_publication_replaces_namespace_default_on_repeat(self):
+        from sync_namespace import plan_namespace
+        for value in (None, 'false', 'true'):
+            with self.subTest(value=value), tempfile.TemporaryDirectory() as folder:
+                source, dest = self.fixture(Path(folder))
+                definition = source / 'pages/Logseq___Entity___Book.md'
+                definition.write_text('entity-proxy-source-properties:: public\n' + definition.read_text())
+                page = source / 'pages/Instrument.md'
+                # Start with a published proxy, then let the source withdraw or retain it.
+                page.write_text('public:: true\n' + page.read_text())
+                core, plan, _ = plan_namespace(source, dest, 'Instrument')
+                core.apply_plan(plan)
+                page.write_text(page.read_text().replace('public:: true\n',
+                    '' if value is None else f'public:: {value}\n'))
+                core, plan, _ = plan_namespace(source, dest, 'Instrument')
+                core.apply_plan(plan)
+                props, _ = core.parse_properties((dest / 'pages/Instrument.md').read_text())
+                self.assertEqual(props.get('public'), value)
+                before = {str(p.relative_to(dest)): p.read_bytes() for p in dest.rglob('*') if p.is_file()}
+                core, repeat, _ = plan_namespace(source, dest, 'Instrument')
+                core.apply_plan(repeat)
+                self.assertEqual(before, {str(p.relative_to(dest)): p.read_bytes()
+                    for p in dest.rglob('*') if p.is_file()})
     def test_page_collision_rejects_the_batch(self):
         from sync_namespace import plan_namespace
         with tempfile.TemporaryDirectory() as folder:
