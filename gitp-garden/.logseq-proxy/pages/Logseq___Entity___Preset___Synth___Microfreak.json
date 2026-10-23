@@ -1,5 +1,5 @@
 {
-  "body_sha256": "9245af90737f3d149cbd7b061572f223f57ddf050d233fdc5c9d16501cb8b5c7",
+  "body_sha256": "7df6bf26957ce0eaf0ba5178c24b4347c7c4bd79093de705b390c4bcae66cca5",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Definition]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Preset/Synth/Microfreak"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Preset/Synth/Microfreak": {
+      "files": [],
+      "page": "Logseq/Entity/Preset/Synth/Microfreak",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Preset/Synth/Microfreak",
   "version": 2
 }

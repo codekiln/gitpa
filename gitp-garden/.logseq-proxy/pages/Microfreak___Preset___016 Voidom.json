@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "aace8bb308e9fcadb1be174d066605d249efaedae424c4b7957609a3a094dba4",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/016 Voidom"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/016 Voidom": {
+      "files": [],
+      "page": "Microfreak/Preset/016 Voidom",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/016 Voidom",
   "version": 2
 }
