@@ -6,9 +6,9 @@ const { join } = require('node:path');
 const navSource = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
 const navURL = `data:text/javascript;base64,${Buffer.from(navSource).toString('base64')}`;
 const source = readFileSync(join(__dirname, '../site/player.js'), 'utf8').replace("'./navigation.js'", JSON.stringify(navURL));
-let chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession;
+let chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode;
 before(async () => {
-  ({ chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
+  ({ chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
 });
 
 class Audio extends EventTarget {
@@ -237,6 +237,23 @@ test('DOM enhancement moves the original audio once and adds an accessible foote
   assert.equal(enhanceEpisode(document), null);
   assert.equal(enhanceEpisode(pageFixture(2).document), null);
   assert.equal(enhanceEpisode(pageFixture(0).document), null);
+});
+
+test('backlink copies do not become episode recordings or chapters', () => {
+  const { document, main, audio, makeAudio } = pageFixture();
+  const backlinks = new Element('details'); backlinks.className = 'linked-references';
+  const copiedHeading = new Element('h3'); copiedHeading.textContent = 'Copied chapter';
+  const copiedLink = new Element('a'); copiedLink.setAttribute('href', '/episode.wav#t=14');
+  copiedHeading.append(copiedLink);
+  const copiedAudio = makeAudio();
+  backlinks.append(copiedAudio, copiedHeading); main.append(backlinks);
+  const episode = readEpisode(document);
+  assert.equal(episode.audio, audio);
+  assert.deepEqual(episode.chapters.map(chapter => chapter.seconds), [12, 20]);
+  const player = enhanceEpisode(document);
+  assert.equal(player.audio, audio);
+  assert.equal(copiedAudio.parent, backlinks);
+  assert.equal(copiedHeading.id, undefined);
 });
 
 test('DOM click handling preserves modified clicks, downloads, other recordings and new tabs', () => {
