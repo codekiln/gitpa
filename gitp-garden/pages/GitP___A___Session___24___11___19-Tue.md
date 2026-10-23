@@ -4,9 +4,11 @@ podcast-published-at:: 2026-10-04T14:46:19-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2024-11-19 Tue]]
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
+prev:: [[GitP/A/Session/26/09/24-Thu]]
+next:: [[GitP/A/Session/24/12/04-Wed]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F24%2F11%2F19-Tue
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___24___11___19-Tue.md
-logseq-proxy-last-sync-date:: [[2026-10-07]]
+logseq-proxy-last-sync-date:: [[2026-10-23]]
 - # GitP.24.11.19
 	- A MicroFreak session recorded on November 19, 2024.
 	- ![GitP.24.11.19 artwork](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___24___11___19-Tue___Asset___Artwork___Overview.gif)

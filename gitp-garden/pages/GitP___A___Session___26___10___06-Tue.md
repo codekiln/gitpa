@@ -4,9 +4,11 @@ podcast-published-at:: 2026-10-07T05:28:02-04:00
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-06 Tue]]
+prev:: [[GitP/A/Session/24/12/04-Wed]]
+next:: [[GitP/A/Session/26/10/07-Wed]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F06-Tue
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___06-Tue.md
-logseq-proxy-last-sync-date:: [[2026-10-08]]
+logseq-proxy-last-sync-date:: [[2026-10-23]]
 
 - # GitP.26.10.06 — Chords, Formants, and Sequencers
 	- A MicroFreak improvisation starting from an initialized patch: chord oscillators, cycling-envelope and LFO modulation, and a turn toward formant sounds. Shimmering textures give way to a gruff emergence, a ballpark organ, and a trippy denouement, with the Launchpad sequencer and MicroFreak arpeggiator along the way.
