@@ -107,6 +107,26 @@ test('shell swaps main/nav and title while leaving footer ownership to the playe
   navigator.dispose(); assert.equal(win.history.scrollRestoration, 'auto');
 });
 
+test('shared backlink controls initialize after each main replacement before page hooks and fragment focus', async () => {
+  const { doc, win, fragment } = fixture();
+  const initialized = [];
+  win.logseqGardenerInitBacklinks = root => {
+    assert.equal(root, doc.nodes.main);
+    initialized.push(root);
+  };
+  fragment.focus = () => assert.equal(initialized.at(-1), doc.nodes.main);
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => {
+    assert.equal(initialized.at(-1), doc.nodes.main);
+  } });
+  assert.equal(await navigator.navigate('/gitpa/one/'), true);
+  assert.equal(await navigator.navigate('/gitpa/two/#part'), true);
+  assert.equal(initialized.length, 2);
+  assert.notEqual(initialized[0], initialized[1]);
+  await navigator.navigate('#part');
+  assert.equal(initialized.length, 2);
+  navigator.dispose();
+});
+
 test('failed fetch preserves content and creates explicit native recovery', async () => {
   const { doc, win } = fixture(async () => { throw new Error('offline'); });
   const original = doc.nodes.main;

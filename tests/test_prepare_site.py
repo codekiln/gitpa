@@ -75,6 +75,21 @@ class PresentationTests(unittest.TestCase):
             self.assertNotIn('public::', rendered)
             self.assertEqual(original, path.read_text())
 
+    def test_episode_sequence_properties_survive_but_private_metadata_does_not(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            path = source / 'pages/Episode.md'
+            original = ('public:: true\nlogseq-entity:: [[Logseq/Entity/Podcast/Episode]]\n'
+                        'prev:: [[Previous]]\nnext:: [[Next]]\nprivate-production-note:: secret\n'
+                        '- # Episode\n')
+            path.write_text(original)
+            prepare(source, output)
+            published = (output / 'pages/Episode.md').read_text()
+            self.assertIn('prev:: [[Previous]]\nnext:: [[Next]]\n', published)
+            self.assertNotIn('secret', published)
+            self.assertEqual(original, path.read_text())
+
     def test_media_and_downloads_use_direct_links(self):
         root = 'GitP/A/Session/24/11/19-Tue/Asset/'
         names = [root + 'Synth/Full/mp3', root + 'Artwork/Overview/gif', root + 'Preset/A/mfpz', root + 'MIDI/Microfreak/mid']
