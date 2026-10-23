@@ -49,16 +49,38 @@ def verify(pages, timeout=900, clock=time.monotonic, sleep=time.sleep):
     pages.api('pages/builds', 'POST')
     deadline = clock() + timeout
     last = None
+    failed_since = None
     while clock() < deadline:
         try:
             build = pages.api('pages/builds/latest')
             status = build.get('status')
             if build.get('commit') == expected:
                 if status in ('errored', 'failed', 'error'):
-                    raise RuntimeError(f'Pages build failed for {expected}: {build.get("error")}')
+                    # The latest endpoint can still show a cancelled build while its
+                    # replacement is queued or building in the recent-build list.
+                    recent = [item for item in pages.api('pages/builds?per_page=10')
+                              if item.get('commit') == expected]
+                    replacement = next((item for item in recent
+                                        if item.get('status') == 'built'), None)
+                    if replacement is None:
+                        replacement = next((item for item in recent
+                                            if item.get('status') in ('queued', 'building')), None)
+                    if replacement is not None:
+                        build = replacement
+                        status = build['status']
+                if status in ('errored', 'failed', 'error'):
+                    # A cancelled build can be replaced by another request for this commit.
+                    if failed_since is None:
+                        failed_since = clock()
+                    if clock() - failed_since >= 60:
+                        raise RuntimeError(f'Pages build failed for {expected}: {build.get("error")}')
+                else:
+                    failed_since = None
                 if status == 'built' and pages.marker(site) == pages.identity():
                     print(f'Pages serves source revision {pages.revision}: {site}')
                     return
+            else:
+                failed_since = None
             state = (build.get('commit'), status)
             if state != last:
                 print(f'Waiting for Pages revision {expected}; latest build: {state}', flush=True)
