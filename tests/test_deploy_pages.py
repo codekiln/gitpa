@@ -14,9 +14,10 @@ class FakePages:
     revision = 'source-new'
     run = 'run-new'
 
-    def __init__(self, builds=(), markers=()):
+    def __init__(self, builds=(), markers=(), recent_builds=None):
         self.builds = iter(builds)
         self.markers = iter(markers)
+        self.recent_builds = iter(recent_builds) if recent_builds is not None else None
         self.requests = []
         self.head = self.revision
 
@@ -33,6 +34,8 @@ class FakePages:
             return {'html_url': 'https://example.test/gitpa/'}
         if method == 'POST':
             return {'status': 'queued'}
+        if path == 'pages/builds?per_page=10':
+            return next(self.recent_builds) if self.recent_builds is not None else []
         result = next(self.builds)
         if isinstance(result, Exception):
             raise result
@@ -75,6 +78,25 @@ class DeploymentTests(unittest.TestCase):
             self.run_verify(p)
         self.assertGreater(p.requests.count(('pages/builds/latest', 'GET')), 1)
         self.assertEqual(p.requests.count(('pages/builds', 'POST')), 1)
+
+    def test_latest_error_does_not_hide_slow_replacement(self):
+        p = FakePages([build('errored')] * 9,
+                      [{'revision': 'source-new', 'run': 'run-new'}],
+                      [[build('queued')]] * 8 + [[build('built')]])
+        self.run_verify(p)
+        self.assertEqual(p.requests.count(('pages/builds', 'POST')), 1)
+
+    def test_completed_replacement_waits_for_public_marker(self):
+        p = FakePages([build('errored')] * 9,
+                      [{'revision': 'old'}] * 8 + [{'revision': 'source-new', 'run': 'run-new'}],
+                      [[build('built')]] * 9)
+        self.run_verify(p)
+
+    def test_unrelated_recent_build_does_not_mask_failure(self):
+        p = FakePages([build('errored')] * 12,
+                      recent_builds=[[build('built', 'output-old')]] * 12)
+        with self.assertRaisesRegex(RuntimeError, 'Pages build failed'):
+            self.run_verify(p)
 
     def test_outdated_public_marker_times_out(self):
         p = FakePages([build('built')] * 3, [{'revision': 'old'}] * 3)

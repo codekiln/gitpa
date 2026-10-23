@@ -56,6 +56,19 @@ def verify(pages, timeout=900, clock=time.monotonic, sleep=time.sleep):
             status = build.get('status')
             if build.get('commit') == expected:
                 if status in ('errored', 'failed', 'error'):
+                    # The latest endpoint can still show a cancelled build while its
+                    # replacement is queued or building in the recent-build list.
+                    recent = [item for item in pages.api('pages/builds?per_page=10')
+                              if item.get('commit') == expected]
+                    replacement = next((item for item in recent
+                                        if item.get('status') == 'built'), None)
+                    if replacement is None:
+                        replacement = next((item for item in recent
+                                            if item.get('status') in ('queued', 'building')), None)
+                    if replacement is not None:
+                        build = replacement
+                        status = build['status']
+                if status in ('errored', 'failed', 'error'):
                     # A cancelled build can be replaced by another request for this commit.
                     if failed_since is None:
                         failed_since = clock()
