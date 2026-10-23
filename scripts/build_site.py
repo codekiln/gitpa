@@ -22,6 +22,7 @@ from audio_chapters import compile_episode
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
+QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
 
 
 def normalized(name):
@@ -71,7 +72,9 @@ def prepare_homepage(graph, result):
     for target in re.findall(r'\[\[([^\]]+)\]\]', outline):
         if normalized(target) not in visible:
             raise ValueError(f'Homepage query target is missing or unpublished: {target}')
-    text, count = re.subn(pattern, lambda _: outline, text)
+    # Evaluated rows are presentation, not authored references for backlink indexing.
+    placeholder = f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
+    text, count = re.subn(pattern, lambda _: placeholder, text)
     if count != 1:
         raise ValueError('Expected one homepage query')
     path.write_text(text, encoding='utf-8')
@@ -97,6 +100,30 @@ class PageRoutes(HTMLParser):
             self.routes[normalized(self.label)] = self.href
             self.titles[self.href] = self.label
             self.href = None
+
+
+def install_homepage_query(output, result):
+    """Insert validated query rows after Gardener has indexed authored references."""
+    query_outline(result)
+    parser = PageRoutes()
+    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    rows = []
+    for item in result['view'][1:]:
+        label = item[1][2]
+        route = parser.routes.get(normalized(label))
+        if not route:
+            raise ValueError(f'Query target was not rendered: {label}')
+        rows.append(f'<li><a href="{html.escape(route, quote=True)}">{html.escape(label)}</a></li>')
+    home_route = parser.routes.get(normalized(HOME))
+    if not home_route:
+        raise ValueError('Rendered all-pages index does not include the homepage')
+    for filename in ['index.html', home_route]:
+        path = output / filename
+        text = path.read_text(encoding='utf-8')
+        marker = f'<li>{QUERY_PLACEHOLDER}</li>'
+        if text.count(marker) != 1:
+            raise ValueError('Expected one rendered homepage query placeholder')
+        path.write_text(text.replace(marker, ''.join(rows)), encoding='utf-8')
 
 
 def legacy_routes(output, graph=None, published_routes=None):
@@ -317,7 +344,8 @@ def publish(source, output, renderer):
         query = temporary / 'homepage.json'
         subprocess.run(['nbb-logseq', str(ROOT / 'scripts/check_homepage.cljs'),
                         str(source), str(query)], cwd=ROOT, check=True)
-        prepare_homepage(graph, json.loads(query.read_text(encoding='utf-8')))
+        query_result = json.loads(query.read_text(encoding='utf-8'))
+        prepare_homepage(graph, query_result)
         episodes = compile_episode_pages(graph)
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
@@ -327,6 +355,7 @@ def publish(source, output, renderer):
         for name in public_pages(graph):
             args.extend(['--include', name])
         subprocess.run(args, check=True)
+        install_homepage_query(output, query_result)
         install_episode_player(output, episodes)
         routes = package_pages(output)
         legacy_routes(output, graph, published_routes=routes)

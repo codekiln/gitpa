@@ -4,7 +4,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from build_site import legacy_routes, prepare_homepage, public_pages, query_outline
+from build_site import legacy_routes, prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER
 
 
 class HomepageTests(unittest.TestCase):
@@ -39,9 +39,29 @@ class HomepageTests(unittest.TestCase):
             after = home.read_text()
             self.assertNotIn('#+BEGIN_QUERY', after)
             self.assertIn('- ## Recent Ceremonies', after)
+            self.assertIn(QUERY_PLACEHOLDER, after)
+            self.assertNotIn('[[GitP/A/Session/Newest]]', after)
+            self.assertNotIn('[[GitP/A/Session/Older]]', after)
             self.assertIn('gitp_logo_raw_fly.JPG', after)
             self.assertIn('https://codekiln.github.io/gitpa/rss.xml', after)
             self.assertEqual(original.read_text(), before)
+
+    def test_evaluated_rows_are_inserted_only_after_authored_reference_indexing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>'
+                '<a href="p-bbb.html">GitP/A/Session/Newest</a>'
+                '<a href="p-ccc.html">GitP/A/Session/Older</a>')
+            for name in ['index.html', 'p-aaa.html']:
+                (output / name).write_text(f'<main><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
+            install_homepage_query(output, self.result())
+            text = (output / 'index.html').read_text()
+            self.assertIn('<a href="p-bbb.html">GitP/A/Session/Newest</a>', text)
+            self.assertLess(text.index('Newest'), text.index('Older'))
+            self.assertNotIn(QUERY_PLACEHOLDER, text)
+            self.assertEqual(text, (output / 'p-aaa.html').read_text())
+            with self.assertRaisesRegex(ValueError, 'placeholder'):
+                install_homepage_query(output, self.result())
 
     def test_query_result_changes_change_publication(self):
         result = self.result()
