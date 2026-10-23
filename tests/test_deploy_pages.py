@@ -47,7 +47,7 @@ def build(status, commit='output-new'):
 
 
 class DeploymentTests(unittest.TestCase):
-    def run_verify(self, pages, timeout=60):
+    def run_verify(self, pages, timeout=120):
         now = [0]
         def sleep(seconds):
             now[0] += seconds
@@ -62,9 +62,19 @@ class DeploymentTests(unittest.TestCase):
         self.assertEqual(p.requests.count(('pages/builds', 'POST')), 1)
         self.assertEqual(len(list(p.markers)), 0)
 
-    def test_matching_build_error_fails(self):
+    def test_replacement_build_recovers_from_matching_error(self):
+        p = FakePages([build('errored'), build('queued'), build('building'), build('built')],
+                      [{'revision': 'source-new', 'run': 'run-new'}])
+        self.run_verify(p)
+        self.assertEqual(p.requests.count(('pages/builds', 'POST')), 1)
+        self.assertEqual(len(list(p.markers)), 0)
+
+    def test_persistent_matching_build_error_fails_after_replacement_grace(self):
+        p = FakePages([build('errored')] * 12)
         with self.assertRaisesRegex(RuntimeError, 'Pages build failed'):
-            self.run_verify(FakePages([build('errored')]))
+            self.run_verify(p)
+        self.assertGreater(p.requests.count(('pages/builds/latest', 'GET')), 1)
+        self.assertEqual(p.requests.count(('pages/builds', 'POST')), 1)
 
     def test_outdated_public_marker_times_out(self):
         p = FakePages([build('built')] * 3, [{'revision': 'old'}] * 3)
