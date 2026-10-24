@@ -1,0 +1,20 @@
+{
+  "body_sha256": "a498d78cc485715b74c9335b365a88dd560269c6c41574cc4a32dc07d3517c5a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin",
+  "version": 2
+}
