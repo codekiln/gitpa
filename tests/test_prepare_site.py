@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from prepare_site import prepare, listener_body
+from prepare_site import prepare, listener_body, publication_properties
 
 class VisibilityTests(unittest.TestCase):
     def setUp(self):
@@ -51,6 +51,45 @@ class VisibilityTests(unittest.TestCase):
             prepare(self.source, self.source / 'site')
 
 class PresentationTests(unittest.TestCase):
+    def test_proxy_removal_preserves_commas_in_entity_page_names(self):
+        for value in ['[[Type,Name]], [[Logseq/Entity/Proxy/Page]]',
+                      '[[Logseq/Entity/Proxy/Page]], [[Type,Name]]',
+                      '[[Type,Name]], [[Logseq/Entity/Proxy/Page]], [[Other,Type]]']:
+            result = publication_properties([f'logseq-entity:: {value}\n'])[0]
+            self.assertIn('[[Type,Name]]', result)
+            self.assertNotIn('Proxy/Page', result)
+            if 'Other' in value:
+                self.assertIn('[[Other,Type]]', result)
+
+    def test_publication_properties_hide_proxy_bookkeeping_for_all_page_kinds(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            originals = {}
+            for name in ['Preset', 'Definition', 'GitP___A___Session___Test___Asset___Preset___mfpz']:
+                original = ('tags:: [[Music]], [[Presets]]\npublic:: true\n'
+                            'logseq-entity:: [[Preset]], [[Logseq/Entity/Proxy/Page]]\n'
+                            'logseq-proxy-url:: logseq://graph/source\n'
+                            'logseq-proxy-codeforge-url:: https://example.com/source\n'
+                            'logseq-proxy-last-sync-date:: 2026-10-24\n'
+                            'preset-category:: [[Bass]]\nprev:: [[Previous]]\n'
+                            'preset-synth-file:: https://example.com/preset.mfpz\n'
+                            'initialized:: false\n- # Preset\n')
+                path = source / 'pages' / f'{name}.md'
+                path.write_text(original)
+                originals[path] = original
+            prepare(source, output)
+            for path, original in originals.items():
+                published = (output / 'pages' / path.name).read_text()
+                self.assertNotIn('logseq-proxy-', published)
+                self.assertNotIn('[[Logseq/Entity/Proxy/Page]]', published)
+                self.assertIn('logseq-entity:: [[Preset]]\n', published)
+                self.assertIn('tags:: [[Music]], [[Presets]]\n', published)
+                self.assertIn('preset-category:: [[Bass]]\nprev:: [[Previous]]\n', published)
+                self.assertIn('preset-synth-file:: https://example.com/preset.mfpz\n', published)
+                self.assertIn('initialized:: false\n', published)
+                self.assertEqual(original, path.read_text())
+
     def test_collapse_state_survives_preparation_without_exposing_private_notes(self):
         with tempfile.TemporaryDirectory() as directory:
             source, output = Path(directory) / 'source', Path(directory) / 'output'
