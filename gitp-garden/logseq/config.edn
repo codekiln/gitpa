@@ -284,6 +284,10 @@
  ;; Default value: 100
  :ref/linked-references-collapsed-threshold 0
 
+ ;; Show source-owned page properties in a collapsed disclosure.
+ :publishing/page-properties? true
+ :publishing/page-properties-collapsed? true
+
  ;; Graph view configuration.
  ;; Example usage:
  ;; :graph/settings

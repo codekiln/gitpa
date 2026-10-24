@@ -10,6 +10,22 @@ from logseq_page import split_page, properties, page_path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+def publication_properties(lines):
+    """Remove proxy synchronization bookkeeping from the temporary graph."""
+    result = []
+    for line in lines:
+        key, value = line.rstrip('\n').split(':: ', 1)
+        if key.startswith('logseq-proxy-'):
+            continue
+        if key == 'logseq-entity' and '[[Logseq/Entity/Proxy/Page]]' in value:
+            values = [item.strip() for item in re.split(r',\s*(?![^\[]*\]\])', value)
+                      if item.strip() != '[[Logseq/Entity/Proxy/Page]]']
+            if not values:
+                continue
+            line = f'{key}:: {", ".join(values)}\n'
+        result.append(line)
+    return result
+
 def asset_links(body):
     return [name for name in re.findall(r'\[\[([^\]]+)\]\]', body) if name.startswith('GitP/A/Session/') and '/Asset/' in name]
 
@@ -84,6 +100,7 @@ def prepare(source, output):
                 if properties(lines).get('public') == 'true' and '[[Logseq/Entity/Podcast/Episode]]' in properties(lines).get('logseq-entity', '')}
     changes = {}
     for name, (lines, body) in pages.items():
+        lines = publication_properties(lines)
         if name in rendered:
             keep = {'public', 'logseq-entity', 'podcast-published-at', 'tags', 'prev', 'next'}
             lines = [line for line in lines if line.split('::', 1)[0] in keep]
@@ -97,6 +114,7 @@ def prepare(source, output):
             changes[name] = ''.join(lines) + rendered[name]
             continue
         if not name.startswith('GitP/A/Session/') or '/Asset/' not in name:
+            changes[name] = ''.join(lines) + body
             continue
         lines = [line for line in lines if not line.startswith('public:: ')]
         lines.insert(0, f'public:: {str(name in visible).lower()}\n')
