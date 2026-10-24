@@ -148,7 +148,7 @@ export function readEpisode(document) {
   const source = new URL(raw, document.baseURI).href;
   const recordings = [...main.querySelectorAll('audio')].filter(audio => {
     const value = audio.getAttribute('src');
-    return value && new URL(value, document.baseURI).href === source;
+    return !audio.closest('.linked-references') && value && new URL(value, document.baseURI).href === source;
   });
   if (recordings.length !== 1) return null;
   const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
@@ -160,6 +160,7 @@ export function readEpisode(document) {
   const chapters = [];
   const used = new Map();
   for (const heading of main.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+    if (heading.closest('.linked-references')) continue;
     for (const anchor of heading.querySelectorAll('a[href]')) {
       const seconds = chapterTime(anchor.getAttribute('href'), source, document.baseURI);
       if (seconds === null) continue;
