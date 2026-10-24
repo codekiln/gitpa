@@ -8,10 +8,10 @@ body.has-episode-player {
   inset: auto 0 0;
   box-sizing: border-box;
   padding: .65rem max(1rem, env(safe-area-inset-right)) max(.65rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
-  color: #4c566a;
-  background: #eceff4;
-  border-top: 1px solid #d8dee9;
-  box-shadow: 0 -2px 10px #2e344014;
+  color: var(--lsg-text);
+  background: var(--lsg-surface);
+  border-top: 1px solid var(--lsg-border);
+  box-shadow: 0 -2px 10px var(--gitpa-player-shadow);
 }
 .episode-player-details {
   display: flex;
@@ -25,9 +25,9 @@ body.has-episode-player {
 }
 .episode-player-chapter { flex: 1; font-weight: 650; }
 .episode-player-origin { font-size: .85rem; }
-.is-current-chapter { border-left: 3px solid #5e81ac; padding-left: .5rem; background: #eceff4; }
-.episode-play { padding: .5rem .8rem; color: #3b4252; background: #e5e9f0; border: 1px solid #81a1c1; border-radius: .3rem; cursor: pointer; }
-.navigation-error { padding: .75rem; border: 1px solid #b48ead; background: #eceff4; }
+.is-current-chapter { border-left: 3px solid var(--lsg-link); padding-left: .5rem; background: var(--lsg-surface); }
+.episode-play { padding: .5rem .8rem; color: var(--gitpa-code-text); background: var(--gitpa-button-background); border: 1px solid var(--lsg-quote-border); border-radius: .3rem; cursor: pointer; }
+.navigation-error { padding: .75rem; border: 1px solid #b48ead; background: var(--lsg-surface); }
 .episode-player-status { font-size: .8rem; }
 .episode-player audio {
   display: block;

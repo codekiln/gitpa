@@ -127,6 +127,23 @@ test('shared backlink controls initialize after each main replacement before pag
   navigator.dispose();
 });
 
+test('shared appearance controls initialize on replaced navigation without changing document ownership', async () => {
+  const { doc, win } = fixture();
+  const original = doc.nodes.nav;
+  let calls = 0;
+  win.logseqGardenerInitTheme = root => {
+    assert.equal(root, doc.nodes.nav);
+    assert.notEqual(root, original);
+    calls++;
+  };
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => assert.equal(calls, 1) });
+  assert.equal(await navigator.navigate('/gitpa/one/'), true);
+  assert.equal(calls, 1);
+  await navigator.navigate('#part');
+  assert.equal(calls, 1);
+  navigator.dispose();
+});
+
 test('failed fetch preserves content and creates explicit native recovery', async () => {
   const { doc, win } = fixture(async () => { throw new Error('offline'); });
   const original = doc.nodes.main;
