@@ -4,9 +4,11 @@ podcast-guid:: gitpa20261020
 podcast-published-at:: 2026-10-20T07:36:00-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-20 Tue]]
+prev:: [[GitP/A/Session/26/10/18-Sun]]
+next:: [[GitP/A/Session/26/10/22-Thu]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F20-Tue
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/db8022ee0aa24ee58e13697df0c54eeb0b247e85/pages/GitP___A___Session___26___10___20-Tue.md
-logseq-proxy-last-sync-date:: [[2026-10-22]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___20-Tue.md
+logseq-proxy-last-sync-date:: [[2026-10-23]]
 - # Eonz between two sequencers
 	- A Ghost in the Patch session with MicroFreak preset 77 Eonz and the Launchpad Pro: two-way MIDI, competing clocks, shared filter pulses and recording one sequencer into the other.
 	- ![Eonz between two sequencers — full recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)

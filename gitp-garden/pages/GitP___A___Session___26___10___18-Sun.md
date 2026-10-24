@@ -4,9 +4,11 @@ podcast-guid:: gitpa20261018
 podcast-published-at:: 2026-10-20T07:35:00-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-18 Sun]]
+prev:: [[GitP/A/Session/26/10/11-Sun]]
+next:: [[GitP/A/Session/26/10/20-Tue]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F18-Sun
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/43d5fa7a2563f7c918362b2a6aecf5d6a4e4d0d1/pages/GitP___A___Session___26___10___18-Sun.md
-logseq-proxy-last-sync-date:: [[2026-10-20]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___18-Sun.md
+logseq-proxy-last-sync-date:: [[2026-10-23]]
 
 - # Auster without a computer
 	- A Ghost in the Patch session exploring MicroFreak preset 174 Auster with the Launchpad Pro sequencer: touch articulation, two-way MIDI, clock sync, scale modes and layered patterns.

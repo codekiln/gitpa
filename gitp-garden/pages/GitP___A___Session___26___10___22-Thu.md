@@ -4,6 +4,7 @@ podcast-guid:: gitpa20261022
 podcast-published-at:: 2026-10-22T12:27:11-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-22 Thu]]
+prev:: [[GitP/A/Session/26/10/20-Tue]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F22-Thu
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___22-Thu.md
 logseq-proxy-last-sync-date:: [[2026-10-23]]

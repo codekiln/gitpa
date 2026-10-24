@@ -175,6 +175,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
           if (node) document.head.append(node);
         }
         adoptURL(responseURL, options);
+        window.logseqGardenerInitBacklinks?.(importedMain);
         onPage({ url: responseURL, document });
         scroll(responseURL, displayedState, options.pop);
       });
