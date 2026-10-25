@@ -8,6 +8,19 @@ export function navigationURL(href, base) {
   } catch { return null; }
 }
 
+/** Map canonical search page titles to the same readable routes as site_routes.py. */
+export function searchPageRoute(title, fallback) {
+  if (typeof title !== 'string') return fallback;
+  const parts = title.split('/');
+  if (!title || /[\\\x00-\x1f\x7f]/u.test(title) ||
+      parts.some(part => !part || part === '.' || part === '..' || part !== part.trim())) return fallback;
+  if (title === 'Ghost in the Patch') return '/gitpa/';
+  try {
+    return '/gitpa/' + parts.map(part => encodeURIComponent(part).replace(/[!'()*]/g,
+      char => '%' + char.charCodeAt(0).toString(16).toUpperCase())).join('/') + '/';
+  } catch { return fallback; }
+}
+
 export function sameDocument(left, right) {
   const a = new URL(left); const b = new URL(right);
   a.hash = ''; b.hash = '';
@@ -130,6 +143,13 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
     }
     displayedURL = target.href;
   };
+  const notifySharedRoute = oldURL => {
+    // Shared outline routing listens to hashchange; history.pushState does not emit it.
+    const event = typeof window.HashChangeEvent === 'function'
+      ? new window.HashChangeEvent('hashchange', { oldURL, newURL: displayedURL })
+      : new Event('hashchange');
+    window.dispatchEvent(event);
+  };
   async function navigate(href, options = {}) {
     let target = navigationURL(href, displayedURL);
     if (!target || disposed) return false;
@@ -146,7 +166,9 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
     if (token !== generation || disposed) return false;
     if (sameDocument(target.href, displayedURL)) {
       requests.cancel();
+      const previousURL = displayedURL;
       adoptURL(target, options);
+      if (previousURL !== displayedURL) notifySharedRoute(previousURL);
       scroll(target, displayedState, options.pop);
       return true;
     }
@@ -165,7 +187,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         const importedNav = document.importNode(nav, true);
         // Imported scripts never execute; remove them to keep that invariant explicit.
         for (const root of [importedMain, importedNav]) for (const script of root.querySelectorAll('script')) script.remove();
-        const metadata = ['meta[name="gitpa-episode"]', 'link[rel="canonical"]'].map(selector => [selector, parsed.querySelector(selector)]);
+        const metadata = ['meta[name="gitpa-episode"]', 'link[rel="canonical"]', 'link[rel="lsg-search"]'].map(selector => [selector, parsed.querySelector(selector)]);
         const importedMetadata = metadata.map(([selector, node]) => [selector, node && document.importNode(node, true)]);
         document.querySelector('main').replaceWith(importedMain);
         document.querySelector('nav').replaceWith(importedNav);
@@ -174,10 +196,13 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
           for (const existing of document.querySelectorAll(selector)) existing.remove();
           if (node) document.head.append(node);
         }
+        const previousURL = displayedURL;
         adoptURL(responseURL, options);
         window.logseqGardenerInitBacklinks?.(importedMain);
         window.logseqGardenerInitTheme?.(importedNav);
+        window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
         onPage({ url: responseURL, document });
+        notifySharedRoute(previousURL);
         scroll(responseURL, displayedState, options.pop);
       });
     } catch (error) {
@@ -191,7 +216,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   const click = event => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
-    if (!anchor || anchor.hasAttribute('download') || anchor.hasAttribute('data-native-navigation') || (anchor.target && anchor.target !== '_self') || anchor.rel?.split(/\s+/).includes('external')) return;
+    if (!anchor || anchor.matches?.('.outline .bullet') || anchor.hasAttribute('download') || anchor.hasAttribute('data-native-navigation') || (anchor.target && anchor.target !== '_self') || anchor.rel?.split(/\s+/).includes('external')) return;
     const target = navigationURL(anchor.getAttribute('href'), displayedURL);
     if (!target) return;
     event.preventDefault();
@@ -202,6 +227,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   window.addEventListener('popstate', pop);
   const previousNavigate = window.gitpaNavigate;
   window.gitpaNavigate = navigate;
+  window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
   const initialURL = new URL(displayedURL);
   if (initialURL.hash && !initialURL.hash.startsWith('#/page/')) scroll(initialURL, displayedState, false);
   return { navigate, dispose() {
