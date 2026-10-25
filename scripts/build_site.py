@@ -121,10 +121,15 @@ def install_homepage_query(output, result):
     for filename in ['index.html', home_route]:
         path = output / filename
         text = path.read_text(encoding='utf-8')
-        marker = f'<li>{QUERY_PLACEHOLDER}</li>'
-        if text.count(marker) != 1:
+        bullet = '<a class="bullet" href="#"></a>'
+        markers = [(f'<li>{QUERY_PLACEHOLDER}</li>', ''),
+                   (f'<li>{bullet}{QUERY_PLACEHOLDER}</li>', bullet)]
+        matches = [(marker, prefix) for marker, prefix in markers if marker in text]
+        if text.count(QUERY_PLACEHOLDER) != 1 or len(matches) != 1:
             raise ValueError('Expected one rendered homepage query placeholder')
-        path.write_text(text.replace(marker, ''.join(rows)), encoding='utf-8')
+        marker, prefix = matches[0]
+        rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
+        path.write_text(text.replace(marker, rendered_rows), encoding='utf-8')
 
 
 def legacy_routes(output, graph=None, published_routes=None):

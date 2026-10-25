@@ -143,6 +143,13 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
     }
     displayedURL = target.href;
   };
+  const notifySharedRoute = oldURL => {
+    // Shared outline routing listens to hashchange; history.pushState does not emit it.
+    const event = typeof window.HashChangeEvent === 'function'
+      ? new window.HashChangeEvent('hashchange', { oldURL, newURL: displayedURL })
+      : new Event('hashchange');
+    window.dispatchEvent(event);
+  };
   async function navigate(href, options = {}) {
     let target = navigationURL(href, displayedURL);
     if (!target || disposed) return false;
@@ -159,7 +166,9 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
     if (token !== generation || disposed) return false;
     if (sameDocument(target.href, displayedURL)) {
       requests.cancel();
+      const previousURL = displayedURL;
       adoptURL(target, options);
+      if (previousURL !== displayedURL) notifySharedRoute(previousURL);
       scroll(target, displayedState, options.pop);
       return true;
     }
@@ -187,11 +196,13 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
           for (const existing of document.querySelectorAll(selector)) existing.remove();
           if (node) document.head.append(node);
         }
+        const previousURL = displayedURL;
         adoptURL(responseURL, options);
         window.logseqGardenerInitBacklinks?.(importedMain);
         window.logseqGardenerInitTheme?.(importedNav);
         window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
         onPage({ url: responseURL, document });
+        notifySharedRoute(previousURL);
         scroll(responseURL, displayedState, options.pop);
       });
     } catch (error) {
@@ -205,7 +216,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   const click = event => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
-    if (!anchor || anchor.hasAttribute('download') || anchor.hasAttribute('data-native-navigation') || (anchor.target && anchor.target !== '_self') || anchor.rel?.split(/\s+/).includes('external')) return;
+    if (!anchor || anchor.matches?.('.outline .bullet') || anchor.hasAttribute('download') || anchor.hasAttribute('data-native-navigation') || (anchor.target && anchor.target !== '_self') || anchor.rel?.split(/\s+/).includes('external')) return;
     const target = navigationURL(anchor.getAttribute('href'), displayedURL);
     if (!target) return;
     event.preventDefault();

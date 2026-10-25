@@ -304,3 +304,42 @@ test('search receives replaced revision metadata before page hooks, and resets w
   assert.equal(doc.querySelectorAll(selector).length, 0);
   navigator.dispose();
 });
+
+
+test('shared hash routes follow content swaps and same-page zoom exit before focus', async () => {
+  const { doc, win, fragment } = fixture();
+  const events = [];
+  let hookReady = false;
+  win.addEventListener('hashchange', () => {
+    events.push(win.location.href);
+    assert.equal(fragment.focused, undefined);
+    if (win.location.pathname === '/gitpa/one/') assert.ok(hookReady);
+  });
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => { hookReady = true; } });
+  await navigator.navigate('/gitpa/one/#zoom/1');
+  await navigator.navigate('/gitpa/one/');
+  await navigator.navigate('/gitpa/one/');
+  assert.deepEqual(events, ['https://example.com/gitpa/one/#zoom/1', 'https://example.com/gitpa/one/']);
+  await navigator.navigate('/gitpa/two/#part');
+  assert.equal(events.at(-1), 'https://example.com/gitpa/two/#part');
+  assert.ok(fragment.focused);
+  navigator.dispose();
+});
+
+
+test('shared outline bullet anchors retain their native zoom controller ownership', async () => {
+  let fetches = 0;
+  const { doc, win } = fixture(async () => { fetches++; return response(); });
+  const navigator = createNavigator({ document: doc, window: win });
+  const anchor = new Node('a', doc);
+  anchor.setAttribute('href', '#');
+  anchor.matches = selector => selector === '.outline .bullet';
+  const click = new Event('click', { cancelable: true });
+  Object.defineProperty(click, 'button', { value: 0 });
+  Object.defineProperty(click, 'target', { value: { closest: () => anchor } });
+  doc.dispatchEvent(click); await tick();
+  assert.equal(click.defaultPrevented, false);
+  assert.equal(fetches, 0);
+  assert.equal(win.history.entries.length, 0);
+  navigator.dispose();
+});
