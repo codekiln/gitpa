@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "a175800309a22b1ac224c15bf54955b912ea91688dd6544b9980994737fca962",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/151 The Unstable"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/151 The Unstable": {
+      "files": [],
+      "page": "Microfreak/Preset/151 The Unstable",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/151 The Unstable",
   "version": 2
 }

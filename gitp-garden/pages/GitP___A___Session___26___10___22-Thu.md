@@ -5,9 +5,10 @@ podcast-published-at:: 2026-10-22T12:27:11-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-22 Thu]]
 prev:: [[GitP/A/Session/26/10/20-Tue]]
+next:: [[GitP/A/Session/26/10/24-Sat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F22-Thu
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___22-Thu.md
-logseq-proxy-last-sync-date:: [[2026-10-23]]
+logseq-proxy-last-sync-date:: [[2026-10-24]]
 - # Voidom and MIDI clock
 	- A Ghost in the Patch session with MicroFreak preset 016 Voidom: tracing MIDI connections and clock problems between the Launchpad Pro, MicroFreak and Ableton Live, then combining Launchpad sequencing with recorded Session clips.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___22-Thu___Asset___Audio___Trimmed.mp3)
