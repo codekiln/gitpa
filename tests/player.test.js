@@ -169,7 +169,15 @@ class Element extends EventTarget {
   hasAttribute(key) { return key in this.attributes; }
   removeAttribute(key) { delete this.attributes[key]; }
   getBoundingClientRect() { return { height: 100 }; }
-  closest(selector) { return matches(this, selector) ? this : this.parent?.closest(selector) || null; }
+  matches(selector) { return matches(this, selector); }
+  contains(node) { return node === this || this.children.some(child => child.contains(node)); }
+  closest(selector) { return matches(this, selector) ? this : this.parent?.closest?.(selector) || null; }
+  dispatchEvent(event) {
+    if (!event.target) Object.defineProperty(event, 'target', { value: this });
+    super.dispatchEvent(event);
+    if (event.bubbles && !event.cancelBubble) this.parent?.dispatchEvent(event);
+    return !event.defaultPrevented;
+  }
   querySelectorAll(selector) { return this.children.flatMap(child => [...(matches(child, selector) ? [child] : []), ...child.querySelectorAll(selector)]); }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
   replaceWith(node) { const i = this.parent.children.indexOf(this); this.parent.children[i] = node; node.parent = this.parent; this.parent = null; }
@@ -189,7 +197,7 @@ function pageFixture(count = 1) {
     const audio = new Audio();
     const element = new Element('audio');
     Object.assign(audio, element);
-    for (const method of ['getAttribute', 'setAttribute', 'hasAttribute', 'removeAttribute', 'closest', 'querySelectorAll', 'querySelector', 'replaceWith']) audio[method] = Element.prototype[method];
+    for (const method of ['getAttribute', 'setAttribute', 'hasAttribute', 'removeAttribute', 'closest', 'contains', 'querySelectorAll', 'querySelector', 'replaceWith']) audio[method] = Element.prototype[method];
     audio.setAttribute('src', '/episode.wav');
     return audio;
   };
@@ -207,6 +215,7 @@ function pageFixture(count = 1) {
   document.querySelectorAll = selector => [...document.head.querySelectorAll(selector), ...document.body.querySelectorAll(selector)];
   document.querySelector = selector => document.querySelectorAll(selector)[0] || null;
   document.createElement = name => new Element(name);
+  document.body.parent = document;
   const click = (href, options = {}) => {
     const anchor = chapterAnchors.get(Number(href.split('#t=')[1])) || new Element('a');
     anchor.setAttribute('href', href);
@@ -220,8 +229,121 @@ function pageFixture(count = 1) {
     anchor.removeAttribute('download'); anchor.target = '';
     return event;
   };
-  return { document, audio, click, origin, main, marker, canonical, makeAudio };
+  return { document, audio, click, origin, main, marker, canonical, makeAudio, chapterAnchors };
 }
+
+function dialogueAnchor(main, href = '/episode.wav#t=42', seconds = '42') {
+  const anchor = new Element('a');
+  anchor.setAttribute('href', href);
+  anchor.setAttribute('data-lsg-dialogue-time', seconds);
+  main.append(anchor);
+  return anchor;
+}
+
+function mediaSeek(anchor, overrides = {}, options = {}) {
+  const event = new Event('lsg:media-seek', { bubbles: true, cancelable: true, ...options });
+  event.detail = { source: 'https://example.com/episode.wav', seconds: 42, anchor, ...overrides };
+  anchor.dispatchEvent(event);
+  return event;
+}
+
+test('shared helper handoff owns playback once and preserves the chapter list', () => {
+  const { document, audio, main } = pageFixture();
+  const anchor = dialogueAnchor(main);
+  // The shared capture handler dispatches first and suppresses its native fallback
+  // and the ordinary bubbling click when the host cancels the seek request.
+  let inlineFallbacks = 0;
+  document.addEventListener('click', event => {
+    if (event.target !== anchor) return;
+    if (mediaSeek(anchor).defaultPrevented) event.preventDefault();
+    else inlineFallbacks++;
+  }, true);
+  const player = enhanceEpisode(document);
+  const click = new Event('click', { bubbles: true, cancelable: true });
+  Object.defineProperty(click, 'button', { value: 0 });
+  anchor.dispatchEvent(click);
+  assert.equal(click.defaultPrevented, true);
+  assert.equal(inlineFallbacks, 0);
+  assert.equal(audio.calls, 1);
+  assert.equal(audio.currentTime, 42);
+  assert.equal(document.querySelectorAll('audio').length, 1);
+  assert.equal(player.footer.children[0].children[2].textContent, 'An evolving melody 0:20');
+  assert.equal(main.querySelectorAll('h3').length, 2);
+  player.dispose();
+});
+
+test('ordinary dialogue anchor works when the shared helper is absent', () => {
+  const { document, main, audio } = pageFixture();
+  const anchor = dialogueAnchor(main);
+  const player = enhanceEpisode(document);
+  const event = new Event('click', { bubbles: true, cancelable: true });
+  Object.defineProperty(event, 'button', { value: 0 });
+  anchor.dispatchEvent(event);
+  assert.equal(event.defaultPrevented, true);
+  assert.equal(audio.currentTime, 42);
+  assert.equal(audio.calls, 1);
+  player.dispose();
+});
+
+test('shared seek validates the current original anchor, recording and integer time', () => {
+  const { document, main, audio } = pageFixture();
+  const anchor = dialogueAnchor(main);
+  const player = enhanceEpisode(document);
+  for (const detail of [{ source: 'https://private.example.com/hidden.wav' }, { source: '/episode.wav' },
+    { seconds: -1 }, { seconds: 1.5 }, { seconds: NaN }, { seconds: Infinity }, { seconds: '42' },
+    { seconds: Number.MAX_SAFE_INTEGER + 1 }, { seconds: 43 }, { anchor: new Element('a') }]) {
+    assert.equal(mediaSeek(anchor, detail).defaultPrevented, false);
+  }
+  assert.equal(mediaSeek(anchor, {}, { cancelable: false }).defaultPrevented, false);
+  assert.equal(mediaSeek(anchor, {}, { bubbles: false }).defaultPrevented, false);
+  anchor.setAttribute('href', '/another.wav#t=42');
+  assert.equal(mediaSeek(anchor).defaultPrevented, false);
+  anchor.setAttribute('href', '/episode.wav#t=42');
+  anchor.removeAttribute('data-lsg-dialogue-time');
+  assert.equal(mediaSeek(anchor).defaultPrevented, false);
+  for (const className of ['linked-references', 'transclusion']) {
+    const copy = new Element('section'); copy.className = className; main.append(copy);
+    assert.equal(mediaSeek(dialogueAnchor(copy)).defaultPrevented, false);
+  }
+  const detached = dialogueAnchor(new Element('div'));
+  const request = new Event('lsg:media-seek', { bubbles: true, cancelable: true });
+  request.detail = { source: 'https://example.com/episode.wav', seconds: 42, anchor: detached };
+  Object.defineProperty(request, 'target', { value: detached });
+  document.dispatchEvent(request);
+  assert.equal(request.defaultPrevented, false);
+  assert.equal(audio.calls, 0);
+  anchor.setAttribute('data-lsg-dialogue-time', '42');
+  player.dispose();
+  assert.equal(mediaSeek(anchor).defaultPrevented, false);
+  assert.equal(audio.calls, 0);
+});
+
+test('shared seek follows soft navigation and keeps the existing audio session', () => {
+  const { document, main, audio, marker, canonical, makeAudio } = pageFixture();
+  const anchor = dialogueAnchor(main);
+  const player = enhanceEpisode(document);
+  assert.equal(mediaSeek(anchor).defaultPrevented, true);
+  const next = new Element('main');
+  main.replaceWith(next);
+  const candidate = makeAudio(); candidate.setAttribute('src', '/another.wav'); next.append(candidate);
+  marker.setAttribute('content', '/another.wav'); canonical.setAttribute('href', '/gitpa/another/');
+  const nextAnchor = dialogueAnchor(next, '/another.wav#t=42');
+  player.showPage();
+  assert.equal(audio.calls, 1);
+  assert.equal(mediaSeek(anchor).defaultPrevented, false);
+  assert.equal(mediaSeek(nextAnchor).defaultPrevented, false);
+  assert.equal(mediaSeek(nextAnchor, { source: 'https://example.com/another.wav' }).defaultPrevented, true);
+  assert.equal(player.audio, audio);
+  assert.equal(document.querySelectorAll('audio').length, 1);
+  assert.equal(audio.getAttribute('src'), 'https://example.com/another.wav');
+  assert.equal(audio.calls, 2);
+  audio.readyState = 1; audio.emit('loadedmetadata');
+  assert.equal(audio.currentTime, 42);
+  marker.removeAttribute('content'); player.showPage();
+  assert.equal(mediaSeek(nextAnchor, { source: 'https://example.com/another.wav' }).defaultPrevented, false);
+  assert.equal(audio.calls, 2);
+  player.dispose();
+});
 
 test('DOM enhancement moves the original audio once and adds an accessible footer', () => {
   const { document, audio, origin } = pageFixture();
