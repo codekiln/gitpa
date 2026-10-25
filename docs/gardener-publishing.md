@@ -20,6 +20,14 @@ Every page ends with an expanded, collapsible Hierarchy section. Its flat list s
 
 Run `python3 -m unittest discover -s tests`, `node --test tests/*.test.js`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, chapter seeking in an episode, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.
 
+## Search
+
+Search uses Gardener's shared static index and dialog. Open it from the header search button or with Cmd/Ctrl+K. Results include published page titles, unique aliases and original note text. Page results open readable namespace URLs; note results open their source block and reveal its enclosing collapsed outlines. Internal result navigation keeps the current recording and appearance setting.
+
+Generate a search-enabled preview with `python3 scripts/build_site.py --renderer /absolute/path/to/lsg --search --output /private/tmp/gitpa-search-preview/gitpa`. Search data loads on first opening, and subsequent opens reuse the current publication's prepared index. Loading errors offer retry and reload; search never reloads the page automatically.
+
+Only selected public source content enters the index. Evaluated homepage query rows, copied backlink/transclusion content, hidden properties and unresolved reference identities are excluded. This first index version searches original note text rather than page-property values or generated namespace titles. The authored homepage introduction remains searchable. The legacy route map loads only when a legacy page fragment is opened.
+
 ## Episode chapters
 
 Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls or follows links within the site. Selecting a chapter timestamp seeks and plays that recording. The footer follows the chapter at the current playback time; selecting the chapter name opens its notes. “Return to start” opens the chapter or episode position where the listener started playback. Playback starts only after the listener clicks a chapter or the recording controls.

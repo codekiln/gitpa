@@ -172,8 +172,14 @@ openLegacyPage();
 '''.replace('SITE_BASE', json.dumps(urlsplit(SITE_URL).path)).replace('ROUTES', routes)
     (output / 'legacy-routes.js').write_text(script, encoding='utf-8')
     home = output / 'index.html'
+    startup = """<script>(()=>{let pending=false;function load(){
+if(!location.hash.startsWith('#/page/')||pending)return;pending=true;
+const script=document.createElement('script');script.src=new URL('legacy-routes.js',new URL(SITE_BASE,location.origin)).href;
+script.onerror=()=>{pending=false;script.remove()};document.head.append(script)}
+window.addEventListener('hashchange',load);load()})();</script>""".replace(
+        'SITE_BASE', json.dumps(urlsplit(SITE_URL).path))
     home.write_text(home.read_text(encoding='utf-8').replace(
-        '</head>', '<script src="legacy-routes.js" defer></script></head>'), encoding='utf-8')
+        '</head>', startup + '</head>'), encoding='utf-8')
 
 
 def public_pages(graph):
