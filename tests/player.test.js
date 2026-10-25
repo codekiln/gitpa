@@ -285,6 +285,44 @@ test('ordinary dialogue anchor works when the shared helper is absent', () => {
   player.dispose();
 });
 
+test('explicit copied recording links seek once while copied shared events stay unclaimed', () => {
+  for (const className of ['linked-references', 'transclusion']) {
+    const { document, main, audio } = pageFixture();
+    const copy = new Element('section'); copy.className = className; main.append(copy);
+    const anchor = dialogueAnchor(copy);
+    const player = enhanceEpisode(document);
+    assert.equal(mediaSeek(anchor).defaultPrevented, false);
+    assert.equal(audio.calls, 0);
+    // Explicit authored links retain their ordinary click behavior, without
+    // requiring or trusting the shared dialogue marker on copied content.
+    anchor.removeAttribute('data-lsg-dialogue-time');
+    const click = options => {
+      const event = new Event('click', { bubbles: true, cancelable: true });
+      for (const [key, value] of Object.entries({ button: 0, ...options })) Object.defineProperty(event, key, { value });
+      anchor.dispatchEvent(event);
+      return event;
+    };
+    for (const options of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }]) {
+      assert.equal(click(options).defaultPrevented, false);
+    }
+    anchor.setAttribute('download', '');
+    assert.equal(click().defaultPrevented, false);
+    anchor.removeAttribute('download'); anchor.target = '_blank';
+    assert.equal(click().defaultPrevented, false);
+    anchor.target = ''; anchor.setAttribute('href', '/another.wav#t=42');
+    assert.equal(click().defaultPrevented, false);
+    assert.equal(audio.calls, 0);
+    anchor.setAttribute('href', '/episode.wav#t=42');
+    assert.equal(click().defaultPrevented, true);
+    assert.equal(audio.calls, 1);
+    assert.equal(audio.currentTime, 42);
+    assert.equal(player.audio, audio);
+    assert.equal(document.querySelectorAll('audio').length, 1);
+    assert.equal(main.querySelectorAll('h3').length, 2);
+    player.dispose();
+  }
+});
+
 test('shared seek validates the current original anchor, recording and integer time', () => {
   const { document, main, audio } = pageFixture();
   const anchor = dialogueAnchor(main);
