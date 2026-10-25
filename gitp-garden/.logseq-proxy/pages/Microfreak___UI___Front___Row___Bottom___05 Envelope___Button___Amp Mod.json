@@ -1,0 +1,14 @@
+{
+  "body_sha256": "688be3e267900b95833daf30319fa715820fb2b8379868deac0afe2bd5d65c1d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/05 Envelope/Button/Amp Mod"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/05 Envelope/Button/Amp Mod",
+  "version": 2
+}

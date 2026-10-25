@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a4a434ea1d5e93181242f599feaaa7b97ee2343d9dbf0847de28a67b8d5e952f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Modal/Decay"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Modal/Decay",
+  "version": 2
+}

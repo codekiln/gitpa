@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5fcf8cc46c72f7cbab0894ba6fa1d9657da0edccf7b7fe3a496ac549ab701649",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Top/02 Paraphonic Button/Hold/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Top/02 Paraphonic Button/Hold/Shift",
+  "version": 2
+}

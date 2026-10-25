@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1d8f91942a7eed1ee4e69c90497448ae7f326600e8954ad90872c1140e7e3bdf",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Top/08 Master Knob"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Top/08 Master Knob",
+  "version": 2
+}

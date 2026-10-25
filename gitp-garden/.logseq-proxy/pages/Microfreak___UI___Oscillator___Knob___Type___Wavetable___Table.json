@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fce48a485a1b7a0369faea1e55cb4a0ea28da0bba9e1662a81b30ad8a90086bb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table",
+  "version": 2
+}

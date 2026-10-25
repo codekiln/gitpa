@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6962365e17eee10a9adc83e62805d6d8cc1f64b098ac8757dc750729e341a9cd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Timbre"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Timbre",
+  "version": 2
+}

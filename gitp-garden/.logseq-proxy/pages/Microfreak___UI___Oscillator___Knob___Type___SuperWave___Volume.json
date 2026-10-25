@@ -1,0 +1,14 @@
+{
+  "body_sha256": "43464a7991579689e6c2a52cab5e6fc56a9fd50d94a9cd21d7ae8e2d2c6d6f73",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume",
+  "version": 2
+}

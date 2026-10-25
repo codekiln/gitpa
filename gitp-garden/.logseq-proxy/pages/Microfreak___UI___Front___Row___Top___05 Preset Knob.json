@@ -1,0 +1,14 @@
+{
+  "body_sha256": "cc9a718778b61609cebbf451cfd7ed029997ede1594ee6f9e126cd8d47317f70",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Top/05 Preset Knob"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Top/05 Preset Knob",
+  "version": 2
+}

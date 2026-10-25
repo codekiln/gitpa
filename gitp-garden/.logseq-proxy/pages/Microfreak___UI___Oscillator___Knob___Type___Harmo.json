@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a8f81179931d2be314cfbccfb7023b3fce049f374eb284bb306fa8eec46eaae9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Harmo"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Harmo",
+  "version": 2
+}

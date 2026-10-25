@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6a561d15fe7ef873c13a50fe61ea95b1f334d764a55cb8b038e8d9d22ccf1c93",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus",
+  "version": 2
+}

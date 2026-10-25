@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b9875ef3775921c88f402c4354c9da2385d8fd92b1505ff1a3e825922ed73519",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/02 Output Jack"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/02 Output Jack",
+  "version": 2
+}

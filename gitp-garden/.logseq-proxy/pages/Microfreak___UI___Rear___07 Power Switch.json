@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8a0831a2cf732443b8fd8614f2539df6b6c51a9ce92557068ec053ca22b05280",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/07 Power Switch"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/07 Power Switch",
+  "version": 2
+}

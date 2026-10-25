@@ -1,0 +1,14 @@
+{
+  "body_sha256": "111eccdb6d0d0d7b6883ff9d814513c1b3a37dfadd80d3724bc84163f76c69a5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Arp Seq/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Arp Seq/Shift",
+  "version": 2
+}

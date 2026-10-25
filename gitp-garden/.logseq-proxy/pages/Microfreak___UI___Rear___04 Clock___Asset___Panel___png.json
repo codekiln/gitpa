@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0150adc03f05d6a3a9c988c60775a22c5c6960f5c89f34b62fe1c91103d90fe9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/04 Clock/Asset/Panel/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/04 Clock/Asset/Panel/png",
+  "version": 2
+}

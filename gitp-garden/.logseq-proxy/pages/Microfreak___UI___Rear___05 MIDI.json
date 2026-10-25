@@ -1,0 +1,14 @@
+{
+  "body_sha256": "185a0f5fc9617d88ba54392a328ac9b0a7f236d77d89d91df9c2845ba826e047",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/05 MIDI"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/05 MIDI",
+  "version": 2
+}

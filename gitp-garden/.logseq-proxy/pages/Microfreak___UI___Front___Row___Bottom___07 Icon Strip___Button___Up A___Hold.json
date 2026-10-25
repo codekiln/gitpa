@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4f645caeb80aadc1397ce72c64f688f5f0b8805a760c22d20085bbd5d1c9e749",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/07 Icon Strip/Button/Up A/Hold"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/07 Icon Strip/Button/Up A/Hold",
+  "version": 2
+}

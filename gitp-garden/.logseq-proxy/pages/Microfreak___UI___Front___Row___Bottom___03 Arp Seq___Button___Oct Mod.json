@@ -1,0 +1,14 @@
+{
+  "body_sha256": "29b50325d3c0ca4ee651ebf9564bfaaf0efe348bb7e8cd9990464307107d40b4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Oct Mod"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Oct Mod",
+  "version": 2
+}

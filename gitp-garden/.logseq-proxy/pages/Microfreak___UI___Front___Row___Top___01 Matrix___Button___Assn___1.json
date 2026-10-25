@@ -1,0 +1,14 @@
+{
+  "body_sha256": "003ab05d47cb7fc90029edc4670618c5553946f84b44ea65dfb2ed6a40ddc06e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/1"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/1",
+  "version": 2
+}

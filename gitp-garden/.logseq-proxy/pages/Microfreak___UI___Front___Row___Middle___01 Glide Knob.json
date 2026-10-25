@@ -1,0 +1,14 @@
+{
+  "body_sha256": "67f52bf061641fb0daeb793cb393a37ea04ef8afa4f2269e44a38a913c311966",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/01 Glide Knob"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/01 Glide Knob",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ca1976fd6a65a5aa0b50c73f9f701d52c60dc65f1da41ad0e5cebd9f6fe822c8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/BASS/Fold"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/BASS/Fold",
+  "version": 2
+}

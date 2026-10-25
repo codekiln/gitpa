@@ -1,0 +1,14 @@
+{
+  "body_sha256": "32c09daf534fc9e4d8820c859246beb805f2928abffa536ecd6fa54ab41c9cc9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Top/07 Utility Button"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Top/07 Utility Button",
+  "version": 2
+}

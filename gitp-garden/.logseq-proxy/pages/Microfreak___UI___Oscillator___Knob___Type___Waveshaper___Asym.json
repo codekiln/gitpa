@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b3038baeaafb096753497ee30e60c1c76fbaae12c8f9dec0aa0e307330ee767f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym",
+  "version": 2
+}

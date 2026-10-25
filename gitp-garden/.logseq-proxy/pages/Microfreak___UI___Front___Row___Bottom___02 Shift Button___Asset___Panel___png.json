@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5959a937f551c046c1712bdd8357ea289660b49e116a3660c90de7b643e23b6b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/02 Shift Button/Asset/Panel/png"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/02 Shift Button/Asset/Panel/png",
+  "version": 2
+}
