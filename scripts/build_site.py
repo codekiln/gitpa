@@ -72,8 +72,9 @@ def prepare_homepage(graph, result):
     for target in re.findall(r'\[\[([^\]]+)\]\]', outline):
         if normalized(target) not in visible:
             raise ValueError(f'Homepage query target is missing or unpublished: {target}')
-    # Evaluated rows are presentation, not authored references for backlink indexing.
-    placeholder = f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
+    # Evaluated rows are presentation, not authored references or search content.
+    placeholder = (f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
+                   '\t  search-exclude:: true\n')
     text, count = re.subn(pattern, lambda _: placeholder, text)
     if count != 1:
         raise ValueError('Expected one homepage query')

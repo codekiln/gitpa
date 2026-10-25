@@ -40,6 +40,7 @@ class HomepageTests(unittest.TestCase):
             self.assertNotIn('#+BEGIN_QUERY', after)
             self.assertIn('- ## Recent Ceremonies', after)
             self.assertIn(QUERY_PLACEHOLDER, after)
+            self.assertIn(f'\t- {QUERY_PLACEHOLDER}\n\t  search-exclude:: true\n', after)
             self.assertNotIn('[[GitP/A/Session/Newest]]', after)
             self.assertNotIn('[[GitP/A/Session/Older]]', after)
             self.assertIn('gitp_logo_raw_fly.JPG', after)
