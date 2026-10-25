@@ -7,7 +7,8 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-24 Sat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F24-Sat
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___24-Sat.md
-logseq-proxy-last-sync-date:: [[2026-10-24]]
+logseq-proxy-last-sync-date:: [[2026-10-25]]
+
 - # The Unstable over USB
 	- A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
@@ -25,7 +26,8 @@ logseq-proxy-last-sync-date:: [[2026-10-24]]
 		- [Download the slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 	- ## MIDI
 		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/24-Sat/Asset/MIDI/Session/mid]]
-		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With V.Analog, the panel's Wave knob (CC 10) sets Detune, the Timbre knob (CC 12) sets Shape, and the Shape knob (CC 13) sets Wave. [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]), the panel's [Wave knob]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10) sets [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]), the [Timbre knob]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) sets [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]), and the [Shape knob]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) sets [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+		  id:: 6add3dae-8dc8-4156-a5ea-23f7290d9173
 	- ## Voices
 		- **codekiln** is transcribed from the commentary microphone. Only codekiln's commentary is transcribed. Most of the recording is music without commentary.
 		- The transcript is an automatic draft; [unclear] marks a word that could not be made out.
@@ -34,26 +36,34 @@ logseq-proxy-last-sync-date:: [[2026-10-24]]
 			- A short remark from the end of the session opens the episode: the first use of a Launchpad custom mode to arm Arrangement Record.
 			- [[Launchpad/Custom/Mode/1 Arrangement]]
 			- Transcript
-			  collapsed:: true
-				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my Novation custom mode to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
+				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my [[Launchpad/UG/08 Custom Modes]] to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
+			- [[My Notes]]
+				- This part was actually from the end of the recording session. At the end, I stopped the recording, then used the custom mode MIDI toggle button mapped to the [[Ableton/Live/Mode/Arrangement]] record button
+					- DONE [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
+					  id:: 6addc678-7052-4e91-a8af-b4e3f6d99542
 		- ### 00:22 The Unstable over a slow sequence
-			- Launchpad sequencer track 1, set to its slowest rate, plays The Unstable. The Wave and Shape knobs sweep between triangle and saw and between narrow pulse and square, resonance rises a little at 01:27, and cycling envelope amount goes up to about 95 at 01:36. From 02:00, cycling envelope rise, fall and hold change.
-			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/Preset/151 The Unstable]]
+			- Launchpad sequencer track 1, set to its slowest rate, plays The Unstable. The [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]) and [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]) parameters sweep between triangle and saw and between narrow pulse and square, [resonance]([[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Knob/Resonance]]) rises a little at 01:27, and [cycling envelope amount]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Amount]]) goes up to about 95 at 01:36. From 02:00, cycling envelope [rise]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Rise]]), [fall]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Fall]]) and [hold]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Hold Sustain]]) change.
+			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance]] · [[Microfreak/Preset/151 The Unstable]]
+			- #### [[My Notes]]
+				- While it wasn't intentional, I like how it immediately jumps to this moody section. My modifications
 		- ### 03:00 Oscillator type and the main envelope
-			- Oscillator type (CC 9) changes several times between 03:04 and 03:21 and ends where it started. At 04:14, sustain (CC 29) comes down from near maximum while attack (CC 105) and decay (CC 106) change, so the swelling pad gets shorter.
+			- [Oscillator type]([[Microfreak/UI/Oscillator/Knob/Type]]) (CC 9) changes several times between 03:04 and 03:21 and ends where it started. At 04:14, [sustain]([[Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Sustain]]) (CC 29) comes down from near maximum while [attack]([[Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Attack]]) (CC 105) and [decay]([[Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Decay Rel]]) (CC 106) change, so the swelling pad gets shorter.
 			- [[Microfreak/UG/06 Dig Osc/03 Types]] · [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
 		- ### 05:00 Cycling envelope sweeps
-			- Cycling envelope rise (CC 102) and fall (CC 103) move through most of these three minutes, which have the most notes in the session. Because the cycling envelope drives resonance in this preset, those sweeps change how the resonance pulses. The section from 05:38 to 08:27 comes from a later take placed into the arrangement.
+			- Cycling envelope [rise]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Rise]]) (CC 102) and [fall]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Fall]]) (CC 103) move through most of these three minutes, which have the most notes in the session. Because the cycling envelope drives resonance in this preset, those sweeps change how the resonance pulses. The section from 05:38 to 08:27 comes from a later take placed into the arrangement.
 			- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes]]
+			- ### [[My Notes]] 07:40 detunes - [[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]
+				- Musically effective. Dreamy and machine-like.
 		- ### 08:00 Opening the filter
-			- Cutoff (CC 23) rises from 12 at 08:03, with Wave, Shape and attack changes around it. From 09:00, cycling envelope amount (CC 24), hold, rise and fall change again.
+			- [Cutoff]([[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Knob/Cutoff]]) (CC 23) rises from 12 at 08:03, with [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]), [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]) and [attack]([[Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Attack]]) changes around it. From 09:00, cycling envelope [amount]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Amount]]) (CC 24), [hold]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Hold Sustain]]), [rise]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Rise]]) and [fall]([[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Fall]]) change again.
 			- [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]]
 		- ### 10:00 Detune and Launchpad pressure
-			- Detune (the Wave knob, CC 10) changes from 10:00 and reaches 49 by 12:00. Launchpad pad pressure, recorded as per-note pressure, arrives from 11:00 and carries through to the end. Oscillator type changes again between 13:14 and 13:19 and returns to its starting value.
+			- [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]) (the [Wave knob]([[Microfreak/UI/Oscillator/Knob/Wave]]), CC 10) changes from 10:00 and reaches 49 by 12:00. Launchpad pad pressure, recorded as per-note pressure, arrives from 11:00 and carries through to the end. [Oscillator type]([[Microfreak/UI/Oscillator/Knob/Type]]) changes again between 13:14 and 13:19 and returns to its starting value.
 			- [[Launchpad/UG/10 Setup/04 Aftertouch Settings]] · [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
 		- ### 14:15 USB clock, printing clips and pressure
 			- The live playing stops around 14:30, and looped Session clips carry on quietly while codekiln talks through the session: unsaved preset edits, the USB-only clock setup, wanting to print a sequencer pattern to a Session clip and play it back to the MicroFreak, and how much Launchpad pressure added to the preset.
 			- [[Launchpad/UG/09 Sequencer/11 Print to Clip]] · [[Launchpad/UG/10 Setup/05 MIDI Settings]] · [[Launchpad/UG/10 Setup/04 Aftertouch Settings]]
+			- [Panel button]([[Microfreak/UI/Front/Row/Top/03 Panel Button]]) · [Utility button]([[Microfreak/UI/Front/Row/Top/07 Utility Button]]) · [Preset knob]([[Microfreak/UI/Front/Row/Top/05 Preset Knob]]) · [Save button]([[Microfreak/UI/Front/Row/Top/06 Save Button]]) · [[Microfreak/UG/04 Presets/01 Load Presets]] · [[Microfreak/UG/04 Presets/04 Panel]] · [[Microfreak/UG/04 Presets/02 Save Presets]]
 			- Transcript
 			  collapsed:: true
 				- **codekiln** · 00:14:15 — Okay, that was interesting.
