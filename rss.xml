@@ -22,6 +22,16 @@
       <itunes:email>codekiln@pm.me</itunes:email>
     </itunes:owner>
     <item>
+      <title>The Unstable over USB</title>
+      <link>https://codekiln.github.io/gitpa/GitP/A/Session/26/10/24-Sat/</link>
+      <description>A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.</description>
+      <itunes:author>Codekiln</itunes:author>
+      <itunes:summary>A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.</itunes:summary>
+      <pubDate>Sat, 24 Oct 2026 19:24:21 -0400</pubDate>
+      <guid isPermaLink="false">gitpa20261024</guid>
+      <enclosure url="https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3" length="25777884" type="audio/mpeg" />
+    </item>
+    <item>
       <title>Voidom and MIDI clock</title>
       <link>https://codekiln.github.io/gitpa/GitP/A/Session/26/10/22-Thu/</link>
       <description>A Ghost in the Patch session with MicroFreak preset 016 Voidom: tracing MIDI connections and clock problems between the Launchpad Pro, MicroFreak and Ableton Live, then combining Launchpad sequencing with recorded Session clips.</description>
