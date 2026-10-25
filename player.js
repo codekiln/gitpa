@@ -267,7 +267,7 @@ export function createSitePlayer(document) {
   const click = event => {
     if (!page || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
-    if (!originalAnchor(anchor)) return;
+    if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
     const seconds = chapterTime(anchor.getAttribute('href'), page.source, document.baseURI);
     if (seconds === null) return;
     event.preventDefault();
