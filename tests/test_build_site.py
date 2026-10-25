@@ -40,6 +40,7 @@ class HomepageTests(unittest.TestCase):
             self.assertNotIn('#+BEGIN_QUERY', after)
             self.assertIn('- ## Recent Ceremonies', after)
             self.assertIn(QUERY_PLACEHOLDER, after)
+            self.assertIn(f'\t- {QUERY_PLACEHOLDER}\n\t  search-exclude:: true\n', after)
             self.assertNotIn('[[GitP/A/Session/Newest]]', after)
             self.assertNotIn('[[GitP/A/Session/Older]]', after)
             self.assertIn('gitp_logo_raw_fly.JPG', after)
@@ -62,6 +63,21 @@ class HomepageTests(unittest.TestCase):
             self.assertEqual(text, (output / 'p-aaa.html').read_text())
             with self.assertRaisesRegex(ValueError, 'placeholder'):
                 install_homepage_query(output, self.result())
+
+    def test_query_rows_preserve_shared_outline_bullets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>'
+                '<a href="p-bbb.html">GitP/A/Session/Newest</a>'
+                '<a href="p-ccc.html">GitP/A/Session/Older</a>')
+            bullet = '<a class="bullet" href="#"></a>'
+            for name in ['index.html', 'p-aaa.html']:
+                (output / name).write_text(f'<ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
+            install_homepage_query(output, self.result())
+            text = (output / 'index.html').read_text()
+            self.assertEqual(text.count(bullet), 2)
+            self.assertIn(f'<li>{bullet}<a href="p-bbb.html">', text)
+            self.assertNotIn(QUERY_PLACEHOLDER, text)
 
     def test_query_result_changes_change_publication(self):
         result = self.result()
@@ -96,6 +112,7 @@ class HomepageTests(unittest.TestCase):
             self.assertNotIn('private', script)
             self.assertIn('decodeURIComponent', script)
             self.assertIn('legacy-routes.js', (output / 'index.html').read_text())
+            self.assertNotIn('src="legacy-routes.js"', (output / 'index.html').read_text())
             self.assertIn('window.gitpaNavigate(target, {replace: true})', script)
             self.assertIn('else location.replace(target)', script)
 

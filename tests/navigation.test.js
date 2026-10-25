@@ -2,10 +2,10 @@ const { test, before } = require('node:test');
 const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const { join } = require('node:path');
-let navigationURL, sameDocument, latestRequest, legacyResolver, createNavigator;
+let navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator;
 before(async () => {
   const source = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
-  ({ navigationURL, sameDocument, latestRequest, legacyResolver, createNavigator } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
+  ({ navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
 });
 const response = (html = 'new', extra = {}) => ({ ok: true, text: async () => html, ...extra });
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
@@ -77,7 +77,7 @@ function fixture(fetcher = async () => response()) {
   doc.head = new Node('head', doc); doc.title = 'Old';
   doc.querySelector = selector => doc.nodes[selector] || null;
   doc.querySelectorAll = selector => doc.nodes[selector] ? [doc.nodes[selector]] : [];
-  doc.importNode = node => new Node(node.name, doc);
+  doc.importNode = node => { const copy = new Node(node.name, doc); copy.attrs = { ...node.attrs }; return copy; };
   doc.createElement = name => new Node(name, doc);
   const fragment = new Node('part', doc);
   doc.getElementById = id => id === 'part' ? fragment : null;
@@ -263,4 +263,83 @@ test('click policy preserves modified, external, download and bypass links', asy
   assert.equal(fetched, 0);
   assert.equal(click().defaultPrevented, true);
   await tick(); assert.equal(fetched, 1);
+});
+
+
+test('search routes match readable canonical titles without normalizing authored Unicode', () => {
+  assert.equal(searchPageRoute('Ghost in the Patch', 'p.html'), '/gitpa/');
+  assert.equal(searchPageRoute('Microfreak/Preset/016 Voidom', 'p.html'), '/gitpa/Microfreak/Preset/016%20Voidom/');
+  assert.equal(searchPageRoute("Cafe\u0301/!()*'", 'p.html'), '/gitpa/Cafe%CC%81/%21%28%29%2A%27/');
+  for (const title of ['', '../a', 'a//b', 'a/ b', 'a\\b', 'a\n', null]) {
+    assert.equal(searchPageRoute(title, 'p.html'), 'p.html');
+  }
+});
+
+test('search receives replaced revision metadata before page hooks, and resets when absent', async () => {
+  const { doc, win } = fixture(async url => response(url.includes('disabled') ? 'disabled' : 'revision-two'));
+  const selector = 'link[rel="lsg-search"]';
+  const metadata = revision => { const node = new Node('link', doc); node.setAttribute('data-revision', revision); return node; };
+  doc.head.append(metadata('revision-one'));
+  const originalQuery = doc.querySelector;
+  doc.querySelectorAll = query => query === selector ? doc.head.children.filter(node => !node.removed) : (doc.nodes[query] ? [doc.nodes[query]] : []);
+  doc.querySelector = query => query === selector ? doc.querySelectorAll(query)[0] || null : originalQuery(query);
+  win.DOMParser = class { parseFromString(html) { return { title: html, querySelector: query => {
+    if (query === selector) return html === 'disabled' ? null : metadata(html);
+    return ['main', 'nav'].includes(query) ? new Node(query, doc) : null;
+  } }; } };
+  const seen = [];
+  win.logseqGardenerInitSearch = (root, options) => {
+    assert.equal(root, doc);
+    assert.equal(options.resolvePage, searchPageRoute);
+    seen.push(doc.querySelector(selector)?.getAttribute('data-revision') ?? null);
+  };
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => {
+    assert.equal(seen.at(-1), doc.querySelector(selector)?.getAttribute('data-revision') ?? null);
+  } });
+  assert.deepEqual(seen, ['revision-one']);
+  await navigator.navigate('/gitpa/two/');
+  await navigator.navigate('/gitpa/three/#part');
+  await navigator.navigate('/gitpa/disabled/');
+  assert.deepEqual(seen, ['revision-one', 'revision-two', 'revision-two', null]);
+  assert.equal(doc.querySelectorAll(selector).length, 0);
+  navigator.dispose();
+});
+
+
+test('shared hash routes follow content swaps and same-page zoom exit before focus', async () => {
+  const { doc, win, fragment } = fixture();
+  const events = [];
+  let hookReady = false;
+  win.addEventListener('hashchange', () => {
+    events.push(win.location.href);
+    assert.equal(fragment.focused, undefined);
+    if (win.location.pathname === '/gitpa/one/') assert.ok(hookReady);
+  });
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => { hookReady = true; } });
+  await navigator.navigate('/gitpa/one/#zoom/1');
+  await navigator.navigate('/gitpa/one/');
+  await navigator.navigate('/gitpa/one/');
+  assert.deepEqual(events, ['https://example.com/gitpa/one/#zoom/1', 'https://example.com/gitpa/one/']);
+  await navigator.navigate('/gitpa/two/#part');
+  assert.equal(events.at(-1), 'https://example.com/gitpa/two/#part');
+  assert.ok(fragment.focused);
+  navigator.dispose();
+});
+
+
+test('shared outline bullet anchors retain their native zoom controller ownership', async () => {
+  let fetches = 0;
+  const { doc, win } = fixture(async () => { fetches++; return response(); });
+  const navigator = createNavigator({ document: doc, window: win });
+  const anchor = new Node('a', doc);
+  anchor.setAttribute('href', '#');
+  anchor.matches = selector => selector === '.outline .bullet';
+  const click = new Event('click', { cancelable: true });
+  Object.defineProperty(click, 'button', { value: 0 });
+  Object.defineProperty(click, 'target', { value: { closest: () => anchor } });
+  doc.dispatchEvent(click); await tick();
+  assert.equal(click.defaultPrevented, false);
+  assert.equal(fetches, 0);
+  assert.equal(win.history.entries.length, 0);
+  navigator.dispose();
 });

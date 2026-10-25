@@ -72,8 +72,9 @@ def prepare_homepage(graph, result):
     for target in re.findall(r'\[\[([^\]]+)\]\]', outline):
         if normalized(target) not in visible:
             raise ValueError(f'Homepage query target is missing or unpublished: {target}')
-    # Evaluated rows are presentation, not authored references for backlink indexing.
-    placeholder = f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
+    # Evaluated rows are presentation, not authored references or search content.
+    placeholder = (f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
+                   '\t  search-exclude:: true\n')
     text, count = re.subn(pattern, lambda _: placeholder, text)
     if count != 1:
         raise ValueError('Expected one homepage query')
@@ -120,10 +121,15 @@ def install_homepage_query(output, result):
     for filename in ['index.html', home_route]:
         path = output / filename
         text = path.read_text(encoding='utf-8')
-        marker = f'<li>{QUERY_PLACEHOLDER}</li>'
-        if text.count(marker) != 1:
+        bullet = '<a class="bullet" href="#"></a>'
+        markers = [(f'<li>{QUERY_PLACEHOLDER}</li>', ''),
+                   (f'<li>{bullet}{QUERY_PLACEHOLDER}</li>', bullet)]
+        matches = [(marker, prefix) for marker, prefix in markers if marker in text]
+        if text.count(QUERY_PLACEHOLDER) != 1 or len(matches) != 1:
             raise ValueError('Expected one rendered homepage query placeholder')
-        path.write_text(text.replace(marker, ''.join(rows)), encoding='utf-8')
+        marker, prefix = matches[0]
+        rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
+        path.write_text(text.replace(marker, rendered_rows), encoding='utf-8')
 
 
 def legacy_routes(output, graph=None, published_routes=None):
@@ -171,8 +177,14 @@ openLegacyPage();
 '''.replace('SITE_BASE', json.dumps(urlsplit(SITE_URL).path)).replace('ROUTES', routes)
     (output / 'legacy-routes.js').write_text(script, encoding='utf-8')
     home = output / 'index.html'
+    startup = """<script>(()=>{let pending=false;function load(){
+if(!location.hash.startsWith('#/page/')||pending)return;pending=true;
+const script=document.createElement('script');script.src=new URL('legacy-routes.js',new URL(SITE_BASE,location.origin)).href;
+script.onerror=()=>{pending=false;script.remove()};document.head.append(script)}
+window.addEventListener('hashchange',load);load()})();</script>""".replace(
+        'SITE_BASE', json.dumps(urlsplit(SITE_URL).path))
     home.write_text(home.read_text(encoding='utf-8').replace(
-        '</head>', '<script src="legacy-routes.js" defer></script></head>'), encoding='utf-8')
+        '</head>', startup + '</head>'), encoding='utf-8')
 
 
 def public_pages(graph):
@@ -332,7 +344,7 @@ def publish_feed(source, output, feed=None):
     (output / 'rss.xml').write_bytes(content)
 
 
-def publish(source, output, renderer):
+def publish(source, output, renderer, search=False):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
         raise ValueError('Website output must be separate from the source graph')
@@ -350,6 +362,8 @@ def publish(source, output, renderer):
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
                 '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json']
+        if search:
+            args.append('--search')
         # Match the existing Logseq publishing policy: explicitly public pages.
         # Asset visibility and selected episode notes were resolved by prepare.
         for name in public_pages(graph):
@@ -369,9 +383,10 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT / 'gitp-garden')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--renderer', type=Path, required=True)
+    parser.add_argument('--search', action='store_true', help='Export shared static search data')
     args = parser.parse_args()
     try:
-        print(publish(args.source, args.output, args.renderer))
+        print(publish(args.source, args.output, args.renderer, search=args.search))
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'{error}\n')
 
