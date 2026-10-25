@@ -97,3 +97,16 @@ td, th { border-color: var(--lsg-border); }
 @media (min-width: 1100px) {
   .theme-control { margin-inline-start: 0; margin-block: .8rem; }
 }
+
+/* The shared header/sidebar owns its layout when present. */
+body:has(> .lsg-header) {
+  max-width: none;
+  margin: 0;
+  padding-inline: 0;
+  padding-top: 0;
+}
+
+:root[data-lsg-theme], :root:not([data-lsg-theme]) {
+  --lsg-header: var(--lsg-background);
+  --lsg-sidebar: var(--gitpa-sidebar);
+}

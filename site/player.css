@@ -44,3 +44,8 @@ body.has-episode-player {
   .episode-player-chapter:empty { display: none; }
   .episode-player-status { margin-left: auto; }
 }
+
+body:has(> .lsg-header) .episode-player { left: 0; }
+@media (min-width: 640px) {
+  html[data-lsg-left-sidebar="open"] body:has(> .lsg-header) .episode-player { left: 246px; }
+}
