@@ -1,0 +1,14 @@
+{
+  "body_sha256": "90056233f6b96631ac380f9c02142b4ad5ed3c98334ecb005d1a5da26895ff41",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Chaos"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Chaos",
+  "version": 2
+}

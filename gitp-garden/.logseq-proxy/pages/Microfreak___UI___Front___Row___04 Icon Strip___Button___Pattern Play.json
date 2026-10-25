@@ -1,0 +1,14 @@
+{
+  "body_sha256": "41e0bb99cd4476e64e3d262ab53425edc402ad14e5a947b458a2f739419c1c99",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/04 Icon Strip/Button/Pattern Play"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/04 Icon Strip/Button/Pattern Play",
+  "version": 2
+}

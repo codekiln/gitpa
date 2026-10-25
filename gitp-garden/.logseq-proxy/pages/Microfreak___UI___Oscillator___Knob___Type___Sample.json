@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bc1a2e75443693fbda3d73fe0e78279c0106af9549683022d5df9e5f061ede80",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Sample"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Sample",
+  "version": 2
+}

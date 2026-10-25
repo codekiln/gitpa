@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2115cd40f278e2cb8a7e28eac7badf68e45a4fa66bae0381caf3e6e14b70067e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/05 MIDI/Jack/Out"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/05 MIDI/Jack/Out",
+  "version": 2
+}

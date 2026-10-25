@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8448f8a60bdbf9b738a5f9b39196d59ad4275b125be590a145442ee7cbbc8887",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Gliding"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Gliding",
+  "version": 2
+}

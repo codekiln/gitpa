@@ -1,0 +1,14 @@
+{
+  "body_sha256": "59af8d679e9f56e69a8033ac19cb1b405d8f61fc872ab12d30a5277eaaf2e1b7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Modal/Inharm"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Modal/Inharm",
+  "version": 2
+}

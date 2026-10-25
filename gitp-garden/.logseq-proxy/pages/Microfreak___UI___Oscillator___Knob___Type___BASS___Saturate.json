@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d8c5a9877bfbe0de1e98e69bc4e7d4761591327ae93f8c54265f2a412c08db0f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate",
+  "version": 2
+}

@@ -11,9 +11,10 @@ next:: [[Microfreak/Preset/152 B3]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 preset-synth-file:: [The Unstable — October 24 slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 preset-synth-file-sha256:: 80d2c3b0312e9a2588dd969619d8e417e2d66e8655961ef064cfacc809b72365
+preset-synth-microfreak-parameter-payload-sha256:: fbd5336466e244efd086246d66b7c760b9c8763b0134763a01c154636510fcf7
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F151%20The%20Unstable
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___151%20The%20Unstable.md
-logseq-proxy-last-sync-date:: [[2026-10-24]]
+logseq-proxy-last-sync-date:: [[2026-10-25]]
 - # Notes
 	- Paraphonic V.Analog pad with a slow attack, pressure-controlled pulse shape, and a looping cycling envelope that pushes filter resonance.
 	- ## Saved export and provenance

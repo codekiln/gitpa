@@ -1,0 +1,14 @@
+{
+  "body_sha256": "db3fd71747df270e16473fd54a065a9513bb873b9ab9cfaadd7b72bac01d927d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune",
+  "version": 2
+}

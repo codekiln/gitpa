@@ -1,0 +1,14 @@
+{
+  "body_sha256": "abecd2797e57611eb02a5673cb9cb7d63eefb701c4eb03bdef9bc652a3c97018",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount",
+  "version": 2
+}

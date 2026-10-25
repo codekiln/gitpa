@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9bad883c86711372874f3b4333e38553867c558f517e492d98ea139fca940f19",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Scan Grains"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Scan Grains",
+  "version": 2
+}

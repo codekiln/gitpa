@@ -1,0 +1,14 @@
+{
+  "body_sha256": "774d60bdbfa38500a5592aa6ef88d894bb7707fe7c3d24c7793f705d290ec1d8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Bow"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Bow",
+  "version": 2
+}

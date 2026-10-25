@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a190dc5321c4ba58c34102642cf94aae3351a61ed58d1733581cd13695e3a4e4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/VAnalog"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/VAnalog",
+  "version": 2
+}

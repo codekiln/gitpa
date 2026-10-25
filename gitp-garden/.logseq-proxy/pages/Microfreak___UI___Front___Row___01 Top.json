@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d8b4eb0b660b2941cc2bb1d96e2be45e1d2b8009bf9298acb7969a285c3ab820",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f87a75795ea97ed164c68442917ad8c72ea472c070079f550b356b3052f5f75c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Chords/Waveform"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Chords/Waveform",
+  "version": 2
+}

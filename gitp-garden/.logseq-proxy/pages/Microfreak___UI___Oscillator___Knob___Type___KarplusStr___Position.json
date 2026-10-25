@@ -1,0 +1,14 @@
+{
+  "body_sha256": "093a041a6ab1f5224c9650da22c1ba745d778d7880d2fca1a02e2e808f8270c2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Position"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Position",
+  "version": 2
+}

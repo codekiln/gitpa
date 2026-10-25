@@ -1,0 +1,14 @@
+{
+  "body_sha256": "45ccbcadb1e1e303d2b40011e297883755658bc94b59b6dd5f62c529bf749446",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/04 Icon Strip"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/04 Icon Strip",
+  "version": 2
+}

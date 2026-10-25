@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c9bd25fb08cbdd902ad5bcefc635a8b475777ccfbb5f01ce14b1cef9af0fc8cd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Sustain"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Sustain",
+  "version": 2
+}

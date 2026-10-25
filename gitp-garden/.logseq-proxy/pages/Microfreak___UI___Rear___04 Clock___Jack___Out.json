@@ -1,0 +1,14 @@
+{
+  "body_sha256": "da5fe40b89a95b7d610b93e86b092b679598ca5d171e063decb277821f129739",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/04 Clock/Jack/Out"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/04 Clock/Jack/Out",
+  "version": 2
+}

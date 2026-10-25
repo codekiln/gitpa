@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a42ebf3be2307df8f70a84179ad3e3b20b8bd865e2b52dbbd1bddb7917228f13",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator",
+  "version": 2
+}

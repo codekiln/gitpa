@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4f3901d44c9490b7924db8f026038512eb181f70c9139cb422f73f0de515c8ee",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/04 Icon Strip/Strip/Touch"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/04 Icon Strip/Strip/Touch",
+  "version": 2
+}

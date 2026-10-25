@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c86a2796d3cbe2e1ec904582e41ab914d0c1ea0ec3eb01df0a202b997e9a36f3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/WaveUser/Bitdepth"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/WaveUser/Bitdepth",
+  "version": 2
+}

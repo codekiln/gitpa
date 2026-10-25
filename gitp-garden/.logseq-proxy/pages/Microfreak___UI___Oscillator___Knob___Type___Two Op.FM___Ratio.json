@@ -1,0 +1,14 @@
+{
+  "body_sha256": "09b9333415cc74e0959a516345ba6b020b18fd61697fa4eb993fc876c1c7825f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio",
+  "version": 2
+}

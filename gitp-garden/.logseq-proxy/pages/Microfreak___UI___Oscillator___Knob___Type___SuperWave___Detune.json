@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1a41b66a553feb51b296d356360ed57b29566876ffc860d792c2ff905c501ea9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune",
+  "version": 2
+}

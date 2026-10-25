@@ -1,0 +1,14 @@
+{
+  "body_sha256": "30680f382d6c9233a3c9792b7aca0dc4433169af233ef9541738b9216a420cc1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator",
+  "version": 2
+}

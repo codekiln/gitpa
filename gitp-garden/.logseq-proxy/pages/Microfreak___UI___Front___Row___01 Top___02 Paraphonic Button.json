@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3a9353b1eb4dae1604d66069b6acae408a22c7c78c2447053ec4f3c3fb2fbea5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button",
+  "version": 2
+}

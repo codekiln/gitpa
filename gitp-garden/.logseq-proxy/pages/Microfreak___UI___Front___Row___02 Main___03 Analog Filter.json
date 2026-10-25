@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0feba06ce187f79ffeedf6909c17ca0e3a42f0618e57a5aa10c2f75e5615b2f7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/02 Main/03 Analog Filter"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/02 Main/03 Analog Filter",
+  "version": 2
+}

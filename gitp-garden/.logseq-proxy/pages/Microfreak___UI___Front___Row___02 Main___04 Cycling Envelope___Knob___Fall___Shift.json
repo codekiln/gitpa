@@ -1,0 +1,14 @@
+{
+  "body_sha256": "940761205b644cd156e21deebbbc965bbc2849163e2d83fa3f1029d484f242b8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall/Shift",
+  "version": 2
+}
