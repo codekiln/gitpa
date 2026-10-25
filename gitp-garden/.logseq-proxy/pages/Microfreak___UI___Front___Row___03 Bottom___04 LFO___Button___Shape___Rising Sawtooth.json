@@ -1,0 +1,14 @@
+{
+  "body_sha256": "603b7f5f16b16434c974f6d8e507ffaf92ec9091bc07b9b56675347856e29cce",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Rising Sawtooth"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Rising Sawtooth",
+  "version": 2
+}

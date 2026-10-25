@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a40617cb91cbb17f0031e489eb8af992d26911cf493286a402be7d39d1da2042",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/04 Icon Strip/Button/Bend"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/04 Icon Strip/Button/Bend",
+  "version": 2
+}

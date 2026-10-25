@@ -1,0 +1,14 @@
+{
+  "body_sha256": "27738ad068ae99dfd3e4de4ce647addbdc6b63d5a733e4c315c301d2d4850b4d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob/Shift",
+  "version": 2
+}

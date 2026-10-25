@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5aa519a7c584eca4e60f2cb1860d04e4e91dd736cf8d8f46bf642dbe5af6a242",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/04 Icon Strip/Button/Spice"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/04 Icon Strip/Button/Spice",
+  "version": 2
+}

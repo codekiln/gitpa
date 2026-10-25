@@ -1,0 +1,14 @@
+{
+  "body_sha256": "dabd1acd24488cade2807c0b08d5fbce71e6a880f9d4b72f6fdc59a998f315cd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top/05 Preset Knob/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top/05 Preset Knob/Shift",
+  "version": 2
+}

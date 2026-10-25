@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7dea16c62bfe82d7f6b8ab6da5598885973fac4414d12fa8156be9cc129a8dbf",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/HPF"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/HPF",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2d820eb4529faa470dedd16a6b84d8d8ee8e07c7d251cb00e18932b62a2d215a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Knob/Rate/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Knob/Rate/Shift",
+  "version": 2
+}

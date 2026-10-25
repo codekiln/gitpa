@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f6aa10eb035b8900b33db48212bf92073ebfe36efe7ad1c3c8d7bdaa97df76b7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance",
+  "version": 2
+}

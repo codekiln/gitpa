@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FFrontmatter%2Fsee-also
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Frontmatter___see-also.md
 logseq-proxy-last-sync-date:: [[2026-10-25]]
-# `see-also::` for relevant, related, non-obvious pages not mentioned in the body
+- # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
 	- The purpose of `see-also::` is to aid discovery of distant, directly pages in the garden with a compelling discovery case, and which does not appear in the body of the page. It should be used very sparingly and rarely, including no more than 2-3 items, and it should almost never include pages that are immediate parent, child or siblings in the namespace hierarchy.
 	- ## Standards
 		- Order links strongest-tie first.

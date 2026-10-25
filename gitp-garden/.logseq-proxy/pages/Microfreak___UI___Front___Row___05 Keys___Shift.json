@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3eefba829916d8045bd0c3ae225f382f154e14f52d72863fefc23f4e47c850db",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/05 Keys/Shift"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/05 Keys/Shift",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9d4e58b3a57e26b405f22575582af61fc6b26cee723a07d31727a15e38a4fc32",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top/06 Save Button"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top/06 Save Button",
+  "version": 2
+}

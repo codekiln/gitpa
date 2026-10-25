@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1657d2d3122f6796e51568304a45427280eb02db45658a9d2a2d18b5fa1c0cd1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Stepped"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Stepped",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3b7c7ea357695fb7282fc39db55b748c8895a5572cb9173e40591bbae0ad5fd6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob",
+  "version": 2
+}

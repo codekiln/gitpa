@@ -33,7 +33,7 @@ logseq-proxy-last-sync-date:: [[2026-10-25]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains/Density]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre]]
 	- ## Same control
-		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Timbre]]
+		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator/Knob/Timbre]]
 	- ## Remote control
 		- MIDI CC 12, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source
