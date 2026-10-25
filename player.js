@@ -256,23 +256,41 @@ export function createSitePlayer(document) {
     }
     session.refresh();
   };
+  const originalAnchor = anchor => anchor?.matches?.('a[href]') && document.querySelector('main')?.contains(anchor)
+    && !anchor.closest('.linked-references, .transclusion') && !anchor.hasAttribute('download')
+    && (!anchor.target || anchor.target === '_self');
+  const activate = (anchor, seconds) => {
+    const heading = anchor.closest('h1, h2, h3, h4, h5, h6');
+    const chapter = page.chapters.find(item => item.id === heading?.id);
+    session.activate(page, seconds, chapter && { href: chapter.href, label: chapter.label });
+  };
   const click = event => {
     if (!page || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
-    if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
+    if (!originalAnchor(anchor)) return;
     const seconds = chapterTime(anchor.getAttribute('href'), page.source, document.baseURI);
     if (seconds === null) return;
-    const heading = anchor.closest('h1, h2, h3, h4, h5, h6');
-    const chapter = page.chapters.find(item => item.id === heading?.id);
     event.preventDefault();
-    session.activate(page, seconds, chapter && { href: chapter.href, label: chapter.label });
+    activate(anchor, seconds);
+  };
+  const mediaSeek = event => {
+    if (!page || event.defaultPrevented || !event.cancelable || !event.bubbles) return;
+    const { anchor, source, seconds } = event.detail || {};
+    if (event.target !== anchor || !originalAnchor(anchor) || !Number.isSafeInteger(seconds) || seconds < 0
+      || anchor.getAttribute('data-lsg-dialogue-time') !== String(seconds)
+      || typeof source !== 'string' || source !== page.source
+      || chapterTime(anchor.getAttribute('href'), page.source, document.baseURI) !== seconds) return;
+    event.preventDefault();
+    activate(anchor, seconds);
   };
   document.addEventListener('click', click);
+  document.addEventListener('lsg:media-seek', mediaSeek);
   showPage();
   const manager = { showPage, get audio() { return audio; }, get footer() { return footer; }, dispose() {
     disposeView();
     session?.dispose();
     document.removeEventListener('click', click);
+    document.removeEventListener('lsg:media-seek', mediaSeek);
     observer?.disconnect();
     managers.delete(document);
   } };
