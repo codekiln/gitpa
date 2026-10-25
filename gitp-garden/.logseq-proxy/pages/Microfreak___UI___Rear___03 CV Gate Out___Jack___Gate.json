@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bb18227e4593c972ec4a96cb0e6ebffe584e875c7b13b8a2e2fbb5923c848539",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/03 CV Gate Out/Jack/Gate"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/03 CV Gate Out/Jack/Gate",
+  "version": 2
+}

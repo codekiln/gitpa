@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5ee50b44c4c130811a2ce38ca8d66d6ffe34c1950b32ac37074e50679158e176",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Amount"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Amount",
+  "version": 2
+}

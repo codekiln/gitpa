@@ -1,0 +1,14 @@
+{
+  "body_sha256": "be9a365c854d5d77709c873e001c4050cc1ac118dcb87f1ec220a9d90c28f129",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Knob/Rate"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Knob/Rate",
+  "version": 2
+}

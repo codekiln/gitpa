@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8f6b562654828e736d36f9c75bbee91cf53283cee2261f73fc4937561c8fb52d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Noise/Wave"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Noise/Wave",
+  "version": 2
+}

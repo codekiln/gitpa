@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b4aed80b094abecb7c2772a27c68c2f6d9561e9028e41ec935c7ad14e0e14e06",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/BPF"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/BPF",
+  "version": 2
+}

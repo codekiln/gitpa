@@ -1,0 +1,14 @@
+{
+  "body_sha256": "cffa3b5557c2ac300aa806fb82fb87ec5b383172d32e9600387c6b5261f15a99",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/HARM/Rectification"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/HARM/Rectification",
+  "version": 2
+}

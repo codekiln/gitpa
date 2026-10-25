@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d353080cfdc3de90bc6824e11ef3da9038b31bee1a5d98f5b81543fc849205c4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Decay Rel"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/05 Envelope/Knob/Decay Rel",
+  "version": 2
+}

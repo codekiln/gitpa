@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7b21aecf64dbed3d7ec6092aeb23cc6ff4d76fdbe2d8aecb36a0f38d5dc38726",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/06 USB Port"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/06 USB Port",
+  "version": 2
+}

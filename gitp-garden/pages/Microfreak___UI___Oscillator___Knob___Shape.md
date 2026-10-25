@@ -1,0 +1,41 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/UI/Control]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Microfreak/UI/Oscillator]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUI%2FOscillator%2FKnob%2FShape
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UI___Oscillator___Knob___Shape.md
+logseq-proxy-last-sync-date:: [[2026-10-25]]
+
+- # Shape knob
+	- One of the three sound-shaping knobs of the digital oscillator; what it changes depends on the oscillator model, and it can be a modulation destination in the Matrix.
+	- Turns in Slow or Fast mode: [[Microfreak/UG/06 Dig Osc/02 Param Controls/01 Knob Speed]].
+	- ## Settings
+		- The parameter this knob sets in each oscillator model:
+			- [[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Decay]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Formant/Shape]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Chords/Waveform]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Speech/Word]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Modal/Decay]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Noise/Shape]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/SAWX/Noise]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/HARM/Noise]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/WaveUser/Bitdepth]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Sample/Loop]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Scan Grains/Chaos]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Chaos]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains/Shape]]
+			- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]
+	- ## Same control
+		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Shape]]
+	- ## Remote control
+		- MIDI CC 13, per [[Microfreak/UG/21 Appendix D - CC Values]].
+	- ## Source
+		- [[Microfreak/UG/06 Dig Osc/01 as Soundgen]]
+		- [[Microfreak/UG/06 Dig Osc/02 Param Controls]]

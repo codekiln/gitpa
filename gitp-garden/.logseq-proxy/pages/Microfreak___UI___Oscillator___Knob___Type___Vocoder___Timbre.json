@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d5bbcf28056e0db717a2e8e19770b6b7e74b762ec58c539a0e82a0d445258b2c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre",
+  "version": 2
+}

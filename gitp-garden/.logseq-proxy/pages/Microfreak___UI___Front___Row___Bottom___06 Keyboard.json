@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d34baec66f767f68ca9a7a5d1206bd0a3b6c26ab2b93a38c23f5f379d3e09fe2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/06 Keyboard"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/06 Keyboard",
+  "version": 2
+}

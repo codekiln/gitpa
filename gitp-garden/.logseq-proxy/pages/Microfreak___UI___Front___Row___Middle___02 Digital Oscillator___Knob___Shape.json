@@ -1,0 +1,14 @@
+{
+  "body_sha256": "df493391075160b6244e54669ca19b43a85f631d4b475782202e981a5d761bb5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Shape"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Shape",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8fb885327eec3de3b103cc49670614d9d03085195de4666b6cd300fb8a6e026f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub",
+  "version": 2
+}

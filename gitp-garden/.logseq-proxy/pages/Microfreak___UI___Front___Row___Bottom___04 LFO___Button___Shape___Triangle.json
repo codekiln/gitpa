@@ -1,0 +1,14 @@
+{
+  "body_sha256": "011b520b05f26439ee0f6408587a38e96cf051b278bb897c85faa97731d82bcb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Triangle"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Triangle",
+  "version": 2
+}

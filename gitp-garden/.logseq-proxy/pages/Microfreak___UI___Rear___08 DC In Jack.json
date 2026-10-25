@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c8f6d4cb895076fd52b548e6218ab53b7a0645be79792f965647855b9ce039a2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Rear/08 DC In Jack"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Rear/08 DC In Jack",
+  "version": 2
+}

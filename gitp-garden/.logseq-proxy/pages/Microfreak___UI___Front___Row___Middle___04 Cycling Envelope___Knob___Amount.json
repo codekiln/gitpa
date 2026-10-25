@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c7065cadcc8fa2f372e9adb5ca3f5d300de5408dc67d9e8080577f71d6db7f42",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Amount"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Knob/Amount",
+  "version": 2
+}

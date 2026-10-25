@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bff42b8aba3b0938d51949a2440b8f7728bc4235a99189f7bb02c7fdc0f79283",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control/Setting]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Button/Mode/Loop"
+  ],
+  "imports": {},
+  "page": "Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Button/Mode/Loop",
+  "version": 2
+}
