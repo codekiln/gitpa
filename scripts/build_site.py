@@ -333,7 +333,7 @@ def publish_feed(source, output, feed=None):
     (output / 'rss.xml').write_bytes(content)
 
 
-def publish(source, output, renderer):
+def publish(source, output, renderer, search=False):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
         raise ValueError('Website output must be separate from the source graph')
@@ -351,6 +351,8 @@ def publish(source, output, renderer):
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
                 '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json']
+        if search:
+            args.append('--search')
         # Match the existing Logseq publishing policy: explicitly public pages.
         # Asset visibility and selected episode notes were resolved by prepare.
         for name in public_pages(graph):
@@ -370,9 +372,10 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT / 'gitp-garden')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--renderer', type=Path, required=True)
+    parser.add_argument('--search', action='store_true', help='Export shared static search data')
     args = parser.parse_args()
     try:
-        print(publish(args.source, args.output, args.renderer))
+        print(publish(args.source, args.output, args.renderer, search=args.search))
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'{error}\n')
 
