@@ -49,11 +49,11 @@ jobs:
 
       - name: Build pinned Logseq Gardener
         env:
-          GARDENER_REV: 96555583947e4075ce9f823d6c4724a703065dcf
+          GARDENER_REV: 12bc0703cc001642a5652a27d9031e806c1c983d
         run: cargo +1.97.0 install --git https://github.com/codekiln/logseq-gardener --rev "$GARDENER_REV" --locked --root "$RUNNER_TEMP/gardener" logseq-gardener
 
       - name: Publish with Logseq Gardener
-        run: uv run --no-project python scripts/build_site.py --renderer "$RUNNER_TEMP/gardener/bin/lsg" --output www
+        run: uv run --no-project python scripts/build_site.py --renderer "$RUNNER_TEMP/gardener/bin/lsg" --search --output www
 
       - name: Save website preview
         uses: actions/upload-artifact@v4
