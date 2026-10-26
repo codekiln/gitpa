@@ -286,7 +286,7 @@
 
  ;; Show source-owned page properties in a collapsed disclosure.
  :publishing/page-properties? true
- :publishing/page-properties-collapsed? true
+ :publishing/page-properties-collapsed? false
 
  ;; Graph view configuration.
  ;; Example usage:

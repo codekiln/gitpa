@@ -144,6 +144,30 @@ test('shared appearance controls initialize on replaced navigation without chang
   navigator.dispose();
 });
 
+test('shared outline and property controls initialize before replacement hooks and source focus', async () => {
+  const { doc, win, fragment } = fixture();
+  const outlines = [], properties = [];
+  win.logseqGardenerInitOutline = root => outlines.push(root);
+  win.logseqGardenerInitProperties = root => properties.push(root);
+  const assertCurrent = () => {
+    assert.equal(outlines.at(-1), doc.nodes.main);
+    assert.equal(properties.at(-1), doc.nodes.main);
+  };
+  fragment.focus = assertCurrent;
+  const navigator = createNavigator({ document: doc, window: win, onPage: assertCurrent });
+  assert.deepEqual(outlines, [doc]);
+  assert.deepEqual(properties, [doc]);
+  await navigator.navigate('/gitpa/one/');
+  await navigator.navigate('/gitpa/two/#part');
+  assert.equal(outlines.length, 3);
+  assert.equal(properties.length, 3);
+  assert.notEqual(outlines[1], outlines[2]);
+  await navigator.navigate('#part');
+  assert.equal(outlines.length, 3);
+  assert.equal(properties.length, 3);
+  navigator.dispose();
+});
+
 test('failed fetch preserves content and creates explicit native recovery', async () => {
   const { doc, win } = fixture(async () => { throw new Error('offline'); });
   const original = doc.nodes.main;
