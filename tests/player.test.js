@@ -6,9 +6,14 @@ const { join } = require('node:path');
 const navSource = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
 const navURL = `data:text/javascript;base64,${Buffer.from(navSource).toString('base64')}`;
 const source = readFileSync(join(__dirname, '../site/player.js'), 'utf8').replace("'./navigation.js'", JSON.stringify(navURL));
-let chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode;
+let chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode, installSite;
 before(async () => {
-  ({ chapterTime, clampTime, createPlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
+  const playerURL = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
+  ({ chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode } = await import(playerURL));
+  const bootstrap = readFileSync(join(__dirname, '../site/bootstrap.js'), 'utf8')
+    .replace("'./player.js'", JSON.stringify(playerURL))
+    .replace("'./navigation.js'", JSON.stringify(navURL));
+  ({ installSite } = await import(`data:text/javascript;base64,${Buffer.from(bootstrap).toString('base64')}`));
 });
 
 class Audio extends EventTarget {
@@ -155,7 +160,12 @@ class Element extends EventTarget {
   constructor(tagName) {
     super(); this.tagName = tagName; this.children = []; this.attributes = {}; this.style = { setProperty() {} }; this.textContent = '';
     const classes = new Set();
-    this.classList = { add: name => classes.add(name), contains: name => classes.has(name), toggle: (name, value) => value ? classes.add(name) : classes.delete(name) };
+    this.classList = { add: name => classes.add(name), remove: name => classes.delete(name), contains: name => classes.has(name), toggle: (name, value) => value ? classes.add(name) : classes.delete(name) };
+  }
+  get parentElement() { return this.parent instanceof Element ? this.parent : null; }
+  get nextSibling() {
+    const siblings = this.parent?.children;
+    return siblings?.[siblings.indexOf(this) + 1] || null;
   }
   append(...children) {
     for (const child of children) {
@@ -163,6 +173,19 @@ class Element extends EventTarget {
       child.parent = this;
       this.children.push(child);
     }
+  }
+  insertBefore(node, reference) {
+    if (node === reference) return node;
+    if (reference !== null && !this.children.includes(reference)) throw new Error('Reference is not a child');
+    node.remove();
+    const index = reference === null ? this.children.length : this.children.indexOf(reference);
+    this.children.splice(index, 0, node);
+    node.parent = this;
+    return node;
+  }
+  remove() {
+    if (this.parent?.children) this.parent.children = this.parent.children.filter(child => child !== this);
+    this.parent = null;
   }
   setAttribute(key, value) { this.attributes[key] = value; }
   getAttribute(key) { return this.attributes[key] ?? null; }
@@ -197,7 +220,8 @@ function pageFixture(count = 1) {
     const audio = new Audio();
     const element = new Element('audio');
     Object.assign(audio, element);
-    for (const method of ['getAttribute', 'setAttribute', 'hasAttribute', 'removeAttribute', 'closest', 'contains', 'querySelectorAll', 'querySelector', 'replaceWith']) audio[method] = Element.prototype[method];
+    for (const method of ['getAttribute', 'setAttribute', 'hasAttribute', 'removeAttribute', 'closest', 'contains', 'querySelectorAll', 'querySelector', 'replaceWith', 'insertBefore', 'remove']) audio[method] = Element.prototype[method];
+    for (const property of ['parentElement', 'nextSibling']) Object.defineProperty(audio, property, Object.getOwnPropertyDescriptor(Element.prototype, property));
     audio.setAttribute('src', '/episode.wav');
     return audio;
   };
@@ -231,6 +255,38 @@ function pageFixture(count = 1) {
   };
   return { document, audio, click, origin, main, marker, canonical, makeAudio, chapterAnchors };
 }
+
+test('router startup failure restores real audio so a retry can manage chapter clicks', () => {
+  const { document, audio, click, origin } = pageFixture();
+  document.readyState = 'complete';
+  document.defaultView = {};
+  const before = new Element('span'), after = new Element('span');
+  origin.insertBefore(before, audio);
+  origin.append(after);
+  let failedPlayer;
+  assert.throws(() => installSite(document, {
+    createPlayer(doc) { failedPlayer = createSitePlayer(doc); return failedPlayer; },
+    createNavigation() { throw new Error('router failed'); },
+  }), /router failed/);
+  assert.deepEqual(origin.children, [before, audio, after]);
+  assert.equal(document.querySelectorAll('footer').length, 0);
+  assert.equal(document.querySelectorAll('audio').length, 1);
+  assert.equal(document.body.classList.contains('has-episode-player'), false);
+  assert.equal(audio.calls, 0);
+  const installation = installSite(document, { createNavigation() { return { dispose() {} }; } });
+  const currentPlayer = createSitePlayer(document);
+  assert.notEqual(currentPlayer, failedPlayer);
+  assert.equal(document.querySelectorAll('footer').length, 1);
+  assert.equal(document.querySelectorAll('audio').length, 1);
+  assert.equal(currentPlayer.audio, audio);
+  // A stale disposer must not evict the replacement runtime from its document.
+  failedPlayer.dispose();
+  assert.equal(createSitePlayer(document), currentPlayer);
+  assert.equal(click('/episode.wav#t=12').defaultPrevented, true);
+  assert.equal(audio.currentTime, 12);
+  assert.equal(audio.calls, 1);
+  installation.dispose();
+});
 
 function dialogueAnchor(main, href = '/episode.wav#t=42', seconds = '42') {
   const anchor = new Element('a');

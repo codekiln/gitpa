@@ -1,5 +1,3 @@
-import { createNavigator } from './navigation.js';
-
 /** Match only links into this recording, preserving ordinary links as a fallback. */
 export function chapterTime(href, source, base) {
   try {
@@ -186,9 +184,13 @@ export function createSitePlayer(document) {
   let session = null;
   let page = null;
   let observer = null;
+  let originalParent = null, originalNext = null, originalOrigin = null, disposed = false;
   let disposeView = () => {};
   const makeFooter = initial => {
     audio = initial.audio;
+    originalParent = audio.parentElement;
+    originalNext = audio.nextSibling;
+    originalOrigin = audio.closest('li');
     footer = document.createElement('footer');
     footer.className = 'episode-player';
     footer.setAttribute('aria-label', 'Episode recording');
@@ -206,7 +208,7 @@ export function createSitePlayer(document) {
     status.setAttribute('role', 'status');
     status.setAttribute('aria-live', 'polite');
     details.append(recording, origin, chapter, status);
-    audio.closest('li')?.classList.add('episode-recording-origin');
+    originalOrigin?.classList.add('episode-recording-origin');
     audio.controls = true;
     audio.setAttribute('aria-label', 'Full episode recording');
     footer.append(details, audio);
@@ -237,6 +239,7 @@ export function createSitePlayer(document) {
     size();
   };
   const showPage = () => {
+    if (disposed) return;
     disposeView();
     disposeView = () => {};
     page = readEpisode(document);
@@ -286,13 +289,22 @@ export function createSitePlayer(document) {
   document.addEventListener('click', click);
   document.addEventListener('lsg:media-seek', mediaSeek);
   showPage();
-  const manager = { showPage, get audio() { return audio; }, get footer() { return footer; }, dispose() {
+  const manager = { showPage, get audio() { return audio; }, get footer() { return footer; }, dispose({ restoreOriginal = false } = {}) {
+    if (disposed) return;
+    disposed = true;
     disposeView();
     session?.dispose();
     document.removeEventListener('click', click);
     document.removeEventListener('lsg:media-seek', mediaSeek);
     observer?.disconnect();
-    managers.delete(document);
+    if (restoreOriginal && originalParent && document.querySelector('main')?.contains(originalParent)) {
+      originalParent.insertBefore(audio, originalNext?.parentElement === originalParent ? originalNext : null);
+      originalOrigin?.classList.remove('episode-recording-origin');
+      footer.remove();
+      document.body.classList.remove('has-episode-player');
+      document.body.style.removeProperty?.('--episode-player-height');
+    }
+    if (managers.get(document) === manager) managers.delete(document);
   } };
   managers.set(document, manager);
   return manager;
@@ -301,13 +313,4 @@ export function createSitePlayer(document) {
 export function enhanceEpisode(document) {
   if (managers.has(document) || !readEpisode(document)) return null;
   return createSitePlayer(document);
-}
-
-if (typeof document !== 'undefined') {
-  const start = () => {
-    const player = createSitePlayer(document);
-    createNavigator({ document, window: document.defaultView, onPage: player.showPage });
-  };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
-  else start();
 }
