@@ -1,0 +1,14 @@
+{
+  "body_sha256": "60fab83200528d0eb389d679203b031a3e4062327c008b7c35309db4478152d0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/06 External Instrument"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/06 External Instrument",
+  "version": 2
+}

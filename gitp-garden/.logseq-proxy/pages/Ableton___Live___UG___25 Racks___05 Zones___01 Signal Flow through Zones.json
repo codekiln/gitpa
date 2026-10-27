@@ -1,0 +1,14 @@
+{
+  "body_sha256": "448ecf28e6fdf2a7b0ce7ce5f9cc1999b45685528ac9d85ae44d3f263b062fe1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/25 Racks/05 Zones/01 Signal Flow through Zones"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/25 Racks/05 Zones/01 Signal Flow through Zones",
+  "version": 2
+}

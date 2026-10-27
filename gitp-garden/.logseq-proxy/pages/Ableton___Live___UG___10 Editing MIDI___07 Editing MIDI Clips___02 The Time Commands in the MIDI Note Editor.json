@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ee51457d44b69de42defd60b37fc1e0d33f65d08bf812c6673f5b49d4774c0e3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/07 Editing MIDI Clips/02 The Time Commands in the MIDI Note Editor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/07 Editing MIDI Clips/02 The Time Commands in the MIDI Note Editor",
+  "version": 2
+}

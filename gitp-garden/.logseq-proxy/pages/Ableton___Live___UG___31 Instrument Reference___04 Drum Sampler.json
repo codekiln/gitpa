@@ -1,0 +1,14 @@
+{
+  "body_sha256": "cc78d00d520609582b69080255d4283a4ebf2978ed34f306f26b770bc19203e0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/04 Drum Sampler"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/04 Drum Sampler",
+  "version": 2
+}

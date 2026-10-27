@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1953ed95796e6637cf26f6a373e63f4c0181fe51256d17cb4d81c0c09d60cb10",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/18 Automation Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/18 Automation Envelopes",
+  "version": 2
+}

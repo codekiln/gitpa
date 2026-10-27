@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4badc8bb230b373f4fad25d98a4fa1e8bad3015c28679041ad5ed7e2eb65a5dd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/03 Live Clips"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/03 Live Clips",
+  "version": 2
+}

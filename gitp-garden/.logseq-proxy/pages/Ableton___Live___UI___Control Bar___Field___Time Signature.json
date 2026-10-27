@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e8a0e2a2f01db83ba280298c184488aaf2ddbbad46cb731b43a82438554481f1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Field/Time Signature"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Field/Time Signature",
+  "version": 2
+}

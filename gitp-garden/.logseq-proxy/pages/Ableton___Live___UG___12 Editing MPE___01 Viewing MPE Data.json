@@ -1,0 +1,14 @@
+{
+  "body_sha256": "39dd132cb82de52721c2576d714e5b97e5cc95d93f657d55473d48878518b56d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/12 Editing MPE/01 Viewing MPE Data"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/12 Editing MPE/01 Viewing MPE Data",
+  "version": 2
+}

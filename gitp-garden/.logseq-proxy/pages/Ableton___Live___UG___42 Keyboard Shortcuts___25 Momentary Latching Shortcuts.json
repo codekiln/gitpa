@@ -1,0 +1,14 @@
+{
+  "body_sha256": "76ceef337fe3cee3542c39064f82feebf10357c907ede0947f84c6e8f55d4248",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/25 Momentary Latching Shortcuts"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/25 Momentary Latching Shortcuts",
+  "version": 2
+}

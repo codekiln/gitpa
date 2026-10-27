@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ff59fea4b6c93cf2f5b7af4b43740d6a63d8e3f0e406b3353858b43607dba846",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Field/Loop Length"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Field/Loop Length",
+  "version": 2
+}

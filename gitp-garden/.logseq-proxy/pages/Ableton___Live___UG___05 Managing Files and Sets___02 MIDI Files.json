@@ -1,0 +1,14 @@
+{
+  "body_sha256": "199b1a36f9566fc9a0f48910e9beb6d3dc91579f7d4f1e1fb1f368ce91af7bfe",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files",
+  "version": 2
+}

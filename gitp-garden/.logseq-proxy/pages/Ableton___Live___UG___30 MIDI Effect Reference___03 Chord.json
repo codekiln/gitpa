@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1cb86ee72cb48d745f98edd258ca847c768fb4f76a29cfdef421e377abde25a8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/03 Chord"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/03 Chord",
+  "version": 2
+}

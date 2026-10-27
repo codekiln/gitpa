@@ -1,0 +1,14 @@
+{
+  "body_sha256": "157b288da9e40d427478012458dc7ce2a70ba4bb34d8cddd9722f38e3d6cf84c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/32 Max for Live/01 Setting Up Max for Live"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/32 Max for Live/01 Setting Up Max for Live",
+  "version": 2
+}

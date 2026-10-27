@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b19aba7b67ba4bc1cc51a6cf17714b93c1115376b20f652454af2f18faa7e303",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/09 Packing Projects into Packs"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/09 Packing Projects into Packs",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "731d76b60ac79dc7a1f7490b0758cbd0e9018f9a8f9f3b7afb0a57dffeea7da5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI/01 Slice to New MIDI Track/02 Using Effects on Slices"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI/01 Slice to New MIDI Track/02 Using Effects on Slices",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0fda2366b1e4396bf78365a0db45802149fea75d419ea5864638b0e212e7c396",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/02 Analysis Files (.asd)"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/02 Analysis Files (.asd)",
+  "version": 2
+}

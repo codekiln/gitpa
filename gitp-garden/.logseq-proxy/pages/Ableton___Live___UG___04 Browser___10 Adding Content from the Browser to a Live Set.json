@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3fb028705dcd9640d2c0b3c79f37b6a53c947ac43472447f9e2b02a4a3391a42",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/04 Browser/10 Adding Content from the Browser to a Live Set"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/04 Browser/10 Adding Content from the Browser to a Live Set",
+  "version": 2
+}

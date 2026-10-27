@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4526f744a4949235a43aae17fbfad42c2c18d81fba055268ed888b49e48961f3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/33 Roar/06 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/33 Roar/06 Sidechain Parameters",
+  "version": 2
+}

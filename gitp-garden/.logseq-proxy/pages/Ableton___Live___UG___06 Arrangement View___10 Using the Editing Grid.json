@@ -1,0 +1,14 @@
+{
+  "body_sha256": "66adbccc1238e69ad17a5bbfc2593ef84bfec66370ec806b2712561cba4ec796",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/06 Arrangement View/10 Using the Editing Grid"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/06 Arrangement View/10 Using the Editing Grid",
+  "version": 2
+}

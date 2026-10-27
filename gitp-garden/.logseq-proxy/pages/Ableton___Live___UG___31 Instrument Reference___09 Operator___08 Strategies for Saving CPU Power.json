@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ec73430994518088a6ad986575d5af53cb70d2b3e869e3731ae15f82fb16f731",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/09 Operator/08 Strategies for Saving CPU Power"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/09 Operator/08 Strategies for Saving CPU Power",
+  "version": 2
+}

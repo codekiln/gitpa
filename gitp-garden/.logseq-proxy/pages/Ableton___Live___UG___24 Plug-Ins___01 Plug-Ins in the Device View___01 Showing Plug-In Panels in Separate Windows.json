@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a62f70d9c7d99ad1c5d5133997b77895bee37166559a83c594e9855ca42b94db",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/24 Plug-Ins/01 Plug-Ins in the Device View/01 Showing Plug-In Panels in Separate Windows"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/24 Plug-Ins/01 Plug-Ins in the Device View/01 Showing Plug-In Panels in Separate Windows",
+  "version": 2
+}

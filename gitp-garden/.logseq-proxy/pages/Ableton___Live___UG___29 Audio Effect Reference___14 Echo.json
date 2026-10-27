@@ -1,0 +1,14 @@
+{
+  "body_sha256": "890d73cb3c900aba3b36eb2af225287e011967a72a4ca32d176def02fe6c490f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/14 Echo"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/14 Echo",
+  "version": 2
+}

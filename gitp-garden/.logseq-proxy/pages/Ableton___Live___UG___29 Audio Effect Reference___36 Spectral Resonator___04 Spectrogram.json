@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a5c0b64414b2b98e54b858be9ddceeaddeeef024229600f2fc34acdf615162c9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/36 Spectral Resonator/04 Spectrogram"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/36 Spectral Resonator/04 Spectrogram",
+  "version": 2
+}

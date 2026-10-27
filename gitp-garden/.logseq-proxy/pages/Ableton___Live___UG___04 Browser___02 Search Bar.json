@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5fc7013e6334871c966ed6b08400c9d0b45b2489db0100896b050a1205668893",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/04 Browser/02 Search Bar"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/04 Browser/02 Search Bar",
+  "version": 2
+}

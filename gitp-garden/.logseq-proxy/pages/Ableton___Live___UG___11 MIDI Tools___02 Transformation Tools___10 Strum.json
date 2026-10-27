@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1dfe636b40a886a1af6fb99c03b74f439bf3ef19f23f8cc48b7dc1b0be13fcf9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/10 Strum"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/10 Strum",
+  "version": 2
+}

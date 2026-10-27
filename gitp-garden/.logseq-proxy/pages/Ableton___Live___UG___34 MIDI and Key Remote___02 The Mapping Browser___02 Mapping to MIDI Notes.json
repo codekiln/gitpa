@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b8d7e5461ec23086062be5db41fa002b20626994a13401e6686f55e3fda2c1e1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/02 Mapping to MIDI Notes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/02 Mapping to MIDI Notes",
+  "version": 2
+}

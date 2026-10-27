@@ -1,0 +1,13 @@
+{
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Keyshort/Q/What is the \"zoom to selection\" keyshort in Ableton Live?"
+  ],
+  "imports": {},
+  "page": "Ableton/Keyshort/Q/What is the \"zoom to selection\" keyshort in Ableton Live?",
+  "version": 2
+}

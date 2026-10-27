@@ -1,0 +1,14 @@
+{
+  "body_sha256": "aca09f031a9bf223005e23106a0e67f1cb04506dfca05532afe7f722d492bdda",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Todi"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Todi",
+  "version": 2
+}

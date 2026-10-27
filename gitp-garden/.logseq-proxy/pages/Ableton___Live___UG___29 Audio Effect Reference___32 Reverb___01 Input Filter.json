@@ -1,0 +1,14 @@
+{
+  "body_sha256": "66f8e38d0ac866832fd3ab0b739f39c93f151dd051d195d37664e6f0add71def",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/01 Input Filter"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/01 Input Filter",
+  "version": 2
+}

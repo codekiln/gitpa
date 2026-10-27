@@ -1,0 +1,13 @@
+{
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet/03 Live's MIDI Solutions"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet/03 Live's MIDI Solutions",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3a2d38bacc2505a815c36105ec08111b13a6868ba4e239c9c2e3db2a33468beb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/06 Arrangement View/14 Linked-Track Editing/01 Linking and Unlinking Tracks"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/06 Arrangement View/14 Linked-Track Editing/01 Linking and Unlinking Tracks",
+  "version": 2
+}

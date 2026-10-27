@@ -1,0 +1,14 @@
+{
+  "body_sha256": "73ec8ccda0ade5edab800faeed7a33cef5a676b183512d85a24021a71a83a628",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools",
+  "version": 2
+}

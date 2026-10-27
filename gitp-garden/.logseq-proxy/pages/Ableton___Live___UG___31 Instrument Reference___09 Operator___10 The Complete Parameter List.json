@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4cd98bb6e88e3df657c78c26bcab802eb781c98ee91f087a10584eac11d920c2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/09 Operator/10 The Complete Parameter List"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/09 Operator/10 The Complete Parameter List",
+  "version": 2
+}

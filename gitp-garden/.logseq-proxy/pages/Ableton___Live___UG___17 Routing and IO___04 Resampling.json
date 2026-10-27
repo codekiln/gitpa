@@ -1,0 +1,14 @@
+{
+  "body_sha256": "457770a467c858bbdbed16ddfa6a396771371d3cf234e9acc85e3a65b8cdce21",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/04 Resampling"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/04 Resampling",
+  "version": 2
+}

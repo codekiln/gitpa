@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c26b23b48f5557115c8bc5899d738432155d5b2e5632caa815ec52a4e397b48f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/03 Drift/05 LFO Section"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/03 Drift/05 LFO Section",
+  "version": 2
+}

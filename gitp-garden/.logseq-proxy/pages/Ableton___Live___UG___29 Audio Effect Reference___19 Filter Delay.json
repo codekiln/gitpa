@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6a394c2c302e18f52f8273027e6e79b70f29b2e13bfa3e3919dd724bd4b94a84",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/19 Filter Delay"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/19 Filter Delay",
+  "version": 2
+}

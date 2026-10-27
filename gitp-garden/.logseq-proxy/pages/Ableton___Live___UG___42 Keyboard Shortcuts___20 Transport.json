@@ -1,0 +1,14 @@
+{
+  "body_sha256": "95f9eb127f7a256f3393c90f3a4eaaa4595ab249dfdae5873b0d647ffa417ff7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/20 Transport"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/20 Transport",
+  "version": 2
+}

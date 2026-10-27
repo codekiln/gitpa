@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bb77758577e7462c8e35902518421769be3e79381ef98d1061ed638532c2571a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/09 Compressor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/09 Compressor",
+  "version": 2
+}

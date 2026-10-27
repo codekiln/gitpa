@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ce09f9c734838da768d363e0898acdc198711e9bc1b155cb7bef359e8ee7c77c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/07 Impulse/01 Sample Slots"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/07 Impulse/01 Sample Slots",
+  "version": 2
+}

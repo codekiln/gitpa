@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ff730992ab8bed9458b0bc50881d179c4b2e6e8168adf69e1ba29e705e2c3cea",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Button/Set Locator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Button/Set Locator",
+  "version": 2
+}

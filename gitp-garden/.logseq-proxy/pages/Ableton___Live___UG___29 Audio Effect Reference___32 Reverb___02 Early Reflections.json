@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2ca080e7b6f8afe22467f2ae1d25f1cee61f8ff97731a00aef3a108d855e9f68",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/02 Early Reflections"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/02 Early Reflections",
+  "version": 2
+}

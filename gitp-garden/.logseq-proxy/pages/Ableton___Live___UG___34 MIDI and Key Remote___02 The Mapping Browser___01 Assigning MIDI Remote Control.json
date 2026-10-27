@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c4ef5ba2b8d87868e75600c9f8ba6fcf5cf8a8c38643cbc5aafc44ac6c09e665",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/01 Assigning MIDI Remote Control"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/01 Assigning MIDI Remote Control",
+  "version": 2
+}

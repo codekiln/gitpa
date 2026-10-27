@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ad6d24f3240787d59079306d4922e7f0a357d5afe8f69fe8277fdaf8fe18bd78",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/03 Convolution Reverb Engine"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/03 Convolution Reverb Engine",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "cace1ac0be0fce2eb1a6a661481153a28608af7b2707e40cbae94690a6d866ad",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/33 Max for Live Devices/03 Max for Live MIDI Effects/01 Envelope MIDI"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/33 Max for Live Devices/03 Max for Live MIDI Effects/01 Envelope MIDI",
+  "version": 2
+}

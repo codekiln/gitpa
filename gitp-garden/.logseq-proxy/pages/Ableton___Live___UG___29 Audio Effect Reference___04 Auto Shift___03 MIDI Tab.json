@@ -1,0 +1,14 @@
+{
+  "body_sha256": "59a060ca21b18448394ce284ede969df1a6bb19d690ca456b110b2b2ed6b39ef",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/03 MIDI Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/03 MIDI Tab",
+  "version": 2
+}

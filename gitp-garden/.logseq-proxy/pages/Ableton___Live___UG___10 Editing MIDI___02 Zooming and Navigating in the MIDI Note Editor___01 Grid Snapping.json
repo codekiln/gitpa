@@ -1,0 +1,14 @@
+{
+  "body_sha256": "086394befd06210e4b4d689e5f0f3d12703c5da2fb5102b57d6e6e3c40f621e3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/02 Zooming and Navigating in the MIDI Note Editor/01 Grid Snapping"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/02 Zooming and Navigating in the MIDI Note Editor/01 Grid Snapping",
+  "version": 2
+}

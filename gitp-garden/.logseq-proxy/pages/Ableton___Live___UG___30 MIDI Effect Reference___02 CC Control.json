@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c737037faa203e82e353b2cecc8d8e3fcfb0caed68743e3359b32e192d05a0d2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/02 CC Control"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/02 CC Control",
+  "version": 2
+}

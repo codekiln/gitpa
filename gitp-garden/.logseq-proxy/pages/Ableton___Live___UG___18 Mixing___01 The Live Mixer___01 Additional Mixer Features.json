@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ed5076cbccd4f1ec00643fba746aeb09f0c283a0d2fcc3f8a96d7a41f46e2e39",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/18 Mixing/01 The Live Mixer/01 Additional Mixer Features"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/18 Mixing/01 The Live Mixer/01 Additional Mixer Features",
+  "version": 2
+}

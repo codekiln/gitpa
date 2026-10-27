@@ -1,0 +1,14 @@
+{
+  "body_sha256": "58356ecc3f34d6bf09a15543a6452da1f001fda8bff9b4ab0e732cd12bf30583",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/38 Computer Audio Resources/01 Managing the CPU Load/03 CPU Load from Tracks and Devices"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/38 Computer Audio Resources/01 Managing the CPU Load/03 CPU Load from Tracks and Devices",
+  "version": 2
+}

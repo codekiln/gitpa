@@ -1,0 +1,14 @@
+{
+  "body_sha256": "42ab7e638bb840a9cb02764ca3e3c646814c2d9e5fe810ddb14b72f5c2980c12",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/10 Sampler/01 Getting Started with Sampler"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/10 Sampler/01 Getting Started with Sampler",
+  "version": 2
+}

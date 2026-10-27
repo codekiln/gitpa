@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7e7dac934d277c39807911d5fb5c1c45f8fb1fe4be9064ebbff9462cb1a8618a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/38 Computer Audio Resources/02 Managing the Disk Load"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/38 Computer Audio Resources/02 Managing the Disk Load",
+  "version": 2
+}

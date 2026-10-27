@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7204ad63d9eceaf75b30563d994e8bd63fcca1f430396cb0bd0ca932a5fe352e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/12 Clip View MIDI Note Editor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/12 Clip View MIDI Note Editor",
+  "version": 2
+}

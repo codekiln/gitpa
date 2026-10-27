@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1041ecb5be2c2cfed6949f9099622114e453a59f25d5da38449f1c7828106f01",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Marker/Loop Brace"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Marker/Loop Brace",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9a24cdd1ec60594d6a36de596de4cc7819c6c5a2c84dbfc3b42bd8c5b2f960d8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/33 Max for Live Devices/02 Max for Live Audio Effects/02 Envelope Follower"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/33 Max for Live Devices/02 Max for Live Audio Effects/02 Envelope Follower",
+  "version": 2
+}

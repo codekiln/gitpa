@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1f59704fdd55d856c1390353833bbd07a2e450c3dda5421b8950f2ac1d036da0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/02 External Audio In-Out"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/02 External Audio In-Out",
+  "version": 2
+}

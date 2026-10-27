@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7aae5de3cb0982dd35999d33a731d1e483802239f037a8fdc643d7ddddde2d72",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Switch/Metronome"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Switch/Metronome",
+  "version": 2
+}

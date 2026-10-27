@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d6d5b4a5ac750b804dc5e07db177c834beede791a237851ff1ab72a76c90f162",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/04 Browser/07 Places/04 Using Ableton Cloud"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/04 Browser/07 Places/04 Using Ableton Cloud",
+  "version": 2
+}

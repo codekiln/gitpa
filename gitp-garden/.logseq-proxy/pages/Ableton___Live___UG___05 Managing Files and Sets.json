@@ -1,0 +1,14 @@
+{
+  "body_sha256": "96bb10f00e626a95a424381b3ab94859027c0e9561df7a954ce711526da49649",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets",
+  "version": 2
+}

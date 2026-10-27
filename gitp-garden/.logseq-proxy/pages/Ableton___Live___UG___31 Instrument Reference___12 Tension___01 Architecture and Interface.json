@@ -1,0 +1,14 @@
+{
+  "body_sha256": "23fe603fa1de8724c2442c2dbf6588767d610959d709cd621481072dd29f5c40",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/12 Tension/01 Architecture and Interface"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/12 Tension/01 Architecture and Interface",
+  "version": 2
+}

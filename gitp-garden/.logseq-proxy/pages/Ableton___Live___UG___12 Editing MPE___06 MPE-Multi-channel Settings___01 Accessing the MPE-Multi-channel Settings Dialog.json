@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0528a040fe804b8a837e16fdd2f5fe629f284bbdab93957be6871273ab67b6ad",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/12 Editing MPE/06 MPE-Multi-channel Settings/01 Accessing the MPE-Multi-channel Settings Dialog"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/12 Editing MPE/06 MPE-Multi-channel Settings/01 Accessing the MPE-Multi-channel Settings Dialog",
+  "version": 2
+}

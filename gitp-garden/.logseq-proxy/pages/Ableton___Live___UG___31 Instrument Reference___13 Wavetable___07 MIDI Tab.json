@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f2185b5115779b6b93eb76e7c9f92afecbd925e8a8f910ad3190fe76ca40d97d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/07 MIDI Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/07 MIDI Tab",
+  "version": 2
+}

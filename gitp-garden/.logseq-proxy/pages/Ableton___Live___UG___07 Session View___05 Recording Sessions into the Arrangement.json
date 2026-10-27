@@ -1,0 +1,14 @@
+{
+  "body_sha256": "adbd2cfcfc396b95ad9504da2c23fa921a3d0d6f0c0c3af62e14bcf8d38f4bbf",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/07 Session View/05 Recording Sessions into the Arrangement"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/07 Session View/05 Recording Sessions into the Arrangement",
+  "version": 2
+}

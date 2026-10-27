@@ -1,0 +1,14 @@
+{
+  "body_sha256": "aea319f71a072d95ece9a96c4c7e15fbb87f14ee6f34e31242216867f5fd58c3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/36 Push 2/03 Playing and Programming Beats/06 Real-time Recording"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/36 Push 2/03 Playing and Programming Beats/06 Real-time Recording",
+  "version": 2
+}
