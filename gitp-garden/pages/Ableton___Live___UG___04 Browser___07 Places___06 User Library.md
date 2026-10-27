@@ -8,7 +8,7 @@ logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/bl
 logseq-proxy-last-sync-date:: [[2026-10-27]]
 - # [4.7.6 User Library](https://www.ableton.com/en/live-manual/12/working-with-the-browser/#user-library)
 	- The User Library stores your presets, defaults, Live Clips, templates and more, in its own location so it can be backed up or shared.
-	- Default location: `Macintosh HD/Users/<username>/Music/Ableton/User Library` (Mac) or `\Users\<username>\Documents\Ableton\User Library` (Win). Change it with "Location of User Library" in Library Settings.
+	- Default location: `~/Music/Ableton/User Library` (Mac) or `\Users\<username>\Documents\Ableton\User Library` (Win). Change it with "Location of User Library" in Library Settings.
 	- It starts with Clips, Defaults, Grooves, Presets and Samples folders; add or remove folders as you like.
 	- ## 4.7.6.1 ABL Assets
 		- Assets from Move and Note Sets synced through Ableton Cloud.
