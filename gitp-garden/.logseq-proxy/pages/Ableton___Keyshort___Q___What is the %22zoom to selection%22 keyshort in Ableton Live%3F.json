@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c05494135ff51bd39b9c5ae4c9c3967b16d3c734f2c80487055d8b0a9febdb8d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Keyshort/Q/What is the \"zoom to selection\" keyshort in Ableton Live?"
+  ],
+  "imports": {},
+  "page": "Ableton/Keyshort/Q/What is the \"zoom to selection\" keyshort in Ableton Live?",
+  "version": 2
+}

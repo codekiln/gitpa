@@ -1,0 +1,14 @@
+{
+  "body_sha256": "af2133347ee5aeafdd1ab91ffe09ca16e4f874be62fe10564396c904e9fdc100",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/04 Exporting Session Clips as New Sets"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/04 Exporting Session Clips as New Sets",
+  "version": 2
+}

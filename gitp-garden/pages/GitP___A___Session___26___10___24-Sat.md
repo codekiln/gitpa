@@ -5,9 +5,10 @@ podcast-guid:: gitpa20261024
 podcast-published-at:: 2026-10-24T19:24:21-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-24 Sat]]
+next:: [[GitP/A/Session/26/10/26-Mon]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F24-Sat
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___24-Sat.md
-logseq-proxy-last-sync-date:: [[2026-10-25]]
+logseq-proxy-last-sync-date:: [[2026-10-27]]
 
 - # The Unstable over USB
 	- A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.

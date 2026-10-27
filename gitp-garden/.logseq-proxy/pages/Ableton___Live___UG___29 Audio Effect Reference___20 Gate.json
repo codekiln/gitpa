@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8af70b799ff511352520a86acbbb6e0a4ba0ecdc234225e02e3161b617ced2ab",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/20 Gate"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/20 Gate",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c9725f32297f1edc122ff0f0fdad7da4b3f03e14d34e79d8b9397503c931f361",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI",
+  "version": 2
+}

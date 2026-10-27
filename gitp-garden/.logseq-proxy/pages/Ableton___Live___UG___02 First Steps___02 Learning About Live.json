@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f8c6d4c1d168c8a4a484a22ca8841976565ff44ea0d5403f3584f0198419207a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/02 First Steps/02 Learning About Live"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/02 First Steps/02 Learning About Live",
+  "version": 2
+}

@@ -1,0 +1,16 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Ableton/Live/UG/36 Push 2/05 Playing Melodies and Harmonies]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Ableton%2FLive%2FUG%2F36%20Push%202%2F05%20Playing%20Melodies%20and%20Harmonies%2F01%20Playing%20in%20Other%20Keys
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Ableton___Live___UG___36%20Push%202___05%20Playing%20Melodies%20and%20Harmonies___01%20Playing%20in%20Other%20Keys.md
+logseq-proxy-last-sync-date:: [[2026-10-27]]
+
+- # [36.5.1 Playing in Other Keys](https://www.ableton.com/en/live-manual/12/using-push-2/#playing-in-other-keys)
+	- **Scale** opens key and scale settings.
+		- ![Key, scale and layout options](https://ableton-production.imgix.net/live-manual/12/Push2KeyScaleSelection.png?auto=&w=320)
+	- Upper and lower display buttons pick the key (selected in white); encoders 2–7 pick the scale type.
+	- **Layout** (encoder 1) and **Direction** (encoder 8) set the grid: 4ths (default) puts each row a fourth above the one below; 3rds a third; Sequent lays notes out in order with no repeats, for the widest range. Horiz rotates the grid 90°.
+	- **Fixed** on keeps note positions when changing key (bottom left stays C, or the nearest scale note); off moves the root to the bottom left.
+	- **In Key** folds the grid to scale notes only; **Chromatic** shows every note with out-of-key notes unlit.
+	- Scale settings save with the Set; put favourites in your Default Set.
+	- Accent, Fixed Length, Repeat and Quantize all work for melodies too. Hold Delete and tap a pad to remove every note of that pitch in the loop.

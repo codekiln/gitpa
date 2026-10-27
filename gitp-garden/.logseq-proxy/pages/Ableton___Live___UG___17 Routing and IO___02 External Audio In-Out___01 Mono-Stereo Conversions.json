@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6c5f783977daa65cc8af06eae8378c89c4d33d75a33416c1a53ec95af710bd70",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/02 External Audio In-Out/01 Mono-Stereo Conversions"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/02 External Audio In-Out/01 Mono-Stereo Conversions",
+  "version": 2
+}

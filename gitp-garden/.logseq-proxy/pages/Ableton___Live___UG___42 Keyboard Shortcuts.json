@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2528c96408119e8d221616554dd7b9b85c545cbec60bec7c245835fa3bf0006f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts",
+  "version": 2
+}

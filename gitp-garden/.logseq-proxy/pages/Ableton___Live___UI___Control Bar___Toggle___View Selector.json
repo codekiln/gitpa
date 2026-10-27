@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c50ffdbc213e658ca5799af94283857fbe860c47afed0ed8c736f043a9623c3d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Toggle/View Selector"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Toggle/View Selector",
+  "version": 2
+}

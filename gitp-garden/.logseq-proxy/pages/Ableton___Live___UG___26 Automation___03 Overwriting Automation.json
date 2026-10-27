@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d6c28c2742b49f5e83a37954a186ce1ecdfc4e2e667acae7cee904e0cae73a65",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/26 Automation/03 Overwriting Automation"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/26 Automation/03 Overwriting Automation",
+  "version": 2
+}

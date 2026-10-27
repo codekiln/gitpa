@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bfaac0d55ffbd7bb1401b9d4ffe2ec9be8b2a98d0c8d352ba6298c8d32a15420",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/24 Limiter"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/24 Limiter",
+  "version": 2
+}

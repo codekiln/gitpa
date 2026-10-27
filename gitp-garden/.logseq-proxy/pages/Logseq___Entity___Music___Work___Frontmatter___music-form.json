@@ -1,0 +1,14 @@
+{
+  "body_sha256": "10d1cb952fd613294680377b0e2e9bb6a41d76b53ce4c56e1927abbfa642f8be",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Music/Work/Frontmatter/music-form"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Music/Work/Frontmatter/music-form",
+  "version": 2
+}

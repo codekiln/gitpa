@@ -1,0 +1,14 @@
+{
+  "body_sha256": "636be2a2231a01744c7b5f79220e00080a41158ea25a862f6d994d69a287d8e6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/22 Grain Delay"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/22 Grain Delay",
+  "version": 2
+}

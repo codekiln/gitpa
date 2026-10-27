@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9e77c824faaf5649da224db1bdc7beba0b053785e32ec3365a9dd5a587a61bdd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/15 EQ Eight"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/15 EQ Eight",
+  "version": 2
+}

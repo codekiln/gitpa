@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bc9d2c3b5bd2350973ba6c2a3e6469b571dfdd033c0514e482d32ec72905b193",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/18 Mixing/02 Audio and MIDI Tracks"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/18 Mixing/02 Audio and MIDI Tracks",
+  "version": 2
+}

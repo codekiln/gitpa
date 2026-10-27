@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b98c9427a010834ecc54a71cc4a2deb722c88e86edbb58dad8999c893b7c86bf",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/10 Sampler/07 The Pitch-Osc Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/10 Sampler/07 The Pitch-Osc Tab",
+  "version": 2
+}

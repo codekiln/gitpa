@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5d6b6e04ae024badbd2926a5a76d320db70ad5c3aa62e75948d1131be11ff039",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/03 Noise Generator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/03 Noise Generator",
+  "version": 2
+}

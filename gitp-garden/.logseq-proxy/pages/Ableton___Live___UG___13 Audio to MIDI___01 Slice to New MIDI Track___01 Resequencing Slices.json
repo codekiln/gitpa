@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d4a6113b51efee7fbee3e91e6823108e8a7e03719534b43bc64ddfef915659a5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI/01 Slice to New MIDI Track/01 Resequencing Slices"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI/01 Slice to New MIDI Track/01 Resequencing Slices",
+  "version": 2
+}

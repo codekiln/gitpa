@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a6197dfa52abdaf1e8b95e4e28a07344089b7983db998a5a9d83b346f32b672b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/38 Computer Audio Resources/01 Managing the CPU Load/02 CPU Load from Multichannel Audio"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/38 Computer Audio Resources/01 Managing the CPU Load/02 CPU Load from Multichannel Audio",
+  "version": 2
+}

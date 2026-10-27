@@ -1,0 +1,15 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Ableton%2FHow%20To%2FPreserve%20Name%20of%20Clip%20when%20Dragging%20into%20Drum%20Rack
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Ableton___How%20To___Preserve%20Name%20of%20Clip%20when%20Dragging%20into%20Drum%20Rack.md
+logseq-proxy-last-sync-date:: [[2026-10-27]]
+# How to preserve the name of an [[Ableton/Clip]] when dragging it into a [[Ableton/Instrument/Drum Rack]]
+	- I started dragging [[Ableton/Clip]] in, it's #Annoy/ing that the name of the clip doesn't populate in the [[Ableton/Instrument/Drum Rack]] front panel or in the sampler. at least it correctly populates the start and end times, though, in the [[Ableton/Instrument/Simpler]] that is created for it upon dragging it in. Workaround is to quickly enter Clip Rename.
+	- Manual Workaround
+		- 1 - quickly enter rename view in [[Ableton/Browser]] on the clip with Cmd+R
+		- 2 - copy the name
+		- 3 - drag the clip to the drum rack
+		- 4 - Select the newly dragged in clip in the Drum Rack and use Cmd+R, Cmd+V, Return to paste it in and confirm
+		- 5 - Select the created [[Ableton/Instrument/Simpler]] for the clip and use Cmd+R, Cmd+V to paste in the name there, too
+			- Don't confirm with the Return key here because otherwise it will enter in the [[Ableton/Remote Control]] mode. Instead, click elsewhere to confirm.
+	-

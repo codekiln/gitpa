@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c5158a426526827fd13642446fb669952ed77bd26aeda5a53e48df5659828481",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/29 Phaser-Flanger"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/29 Phaser-Flanger",
+  "version": 2
+}

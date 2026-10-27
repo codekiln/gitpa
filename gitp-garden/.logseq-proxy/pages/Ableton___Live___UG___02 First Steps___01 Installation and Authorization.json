@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e7b6395141aed85316eef5b152fe0388ae4ff05526eb47ad5a57542e6f4c319b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/02 First Steps/01 Installation and Authorization"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/02 First Steps/01 Installation and Authorization",
+  "version": 2
+}

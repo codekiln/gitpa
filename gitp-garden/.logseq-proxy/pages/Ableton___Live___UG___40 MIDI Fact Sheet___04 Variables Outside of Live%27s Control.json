@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d9fefd448f8aeca4d19bfae5edc5b397664a48661e058231a43b881a98e40f99",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet/04 Variables Outside of Live's Control"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet/04 Variables Outside of Live's Control",
+  "version": 2
+}

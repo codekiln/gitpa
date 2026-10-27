@@ -1,0 +1,14 @@
+{
+  "body_sha256": "63a4921afb92d3e7826d47db0169314d061e5f305b9675a8ff5a56a9aa744f50",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/05 Internal Routings"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/05 Internal Routings",
+  "version": 2
+}

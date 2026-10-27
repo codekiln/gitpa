@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2131330a860accff702b81619fdc88726f1d1b759895a5f1724ce067ecbf5f57",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/01 Arpeggiator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/01 Arpeggiator",
+  "version": 2
+}

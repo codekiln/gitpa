@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2dc2cc34b0577df9be1bf8552cfc0fbdfe1774d6ecc41cb95e435fd9dd23d6da",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/26 Multiband Dynamics"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/26 Multiband Dynamics",
+  "version": 2
+}

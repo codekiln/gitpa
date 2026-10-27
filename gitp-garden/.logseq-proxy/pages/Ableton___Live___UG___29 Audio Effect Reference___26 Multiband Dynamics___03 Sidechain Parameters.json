@@ -1,0 +1,14 @@
+{
+  "body_sha256": "41923f17b0d188ce605dbaab51935c783e62cae02d7d91e72494b84969cd7e33",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/26 Multiband Dynamics/03 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/26 Multiband Dynamics/03 Sidechain Parameters",
+  "version": 2
+}

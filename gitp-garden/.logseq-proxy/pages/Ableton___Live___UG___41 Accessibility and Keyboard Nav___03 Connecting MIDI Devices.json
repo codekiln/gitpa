@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c3d530a808eb2a25eebf425e0d2171998a2daa746e8ce5d500436fb6f1a773e7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/41 Accessibility and Keyboard Nav/03 Connecting MIDI Devices"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/41 Accessibility and Keyboard Nav/03 Connecting MIDI Devices",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "85490e10dcbbb9dd2ac7b204b0729f495acd046fcb0a70932272cd3f9200fc1b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/11 Clip View Sample Editor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/11 Clip View Sample Editor",
+  "version": 2
+}

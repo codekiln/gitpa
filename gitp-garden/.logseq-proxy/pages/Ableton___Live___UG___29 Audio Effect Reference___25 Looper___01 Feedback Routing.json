@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b23bcdf02376a2f210b28deb85f07a6f40415ae363e12b31437f4627e8d19ed8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/25 Looper/01 Feedback Routing"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/25 Looper/01 Feedback Routing",
+  "version": 2
+}

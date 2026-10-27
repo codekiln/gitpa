@@ -1,0 +1,14 @@
+{
+  "body_sha256": "71d309a481207eebffc5c5c7352e3c5386350af52867fead1aca920192551812",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/01 Using MIDI Tools/01 Using Max for Live MIDI Tools"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/01 Using MIDI Tools/01 Using Max for Live MIDI Tools",
+  "version": 2
+}

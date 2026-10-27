@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4e7b77f4af7586425729f62f1046d18a0ef5f0c6c6ed5041ff837b720a6c7e61",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/07 Commands for Breakpoint Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/07 Commands for Breakpoint Envelopes",
+  "version": 2
+}

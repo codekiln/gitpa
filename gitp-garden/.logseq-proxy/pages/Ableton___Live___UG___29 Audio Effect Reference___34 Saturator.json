@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4d68397ad687d94849a4911b4f49dc6528be92ffecc3727f83aa6a7aa1b039c8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/34 Saturator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/34 Saturator",
+  "version": 2
+}

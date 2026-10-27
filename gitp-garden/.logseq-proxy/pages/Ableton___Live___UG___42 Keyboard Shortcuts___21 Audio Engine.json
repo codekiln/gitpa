@@ -1,0 +1,14 @@
+{
+  "body_sha256": "33988bbdfe9e99c095509f66240ca078d3336b19b65f296ca886aeb241def8f8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/21 Audio Engine"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/21 Audio Engine",
+  "version": 2
+}

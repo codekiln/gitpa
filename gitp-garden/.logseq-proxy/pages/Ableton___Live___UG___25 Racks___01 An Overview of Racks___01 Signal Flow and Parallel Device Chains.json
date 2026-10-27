@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0677a12acfc1a663403e5d7de0849eaa591f93ef5813ece6e1e91513bce0acb6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/25 Racks/01 An Overview of Racks/01 Signal Flow and Parallel Device Chains"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/25 Racks/01 An Overview of Racks/01 Signal Flow and Parallel Device Chains",
+  "version": 2
+}

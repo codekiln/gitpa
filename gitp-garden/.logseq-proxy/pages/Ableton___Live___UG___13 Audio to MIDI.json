@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b04048995d6bd8f89082e54e4f9d492f52b2a6af8b0840cccfee1cf97c9856b0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI",
+  "version": 2
+}

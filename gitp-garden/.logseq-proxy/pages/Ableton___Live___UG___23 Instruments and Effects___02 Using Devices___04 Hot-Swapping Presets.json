@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1da5c7e534eebe4ebb9bc7a2b57905e0a44be8d540812fe23e9b70b9b553970b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/04 Hot-Swapping Presets"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/04 Hot-Swapping Presets",
+  "version": 2
+}

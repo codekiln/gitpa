@@ -1,0 +1,75 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FQuestion
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Question.md
+logseq-proxy-last-sync-date:: [[2026-10-27]]
+
+- # Question
+	- In this garden, **Question** pages model a question I had at a particular time — one of the most frequent entities here. Typically Questions are stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
+	- ## Examples in this garden
+		- Pages on disk match `pages/*___Q___*.md` (e.g. [[mise/Q/How do I remove a mise tool?]] → `mise___Q___How do I remove a mise tool%3F.md`).
+		- In-graph titles use a slash path such as `Topic/Q/Question text` or `Topic/SubTopic/Q/Question text`.
+	- ## When we treat something as a question entity
+		- Strong signals: the page captures a single answerable question; the title uses a topic namespace plus a fixed **Q** segment before the question wording; the body holds an answer (human, AI, or both).
+		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, CLI command stubs, or long-running threads better modeled as non-Q pages.
+	- ## Naming and links
+		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
+		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present.
+		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
+	- ## Finding and deduplicating
+		- Treat every new question as a question-entity candidate.
+		- Practical search order for this type:
+			- 1. Exact expected page title / filepath under the topic namespace.
+			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`.
+			- 3. Namespace-restricted globs (e.g. topic prefix + `___Q___`).
+			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
+		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
+			- **existing** — the garden already holds the question. It gains an answer, not a second page.
+			- **similar** — present the candidates and let a human decide before a near-duplicate lands.
+	- ## Frontmatter
+		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/Question]]` so this type page indexes instances.
+		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]). Card-backed questions use the compact page shape — see **Card-backed page shape** under Page shape below.
+		- [[Logseq/Frontmatter/see-also]]
+			- **`see-also::`** — optional; extremely parsimonious list of 1-2 not obvious **garden pages** that are the best adjacent reading (**strongest tie first**). Do not put anything obvious in this list, do not restate parent-namespace context the title already encodes. Do not use `see-also::` for external URLs (put those in the answer body).
+		- [[Logseq/Frontmatter/via]]
+			- **`via::`** — optional; only for **what logseq page best represents the context in which the question appeared** - only useful when astonishing; be parsimonious and only use this when it's not obvious.
+		- **`tags::` / `alias::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+	  id:: 69cd1d51-7708-4021-8c21-f7e864ec017e
+		- **H1** — the question text; link key terms to existing pages where it helps.
+		- Optional inline `[[card]]` at the end of the H1 — **only when the human operator explicitly requests it**. Do not add `[[card]]` speculatively, even if the question seems like good SRS material.
+		- **Section order** (omit empty sections):
+			- `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
+			- `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
+			- `## [[AI Answer]]` — standard heading for AI-researched answers. Answer content is direct children of this block; do **not** add a `[[AI/Response]]` child wrapper.
+				- `[[Answer/Official]]` (alias `[[Official Answer]]`) — used when the answer is from official documentation; include a markdown link inline: `[[Answer/Official]] from [Source Title](url)`.
+				- Lead with **Short answer:** when useful.
+				- Cite **external** docs with markdown links in the answer body.
+				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
+		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
+		- ### Card-backed page shape
+			- When `logseq-entity::` includes [[Logseq/Entity/Card]] and the H1 ends with `[[card]]`, omit the `## Answer` section header and attribution block. The answer sits directly as a child bullet of the H1, as short as a card prompt requires:
+				- ~~~
+				  logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
+				  - # Question text linking [[Key/Concept]]? [[card]]
+				   - Terse answer, e.g. [[tmux/Keyshort/Prefix]] `w`
+				  ~~~
+			- Use `==highlight==` to mark mnemonic cues in the answer (e.g. `==N==ext Window`).
+			- Wikilink key terms in both the question and the answer to existing entity pages.
+	- ## Creating an instance
+		- **Choose the topic namespace first.** It is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. Infer it from the question when the human did not name one; ask rather than guess when nothing plausible presents itself.
+		- Keep the question's full wording, punctuation included, as the page title. Normalize trailing `?` for searching only.
+		- The filing is recorded in today's journal like any other graph edit — a new page under `[[Filed]]`, an edited one under `[[Updated]]`, per [[Logseq/Journal]].
+		- Commit the drafted question page and its journal entry by default, unless the human asks to leave them uncommitted.
+	- ## Answering an instance
+		- Filing and answering are one pass: once the page and its journal line exist, research the answer rather than leaving a bare question.
+		- Draw on whatever is at hand — the garden's own pages first, then official documentation, then web search. Prefer a source that can be cited over recollection.
+		- Write the answer into `## [[AI Answer]]` per **Page shape** above, marking it `[[Answer/Official]]` when it comes from official docs.
+		- When the answer cannot be settled, say so on the page and tell the human what is missing. An honestly open question is worth more than a confident wrong one.
+	- ## Relationship to other types
+		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
+		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.
+	- ## Legacy instances
+		- Older `___Q___` pages may lack `logseq-entity::`, use `## Related` for internal links (use `see-also::` instead), or use `## [[AI/Response]]` as the section heading instead of the correct [[AI Answer]] form.
+		- Do not bulk-migrate unless requested; new pages should follow the rules above.

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2cf0a8cc176a7519d8cb269c61d6174cfdb68317a55baa11442304bf015dc721",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/06 Defaults"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/06 Defaults",
+  "version": 2
+}

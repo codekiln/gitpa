@@ -1,0 +1,14 @@
+{
+  "body_sha256": "75e1bd0f55463e41bdd073c6f8d24e7a32ab6e06be58c69833457a431805924e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/30 Redux/01 Downsampling"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/30 Redux/01 Downsampling",
+  "version": 2
+}

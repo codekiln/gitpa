@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5987fee2888c6feb3c90d49481ba4a958ebf2f7a0e7512680e3f083e47061f20",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Software/Project]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Note"
+  ],
+  "imports": {},
+  "page": "Ableton/Note",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ebba6d7b7aaaa1dc37e416092b5983e2bfa93b9e1fa467e15ce9ef91bf24f096",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/24 Plug-Ins/01 Plug-Ins in the Device View"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/24 Plug-Ins/01 Plug-Ins in the Device View",
+  "version": 2
+}

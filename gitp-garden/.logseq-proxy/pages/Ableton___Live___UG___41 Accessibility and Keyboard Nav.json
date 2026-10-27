@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e26b146031fff313ba5c5cb83789e56bf6a30d0a66fbc41ca59f871788e59f0b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/41 Accessibility and Keyboard Nav"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/41 Accessibility and Keyboard Nav",
+  "version": 2
+}

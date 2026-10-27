@@ -1,0 +1,14 @@
+{
+  "body_sha256": "26d6a815027511ed6604ebc980f8b62295f41c9a7ae042020b3b68ebdfbf677f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/07 Impulse"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/07 Impulse",
+  "version": 2
+}

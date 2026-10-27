@@ -1,0 +1,14 @@
+{
+  "body_sha256": "238b4fc7b57d91909ad76219545c8541ef414757590417d7a93366d990351358",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/12 Clip and Device View"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/12 Clip and Device View",
+  "version": 2
+}

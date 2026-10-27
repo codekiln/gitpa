@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4a9a7008449ec586d8117bc0c6ad0ab497dd62ffda8dc521bdec0d8350539672",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/09 Compressor/01 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/09 Compressor/01 Sidechain Parameters",
+  "version": 2
+}

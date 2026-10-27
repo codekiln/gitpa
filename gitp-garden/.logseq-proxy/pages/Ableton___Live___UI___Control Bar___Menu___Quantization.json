@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e7bf7352b41b7a93434eb0db1485be8697b7d0575a3a33f6aaad4da24d28e2b3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Menu/Quantization"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Menu/Quantization",
+  "version": 2
+}

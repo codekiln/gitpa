@@ -1,0 +1,14 @@
+{
+  "body_sha256": "24eafb736ea765888259ae49ffac4578139f2cd4359a66aca451a7ce94d4713b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Mixolydian"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Mixolydian",
+  "version": 2
+}

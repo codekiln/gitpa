@@ -1,0 +1,14 @@
+{
+  "body_sha256": "cf64c49b4dbe402442df57c2254647a57740bfbe8bcc926c58d1c06e24862c96",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Field/Arrangement Position"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Field/Arrangement Position",
+  "version": 2
+}

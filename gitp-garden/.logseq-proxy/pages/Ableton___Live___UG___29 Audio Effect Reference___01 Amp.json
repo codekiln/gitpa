@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e210ae4d986ddf56e1bd218994de4853ba8ba28cdcc86e8cdce6e116d0236470",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/01 Amp"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/01 Amp",
+  "version": 2
+}

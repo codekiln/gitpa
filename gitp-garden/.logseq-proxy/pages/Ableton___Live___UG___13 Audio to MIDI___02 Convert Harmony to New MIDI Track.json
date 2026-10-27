@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6691379c60347662d99a9635e3de1d3f49293a72070d9dea72fdf72db4557860",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI/02 Convert Harmony to New MIDI Track"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI/02 Convert Harmony to New MIDI Track",
+  "version": 2
+}

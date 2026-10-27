@@ -1,0 +1,14 @@
+{
+  "body_sha256": "86cde98b9ee7bde7dfd5471fd207d619ed88f75ca5e35e266e0301ff6445ce14",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/06 Arrangement and Session"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/06 Arrangement and Session",
+  "version": 2
+}
