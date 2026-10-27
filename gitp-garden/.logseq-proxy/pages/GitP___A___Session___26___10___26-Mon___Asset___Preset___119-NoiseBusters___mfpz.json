@@ -1,0 +1,20 @@
+{
+  "body_sha256": "f394a1faa9d971dca18d3de5baedb4bc3816fcaa6f655b68bd80fd6475868e47",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz",
+  "version": 2
+}
