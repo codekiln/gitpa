@@ -1,0 +1,20 @@
+{
+  "body_sha256": "0efbc586fa3994c75a227db37335f84767afc8ada1541191fe71feb7fa44e682",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3",
+  "version": 2
+}

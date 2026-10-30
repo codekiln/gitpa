@@ -1,0 +1,20 @@
+{
+  "body_sha256": "337994ca66001a1cb28df28610c63e8c75e4dd002918182b771d4e71587d72e0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/29-Thu"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/29-Thu": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/29-Thu",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/29-Thu",
+  "version": 2
+}
