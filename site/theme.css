@@ -110,3 +110,18 @@ body:has(> .lsg-header) {
   --lsg-header: var(--lsg-background);
   --lsg-sidebar: var(--gitpa-sidebar);
 }
+
+.apple-podcasts-subscribe {
+  display: inline-block;
+  padding: .55rem 1rem;
+  border: 1px solid var(--lsg-border);
+  border-radius: .5rem;
+  background: var(--gitpa-button-background);
+  color: var(--lsg-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.apple-podcasts-subscribe:focus-visible {
+  outline: 2px solid var(--lsg-focus);
+  outline-offset: 3px;
+}

@@ -54,11 +54,12 @@ class HomepageTests(unittest.TestCase):
                 '<a href="p-bbb.html">GitP/A/Session/Newest</a>'
                 '<a href="p-ccc.html">GitP/A/Session/Older</a>')
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<main><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
+                (output / name).write_text(f'<main><a href="https://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
             self.assertIn('<a href="p-bbb.html">GitP/A/Session/Newest</a>', text)
             self.assertLess(text.index('Newest'), text.index('Older'))
+            self.assertIn('href="podcast://codekiln.github.io/gitpa/rss.xml"', text)
             self.assertNotIn(QUERY_PLACEHOLDER, text)
             self.assertEqual(text, (output / 'p-aaa.html').read_text())
             with self.assertRaisesRegex(ValueError, 'placeholder'):
@@ -72,7 +73,7 @@ class HomepageTests(unittest.TestCase):
                 '<a href="p-ccc.html">GitP/A/Session/Older</a>')
             bullet = '<a class="bullet" href="#"></a>'
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
+                (output / name).write_text(f'<a href="https://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a><ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
             self.assertEqual(text.count(bullet), 2)

@@ -130,7 +130,12 @@ def install_homepage_query(output, result):
             raise ValueError('Expected one rendered homepage query placeholder')
         marker, prefix = matches[0]
         rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
-        path.write_text(text.replace(marker, rendered_rows), encoding='utf-8')
+        text = text.replace(marker, rendered_rows)
+        rss_link = '<a href="https://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a>'
+        if text.count(rss_link) != 1:
+            raise ValueError('Expected one Apple Podcasts subscription link')
+        text = text.replace(rss_link, '<a class="apple-podcasts-subscribe" href="podcast://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a>')
+        path.write_text(text, encoding='utf-8')
 
 
 def legacy_routes(output, graph=None, published_routes=None):
