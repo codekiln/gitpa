@@ -112,6 +112,7 @@ class AudioChapterTests(unittest.TestCase):
             text = (root / 'p-abc.html').read_text()
             self.assertIn('/gitpa/bootstrap.js', text)
             self.assertIn('/gitpa/player.css', text)
+            self.assertIn('/gitpa/header-sequence.css', text)
             self.assertIn('bootstrap.js', (root / 'p-def.html').read_text())
             self.assertIn('bootstrap.js', (root / 'pages.html').read_text())
             self.assertIn('name="gitpa-episode"', text)
@@ -119,7 +120,8 @@ class AudioChapterTests(unittest.TestCase):
             self.assertNotIn('name="gitpa-episode"', (root / 'p-def.html').read_text())
             self.assertEqual(text.count('<audio'), 1)
             self.assertTrue((root / 'player.js').is_file())
-            self.assertTrue((root / 'bootstrap.js').is_file())
+            for filename in ['bootstrap.js', 'plugin-adapter.js', 'header-sequence.js', 'header-sequence.css']:
+                self.assertTrue((root / filename).is_file())
             (root / 'p-abc.html').write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
             with self.assertRaisesRegex(ValueError, 'exactly one'):
                 install_episode_player(root, {'episode': FULL})

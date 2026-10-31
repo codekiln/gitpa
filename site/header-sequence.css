@@ -1,0 +1,42 @@
+/* Previous and Next links beside the header spacer, styled like Gardener's header buttons. */
+.gitpa-sequence {
+  display: inline-flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  max-width: calc((100% - 280px) / 2);
+  height: 36px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: var(--lsg-muted);
+  font-size: .9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.gitpa-sequence:hover {
+  background: var(--lsg-surface);
+  color: var(--lsg-text);
+}
+.gitpa-sequence-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (width < 640px) {
+  .gitpa-sequence {
+    flex: none;
+    justify-content: center;
+    width: 36px;
+    max-width: none;
+    padding: 0;
+  }
+  .gitpa-sequence-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+}
