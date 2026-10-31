@@ -145,6 +145,13 @@ class HomepageTests(unittest.TestCase):
             self.assertEqual((graph / 'pages/Notes___Private.md').read_text(), 'public:: false\n')
             self.assertTrue((graph / 'pages/Notes___Private___Visible.md').exists())
 
+    def test_public_page_names_decode_file_name_characters(self):
+        with tempfile.TemporaryDirectory() as directory:
+            graph = Path(directory)
+            (graph / 'pages').mkdir()
+            (graph / 'pages/Recorder___Q___How do I monitor%3F.md').write_text('public:: true\n- Answer\n')
+            self.assertEqual(public_pages(graph), ['Recorder/Q/How do I monitor?'])
+
     def test_private_ancestor_identity_survives_without_body_or_alias(self):
         with tempfile.TemporaryDirectory() as directory:
             graph = Path(directory)

@@ -1,6 +1,7 @@
 """Read Logseq page files: the property block, the body, and page-name paths."""
 from __future__ import annotations
 import re
+from urllib.parse import unquote
 
 
 def split_page(text):
@@ -15,6 +16,11 @@ def split_page(text):
 
 def properties(lines):
     return dict(line.rstrip('\n').split(':: ', 1) for line in lines)
+
+
+def page_name(path):
+    # Logseq percent-encodes characters such as ? in file names.
+    return unquote(path.stem).replace('___', '/')
 
 
 def page_path(garden, name):

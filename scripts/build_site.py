@@ -14,7 +14,7 @@ from urllib.parse import unquote
 from urllib.parse import urlsplit, urlunsplit
 import xml.etree.ElementTree as ET
 
-from logseq_page import properties, split_page
+from logseq_page import page_name, properties, split_page
 from prepare_site import prepare
 from site_routes import page_route, page_output
 from build_rss import ARTWORK_URL, SITE_URL
@@ -70,7 +70,7 @@ def prepare_homepage(graph, result):
     for page in (graph / 'pages').glob('*.md'):
         leading, _ = split_page(page.read_text(encoding='utf-8'))
         if properties(leading).get('public') == 'true':
-            visible.add(normalized(page.stem.replace('___', '/')))
+            visible.add(normalized(page_name(page)))
     for target in re.findall(r'\[\[([^\]]+)\]\]', outline):
         if normalized(target) not in visible:
             raise ValueError(f'Homepage query target is missing or unpublished: {target}')
@@ -151,7 +151,7 @@ def legacy_routes(output, graph=None, published_routes=None):
     if graph:
         claims = {name: {route} for name, route in parser.routes.items()}
         for page in (graph / 'pages').glob('*.md'):
-            route = parser.routes.get(normalized(page.stem.replace('___', '/')))
+            route = parser.routes.get(normalized(page_name(page)))
             if not route:
                 continue
             leading, _ = split_page(page.read_text(encoding='utf-8'))
@@ -201,7 +201,7 @@ def public_pages(graph):
         leading, _ = split_page(path.read_text(encoding='utf-8'))
         props = properties(leading)
         if props.get('public') == 'true':
-            names.append(path.stem.replace('___', '/'))
+            names.append(page_name(path))
         else:
             # Every stored page outside Gitpa's explicit publication list stays
             # withheld, even when an included namespace would select it.
@@ -235,7 +235,7 @@ def compile_episode_pages(graph):
         except ValueError as error:
             raise ValueError(f'{path.name}: {error}') from error
         path.write_text(text, encoding='utf-8')
-        episodes[normalized(path.stem.replace('___', '/'))] = recording
+        episodes[normalized(page_name(path))] = recording
     return episodes
 
 
