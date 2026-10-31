@@ -2,10 +2,10 @@ const { test, before } = require('node:test');
 const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const { join } = require('node:path');
-let navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator;
+let navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts;
 before(async () => {
   const source = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
-  ({ navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
+  ({ navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
 });
 const response = (html = 'new', extra = {}) => ({ ok: true, text: async () => html, ...extra });
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
@@ -91,7 +91,7 @@ function fixture(fetcher = async () => response()) {
     replaceState(state, _, url) { this.state = state; win.location = new URL(url); },
     pushState(state, _, url) { this.state = state; this.entries.push({ state, url }); win.location = new URL(url); },
   };
-  win.DOMParser = class { parseFromString(html) { return { title: html, querySelector: name => ['main', 'nav'].includes(name) ? new Node(name, doc) : null }; } };
+  win.DOMParser = class { parseFromString(html) { return { title: html, querySelector: name => ['main', 'nav'].includes(name) ? new Node(name, doc) : null, querySelectorAll: () => [] }; } };
   return { doc, win, fragment };
 }
 
@@ -146,12 +146,14 @@ test('shared appearance controls initialize on replaced navigation without chang
 
 test('shared outline and property controls initialize before replacement hooks and source focus', async () => {
   const { doc, win, fragment } = fixture();
-  const outlines = [], properties = [];
+  const outlines = [], properties = [], allPages = [];
   win.logseqGardenerInitOutline = root => outlines.push(root);
   win.logseqGardenerInitProperties = root => properties.push(root);
+  win.logseqGardenerAllPages = { init: root => allPages.push(root) };
   const assertCurrent = () => {
     assert.equal(outlines.at(-1), doc.nodes.main);
     assert.equal(properties.at(-1), doc.nodes.main);
+    assert.equal(allPages.at(-1), doc.nodes.main);
   };
   fragment.focus = assertCurrent;
   const navigator = createNavigator({ document: doc, window: win, onPage: assertCurrent });
@@ -161,10 +163,137 @@ test('shared outline and property controls initialize before replacement hooks a
   await navigator.navigate('/gitpa/two/#part');
   assert.equal(outlines.length, 3);
   assert.equal(properties.length, 3);
+  assert.equal(allPages.length, 2);
   assert.notEqual(outlines[1], outlines[2]);
   await navigator.navigate('#part');
   assert.equal(outlines.length, 3);
   assert.equal(properties.length, 3);
+  assert.equal(allPages.length, 2);
+  navigator.dispose();
+});
+
+const SHARED_SCRIPTS = ['/gitpa/lsg-shell.js', '/gitpa/bootstrap.js'];
+const GRAPH_SCRIPTS = ['/gitpa/lsg-shell.js', '/gitpa/lsg-graph.js', '/gitpa/bootstrap.js'];
+const scriptNodes = (doc, sources) => sources.map(src => { const node = new Node('script', doc); node.setAttribute('src', src); return node; });
+const HEADER_CONTROLS = ['[data-lsg-left-toggle]', '[data-lsg-search]', '[data-lsg-more]', '[data-lsg-right-toggle]'];
+function headerNode(doc, { home }) {
+  const header = new Node('.lsg-header', doc);
+  header.controls = {};
+  for (const selector of HEADER_CONTROLS) {
+    const control = new Node(selector, doc);
+    // lsg renders these hidden; the shell and search reveal them.
+    control.hidden = true;
+    if (selector !== '[data-lsg-search]') control.setAttribute('aria-expanded', 'false');
+    header.controls[selector] = control;
+  }
+  if (home) header.controls['a[aria-label="Home"]'] = new Node('home', doc);
+  header.querySelector = selector => header.controls[selector] ?? null;
+  return header;
+}
+// Pages keyed by path: the scripts their HTML lists and whether their header has a Home button.
+function site(pages, current = SHARED_SCRIPTS) {
+  const loads = [];
+  const { doc, win } = fixture(async url => response(url));
+  doc.querySelectorAll = selector => selector === 'script[src]' ? scriptNodes(doc, current) : (doc.nodes[selector] ? [doc.nodes[selector]] : []);
+  const importNode = doc.importNode;
+  doc.importNode = node => node.name === '.lsg-header' ? node : importNode(node);
+  win.DOMParser = class { parseFromString(html) {
+    const page = pages[new URL(html).pathname];
+    const header = headerNode(doc, page);
+    return {
+      title: html,
+      querySelector: query => query === '.lsg-header' ? header : (['main', 'nav'].includes(query) ? new Node(query, doc) : null),
+      querySelectorAll: query => query === 'script[src]' ? scriptNodes(doc, page.scripts) : [],
+    };
+  } };
+  // The fixture replaces location on each history change; record full page loads on whichever is current.
+  const watch = () => {
+    win.location.assign = url => loads.push(['assign', url]);
+    win.location.reload = () => loads.push(['reload', win.location.href]);
+  };
+  return { doc, win, loads, watch };
+}
+
+test('page scripts resolve against the page address', () => {
+  const root = { querySelectorAll: () => scriptNodes(null, ['/gitpa/lsg-shell.js', 'lsg-graph.js', 'https://cdn.example.com/x.js']) };
+  assert.deepEqual([...pageScripts(root, 'https://example.com/gitpa/graph.html')], [
+    'https://example.com/gitpa/lsg-shell.js', 'https://example.com/gitpa/lsg-graph.js', 'https://cdn.example.com/x.js',
+  ]);
+});
+
+test('the graph view and other pages that list a script the displayed page lacks open with a full page load', async () => {
+  const { doc, win, loads, watch } = site({
+    '/gitpa/graph.html': { scripts: GRAPH_SCRIPTS, home: true },
+    '/gitpa/one/': { scripts: SHARED_SCRIPTS, home: true },
+  });
+  let shown = 0;
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => shown++ });
+  const original = doc.nodes.main;
+  watch();
+  await navigator.navigate('/gitpa/graph.html#/graph');
+  assert.deepEqual(loads, [['assign', 'https://example.com/gitpa/graph.html#/graph']]);
+  assert.equal(doc.nodes.main, original);
+  assert.equal(win.history.entries.length, 0);
+  assert.equal(shown, 0);
+  // A page whose scripts are all loaded still swaps in place.
+  assert.equal(await navigator.navigate('/gitpa/one/'), true);
+  assert.notEqual(doc.nodes.main, original);
+  assert.equal(shown, 1);
+  // Back or Forward onto such a page has already moved to its address, so it reloads there.
+  win.location = new URL('https://example.com/gitpa/graph.html#/graph');
+  watch();
+  await navigator.navigate(win.location.href, { pop: true, state: null });
+  assert.deepEqual(loads.at(-1), ['reload', 'https://example.com/gitpa/graph.html#/graph']);
+  assert.equal(shown, 1);
+  navigator.dispose();
+});
+
+test('returning to the graph view after leaving it in place loads it again', async () => {
+  const { doc, win, loads, watch } = site({
+    '/gitpa/graph.html': { scripts: GRAPH_SCRIPTS, home: true },
+    '/gitpa/one/': { scripts: SHARED_SCRIPTS, home: true },
+  }, GRAPH_SCRIPTS);
+  win.location = new URL('https://example.com/gitpa/graph.html#/graph');
+  const navigator = createNavigator({ document: doc, window: win });
+  // The document has run the graph script, but it drew only the graph it started with.
+  assert.equal(await navigator.navigate('/gitpa/one/'), true);
+  assert.equal(loads.length, 0);
+  watch();
+  await navigator.navigate('/gitpa/graph.html#/graph');
+  assert.deepEqual(loads, [['assign', 'https://example.com/gitpa/graph.html#/graph']]);
+  navigator.dispose();
+});
+
+test('the header follows the new page, including its Home button, and keeps revealed controls revealed', async () => {
+  const { doc, win } = site({
+    '/gitpa/': { scripts: SHARED_SCRIPTS, home: false },
+    '/gitpa/episode/': { scripts: SHARED_SCRIPTS, home: true },
+  });
+  const homepage = headerNode(doc, { home: false });
+  for (const selector of ['[data-lsg-left-toggle]', '[data-lsg-more]', '[data-lsg-right-toggle]']) homepage.controls[selector].hidden = false;
+  homepage.controls['[data-lsg-left-toggle]'].setAttribute('aria-expanded', 'true');
+  homepage.controls['[data-lsg-more]'].setAttribute('aria-expanded', 'true');
+  doc.nodes['.lsg-header'] = homepage;
+  const navigator = createNavigator({ document: doc, window: win, onPage: () => {
+    assert.notEqual(doc.nodes['.lsg-header'], homepage);
+  } });
+  assert.equal(await navigator.navigate('/gitpa/episode/'), true);
+  const episode = doc.nodes['.lsg-header'];
+  assert.ok(episode.querySelector('a[aria-label="Home"]'));
+  assert.equal(episode.querySelector('[data-lsg-left-toggle]').hidden, false);
+  assert.equal(episode.querySelector('[data-lsg-left-toggle]').getAttribute('aria-expanded'), 'true');
+  assert.equal(episode.querySelector('[data-lsg-more]').hidden, false);
+  assert.equal(episode.querySelector('[data-lsg-more]').getAttribute('aria-expanded'), 'false');
+  assert.equal(episode.querySelector('[data-lsg-right-toggle]').hidden, false);
+  assert.equal(episode.querySelector('[data-lsg-right-toggle]').getAttribute('aria-expanded'), 'false');
+  // Search was never revealed here, so it stays hidden.
+  assert.equal(episode.querySelector('[data-lsg-search]').hidden, true);
+  episode.querySelector('[data-lsg-search]').hidden = false;
+  assert.equal(await navigator.navigate('/gitpa/'), true);
+  const home = doc.nodes['.lsg-header'];
+  assert.equal(home.querySelector('a[aria-label="Home"]'), null);
+  assert.equal(home.querySelector('[data-lsg-search]').hidden, false);
+  assert.equal(home.querySelector('[data-lsg-left-toggle]').hidden, false);
   navigator.dispose();
 });
 
@@ -307,7 +436,7 @@ test('search receives replaced revision metadata before page hooks, and resets w
   const originalQuery = doc.querySelector;
   doc.querySelectorAll = query => query === selector ? doc.head.children.filter(node => !node.removed) : (doc.nodes[query] ? [doc.nodes[query]] : []);
   doc.querySelector = query => query === selector ? doc.querySelectorAll(query)[0] || null : originalQuery(query);
-  win.DOMParser = class { parseFromString(html) { return { title: html, querySelector: query => {
+  win.DOMParser = class { parseFromString(html) { return { title: html, querySelectorAll: () => [], querySelector: query => {
     if (query === selector) return html === 'disabled' ? null : metadata(html);
     return ['main', 'nav'].includes(query) ? new Node(query, doc) : null;
   } }; } };
