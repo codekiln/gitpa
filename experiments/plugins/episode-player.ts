@@ -11,7 +11,7 @@ export interface EpisodePlayer {
 
 export function episodePlayerPlugin(createPlayer: (document: Document) => EpisodePlayer): RuntimePlugin {
   return {
-    id: 'gitpa/episode-player',
+    id: 'gitpa-episode-player',
     apiVersion: 1,
     setup(host: RuntimeHost): Dispose {
       const region = host.persistentRegion('recording');

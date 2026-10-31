@@ -14,7 +14,7 @@ export interface PageAdoption {
   readonly page: PublishedPage;
   readonly main: HTMLElement;
   readonly revision: string;
-  /** Approved data keyed by plugin id. A plugin validates its own payload. */
+  /** Published property values for this plugin. The plugin validates its payload. */
   readonly metadata: Readonly<Record<string, unknown>>;
   /** Aborted before this page is removed. Persistent player state belongs to the site. */
   readonly signal: AbortSignal;
@@ -45,10 +45,12 @@ export interface RuntimePlugin {
 export interface RuntimeManifest {
   readonly id: string;
   readonly apiVersion: 1;
-  /** Build-resolved local asset URLs; no browser package resolver. */
+  readonly version: string;
+  /** Asset paths relative to the manifest. */
   readonly module: string;
   readonly styles?: readonly string[];
   readonly activation: 'after-load' | 'on-demand';
+  readonly pageProperties?: readonly string[];
 }
 
 /** Candidate build boundary: selected, redacted originals, never the raw source graph. */

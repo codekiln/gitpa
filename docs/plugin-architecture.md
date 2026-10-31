@@ -4,6 +4,10 @@ Gitpa should supply its podcast behavior through an optional plugin contract. Ga
 
 **Status: proposal and an unshipped, type-checked consumer experiment.** Gardener does not yet export the proposed API. The current production build and player are unchanged. [Gitpa93](https://github.com/codekiln/gitpa/issues/93) owns adaptation; [Gardener195](https://github.com/codekiln/logseq-gardener/issues/195) hands the reusable publisher and runtime work to the Claude agent.
 
+## Gardener host proposal
+
+[Gardener PR #255: plugin host for published sites](https://github.com/codekiln/logseq-gardener/pull/255) proposes the first runtime slice of this contract. Its manifest adds a plugin `version` and optional `pageProperties`; plugin IDs use lowercase letters, digits and hyphens. The publisher exposes only requested properties visible to readers. The host passes each plugin its own page metadata. The proposal also defines `lsg-site.json`, lower-cased page IDs, and a notice when a new build is encountered during navigation. Build-time presentation contributions remain a follow-up. The Gardener proposal remains under review.
+
 ## Keep these responsibilities separate
 
 | Owner | Responsibility |
