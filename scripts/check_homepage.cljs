@@ -11,8 +11,10 @@
 
 (def source (or (first *command-line-args*) "gitp-garden"))
 (def temporary (.mkdtempSync fs (path/join (.tmpdir os) "gitpa-query-")))
-(def graph (path/join temporary "prepared"))
-(.execFileSync child "python3" #js ["scripts/prepare_site.py" "--source" source "--output" graph])
+(def prepared? (= "--prepared" (nth *command-line-args* 2 nil)))
+(def graph (if prepared? source (path/join temporary "prepared")))
+(when-not prepared?
+  (.execFileSync child "python3" #js ["scripts/prepare_site.py" "--source" source "--output" graph]))
 (def content (.readFileSync fs (str graph "/pages/Ghost in the Patch.md") "utf8"))
 (def query-text (second (re-find #"(?s)#\+BEGIN_QUERY\s*(.*?)\s*#\+END_QUERY" content)))
 (def query-map (reader/read-string query-text))
@@ -67,7 +69,11 @@
 
 ;; A real parsed fixture catches timezone ordering independently of the transform.
 (def fixture-source (path/join temporary "fixture"))
-(.cpSync fs source fixture-source #js {:recursive true})
+;; The fixtures need the graph's parser configuration, not a second copy of
+;; every real page. Keep them on the same preparation and parsing path.
+(.mkdirSync fs (path/join fixture-source "pages") #js {:recursive true})
+(.mkdirSync fs (path/join fixture-source "journals") #js {:recursive true})
+(.cpSync fs (path/join graph "logseq") (path/join fixture-source "logseq") #js {:recursive true})
 (doseq [[name date public] [["timezone-earlier" "2099-10-05T10:00:00+02:00" "true"]
                            ["timezone-later" "2099-10-05T09:00:00Z" "true"]
                            ["unpublished" "2100-01-01T00:00:00Z" "false"]]]
