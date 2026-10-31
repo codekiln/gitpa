@@ -30,11 +30,19 @@ class NamespaceDiscoveryTests(unittest.TestCase):
             (root / 'pages/Instrument.md').write_text('- [[Instrumental/Unrelated]]\n')
             (root / 'pages/Instrumental___Unrelated.md').write_text('- unrelated\n')
             self.assertEqual({'Instrument'}, select(root, 'Instrument')[1])
-    def test_missing_root_rejected(self):
+    def test_namespace_without_content_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder); (root / 'pages').mkdir()
             with self.assertRaisesRegex(ValueError, 'root'):
                 select(root, 'Missing')
+    def test_logical_root_is_reported_and_descendants_selected(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder); (root / 'pages').mkdir(); (root / 'journals').mkdir()
+            (root / 'pages/Recorder___Guide.md').write_text('- [[Recorder]]\n')
+            (root / 'pages/Recorder___Port___USB.md').write_text('- Port\n')
+            _, selected, missing, _ = select(root, 'Recorder')
+            self.assertEqual({'Recorder/Guide', 'Recorder/Port/USB'}, selected)
+            self.assertEqual(['Recorder'], missing)
 
 class NamespacePlannerTests(unittest.TestCase):
     def fixture(self, root):
@@ -94,6 +102,22 @@ class NamespacePlannerTests(unittest.TestCase):
                 core.apply_plan(repeat)
                 self.assertEqual(before, {str(p.relative_to(dest)): p.read_bytes()
                     for p in dest.rglob('*') if p.is_file()})
+    def test_logical_root_imports_descendants_and_repeats_unchanged(self):
+        from sync_namespace import plan_namespace
+        with tempfile.TemporaryDirectory() as folder:
+            source, dest = self.fixture(Path(folder))
+            (source / 'pages/Instrument.md').unlink()
+            (source / 'pages/Instrument___Port___USB.md').write_text('- [[Instrument]]\n')
+            core, plan, report = plan_namespace(source, dest, 'Instrument')
+            core.apply_plan(plan)
+            self.assertEqual('Instrument/Guide: question?', plan.page)
+            self.assertIn('Instrument', report['missing_namespace_content'])
+            self.assertTrue((dest / 'pages/Instrument___Port___USB.md').is_file())
+            self.assertFalse((dest / 'pages/Instrument.md').exists())
+            before = {str(p): p.read_bytes() for p in dest.rglob('*') if p.is_file()}
+            core, repeat, _ = plan_namespace(source, dest, 'Instrument')
+            core.apply_plan(repeat)
+            self.assertEqual(before, {str(p): p.read_bytes() for p in dest.rglob('*') if p.is_file()})
     def test_page_collision_rejects_the_batch(self):
         from sync_namespace import plan_namespace
         with tempfile.TemporaryDirectory() as folder:

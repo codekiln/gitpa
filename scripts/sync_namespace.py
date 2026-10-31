@@ -20,8 +20,8 @@ def within(name, namespace):
 def select(source, namespace):
     files = names(source)
     selected = {n for n in files if within(n, namespace)}
-    if namespace not in selected:
-        raise ValueError(f'Namespace root has no source content: {namespace}')
+    if not selected:
+        raise ValueError(f'Namespace root and descendants have no source content: {namespace}')
     logical = set()
     for directory in ('pages', 'journals'):
         for file in (source / directory).glob('*.md'):
@@ -63,7 +63,9 @@ def plan_namespace(source, destination, namespace):
     sys.path.insert(0, str(library))
     core = importlib.import_module('core')
     importer = importlib.import_module('task_imports')
-    plan = core.build_page_plan(source, destination, namespace, follow_embeds=True)
+    # A root that exists only as a link target is reported missing; the shallowest descendant anchors the plan.
+    anchor = min((n for n in selected if within(n, namespace)), key=lambda n: (n.count('/'), n))
+    plan = core.build_page_plan(source, destination, anchor, follow_embeds=True)
     for name in sorted(selected):
         core.add_page(plan, name)
     importer.extend_plan(plan)
