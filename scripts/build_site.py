@@ -259,11 +259,11 @@ def install_episode_player(output, episodes):
                     f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">')
         path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
     additions = (f'<link rel="stylesheet" href="{base}player.css">'
-                 f'<script type="module" src="{base}player.js"></script>')
+                 f'<script type="module" src="{base}bootstrap.js"></script>')
     for path in output.glob('*.html'):
         text = path.read_text(encoding='utf-8')
         path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
-    for filename in ['player.js', 'player.css', 'navigation.js']:
+    for filename in ['bootstrap.js', 'player.js', 'player.css', 'navigation.js']:
         shutil.copyfile(ROOT / 'site' / filename, output / filename)
 
 
