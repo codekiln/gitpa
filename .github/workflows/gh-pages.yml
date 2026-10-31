@@ -49,7 +49,7 @@ jobs:
 
       - name: Build pinned Logseq Gardener
         env:
-          GARDENER_REV: ebf54528c0c43ad82f8fb52ed9e988558dc817af
+          GARDENER_REV: f78a02522fe01eab9cbd915f74d29dfc6d82aa05
         run: cargo +1.97.0 install --git https://github.com/codekiln/logseq-gardener --rev "$GARDENER_REV" --locked --root "$RUNNER_TEMP/gardener" logseq-gardener
 
       - name: Publish with Logseq Gardener
