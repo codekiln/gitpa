@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4e22bf47cb5ecf229eebde02dc95677070c0189d24d0735bc397cafa6f797ae5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "210d476bd45471c1cd7ec59874eac3e98ce8828d1134e2a99fabc71e463fb3ad",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/09 Operator/03 LFO Section"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/09 Operator/03 LFO Section",
+  "version": 2
+}

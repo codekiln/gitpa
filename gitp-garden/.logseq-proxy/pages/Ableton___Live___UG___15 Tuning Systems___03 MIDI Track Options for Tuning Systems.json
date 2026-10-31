@@ -1,0 +1,14 @@
+{
+  "body_sha256": "59365dbde5526bcf25310f213818dee1bbf47ae29430768e3e77239e583cdc92",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/15 Tuning Systems/03 MIDI Track Options for Tuning Systems"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/15 Tuning Systems/03 MIDI Track Options for Tuning Systems",
+  "version": 2
+}

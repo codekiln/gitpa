@@ -1,0 +1,14 @@
+{
+  "body_sha256": "30436c013953a2caf58b5226a1d2f085f2a83132b8f77da35d601506fdfabf72",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/36 Spectral Resonator/05 Global Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/36 Spectral Resonator/05 Global Parameters",
+  "version": 2
+}

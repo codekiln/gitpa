@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a04b8611dd750e91b57bd07ff7cffd1c9e885d6c50d0558ef374f63a1837b5ae",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/01 The Decoding Cache"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/01 The Decoding Cache",
+  "version": 2
+}

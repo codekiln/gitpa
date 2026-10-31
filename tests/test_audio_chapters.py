@@ -33,6 +33,25 @@ class AudioChapterTests(unittest.TestCase):
         text, _ = compile_episode(original)
         self.assertIn(f'[14:42]({FULL}#t=882)', text)
 
+    def test_subheading_timestamps_seek_and_preserve_parent_chapter_media_scope(self):
+        original = HEADER + ('\t\t- ### 00:00 Opening\n'
+            '\t\t\t- #### 03:07 Nested [[Link]]\n'
+            '\t\t\t\t- ##### 04:12–05:00 Detail\n'
+            '\t\t\t\t\t- ###### 1:02:03 Deep detail\n'
+            '\t\t\t- ![Waveform](https://example.com/recording___0000-0540.png)\n'
+            '\t\t- #### 06:01 Sibling\n')
+        text, _ = compile_episode(original)
+        for heading, value, seconds in [('####', '03:07', 187), ('#####', '04:12', 252),
+                                         ('######', '1:02:03', 3723), ('####', '06:01', 361)]:
+            self.assertIn(f'{heading} [{value}]({FULL}#t={seconds})', text)
+        self.assertIn('–05:00 Detail', text)
+        self.assertNotIn('recording___0000-0540.png', text)
+
+    def test_published_halloween_episode_subheading_timestamp(self):
+        episode = Path(__file__).resolve().parents[1] / 'gitp-garden/pages/GitP___A___Session___26___10___29-Thu.md'
+        text, recording = compile_episode(episode.read_text())
+        self.assertIn(f'#### [03:07]({recording}#t=187) secondo strato', text)
+
     def test_fenced_and_inline_code_stays_literal(self):
         for fence in ['~~~', '```']:
             example = (f'\t\t- {fence}markdown\n'

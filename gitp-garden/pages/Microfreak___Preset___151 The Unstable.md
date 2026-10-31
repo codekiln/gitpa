@@ -14,7 +14,7 @@ preset-synth-file-sha256:: 80d2c3b0312e9a2588dd969619d8e417e2d66e8655961ef064cfa
 preset-synth-microfreak-parameter-payload-sha256:: fbd5336466e244efd086246d66b7c760b9c8763b0134763a01c154636510fcf7
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F151%20The%20Unstable
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___151%20The%20Unstable.md
-logseq-proxy-last-sync-date:: [[2026-10-25]]
+logseq-proxy-last-sync-date:: [[2026-10-29]]
 - # Notes
 	- Paraphonic V.Analog pad with a slow attack, pressure-controlled pulse shape, and a looping cycling envelope that pushes filter resonance.
 	- ## Saved export and provenance
@@ -30,7 +30,7 @@ logseq-proxy-last-sync-date:: [[2026-10-25]]
 		- [Keyboard octave]([[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]): +2, per the [MicroFreak Reader octave table](https://github.com/francoisgeorgy/microfreak-reader/blob/master/src/model/index.js#L1783-L1797). [Glide]([[Microfreak/UI/Front/Row/02 Main/01 Glide Knob]]): 0.
 	- ## Filter
 		- [Low-pass filter]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/LPF]]). Saved [cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]): 0.099; [resonance]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]]): 0.000. Cutoff and resonance are normalized settings, not hertz or display values. [[Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter]]
-		- The low cutoff leaves the filter mostly closed until the main envelope and the cycling envelope's resonance route open it up (see the modulation matrix).
+		- The main envelope opens the low-pass cutoff from its low saved setting. The cycling envelope changes resonance independently, emphasizing the cutoff region as the note develops (see the modulation matrix).
 	- ## Envelopes
 		- Main envelope: [attack]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]) 0.431, [decay/release]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]]) 0.672, [sustain]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Sustain]]) 0.996. [Amp Mod]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Button/Amp Mod]]) is on, so the main envelope controls loudness: notes swell in and hold at nearly full level. [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
 		- Cycling Envelope mode: [Loop]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Button/Mode/Loop]]). Stored RiseLvl 0.000, RiseSlp 0.500, FallLvl 0.211, FallSlp 0.500, Hold 0.000, [Amount]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]]) 0.695. These are normalized stored fields; rise and fall times in milliseconds remain unverified. [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]

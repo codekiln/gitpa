@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fd0165607ef2677e11bdc67e2a98f1b1ad0548001c9729d992e240c4509d49de",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/YouTube/Playlist"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/YouTube/Playlist",
+  "version": 2
+}

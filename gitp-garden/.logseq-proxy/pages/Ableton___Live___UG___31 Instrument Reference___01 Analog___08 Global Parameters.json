@@ -1,0 +1,14 @@
+{
+  "body_sha256": "93c66c45f2242fcb32f21c3a43ea7c154a696ce94de6a27f9de763a3296a64ce",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/08 Global Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/08 Global Parameters",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "179218e6d3fa4b21373a95d25a28ffb12e2256441c43a287d620914927f8e9d9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Marwa"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Marwa",
+  "version": 2
+}

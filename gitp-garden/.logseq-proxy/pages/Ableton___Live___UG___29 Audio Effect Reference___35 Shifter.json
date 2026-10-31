@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5f05e1451a7797984c584d240048871853800387c8a9bdafed2b40761bc78949",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/35 Shifter"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/35 Shifter",
+  "version": 2
+}

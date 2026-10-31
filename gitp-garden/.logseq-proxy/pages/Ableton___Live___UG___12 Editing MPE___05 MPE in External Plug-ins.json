@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bc4d0c6c7f08dd8c9e9fb05e90771a9e05515a07cbfd6182b9e065493c392123",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/12 Editing MPE/05 MPE in External Plug-ins"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/12 Editing MPE/05 MPE in External Plug-ins",
+  "version": 2
+}

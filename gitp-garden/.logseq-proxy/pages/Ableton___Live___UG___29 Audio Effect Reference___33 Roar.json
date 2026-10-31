@@ -1,0 +1,14 @@
+{
+  "body_sha256": "27acacb55ce74751a736931e799410ccd2d9aa4f22f8cdbc180aabb55aea5fcb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/33 Roar"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/33 Roar",
+  "version": 2
+}

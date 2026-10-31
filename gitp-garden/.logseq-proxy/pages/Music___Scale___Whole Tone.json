@@ -1,0 +1,14 @@
+{
+  "body_sha256": "39c63a14a1d7803cd73f4bca2366a6094c8d43ee5a62ce0a3b3c80faf6189699",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Whole Tone"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Whole Tone",
+  "version": 2
+}

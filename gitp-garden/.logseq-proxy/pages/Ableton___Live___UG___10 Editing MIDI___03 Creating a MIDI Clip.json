@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f362e8b170a55b70e8b444a4598d4110c6b098f9754f3f917f6725647731b846",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/03 Creating a MIDI Clip"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/03 Creating a MIDI Clip",
+  "version": 2
+}

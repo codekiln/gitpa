@@ -1,0 +1,14 @@
+{
+  "body_sha256": "92fddc5ce3280e8b6d7e14fbae32d8f10a1505223ce5ef686a6e7287d7708e2a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet/01 Ideal MIDI Behavior"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet/01 Ideal MIDI Behavior",
+  "version": 2
+}

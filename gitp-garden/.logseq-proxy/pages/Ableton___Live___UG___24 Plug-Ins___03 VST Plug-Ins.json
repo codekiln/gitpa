@@ -1,0 +1,14 @@
+{
+  "body_sha256": "450081193915c1e0c46ff8275ca4a471341885efbd1370a62dac3260ae023381",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/24 Plug-Ins/03 VST Plug-Ins"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/24 Plug-Ins/03 VST Plug-Ins",
+  "version": 2
+}

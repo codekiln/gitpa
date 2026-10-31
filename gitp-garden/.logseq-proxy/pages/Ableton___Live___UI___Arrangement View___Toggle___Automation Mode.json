@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e2304f6b748d85329297b88a5d93638a41131127f4bc3fc99f00dcf12308d8a2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Toggle/Automation Mode"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Toggle/Automation Mode",
+  "version": 2
+}

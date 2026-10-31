@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7abcd7185269f7570386c4e34d1e45abd4e5f76cd6718a6a496f991b7ac7eab4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/05 Beat Repeat"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/05 Beat Repeat",
+  "version": 2
+}

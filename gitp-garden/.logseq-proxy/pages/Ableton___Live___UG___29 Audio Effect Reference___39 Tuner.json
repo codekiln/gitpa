@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f5d10564f36267b8e32fae1a7eef8bb70458967b4f7954f33a0a280970d3acc1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/39 Tuner"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/39 Tuner",
+  "version": 2
+}

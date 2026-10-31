@@ -1,0 +1,14 @@
+{
+  "body_sha256": "25d30fc3b5a17f4210c9e81ff2140c02854a0f9547ec0e35f4f5830048fa868f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/21 Glue Compressor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/21 Glue Compressor",
+  "version": 2
+}

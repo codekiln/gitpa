@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d60c9d51fd850bb8133ca4daf80c5ee721e94c5e4c1617040615bf9dc1f4620c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Blues"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Blues",
+  "version": 2
+}

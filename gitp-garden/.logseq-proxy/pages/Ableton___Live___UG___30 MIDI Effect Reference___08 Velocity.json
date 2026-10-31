@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d580e0dc4936aa4982ed37b3de7da76ace6e2435b178a3119a7c63aa272e2be5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/08 Velocity"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/08 Velocity",
+  "version": 2
+}

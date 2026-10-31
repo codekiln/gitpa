@@ -1,0 +1,14 @@
+{
+  "body_sha256": "550b33a6f4b0278a7d918103946536eabe8fd9976a35f11ba637d7571c664ce5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files/01 Exporting MIDI Files"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files/01 Exporting MIDI Files",
+  "version": 2
+}

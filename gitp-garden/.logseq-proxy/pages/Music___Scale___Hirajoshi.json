@@ -1,0 +1,14 @@
+{
+  "body_sha256": "43b7aece7c97a78774b138375ecc5fa76273f25da8096b17504666335a3a2543",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Hirajoshi"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Hirajoshi",
+  "version": 2
+}

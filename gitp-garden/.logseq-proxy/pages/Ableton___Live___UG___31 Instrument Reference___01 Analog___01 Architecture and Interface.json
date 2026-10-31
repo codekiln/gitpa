@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f3afac4cb2f6710e363c94f31e3a32cfb616cc0757719c6b7862c8a0a760b83e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/01 Architecture and Interface"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/01 Architecture and Interface",
+  "version": 2
+}

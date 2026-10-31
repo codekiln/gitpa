@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e7480afa6be1797d611fe7250342e0c0a8bbbbe23c12f80079507d13666c6c56",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/18 Mixing/08 Keep Monitoring Latency in Recording Track Toggles"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/18 Mixing/08 Keep Monitoring Latency in Recording Track Toggles",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a435b7d4afeb10d31f59422ab2af1cdacf83104e14c6da9e23f32196bc523520",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/06 Cabinet"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/06 Cabinet",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ea195ce62766829f8fa324bcff8bc790da0ca57a906bb91a563241f65541e535",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/02 First Steps"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/02 First Steps",
+  "version": 2
+}

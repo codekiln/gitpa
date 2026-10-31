@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7c946b705ef6c6cc421b0ac23a5391cb1c4836fd5ba8b2583035ef6637554efc",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Scrub Area"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Scrub Area",
+  "version": 2
+}

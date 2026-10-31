@@ -1,0 +1,18 @@
+{
+  "body_sha256": "18dd5d74d5ae8e3311d7ab5b78ae6ea5fb85b04e8dbed2e9e8fb48a47a043884",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Scale": {
+      "files": [],
+      "page": "Music/Scale",
+      "source_graph": "."
+    }
+  },
+  "page": "Music/Scale",
+  "version": 2
+}

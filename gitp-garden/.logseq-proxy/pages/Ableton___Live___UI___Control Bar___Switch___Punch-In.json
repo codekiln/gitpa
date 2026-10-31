@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4415905e1708005479f5822e4f3cac0c31162109b27cb1c2c4e715efa9a7dbba",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Switch/Punch-In"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Switch/Punch-In",
+  "version": 2
+}

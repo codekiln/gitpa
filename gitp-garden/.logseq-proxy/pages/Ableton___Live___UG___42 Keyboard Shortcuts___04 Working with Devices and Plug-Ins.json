@@ -1,0 +1,14 @@
+{
+  "body_sha256": "302831656006016a0f3fb5aaea1e1ab4fa77ee407162c9be90faa61612ff45db",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins",
+  "version": 2
+}

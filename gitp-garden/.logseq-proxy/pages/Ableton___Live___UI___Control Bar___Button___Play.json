@@ -1,0 +1,14 @@
+{
+  "body_sha256": "04edf15bcf1c68d60c281ced6c9bcc51f5bc742deed02d45c4e0e3b65b5583e8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Button/Play"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Button/Play",
+  "version": 2
+}

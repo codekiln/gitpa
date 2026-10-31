@@ -1,0 +1,14 @@
+{
+  "body_sha256": "780760c367d53a10fb908116aeade701cd6693d3f21d90ec0e8c3614b7f9bb0e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Pentatonic/Minor"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Pentatonic/Minor",
+  "version": 2
+}

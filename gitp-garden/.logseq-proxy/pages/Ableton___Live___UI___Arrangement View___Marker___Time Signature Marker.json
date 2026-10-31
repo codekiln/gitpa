@@ -1,0 +1,14 @@
+{
+  "body_sha256": "226b1bcdc87b7ecf5542dec36c03ea8f50c027ccad3845a95141f4108cb47a85",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Marker/Time Signature Marker"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Marker/Time Signature Marker",
+  "version": 2
+}

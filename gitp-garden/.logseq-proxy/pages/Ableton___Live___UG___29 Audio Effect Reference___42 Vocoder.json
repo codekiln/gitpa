@@ -1,0 +1,14 @@
+{
+  "body_sha256": "542e496a7433a56ed35e1982d23431e6742e899d232b3a00a29f6969cb8777b7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/42 Vocoder"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/42 Vocoder",
+  "version": 2
+}

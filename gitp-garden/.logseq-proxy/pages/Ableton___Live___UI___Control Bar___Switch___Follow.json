@@ -1,0 +1,14 @@
+{
+  "body_sha256": "15388d863e081705163ebc24fb13af01c2a9ab7c33f1418ae86a178b26fb5ea1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Switch/Follow"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Switch/Follow",
+  "version": 2
+}

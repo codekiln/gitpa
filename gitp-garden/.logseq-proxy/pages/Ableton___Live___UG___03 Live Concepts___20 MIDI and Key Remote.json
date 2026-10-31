@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c8126286b7514d0c55a0ad88d191fe8385e45e4dc1c4ed47cd639cd8f6a6c7c2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/20 MIDI and Key Remote"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/20 MIDI and Key Remote",
+  "version": 2
+}

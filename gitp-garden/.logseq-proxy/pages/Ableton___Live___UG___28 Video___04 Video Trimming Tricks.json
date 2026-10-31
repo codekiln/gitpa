@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ec5604bed58b759b9803bc599529e573af5cf50c02824bc6d95fea3e73d9038c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/28 Video/04 Video Trimming Tricks"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/28 Video/04 Video Trimming Tricks",
+  "version": 2
+}

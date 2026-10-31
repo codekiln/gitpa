@@ -1,5 +1,5 @@
 {
-  "body_sha256": "9beb2f1a08bbd9869ed412a8c7528384509c82680a0750fdd5c97fd4303874ce",
+  "body_sha256": "da8bdb8a9f2d4c09089ac210c507b2bd8a8476f7fbd81a72b9571b2a971be9bf",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/UG/06 Dig Osc/03 Types/11 Speech"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/UG/06 Dig Osc/03 Types/11 Speech": {
+      "files": [],
+      "page": "Microfreak/UG/06 Dig Osc/03 Types/11 Speech",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/UG/06 Dig Osc/03 Types/11 Speech",
   "version": 2
 }

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "dba2dd538ac93d60fe215cf9706554f204034152aa466d1c120ec7c729ffcc36",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/03 LFO Controls"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/03 LFO Controls",
+  "version": 2
+}

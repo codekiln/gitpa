@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fab1c2ed5fcad7f516b2702760cace7c8a842244d933a17d0672278e45d5ca31",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/04 Mapping to Relative MIDI Controllers"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/04 Mapping to Relative MIDI Controllers",
+  "version": 2
+}

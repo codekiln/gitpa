@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6e1a72c4e2fbc97ac1b27e71d3ce0bcb2e5ab89ff493b3e4bb9c56bbff35150d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/34 MIDI and Key Remote"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/34 MIDI and Key Remote",
+  "version": 2
+}

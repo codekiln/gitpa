@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0c8fc150bcf76020d17de4fff0dd9bf749bd8d755b7e640f92fa01b52cf6566f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Toggle/Lock Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Toggle/Lock Envelopes",
+  "version": 2
+}

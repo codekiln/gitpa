@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4ab9a076ef40caac27b1a3fdd8ef3ee72fd10843cd7401b8bee527a0be6d023f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet",
+  "version": 2
+}

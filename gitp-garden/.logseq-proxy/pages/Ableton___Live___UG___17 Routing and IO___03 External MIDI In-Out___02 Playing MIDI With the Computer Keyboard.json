@@ -1,0 +1,14 @@
+{
+  "body_sha256": "30fd72b6a54d7baea9aced8ded4b04da23d388a3f182cf244de4e7307a0e4df4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out/02 Playing MIDI With the Computer Keyboard"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out/02 Playing MIDI With the Computer Keyboard",
+  "version": 2
+}

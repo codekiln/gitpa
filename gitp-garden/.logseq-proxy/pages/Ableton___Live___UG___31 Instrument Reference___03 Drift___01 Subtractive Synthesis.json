@@ -1,0 +1,14 @@
+{
+  "body_sha256": "958f3db5db3e4238627dba009f0295f1051e49d4c220666f198dc094b5c1b14c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/03 Drift/01 Subtractive Synthesis"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/03 Drift/01 Subtractive Synthesis",
+  "version": 2
+}

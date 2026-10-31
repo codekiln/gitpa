@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b5ebb80d0cf62ee1f2338cecd013492d0a74f9c58c4fa29d940e0d64aaf46b45",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/04 Browser/08 Navigating in the Browser"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/04 Browser/08 Navigating in the Browser",
+  "version": 2
+}

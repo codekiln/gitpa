@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2f0809422814a598b9fe2848b6b0535ca5ffac7299c3ecd3195238d073eb85e4",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/24 Plug-Ins/04 Audio Units Plug-Ins"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/24 Plug-Ins/04 Audio Units Plug-Ins",
+  "version": 2
+}

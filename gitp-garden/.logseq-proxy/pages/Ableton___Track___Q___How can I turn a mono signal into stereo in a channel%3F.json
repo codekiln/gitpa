@@ -1,0 +1,14 @@
+{
+  "body_sha256": "466b9857c8009271d788cf5975eb74e7d49623d388258a8c413225bb0dfc5b57",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Track/Q/How can I turn a mono signal into stereo in a channel?"
+  ],
+  "imports": {},
+  "page": "Ableton/Track/Q/How can I turn a mono signal into stereo in a channel?",
+  "version": 2
+}

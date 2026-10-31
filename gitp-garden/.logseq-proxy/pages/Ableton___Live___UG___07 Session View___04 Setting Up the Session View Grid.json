@@ -1,0 +1,14 @@
+{
+  "body_sha256": "901ca54b776c86c9fc72d2cc91532388eb39d6b0a928a3dbd59456d50028a8f7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid",
+  "version": 2
+}

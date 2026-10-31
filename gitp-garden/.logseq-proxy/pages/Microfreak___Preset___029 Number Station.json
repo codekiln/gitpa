@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "ef7c64be21e68050f8d564bc4c5a79460909bcc24dd1e057e7ccad1af63d2f51",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/029 Number Station"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/029 Number Station": {
+      "files": [],
+      "page": "Microfreak/Preset/029 Number Station",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/029 Number Station",
   "version": 2
 }

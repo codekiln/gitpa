@@ -1,0 +1,31 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FMusic%2FRecording
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Music___Recording.md
+logseq-proxy-last-sync-date:: [[2026-10-27]]
+- # Music Recording
+	- In this garden, **Music Recording** pages model fixed audio or audiovisual recordings and album releases that preserve or publish musical material.
+	- ## What counts
+		- A recording is a captured rendition or a published collection of captured tracks. It has an identity apart from the musical work and any live performance it may document.
+		- A studio track, a live album, and a video recording of a performance can each be recorded entities. An album page represents the release and its track order; a single-track page represents one captured rendition.
+		- A recording of a cover is a new recording linked to the covered work. The cover does not create a new page for the underlying song.
+	- ## Naming and placement
+		- Place a recording under its first credited [[Logseq/Entity/Identity/Music]] as `<Identity>/Music/Recording/<Title>` when [[Logseq/Frontmatter/created-by-identities]] is present. For a joint release, keep one page under the first credited identity and list all credited identities. Without a separate identity, use `Person/<Artist>/Music/Recording/<Title>`. Existing group namespaces remain valid until deliberately renamed.
+		- Use the published album, single, track, or video title as the H1. Add a year or release context to distinguish recordings with the same title.
+		- For an album, list known tracks as bullets under a Tracks heading, in listening order. Each track begins with its two-digit, zero-padded position and a hyphen, as `01 - Dis`; the padding is two digits even on an album of nine tracks or fewer. A track links to its musical work page when that work is represented in the garden, and is plain text otherwise. Tracks are never page properties.
+	- ## Relationships
+		- Use `work::` for a single-work recording and `performance::` when the recording documents a known performance event.
+		- Album pages list tracks as numbered bullets. A work page may point back to an album with `appears-on::`.
+		- Use `cover-of::` to identify a recording as a cover of an existing work.
+		- Use [[Logseq/Frontmatter/created-by-identities]] for published artist credits; `created-by::` and `performer::` retain verified personal credits rather than being inferred from identity membership.
+		- Use `record-label::` to link the [[Logseq/Entity/Music/Label]] that released the recording.
+	- ## Instance shape
+		- Start each recording page with `logseq-entity:: [[Logseq/Entity/Music/Recording]]` and one H1 containing its published title.
+		- Add `performer::`, `date-created::`, and links to the represented work, performance, or release when those details are known.
+		- Add `logseq-created-time-year::` linking the [[Logseq/Entity/Time/Year]] page of the release, as `logseq-created-time-year:: [[20/1/8]]` for a 2018 album. A recording without a known year links its decade or century.
+		- Keep tracks in the album's listening order; do not create work pages solely to complete an otherwise unknown track list.
+	- ## Frontmatter
+		- [[Logseq/Frontmatter/created-by-identities]]
+		- [[Logseq/Entity/Music/Recording/Frontmatter/performer]]
+		- [[Logseq/Entity/Music/Recording/Frontmatter/record-label]]
+		- [[Logseq/Frontmatter/logseq-created-time-year]]

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3d9b14bff27030ee5b6dfa5d2c3520a2dd2ae44b7d32b7e3f8b40ae808e49e49",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Minor/Harmonic"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Minor/Harmonic",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b55098842823ae761509c417db30dd0e8f0de8b9e04a44a3575ea29dd446d439",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Music/Scale/Frontmatter/scale-semitones-above-tonic"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Music/Scale/Frontmatter/scale-semitones-above-tonic",
+  "version": 2
+}

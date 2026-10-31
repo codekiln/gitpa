@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fc791d56a4d45efcbd8a46335e2e07a037a5f6a39b22490d514c85471e344491",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/03 Diffusion Network"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/03 Diffusion Network",
+  "version": 2
+}

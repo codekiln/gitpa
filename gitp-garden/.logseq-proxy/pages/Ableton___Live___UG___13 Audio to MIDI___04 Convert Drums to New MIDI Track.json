@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e9202d64427bccef86fcc887c566de3848ce103c3baa4c2e7cdcb68f33e303d6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI/04 Convert Drums to New MIDI Track"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI/04 Convert Drums to New MIDI Track",
+  "version": 2
+}

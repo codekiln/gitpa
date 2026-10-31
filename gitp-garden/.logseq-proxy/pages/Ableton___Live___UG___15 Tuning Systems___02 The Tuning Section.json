@@ -1,0 +1,14 @@
+{
+  "body_sha256": "216866948c13793b5c606a4277d03ef7162e3c24eb9cd2a86469cb062bfbff87",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/15 Tuning Systems/02 The Tuning Section"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/15 Tuning Systems/02 The Tuning Section",
+  "version": 2
+}

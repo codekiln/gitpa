@@ -1,0 +1,14 @@
+{
+  "body_sha256": "358d6a3b8433c1726528d987aa9631c79ddb9c2a6d0b817ff37c4c1d4a754740",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/16 EQ Three"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/16 EQ Three",
+  "version": 2
+}

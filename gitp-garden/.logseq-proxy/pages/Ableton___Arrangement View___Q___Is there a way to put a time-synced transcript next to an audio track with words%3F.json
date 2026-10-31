@@ -1,0 +1,14 @@
+{
+  "body_sha256": "02fad21c353f7cfc796ff4ecee92f7a558dfaca935b150c4297e6a04187d340c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Arrangement View/Q/Is there a way to put a time-synced transcript next to an audio track with words?"
+  ],
+  "imports": {},
+  "page": "Ableton/Arrangement View/Q/Is there a way to put a time-synced transcript next to an audio track with words?",
+  "version": 2
+}

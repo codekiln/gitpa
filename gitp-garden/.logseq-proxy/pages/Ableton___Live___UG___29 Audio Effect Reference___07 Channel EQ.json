@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d512ecec397745e183b8f44411ba5dcff98cff623c4523f4a91e0b2c82cc5f1d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/07 Channel EQ"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/07 Channel EQ",
+  "version": 2
+}

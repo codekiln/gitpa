@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a5121c9a6c7fb67dd2e6f59278b4c5b4269c8caf2cb123cf6d29ff60592d794a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/12 Drum Buss"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/12 Drum Buss",
+  "version": 2
+}

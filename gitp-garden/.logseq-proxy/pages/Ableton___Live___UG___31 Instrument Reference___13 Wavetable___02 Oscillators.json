@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fb81d4db7e80ef5a8d74d621ecfb420082c42f08c5e9f05eec68ec977e9a85c1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/02 Oscillators"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/02 Oscillators",
+  "version": 2
+}

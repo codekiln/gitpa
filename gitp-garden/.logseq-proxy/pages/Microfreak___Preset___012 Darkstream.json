@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "60c9ca8e0a9949e198dff203577516f08f3a523061d00a0f641a5d28bdbdb428",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/012 Darkstream"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/012 Darkstream": {
+      "files": [],
+      "page": "Microfreak/Preset/012 Darkstream",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/012 Darkstream",
   "version": 2
 }

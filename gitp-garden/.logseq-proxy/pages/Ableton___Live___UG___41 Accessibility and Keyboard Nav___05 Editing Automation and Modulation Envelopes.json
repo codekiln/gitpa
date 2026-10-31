@@ -1,0 +1,14 @@
+{
+  "body_sha256": "67a8e9334623b6305b270d9b9ed4462c32cc855c200817714d4dcfa997f6030a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/41 Accessibility and Keyboard Nav/05 Editing Automation and Modulation Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/41 Accessibility and Keyboard Nav/05 Editing Automation and Modulation Envelopes",
+  "version": 2
+}
