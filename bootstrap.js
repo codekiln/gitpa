@@ -7,10 +7,22 @@ const installations = new WeakMap();
 export function installSite(document, { createPlayer = createSitePlayer, createNavigation = createNavigator } = {}) {
   if (installations.has(document)) return installations.get(document);
   let player = null, navigation = null, started = false, disposed = false;
+  async function copyFeed(event) {
+    const button = event.target.closest?.('[data-copy-feed]');
+    if (!button) return;
+    const status = button.parentElement.querySelector('[data-copy-feed-status]');
+    try {
+      await document.defaultView.navigator.clipboard.writeText('https://codekiln.github.io/gitpa/rss.xml');
+      status.textContent = 'Feed URL copied.';
+    } catch {
+      status.textContent = 'Copy the podcast RSS feed link instead.';
+    }
+  }
   function stop(restoreOriginal = false) {
     if (disposed) return;
     disposed = true;
     document.removeEventListener('DOMContentLoaded', start);
+    document.removeEventListener('click', copyFeed);
     try {
       try { navigation?.dispose(); }
       finally { player?.dispose({ restoreOriginal }); }
@@ -32,6 +44,7 @@ export function installSite(document, { createPlayer = createSitePlayer, createN
       throw error;
     }
   }
+  document.addEventListener('click', copyFeed);
   installations.set(document, installation);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
   else start();
