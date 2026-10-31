@@ -28,6 +28,8 @@ The Publish workflow downloads a released Linux build of `lsg` and checks it aga
 2. Set `GARDENER_SHA256` to the hash in that release's `logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256` file. `gh release download <tag> --repo codekiln/logseq-gardener --pattern '*x86_64-unknown-linux-gnu.tar.xz.sha256' --output -` prints it.
 3. Open a pull request. The build log shows the `lsg --version` output, and the uploaded `gitpa-website` preview shows the result of the new renderer.
 
+`scripts/build_site.py` finds rendered pages through Gardener's `lsg-site.json` route list, then edits the generated HTML for the homepage query, the Apple Podcasts button and the episode player. If a new release changes that output, the publish step stops with a message that names the missing page or link.
+
 ## Search
 
 Search uses Gardener's shared static index and dialog. Open it from the header search button or with Cmd/Ctrl+K. Results include published page titles, unique aliases and original note text. Page results open readable namespace URLs; note results open their source block and reveal its enclosing collapsed outlines. Internal result navigation keeps the current recording and appearance setting.
