@@ -131,10 +131,10 @@ def install_homepage_query(output, result):
         marker, prefix = matches[0]
         rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
         text = text.replace(marker, rendered_rows)
-        rss_link = '<a href="https://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a>'
+        rss_link = '<a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a>'
         if text.count(rss_link) != 1:
-            raise ValueError('Expected one Apple Podcasts subscription link')
-        text = text.replace(rss_link, '<a class="apple-podcasts-subscribe" href="podcast://codekiln.github.io/gitpa/rss.xml">Subscribe in Apple Podcasts</a>')
+            raise ValueError('Expected one podcast RSS feed link')
+        text = text.replace(rss_link, rss_link + ' <button type="button" class="apple-podcasts-subscribe" data-copy-feed>Copy feed URL</button> <span role="status" data-copy-feed-status></span>')
         path.write_text(text, encoding='utf-8')
 
 
