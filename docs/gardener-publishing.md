@@ -40,6 +40,12 @@ Generate a search-enabled preview with `python3 scripts/build_site.py --renderer
 
 Only selected public source content enters the index. Evaluated homepage query rows, copied backlink/transclusion content, hidden properties and unresolved reference identities are excluded. This first index version searches original note text rather than page-property values or generated namespace titles. The authored homepage introduction remains searchable. The legacy route map loads only when a legacy page fragment is opened.
 
+## Previous and Next
+
+A page with `prev::` or `next::` page properties shows its previous page at the left of the header with a left arrow and its next page at the right with a right arrow, each with the page title. Below 640px the header shows only the arrows, and the title remains each link's accessible name. The links come from the rendered `prev` and `next` property rows, or from Gardener's `nav.page-sequence` links, and change with in-site navigation. The property rows stay on the page.
+
+`site/header-sequence.js` is a browser plugin in the shape of Gardener's [host API](https://github.com/codekiln/logseq-gardener/blob/main/docs/publishing.md#host-api), styled by `site/header-sequence.css`. Until Gitpa runs Gardener's plugin host ([Issue #93 Define Gitpa customization through Gardener plugins](https://github.com/codekiln/gitpa/issues/93)), `site/plugin-adapter.js` gives it `onPageAdopted`: `site/bootstrap.js` adopts the first page and each page the navigator shows.
+
 ## Episode chapters
 
 Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls or follows links within the site. Selecting a chapter timestamp seeks and plays that recording. The footer follows the chapter at the current playback time; selecting the chapter name opens its notes. “Return to start” opens the chapter or episode position where the listener started playback. Playback starts only after the listener clicks a chapter or the recording controls.

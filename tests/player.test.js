@@ -10,9 +10,12 @@ let chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, curr
 before(async () => {
   const playerURL = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
   ({ chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode } = await import(playerURL));
+  const site = name => `data:text/javascript;base64,${readFileSync(join(__dirname, '../site', name)).toString('base64')}`;
   const bootstrap = readFileSync(join(__dirname, '../site/bootstrap.js'), 'utf8')
     .replace("'./player.js'", JSON.stringify(playerURL))
-    .replace("'./navigation.js'", JSON.stringify(navURL));
+    .replace("'./navigation.js'", JSON.stringify(navURL))
+    .replace("'./plugin-adapter.js'", JSON.stringify(site('plugin-adapter.js')))
+    .replace("'./header-sequence.js'", JSON.stringify(site('header-sequence.js')));
   ({ installSite } = await import(`data:text/javascript;base64,${Buffer.from(bootstrap).toString('base64')}`));
 });
 

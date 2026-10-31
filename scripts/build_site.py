@@ -23,6 +23,8 @@ from audio_chapters import compile_episode
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
 QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
+SITE_FILES = ['bootstrap.js', 'player.js', 'player.css', 'navigation.js',
+              'plugin-adapter.js', 'header-sequence.js', 'header-sequence.css']
 
 
 def normalized(name):
@@ -255,11 +257,12 @@ def install_episode_player(output, episodes):
                     f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">')
         path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
     additions = (f'<link rel="stylesheet" href="{base}player.css">'
+                 f'<link rel="stylesheet" href="{base}header-sequence.css">'
                  f'<script type="module" src="{base}bootstrap.js"></script>')
     for path in output.glob('*.html'):
         text = path.read_text(encoding='utf-8')
         path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
-    for filename in ['bootstrap.js', 'player.js', 'player.css', 'navigation.js']:
+    for filename in SITE_FILES:
         shutil.copyfile(ROOT / 'site' / filename, output / filename)
 
 
@@ -285,7 +288,8 @@ def package_pages(output):
             if (output / parent).is_file():
                 raise ValueError(f'Public page path collides with existing output: {title}')
         if path.parts[0].casefold() in {'assets', 'index.html', 'pages.html', 'custom.css',
-                                       'legacy-routes.js', 'legacy-routes.json', 'player.js', 'player.css', 'navigation.js', 'rss.xml', '.nojekyll'}:
+                                       'legacy-routes.js', 'legacy-routes.json', 'rss.xml', '.nojekyll',
+                                       *SITE_FILES}:
             raise ValueError(f'Public page path collides with asset namespace: {title}')
         if destination.exists():
             raise ValueError(f'Public page path collides with existing output: {title}')
