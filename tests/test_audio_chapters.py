@@ -6,6 +6,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from audio_chapters import compile_episode, timestamp_seconds
 from build_site import install_episode_player
+from site_fixture import write_site
 
 FULL = 'https://example.com/recording.mp3'
 HEADER = f'- # Episode\n\t- ![Full recording]({FULL})\n\t- ## Chapters\n'
@@ -104,6 +105,7 @@ class AudioChapterTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / 'pages.html').write_text('<head></head><body><a href="p-abc.html">Episode</a><a href="p-def.html">Asset</a></body>')
+            write_site(root, [('p-abc.html', 'Episode'), ('p-def.html', 'Asset')])
             (root / 'p-abc.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
             (root / 'p-def.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
             install_episode_player(root, {'episode': FULL})

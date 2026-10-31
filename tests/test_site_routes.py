@@ -5,6 +5,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+from site_fixture import write_site
 from build_site import package_pages, publish_feed, legacy_routes
 from build_rss import ARTWORK_URL, SITE_URL
 from site_routes import page_route, page_output
@@ -22,14 +23,15 @@ class PublicRoutesTests(unittest.TestCase):
                 page_route(title)
 
     def fixture(self, root, titles):
-        links = []
+        links, pages = [], []
         for i, title in enumerate(titles):
             route = f'p-{i:016x}.html'
             links.append(f'<a href="{route}">{html.escape(title)}</a>')
+            pages.append((route, title))
             (root / route).write_text('<head><link href="custom.css"></head><body>'
                                      f'<a href="{route}#block-abc">Self</a><a href="index.html">Home</a>'
                                      '<img src="assets/image.jpg"><audio src="https://example.com/audio.mp3"></audio></body>')
-        (root / 'pages.html').write_text(''.join(links))
+        write_site(root, pages)
         (root / 'index.html').write_text('<head></head>' + ''.join(links))
 
     def test_packaging_preserves_titles_fragments_media_and_hash_pages(self):

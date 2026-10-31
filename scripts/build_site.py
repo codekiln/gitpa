@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import json
 import html
-from html.parser import HTMLParser
 from pathlib import Path
 import re
 import shutil
@@ -82,43 +81,32 @@ def prepare_homepage(graph, result):
     path.write_text(text, encoding='utf-8')
 
 
-class PageRoutes(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.routes, self.titles, self.href, self.label = {}, {}, None, ''
+class PageRoutes:
+    """Map rendered page titles to Gardener's page files.
 
-    def handle_starttag(self, tag, attrs):
-        if tag == 'a':
-            href = dict(attrs).get('href', '')
-            if re.fullmatch(r'p-[0-9a-f]+\.html', href):
-                self.href, self.label = href, ''
+    Gardener lists every generated file in lsg-site.json so build tools need not
+    parse its HTML. The All pages table is split across several files and is not
+    a complete route list.
+    """
 
-    def handle_data(self, data):
-        if self.href:
-            self.label += data
-
-    def handle_endtag(self, tag):
-        if tag == 'a' and self.href:
-            self.routes[normalized(self.label)] = self.href
-            self.titles[self.href] = self.label
-            self.href = None
-
-
-def rendered_page_routes(output):
-    """Read every static page of Gardener’s All pages index."""
-    parser = PageRoutes()
-    files = [output / "pages.html"]
-    files.extend(sorted(path for path in output.glob("pages-*.html")
-                        if re.fullmatch(r"pages-[0-9]+\.html", path.name)))
-    for path in files:
-        parser.feed(path.read_text(encoding="utf-8"))
-    return parser
+    def __init__(self, output=None):
+        self.routes, self.titles = {}, {}
+        if output is None:
+            return
+        site = json.loads((output / 'lsg-site.json').read_text(encoding='utf-8'))
+        if site.get('apiVersion') != 1:
+            raise ValueError(f'Unsupported lsg-site.json apiVersion: {site.get("apiVersion")}')
+        for page in site['pages']:
+            # Stored pages and generated namespace pages; not the homepage or list routes.
+            if page['kind'] in {'page', 'namespace'} and re.fullmatch(r'p-[0-9a-f]+\.html', page['url']):
+                self.routes[normalized(page['title'])] = page['url']
+                self.titles[page['url']] = page['title']
 
 
 def install_homepage_query(output, result):
     """Insert validated query rows after Gardener has indexed authored references."""
     query_outline(result)
-    parser = rendered_page_routes(output)
+    parser = PageRoutes(output)
     rows = []
     for item in result['view'][1:]:
         label = item[1][2]
@@ -128,7 +116,7 @@ def install_homepage_query(output, result):
         rows.append(f'<li><a href="{html.escape(route, quote=True)}">{html.escape(label)}</a></li>')
     home_route = parser.routes.get(normalized(HOME))
     if not home_route:
-        raise ValueError('Rendered all-pages index does not include the homepage')
+        raise ValueError('Rendered page list does not include the homepage')
     for filename in ['index.html', home_route]:
         path = output / filename
         text = path.read_text(encoding='utf-8')
@@ -140,16 +128,24 @@ def install_homepage_query(output, result):
             raise ValueError('Expected one rendered homepage query placeholder')
         marker, prefix = matches[0]
         rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
-        path.write_text(text.replace(marker, rendered_rows), encoding='utf-8')
+        text = text.replace(marker, rendered_rows)
+        # Gardener may add attributes such as class="external-link" to the link.
+        rss_link = r'<a\b[^>]*\bhref="https://codekiln\.github\.io/gitpa/rss\.xml"[^>]*>podcast RSS feed</a>'
+        if len(re.findall(rss_link, text)) != 1:
+            raise ValueError('Expected one podcast RSS feed link')
+        text = re.sub(rss_link, lambda match: match[0] + ' <button type="button" class="apple-podcasts-subscribe" data-copy-feed>Copy feed URL</button> <span role="status" data-copy-feed-status></span>', text)
+        path.write_text(text, encoding='utf-8')
 
 
 def legacy_routes(output, graph=None, published_routes=None):
     """Preserve published Logseq hash links, including episode URLs in RSS."""
-    parser = rendered_page_routes(output) if published_routes is None else PageRoutes()
-    if published_routes is not None:
+    if published_routes is None:
+        parser = PageRoutes(output)
+    else:
+        parser = PageRoutes()
         parser.routes = dict(published_routes)
     if normalized(HOME) not in parser.routes:
-        raise ValueError('Rendered all-pages index does not include the homepage')
+        raise ValueError('Rendered page list does not include the homepage')
     if graph:
         claims = {name: {route} for name, route in parser.routes.items()}
         for page in (graph / 'pages').glob('*.md'):
@@ -243,7 +239,7 @@ def compile_episode_pages(graph):
 
 def install_episode_player(output, episodes):
     """Install persistent navigation everywhere and identify playable episodes."""
-    parser = rendered_page_routes(output)
+    parser = PageRoutes(output)
     base = urlsplit(SITE_URL).path
     for name, recording in episodes.items():
         route = parser.routes.get(name)
@@ -269,7 +265,7 @@ def install_episode_player(output, episodes):
 
 def package_pages(output):
     """Give rendered pages namespace URLs while retaining hash-file compatibility."""
-    parser = rendered_page_routes(output)
+    parser = PageRoutes(output)
     base = urlsplit(SITE_URL).path
     destinations, claims, directories = {}, {}, {}
     for route, title in parser.titles.items():

@@ -42,13 +42,24 @@ jobs:
       - name: Test episode player lifecycle
         run: node --test tests/*.test.js
 
-      - name: Install Rust for Logseq Gardener
-        run: rustup toolchain install 1.97.0 --profile minimal
-
-      - name: Build pinned Logseq Gardener
+      # To upgrade, set GARDENER_VERSION to a newer release tag and GARDENER_SHA256
+      # to the hash in that release's logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256.
+      - name: Install released Logseq Gardener
         env:
-          GARDENER_REV: f78a02522fe01eab9cbd915f74d29dfc6d82aa05
-        run: cargo +1.97.0 install --git https://github.com/codekiln/logseq-gardener --rev "$GARDENER_REV" --locked --root "$RUNNER_TEMP/gardener" logseq-gardener
+          GARDENER_VERSION: v0.0.1
+          GARDENER_SHA256: a49f35995c40e857c926c0f85c2dbe5d52028f37b3646853745669d1b1770e47
+          GARDENER_TARGET: x86_64-unknown-linux-gnu
+        run: |
+          archive="logseq-gardener-$GARDENER_TARGET.tar.xz"
+          download="$RUNNER_TEMP/gardener-download"
+          mkdir -p "$download" "$RUNNER_TEMP/gardener/bin"
+          curl --fail --silent --show-error --location --retry 3 \
+            --output "$download/$archive" \
+            "https://github.com/codekiln/logseq-gardener/releases/download/$GARDENER_VERSION/$archive"
+          echo "$GARDENER_SHA256  $download/$archive" | sha256sum --check --strict
+          tar -xJf "$download/$archive" -C "$download"
+          install -m 0755 "$download/logseq-gardener-$GARDENER_TARGET/lsg" "$RUNNER_TEMP/gardener/bin/lsg"
+          "$RUNNER_TEMP/gardener/bin/lsg" --version
 
       - name: Publish with Logseq Gardener
         run: uv run --no-project python scripts/build_site.py --renderer "$RUNNER_TEMP/gardener/bin/lsg" --search --output www

@@ -72,3 +72,21 @@ test('failed router construction disposes its player and does not strand the ins
   assert.equal(f.counts.players, 2); assert.equal(f.counts.navigators, 1);
   retry.dispose();
 });
+
+test('copy feed button reports success and clipboard failures', async () => {
+  const f = fixture(), status = { textContent: '' };
+  let copied;
+  f.document.closest = selector => selector === '[data-copy-feed]' ? f.document : null;
+  f.document.parentElement = { querySelector: () => status };
+  f.document.defaultView.navigator = { clipboard: { async writeText(value) { copied = value; } } };
+  const installation = installSite(f.document, f.factories);
+  f.document.dispatchEvent(new Event('click'));
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(copied, 'https://codekiln.github.io/gitpa/rss.xml');
+  assert.equal(status.textContent, 'Feed URL copied.');
+  f.document.defaultView.navigator.clipboard.writeText = async () => { throw new Error('denied'); };
+  f.document.dispatchEvent(new Event('click'));
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(status.textContent, 'Copy the podcast RSS feed link instead.');
+  installation.dispose();
+});

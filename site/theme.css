@@ -14,6 +14,8 @@
   --gitpa-sidebar: #ebedf2;
   --gitpa-code-text: #3b4252;
   --gitpa-button-background: #e5e9f0;
+  --subscribe-background: #563a80;
+  --subscribe-text: #ffffff;
   --gitpa-player-shadow: #2e344014;
 }
 :root[data-lsg-theme="dark"] {
@@ -31,6 +33,8 @@
   --gitpa-sidebar: #272c36;
   --gitpa-code-text: #eceff4;
   --gitpa-button-background: #434c5e;
+  --subscribe-background: #cbb6ec;
+  --subscribe-text: #20132d;
   --gitpa-player-shadow: #00000033;
 }
 @media (prefers-color-scheme: dark) {
@@ -49,6 +53,8 @@
     --gitpa-sidebar: #272c36;
     --gitpa-code-text: #eceff4;
     --gitpa-button-background: #434c5e;
+  --subscribe-background: #cbb6ec;
+  --subscribe-text: #20132d;
     --gitpa-player-shadow: #00000033;
   }
 }
@@ -109,4 +115,24 @@ body:has(> .lsg-header) {
 :root[data-lsg-theme], :root:not([data-lsg-theme]) {
   --lsg-header: var(--lsg-background);
   --lsg-sidebar: var(--gitpa-sidebar);
+}
+
+.apple-podcasts-subscribe {
+  display: inline-block;
+  padding: .55rem 1rem;
+  border: 2px solid var(--subscribe-background);
+  border-radius: .5rem;
+  background: var(--subscribe-background);
+  color: var(--subscribe-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.apple-podcasts-subscribe:hover {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+.apple-podcasts-subscribe:focus-visible {
+  outline: 2px solid var(--lsg-focus);
+  outline-offset: 3px;
 }
