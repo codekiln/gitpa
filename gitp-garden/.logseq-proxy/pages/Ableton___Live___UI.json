@@ -1,0 +1,14 @@
+{
+  "body_sha256": "94fd708851972fdd7698dd5fd7b2e37a2945a733653a6d9837f42b210dac08e0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI",
+  "version": 2
+}

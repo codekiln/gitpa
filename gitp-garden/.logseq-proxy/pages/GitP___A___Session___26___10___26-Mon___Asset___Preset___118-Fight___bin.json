@@ -1,0 +1,20 @@
+{
+  "body_sha256": "fb32c14b25e36515d431e02f3c4d1a80d44a8e51bc5f9620d739be902fabfdf1",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/26-Mon/Asset/Preset/118-Fight/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/26-Mon/Asset/Preset/118-Fight/bin": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/118-Fight/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/118-Fight/bin",
+  "version": 2
+}

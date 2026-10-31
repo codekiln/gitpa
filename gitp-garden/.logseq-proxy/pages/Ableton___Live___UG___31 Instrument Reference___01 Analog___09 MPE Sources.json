@@ -1,0 +1,14 @@
+{
+  "body_sha256": "842544d5126d8d977e46877a4b6dbea585685eb5a25c5bfbf175a6582bf79a45",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/09 MPE Sources"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/09 MPE Sources",
+  "version": 2
+}

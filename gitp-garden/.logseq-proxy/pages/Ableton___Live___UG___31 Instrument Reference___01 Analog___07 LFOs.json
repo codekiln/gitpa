@@ -1,0 +1,14 @@
+{
+  "body_sha256": "526c456c66f04f23662a53c2994434d4deab11e956e8920306c75aed7f4d862f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/07 LFOs"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/07 LFOs",
+  "version": 2
+}

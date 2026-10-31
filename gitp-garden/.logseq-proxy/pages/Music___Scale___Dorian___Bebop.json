@@ -1,0 +1,14 @@
+{
+  "body_sha256": "42cf2b88eb9ef5cd8f47cd8ac51553fd313e1426d2103fc307b6f8adc7f2fe0e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Dorian/Bebop"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Dorian/Bebop",
+  "version": 2
+}

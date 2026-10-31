@@ -1,0 +1,15 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/UI/Control]], [[Logseq/Entity/Proxy/Page]]
+up:: [[Ableton/Live/UI/Control Bar]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Ableton%2FLive%2FUI%2FControl%20Bar%2FField%2FArrangement%20Position
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Ableton___Live___UI___Control%20Bar___Field___Arrangement%20Position.md
+logseq-proxy-last-sync-date:: [[2026-10-27]]
+
+- # Arrangement Position field
+	- Shows and sets the play position in bars-beats-sixteenths; changing it moves the [[Ableton/Live/UI/Arrangement View/Marker/Insert Marker]]. Drag up or down, type a number and press Enter, or use the up and down arrow keys.
+	- Shows a recording count-in in blue.
+	- **Behavior** — numeric field.
+	- ## Source
+		- [[Ableton/Live/UG/06 Arrangement View]]
+		- [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]] · [6.3 Transport and Playback](https://www.ableton.com/en/live-manual/12/arrangement-view/#transport-and-playback)
+		- [[Ableton/Live/UG/19 Recording New Clips/06 Recording with Count-in]] · [19.6 Recording with Count-in](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-with-count-in)

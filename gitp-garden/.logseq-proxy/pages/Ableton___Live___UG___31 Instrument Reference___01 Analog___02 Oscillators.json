@@ -1,0 +1,14 @@
+{
+  "body_sha256": "71ba1091aa2c0b28450daf2f9c07233f9e7fcc66d75dffa19bafb26ded7c0240",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/01 Analog/02 Oscillators"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/01 Analog/02 Oscillators",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0fc7c2e00952c0de5b1abca28f569d5a8fce5e9fd5ddc218ff24031e9cc9d43e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/12 Velocity Shaper"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/12 Velocity Shaper",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "13c85f843882c351b7802e981f83a06e307bed64291cfb24de8636e15288a84b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Dorian"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Dorian",
+  "version": 2
+}

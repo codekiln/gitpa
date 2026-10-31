@@ -1,0 +1,14 @@
+{
+  "body_sha256": "49a2751899d74727f140189ba6254557a3c9bb04762cb18d85ae899963b82ded",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/13 Audio to MIDI/03 Convert Melody to New MIDI Track"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/13 Audio to MIDI/03 Convert Melody to New MIDI Track",
+  "version": 2
+}

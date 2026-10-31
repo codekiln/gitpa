@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4ddae1c8c7a166cc85c70f75105f25f3394dd9a708f843260e25db8cddbcaeb3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Button/Stop"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Button/Stop",
+  "version": 2
+}

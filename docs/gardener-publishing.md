@@ -44,7 +44,7 @@ Keep the episode text in logseq-encode-garden with one direct full-recording emb
 			- Chapter notes.
 ```
 
-The example uses tabs for outline indentation. Plain timestamps remain readable in Logseq and become chapter controls during publication, including time ranges. The published-site `{{audio-timestamp 14:42}}` extension is also supported; its timestamps accept integer seconds, `M:SS`, or `H:MM:SS`, with two-digit minutes and seconds after a colon. Macros shown in fenced or inline code remain literal.
+The example uses tabs for outline indentation. Plain timestamps at the start of H3 through H6 headings remain readable in Logseq and become chapter controls during publication, including time ranges. The published-site `{{audio-timestamp 14:42}}` extension is also supported; its timestamps accept integer seconds, `M:SS`, or `H:MM:SS`, with two-digit minutes and seconds after a colon. Macros shown in fenced or inline code remain literal.
 
 Re-sync the exact episode page with the imported `logseq:entity:proxy:page:sync` task, passing the source garden, `--destination gitp-garden`, `--page GitP/A/Session/26/10/20-Tue`, and `--apply`. Sync copies source text and its `public::` choice while keeping the proxy's `tags::`, `podcast-guid::`, and `podcast-published-at::`. Repeating the same sync keeps the canonical chapter headings and release identity unchanged. Run the RSS and publication checks after syncing.
 

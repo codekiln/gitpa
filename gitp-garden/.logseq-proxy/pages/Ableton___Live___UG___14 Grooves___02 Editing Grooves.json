@@ -1,0 +1,14 @@
+{
+  "body_sha256": "587f27d5b3eaff15102bd002580b51e71c99dcbcae4cf72a7d8ca1c128af7c25",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/14 Grooves/02 Editing Grooves"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/14 Grooves/02 Editing Grooves",
+  "version": 2
+}

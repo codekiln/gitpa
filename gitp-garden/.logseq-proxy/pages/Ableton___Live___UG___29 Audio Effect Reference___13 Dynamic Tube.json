@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0de45596046046fad582fe4d46bc37f6c04419857c31271ef8ad38f47b52d4ba",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/13 Dynamic Tube"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/13 Dynamic Tube",
+  "version": 2
+}

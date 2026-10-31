@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1cf78319f9d343d3c83cf5db879f981370c3eeba076383947aac8dbed7435b65",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Button/Arrangement Record"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Button/Arrangement Record",
+  "version": 2
+}

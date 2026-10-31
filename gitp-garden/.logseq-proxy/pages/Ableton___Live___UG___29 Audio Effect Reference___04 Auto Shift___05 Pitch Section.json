@@ -1,0 +1,14 @@
+{
+  "body_sha256": "aae13af3be20660cea9310024695452e1a054e156274ab7bffb15d9685957160",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/05 Pitch Section"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/05 Pitch Section",
+  "version": 2
+}

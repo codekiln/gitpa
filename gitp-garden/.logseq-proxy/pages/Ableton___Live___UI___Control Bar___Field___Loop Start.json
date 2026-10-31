@@ -1,0 +1,14 @@
+{
+  "body_sha256": "52638b4e556d0dac0f0c32b27964590a01ff949d99dbdfbb0bd37245919607a9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Field/Loop Start"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Field/Loop Start",
+  "version": 2
+}

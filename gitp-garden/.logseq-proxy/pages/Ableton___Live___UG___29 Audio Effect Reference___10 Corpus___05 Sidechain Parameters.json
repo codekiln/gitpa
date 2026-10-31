@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9992d515fa912096a7391787645753131f84a1b75cf33fc5cc077d13ad1585ef",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/10 Corpus/05 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/10 Corpus/05 Sidechain Parameters",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "acc0fa074f19402e68a367f4cc6b96b8dfdb2fefe21d45578e3a6a45ebee5c41",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/39 Audio Fact Sheet/02 Neutral Operations/02 Matching Sample Rate-No Transposition"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/39 Audio Fact Sheet/02 Neutral Operations/02 Matching Sample Rate-No Transposition",
+  "version": 2
+}

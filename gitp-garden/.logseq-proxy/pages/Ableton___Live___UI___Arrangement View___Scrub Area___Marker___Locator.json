@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7e9c99533873610f6986db0f7b05f7440cbae4474ccc99941b03384ff1e87a76",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Scrub Area/Marker/Locator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Scrub Area/Marker/Locator",
+  "version": 2
+}

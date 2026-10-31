@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3855f7a0de3feff8a307f6e64d1bddc3fbeb2911fbb929a7ca057b2a754e219c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/02 Collision/06 MIDI-MPE Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/02 Collision/06 MIDI-MPE Tab",
+  "version": 2
+}

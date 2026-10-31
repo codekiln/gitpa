@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1d89c970cabe8faeb23de7688b2e6c9223f7bc607b87be8beaf84fe3825a1f2c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/02 Collision/07 Sound Design Tips"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/02 Collision/07 Sound Design Tips",
+  "version": 2
+}

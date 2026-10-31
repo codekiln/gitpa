@@ -1,0 +1,14 @@
+{
+  "body_sha256": "347bfa582706beea03e438e12e55bdeb857106131664f71513994d91de44e170",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Button/Back to Arrangement"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Button/Back to Arrangement",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "be7709b0bf005424f607c30f015e471a544ec779079f33171a842371631dc0b2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/08 Audio and MIDI"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/08 Audio and MIDI",
+  "version": 2
+}

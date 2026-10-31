@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a4aa96e23d51ed37cca45675019285d66594107f723bc83f9a3f069552cbf0e6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/02 Quantizer Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/02 Quantizer Tab",
+  "version": 2
+}

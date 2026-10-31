@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "0896ad80f1ea5163cc3b1e4276bd636d1dad016e1ae1a152675331050de12ed7",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/141 Digital Sea"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/141 Digital Sea": {
+      "files": [],
+      "page": "Microfreak/Preset/141 Digital Sea",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/141 Digital Sea",
   "version": 2
 }

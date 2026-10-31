@@ -1,0 +1,14 @@
+{
+  "body_sha256": "bba05fd08f282a8e872006b93132db223b2feeff2cf54060f00c32fed7116323",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/24 Key-MIDI Map Mode and the Computer MIDI Keyboard"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/24 Key-MIDI Map Mode and the Computer MIDI Keyboard",
+  "version": 2
+}

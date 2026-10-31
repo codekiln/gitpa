@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8c62ef18edf98e0c7efed5ef298fc1cf394f7dee63976ea5364c33c05a9aa615",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop",
+  "version": 2
+}

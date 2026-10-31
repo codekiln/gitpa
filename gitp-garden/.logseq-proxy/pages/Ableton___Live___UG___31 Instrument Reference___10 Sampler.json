@@ -1,0 +1,14 @@
+{
+  "body_sha256": "717bff57d68106a781ff10174aa4f5a61bc1f6656eb94a99d875277c47260672",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/10 Sampler"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/10 Sampler",
+  "version": 2
+}

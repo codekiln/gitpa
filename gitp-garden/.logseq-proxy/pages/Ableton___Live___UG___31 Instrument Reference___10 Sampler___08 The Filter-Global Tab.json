@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d8a9566961896948918c71198f010d3ef7f319924b2d46d97558fc188e04ca89",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/10 Sampler/08 The Filter-Global Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/10 Sampler/08 The Filter-Global Tab",
+  "version": 2
+}

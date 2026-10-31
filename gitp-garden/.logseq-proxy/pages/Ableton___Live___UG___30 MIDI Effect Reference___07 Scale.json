@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ce7bca9961444ff691f6d11030dc2f38b5a2f15ef70e91f8ee6e10a11312f216",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/07 Scale"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/07 Scale",
+  "version": 2
+}

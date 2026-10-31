@@ -1,0 +1,14 @@
+{
+  "body_sha256": "54f185bf97deb501ff3fceb61edf0c5d251219f4e2bfc7f1b7b2fc5ca24a2776",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/27 Clip Envelopes/03 Mixer and Device Clip Envelopes/01 Modulating Mixer Volumes and Sends"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/27 Clip Envelopes/03 Mixer and Device Clip Envelopes/01 Modulating Mixer Volumes and Sends",
+  "version": 2
+}

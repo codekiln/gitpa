@@ -1,0 +1,14 @@
+{
+  "body_sha256": "75fafccbd85da5cc30743248e2dd43336122b365258782c8825dd14245b3a1d8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/21 Glue Compressor/01 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/21 Glue Compressor/01 Sidechain Parameters",
+  "version": 2
+}

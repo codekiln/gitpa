@@ -1,0 +1,14 @@
+{
+  "body_sha256": "344d4117f7abde1d50ebfbbf212842ebeba0e5b1a225574cf56b99e90d804c06",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/05 Pitch"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/05 Pitch",
+  "version": 2
+}

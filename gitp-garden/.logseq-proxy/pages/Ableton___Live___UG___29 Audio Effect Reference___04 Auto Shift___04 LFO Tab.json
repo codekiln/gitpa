@@ -1,0 +1,14 @@
+{
+  "body_sha256": "72eab7cf2e1745e54d96f847674e639273c0e436d6b5e4251ebe91ee2af0247b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/04 LFO Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/04 Auto Shift/04 LFO Tab",
+  "version": 2
+}

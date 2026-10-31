@@ -1,0 +1,14 @@
+{
+  "body_sha256": "8a7bde51685a63fe4de4777269a245114e9f9b4a4a6ee3f1966c42d7bd96fd18",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/24 Plug-Ins/02 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/24 Plug-Ins/02 Sidechain Parameters",
+  "version": 2
+}

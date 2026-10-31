@@ -1,0 +1,14 @@
+{
+  "body_sha256": "7a63b16261754009ab7c736b728e47062b4ffc4bb4e50878b8184c9f2fbf75f5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Minor/Hungarian"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Minor/Hungarian",
+  "version": 2
+}

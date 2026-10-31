@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4aa0a930105cd4b559c9a44c7d0d36f0112b9f0e30a5efd4b814c1aa425f6e18",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/25 Looper"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/25 Looper",
+  "version": 2
+}

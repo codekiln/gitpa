@@ -1,0 +1,14 @@
+{
+  "body_sha256": "70f0b5dd17fcf741c02a37ca1168d54da18ad88997e4bdb353576669027a4dd7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/02 Accessing a Set's Undo History"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/02 Accessing a Set's Undo History",
+  "version": 2
+}

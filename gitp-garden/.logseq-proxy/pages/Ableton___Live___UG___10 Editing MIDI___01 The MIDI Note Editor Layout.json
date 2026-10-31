@@ -1,0 +1,14 @@
+{
+  "body_sha256": "34dbb7b524ad44331fc019518eec3ce7dded388c8522fb9482ea3bc5401c8b92",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/01 The MIDI Note Editor Layout"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/01 The MIDI Note Editor Layout",
+  "version": 2
+}

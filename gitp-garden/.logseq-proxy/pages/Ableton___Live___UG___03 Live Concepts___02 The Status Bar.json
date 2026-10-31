@@ -1,0 +1,14 @@
+{
+  "body_sha256": "711449b9e09f981b3bd05a4a694a34adcb77c47e7c93d9774079eb3edce80324",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/02 The Status Bar"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/02 The Status Bar",
+  "version": 2
+}

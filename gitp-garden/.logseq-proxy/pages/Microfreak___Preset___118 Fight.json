@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "7051ecabd7ecf82c6b00f014ebe9433c8dac19c4fa9f1cf0048dd53df1cd86de",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/118 Fight"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/118 Fight": {
+      "files": [],
+      "page": "Microfreak/Preset/118 Fight",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/118 Fight",
   "version": 2
 }

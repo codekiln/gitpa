@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0a2f9f8682ed855e0697157dd6166df162b7a25f9ecf03d6aa5c3a28083e68dc",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/06 Output"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/06 Output",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "96f6929400b0c88be79ef0432fb9b5afc46c641a7606d4fab347ff663fd83b57",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/27 Clip Envelopes/01 The Clip Envelope Editor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/27 Clip Envelopes/01 The Clip Envelope Editor",
+  "version": 2
+}

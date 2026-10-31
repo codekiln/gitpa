@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3c15394e56d11747993aa4bbb3d35fe9d847e3b13b75f0f21f3204aba8e3a7f7",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Dorian/Ukrainian"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Dorian/Ukrainian",
+  "version": 2
+}

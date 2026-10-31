@@ -1,0 +1,14 @@
+{
+  "body_sha256": "301edeed16256005aca200f49095912cb139967ec34b2770c17a0a5cfea930a6",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet/05 Tips for Achieving Optimal MIDI Performance"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet/05 Tips for Achieving Optimal MIDI Performance",
+  "version": 2
+}

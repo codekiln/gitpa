@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fd44132a95b2281b7d191eb14dcfebcef2068614721574cc755d392dbfb3e7bf",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/08 Clip View/04 Audio Utilities Panel/01 Warp Controls"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/08 Clip View/04 Audio Utilities Panel/01 Warp Controls",
+  "version": 2
+}

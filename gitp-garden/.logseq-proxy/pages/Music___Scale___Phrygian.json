@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a938013b2292d2f14285392601460a2d5e00541ee6045046c37c11b61c31bbe5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Phrygian"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Phrygian",
+  "version": 2
+}

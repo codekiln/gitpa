@@ -1,0 +1,14 @@
+{
+  "body_sha256": "385f298b52c7c282b937b2c9dd3fc2c6ecd1e1506667da22dd4fcb84dcb01c9d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/14 The Mixer"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/14 The Mixer",
+  "version": 2
+}

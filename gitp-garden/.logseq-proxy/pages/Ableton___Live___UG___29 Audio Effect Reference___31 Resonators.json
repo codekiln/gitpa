@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b77e212e2ec4294fb55ab95059252aeb4e7554222695bf94b3fc93c906b062db",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/31 Resonators"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/31 Resonators",
+  "version": 2
+}

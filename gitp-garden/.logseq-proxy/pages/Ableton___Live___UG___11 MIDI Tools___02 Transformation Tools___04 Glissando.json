@@ -1,0 +1,14 @@
+{
+  "body_sha256": "51627da1f272527e50c0a7ed612cdd33a91c8641da0002bc935e3aefabcca88b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/04 Glissando"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/04 Glissando",
+  "version": 2
+}

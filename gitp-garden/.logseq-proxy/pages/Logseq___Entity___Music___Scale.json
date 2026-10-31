@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0b58fd77eff964e8ba63d755ba1f36e7966c553ef28dd73e8aebc45a182629c9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Music/Scale"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Music/Scale",
+  "version": 2
+}

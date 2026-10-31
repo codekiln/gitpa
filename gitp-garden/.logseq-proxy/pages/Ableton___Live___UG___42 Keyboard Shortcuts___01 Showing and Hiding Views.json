@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d248e725a1369184f21bf66b5993135b89c3b9b75f002369b772659c40e8a7b3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/01 Showing and Hiding Views"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/01 Showing and Hiding Views",
+  "version": 2
+}

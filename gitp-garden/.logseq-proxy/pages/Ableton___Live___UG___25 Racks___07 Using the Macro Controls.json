@@ -1,0 +1,14 @@
+{
+  "body_sha256": "25401e549db59611598f74771d172a9853a1bcfda29ed55b0d426dfa53155ccb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/25 Racks/07 Using the Macro Controls"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/25 Racks/07 Using the Macro Controls",
+  "version": 2
+}
