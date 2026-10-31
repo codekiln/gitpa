@@ -4,6 +4,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+from site_fixture import write_site
 from build_site import legacy_routes, prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER
 
 
@@ -50,11 +51,12 @@ class HomepageTests(unittest.TestCase):
     def test_evaluated_rows_are_inserted_only_after_authored_reference_indexing(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
-            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>'
-                '<a href="p-bbb.html">GitP/A/Session/Newest</a>'
-                '<a href="p-ccc.html">GitP/A/Session/Older</a>')
+            write_site(output, [('p-aaa.html', 'Ghost in the Patch'),
+                                ('p-bbb.html', 'GitP/A/Session/Newest'),
+                                ('p-ccc.html', 'GitP/A/Session/Older')])
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<main><a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
+                (output / name).write_text('<main><a class="external-link" target="_blank" rel="noopener noreferrer" '
+                                           f'href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
             self.assertIn('<a href="p-bbb.html">GitP/A/Session/Newest</a>', text)
@@ -68,9 +70,9 @@ class HomepageTests(unittest.TestCase):
     def test_query_rows_preserve_shared_outline_bullets(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
-            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>'
-                '<a href="p-bbb.html">GitP/A/Session/Newest</a>'
-                '<a href="p-ccc.html">GitP/A/Session/Older</a>')
+            write_site(output, [('p-aaa.html', 'Ghost in the Patch'),
+                                ('p-bbb.html', 'GitP/A/Session/Newest'),
+                                ('p-ccc.html', 'GitP/A/Session/Older')])
             bullet = '<a class="bullet" href="#"></a>'
             for name in ['index.html', 'p-aaa.html']:
                 (output / name).write_text(f'<a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
@@ -105,8 +107,8 @@ class HomepageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
             (output / 'index.html').write_text('<head></head><body>Home</body>')
-            (output / 'pages.html').write_text('<a href="p-abc.html">Ghost in the Patch</a>'
-                                             '<a href="p-def.html">GitP/A/Session/Newest</a>')
+            write_site(output, [('p-abc.html', 'Ghost in the Patch'),
+                                ('p-def.html', 'GitP/A/Session/Newest')])
             legacy_routes(output)
             script = (output / 'legacy-routes.js').read_text()
             self.assertIn('"gitp/a/session/newest": "p-def.html"', script)
@@ -150,8 +152,7 @@ class HomepageTests(unittest.TestCase):
             graph = output / 'graph'
             (graph / 'pages').mkdir(parents=True)
             (output / 'index.html').write_text('<head></head>')
-            (output / 'pages.html').write_text('<a href="p-abc.html">Ghost in the Patch</a>'
-                                             '<a href="p-def.html">Episode</a>')
+            write_site(output, [('p-abc.html', 'Ghost in the Patch'), ('p-def.html', 'Episode')])
             (graph / 'pages/Episode.md').write_text('alias:: [[Recording]], Shared\n- Episode\n')
             (graph / 'pages/Ghost in the Patch.md').write_text('alias:: Shared\n- Home\n')
             (graph / 'pages/Private.md').write_text('alias:: Secret\n- Private\n')
