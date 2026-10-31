@@ -18,6 +18,8 @@ test('Nord light and dark text, links and player controls remain readable on the
       for (const text of ['lsg-text', 'lsg-link']) assert.ok(contrast(values[text], values[surface]) >= 4.5, `${text} on ${surface}`);
       assert.ok(contrast(values['lsg-focus'], values[surface]) >= 3);
     }
+    assert.ok(contrast(values['subscribe-text'], values['subscribe-background']) >= 4.5);
+    assert.ok(contrast(values['subscribe-background'], values['lsg-background']) >= 3);
     assert.ok(contrast(values['gitpa-heading'], values['lsg-background']) >= 3);
     assert.ok(contrast(values['gitpa-code-text'], values['gitpa-button-background']) >= 4.5);
   }
