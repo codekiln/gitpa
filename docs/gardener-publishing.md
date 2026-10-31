@@ -16,6 +16,8 @@ The light Nord stylesheet applies to the homepage, episode pages, and reference 
 
 Authored `collapsed:: true` outlines start closed using Gardener’s native disclosure controls. Click the label or focus it and press Enter to expand the children. Links to a descendant open its enclosing branches before scrolling, including during internal navigation. Unrelated branches keep their state.
 
+Readers can also fold other blocks with children using the arrow beside the bullet. The controls support keyboard and touch, including nested headings. Page properties start open; opening or closing Properties sets a site-wide preference that follows internal navigation and reloads. After thirty days without a visit, properties return to the configured default. When browser storage is unavailable, the configured default applies.
+
 Every page ends with an expanded, collapsible Hierarchy section. Its flat list shows the current full namespace path followed by all published descendants, including deeper levels. Each available segment links to its cumulative namespace: in `A/B/C/E/F`, `C` links to `A/B/C` and `F` links to `A/B/C/E/F`. Leaf pages retain their current path so readers can navigate upward. Gardener generates navigation pages for missing intermediate namespaces, and packaging gives those pages readable URLs. Private and unpublished stored pages remain withheld.
 
 Run `python3 -m unittest discover -s tests`, `node --test tests/*.test.js`, `mise run site:query:check`, and `mise run rss:check` before publication. Review the generated homepage, chapter seeking in an episode, and an instrument manual with transclusions. PR builds upload the complete `gitpa-website` preview; merging publishes the same output to GitHub Pages.

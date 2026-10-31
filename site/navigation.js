@@ -198,6 +198,8 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         }
         const previousURL = displayedURL;
         adoptURL(responseURL, options);
+        window.logseqGardenerInitOutline?.(importedMain);
+        window.logseqGardenerInitProperties?.(importedMain);
         window.logseqGardenerInitBacklinks?.(importedMain);
         window.logseqGardenerInitTheme?.(importedNav);
         window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
@@ -227,6 +229,8 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   window.addEventListener('popstate', pop);
   const previousNavigate = window.gitpaNavigate;
   window.gitpaNavigate = navigate;
+  window.logseqGardenerInitOutline?.(document);
+  window.logseqGardenerInitProperties?.(document);
   window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
   const initialURL = new URL(displayedURL);
   if (initialURL.hash && !initialURL.hash.startsWith('#/page/')) scroll(initialURL, displayedState, false);
