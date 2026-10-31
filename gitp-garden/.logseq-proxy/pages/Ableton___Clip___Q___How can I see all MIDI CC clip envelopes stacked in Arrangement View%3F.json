@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d63fd741a34f7b6bb2284fb3553b288dca31065b723cc8ee9f87cc6c5e4ea16b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Clip/Q/How can I see all MIDI CC clip envelopes stacked in Arrangement View?"
+  ],
+  "imports": {},
+  "page": "Ableton/Clip/Q/How can I see all MIDI CC clip envelopes stacked in Arrangement View?",
+  "version": 2
+}

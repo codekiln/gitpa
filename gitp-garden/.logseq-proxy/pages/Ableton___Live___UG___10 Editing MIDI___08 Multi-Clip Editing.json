@@ -1,0 +1,14 @@
+{
+  "body_sha256": "51e75068f6c5dd17bf213529fe340b018261981ef7d9f1d4142e564a5c347970",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/08 Multi-Clip Editing"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/08 Multi-Clip Editing",
+  "version": 2
+}

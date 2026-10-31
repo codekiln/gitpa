@@ -1,0 +1,14 @@
+{
+  "body_sha256": "4d941a374a13b2ceb0049c8df571053494aac8c74f037509026170dc76d0f221",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Area]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Time Ruler"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Time Ruler",
+  "version": 2
+}

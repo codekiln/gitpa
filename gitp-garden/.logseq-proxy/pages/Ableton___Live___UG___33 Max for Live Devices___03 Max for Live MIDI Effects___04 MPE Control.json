@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9214befaf32455935ebb3757d19429b7a8f13222d1b3cda008a61f7d2f00a49a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/33 Max for Live Devices/03 Max for Live MIDI Effects/04 MPE Control"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/33 Max for Live Devices/03 Max for Live MIDI Effects/04 MPE Control",
+  "version": 2
+}

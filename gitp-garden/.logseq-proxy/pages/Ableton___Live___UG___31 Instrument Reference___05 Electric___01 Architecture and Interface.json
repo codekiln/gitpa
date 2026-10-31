@@ -1,0 +1,14 @@
+{
+  "body_sha256": "17165dd24596b8d9d5a5c27d10aea3dbb5ce23f56d73f026e88f7ffbb1be9dfe",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/05 Electric/01 Architecture and Interface"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/05 Electric/01 Architecture and Interface",
+  "version": 2
+}

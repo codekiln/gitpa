@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e08a5d63f20336eb8b447b1739baa47915a4c2753fec26e1bbc3700af0170a90",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/04 Algorithmic Reverb Engine"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/04 Algorithmic Reverb Engine",
+  "version": 2
+}

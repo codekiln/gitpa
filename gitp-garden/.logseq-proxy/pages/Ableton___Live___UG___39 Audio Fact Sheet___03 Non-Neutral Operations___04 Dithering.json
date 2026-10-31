@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e64eadfd180688527f4035fbd17b2c1b8b9ea0d6d5429d7e28f753cac2be0f2b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/39 Audio Fact Sheet/03 Non-Neutral Operations/04 Dithering"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/39 Audio Fact Sheet/03 Non-Neutral Operations/04 Dithering",
+  "version": 2
+}

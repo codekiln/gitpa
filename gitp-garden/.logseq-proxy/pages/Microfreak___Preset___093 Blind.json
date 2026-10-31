@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "33184b85c4a2e6640d870db92f19717d2681aed7098b6f6fabd24cc4f82d0b8b",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/093 Blind"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/093 Blind": {
+      "files": [],
+      "page": "Microfreak/Preset/093 Blind",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/093 Blind",
   "version": 2
 }

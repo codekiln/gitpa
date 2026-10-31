@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a501b6ca495aa63f7956c1bd9e673d9b1a5fc1c5a61221096b2c84aba16d0142",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/30 MIDI Effect Reference/04 Note Length"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/30 MIDI Effect Reference/04 Note Length",
+  "version": 2
+}

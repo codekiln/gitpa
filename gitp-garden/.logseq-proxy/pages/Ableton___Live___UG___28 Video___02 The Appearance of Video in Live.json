@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d1ef8221a8b6328aea94ed1b5795022b70009673ed1f84fc76ded93a72b8c50e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/28 Video/02 The Appearance of Video in Live"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/28 Video/02 The Appearance of Video in Live",
+  "version": 2
+}

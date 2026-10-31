@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "76cf35e7294e54041a07b0896952ea381696ceab0f5178473aa87d87062d21a1",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/138 Metallic Talk"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/138 Metallic Talk": {
+      "files": [],
+      "page": "Microfreak/Preset/138 Metallic Talk",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/138 Metallic Talk",
   "version": 2
 }

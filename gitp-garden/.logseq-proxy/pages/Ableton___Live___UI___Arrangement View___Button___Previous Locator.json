@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1f5e7c39fea293d78a8e282bd9bde2b2264aac7086a873ed13d2614363927e7f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Button/Previous Locator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Button/Previous Locator",
+  "version": 2
+}

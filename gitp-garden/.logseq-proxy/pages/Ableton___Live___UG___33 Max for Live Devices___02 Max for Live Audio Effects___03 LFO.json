@@ -1,0 +1,14 @@
+{
+  "body_sha256": "00f3fa7bf3e95ff161be4da9ee95b4cf60d93e89c8057326b161d3d3199a4c26",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/33 Max for Live Devices/02 Max for Live Audio Effects/03 LFO"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/33 Max for Live Devices/02 Max for Live Audio Effects/03 LFO",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ebe0711fb31180a019a0b39bb1a7b8c2a1731619c65252ba9b5a5793e12bcf25",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader",
+  "version": 2
+}

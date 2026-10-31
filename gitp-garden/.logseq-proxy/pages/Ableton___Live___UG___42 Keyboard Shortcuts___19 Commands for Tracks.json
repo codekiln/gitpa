@@ -1,0 +1,14 @@
+{
+  "body_sha256": "caccb5c3368dfc10ecf8ae8fa2343272e35971e47d37d818831fe6986d6c9bcb",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks",
+  "version": 2
+}

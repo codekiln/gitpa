@@ -1,0 +1,14 @@
+{
+  "body_sha256": "a8aeb48bd6b2ff5e0f2806eb053b777a1b00acecc13f9cd57b6b73f78230fee0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 1]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/38 Computer Audio Resources"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/38 Computer Audio Resources",
+  "version": 2
+}

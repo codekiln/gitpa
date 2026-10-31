@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d3ffa37704106c4e06cfd610738422b5f0cef5114c75103656b8c78f48e94a81",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/02 Filter Display"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/02 Filter Display",
+  "version": 2
+}

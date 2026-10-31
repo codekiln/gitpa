@@ -1,0 +1,14 @@
+{
+  "body_sha256": "41ef40549fed2cc0abb72de52e6bdc89723e14f7598dcbea34385177bdef9c74",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/42 Vocoder/01 Vocoder Tips"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/42 Vocoder/01 Vocoder Tips",
+  "version": 2
+}

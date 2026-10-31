@@ -1,0 +1,14 @@
+{
+  "body_sha256": "5cc6c8e553b0c77b9b3e51aefc1d6f2804924ce5f52f9a7ca6c200c1e8b5b2f3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/05 Euclidean"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/05 Euclidean",
+  "version": 2
+}

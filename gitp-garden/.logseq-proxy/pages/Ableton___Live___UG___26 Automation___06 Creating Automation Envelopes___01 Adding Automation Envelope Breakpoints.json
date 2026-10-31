@@ -1,0 +1,14 @@
+{
+  "body_sha256": "37116d1827b4b131ab682b925d92358ad9ea86829e7a5ca887c9d41d183f731e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/26 Automation/06 Creating Automation Envelopes/01 Adding Automation Envelope Breakpoints"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/26 Automation/06 Creating Automation Envelopes/01 Adding Automation Envelope Breakpoints",
+  "version": 2
+}

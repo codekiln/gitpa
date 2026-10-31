@@ -1,0 +1,14 @@
+{
+  "body_sha256": "017d0c46a1804279a1b9599fae9c595f40d69e1502f01b998cc18bbcc5c9528d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/03 Live Concepts/01 The Control Bar"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/03 Live Concepts/01 The Control Bar",
+  "version": 2
+}

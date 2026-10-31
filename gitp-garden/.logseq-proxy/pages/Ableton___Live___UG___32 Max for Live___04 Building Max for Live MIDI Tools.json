@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6fff1af551d02f41eac789cb8e9fa59389c3beafd3aabbb1a319643f79018326",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/32 Max for Live/04 Building Max for Live MIDI Tools"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/32 Max for Live/04 Building Max for Live MIDI Tools",
+  "version": 2
+}

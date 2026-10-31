@@ -1,0 +1,14 @@
+{
+  "body_sha256": "1de6b31a535f7743ae1fd44c24ee50bfa94c70e35b711dcddb9fa41e52516f16",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/28 Pedal"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/28 Pedal",
+  "version": 2
+}

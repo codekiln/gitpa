@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3b06f199ffa03447ff9c41b96709085d16a53cdb1a472441942e392b1c68b6ce",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/03 Sub Oscillator"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/13 Wavetable/03 Sub Oscillator",
+  "version": 2
+}

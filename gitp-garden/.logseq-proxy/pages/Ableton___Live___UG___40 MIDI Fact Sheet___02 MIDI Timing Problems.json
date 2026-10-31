@@ -1,0 +1,14 @@
+{
+  "body_sha256": "417c4116585518ef4cfc791e43176f2243a2876960a49c12169e1c43339e5db3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/40 MIDI Fact Sheet/02 MIDI Timing Problems"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/40 MIDI Fact Sheet/02 MIDI Timing Problems",
+  "version": 2
+}

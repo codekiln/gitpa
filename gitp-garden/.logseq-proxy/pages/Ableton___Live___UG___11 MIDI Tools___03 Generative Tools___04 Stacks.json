@@ -1,0 +1,14 @@
+{
+  "body_sha256": "c6f46b73021c066b6285f8ba014d3204069a957410398a4ee5b42f9c5751d7e8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/04 Stacks"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/04 Stacks",
+  "version": 2
+}

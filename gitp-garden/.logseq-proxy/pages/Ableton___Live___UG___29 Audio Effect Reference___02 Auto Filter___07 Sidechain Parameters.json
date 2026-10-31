@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fbe229c8e2457f8de4cde31d975d435011ffeeee6671056a7db1c6d3ab2527f9",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/07 Sidechain Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/07 Sidechain Parameters",
+  "version": 2
+}

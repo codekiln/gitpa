@@ -1,0 +1,14 @@
+{
+  "body_sha256": "08b20ab9701663fd8b774fa5f6f0bacd917a3983c8e7aa2b959436000f5b5a25",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices",
+  "version": 2
+}

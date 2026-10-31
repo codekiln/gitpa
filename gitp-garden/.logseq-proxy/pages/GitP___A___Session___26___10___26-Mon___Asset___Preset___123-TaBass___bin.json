@@ -1,0 +1,20 @@
+{
+  "body_sha256": "32f183680dc18011afdf99a617bc07cc8ccb22316b2d294daa07f318c0b9714d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/10/26-Mon/Asset/Preset/123-TaBass/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/26-Mon/Asset/Preset/123-TaBass/bin": {
+      "files": [],
+      "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/123-TaBass/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/10/26-Mon/Asset/Preset/123-TaBass/bin",
+  "version": 2
+}

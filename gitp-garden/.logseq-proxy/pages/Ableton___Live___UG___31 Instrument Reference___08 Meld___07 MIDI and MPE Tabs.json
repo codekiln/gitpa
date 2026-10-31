@@ -1,0 +1,14 @@
+{
+  "body_sha256": "80d64d0996f3002a230b9d6e6ff2851fb3c487fe84809a3016388cb3385c478e",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/08 Meld/07 MIDI and MPE Tabs"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/08 Meld/07 MIDI and MPE Tabs",
+  "version": 2
+}

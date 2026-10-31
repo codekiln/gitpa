@@ -1,0 +1,14 @@
+{
+  "body_sha256": "31a94a569f3a5ad0fc563b41c114140beb749d4c22d15feee3de969d47dad9f2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/10 Corpus/01 Resonator Parameters"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/10 Corpus/01 Resonator Parameters",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "d912a21098d4ddb9c75e4ab4f580530db26bbdb55db9c444405443fd41a1ed47",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/39 Tuner/05 Reference Slider"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/39 Tuner/05 Reference Slider",
+  "version": 2
+}

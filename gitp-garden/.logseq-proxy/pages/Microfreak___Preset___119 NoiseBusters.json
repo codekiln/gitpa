@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "e93468359859228f707353892d267aaefe20f24cf072ba6a4491db05212c6369",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/119 NoiseBusters"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/119 NoiseBusters": {
+      "files": [],
+      "page": "Microfreak/Preset/119 NoiseBusters",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/119 NoiseBusters",
   "version": 2
 }

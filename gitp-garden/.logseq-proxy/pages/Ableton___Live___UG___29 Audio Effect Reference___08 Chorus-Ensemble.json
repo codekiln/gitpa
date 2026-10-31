@@ -1,0 +1,14 @@
+{
+  "body_sha256": "954c06dbcd173014253a24087d72a80a7ccd872a66ee637f38146590c64882f3",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/08 Chorus-Ensemble"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/08 Chorus-Ensemble",
+  "version": 2
+}

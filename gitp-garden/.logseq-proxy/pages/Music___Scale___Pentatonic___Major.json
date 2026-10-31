@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9413357c86a60b732a8f8e5c4512865133ed4fa2d26a65b9dc0819c090f39c71",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Scale]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Scale/Pentatonic/Major"
+  ],
+  "imports": {},
+  "page": "Music/Scale/Pentatonic/Major",
+  "version": 2
+}

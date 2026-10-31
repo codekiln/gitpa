@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ff87a7dd8e6867371907ef3f79ba2206eac19fccd1714b3cf1cb78b173942162",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/26 Automation/01 Recording Automation in Session View"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/26 Automation/01 Recording Automation in Session View",
+  "version": 2
+}

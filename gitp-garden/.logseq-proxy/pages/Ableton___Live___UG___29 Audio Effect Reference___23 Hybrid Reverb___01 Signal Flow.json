@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e35618e3d98343f69f3d6ca151489e0d3ee85e5a3ab9608529f954340850e6cc",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/01 Signal Flow"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/01 Signal Flow",
+  "version": 2
+}

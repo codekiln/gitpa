@@ -1,0 +1,14 @@
+{
+  "body_sha256": "9e1dcbdf13fa147099814bda40dd2a6fa749766779d6c9fed8ee6827979b0234",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/13 Wavetable"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/13 Wavetable",
+  "version": 2
+}

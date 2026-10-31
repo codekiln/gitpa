@@ -1,0 +1,14 @@
+{
+  "body_sha256": "99badeb515e892f15590fae52b5568f5d523cf2f0dc54250f20de252be64f0d8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Marker/Insert Marker"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Marker/Insert Marker",
+  "version": 2
+}

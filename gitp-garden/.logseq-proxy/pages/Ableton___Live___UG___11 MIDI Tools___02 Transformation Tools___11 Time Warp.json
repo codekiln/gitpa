@@ -1,0 +1,14 @@
+{
+  "body_sha256": "47980dc7b0e5fc0eeac4beaee4de8fee2fd6dfa1d95e7284e3483d419149b9c2",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/11 Time Warp"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/11 Time Warp",
+  "version": 2
+}

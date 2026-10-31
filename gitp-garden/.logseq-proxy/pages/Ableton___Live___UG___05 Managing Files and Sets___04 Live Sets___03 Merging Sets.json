@@ -1,0 +1,14 @@
+{
+  "body_sha256": "0709628798057192315e24a42687b33e4d281b8460cbd09053083fdd376b3404",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/03 Merging Sets"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets/03 Merging Sets",
+  "version": 2
+}

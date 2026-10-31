@@ -5,7 +5,7 @@ import re
 from urllib.parse import urlsplit, urlunsplit
 
 MACRO = re.compile(r'\{\{audio-timestamp\s+([^{}]+?)\s*\}\}')
-HEADING = re.compile(r'^(\s*)- ### (.+)$')
+HEADING = re.compile(r'^(\s*)- (#{3,6}) (.+)$')
 LEGACY_TIME = re.compile(r'^(\d+:\d{2}(?::\d{2})?)(?=\s|[–—-]|$)')
 MEDIA = re.compile(r'^\s*- !\[([^\]]*)\]\((https://[^)]+)\)\s*$')
 
@@ -113,12 +113,13 @@ def compile_episode(text):
                 chapter_indent = None
         heading = None if literal else HEADING.match(line.rstrip('\n'))
         if heading:
-            content = heading[2]
+            level, content = heading[2], heading[3]
             time = LEGACY_TIME.match(content)
-            if content.startswith('{{audio-timestamp'):
+            if level == '###' and content.startswith('{{audio-timestamp'):
                 chapter_indent = indent
             elif time:
-                chapter_indent = indent
+                if level == '###':
+                    chapter_indent = indent
                 value = time[1]
                 link = f'[{value}]({recording_fragment(recording, value)})'
                 line = line.replace(content, link + content[len(value):], 1)

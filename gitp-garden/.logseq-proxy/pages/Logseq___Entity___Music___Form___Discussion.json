@@ -1,0 +1,14 @@
+{
+  "body_sha256": "645027e920f7bf1fa4d7657f3524086f6bdde6f754e011037ae6f6fbb9e2ca52",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Discussion]], [[Logseq/Entity/Diataxis/Explanation]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Music/Form/Discussion"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Music/Form/Discussion",
+  "version": 2
+}

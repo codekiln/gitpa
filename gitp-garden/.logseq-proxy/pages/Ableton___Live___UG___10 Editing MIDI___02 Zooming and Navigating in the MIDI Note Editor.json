@@ -1,0 +1,14 @@
+{
+  "body_sha256": "51a92d0e56001954be6bbd404189d8e78a91325fad5909f316b52066a8f33270",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/10 Editing MIDI/02 Zooming and Navigating in the MIDI Note Editor"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/10 Editing MIDI/02 Zooming and Navigating in the MIDI Note Editor",
+  "version": 2
+}

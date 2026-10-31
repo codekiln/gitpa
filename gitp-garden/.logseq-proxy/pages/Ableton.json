@@ -1,0 +1,18 @@
+{
+  "body_sha256": "7ae81b1bb5ccb649a67ac5f75806241522c860930dbd1ca7ab400a5a18b3fe4d",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Ableton": {
+      "files": [],
+      "page": "Ableton",
+      "source_graph": "."
+    }
+  },
+  "page": "Ableton",
+  "version": 2
+}

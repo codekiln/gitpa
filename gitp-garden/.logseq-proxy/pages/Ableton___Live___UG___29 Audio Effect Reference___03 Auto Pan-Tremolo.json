@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e44cc67dd8e8dd36588996fc399b075bf0beb43b0299a314179c9216214d6b55",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/03 Auto Pan-Tremolo"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/03 Auto Pan-Tremolo",
+  "version": 2
+}

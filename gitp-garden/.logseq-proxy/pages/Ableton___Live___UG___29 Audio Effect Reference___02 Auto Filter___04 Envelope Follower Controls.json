@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e132f83898f3adf5ae0d190e4a0c39ab842725fc3eef7c3f85cd855462b79f9b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/04 Envelope Follower Controls"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/02 Auto Filter/04 Envelope Follower Controls",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "fb4f19665bc9bc12b332267f80e37b157b4b13d1294a95484ebcd15a8372f9ef",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Question]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?"
+  ],
+  "imports": {},
+  "page": "Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?",
+  "version": 2
+}

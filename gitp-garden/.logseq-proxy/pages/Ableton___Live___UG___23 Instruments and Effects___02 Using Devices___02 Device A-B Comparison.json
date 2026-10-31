@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e632cd3bda5beae3040acbed368f947963bb81f7bfa35be6cb984caad7979a64",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/02 Device A-B Comparison"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/23 Instruments and Effects/02 Using Devices/02 Device A-B Comparison",
+  "version": 2
+}

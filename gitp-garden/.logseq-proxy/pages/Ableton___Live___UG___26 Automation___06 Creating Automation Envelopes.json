@@ -1,0 +1,14 @@
+{
+  "body_sha256": "ff5af0a24f95f95e156c0563c42e3e78ee0f27097bc16820b312eca9881fe88c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/26 Automation/06 Creating Automation Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/26 Automation/06 Creating Automation Envelopes",
+  "version": 2
+}

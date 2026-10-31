@@ -1,0 +1,14 @@
+{
+  "body_sha256": "be94379cf26678af3d0e9b56d798ca0e44280ec82c87a889b9f2be8a26b00260",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/09 Operator/02 Oscillator Section"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/09 Operator/02 Oscillator Section",
+  "version": 2
+}

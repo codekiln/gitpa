@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2691d81462827ed1ee0a60c903cda330f058fb1abe02c6f23d97b4ca9f777048",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/18 External Audio Effect"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/18 External Audio Effect",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f1e30f5832e6da8bfea69c17ef5380d012f76034ebd9402aeed50a0d4c5112f0",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb",
+  "version": 2
+}

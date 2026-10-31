@@ -1,0 +1,14 @@
+{
+  "body_sha256": "f2faed1baed01eeb9667c364bd21345b279db32f0c8175773480be41b88f4e57",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/UI/Control]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UI/Arrangement View/Slider/Waveform Vertical Zoom Level"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UI/Arrangement View/Slider/Waveform Vertical Zoom Level",
+  "version": 2
+}

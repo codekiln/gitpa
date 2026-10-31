@@ -1,0 +1,14 @@
+{
+  "body_sha256": "e0e56313017ce876369152dbe2ef4ba274f6225dbffe5e3fda9e4f6d2fc1ec45",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/06 Locating Missing Files/01 Manual Repair"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/06 Locating Missing Files/01 Manual Repair",
+  "version": 2
+}

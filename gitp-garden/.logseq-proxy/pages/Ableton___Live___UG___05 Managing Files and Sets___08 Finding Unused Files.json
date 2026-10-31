@@ -1,0 +1,14 @@
+{
+  "body_sha256": "381cb4162cf96a079992e014e89bab00bcfc78d6bd8d931645e7b7cc21309455",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/05 Managing Files and Sets/08 Finding Unused Files"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/05 Managing Files and Sets/08 Finding Unused Files",
+  "version": 2
+}

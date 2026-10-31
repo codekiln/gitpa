@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b74880f268d2b9bbcfcc0877fa597b4448551cad51f3331646c48c17264bcc35",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/31 Instrument Reference/10 Sampler/10 The MIDI Tab"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/31 Instrument Reference/10 Sampler/10 The MIDI Tab",
+  "version": 2
+}

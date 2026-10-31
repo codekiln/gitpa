@@ -1,0 +1,14 @@
+{
+  "body_sha256": "b42161cc76afa67ce90bee2ff1ed7dc3aba862083db5d9e03c62bd70e74ec872",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/05 Global Settings"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/29 Audio Effect Reference/32 Reverb/05 Global Settings",
+  "version": 2
+}

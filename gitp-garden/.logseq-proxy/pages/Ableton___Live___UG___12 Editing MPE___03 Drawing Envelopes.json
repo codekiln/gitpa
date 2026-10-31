@@ -1,0 +1,14 @@
+{
+  "body_sha256": "872975209173d01cef1a4c613ad8f7a73cd10faec0c8519a315583613c2607fe",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/12 Editing MPE/03 Drawing Envelopes"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/12 Editing MPE/03 Drawing Envelopes",
+  "version": 2
+}

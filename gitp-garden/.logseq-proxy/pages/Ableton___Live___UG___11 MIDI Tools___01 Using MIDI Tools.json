@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6fbab2e77cb484ad84885a8609a74dc205f4932993cffe63aa6afdd91de57519",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/01 Using MIDI Tools"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/01 Using MIDI Tools",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "2cef555a9884d689288e56d87c0ada2713f653bb3c27e872592e78dd30f5b24a",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/Section/Level 3]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/07 Quantize"
+  ],
+  "imports": {},
+  "page": "Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/07 Quantize",
+  "version": 2
+}
