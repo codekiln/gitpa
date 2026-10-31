@@ -2,7 +2,7 @@
 
 Gitpa should supply its podcast behavior through an optional plugin contract. Gardener should own standard Logseq publication and the host lifecycle. The first migration is the existing episode player: keep its playback logic, give it a persistent place in the shell, and notify it when a new page is adopted.
 
-**Status: proposal and an unshipped, type-checked consumer experiment.** Gardener does not yet export the proposed API. The current production build and player are unchanged. [Gitpa93](https://github.com/codekiln/gitpa/issues/93) owns adaptation; [Gardener195](https://github.com/codekiln/logseq-gardener/issues/195) hands the reusable publisher and runtime work to the Claude agent.
+**Status: proposal and an unshipped, type-checked consumer experiment.** Gardener does not yet export the proposed API. The current production build and player are unchanged. [Gitpa issue #93](https://github.com/codekiln/gitpa/issues/93) tracks the consumer adaptation; [Gardener issue #195](https://github.com/codekiln/logseq-gardener/issues/195) tracks the shared host.
 
 ## Gardener host proposal
 
@@ -13,7 +13,7 @@ Gitpa should supply its podcast behavior through an optional plugin contract. Ga
 | Owner | Responsibility |
 | --- | --- |
 | Gardener core | Logseq parsing, selection/privacy, aliases, authored references, source anchors, transclusions, standard rendering, search, and shared page/fragment lifecycle. |
-| Gardener extension host, implemented by Claude | Versioned manifests, public route identities, structured metadata/assets/slots, plugin lifecycle and disposal, compatibility checks, and performance validation. |
+| Gardener extension host | Versioned manifests, public route identities, structured metadata/assets/slots, plugin lifecycle and disposal, compatibility checks, and performance validation. |
 | Gitpa, implemented here | Episode interpretation, the persistent player, transcript/chapter enhancements beyond Logseq, homepage presentation, feed identity, palette, configuration and migration tests. |
 | Source garden | Canonical episode text, verified transcripts and publication choices. |
 
@@ -89,7 +89,7 @@ Retain the existing cancelable `lsg:media-seek` event and ordinary media links d
 
 ## Migration and acceptance
 
-- **Shared host, Claude:** implement Gardener195's versioned manifest, public route/metadata/assets boundary, persistent region and lifecycle; publish a tested contract/example. Resolve API differences with Gitpa93 before freezing them.
+- **Shared host:** implement Gardener issue #195's versioned manifest, public route/metadata/assets boundary, persistent region and lifecycle; publish a tested contract/example. Resolve API differences with Gitpa issue #93 before freezing them.
 - **Player adaptation, Gitpa:** extract bootstrap side effects, use the shared host and metadata, and remove corresponding head rewriting and scattered initializer calls. Keep query and route rewrites until their own structured replacements exist.
 - **Build contributions, both:** replace query-marker and route-parsing assumptions in focused follow-ups, preserving selected-source indexing and legacy destinations.
 
@@ -97,4 +97,4 @@ Measure an unchanged representative garden with zero plugins and the actual Gitp
 
 The browser acceptance route is episode → manual → another episode → Back, with search results, source fragments, zoom and theme changes along the way. Require one surviving advancing audio element, no duplicate handlers or playback restart, correct seek ownership, accessible desktop/mobile controls, stable routes, unchanged RSS identity and honest failure/retry behavior. Verify automatic production revision before calling the migration deployed.
 
-Prepared disclosure/properties fixes remain in [Gardener181](https://github.com/codekiln/logseq-gardener/pull/181) and [Gardener183](https://github.com/codekiln/logseq-gardener/pull/183). Claude can review/reuse them; [Gitpa89](https://github.com/codekiln/gitpa/issues/89) owns their consumer adaptation. Their existence is separate from implementation of the plugin host.
+[Gardener PR #181](https://github.com/codekiln/logseq-gardener/pull/181) merged the outline controls. [Gardener PR #183](https://github.com/codekiln/logseq-gardener/pull/183) proposes the remembered Properties choice; [Gitpa issue #89](https://github.com/codekiln/gitpa/issues/89) tracks adoption in Gitpa.
