@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import time
 import unicodedata
 from urllib.parse import unquote
 from urllib.parse import urlsplit, urlunsplit
@@ -352,10 +353,14 @@ def publish(source, output, renderer, search=False):
         raise ValueError('Website output already exists')
     with tempfile.TemporaryDirectory(prefix='gitpa-publication-') as temporary:
         temporary = Path(temporary)
+        started = time.perf_counter()
         graph = prepare(source, temporary / 'graph')
+        print(f'Prepare graph: {time.perf_counter() - started:.2f}s', flush=True)
         query = temporary / 'homepage.json'
+        started = time.perf_counter()
         subprocess.run(['nbb-logseq', str(ROOT / 'scripts/check_homepage.cljs'),
-                        str(source), str(query)], cwd=ROOT, check=True)
+                        str(graph), str(query), '--prepared'], cwd=ROOT, check=True)
+        print(f'Validate homepage query: {time.perf_counter() - started:.2f}s', flush=True)
         query_result = json.loads(query.read_text(encoding='utf-8'))
         prepare_homepage(graph, query_result)
         episodes = compile_episode_pages(graph)
@@ -368,13 +373,17 @@ def publish(source, output, renderer, search=False):
         # Asset visibility and selected episode notes were resolved by prepare.
         for name in public_pages(graph):
             args.extend(['--include', name])
+        started = time.perf_counter()
         subprocess.run(args, check=True)
+        print(f'Render garden: {time.perf_counter() - started:.2f}s', flush=True)
+        started = time.perf_counter()
         install_homepage_query(output, query_result)
         install_episode_player(output, episodes)
         routes = package_pages(output)
         legacy_routes(output, graph, published_routes=routes)
         publish_feed(source, output)
         (output / '.nojekyll').touch()
+        print(f'Package site: {time.perf_counter() - started:.2f}s', flush=True)
     return output
 
 
