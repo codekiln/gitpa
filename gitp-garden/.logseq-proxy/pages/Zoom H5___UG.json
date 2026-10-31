@@ -1,0 +1,20 @@
+{
+  "body_sha256": "1b4c2b54bc4c4c587e974cffa03ca937e84bd67efb886d1a7d140d14ab23342b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Book/User Guide]], [[Logseq/Entity/Book]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Zoom H5/UG"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Zoom H5/UG": {
+      "files": [],
+      "page": "Zoom H5/UG",
+      "source_graph": "."
+    }
+  },
+  "page": "Zoom H5/UG",
+  "version": 2
+}
