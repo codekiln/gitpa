@@ -27,6 +27,34 @@ export function sameDocument(left, right) {
   return a.href === b.href;
 }
 
+/** Addresses of the scripts a page's HTML lists, resolved against the page's address. */
+export function pageScripts(root, base) {
+  const sources = new Set();
+  for (const script of root.querySelectorAll('script[src]')) {
+    try { sources.add(new URL(script.getAttribute('src'), base).href); } catch { /* An invalid address loads nothing. */ }
+  }
+  return sources;
+}
+
+// lsg-shell.js reveals these header controls once per document, and search reveals its button.
+const REVEALED_CONTROLS = ['[data-lsg-left-toggle]', '[data-lsg-search]', '[data-lsg-more]', '[data-lsg-right-toggle]'];
+// The sidebars stay open or closed across pages; the More menu starts closed on each page.
+const SIDEBAR_TOGGLES = ['[data-lsg-left-toggle]', '[data-lsg-right-toggle]'];
+
+/** Carry the shell's revealed controls and sidebar toggle state into the next page's header. */
+function adoptHeader(current, next) {
+  for (const selector of REVEALED_CONTROLS) {
+    const mine = current.querySelector(selector);
+    const theirs = next.querySelector(selector);
+    if (!mine || !theirs) continue;
+    theirs.hidden = mine.hidden;
+    if (SIDEBAR_TOGGLES.includes(selector) && mine.hasAttribute('aria-expanded')) {
+      theirs.setAttribute('aria-expanded', mine.getAttribute('aria-expanded'));
+    }
+  }
+  current.replaceWith(next);
+}
+
 /** Abort is an optimization; the token also protects against unabortable responses. */
 export function latestRequest(fetcher, Abort = AbortController) {
   let sequence = 0;
@@ -83,6 +111,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   const key = () => `gitpa-${Date.now()}-${++nextKey}`;
   const stateWithKey = state => ({ ...state, gitpaNavigation: state?.gitpaNavigation || key() });
   let displayedURL = window.location.href;
+  let displayedScripts = pageScripts(document, displayedURL);
   let displayedState = stateWithKey(history.state);
   history.replaceState(displayedState, '', displayedURL);
   const positions = new Map();
@@ -180,17 +209,33 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         // Keep the requested fragment when fetch's response URL omits it.
         if (!responseURL.hash) responseURL.hash = target.hash;
         const parsed = new window.DOMParser().parseFromString(html, 'text/html');
+        const scripts = pageScripts(parsed, responseURL.href);
+        if ([...scripts].some(source => !displayedScripts.has(source))) {
+          // Swapped-in content never runs a page's own scripts, such as the graph view's.
+          // Back and Forward have already moved to the page's address, so reload it there.
+          if (options.pop) window.location.reload();
+          else window.location.assign(responseURL.href);
+          return;
+        }
         const main = parsed.querySelector('main');
         const nav = parsed.querySelector('nav');
         if (!main || !nav || !document.querySelector('main') || !document.querySelector('nav')) throw new Error('Page has no site content.');
         const importedMain = document.importNode(main, true);
         const importedNav = document.importNode(nav, true);
+        const header = parsed.querySelector('.lsg-header');
+        const importedHeader = header && document.importNode(header, true);
         // Imported scripts never execute; remove them to keep that invariant explicit.
-        for (const root of [importedMain, importedNav]) for (const script of root.querySelectorAll('script')) script.remove();
+        for (const root of [importedMain, importedNav, importedHeader]) {
+          if (root) for (const script of root.querySelectorAll('script')) script.remove();
+        }
         const metadata = ['meta[name="gitpa-episode"]', 'link[rel="canonical"]', 'link[rel="lsg-search"]'].map(selector => [selector, parsed.querySelector(selector)]);
         const importedMetadata = metadata.map(([selector, node]) => [selector, node && document.importNode(node, true)]);
         document.querySelector('main').replaceWith(importedMain);
         document.querySelector('nav').replaceWith(importedNav);
+        // The header's Home button and More menu items depend on the page.
+        const currentHeader = document.querySelector('.lsg-header');
+        if (currentHeader && importedHeader) adoptHeader(currentHeader, importedHeader);
+        displayedScripts = scripts;
         document.title = parsed.title;
         for (const [selector, node] of importedMetadata) {
           for (const existing of document.querySelectorAll(selector)) existing.remove();
@@ -200,6 +245,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         adoptURL(responseURL, options);
         window.logseqGardenerInitOutline?.(importedMain);
         window.logseqGardenerInitProperties?.(importedMain);
+        window.logseqGardenerAllPages?.init(importedMain);
         window.logseqGardenerInitBacklinks?.(importedMain);
         window.logseqGardenerInitTheme?.(importedNav);
         window.logseqGardenerInitSearch?.(document, { resolvePage: searchPageRoute });
