@@ -64,6 +64,17 @@ class HomepageTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'placeholder'):
                 install_homepage_query(output, self.result())
 
+    def test_query_rows_find_targets_on_later_all_pages_screens(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>')
+            (output / 'pages-2.html').write_text('<a href="p-bbb.html">GitP/A/Session/Newest</a>'
+                                                  '<a href="p-ccc.html">GitP/A/Session/Older</a>')
+            for name in ['index.html', 'p-aaa.html']:
+                (output / name).write_text(f'<ul><li>{QUERY_PLACEHOLDER}</li></ul>')
+            install_homepage_query(output, self.result())
+            self.assertIn('href="p-bbb.html"', (output / 'index.html').read_text())
+
     def test_query_rows_preserve_shared_outline_bullets(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)

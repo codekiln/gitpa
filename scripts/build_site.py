@@ -103,11 +103,21 @@ class PageRoutes(HTMLParser):
             self.href = None
 
 
+def rendered_page_routes(output):
+    """Read every static page of Gardener’s All pages index."""
+    parser = PageRoutes()
+    files = [output / "pages.html"]
+    files.extend(sorted(path for path in output.glob("pages-*.html")
+                        if re.fullmatch(r"pages-[0-9]+\.html", path.name)))
+    for path in files:
+        parser.feed(path.read_text(encoding="utf-8"))
+    return parser
+
+
 def install_homepage_query(output, result):
     """Insert validated query rows after Gardener has indexed authored references."""
     query_outline(result)
-    parser = PageRoutes()
-    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    parser = rendered_page_routes(output)
     rows = []
     for item in result['view'][1:]:
         label = item[1][2]
@@ -134,10 +144,8 @@ def install_homepage_query(output, result):
 
 def legacy_routes(output, graph=None, published_routes=None):
     """Preserve published Logseq hash links, including episode URLs in RSS."""
-    parser = PageRoutes()
-    if published_routes is None:
-        parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
-    else:
+    parser = rendered_page_routes(output) if published_routes is None else PageRoutes()
+    if published_routes is not None:
         parser.routes = dict(published_routes)
     if normalized(HOME) not in parser.routes:
         raise ValueError('Rendered all-pages index does not include the homepage')
@@ -234,8 +242,7 @@ def compile_episode_pages(graph):
 
 def install_episode_player(output, episodes):
     """Install persistent navigation everywhere and identify playable episodes."""
-    parser = PageRoutes()
-    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    parser = rendered_page_routes(output)
     base = urlsplit(SITE_URL).path
     for name, recording in episodes.items():
         route = parser.routes.get(name)
@@ -261,8 +268,7 @@ def install_episode_player(output, episodes):
 
 def package_pages(output):
     """Give rendered pages namespace URLs while retaining hash-file compatibility."""
-    parser = PageRoutes()
-    parser.feed((output / 'pages.html').read_text(encoding='utf-8'))
+    parser = rendered_page_routes(output)
     base = urlsplit(SITE_URL).path
     destinations, claims, directories = {}, {}, {}
     for route, title in parser.titles.items():
