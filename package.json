@@ -1,5 +1,11 @@
 {
+  "name": "gitpa",
   "private": true,
   "description": "Logseq file parser dependency for homepage query validation",
-  "dependencies": { "mldoc": "1.5.9" }
+  "dependencies": {
+    "mldoc": "1.5.9"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
 }
