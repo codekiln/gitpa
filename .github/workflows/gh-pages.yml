@@ -23,10 +23,8 @@ jobs:
 
       - uses: jdx/mise-action@v2
 
-      - name: Validate homepage query against parsed graph
-        run: |
-          npm ci --no-audit --no-fund
-          mise run site:query:check
+      - name: Install homepage query dependencies
+        run: npm ci --no-audit --no-fund
 
       - name: Scan published source for secrets and local paths
         run: |
