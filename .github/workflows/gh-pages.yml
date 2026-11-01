@@ -22,6 +22,9 @@ jobs:
           node-version: '22'
 
       - uses: jdx/mise-action@v2
+        env:
+          # The steps below download a pinned, checksum-verified lsg; this keeps mise from installing a second one that CI never runs.
+          MISE_DISABLE_TOOLS: github:codekiln/logseq-gardener
 
       - name: Install homepage query dependencies
         run: npm ci --no-audit --no-fund
