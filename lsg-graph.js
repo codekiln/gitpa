@@ -68,8 +68,8 @@ for (let k = 0; k < g.a.length; k++) if (keep[g.a[k]] >= 0 && keep[g.b[k]] >= 0)
 const pick = (array, T) => T.from(order, i => array[i]);
 return { n: order.length, links: a.length, flags: pick(g.flags, Uint8Array), degree: new Uint32Array(order.length), x: pick(g.x, Float32Array), y: pick(g.y, Float32Array), a: Uint32Array.from(a), b: Uint32Array.from(b), title: i => g.title(order[i]) };
 }
-const load = (path, as) => fetch(new URL(path, base)).then(response => {
-if (!response.ok) throw new Error(response.status);
+const load = (path, as, signal) => fetch(new URL(path, base), { signal }).then(response => {
+if (!response.ok) throw Object.assign(new Error('HTTP ' + response.status), { status: response.status });
 if (as === 'arrayBuffer') return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
 return response[as]();
 });
@@ -394,9 +394,47 @@ self.resize = resize;
 self.say = say;
 return self;
 }
+const WAIT = 500;
+function progress(graph, what, task) {
+const text = el('span'), button = el('button', { type: 'button', class: 'lsg-graph-action', hidden: '' });
+const overlay = el('div', { class: 'lsg-graph-loading' }, el('p', { role: 'status' }, el('span', { class: 'lsg-graph-spinner' }), text), button);
+graph.box.append(overlay);
+let state = '', controller = null, timer = 0;
+const show = (next, message = '', label = '') => {
+const focused = overlay.contains(document.activeElement);
+state = next;
+if (next) graph.box.setAttribute('data-lsg-load', next); else graph.box.removeAttribute('data-lsg-load');
+text.textContent = message;
+button.textContent = label;
+button.hidden = !label;
+if (focused) (label ? button : graph.canvas).focus();
+};
+async function run() {
+controller?.abort();
+clearTimeout(timer);
+const mine = controller = new AbortController(), signal = mine.signal;
+const loading = () => show('loading', `Loading the ${what}…`, 'Cancel');
+if (state) loading(); else timer = setTimeout(loading, WAIT);
+try {
+await Promise.race([task(signal), new Promise((_, reject) => signal.addEventListener('abort', () => reject(signal.reason)))]);
+if (controller === mine) show('');
+} catch {
+if (controller !== mine) return;
+if (signal.aborted) show('cancelled', `The ${what} was not loaded.`, `Load the ${what}`);
+else show('failed', `The ${what} could not be loaded.`, 'Retry');
+} finally {
+if (controller === mine) { clearTimeout(timer); controller = null; }
+}
+}
+button.addEventListener('click', event => {
+if (event.detail > 1) return;
+if (state === 'loading') controller?.abort(); else run();
+});
+return run;
+}
 const read = () => { try { return JSON.parse(sessionStorage.getItem(STORE) || 'null'); } catch { return null; } };
 const save = value => { try { sessionStorage.setItem(STORE, JSON.stringify(value)); } catch { /* Settings last for this page. */ } };
-async function globalGraph(box) {
+function globalGraph(box) {
 styles();
 const config = JSON.parse(box.getAttribute('data-lsg-graph'));
 const saved = read() || {};
@@ -413,12 +451,18 @@ drag: (node, x, y) => { start(); simulate({ type: 'drag', node, x, y }); },
 release: () => simulate({ type: 'release' }),
 onfirst: () => graph.say(''),
 });
-graph.say('Loading the graph…');
-const fetchData = journals => files[journals] ??= load(journals ? config.journals : config.data, 'arrayBuffer').then(decode).then(g => Object.assign(g, { homeX: g.x, homeY: g.y }));
+const fetchData = (journals, signal) => {
+const kept = files[journals];
+if (kept && !kept.signal.aborted) return kept.promise;
+const promise = load(journals ? config.journals : config.data, 'arrayBuffer', signal).then(decode).then(g => Object.assign(g, { homeX: g.x, homeY: g.y }));
+files[journals] = { promise, signal };
+promise.catch(() => { if (files[journals]?.promise === promise) delete files[journals]; });
+return promise;
+};
 let shown = null;
-async function data() {
-const journals = !!state.settings.journals;
-const g = await fetchData(journals);
+async function data(signal) {
+const g = await fetchData(!!state.settings.journals, signal);
+signal.throwIfAborted();
 if (shown !== g) { graph.set(g, false); shown = g; simulated = false; }
 return g;
 }
@@ -491,7 +535,7 @@ const rank = i => { const t = shown.title(i).toLowerCase(); return (t === words 
 found = found.sort((a, b) => rank(a) - rank(b)).slice(0, 20);
 list.replaceChildren(...found.map(i => el('li', {}, el('button', { type: 'button', 'data-node': String(i) }, shown.title(i)))));
 }
-panel.addEventListener('click', async event => {
+panel.addEventListener('click', event => {
 const target = event.target.closest('button');
 if (!target) return;
 const section = target.closest('.graph-filters-head');
@@ -500,8 +544,9 @@ const name = target.getAttribute('data-setting');
 if (name === 'paused') { state.paused = !state.paused; if (simulated) simulate({ type: state.paused ? 'pause' : 'resume' }); refresh(); return; }
 if (name) {
 state.settings[name] = !state.settings[name];
-if (name === 'journals') { graph.say('Loading the graph…'); await data(); graph.say(''); state.hops = 0; }
+if (name === 'journals') state.hops = 0;
 refresh();
+if (name === 'journals') fetchGraph();
 return;
 }
 if (target.matches('[data-reset=graph]')) {
@@ -510,7 +555,7 @@ refresh(true); return;
 }
 if (target.matches('[data-reset=forces]')) {
 state.forces = { ...config.forces };
-const g = await fetchData(!!state.settings.journals);
+const g = shown;
 if (simulated) { simulate({ type: 'pause' }); simulated = false; }
 g.x = g.homeX; g.y = g.homeY;
 graph.set(g, true); refresh(); return;
@@ -564,15 +609,17 @@ document.body.append(link); link.click(); link.remove();
 setTimeout(() => URL.revokeObjectURL(link.href), 1000);
 }, 'image/png');
 }
-panel.hidden = false;
-graph.resize();
-try {
-await data();
+let ready = false;
+const fetchGraph = progress(graph, 'graph', async signal => {
+await data(signal);
 refresh();
+if (ready) return;
+ready = true;
+panel.hidden = false;
 if (Object.keys(config.forces).some(name => config.forces[name] !== state.forces[name])) { start(); simulate({ type: 'forces', forces: state.forces }); }
-} catch {
-graph.say('The graph could not be loaded. Reload the page to try again.');
-}
+});
+graph.resize();
+fetchGraph();
 }
 async function pageGraph(body) {
 styles();
@@ -587,15 +634,11 @@ if (!/^p-[0-9a-f]{16}\.html$/.test(route)) route = document.querySelector('.lsg-
 const graph = Graph(box, { centre: true });
 const simulate = simulator();
 if (!route) { graph.say('This view has no page to draw.'); return; }
-graph.say('Loading the page graph…');
-let whole = null;
-try {
-whole = fromJSON(await load('_graph/p/' + route.slice(2, 18) + '.json', 'json'));
-} catch {
-whole = null;
-}
-async function render() {
-let g;
+let whole;
+const missing = error => { if (!error.status) throw error; };
+async function render(signal) {
+if (whole === undefined) whole = await load('_graph/p/' + route.slice(2, 18) + '.json', 'json', signal).then(fromJSON, error => { missing(error); return null; });
+let g = null;
 if (whole) {
 const keep = Uint8Array.from(whole.flags, f => journals || !(f & JOURNAL_ONLY) ? 1 : 0);
 const order = [];
@@ -607,28 +650,31 @@ for (let k = 0; k < whole.a.length; k++) if (keep[whole.a[k]] && keep[whole.b[k]
 g = { n: order.length, links: a.length, flags: Uint8Array.from(order, i => whole.flags[i]), degree: new Uint32Array(order.length), x: new Float32Array(order.length), y: new Float32Array(order.length), a: Uint32Array.from(a), b: Uint32Array.from(b), title: i => whole.title(order[i]) };
 let first = true;
 const laid = await new Promise(done => simulate({ type: 'start', x: g.x, y: g.y, a: g.a, b: g.b, forces: { link_distance: 70, charge_strength: -600, charge_range: 600 }, phyllotaxis: true }, message => {
+if (signal.aborted) return;
 if (first) { first = false; done(message); } else graph.move(message.x, message.y);
 }));
 g.x = laid.x; g.y = laid.y;
 } else {
-const global = decode(await load(journals ? '_graph/journals.bin' : '_graph/default.bin', 'arrayBuffer').catch(() => load('_graph/default.bin', 'arrayBuffer')));
+const global = decode(await load(journals ? '_graph/journals.bin' : '_graph/default.bin', 'arrayBuffer', signal).catch(error => { missing(error); return load('_graph/default.bin', 'arrayBuffer', signal); }));
 let centre = -1;
 for (let i = 0; i < global.n && centre < 0; i++) if (routeOf(global.title(i)) === route) centre = i;
-if (centre < 0) { graph.say('This page has no page graph.'); return; }
-g = around(global, centre);
+if (centre >= 0) g = around(global, centre);
 }
+signal.throwIfAborted();
+if (!g) { graph.say('This page has no page graph.'); return; }
 graph.set(g, false);
 graph.resize();
 graph.show(new Uint8Array(g.n).fill(1));
 graph.say('');
 }
+const fetchPage = progress(graph, 'page graph', render);
 toggle.addEventListener('click', () => {
 journals = !journals;
 toggle.setAttribute('aria-checked', String(journals));
 try { sessionStorage.setItem(KEY, String(journals)); } catch { /* This card keeps the setting. */ }
-render();
+fetchPage();
 });
-await render();
+await fetchPage();
 }
 window.logseqGardenerGraph = { page: pageGraph, decode, routeOf, cljsHash, parentColor, sizeOf, around };
 const box = document.querySelector('[data-lsg-graph]');

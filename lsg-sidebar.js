@@ -49,11 +49,18 @@ return { open: cards.length > 0, width: 0, cards };
 let state = read();
 if (!state || !Array.isArray(state.cards)) state = defaults();
 state.cards = state.cards.filter(card => card && PATHS[card.type]);
+const routeAt = href => {
+const url = new URL(href, document.baseURI);
+url.hash = '';
+return url.href.startsWith(base.href) ? url.href.slice(base.href.length) || 'index.html' : url.href;
+};
+const address = route => new URL(route, base).href;
+const current = () => routeAt(location.href);
 const cache = new Map();
 const page = route => {
 let text = cache.get(route);
 if (text) cache.delete(route);
-else text = fetch(new URL(route, base)).then(response => response.ok ? response.text() : null).catch(() => null);
+else text = fetch(address(route)).then(response => response.ok ? response.text() : null).catch(() => null);
 cache.set(route, text);
 if (cache.size > 20) cache.delete(cache.keys().next().value);
 return text.then(html => html && new DOMParser().parseFromString(html, 'text/html'));
@@ -108,11 +115,11 @@ li.classList.remove('folded');
 li.querySelectorAll('.folded').forEach(item => item.classList.remove('folded'));
 };
 const crumbs = (doc, route, li) => {
-const nav = el('nav', { class: 'lsg-breadcrumb', 'aria-label': 'Block parents' }, el('a', { href: route }, titleOf(doc)));
+const nav = el('nav', { class: 'lsg-breadcrumb', 'aria-label': 'Block parents' }, el('a', { class: 'page-ref', href: address(route) }, titleOf(doc)));
 const ancestors = [];
 for (let up = parentItem(li); up; up = parentItem(up)) ancestors.push(up);
 if (ancestors.length > 3) nav.append(el('span', {}, '›'), '⋯');
-for (const up of ancestors.slice(0, 3).reverse()) nav.append(el('span', {}, '›'), el('a', { href: route + ZOOM + up.getAttribute('data-lsg-block') }, label(up)));
+for (const up of ancestors.slice(0, 3).reverse()) nav.append(el('span', {}, '›'), el('a', { href: address(route) + ZOOM + up.getAttribute('data-lsg-block') }, label(up)));
 return nav;
 };
 const routeOf = card => card.type === 'contents' ? toggle()?.getAttribute('data-lsg-contents') : card.route;
@@ -125,7 +132,11 @@ if (card.type === 'help') return { title: 'Help', body: help() };
 if (card.type === 'graph') {
 const body = el('div', { class: 'lsg-page-graph' });
 await script('lsg-graph.js');
-window.logseqGardenerGraph?.page(body);
+if (window.logseqGardenerGraph) window.logseqGardenerGraph.page(body);
+else {
+delete scripts['lsg-graph.js'];
+body.append(el('p', {}, 'The page graph could not be loaded.'), el('button', { type: 'button', class: 'lsg-card-retry' }, 'Retry'));
+}
 return { title: 'Page graph', body };
 }
 const route = routeOf(card);
@@ -136,7 +147,7 @@ await script('lsg-slides.js');
 const body = window.logseqGardenerSlides?.(doc.querySelector('main>ul.outline')) ?? '';
 const focus = focusDeck && body && body.querySelector('.reveal');
 focusDeck = false;
-return { title: el('a', { href: route }, titleOf(doc)), body, route, focus };
+return { title: el('a', { class: 'page-ref', href: address(route) }, titleOf(doc)), body, route, focus };
 }
 const doc = route && await page(route);
 if (!doc) {
@@ -272,7 +283,7 @@ const others = () => state.cards.filter(other => other !== card);
 return [
 [['Close', () => remove([card])], many && ['Close others', () => remove(others())], many && ['Close all', () => remove([...state.cards])]],
 [[card.collapsed ? 'Expand' : 'Collapse', () => collapse([card], !card.collapsed)], many && ['Collapse others', () => collapse(others(), true)], many && ['Collapse all', () => collapse(state.cards, true)], many && ['Expand all', () => collapse(state.cards, false)]],
-[(card.type === 'page' || card.type === 'contents' || card.type === 'slides') && routeOf(card) && ['Open as page', () => location.assign(new URL(routeOf(card), base))]],
+[(card.type === 'page' || card.type === 'contents' || card.type === 'slides') && routeOf(card) && ['Open as page', () => location.assign(address(routeOf(card)))]],
 ].map(group => group.filter(Boolean)).filter(group => group.length);
 }
 function closeMenu(focus = true) {
@@ -328,13 +339,14 @@ if (!card) return;
 if (target.closest('.lsg-card-head')) { real(card); collapse([card], !card.collapsed); return; }
 if (target.closest('.lsg-card-menu')) { real(card); open?.button === target.closest('.lsg-card-menu') ? closeMenu() : openMenu(target.closest('.lsg-card-menu'), card); return; }
 if (target.closest('.lsg-card-close,.lsg-card-dismiss')) { real(card); remove([card]); return; }
+if (target.closest('.lsg-card-retry')) { section.querySelector('.lsg-card-head').focus(); section.filled = false; fill(section); return; }
 const bullet = target.closest('.bullet');
 const li = bullet?.closest('li[data-lsg-block]');
 const route = routeOf(card);
 if (bullet) {
 event.preventDefault();
 event.stopPropagation();
-if (li && route) location.assign(new URL(route, base).href + ZOOM + li.getAttribute('data-lsg-block'));
+if (li && route) location.assign(address(route) + ZOOM + li.getAttribute('data-lsg-block'));
 }
 });
 aside.addEventListener('auxclick', event => {
@@ -362,10 +374,9 @@ handle.addEventListener('pointermove', move);
 handle.addEventListener('pointerup', stop);
 handle.addEventListener('pointercancel', stop);
 });
-const current = () => location.pathname.split('/').pop() || 'index.html';
 function target(event) {
 const node = event.target;
-const section = node.closest('.lsg-card');
+const section = node.closest('section.lsg-card');
 const cardRoute = section && routeOf(section.card);
 const bullet = node.closest('.bullet');
 if (bullet) {
@@ -382,15 +393,15 @@ const at = decodeURIComponent(location.hash.slice(ZOOM.length));
 const rest = id.split('.').slice(1);
 id = !rest.length ? at : /^\d+(\.\d+)*$/.test(at) ? [at, ...rest].join('.') : null;
 }
-return id ? { type: 'block', route: journal || current(), block: id } : null;
+return id ? { type: 'block', route: journal ? routeAt(journal) : current(), block: id } : null;
 }
 const link = node.closest('a[href]');
 if (!link) return null;
 const [path, hash = ''] = link.getAttribute('href').split('#');
-const route = path || cardRoute || current();
+const route = path ? routeAt(path) : cardRoute || current();
 if (link.classList.contains('block-ref-link') && hash.startsWith('block-')) return { type: 'refs', route, block: hash.slice(6) };
 if (('#' + hash).startsWith(ZOOM)) return { type: 'block', route, block: decodeURIComponent(hash.slice(ZOOM.length - 1)) };
-if (/^p-[\w-]+\.html$/.test(path)) return { type: 'page', route: path };
+if (path && (/^p-[\w-]+\.html$/.test(route) || link.matches('.page-reference a,a.page-ref,a.tag'))) return { type: 'page', route };
 return null;
 }
 window.logseqGardenerSidebar = request => {
