@@ -317,7 +317,8 @@ def package_pages(output):
                 return match[0]
             value = urlunsplit(('', '', path, parsed.query, parsed.fragment))
             return f'{match[1]}="{html.escape(value, quote=True)}"'
-        return re.sub(r'\b(href|src)="([^"]*)"', attribute, text)
+        # A fragment's <base href="../"> still names the site root; only its links move.
+        return re.sub(r'(?<!<base )\b(href|src)="([^"]*)"', attribute, text)
 
     for path in list(output.glob('*.html')):
         text = rewrite(path.read_text(encoding='utf-8'))
@@ -326,6 +327,10 @@ def package_pages(output):
             destination, _ = destinations[path.name]
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(text, encoding='utf-8')
+    # Reference fragments link from the site root like pages do, but lsg-references.js
+    # moves their nodes into a page at a readable route, where p-*.html would not resolve.
+    for path in output.glob('_refs/*.html'):
+        path.write_text(rewrite(path.read_text(encoding='utf-8')), encoding='utf-8')
     return {normalized(title): page_route(title) for title in parser.titles.values()}
 
 
