@@ -36,6 +36,33 @@ export function pageScripts(root, base) {
   return sources;
 }
 
+// Gardener scripts that set up a page already swapped in when they run after it, so the
+// recording keeps playing. The value says whether the script also serves later pages after
+// running once: the navigator calls logseqGardenerAllPages.init, and media.js listens on the
+// whole document. lsg-graph.js draws one graph per document, so a second graph page loads normally.
+const IN_PLACE_SCRIPTS = new Map([['lsg-all-pages.js', true], ['media.js', true], ['lsg-graph.js', false]]);
+
+/** Add the page's stylesheets the document lacks; resolves once the new linked ones settle. */
+function adoptStyles(document, root, base) {
+  const linked = new Set([...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.href));
+  const inline = new Set([...document.querySelectorAll('style')].map(style => style.textContent));
+  const loads = [];
+  for (const node of root.querySelectorAll('link[rel="stylesheet"], style')) {
+    let href = null;
+    if (node.tagName === 'LINK') {
+      try { href = new URL(node.getAttribute('href'), base).href; } catch { continue; }
+      if (linked.has(href)) continue;
+    } else if (inline.has(node.textContent)) continue;
+    const adopted = document.importNode(node, true);
+    if (href) {
+      adopted.setAttribute('href', href);
+      loads.push(new Promise(settle => { adopted.onload = adopted.onerror = settle; }));
+    }
+    document.head.append(adopted);
+  }
+  return Promise.all(loads);
+}
+
 // lsg-shell.js reveals these header controls once per document, and search reveals its button.
 const REVEALED_CONTROLS = ['[data-lsg-left-toggle]', '[data-lsg-search]', '[data-lsg-more]', '[data-lsg-right-toggle]'];
 // The sidebars stay open or closed across pages; the More menu starts closed on each page.
@@ -112,6 +139,11 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   const stateWithKey = state => ({ ...state, gitpaNavigation: state?.gitpaNavigation || key() });
   let displayedURL = window.location.href;
   let displayedScripts = pageScripts(document, displayedURL);
+  const ranScripts = new Set(displayedScripts);
+  const inPlace = source => {
+    const url = new URL(source);
+    return url.origin === window.location.origin ? IN_PLACE_SCRIPTS.get(url.pathname.split('/').pop()) : undefined;
+  };
   let displayedState = stateWithKey(history.state);
   history.replaceState(displayedState, '', displayedURL);
   const positions = new Map();
@@ -210,9 +242,10 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         if (!responseURL.hash) responseURL.hash = target.hash;
         const parsed = new window.DOMParser().parseFromString(html, 'text/html');
         const scripts = pageScripts(parsed, responseURL.href);
-        if ([...scripts].some(source => !displayedScripts.has(source))) {
-          // Swapped-in content never runs a page's own scripts, such as the graph view's.
-          // Back and Forward have already moved to the page's address, so reload it there.
+        const added = [...scripts].filter(source => !displayedScripts.has(source));
+        // Swapped-in content never runs its own scripts. A page that needs a script the navigator
+        // cannot run in place loads normally; Back and Forward have already moved to its address.
+        if (added.some(source => { const serves = inPlace(source); return serves === undefined || (ranScripts.has(source) && !serves); })) {
           if (options.pop) window.location.reload();
           else window.location.assign(responseURL.href);
           return;
@@ -232,6 +265,18 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         const importedMetadata = metadata.map(([selector, node]) => [selector, node && document.importNode(node, true)]);
         document.querySelector('main').replaceWith(importedMain);
         document.querySelector('nav').replaceWith(importedNav);
+        const styled = adoptStyles(document, parsed.head, responseURL.href);
+        const unrun = added.filter(source => !ranScripts.has(source));
+        if (unrun.length) void styled.then(() => {
+          if (token !== generation || disposed) return;
+          for (const source of unrun) {
+            ranScripts.add(source);
+            const script = document.createElement('script');
+            script.src = source;
+            script.async = false;
+            document.head.append(script);
+          }
+        });
         // The header's Home button and More menu items depend on the page.
         const currentHeader = document.querySelector('.lsg-header');
         if (currentHeader && importedHeader) adoptHeader(currentHeader, importedHeader);

@@ -90,22 +90,24 @@ export function currentChapter(chapters, seconds) {
   return current;
 }
 
+/** The chapters enclosing `current`, outermost first, ending with `current` itself. */
+export function chapterTrail(chapters, current) {
+  const byId = new Map(chapters.map(chapter => [chapter.id, chapter]));
+  const trail = [];
+  for (let chapter = current; chapter && !trail.includes(chapter); chapter = byId.get(chapter.parent)) trail.unshift(chapter);
+  return trail;
+}
+
 /** Playback context survives page changes; changing context is always explicit. */
 export function createEpisodeSession(audio, update = () => {}) {
   let context = null;
-  let origin = null;
   let controller = null;
   let playback = { status: 'Paused' };
   const publish = () => {
     if (!context) return;
-    update({ context, origin, current: currentChapter(context.chapters, audio.currentTime), ...playback });
-  };
-  const nativePlay = () => {
-    if (!origin && context) origin = { href: context.startHref || `${context.url}#episode-start`, label: context.title };
-    publish();
+    update({ context, current: currentChapter(context.chapters, audio.currentTime), ...playback });
   };
   for (const name of ['timeupdate', 'seeked', 'loadedmetadata']) audio.addEventListener(name, publish);
-  audio.addEventListener('play', nativePlay);
   const adopt = (next, replace) => {
     if (context?.source === next.source) return;
     controller?.dispose();
@@ -115,15 +117,13 @@ export function createEpisodeSession(audio, update = () => {}) {
       audio.load();
     }
     context = next;
-    origin = null;
     controller = createPlayer(audio, state => { playback = state; publish(); });
     publish();
   };
   return {
     adopt(next) { if (!context) adopt(next, false); },
-    activate(next, seconds = 0, start = null) {
+    activate(next, seconds = 0) {
       adopt(next, context !== null);
-      origin = start || { href: next.startHref || `${next.url}#episode-start`, label: next.title };
       controller.seek(seconds, next.title);
       publish();
     },
@@ -132,7 +132,6 @@ export function createEpisodeSession(audio, update = () => {}) {
     dispose() {
       controller?.dispose();
       for (const name of ['timeupdate', 'seeked', 'loadedmetadata']) audio.removeEventListener(name, publish);
-      audio.removeEventListener('play', nativePlay);
     },
   };
 }
@@ -156,6 +155,7 @@ export function readEpisode(document) {
   const startHeading = main.querySelector('h1');
   if (startHeading && !startHeading.id) startHeading.id = 'episode-start';
   const chapters = [];
+  const blocks = new Map();
   const used = new Map();
   for (const heading of main.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
     if (heading.closest('.linked-references')) continue;
@@ -165,9 +165,18 @@ export function readEpisode(document) {
       const count = (used.get(seconds) || 0) + 1;
       used.set(seconds, count);
       if (!heading.id) heading.id = `chapter-${seconds}${count > 1 ? `-${count}` : ''}`;
-      chapters.push({ seconds, label: heading.textContent.trim(), id: heading.id,
-        href: `${url.href}#${encodeURIComponent(heading.id)}` });
+      const chapter = { seconds, label: heading.textContent.trim(), id: heading.id,
+        href: `${url.href}#${encodeURIComponent(heading.id)}`, parent: null };
+      chapters.push(chapter);
+      const block = heading.closest('li');
+      if (block) blocks.set(block, chapter);
       break;
+    }
+  }
+  // A chapter heading in a block nested under another chapter's block is its subchapter.
+  for (const [block, chapter] of blocks) {
+    for (let outer = block.parentElement?.closest('li'); outer; outer = outer.parentElement?.closest('li')) {
+      if (blocks.has(outer)) { chapter.parent = blocks.get(outer).id; break; }
     }
   }
   chapters.sort((a, b) => a.seconds - b.seconds);
@@ -185,6 +194,8 @@ export function createSitePlayer(document) {
   let page = null;
   let observer = null;
   let originalParent = null, originalNext = null, originalOrigin = null, disposed = false;
+  // The chapter trail and heading highlight change only with the chapter or the page.
+  let shown = null;
   let disposeView = () => {};
   const makeFooter = initial => {
     audio = initial.audio;
@@ -196,18 +207,21 @@ export function createSitePlayer(document) {
     footer.setAttribute('aria-label', 'Episode recording');
     const details = document.createElement('div');
     details.className = 'episode-player-details';
-    const recording = document.createElement('a');
-    recording.textContent = 'Full recording';
-    const origin = document.createElement('a');
-    origin.className = 'episode-player-origin';
-    origin.textContent = 'Return to start';
-    const chapter = document.createElement('a');
-    chapter.className = 'episode-player-chapter';
+    const episode = document.createElement('a');
+    episode.className = 'episode-player-episode';
+    const trail = document.createElement('span');
+    trail.className = 'episode-player-chapter';
+    const playing = document.createElement('a');
+    playing.className = 'episode-player-return';
+    playing.textContent = 'Return to playing spot';
     const status = document.createElement('span');
     status.className = 'episode-player-status';
     status.setAttribute('role', 'status');
     status.setAttribute('aria-live', 'polite');
-    details.append(recording, origin, chapter, status);
+    const recording = document.createElement('a');
+    recording.className = 'episode-player-recording';
+    recording.textContent = 'Full recording';
+    details.append(episode, trail, playing, status, recording);
     originalOrigin?.classList.add('episode-recording-origin');
     audio.controls = true;
     audio.setAttribute('aria-label', 'Full episode recording');
@@ -215,13 +229,30 @@ export function createSitePlayer(document) {
     document.body.append(footer);
     document.body.classList.add('has-episode-player');
     session = createEpisodeSession(audio, state => {
+      const start = state.context.startHref || `${state.context.url}#episode-start`;
       recording.href = state.context.source;
-      origin.href = state.origin?.href || state.context.startHref || `${state.context.url}#episode-start`;
-      chapter.href = state.current?.href || state.context.startHref || `${state.context.url}#episode-start`;
-      chapter.textContent = state.current?.label || state.context.title;
+      episode.href = start;
+      episode.textContent = state.context.title;
+      playing.href = state.current?.href || start;
       status.textContent = state.status;
       const currentPage = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
       const here = new URL(currentPage || document.baseURI, document.baseURI).href.split('#')[0];
+      const key = `${state.context.source} ${here} ${state.current?.id}`;
+      if (key === shown) return;
+      shown = key;
+      const links = chapterTrail(state.context.chapters, state.current).map(item => {
+        const link = document.createElement('a');
+        link.href = item.href;
+        link.textContent = item.label;
+        return link;
+      });
+      trail.replaceChildren(...links.flatMap((link, index) => {
+        if (!index) return [link];
+        const separator = document.createElement('span');
+        separator.setAttribute('aria-hidden', 'true');
+        separator.textContent = '›';
+        return [separator, link];
+      }));
       for (const heading of document.querySelectorAll('main h1, main h2, main h3, main h4, main h5, main h6')) {
         const selected = here === state.context.url && heading.id === state.current?.id;
         heading.classList.toggle('is-current-chapter', selected);
@@ -243,10 +274,15 @@ export function createSitePlayer(document) {
     disposeView();
     disposeView = () => {};
     page = readEpisode(document);
+    shown = null;
     if (!page) { session?.refresh(); return; }
     if (!audio) { makeFooter(page); return; }
     const candidate = page.audio;
-    if (candidate !== audio) {
+    // The footer already holds the recording of the episode it is playing.
+    if (candidate !== audio && page.source === session.context?.source) {
+      candidate.closest('li')?.classList.add('episode-recording-origin');
+      candidate.remove();
+    } else if (candidate !== audio) {
       candidate.closest('li')?.classList.add('episode-recording-origin');
       const button = document.createElement('button');
       button.type = 'button';
@@ -262,19 +298,16 @@ export function createSitePlayer(document) {
   const originalAnchor = anchor => anchor?.matches?.('a[href]') && document.querySelector('main')?.contains(anchor)
     && !anchor.closest('.linked-references, .transclusion') && !anchor.hasAttribute('download')
     && (!anchor.target || anchor.target === '_self');
-  const activate = (anchor, seconds) => {
-    const heading = anchor.closest('h1, h2, h3, h4, h5, h6');
-    const chapter = page.chapters.find(item => item.id === heading?.id);
-    session.activate(page, seconds, chapter && { href: chapter.href, label: chapter.label });
-  };
+  // Gardener opens every external link in a new tab, recording timestamps included,
+  // so a plain click on one is claimed whatever its target. Modified clicks still open a tab.
   const click = event => {
     if (!page || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
-    if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
+    if (!anchor || anchor.hasAttribute('download')) return;
     const seconds = chapterTime(anchor.getAttribute('href'), page.source, document.baseURI);
     if (seconds === null) return;
     event.preventDefault();
-    activate(anchor, seconds);
+    session.activate(page, seconds);
   };
   const mediaSeek = event => {
     if (!page || event.defaultPrevented || !event.cancelable || !event.bubbles) return;
@@ -284,7 +317,7 @@ export function createSitePlayer(document) {
       || typeof source !== 'string' || source !== page.source
       || chapterTime(anchor.getAttribute('href'), page.source, document.baseURI) !== seconds) return;
     event.preventDefault();
-    activate(anchor, seconds);
+    session.activate(page, seconds);
   };
   document.addEventListener('click', click);
   document.addEventListener('lsg:media-seek', mediaSeek);
