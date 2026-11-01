@@ -71,6 +71,27 @@ class PublicRoutesTests(unittest.TestCase):
             self.assertIn('href="/gitpa/Microfreak/Preset/174%20Auster/"',
                           (root / 'Microfreak/Preset/index.html').read_text())
 
+    def test_reference_fragments_link_to_readable_routes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root, ['Microfreak', 'GitP/A/Session/26/10/26-Mon'])
+            data = '{"pages":[["GitP/A/Session/26/10/26-Mon","p-0000000000000001.html"]]}'
+            fragment = root / '_refs/p-0000000000000000-linked-1.html'
+            fragment.parent.mkdir()
+            fragment.write_text('<head><base href="../">'
+                                f'<script type="application/json" class="references-data">{data}</script></head>'
+                                '<body><main><a class="page-ref" href="p-0000000000000001.html">26-Mon</a>'
+                                '<a href="p-0000000000000001.html#source-block-3">Crumb</a>'
+                                '<a href="_refs/p-0000000000000000-linked-2.html" rel="next">More</a></main></body>')
+            package_pages(root)
+            text = fragment.read_text()
+            self.assertIn('<base href="../">', text)
+            self.assertIn('<a class="page-ref" href="/gitpa/GitP/A/Session/26/10/26-Mon/">', text)
+            self.assertIn('href="/gitpa/GitP/A/Session/26/10/26-Mon/#source-block-3"', text)
+            self.assertIn('href="/gitpa/_refs/p-0000000000000000-linked-2.html"', text)
+            # The filter data names pages by Gardener's route, which lsg-references.js compares.
+            self.assertIn(data, text)
+
     def test_packaging_rejects_collisions_before_rewriting(self):
         for titles in [['index.html'], ['assets/Page'], ['legacy-routes.js'], ['legacy-routes.json'], ['Navigation.JS'], ['Player.JS'],
                        ['Guide/Café', 'Guide/Cafe\u0301'], ['Guide/A', 'guide/B'],
