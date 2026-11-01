@@ -2,6 +2,7 @@
 if (window.logseqGardenerSidebar) return;
 const KEY = 'logseq-gardener-right-sidebar';
 const ZOOM = '#zoom/';
+const SOURCE = 'source-block-';
 const root = document.documentElement;
 const base = new URL('.', document.currentScript?.src || location.href);
 const toggle = () => document.querySelector('[data-lsg-right-toggle]');
@@ -87,6 +88,7 @@ path.unshift((up ? kids(up) : [...item.parentElement.children]).indexOf(item) + 
 return path.join('.');
 };
 const find = (doc, id) => {
+if (id.startsWith(SOURCE)) return doc.getElementById(id)?.closest('li');
 if (!/^\d+(\.\d+)*$/.test(id)) return doc.getElementById('block-' + id.toLowerCase())?.closest('li');
 let items = [...(doc.querySelector('main>ul.outline')?.children ?? [])], item = null;
 for (const n of id.split('.')) {
@@ -380,6 +382,8 @@ const section = node.closest('section.lsg-card');
 const cardRoute = section && routeOf(section.card);
 const bullet = node.closest('.bullet');
 if (bullet) {
+const [path, hash = ''] = (bullet.getAttribute('href') || '').split('#');
+if (path && hash.startsWith(SOURCE)) return { type: 'block', route: routeAt(path), block: hash };
 const li = bullet.closest('li');
 if (section) {
 const id = li?.getAttribute('data-lsg-block');
@@ -400,6 +404,7 @@ if (!link) return null;
 const [path, hash = ''] = link.getAttribute('href').split('#');
 const route = path ? routeAt(path) : cardRoute || current();
 if (link.classList.contains('block-ref-link') && hash.startsWith('block-')) return { type: 'refs', route, block: hash.slice(6) };
+if (path && hash.startsWith(SOURCE)) return { type: 'refs', route, block: hash };
 if (('#' + hash).startsWith(ZOOM)) return { type: 'block', route, block: decodeURIComponent(hash.slice(ZOOM.length - 1)) };
 if (path && (/^p-[\w-]+\.html$/.test(route) || link.matches('.page-reference a,a.page-ref,a.tag'))) return { type: 'page', route };
 return null;
