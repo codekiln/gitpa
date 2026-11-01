@@ -115,7 +115,9 @@ def install_homepage_query(output, result):
         route = parser.routes.get(normalized(label))
         if not route:
             raise ValueError(f'Query target was not rendered: {label}')
-        rows.append(f'<li><a href="{html.escape(route, quote=True)}">{html.escape(label)}</a></li>')
+        # page-ref marks the row as a page link, as Gardener marks its own query results,
+        # so Shift-click opens it in the right sidebar.
+        rows.append(f'<li><a class="page-ref" href="{html.escape(route, quote=True)}">{html.escape(label)}</a></li>')
     home_route = parser.routes.get(normalized(HOME))
     if not home_route:
         raise ValueError('Rendered page list does not include the homepage')

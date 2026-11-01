@@ -59,7 +59,8 @@ class HomepageTests(unittest.TestCase):
                                            f'href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
-            self.assertIn('<a href="p-bbb.html">GitP/A/Session/Newest</a>', text)
+            # Shift-click opens a.page-ref links in Gardener's right sidebar.
+            self.assertIn('<a class="page-ref" href="p-bbb.html">GitP/A/Session/Newest</a>', text)
             self.assertLess(text.index('Newest'), text.index('Older'))
             self.assertIn('data-copy-feed>Copy feed URL</button>', text)
             self.assertNotIn(QUERY_PLACEHOLDER, text)
@@ -92,7 +93,7 @@ class HomepageTests(unittest.TestCase):
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
             self.assertEqual(text.count(bullet), 2)
-            self.assertIn(f'<li>{bullet}<a href="p-bbb.html">', text)
+            self.assertIn(f'<li>{bullet}<a class="page-ref" href="p-bbb.html">', text)
             self.assertNotIn(QUERY_PLACEHOLDER, text)
 
     def test_query_result_changes_change_publication(self):
