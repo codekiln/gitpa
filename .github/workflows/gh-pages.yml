@@ -23,7 +23,7 @@ jobs:
 
       - uses: jdx/mise-action@v2
         env:
-          # The next steps download a pinned, checksum-verified lsg. Without this, mise would also install a second lsg that CI never runs, and fail while every release is under mise's one-day minimum release age.
+          # The steps below download a pinned, checksum-verified lsg; this keeps mise from installing a second one that CI never runs.
           MISE_DISABLE_TOOLS: github:codekiln/logseq-gardener
 
       - name: Install homepage query dependencies
