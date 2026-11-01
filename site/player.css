@@ -23,8 +23,11 @@ body.has-episode-player {
   font-size: .9rem;
   overflow-wrap: anywhere;
 }
+.episode-player-episode { font-size: .85rem; color: var(--lsg-muted); }
 .episode-player-chapter { flex: 1; font-weight: 650; }
-.episode-player-origin { font-size: .85rem; }
+.episode-player-chapter > span { margin: 0 .35rem; color: var(--lsg-muted); }
+.episode-player-return { padding: .15rem .55rem; font-size: .85rem; color: var(--gitpa-code-text); background: var(--gitpa-button-background); border: 1px solid var(--lsg-quote-border); border-radius: .3rem; text-decoration: none; }
+.episode-player-recording { font-size: .8rem; }
 .is-current-chapter { border-left: 3px solid var(--lsg-link); padding-left: .5rem; background: var(--lsg-surface); }
 .episode-play { padding: .5rem .8rem; color: var(--gitpa-code-text); background: var(--gitpa-button-background); border: 1px solid var(--lsg-quote-border); border-radius: .3rem; cursor: pointer; }
 .navigation-error { padding: .75rem; border: 1px solid #b48ead; background: var(--lsg-surface); }
@@ -46,6 +49,8 @@ body.has-episode-player {
 }
 
 body:has(> .lsg-header) .episode-player { left: 0; }
+/* A chapter the player returns to, like any fragment target, lands below the sticky header. */
+html:has(> body > .lsg-header) { scroll-padding-top: 3.5rem; }
 @media (min-width: 640px) {
   html[data-lsg-left-sidebar="open"] body:has(> .lsg-header) .episode-player { left: 246px; }
 }

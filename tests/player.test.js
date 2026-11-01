@@ -6,10 +6,10 @@ const { join } = require('node:path');
 const navSource = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
 const navURL = `data:text/javascript;base64,${Buffer.from(navSource).toString('base64')}`;
 const source = readFileSync(join(__dirname, '../site/player.js'), 'utf8').replace("'./navigation.js'", JSON.stringify(navURL));
-let chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode, installSite;
+let chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, chapterTrail, createEpisodeSession, readEpisode, installSite;
 before(async () => {
   const playerURL = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
-  ({ chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, createEpisodeSession, readEpisode } = await import(playerURL));
+  ({ chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, chapterTrail, createEpisodeSession, readEpisode } = await import(playerURL));
   const site = name => `data:text/javascript;base64,${readFileSync(join(__dirname, '../site', name)).toString('base64')}`;
   const bootstrap = readFileSync(join(__dirname, '../site/bootstrap.js'), 'utf8')
     .replace("'./player.js'", JSON.stringify(playerURL))
@@ -207,7 +207,9 @@ class Element extends EventTarget {
   querySelectorAll(selector) { return this.children.flatMap(child => [...(matches(child, selector) ? [child] : []), ...child.querySelectorAll(selector)]); }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
   replaceWith(node) { const i = this.parent.children.indexOf(this); this.parent.children[i] = node; node.parent = this.parent; this.parent = null; }
+  replaceChildren(...nodes) { for (const child of this.children) child.parent = null; this.children = []; this.append(...nodes); }
 }
+const trailLabels = player => player.footer.querySelector('.episode-player-chapter').children.filter(child => child.tagName === 'a').map(link => link.textContent);
 function pageFixture(count = 1) {
   const document = new EventTarget();
   document.baseURI = 'https://example.com/gitpa/episode/';
@@ -326,7 +328,7 @@ test('shared helper handoff owns playback once and preserves the chapter list', 
   assert.equal(audio.calls, 1);
   assert.equal(audio.currentTime, 42);
   assert.equal(document.querySelectorAll('audio').length, 1);
-  assert.equal(player.footer.children[0].children[2].textContent, 'An evolving melody 0:20');
+  assert.deepEqual(trailLabels(player), ['An evolving melody 0:20']);
   assert.equal(main.querySelectorAll('h3').length, 2);
   player.dispose();
 });
@@ -366,9 +368,7 @@ test('explicit copied recording links seek once while copied shared events stay 
     }
     anchor.setAttribute('download', '');
     assert.equal(click().defaultPrevented, false);
-    anchor.removeAttribute('download'); anchor.target = '_blank';
-    assert.equal(click().defaultPrevented, false);
-    anchor.target = ''; anchor.setAttribute('href', '/another.wav#t=42');
+    anchor.removeAttribute('download'); anchor.setAttribute('href', '/another.wav#t=42');
     assert.equal(click().defaultPrevented, false);
     assert.equal(audio.calls, 0);
     anchor.setAttribute('href', '/episode.wav#t=42');
@@ -475,10 +475,10 @@ test('backlink copies do not become episode recordings or chapters', () => {
   assert.equal(copiedHeading.id, undefined);
 });
 
-test('DOM click handling preserves modified clicks, downloads, other recordings and new tabs', () => {
+test('DOM click handling preserves modified clicks, downloads and other recordings', () => {
   const { document, audio, click } = pageFixture();
   const player = enhanceEpisode(document);
-  for (const options of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }, { download: true }, { target: '_blank' }]) {
+  for (const options of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }, { download: true }]) {
     assert.equal(click('/episode.wav#t=12', options).defaultPrevented, false);
   }
   assert.equal(click('/another.wav#t=12').defaultPrevented, false);
@@ -487,26 +487,97 @@ test('DOM click handling preserves modified clicks, downloads, other recordings 
   assert.equal(audio.currentTime, 12);
   assert.equal(audio.calls, 1);
   click('/episode.wav#t=20', { heading: 'An evolving melody 0:20' });
-  assert.equal(player.footer.children[0].children[2].textContent, 'An evolving melody 0:20');
+  assert.deepEqual(trailLabels(player), ['An evolving melody 0:20']);
   player.dispose();
   assert.equal(click('/episode.wav#t=20').defaultPrevented, false);
   assert.equal(audio.calls, 2);
 });
 
-test('playback session retains its origin while current chapter follows native seeking', () => {
+test('a plain click on a timestamp that Gardener opens in a new tab plays in the footer', () => {
+  const { document, audio, click } = pageFixture();
+  const player = enhanceEpisode(document);
+  assert.equal(click('/episode.wav#t=12', { target: '_blank', metaKey: true }).defaultPrevented, false);
+  assert.equal(audio.calls, 0);
+  assert.equal(click('/episode.wav#t=12', { target: '_blank' }).defaultPrevented, true);
+  assert.equal(audio.currentTime, 12);
+  assert.equal(audio.calls, 1);
+  player.dispose();
+});
+
+test('the footer shows the chapter and subchapter that are playing and links back to them', () => {
+  const { document, audio, main } = pageFixture();
+  // Gardener renders each heading block as an outline item; a subchapter's item sits in its chapter's list.
+  for (const heading of main.querySelectorAll('h3')) heading.remove();
+  const block = (seconds, label, tag) => {
+    const item = new Element('li');
+    const heading = new Element(tag); heading.textContent = label;
+    const anchor = new Element('a'); anchor.setAttribute('href', `/episode.wav#t=${seconds}`);
+    heading.append(anchor); item.append(heading);
+    return item;
+  };
+  const outline = new Element('ul');
+  const chapter = block(12, '0:12 Chapter', 'h3');
+  const list = new Element('ul');
+  const untimed = new Element('li'); untimed.append(new Element('h4'));
+  const subchapter = block(20, '0:20 Subchapter', 'h4');
+  untimed.append(new Element('ul'));
+  list.append(untimed, subchapter); chapter.append(list);
+  outline.append(chapter, block(30, '0:30 Next chapter', 'h3'));
+  main.append(outline);
+  const episode = readEpisode(document);
+  assert.deepEqual(episode.chapters.map(item => [item.id, item.parent]),
+    [['chapter-12', null], ['chapter-20', 'chapter-12'], ['chapter-30', null]]);
+  assert.deepEqual(chapterTrail(episode.chapters, episode.chapters[1]).map(item => item.id), ['chapter-12', 'chapter-20']);
+  const player = enhanceEpisode(document);
+  const playing = player.footer.querySelector('.episode-player-return');
+  audio.currentTime = 24; audio.emit('timeupdate');
+  assert.deepEqual(trailLabels(player), ['0:12 Chapter', '0:20 Subchapter']);
+  assert.equal(playing.href, 'https://example.com/gitpa/episode/#chapter-20');
+  const links = player.footer.querySelector('.episode-player-chapter').children.filter(child => child.tagName === 'a');
+  assert.deepEqual(links.map(link => link.href), ['https://example.com/gitpa/episode/#chapter-12', 'https://example.com/gitpa/episode/#chapter-20']);
+  audio.currentTime = 31; audio.emit('timeupdate');
+  assert.deepEqual(trailLabels(player), ['0:30 Next chapter']);
+  assert.equal(playing.href, 'https://example.com/gitpa/episode/#chapter-30');
+  audio.currentTime = 2; audio.emit('seeked');
+  assert.deepEqual(trailLabels(player), []);
+  assert.equal(playing.href, 'https://example.com/gitpa/episode/#episode-start');
+  player.dispose();
+});
+
+test('returning to the playing episode keeps the footer recording without a second player', () => {
+  const fixture = pageFixture();
+  const { document, audio, main, marker, canonical, makeAudio } = fixture;
+  const player = enhanceEpisode(document);
+  fixture.click('/episode.wav#t=20');
+  const calls = audio.calls;
+  marker.setAttribute('content', '/another.wav'); canonical.setAttribute('href', '/gitpa/another/');
+  const elsewhere = new Element('main'); main.replaceWith(elsewhere);
+  player.showPage();
+  const back = new Element('main'); elsewhere.replaceWith(back);
+  const item = new Element('li'); const copy = makeAudio(); item.append(copy); back.append(item);
+  marker.setAttribute('content', '/episode.wav'); canonical.setAttribute('href', '/gitpa/episode/');
+  player.showPage();
+  assert.equal(back.querySelectorAll('audio').length, 0);
+  assert.equal(back.querySelectorAll('button').length, 0);
+  assert.equal(item.classList.contains('episode-recording-origin'), true);
+  assert.equal(player.audio, audio);
+  assert.equal(audio.calls, calls);
+  assert.equal(audio.currentTime, 20);
+  player.dispose();
+});
+
+test('current chapter follows native seeking', () => {
   const { audio } = pageFixture();
   const chapters = [{ seconds: 0, href: '/episode/#zero', label: 'Opening' }, { seconds: 20, href: '/episode/#twenty', label: 'Next' }];
   const context = { source: '/episode.wav', url: 'https://example.com/gitpa/episode/', title: 'Episode', chapters };
   let state;
   const session = createEpisodeSession(audio, value => { state = value; });
   session.adopt(context);
-  session.activate(context, 0, { href: chapters[0].href, label: 'Opening' });
+  session.activate(context, 0);
   audio.currentTime = 24; audio.emit('timeupdate');
   assert.equal(state.current.label, 'Next');
-  assert.equal(state.origin.href, '/episode/#zero');
   audio.currentTime = 4; audio.emit('seeked');
   assert.equal(state.current.label, 'Opening');
-  assert.equal(state.origin.href, '/episode/#zero');
   assert.equal(currentChapter(chapters, 19).label, 'Opening');
   session.dispose();
 });
