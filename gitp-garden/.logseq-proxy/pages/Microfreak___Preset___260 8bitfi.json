@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "d489c2fe8c4ad142f5a81c1fd78ad77b14ec629c782fcab4ff5bbf9a1b25be3f",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/260 8bitfi"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/260 8bitfi": {
+      "files": [],
+      "page": "Microfreak/Preset/260 8bitfi",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/260 8bitfi",
   "version": 2
 }
