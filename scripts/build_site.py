@@ -11,7 +11,7 @@ import tempfile
 import time
 import unicodedata
 from urllib.parse import unquote
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
 from logseq_page import page_name, properties, split_page
@@ -84,25 +84,37 @@ def prepare_homepage(graph, result):
 
 
 class PageRoutes:
-    """Map rendered page titles to Gardener's page files.
+    """Map rendered page titles to Gardener's readable page routes.
 
-    Gardener lists every generated file in lsg-site.json so build tools need not
+    Gardener lists every generated page in lsg-site.json so build tools need not
     parse its HTML. The All pages table is split across several files and is not
     a complete route list.
     """
 
-    def __init__(self, output=None):
-        self.routes, self.titles = {}, {}
-        if output is None:
-            return
+    def __init__(self, output):
+        self.output, self.routes, self.titles = output, {}, {}
         site = json.loads((output / 'lsg-site.json').read_text(encoding='utf-8'))
         if site.get('apiVersion') != 1:
             raise ValueError(f'Unsupported lsg-site.json apiVersion: {site.get("apiVersion")}')
         for page in site['pages']:
             # Stored pages and generated namespace pages; not the homepage or list routes.
-            if page['kind'] in {'page', 'namespace'} and re.fullmatch(r'p-[0-9a-f]+\.html', page['url']):
+            if page['kind'] in {'page', 'namespace'}:
                 self.routes[normalized(page['title'])] = page['url']
                 self.titles[page['url']] = page['title']
+
+    def file(self, route):
+        """The file of a route: a folder route's index.html, or a root file such as
+        the p-<digest>.html that keeps a title Gardener cannot turn into folders."""
+        if route.endswith('/'):
+            return self.output / unquote(route) / 'index.html'
+        return self.output / route
+
+    def documents(self):
+        """Every rendered HTML page, without the redirects Gardener writes at old
+        p-<digest>.html names."""
+        pages = {self.file(route) for route in self.titles}
+        lists = {path for path in self.output.glob('*.html') if not path.name.startswith('p-')}
+        return sorted(pages | lists)
 
 
 def install_homepage_query(output, result):
@@ -121,8 +133,7 @@ def install_homepage_query(output, result):
     home_route = parser.routes.get(normalized(HOME))
     if not home_route:
         raise ValueError('Rendered page list does not include the homepage')
-    for filename in ['index.html', home_route]:
-        path = output / filename
+    for path in [output / 'index.html', parser.file(home_route)]:
         text = path.read_text(encoding='utf-8')
         bullet = '<a class="bullet" href="#"></a>'
         markers = [(f'<li>{QUERY_PLACEHOLDER}</li>', ''),
@@ -139,61 +150,6 @@ def install_homepage_query(output, result):
             raise ValueError('Expected one podcast RSS feed link')
         text = re.sub(rss_link, lambda match: match[0] + ' <button type="button" class="apple-podcasts-subscribe" data-copy-feed>Copy feed URL</button> <span role="status" data-copy-feed-status></span>', text)
         path.write_text(text, encoding='utf-8')
-
-
-def legacy_routes(output, graph=None, published_routes=None):
-    """Preserve published Logseq hash links, including episode URLs in RSS."""
-    if published_routes is None:
-        parser = PageRoutes(output)
-    else:
-        parser = PageRoutes()
-        parser.routes = dict(published_routes)
-    if normalized(HOME) not in parser.routes:
-        raise ValueError('Rendered page list does not include the homepage')
-    if graph:
-        claims = {name: {route} for name, route in parser.routes.items()}
-        for page in (graph / 'pages').glob('*.md'):
-            route = parser.routes.get(normalized(page_name(page)))
-            if not route:
-                continue
-            leading, _ = split_page(page.read_text(encoding='utf-8'))
-            aliases = properties(leading).get('alias', '')
-            # Match the garden's direct page-ref and comma-separated plain aliases.
-            for match in re.finditer(r'\s*(?:\[\[([^\]]+)\]\]|([^,]+))\s*(?:,|$)', aliases):
-                alias = (match[1] or match[2]).strip()
-                if alias:
-                    claims.setdefault(normalized(alias), set()).add(route)
-        parser.routes = {name: next(iter(routes)) for name, routes in claims.items()
-                         if len(routes) == 1}
-    routes = json.dumps(parser.routes, ensure_ascii=True).replace('<', '\\u003c')
-    (output / 'legacy-routes.json').write_text(routes, encoding='utf-8')
-    script = '''const routes = ROUTES;
-const routeRoot = new URL(SITE_BASE, location.origin);
-function openLegacyPage() {
-  if (!location.hash.startsWith('#/page/')) return;
-  let name;
-  try { name = decodeURIComponent(location.hash.slice(7)); }
-  catch { return; }
-  name = name.trim().replace(/^\\/+|\\/+$/g, '').normalize('NFC').toLowerCase();
-  if (Object.hasOwn(routes, name)) {
-    const target = new URL(routes[name], routeRoot).href;
-    if (window.gitpaNavigate) window.gitpaNavigate(target, {replace: true});
-    else location.replace(target);
-  }
-}
-window.addEventListener('hashchange', openLegacyPage);
-openLegacyPage();
-'''.replace('SITE_BASE', json.dumps(urlsplit(SITE_URL).path)).replace('ROUTES', routes)
-    (output / 'legacy-routes.js').write_text(script, encoding='utf-8')
-    home = output / 'index.html'
-    startup = """<script>(()=>{let pending=false;function load(){
-if(!location.hash.startsWith('#/page/')||pending)return;pending=true;
-const script=document.createElement('script');script.src=new URL('legacy-routes.js',new URL(SITE_BASE,location.origin)).href;
-script.onerror=()=>{pending=false;script.remove()};document.head.append(script)}
-window.addEventListener('hashchange',load);load()})();</script>""".replace(
-        'SITE_BASE', json.dumps(urlsplit(SITE_URL).path))
-    home.write_text(home.read_text(encoding='utf-8').replace(
-        '</head>', startup + '</head>'), encoding='utf-8')
 
 
 def public_pages(graph):
@@ -249,89 +205,23 @@ def install_episode_player(output, episodes):
         route = parser.routes.get(name)
         if not route:
             raise ValueError(f'Published episode was not rendered: {name}')
-        path = output / route
+        path = parser.file(route)
         text = path.read_text(encoding='utf-8')
         sources = re.findall(r'<audio\b[^>]*\bsrc="([^"]+)"', text)
         if len(sources) != 1 or html.unescape(sources[0]) != recording:
             raise ValueError(f'Episode player needs exactly one full recording: {name}')
-        canonical = base + page_route(parser.titles[route])
+        canonical = base + route
         metadata = (f'<meta name="gitpa-episode" content="{html.escape(recording, quote=True)}">'
                     f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">')
         path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
     additions = (f'<link rel="stylesheet" href="{base}player.css">'
                  f'<link rel="stylesheet" href="{base}header-sequence.css">'
                  f'<script type="module" src="{base}bootstrap.js"></script>')
-    for path in output.glob('*.html'):
+    for path in parser.documents():
         text = path.read_text(encoding='utf-8')
         path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
     for filename in SITE_FILES:
         shutil.copyfile(ROOT / 'site' / filename, output / filename)
-
-
-def package_pages(output):
-    """Give rendered pages namespace URLs while retaining hash-file compatibility."""
-    parser = PageRoutes(output)
-    base = urlsplit(SITE_URL).path
-    destinations, claims, directories = {}, {}, {}
-    for route, title in parser.titles.items():
-        path = page_output(title)
-        claim = unicodedata.normalize('NFC', str(path)).casefold()
-        if claim in claims:
-            raise ValueError(f'Public page path collision: {title} and {claims[claim]}')
-        claims[claim] = title
-        destination = output / path
-        for parent in path.parents:
-            if parent == Path('.'):
-                continue
-            key = unicodedata.normalize('NFC', str(parent)).casefold()
-            if key in directories and directories[key] != str(parent):
-                raise ValueError(f'Public page directory collision: {title}')
-            directories[key] = str(parent)
-            if (output / parent).is_file():
-                raise ValueError(f'Public page path collides with existing output: {title}')
-        if path.parts[0].casefold() in {'assets', 'index.html', 'pages.html', 'custom.css',
-                                       'legacy-routes.js', 'legacy-routes.json', 'rss.xml', '.nojekyll',
-                                       *SITE_FILES}:
-            raise ValueError(f'Public page path collides with asset namespace: {title}')
-        if destination.exists():
-            raise ValueError(f'Public page path collides with existing output: {title}')
-        destinations[route] = (destination, page_route(title))
-
-    for claim in claims.keys() & directories.keys():
-        raise ValueError(f'Public page file/directory collision: {claims[claim]}')
-
-    def rewrite(text):
-        def attribute(match):
-            value = html.unescape(match[2])
-            parsed = urlsplit(value)
-            if parsed.scheme or parsed.netloc or value.startswith(('/', '#')):
-                return match[0]
-            path = parsed.path
-            if path in destinations:
-                path = base + destinations[path][1]
-            elif path == 'index.html':
-                path = base
-            elif path:
-                path = base + path
-            else:
-                return match[0]
-            value = urlunsplit(('', '', path, parsed.query, parsed.fragment))
-            return f'{match[1]}="{html.escape(value, quote=True)}"'
-        # A fragment's <base href="../"> still names the site root; only its links move.
-        return re.sub(r'(?<!<base )\b(href|src)="([^"]*)"', attribute, text)
-
-    for path in list(output.glob('*.html')):
-        text = rewrite(path.read_text(encoding='utf-8'))
-        path.write_text(text, encoding='utf-8')
-        if path.name in destinations:
-            destination, _ = destinations[path.name]
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            destination.write_text(text, encoding='utf-8')
-    # Reference fragments link from the site root like pages do, but lsg-references.js
-    # moves their nodes into a page at a readable route, where p-*.html would not resolve.
-    for path in output.glob('_refs/*.html'):
-        path.write_text(rewrite(path.read_text(encoding='utf-8')), encoding='utf-8')
-    return {normalized(title): page_route(title) for title in parser.titles.values()}
 
 
 def publish_feed(source, output, feed=None):
@@ -379,7 +269,10 @@ def publish(source, output, renderer, search=False):
         episodes = compile_episode_pages(graph)
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
-                '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json']
+                '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json',
+                # Pages live in folders named by their titles, and old p-<digest>.html
+                # and #/page/<name> links redirect to them.
+                '--readable-urls', '--redirect-old-urls']
         if search:
             args.append('--search')
         # Match the existing Logseq publishing policy: explicitly public pages.
@@ -392,8 +285,6 @@ def publish(source, output, renderer, search=False):
         started = time.perf_counter()
         install_homepage_query(output, query_result)
         install_episode_player(output, episodes)
-        routes = package_pages(output)
-        legacy_routes(output, graph, published_routes=routes)
         publish_feed(source, output)
         (output / '.nojekyll').touch()
         print(f'Package site: {time.perf_counter() - started:.2f}s', flush=True)

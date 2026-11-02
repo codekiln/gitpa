@@ -104,25 +104,30 @@ class AudioChapterTests(unittest.TestCase):
     def test_shell_loads_everywhere_but_only_episodes_have_recording_metadata(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / 'pages.html').write_text('<head></head><body><a href="p-abc.html">Episode</a><a href="p-def.html">Asset</a></body>')
-            write_site(root, [('p-abc.html', 'Episode'), ('p-def.html', 'Asset')])
-            (root / 'p-abc.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
-            (root / 'p-def.html').write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
+            (root / 'pages.html').write_text('<head></head><body><a href="Episode/">Episode</a><a href="Asset/">Asset</a></body>')
+            write_site(root, [('Episode/', 'Episode'), ('Asset/', 'Asset')])
+            episode, asset = root / 'Episode/index.html', root / 'Asset/index.html'
+            for page in [episode, asset]:
+                page.parent.mkdir()
+                page.write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
+            # Gardener's redirect from an old address is not a page and gets no player.
+            (root / 'p-abc.html').write_text('<head></head>')
             install_episode_player(root, {'episode': FULL})
-            text = (root / 'p-abc.html').read_text()
+            text = episode.read_text()
             self.assertIn('/gitpa/bootstrap.js', text)
             self.assertIn('/gitpa/player.css', text)
             self.assertIn('/gitpa/header-sequence.css', text)
-            self.assertIn('bootstrap.js', (root / 'p-def.html').read_text())
+            self.assertIn('bootstrap.js', asset.read_text())
             self.assertIn('bootstrap.js', (root / 'pages.html').read_text())
+            self.assertNotIn('bootstrap.js', (root / 'p-abc.html').read_text())
             self.assertIn('name="gitpa-episode"', text)
             self.assertIn('rel="canonical" href="/gitpa/Episode/"', text)
-            self.assertNotIn('name="gitpa-episode"', (root / 'p-def.html').read_text())
+            self.assertNotIn('name="gitpa-episode"', asset.read_text())
             self.assertEqual(text.count('<audio'), 1)
             self.assertTrue((root / 'player.js').is_file())
             for filename in ['bootstrap.js', 'plugin-adapter.js', 'header-sequence.js', 'header-sequence.css']:
                 self.assertTrue((root / filename).is_file())
-            (root / 'p-abc.html').write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
+            episode.write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
             with self.assertRaisesRegex(ValueError, 'exactly one'):
                 install_episode_player(root, {'episode': FULL})
 

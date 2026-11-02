@@ -6,7 +6,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
-from build_site import package_pages, publish_feed, legacy_routes
+from build_site import PageRoutes, publish_feed
 from build_rss import ARTWORK_URL, SITE_URL
 from site_routes import page_route, page_output
 
@@ -22,87 +22,22 @@ class PublicRoutesTests(unittest.TestCase):
             with self.subTest(title=title), self.assertRaises(ValueError):
                 page_route(title)
 
-    def fixture(self, root, titles):
-        links, pages = [], []
-        for i, title in enumerate(titles):
-            route = f'p-{i:016x}.html'
-            links.append(f'<a href="{route}">{html.escape(title)}</a>')
-            pages.append((route, title))
-            (root / route).write_text('<head><link href="custom.css"></head><body>'
-                                     f'<a href="{route}#block-abc">Self</a><a href="index.html">Home</a>'
-                                     '<img src="assets/image.jpg"><audio src="https://example.com/audio.mp3"></audio></body>')
-        write_site(root, pages)
-        (root / 'index.html').write_text('<head></head>' + ''.join(links))
-
-    def test_packaging_preserves_titles_fragments_media_and_hash_pages(self):
+    def test_page_routes_read_readable_urls_and_skip_old_url_redirects(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             title = 'GitP/A/Session/26/10/20-Tue'
-            self.fixture(root, ['Ghost in the Patch', title])
-            routes = package_pages(root)
-            page = (root / page_output(title)).read_text()
-            self.assertIn('/gitpa/GitP/A/Session/26/10/20-Tue/#block-abc', page)
-            self.assertIn('href="/gitpa/custom.css"', page)
-            self.assertIn('src="/gitpa/assets/image.jpg"', page)
-            self.assertIn('src="https://example.com/audio.mp3"', page)
-            self.assertEqual(page, (root / 'p-0000000000000001.html').read_text())
-            legacy_routes(root, published_routes=routes)
-            self.assertIn('GitP/A/Session/26/10/20-Tue/', (root / 'legacy-routes.js').read_text())
-            self.assertNotIn('legacy-routes.js', (root / page_output(title)).read_text())
-
-    def test_synthetic_namespace_routes_and_hierarchy_links_are_packaged(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            self.fixture(root, ['Microfreak', 'Microfreak/Preset', 'Microfreak/Preset/174 Auster'])
-            leaf = root / 'p-0000000000000002.html'
-            leaf.write_text('<head></head><body><nav>Site</nav><main>'
-                            '<h1>Notes</h1><section class="namespace-hierarchy" aria-label="Hierarchy">'
-                            '<a href="p-0000000000000000.html">Microfreak</a>'
-                            '<a href="p-0000000000000001.html">Preset</a>'
-                            '<a href="p-0000000000000002.html">174 Auster</a></section></main></body>')
-            parent = root / 'p-0000000000000001.html'
-            parent.write_text('<head></head><main><section class="namespace-hierarchy">'
-                              '<a href="p-0000000000000002.html">174 Auster</a></section></main>')
-            package_pages(root)
-            self.assertTrue((root / 'Microfreak/Preset/index.html').is_file())
-            text = (root / 'Microfreak/Preset/174 Auster/index.html').read_text()
-            self.assertIn('href="/gitpa/Microfreak/Preset/"', text)
-            self.assertIn('href="/gitpa/Microfreak/"', text)
-            self.assertIn('href="/gitpa/Microfreak/Preset/174%20Auster/"',
-                          (root / 'Microfreak/Preset/index.html').read_text())
-
-    def test_reference_fragments_link_to_readable_routes(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            self.fixture(root, ['Microfreak', 'GitP/A/Session/26/10/26-Mon'])
-            data = '{"pages":[["GitP/A/Session/26/10/26-Mon","p-0000000000000001.html"]]}'
-            fragment = root / '_refs/p-0000000000000000-linked-1.html'
-            fragment.parent.mkdir()
-            fragment.write_text('<head><base href="../">'
-                                f'<script type="application/json" class="references-data">{data}</script></head>'
-                                '<body><main><a class="page-ref" href="p-0000000000000001.html">26-Mon</a>'
-                                '<a href="p-0000000000000001.html#source-block-3">Crumb</a>'
-                                '<a href="_refs/p-0000000000000000-linked-2.html" rel="next">More</a></main></body>')
-            package_pages(root)
-            text = fragment.read_text()
-            self.assertIn('<base href="../">', text)
-            self.assertIn('<a class="page-ref" href="/gitpa/GitP/A/Session/26/10/26-Mon/">', text)
-            self.assertIn('href="/gitpa/GitP/A/Session/26/10/26-Mon/#source-block-3"', text)
-            self.assertIn('href="/gitpa/_refs/p-0000000000000000-linked-2.html"', text)
-            # The filter data names pages by Gardener's route, which lsg-references.js compares.
-            self.assertIn(data, text)
-
-    def test_packaging_rejects_collisions_before_rewriting(self):
-        for titles in [['index.html'], ['assets/Page'], ['legacy-routes.js'], ['legacy-routes.json'], ['Navigation.JS'], ['Player.JS'],
-                       ['Guide/Café', 'Guide/Cafe\u0301'], ['Guide/A', 'guide/B'],
-                       ['Guide', 'Guide/index.html/Child'], ['Guide/index.html/Child', 'Guide']]:
-            with self.subTest(titles=titles), tempfile.TemporaryDirectory() as directory:
-                root = Path(directory)
-                self.fixture(root, titles)
-                before = (root / 'index.html').read_text()
-                with self.assertRaises(ValueError):
-                    package_pages(root)
-                self.assertEqual(before, (root / 'index.html').read_text())
+            write_site(root, [(page_route(title), title), ('p-00000000000000aa.html', 'Guide/A\\B')])
+            for path in [root / page_output(title), root / 'p-00000000000000aa.html',
+                         root / 'p-00000000000000bb.html', root / 'index.html', root / 'pages.html']:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text('<head></head>')
+            routes = PageRoutes(root)
+            self.assertEqual(routes.routes['gitp/a/session/26/10/20-tue'], page_route(title))
+            self.assertEqual(routes.file(page_route(title)), root / page_output(title))
+            # p-00000000000000bb.html is a redirect to an old address, not a page.
+            self.assertEqual(routes.documents(), sorted([
+                root / page_output(title), root / 'p-00000000000000aa.html',
+                root / 'index.html', root / 'pages.html']))
 
     def test_feed_targets_and_subscribed_artwork_exist(self):
         with tempfile.TemporaryDirectory() as directory:

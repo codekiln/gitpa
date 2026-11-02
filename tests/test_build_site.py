@@ -5,7 +5,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
-from build_site import legacy_routes, prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER
+from build_site import prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER
 
 
 class HomepageTests(unittest.TestCase):
@@ -117,22 +117,6 @@ class HomepageTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'missing or unpublished'):
                     prepare_homepage(graph, self.result())
 
-    def test_legacy_routes_are_derived_only_from_published_index(self):
-        with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory)
-            (output / 'index.html').write_text('<head></head><body>Home</body>')
-            write_site(output, [('p-abc.html', 'Ghost in the Patch'),
-                                ('p-def.html', 'GitP/A/Session/Newest')])
-            legacy_routes(output)
-            script = (output / 'legacy-routes.js').read_text()
-            self.assertIn('"gitp/a/session/newest": "p-def.html"', script)
-            self.assertNotIn('private', script)
-            self.assertIn('decodeURIComponent', script)
-            self.assertIn('legacy-routes.js', (output / 'index.html').read_text())
-            self.assertNotIn('src="legacy-routes.js"', (output / 'index.html').read_text())
-            self.assertIn('window.gitpaNavigate(target, {replace: true})', script)
-            self.assertIn('else location.replace(target)', script)
-
     def test_public_parent_never_exposes_unmarked_child(self):
         with tempfile.TemporaryDirectory() as directory:
             graph = Path(directory)
@@ -166,22 +150,6 @@ class HomepageTests(unittest.TestCase):
             nested.write_text('- Secret\n  public:: false\n')
             public_pages(graph)
             self.assertEqual(nested.read_text(), 'public:: false\n')
-
-    def test_legacy_aliases_require_a_published_unambiguous_page(self):
-        with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory)
-            graph = output / 'graph'
-            (graph / 'pages').mkdir(parents=True)
-            (output / 'index.html').write_text('<head></head>')
-            write_site(output, [('p-abc.html', 'Ghost in the Patch'), ('p-def.html', 'Episode')])
-            (graph / 'pages/Episode.md').write_text('alias:: [[Recording]], Shared\n- Episode\n')
-            (graph / 'pages/Ghost in the Patch.md').write_text('alias:: Shared\n- Home\n')
-            (graph / 'pages/Private.md').write_text('alias:: Secret\n- Private\n')
-            legacy_routes(output, graph)
-            script = (output / 'legacy-routes.js').read_text()
-            self.assertIn('"recording": "p-def.html"', script)
-            self.assertNotIn('"shared":', script)
-            self.assertNotIn('"secret":', script)
 
 
 if __name__ == '__main__':
