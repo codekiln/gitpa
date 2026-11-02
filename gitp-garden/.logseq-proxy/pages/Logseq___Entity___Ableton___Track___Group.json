@@ -1,0 +1,20 @@
+{
+  "body_sha256": "3bb40da51b9b93f29bc1d30c97df501b6ab3d636ab5ddbdc4fbe0aa12f712e49",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Ableton/Track/Group"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Ableton/Track/Group": {
+      "files": [],
+      "page": "Logseq/Entity/Ableton/Track/Group",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Ableton/Track/Group",
+  "version": 2
+}

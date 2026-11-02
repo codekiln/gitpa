@@ -1,0 +1,20 @@
+{
+  "body_sha256": "7f04fda86b38fa647fbf8682207a8e4b5bae68a8a246b0096fa5126f38f4a452",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Term]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/Participant"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/Participant": {
+      "files": [],
+      "page": "GitP/Participant",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/Participant",
+  "version": 2
+}
