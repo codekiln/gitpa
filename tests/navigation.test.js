@@ -2,10 +2,10 @@ const { test, before } = require('node:test');
 const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const { join } = require('node:path');
-let navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts;
+let navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts, pageBase;
 before(async () => {
   const source = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
-  ({ navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
+  ({ navigationURL, searchPageRoute, sameDocument, latestRequest, legacyResolver, createNavigator, pageScripts, pageBase } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`));
 });
 const response = (html = 'new', extra = {}) => ({ ok: true, text: async () => html, ...extra });
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
@@ -229,6 +229,23 @@ function site(pages, current = SHARED_SCRIPTS) {
   };
   return { doc, win, loads, watch };
 }
+
+test('a page in a folder resolves its links against its base', () => {
+  const base = { getAttribute: () => '../../' };
+  const root = { querySelector: query => query === 'base[href]' ? base : null };
+  assert.equal(pageBase(root, 'https://example.com/gitpa/GitP/A/'), 'https://example.com/gitpa/');
+  assert.equal(pageBase({ querySelector: () => null }, 'https://example.com/gitpa/pages.html'), 'https://example.com/gitpa/pages.html');
+});
+
+test('a swapped-in page keeps its base after the address changes', async () => {
+  const { doc, win } = fixture();
+  const navigator = createNavigator({ document: doc, window: win });
+  assert.equal(await navigator.navigate('/gitpa/one/'), true);
+  const [base] = doc.head.children;
+  assert.equal(base.name, 'base');
+  assert.equal(base.getAttribute('href'), 'https://example.com/gitpa/one/');
+  navigator.dispose();
+});
 
 test('page scripts resolve against the page address', () => {
   const root = { querySelectorAll: () => scriptNodes(null, ['/gitpa/lsg-shell.js', 'lsg-graph.js', 'https://cdn.example.com/x.js']) };
