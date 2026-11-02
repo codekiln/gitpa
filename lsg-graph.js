@@ -17,11 +17,29 @@ h ^= 4; h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b); h ^= h >>> 13; h = Math.imu
 return h;
 };
 const parentColor = title => COLORS[Math.abs(cljsHash(title)) % COLORS.length];
-const routeOf = title => {
+const digestOf = title => {
 let h = 0xcbf29ce484222325n;
 for (const byte of new TextEncoder().encode(title)) h = ((h ^ BigInt(byte)) * 0x100000001b3n) & 0xffffffffffffffffn;
-return 'p-' + h.toString(16).padStart(16, '0') + '.html';
+return h.toString(16).padStart(16, '0');
 };
+const EDGE_SPACE = /^[^\S\uFEFF]|[^\S\uFEFF]$/;
+const foldable = title => !/[\\\p{Cc}]/u.test(title) && title.split('/').every(segment => segment && segment !== '.' && segment !== '..'
+&& !EDGE_SPACE.test(segment) && new TextEncoder().encode(segment).length <= 255);
+const FOLDERS = new Map([]);
+const spelled = title => {
+const segments = title.split('/');
+for (let end = segments.length; end > 0; end--) {
+const folder = FOLDERS.get(segments.slice(0, end).join('/').normalize('NFC').toLowerCase());
+if (folder) return [folder, ...segments.slice(end)].join('/');
+}
+return title;
+};
+const routeOf = title => foldable(title)
+? spelled(title).split('/').map(segment => encodeURIComponent(segment).replace(/[!'()*]/g, c => '%' + c.charCodeAt(0).toString(16).toUpperCase())).join('/') + '/'
+: 'p-' + digestOf(title) + '.html';
+const titleAt = route => route.slice(0, -1).split('/').map(decodeURIComponent).join('/');
+const digestAt = route => route.endsWith('/') ? digestOf(titleAt(route)) : route.slice(2, 18);
+const isAt = (title, route) => route.endsWith('/') ? spelled(title) === titleAt(route) : routeOf(title) === route;
 const sizeOf = degree => Math.trunc(8 * Math.max(1, Math.cbrt(degree || 1)));
 function decode(buffer) {
 const view = new DataView(buffer), bytes = new Uint8Array(buffer);
@@ -629,15 +647,18 @@ try { journals = sessionStorage.getItem(KEY) === 'true'; } catch { /* Off by def
 const toggle = el('button', { type: 'button', role: 'switch', class: 'lsg-switch', 'aria-checked': String(journals), 'aria-labelledby': 'lsg-page-graph-journals' });
 const box = el('div', { class: 'lsg-graph lsg-page-graph-canvas' }, el('canvas', { class: 'lsg-graph-canvas', tabindex: '0', 'aria-label': 'Page graph' }), el('p', { class: 'lsg-graph-status', role: 'status' }));
 body.replaceChildren(el('div', { class: 'graph-filters-row lsg-page-graph-row' }, el('span', { id: 'lsg-page-graph-journals' }, 'Show Journals'), toggle), box);
-let route = location.pathname.split('/').pop();
-if (!/^p-[0-9a-f]{16}\.html$/.test(route)) route = document.querySelector('.lsg-journal .journal-title')?.getAttribute('href') || '';
+const here = new URL(location.href);
+here.hash = '';
+here.search = '';
+let route = here.href.startsWith(base.href) ? here.href.slice(base.href.length).replace(/(^|\/)index\.html$/, '$1') : '';
+if (!route.endsWith('/') && !/^p-[0-9a-f]{16}\.html$/.test(route)) route = document.querySelector('.lsg-journal .journal-title')?.getAttribute('href') || '';
 const graph = Graph(box, { centre: true });
 const simulate = simulator();
 if (!route) { graph.say('This view has no page to draw.'); return; }
 let whole;
 const missing = error => { if (!error.status) throw error; };
 async function render(signal) {
-if (whole === undefined) whole = await load('_graph/p/' + route.slice(2, 18) + '.json', 'json', signal).then(fromJSON, error => { missing(error); return null; });
+if (whole === undefined) whole = await load('_graph/p/' + digestAt(route) + '.json', 'json', signal).then(fromJSON, error => { missing(error); return null; });
 let g = null;
 if (whole) {
 const keep = Uint8Array.from(whole.flags, f => journals || !(f & JOURNAL_ONLY) ? 1 : 0);
@@ -657,7 +678,7 @@ g.x = laid.x; g.y = laid.y;
 } else {
 const global = decode(await load(journals ? '_graph/journals.bin' : '_graph/default.bin', 'arrayBuffer', signal).catch(error => { missing(error); return load('_graph/default.bin', 'arrayBuffer', signal); }));
 let centre = -1;
-for (let i = 0; i < global.n && centre < 0; i++) if (routeOf(global.title(i)) === route) centre = i;
+for (let i = 0; i < global.n && centre < 0; i++) if (isAt(global.title(i), route)) centre = i;
 if (centre >= 0) g = around(global, centre);
 }
 signal.throwIfAborted();

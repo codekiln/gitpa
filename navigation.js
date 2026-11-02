@@ -27,7 +27,17 @@ export function sameDocument(left, right) {
   return a.href === b.href;
 }
 
-/** Addresses of the scripts a page's HTML lists, resolved against the page's address. */
+/**
+ * The address a page's relative links resolve against: its <base href>, which lsg points at the
+ * site root for a page in a folder, or else the page's own address.
+ */
+export function pageBase(root, url) {
+  const base = root.querySelector?.('base[href]');
+  if (!base) return url;
+  try { return new URL(base.getAttribute('href'), url).href; } catch { return url; }
+}
+
+/** Addresses of the scripts a page's HTML lists, resolved against the page's base. */
 export function pageScripts(root, base) {
   const sources = new Set();
   for (const script of root.querySelectorAll('script[src]')) {
@@ -117,7 +127,7 @@ export function legacyResolver(fetcher, origin) {
     try { name = decodeURIComponent(target.hash.slice(7)).trim().replace(/^\/+|\/+$/g, '').normalize('NFC').toLowerCase(); }
     catch { throw new Error('Invalid legacy page address.'); }
     if (!routes) {
-      routes = fetcher(new URL('/gitpa/legacy-routes.json', origin).href).then(response => {
+      routes = fetcher(new URL('/gitpa/lsg-old-urls.json', origin).href).then(response => {
         if (!response.ok) throw new Error('Page routes could not load.');
         return response.json();
       }).catch(error => { routes = null; throw error; });
@@ -138,7 +148,7 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
   const key = () => `gitpa-${Date.now()}-${++nextKey}`;
   const stateWithKey = state => ({ ...state, gitpaNavigation: state?.gitpaNavigation || key() });
   let displayedURL = window.location.href;
-  let displayedScripts = pageScripts(document, displayedURL);
+  let displayedScripts = pageScripts(document, pageBase(document, displayedURL));
   const ranScripts = new Set(displayedScripts);
   const inPlace = source => {
     const url = new URL(source);
@@ -241,7 +251,8 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         // Keep the requested fragment when fetch's response URL omits it.
         if (!responseURL.hash) responseURL.hash = target.hash;
         const parsed = new window.DOMParser().parseFromString(html, 'text/html');
-        const scripts = pageScripts(parsed, responseURL.href);
+        const base = pageBase(parsed, responseURL.href);
+        const scripts = pageScripts(parsed, base);
         const added = [...scripts].filter(source => !displayedScripts.has(source));
         // Swapped-in content never runs its own scripts. A page that needs a script the navigator
         // cannot run in place loads normally; Back and Forward have already moved to its address.
@@ -265,7 +276,15 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
         const importedMetadata = metadata.map(([selector, node]) => [selector, node && document.importNode(node, true)]);
         document.querySelector('main').replaceWith(importedMain);
         document.querySelector('nav').replaceWith(importedNav);
-        const styled = adoptStyles(document, parsed.head, responseURL.href);
+        // The swapped-in links are relative to the new page's base, which an absolute
+        // <base href> keeps after history moves the address.
+        let baseElement = document.querySelector('base');
+        if (!baseElement) {
+          baseElement = document.createElement('base');
+          document.head.prepend(baseElement);
+        }
+        baseElement.setAttribute('href', base);
+        const styled = adoptStyles(document, parsed.head, base);
         const unrun = added.filter(source => !ranScripts.has(source));
         if (unrun.length) void styled.then(() => {
           if (token !== generation || disposed) return;
@@ -310,7 +329,9 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const anchor = event.target.closest?.('a[href]');
     if (!anchor || anchor.matches?.('.outline .bullet') || anchor.hasAttribute('download') || anchor.hasAttribute('data-native-navigation') || (anchor.target && anchor.target !== '_self') || anchor.rel?.split(/\s+/).includes('external')) return;
-    const target = navigationURL(anchor.getAttribute('href'), displayedURL);
+    // A fragment-only link stays in this page; any other resolves against the page's base.
+    const href = anchor.getAttribute('href');
+    const target = navigationURL(href, href.startsWith('#') ? displayedURL : pageBase(document, displayedURL));
     if (!target) return;
     event.preventDefault();
     void navigate(target.href);

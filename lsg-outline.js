@@ -98,7 +98,7 @@
     crumb.className = 'lsg-breadcrumb';
     crumb.setAttribute('aria-label', 'Block parents');
     const page = document.createElement('a');
-    page.href = location.pathname.split('/').pop() || './';
+    page.href = location.href.split('#')[0];
     page.textContent = main.querySelector(':scope>h1')?.textContent || 'Page';
     crumb.append(page);
     const sep = (text) => { const span = document.createElement('span'); span.textContent = text; crumb.append(span); };
@@ -106,7 +106,7 @@
     for (const up of ancestors.slice(0, 3).reverse()) {
       sep('›');
       const link = document.createElement('a');
-      link.href = ZOOM + blockId(up);
+      link.href = page.href + ZOOM + blockId(up);
       link.textContent = label(up);
       crumb.append(link);
     }
@@ -156,7 +156,7 @@
       const id = blockId(li);
       if (id === null) return;
       const page = article?.querySelector('.journal-title')?.getAttribute('href');
-      if (page) location.href = page + ZOOM + id;
+      if (page) { const url = new URL(page, document.baseURI); if (url.protocol === 'file:' && url.pathname.endsWith('/')) url.pathname += 'index.html'; location.href = url.href + ZOOM + id; }
       else if (location.hash === ZOOM + id) route();
       else location.hash = ZOOM.slice(1) + id;
       return;
