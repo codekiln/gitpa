@@ -1,0 +1,18 @@
+{
+  "body_sha256": "e2d212109b6b2512a66bba8a76cdbd3399a77ae7acfa05b3999ce4cf1b8ff632",
+  "declarations": {},
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/Vibe"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/Vibe": {
+      "files": [],
+      "page": "GitP/Vibe",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/Vibe",
+  "version": 2
+}

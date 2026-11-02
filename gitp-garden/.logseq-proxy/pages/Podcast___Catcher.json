@@ -1,0 +1,20 @@
+{
+  "body_sha256": "4add2b3d39b154b8db7658d6d028f8e73d0af82e420c9e011841214ab3822c49",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Term]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Podcast/Catcher"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Podcast/Catcher": {
+      "files": [],
+      "page": "Podcast/Catcher",
+      "source_graph": "."
+    }
+  },
+  "page": "Podcast/Catcher",
+  "version": 2
+}

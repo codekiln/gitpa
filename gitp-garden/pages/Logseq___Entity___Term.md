@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FTerm
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Term.md
+logseq-proxy-last-sync-date:: [[2026-11-02]]
+
+- # Term
+	- In this garden, **Term** pages model short, vocabulary-style entries—jargon, definitions, abbreviations, and cross-domain labels indexed as entities without the full Diataxis explanation arc of a **concept** entity.
+	- ## Examples in this garden
+		- Many legacy term pages use term tags today; new or revised term-like pages should add **`logseq-entity::`** pointing at **this** entity-type page so backlinks list all term entities.
+		- See also the meta page [[Term]] (“a word with a specific meaning”) for how “term” is used in prose.
+	- ## When we treat something as a term entity
+		- Strong signals: the page is mainly a **definition** or short disambiguation; readers need a quick anchor, not a full conceptual tour.
+		- The primary legacy indication of a term is the `tags:: [[Term]]` in the frontmatter.
+		- Good fit: glossary entries, named techniques that are one paragraph, abbreviations expanded once.
+		- Prefer **concept** instead when the page needs multiple sections (overview, context, misconceptions, examples at length) and Diataxis-style explanation.
+		- Not a term entity: **question**, [[Logseq/Entity/Software/Project]], **company**, or other dedicated entity types.
+	- ## Finding and deduplicating
+		- Search for an existing page before creating a new term entity.
+		- Search: exact title, existing term-tagged candidates missing `logseq-entity::`, alias matches, and phrase grep across `pages/`.
+		- Classify as: **existing**, **similar**, **new**, or **blocked**.
+	- ## Frontmatter
+		- **`logseq-entity::`** on instances must point at **this** entity-type page.
+		- Existing term tagging patterns may remain alongside `logseq-entity::`.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Use Logseq Flavored Markdown.
+		- Keep the body **lean**: H1 + a few bullets, or a single short definition block. Link out to **concept** pages when the idea deserves a full explanation.
+	- ## Combined with add-on types
+		- Term stays first in `logseq-entity::`, and an add-on type follows it: [[Logseq/Entity/Term/Acronym]] when the page name is an acronym, [[Logseq/Entity/Field of Study]] when the term names a discipline.
+	- ## Legacy and migration
+		- Do **not** bulk-add **`logseq-entity::`** to every legacy term-tagged page unless the author requests a backfill pass.
+		- New term-like pages should declare **`logseq-entity::`** to **this** page alongside established tag patterns when those patterns apply.
