@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FAsset
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Asset.md
-logseq-proxy-last-sync-date:: [[2026-10-08]]
+logseq-proxy-last-sync-date:: [[2026-11-03]]
 - # Asset
 	- In this garden, **Asset** pages represent individual files: recordings, presets, images, PDFs, and other attachments.
 	- ## Page and filename
@@ -19,7 +19,7 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 		- A page name that violates these rules needs a valid name before the asset is stored. Silent punctuation replacement would make the filename ambiguous.
 		- Hyphens keep new multiword asset purposes readable. Spaces already present in an owner's namespace stay intact; a URL percent-encodes them. Replacing spaces with hyphens would prevent exact recovery of the page name.
 	- ## Frontmatter and body
-		- `logseq-entity:: [[Logseq/Entity/Asset]]` identifies a local asset. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
+		- A local asset carries `logseq-entity:: [[Logseq/Entity/Asset]]`. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
 		- [[Logseq/Entity/Asset/Frontmatter/duration-seconds]] records measured audio or video duration when useful. DVC tracks content identity; podcast feed metadata supplies enclosure size and media type.
 		- The body contains a descriptive heading and the file itself: `![descriptive label](file location)` embeds an image, audio recording, or video; `[descriptive label](file location)` links a downloadable preset or document.
 		- Other technical facts belong in documented frontmatter when the asset needs them. The page contains only information about the represented file.

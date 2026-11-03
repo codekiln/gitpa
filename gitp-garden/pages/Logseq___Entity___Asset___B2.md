@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FAsset%2FB2
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Asset___B2.md
-logseq-proxy-last-sync-date:: [[2026-10-12]]
+logseq-proxy-last-sync-date:: [[2026-11-03]]
 - # Backblaze B2 Asset
 	- In this garden, **Backblaze B2 Asset** pages represent files stored in Backblaze B2, following [[Logseq/Entity/Asset]] for filenames, ownership, and page contents.
 	- ## Storage location
@@ -11,7 +11,7 @@ logseq-proxy-last-sync-date:: [[2026-10-12]]
 		- Public uploads use the S3 endpoint returned by B2 authorization: `https://<s3-host>/<garden-bucket>/Course___Asset___Diagram___Overview.png`. The garden's B2 configuration supplies the host and bucket; URL encoding preserves the filename.
 		- Private uploads retain the authenticated B2 download URL, `https://<download-host>/file/<garden-bucket>/<filename>`.
 	- ## Frontmatter and body
-		- `logseq-entity:: [[Logseq/Entity/Asset/B2]]` identifies the file as a B2 asset. Shared asset frontmatter and embedded media or download links follow [[Logseq/Entity/Asset]].
+		- A B2 asset carries `logseq-entity:: [[Logseq/Entity/Asset/B2]]`. Shared asset frontmatter and embedded media or download links follow [[Logseq/Entity/Asset]].
 		- The body uses the usable remote URL. The URL already identifies the bucket and filename; separate properties would repeat them.
 	- ## Uploading and backing up
 		- Uploading makes a file available at its remote location. Publication through a website or podcast feed is a separate step in that site's workflow.

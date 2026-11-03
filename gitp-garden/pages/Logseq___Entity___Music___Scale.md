@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 see-also:: [[Logseq/Entity/Music/Scale/Discussion]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FMusic%2FScale
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Music___Scale.md
-logseq-proxy-last-sync-date:: [[2026-10-27]]
+logseq-proxy-last-sync-date:: [[2026-11-03]]
 
 - # Music Scale
 	- In this garden, **Music Scale** pages model a named collection of pitches ordered from a tonic — a scale, a mode, or a parent scale such as a Hindustani thaat — described apart from any key or instrument.
@@ -22,7 +22,7 @@ logseq-proxy-last-sync-date:: [[2026-10-27]]
 		- Compare `scale-semitones-above-tonic::` values before creating a page. A rotation of an existing scale is a different mode and gets its own page.
 		- Sources disagree on the pitches behind some names, such as Hirajoshi, Bebop Dorian and Blues. One page holds the name and describes the variants.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Music/Scale]]`
+		- The page carries `logseq-entity:: [[Logseq/Entity/Music/Scale]]`.
 		- [[Logseq/Entity/Music/Scale/Frontmatter/scale-semitones-above-tonic]] records the pitches as semitones above the tonic.
 		- Other conventions follow [[Logseq/Frontmatter]].
 	- ## Page shape
