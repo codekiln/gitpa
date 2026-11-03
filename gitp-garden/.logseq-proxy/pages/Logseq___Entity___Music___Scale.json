@@ -1,5 +1,5 @@
 {
-  "body_sha256": "0b58fd77eff964e8ba63d755ba1f36e7966c553ef28dd73e8aebc45a182629c9",
+  "body_sha256": "ac266a92430e58ebdcf2b809aa9b57c76f936e6ad203155ec0a90fb05f8277fc",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Definition]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Music/Scale"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Music/Scale": {
+      "files": [],
+      "page": "Logseq/Entity/Music/Scale",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Music/Scale",
   "version": 2
 }

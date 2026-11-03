@@ -1,5 +1,5 @@
 {
-  "body_sha256": "042f525fe727aa4aa96b44068e9a00010ffb9ec0f5a0841896bf80e646338284",
+  "body_sha256": "7507b262c07f8c9f466eb2af2be9b1f1f54aadb22a8dd76c62b62b8af0a07003",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Definition]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Asset"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Asset": {
+      "files": [],
+      "page": "Logseq/Entity/Asset",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Asset",
   "version": 2
 }
