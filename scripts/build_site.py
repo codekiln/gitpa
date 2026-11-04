@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 import unicodedata
@@ -294,6 +295,13 @@ def publish_feed(source, output, feed=None):
     (output / 'rss.xml').write_bytes(content)
 
 
+def check_property_names(diagnostics):
+    """Fail on each block that shows Logseq's "Invalid property names" warning."""
+    rejected = [line for line in diagnostics.splitlines() if 'Invalid property names: ' in line]
+    if rejected:
+        raise ValueError('Logseq rejects these property names:\n' + '\n'.join(rejected))
+
+
 def publish(source, output, renderer, search=False):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
@@ -328,7 +336,10 @@ def publish(source, output, renderer, search=False):
             args.extend(['--include', name])
         plugin_metadata = plugin_page_properties(graph, plugin_manifests())
         started = time.perf_counter()
-        subprocess.run(args, check=True)
+        rendered = subprocess.run(args, stderr=subprocess.PIPE, text=True)
+        sys.stderr.write(rendered.stderr)
+        rendered.check_returncode()
+        check_property_names(rendered.stderr)
         print(f'Render garden: {time.perf_counter() - started:.2f}s', flush=True)
         started = time.perf_counter()
         install_homepage_query(output, query_result)
