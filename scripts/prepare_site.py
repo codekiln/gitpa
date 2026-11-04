@@ -72,6 +72,30 @@ def listener_body(name, body, pages):
     return re.sub(r'\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}', embed, selected_body(body))
 
 
+def link_target(value):
+    match = re.fullmatch(r'\s*\[\[([^\]]+)\]\]\s*', value or '')
+    return match[1] if match else None
+
+def is_section(props):
+    return 'Logseq/Entity/Book/Section/' in props.get('logseq-entity', '')
+
+def inherited_next(name, props_by_name):
+    """Find the next:: of the nearest ancestor section, for the last section of a chapter."""
+    seen = {name}
+    current = props_by_name[name]
+    while is_section(current):
+        parent = link_target(current.get('up'))
+        if parent in seen or parent not in props_by_name:
+            return None
+        seen.add(parent)
+        current = props_by_name[parent]
+        if not is_section(current):
+            return None
+        if 'next' in current:
+            return current['next']
+    return None
+
+
 def prepare(source, output):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output.is_relative_to(source) or source.is_relative_to(output):
@@ -119,6 +143,14 @@ def prepare(source, output):
         lines = [line for line in lines if not line.startswith('public:: ')]
         lines.insert(0, f'public:: {str(name in visible).lower()}\n')
         changes[name] = ''.join(lines) + body
+    props_by_name = {name: properties(lines) for name, (lines, body) in pages.items()}
+    for name in list(changes):
+        props = props_by_name[name]
+        if is_section(props) and 'up' in props and 'next' not in props:
+            fallback = inherited_next(name, props_by_name)
+            if fallback:
+                lines, body = split_page(changes[name])
+                changes[name] = ''.join(lines) + f'next:: {fallback}\n' + body
     shutil.copytree(source, output)
     for name, content in changes.items():
         page_path(output, name).write_text(content, encoding='utf-8')
