@@ -125,7 +125,7 @@ class AudioChapterTests(unittest.TestCase):
             self.assertNotIn('name="gitpa-episode"', asset.read_text())
             self.assertEqual(text.count('<audio'), 1)
             self.assertTrue((root / 'player.js').is_file())
-            for filename in ['bootstrap.js', 'plugin-adapter.js', 'header-sequence.js', 'header-sequence.css']:
+            for filename in ['bootstrap.js', 'plugin-adapter.js', 'episode-player.js', 'header-sequence.js', 'header-sequence.css']:
                 self.assertTrue((root / filename).is_file())
             episode.write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
             with self.assertRaisesRegex(ValueError, 'exactly one'):

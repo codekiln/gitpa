@@ -6,13 +6,16 @@ const { join } = require('node:path');
 const navSource = readFileSync(join(__dirname, '../site/navigation.js'), 'utf8');
 const navURL = `data:text/javascript;base64,${Buffer.from(navSource).toString('base64')}`;
 const source = readFileSync(join(__dirname, '../site/player.js'), 'utf8').replace("'./navigation.js'", JSON.stringify(navURL));
-let chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, chapterTrail, createEpisodeSession, readEpisode, installSite;
+let createPluginAdapter, episodePlayerPlugin, chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, chapterTrail, createEpisodeSession, readEpisode, installSite;
 before(async () => {
   const playerURL = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
   ({ chapterTime, clampTime, createPlayer, createSitePlayer, enhanceEpisode, currentChapter, chapterTrail, createEpisodeSession, readEpisode } = await import(playerURL));
   const site = name => `data:text/javascript;base64,${readFileSync(join(__dirname, '../site', name)).toString('base64')}`;
+  const episodeSource = readFileSync(join(__dirname, '../site/episode-player.js'), 'utf8').replace("'./player.js'", JSON.stringify(playerURL));
+  ({ episodePlayerPlugin } = await import(`data:text/javascript;base64,${Buffer.from(episodeSource).toString('base64')}`));
+  ({ createPluginAdapter } = await import(site('plugin-adapter.js')));
   const bootstrap = readFileSync(join(__dirname, '../site/bootstrap.js'), 'utf8')
-    .replace("'./player.js'", JSON.stringify(playerURL))
+    .replace("'./episode-player.js'", JSON.stringify(`data:text/javascript;base64,${Buffer.from(episodeSource).toString('base64')}`))
     .replace("'./navigation.js'", JSON.stringify(navURL))
     .replace("'./plugin-adapter.js'", JSON.stringify(site('plugin-adapter.js')))
     .replace("'./header-sequence.js'", JSON.stringify(site('header-sequence.js')));
@@ -270,7 +273,7 @@ test('router startup failure restores real audio so a retry can manage chapter c
   origin.append(after);
   let failedPlayer;
   assert.throws(() => installSite(document, {
-    createPlayer(doc) { failedPlayer = createSitePlayer(doc); return failedPlayer; },
+    createPlugins: doc => createPluginAdapter(doc, [episodePlayerPlugin(d => { failedPlayer = createSitePlayer(d); return failedPlayer; })]),
     createNavigation() { throw new Error('router failed'); },
   }), /router failed/);
   assert.deepEqual(origin.children, [before, audio, after]);

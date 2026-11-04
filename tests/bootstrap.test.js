@@ -7,24 +7,20 @@ const playerSource = readFileSync(join(__dirname, '../site/player.js'), 'utf8');
 let installSite;
 before(async () => {
   const navigation = url(readFileSync(join(__dirname, '../site/navigation.js'), 'utf8'));
-  const site = name => url(readFileSync(join(__dirname, '../site', name), 'utf8'));
+  const site = name => readFileSync(join(__dirname, '../site', name), 'utf8');
   const bootstrap = readFileSync(join(__dirname, '../site/bootstrap.js'), 'utf8')
-    .replace("'./player.js'", JSON.stringify(url(playerSource)))
+    .replace("'./episode-player.js'", JSON.stringify(url(site('episode-player.js').replace("'./player.js'", JSON.stringify(url(playerSource))))))
     .replace("'./navigation.js'", JSON.stringify(navigation))
-    .replace("'./plugin-adapter.js'", JSON.stringify(site('plugin-adapter.js')))
-    .replace("'./header-sequence.js'", JSON.stringify(site('header-sequence.js')));
+    .replace("'./plugin-adapter.js'", JSON.stringify(url(site('plugin-adapter.js'))))
+    .replace("'./header-sequence.js'", JSON.stringify(url(site('header-sequence.js'))));
   ({ installSite } = await import(url(bootstrap)));
 });
 
 function fixture(loading = false) {
   const document = new EventTarget(); document.readyState = loading ? 'loading' : 'complete'; document.defaultView = {};
-  const counts = { players: 0, navigators: 0, pages: 0, playerDisposals: 0, navigationDisposals: 0,
-    pluginAdapters: 0, pluginPages: 0, pluginDisposals: 0 };
+  const counts = { navigators: 0, navigationDisposals: 0, pluginAdapters: 0, pluginPages: 0, pluginDisposals: 0 };
   let hook;
   const factories = {
-    createPlayer(doc) { assert.equal(doc, document); counts.players++; return {
-      showPage() { counts.pages++; }, dispose() { counts.playerDisposals++; },
-    }; },
     createPlugins(doc) { assert.equal(doc, document); counts.pluginAdapters++; return {
       adopt() { counts.pluginPages++; }, dispose() { counts.pluginDisposals++; },
     }; },
@@ -52,33 +48,32 @@ test('importing player exports with a browser document performs no automatic sta
   }
 });
 
-test('repeated entry installation starts one player and router after readiness', () => {
+test('repeated entry installation starts one plugin host and router after readiness', () => {
   const f = fixture(true), first = installSite(f.document, f.factories);
   assert.equal(installSite(f.document, f.factories), first);
-  assert.equal(f.counts.players, 0);
+  assert.equal(f.counts.pluginAdapters, 0);
   f.ready(); f.ready(); f.adopt(); f.adopt();
-  assert.deepEqual(f.counts, { players: 1, navigators: 1, pages: 2, playerDisposals: 0, navigationDisposals: 0,
-    pluginAdapters: 1, pluginPages: 2, pluginDisposals: 0 });
+  assert.deepEqual(f.counts, { navigators: 1, navigationDisposals: 0, pluginAdapters: 1, pluginPages: 2, pluginDisposals: 0 });
   first.dispose(); first.dispose();
-  assert.equal(f.counts.navigationDisposals, 1); assert.equal(f.counts.playerDisposals, 1);
+  assert.equal(f.counts.navigationDisposals, 1);
   assert.equal(f.counts.pluginDisposals, 1);
 });
 
 test('disposing pending startup prevents a late readiness event and allows a fresh installation', () => {
   const f = fixture(true), first = installSite(f.document, f.factories);
   first.dispose(); f.ready();
-  assert.equal(f.counts.players, 0); assert.equal(f.counts.navigators, 0); assert.equal(f.counts.pluginAdapters, 0);
+  assert.equal(f.counts.navigators, 0); assert.equal(f.counts.pluginAdapters, 0);
   const next = installSite(f.document, f.factories);
-  assert.notEqual(next, first); assert.equal(f.counts.players, 1);
+  assert.notEqual(next, first); assert.equal(f.counts.pluginAdapters, 1);
   next.dispose();
 });
 
-test('failed router construction disposes its player and does not strand the installation', () => {
+test('failed router construction disposes its plugins and does not strand the installation', () => {
   const f = fixture();
   assert.throws(() => installSite(f.document, { ...f.factories, createNavigation() { throw new Error('failed'); } }), /failed/);
-  assert.equal(f.counts.playerDisposals, 1); assert.equal(f.counts.pluginDisposals, 1);
+  assert.equal(f.counts.pluginDisposals, 1);
   const retry = installSite(f.document, f.factories);
-  assert.equal(f.counts.players, 2); assert.equal(f.counts.navigators, 1);
+  assert.equal(f.counts.pluginAdapters, 2); assert.equal(f.counts.navigators, 1);
   retry.dispose();
 });
 

@@ -305,6 +305,9 @@ export function createNavigator({ document, window, onPage = () => {}, onError =
           for (const existing of document.querySelectorAll(selector)) existing.remove();
           if (node) document.head.append(node);
         }
+        // Each plugin's published page properties travel with the page.
+        for (const existing of document.querySelectorAll('script[data-gitpa-plugin]')) existing.remove();
+        for (const node of parsed.querySelectorAll('script[data-gitpa-plugin]')) document.head.append(document.importNode(node, true));
         const previousURL = displayedURL;
         adoptURL(responseURL, options);
         window.logseqGardenerInitOutline?.(importedMain);

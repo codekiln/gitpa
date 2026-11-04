@@ -7,5 +7,5 @@
     "noEmit": true,
     "skipLibCheck": false
   },
-  "include": ["*.ts", "../experiments/plugins/*.ts"]
+  "include": ["*.ts"]
 }

@@ -11,7 +11,7 @@ before(async () => {
   ({ default: headerSequence, sequenceLinks } = await import(sequenceModule));
   ({ createPluginAdapter } = await import(adapterModule));
   const bootstrap = site('bootstrap.js')
-    .replace("'./player.js'", JSON.stringify(url(site('player.js'))))
+    .replace("'./episode-player.js'", JSON.stringify(url(site('episode-player.js').replace("'./player.js'", JSON.stringify(url(site('player.js')))))))
     .replace("'./navigation.js'", JSON.stringify(url(site('navigation.js'))))
     .replace("'./plugin-adapter.js'", JSON.stringify(adapterModule))
     .replace("'./header-sequence.js'", JSON.stringify(sequenceModule));
@@ -104,6 +104,7 @@ function siteDocument(main) {
   return {
     root, title: main.querySelector('h1').textContent, URL: 'https://example.com/gitpa/Page/',
     querySelector: selector => root.querySelector(selector),
+    querySelectorAll: selector => root.querySelectorAll(selector),
     createElement: tag => new Element(tag),
     createElementNS: (namespace, tag) => new Element(tag, {}, [], namespace),
   };
@@ -173,7 +174,7 @@ test('in-site navigation through the site entry renders the new page and clears 
   document.addEventListener = document.removeEventListener = () => {};
   let onPage;
   const installation = installSite(document, {
-    createPlayer: () => ({ showPage() {}, dispose() {} }),
+    createPlugins: doc => createPluginAdapter(doc, [headerSequence]),
     createNavigation: options => { onPage = options.onPage; return { dispose() {} }; },
   });
   assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/A/', 'space', 'next /gitpa/C/', 'Home', 'button']);
@@ -201,7 +202,7 @@ test('in-site navigation through the site entry renders the new page and clears 
 test('page signals abort before the next adoption and after disposal', () => {
   const document = siteDocument(page('A'));
   const signals = [];
-  const adapter = createPluginAdapter(document, [{ id: 'probe', apiVersion: 1, setup(host) {
+  const adapter = createPluginAdapter(document, [{ id: 'probe', apiVersion: 1, version: '1.0.0', setup(host) {
     assert.equal(host.apiVersion, 1);
     assert.equal(host.baseURL, 'https://example.com/gitpa/');
     host.onPageAdopted(({ page: current, main, metadata, signal }) => {
@@ -223,8 +224,8 @@ test('a failing plugin is reported and the others keep rendering', () => {
   const errors = [];
   const adapter = createPluginAdapter(document, [
     { id: 'old', apiVersion: 2, setup: () => assert.fail('must not run') },
-    { id: 'broken', apiVersion: 1, setup() { throw new Error('setup failed'); } },
-    { id: 'flaky', apiVersion: 1, setup(host) { host.onPageAdopted(() => { throw new Error('render failed'); }); } },
+    { id: 'broken', apiVersion: 1, version: '1.0.0', setup() { throw new Error('setup failed'); } },
+    { id: 'flaky', apiVersion: 1, version: '1.0.0', setup(host) { host.onPageAdopted(() => { throw new Error('render failed'); }); } },
     headerSequence,
   ], { report: error => errors.push(error.message) });
   navigate(document, page('C', { properties: { prev: 'B' } }));

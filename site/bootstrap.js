@@ -1,15 +1,15 @@
-import { createSitePlayer } from './player.js';
 import { createNavigator } from './navigation.js';
 import { createPluginAdapter } from './plugin-adapter.js';
+import episodePlayer from './episode-player.js';
 import headerSequence from './header-sequence.js';
 
 const installations = new WeakMap();
-const createSitePlugins = document => createPluginAdapter(document, [headerSequence]);
+const createSitePlugins = document => createPluginAdapter(document, [episodePlayer, headerSequence]);
 
 /** Legacy site entry while Gardener's shared plugin host is being defined. */
-export function installSite(document, { createPlayer = createSitePlayer, createNavigation = createNavigator, createPlugins = createSitePlugins } = {}) {
+export function installSite(document, { createNavigation = createNavigator, createPlugins = createSitePlugins } = {}) {
   if (installations.has(document)) return installations.get(document);
-  let player = null, navigation = null, plugins = null, started = false, disposed = false;
+  let navigation = null, plugins = null, started = false, disposed = false;
   async function copyFeed(event) {
     const button = event.target.closest?.('[data-copy-feed]');
     if (!button) return;
@@ -21,17 +21,15 @@ export function installSite(document, { createPlayer = createSitePlayer, createN
       status.textContent = 'Copy the podcast RSS feed link instead.';
     }
   }
-  function stop(restoreOriginal = false) {
+  function stop() {
     if (disposed) return;
     disposed = true;
     document.removeEventListener('DOMContentLoaded', start);
     document.removeEventListener('click', copyFeed);
     try {
-      plugins?.dispose();
-      try { navigation?.dispose(); }
-      finally { player?.dispose({ restoreOriginal }); }
+      try { plugins?.dispose(); }
+      finally { navigation?.dispose(); }
     } finally {
-      player = null;
       navigation = null;
       plugins = null;
       installations.delete(document);
@@ -42,14 +40,10 @@ export function installSite(document, { createPlayer = createSitePlayer, createN
     if (disposed || started) return;
     started = true;
     try {
-      player = createPlayer(document);
       plugins = createPlugins(document);
-      navigation = createNavigation({ document, window: document.defaultView, onPage(page) {
-        player.showPage(page);
-        plugins.adopt();
-      } });
+      navigation = createNavigation({ document, window: document.defaultView, onPage() { plugins.adopt(); } });
     } catch (error) {
-      stop(true);
+      stop();
       throw error;
     }
   }

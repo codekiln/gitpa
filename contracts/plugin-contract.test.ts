@@ -1,16 +1,17 @@
 import type { PublicationView, RuntimeHost, RuntimeManifest, RuntimePlugin } from './gardener-plugin';
-import { episodePlayerPlugin } from '../experiments/plugins/episode-player';
 
 declare const view: PublicationView;
 declare const plugin: RuntimePlugin;
 declare const host: RuntimeHost;
 const id: string = plugin.id;
 void id;
-void episodePlayerPlugin;
 // @ts-expect-error Plugins receive a read-only publication projection.
 view.pages.push({ id: 'new', title: 'new', url: '/new/' });
 // @ts-expect-error The projection exposes no raw graph/filesystem path.
 view.sourceRoot;
+const shipped: RuntimeManifest = { id: 'header-sequence', apiVersion: 1, version: '1.0.0', module: 'header-sequence.js',
+  styles: ['header-sequence.css'], activation: 'after-load', pageProperties: ['prev', 'next'] };
+void shipped;
 // @ts-expect-error An unsupported API major cannot satisfy the proposed manifest.
 const wrongVersion: RuntimeManifest = { id: 'test', apiVersion: 2, version: '1.0.0', module: 'test.js', activation: 'after-load' };
 void wrongVersion;
