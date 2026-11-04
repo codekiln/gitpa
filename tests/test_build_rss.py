@@ -34,6 +34,20 @@ class FeedTests(unittest.TestCase):
         episode = self.load()[0]
         self.assertEqual(episode["audio_url"], "https://example.org/audio.mp3")
         self.assertEqual(episode["guid"], "stable")
+    def test_description_after_recording(self):
+        self.page.write_text(self.props + '- # A session\n\t- {{embed [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]]}}\n\t- Music from a patch.\n')
+        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+    def test_description_after_direct_recording_link(self):
+        self.asset.unlink()
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n\t- Music from a patch.\n')
+        episode = self.load()[0]
+        self.assertEqual(episode['description'], 'Music from a patch.')
+        self.assertEqual(episode['episode_title'], 'A session')
+    def test_missing_description_fails(self):
+        self.asset.unlink()
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n')
+        with self.assertRaisesRegex(ValueError, "description"):
+            self.load()
     def test_chapter_players_do_not_replace_full_recording(self):
         self.page.write_text(self.props + self.body +
                              "\t- ## Chapters\n\t\t- ### Opening\n"

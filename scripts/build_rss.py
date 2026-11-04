@@ -54,6 +54,25 @@ def audio_metadata(url: str) -> tuple[int, str]:
         return length, content_type
 
 
+def episode_copy(body: str, path: Path) -> tuple[str, str]:
+    """Return the H1 title and the first direct child of it that is not a media embed."""
+    lines = body.splitlines()
+    for index, line in enumerate(lines):
+        match = re.match(r"^- # (.+)$", line)
+        if not match:
+            continue
+        for child in lines[index + 1:]:
+            if not child.startswith("\t"):
+                break
+            if not child.startswith("\t- "):
+                continue
+            text = child[3:].strip()
+            if text and not text.startswith(("![", "{{embed")):
+                return match[1], text
+        break
+    raise ValueError(f"{path}: expected an H1 followed by the episode description")
+
+
 def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
     episodes = []
     guids, audio_urls = set(), set()
@@ -68,9 +87,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         published = datetime.fromisoformat(required(props, "podcast-published-at", path))
         if published.tzinfo is None or published.utcoffset() is None:
             raise ValueError(f"{path}: podcast-published-at needs a timezone offset")
-        heading = re.search(r"^- # ([^\n]+)\n\t- ([^\n]+)", body, re.MULTILINE)
-        if not heading:
-            raise ValueError(f"{path}: expected an H1 followed by the episode description")
+        title, description = episode_copy(body, path)
         # The episode recording is a direct child of its title. Chapter
         # players sit deeper in the outline and do not become RSS enclosures.
         recording_blocks = "\n".join(
@@ -94,7 +111,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         length, content_type = probe(url)
         page_name = path.stem.replace("___", "/")
         episodes.append({
-            "episode_title": heading[1], "description": heading[2],
+            "episode_title": title, "description": description,
             "guid": guid, "_published_at": published,
             "page_url": SITE_URL + page_route(props.get('title', page_name)),
             "audio_url": url, "audio_length": length, "audio_type": content_type,
