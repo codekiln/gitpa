@@ -181,5 +181,45 @@ class PresentationTests(unittest.TestCase):
             self.assertTrue((output / 'pages/Episode.md').read_text().startswith('tags:: [[Music]]\n'))
             self.assertEqual(original, path.read_text())
 
+class BookNextTests(unittest.TestCase):
+    def published(self, pages):
+        with tempfile.TemporaryDirectory() as directory:
+            source, output = Path(directory) / 'source', Path(directory) / 'output'
+            (source / 'pages').mkdir(parents=True)
+            for name, text in pages.items():
+                (source / 'pages' / f'{name}.md').write_text(text)
+            prepare(source, output)
+            return {name: (output / 'pages' / f'{name}.md').read_text() for name in pages}
+    def section(self, level, up, extra=''):
+        return f'public:: true\nlogseq-entity:: [[Logseq/Entity/Book/Section/Level {level}]]\nup:: [[{up}]]\n{extra}- # Section\n'
+    def pages(self):
+        return {
+            'B': 'public:: true\nlogseq-entity:: [[Logseq/Entity/Book]]\n- # Book\n',
+            'B___1': self.section(1, 'B', 'next:: [[B/2]]\n'),
+            'B___2': self.section(1, 'B', 'prev:: [[B/1]]\n'),
+            'B___2___a': self.section(2, 'B/2', 'next:: [[B/2/b]]\n'),
+            'B___2___b': self.section(2, 'B/2', 'prev:: [[B/2/a]]\n'),
+        }
+    def test_last_section_inherits_next_from_nearest_ancestor(self):
+        pages = self.pages()
+        pages['B___2'] = self.section(1, 'B', 'prev:: [[B/1]]\nnext:: [[B/3]]\n')
+        pages['B___3'] = self.section(1, 'B')
+        published = self.published(pages)
+        self.assertIn('next:: [[B/3]]\n', published['B___2___b'])
+        self.assertIn('prev:: [[B/2/a]]\n', published['B___2___b'])
+    def test_climbs_several_levels(self):
+        pages = self.pages()
+        pages['B___1___x'] = self.section(2, 'B/1')
+        pages['B___1___x___y'] = self.section(3, 'B/1/x')
+        self.assertIn('next:: [[B/2]]\n', self.published(pages)['B___1___x___y'])
+    def test_own_next_is_unchanged(self):
+        published = self.published(self.pages())
+        self.assertEqual(self.pages()['B___2___a'], published['B___2___a'])
+    def test_final_page_of_book_has_no_next(self):
+        published = self.published(self.pages())
+        self.assertNotIn('next::', published['B___2___b'])
+        self.assertNotIn('next::', published['B___2'])
+        self.assertEqual(self.pages()['B'], published['B'])
+
 if __name__ == '__main__':
     unittest.main()
