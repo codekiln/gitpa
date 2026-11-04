@@ -5,7 +5,8 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
-from build_site import prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER
+from build_site import (prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER,
+                        plugin_manifests, plugin_page_properties, install_plugin_metadata)
 
 
 class HomepageTests(unittest.TestCase):
@@ -150,6 +151,36 @@ class HomepageTests(unittest.TestCase):
             nested.write_text('- Secret\n  public:: false\n')
             public_pages(graph)
             self.assertEqual(nested.read_text(), 'public:: false\n')
+
+
+class PluginMetadataTests(unittest.TestCase):
+    def test_manifests_come_from_the_plugin_modules(self):
+        manifests = {manifest['id']: manifest for manifest in plugin_manifests()}
+        self.assertEqual(manifests['header-sequence']['pageProperties'], ['prev', 'next'])
+        self.assertEqual(manifests['episode-player']['pageProperties'], [])
+
+    def test_only_requested_properties_of_public_pages_are_published(self):
+        manifests = [{'id': 'header-sequence', 'pageProperties': ['prev', 'next']}]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            graph, output = root / 'graph', root / 'out'
+            (graph / 'pages').mkdir(parents=True)
+            output.mkdir()
+            (graph / 'pages/B.md').write_text('public:: true\nprev:: [[A]]\ntags:: secret\n- body\n')
+            (graph / 'pages/Plain.md').write_text('public:: true\ntags:: x\n- body\n')
+            (graph / 'pages/Hidden.md').write_text('public:: false\nprev:: [[Nope]]\n')
+            found = plugin_page_properties(graph, manifests)
+            self.assertEqual(found, {'b': {'header-sequence': {'prev': '[[A]]'}}})
+            write_site(output, [('B/', 'B'), ('Plain/', 'Plain')])
+            for name in ['B', 'Plain']:
+                (output / name).mkdir()
+                (output / name / 'index.html').write_text('<head></head><body></body>')
+            install_plugin_metadata(output, {'b': {'header-sequence': {'prev': '[[A]]</script><b>'}}})
+            text = (output / 'B/index.html').read_text()
+            self.assertIn('<script type="application/json" data-gitpa-plugin="header-sequence">', text)
+            self.assertIn('\\u003c/script>', text)
+            self.assertEqual(text.count('</script>'), 1)
+            self.assertNotIn('data-gitpa-plugin', (output / 'Plain/index.html').read_text())
 
 
 if __name__ == '__main__':

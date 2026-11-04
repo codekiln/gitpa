@@ -23,8 +23,10 @@ from audio_chapters import compile_episode
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
 QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
-SITE_FILES = ['bootstrap.js', 'player.js', 'player.css', 'navigation.js',
-              'plugin-adapter.js', 'header-sequence.js', 'header-sequence.css']
+SITE_FILES = ['bootstrap.js', 'player.js', 'player.css', 'navigation.js', 'plugin-adapter.js',
+              'episode-player.js', 'header-sequence.js', 'header-sequence.css']
+# Plugin modules that declare `export const manifest = {...};` as a JSON object.
+PLUGIN_MODULES = ['header-sequence.js', 'episode-player.js']
 
 
 def normalized(name):
@@ -197,6 +199,50 @@ def compile_episode_pages(graph):
     return episodes
 
 
+def plugin_manifests():
+    """Read each plugin's manifest from its module so the build and the browser agree."""
+    manifests = []
+    for filename in PLUGIN_MODULES:
+        text = (ROOT / 'site' / filename).read_text(encoding='utf-8')
+        match = re.search(r'^export const manifest = (\{.*?^\});$', text, re.DOTALL | re.MULTILINE)
+        if not match:
+            raise ValueError(f'{filename} declares no manifest')
+        manifests.append(json.loads(match[1]))
+    return manifests
+
+
+def plugin_page_properties(graph, manifests):
+    """Requested property values of explicitly public pages, by normalized page name and plugin id."""
+    found = {}
+    for path in sorted((graph / 'pages').glob('*.md')):
+        name = page_name(path)
+        leading, _ = split_page(path.read_text(encoding='utf-8'))
+        props = properties(leading)
+        if props.get('public') != 'true':
+            continue
+        for manifest in manifests:
+            values = {key: props[key] for key in manifest.get('pageProperties', []) if key in props}
+            if values:
+                found.setdefault(normalized(name), {})[manifest['id']] = values
+    return found
+
+
+def install_plugin_metadata(output, metadata):
+    """Publish each plugin's requested page properties as a JSON script in that page's head."""
+    parser = PageRoutes(output)
+    for name, plugins in metadata.items():
+        route = parser.routes.get(name)
+        if not route:
+            continue
+        path = parser.file(route)
+        elements = ''
+        for plugin_id, values in sorted(plugins.items()):
+            # Escape < so a value cannot close the script element.
+            payload = json.dumps(values, sort_keys=True, ensure_ascii=False).replace('<', '\\u003c')
+            elements += f'<script type="application/json" data-gitpa-plugin="{plugin_id}">{payload}</script>'
+        path.write_text(path.read_text(encoding='utf-8').replace('</head>', elements + '</head>', 1), encoding='utf-8')
+
+
 def install_episode_player(output, episodes):
     """Install persistent navigation everywhere and identify playable episodes."""
     parser = PageRoutes(output)
@@ -277,14 +323,17 @@ def publish(source, output, renderer, search=False):
             args.append('--search')
         # Match the existing Logseq publishing policy: explicitly public pages.
         # Asset visibility and selected episode notes were resolved by prepare.
-        for name in public_pages(graph):
+        names = public_pages(graph)
+        for name in names:
             args.extend(['--include', name])
+        plugin_metadata = plugin_page_properties(graph, plugin_manifests())
         started = time.perf_counter()
         subprocess.run(args, check=True)
         print(f'Render garden: {time.perf_counter() - started:.2f}s', flush=True)
         started = time.perf_counter()
         install_homepage_query(output, query_result)
         install_episode_player(output, episodes)
+        install_plugin_metadata(output, plugin_metadata)
         publish_feed(source, output)
         (output / '.nojekyll').touch()
         print(f'Package site: {time.perf_counter() - started:.2f}s', flush=True)

@@ -70,10 +70,19 @@ export function renderSequence(document, main) {
   return added;
 }
 
+export const manifest = {
+  "id": "header-sequence",
+  "apiVersion": 1,
+  "version": "1.0.0",
+  "module": "header-sequence.js",
+  "styles": ["header-sequence.css"],
+  "activation": "after-load",
+  "pageProperties": ["prev", "next"]
+};
+
 /** Previous and Next links in the header for pages with `prev::` or `next::`. */
 export default {
-  id: 'header-sequence',
-  apiVersion: 1,
+  ...manifest,
   setup(host) {
     let shown = [];
     const remove = links => { for (const link of links) link.remove(); };
