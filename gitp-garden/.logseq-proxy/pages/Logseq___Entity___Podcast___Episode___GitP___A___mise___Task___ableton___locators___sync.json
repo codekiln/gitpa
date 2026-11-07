@@ -1,0 +1,32 @@
+{
+  "body_sha256": "032e75113ce1885766aecf46de8c72bb41de670ed7a59e643d27732066db28fd",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Mise/Task]]",
+    "source-link": "https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync",
+    "task-config-root": ".",
+    "task-entrypoint": "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync",
+    "task-files": "{\"mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync\":\"mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync\"}",
+    "task-name": "logseq:entity:podcast:episode:gitp:a:ableton:locators:sync",
+    "task-owner": "[[Person/codekiln/GitHub/logseq-encode-garden]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators/sync"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators/sync",
+  "task": {
+    "identity": [
+      "github.com/codekiln/logseq-encode-garden",
+      ".",
+      "[[Person/codekiln/GitHub/logseq-encode-garden]]",
+      ".",
+      "logseq:entity:podcast:episode:gitp:a:ableton:locators:sync"
+    ],
+    "mapping": {
+      "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync": "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync"
+    }
+  },
+  "version": 2
+}

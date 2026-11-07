@@ -1,0 +1,20 @@
+{
+  "body_sha256": "99f618db20338e4c9f528a1e70de74863d9b271c5463dbcb09f85bab7ede3caa",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid": {
+      "files": [],
+      "page": "GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid",
+  "version": 2
+}

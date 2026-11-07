@@ -1,0 +1,11 @@
+{
+  "destination": "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync",
+  "mode": 493,
+  "sha256": "63680bda5e4c9c50aa885385a2b7a770bc22df2c4d77cbf415979a90c874ee19",
+  "source": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync"
+  ],
+  "version": 2
+}
