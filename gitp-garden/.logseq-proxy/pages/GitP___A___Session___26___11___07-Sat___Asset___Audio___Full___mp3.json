@@ -1,0 +1,20 @@
+{
+  "body_sha256": "b62a1ddeb035c5bdffda64857389d057e751025bf47acc71bf37ac66bffc927d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/11/07-Sat/Asset/Audio/Full/mp3"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/11/07-Sat/Asset/Audio/Full/mp3": {
+      "files": [],
+      "page": "GitP/A/Session/26/11/07-Sat/Asset/Audio/Full/mp3",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/11/07-Sat/Asset/Audio/Full/mp3",
+  "version": 2
+}

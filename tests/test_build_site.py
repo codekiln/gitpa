@@ -6,7 +6,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
 from build_site import (prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER,
-                        plugin_manifests, plugin_page_properties, install_plugin_metadata)
+                        plugin_manifests, plugin_page_properties, install_plugin_metadata, check_property_names)
 
 
 class HomepageTests(unittest.TestCase):
@@ -181,6 +181,17 @@ class PluginMetadataTests(unittest.TestCase):
             self.assertIn('\\u003c/script>', text)
             self.assertEqual(text.count('</script>'), 1)
             self.assertNotIn('data-gitpa-plugin', (output / 'Plain/index.html').read_text())
+
+
+class PropertyNameTests(unittest.TestCase):
+    def test_a_rejected_property_name_fails_the_build(self):
+        diagnostics = ('pages/A.md: Unresolved or excluded page reference: B\n'
+                       'pages/Logseq___Entity___Asset.md: Invalid property names: `logseq-entity\n')
+        with self.assertRaisesRegex(ValueError, r'Logseq___Entity___Asset\.md: Invalid property names: `logseq-entity'):
+            check_property_names(diagnostics)
+
+    def test_other_diagnostics_leave_the_build_alone(self):
+        check_property_names('pages/A.md: Unresolved or excluded page reference: B\n')
 
 
 if __name__ == '__main__':

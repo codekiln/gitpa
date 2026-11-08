@@ -50,8 +50,8 @@ jobs:
       # Agents install each new release without asking codekiln first.
       - name: Install released Logseq Gardener
         env:
-          GARDENER_VERSION: v0.0.28
-          GARDENER_SHA256: 131adab354c52e1b2267a7c4b0c4a1259d1eaba41eb3cbbabbda74710eee088b
+          GARDENER_VERSION: v0.0.29
+          GARDENER_SHA256: 4fbfdfc4431a6d5033aff46b6fe02972ad8be4113edd7a4e0e9991977c582f8e
           GARDENER_TARGET: x86_64-unknown-linux-gnu
         run: |
           archive="logseq-gardener-$GARDENER_TARGET.tar.xz"

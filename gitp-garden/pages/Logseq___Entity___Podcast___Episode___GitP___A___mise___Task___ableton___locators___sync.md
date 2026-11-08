@@ -8,7 +8,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 see-also:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[GitP/mise/Task/ableton/sync]], [[Ableton/File/.als]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode%2FGitP%2FA%2Fmise%2FTask%2Fableton%2Flocators%2Fsync
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode___GitP___A___mise___Task___ableton___locators___sync.md
-logseq-proxy-last-sync-date:: [[2026-11-04]]
+logseq-proxy-last-sync-date:: [[2026-11-07]]
 
 - # Mark Episode Chapters in an Ableton Live Set
 	- Writes the timed chapter headings of a [[Logseq/Entity/Podcast/Episode/GitP/A]] page into the episode's [[Ableton/Live]] Set as arrangement locators, so the Set can be navigated by the same chapters as the episode.

@@ -1,0 +1,22 @@
+{
+  "body_sha256": "5efbde8e924646c6a8d509c08140f91b146be087e80bb8b3b61e6f0fc367492c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/11/07-Sat"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/11/07-Sat": {
+      "files": [
+        "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync"
+      ],
+      "page": "GitP/A/Session/26/11/07-Sat",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/11/07-Sat",
+  "version": 2
+}
