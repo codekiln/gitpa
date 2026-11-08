@@ -46,6 +46,10 @@ A page with `prev::` or `next::` page properties shows its previous page at the 
 
 `site/header-sequence.js` is a browser plugin in the shape of Gardener's [host API](https://github.com/codekiln/logseq-gardener/blob/main/docs/publishing.md#host-api), styled by `site/header-sequence.css`. Until Gitpa runs Gardener's plugin host ([Issue #93 Define Gitpa customization through Gardener plugins](https://github.com/codekiln/gitpa/issues/93)), `site/plugin-adapter.js` gives it `onPageAdopted`: `site/bootstrap.js` adopts the first page and each page the navigator shows.
 
+## Illuminated initials
+
+Published episodes decorate the opening letter of Ceremonial Annotations and the first chapter title, when those sections are present. The browser draws the garden and chooses its details from the page title, so each episode keeps its own design across visits. The original text remains available without JavaScript. `site/illuminated-initials.js` is a Gardener host plugin; `site/illuminated-initials.css` supplies its layout.
+
 ## Episode chapters
 
 Each published episode uses one full recording. Its native audio controls stay in a fixed footer while the reader scrolls or follows links within the site. Selecting a chapter timestamp seeks and plays that recording; Cmd-, Ctrl- or Shift-click opens the recording in a new tab. The footer names the episode and follows the chapter at the current playback time, preceded by its enclosing chapter when it is a subchapter; selecting a chapter name opens its notes. “Return to playing spot” opens the notes of the chapter playing now. Playback starts only after the listener clicks a chapter or the recording controls.

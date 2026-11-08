@@ -14,7 +14,8 @@ before(async () => {
     .replace("'./episode-player.js'", JSON.stringify(url(site('episode-player.js').replace("'./player.js'", JSON.stringify(url(site('player.js')))))))
     .replace("'./navigation.js'", JSON.stringify(url(site('navigation.js'))))
     .replace("'./plugin-adapter.js'", JSON.stringify(adapterModule))
-    .replace("'./header-sequence.js'", JSON.stringify(sequenceModule));
+    .replace("'./header-sequence.js'", JSON.stringify(sequenceModule))
+    .replace("'./illuminated-initials.js'", JSON.stringify(url('export default { id: \"illuminated-initials\", apiVersion: 1, version: \"1\", setup() {} };')));
   ({ installSite } = await import(url(bootstrap)));
 });
 

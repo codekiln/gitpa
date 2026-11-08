@@ -25,9 +25,10 @@ ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
 QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
 SITE_FILES = ['bootstrap.js', 'player.js', 'player.css', 'navigation.js', 'plugin-adapter.js',
-              'episode-player.js', 'header-sequence.js', 'header-sequence.css']
+              'episode-player.js', 'header-sequence.js', 'header-sequence.css',
+              'illuminated-initials.js', 'illuminated-initials.css']
 # Plugin modules that declare `export const manifest = {...};` as a JSON object.
-PLUGIN_MODULES = ['header-sequence.js', 'episode-player.js']
+PLUGIN_MODULES = ['header-sequence.js', 'episode-player.js', 'illuminated-initials.js']
 
 
 def normalized(name):
@@ -263,6 +264,7 @@ def install_episode_player(output, episodes):
         path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
     additions = (f'<link rel="stylesheet" href="{base}player.css">'
                  f'<link rel="stylesheet" href="{base}header-sequence.css">'
+                 f'<link rel="stylesheet" href="{base}illuminated-initials.css">'
                  f'<script type="module" src="{base}bootstrap.js"></script>')
     for path in parser.documents():
         text = path.read_text(encoding='utf-8')
