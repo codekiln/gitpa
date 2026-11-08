@@ -1,30 +1,28 @@
-/* A little manuscript garden, kept legible in both Nord appearances. */
+/* An illuminated initial with vines escaping into the margin. */
 .illuminated-initial {
   position: relative;
   display: inline-grid;
   place-items: center;
   float: left;
-  width: 5.4rem;
-  height: 5.4rem;
-  margin: .15rem .75rem .25rem 0;
+  width: 6.1rem;
+  height: 6.1rem;
+  margin: -.18rem .55rem .15rem -.25rem;
   line-height: 1;
   vertical-align: top;
-  filter: drop-shadow(2px 3px 1px #2e344033);
 }
-.illuminated-initial svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.illuminated-initial svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .illuminated-initial__letter {
   position: relative;
-  color: #344d63;
+  color: #984c48;
   font: 700 4rem/.9 Georgia, 'Times New Roman', serif;
-  text-shadow: 1px 1px #f7ecd1, 2px 2px #b28f56;
+  text-shadow: 1px 1px #f7efd9, 2px 2px #c8a369;
+  transform: translate(-.05rem, .05rem);
 }
-.illuminated-initial--chapter { width: 4.5rem; height: 4.5rem; margin-top: 0; }
-.illuminated-initial--chapter .illuminated-initial__letter { font-size: 3.3rem; }
+.illuminated-initial--chapter { float: none; vertical-align: middle; width: 4.7rem; height: 4.7rem; margin: .1rem .1rem .1rem .2rem; }
+.illuminated-initial--chapter .illuminated-initial__letter { font-size: 3rem; }
 @media (max-width: 480px) {
-  .illuminated-initial { width: 4.5rem; height: 4.5rem; }
-  .illuminated-initial__letter { font-size: 3.3rem; }
-  .illuminated-initial--chapter { width: 3.8rem; height: 3.8rem; }
-  .illuminated-initial--chapter .illuminated-initial__letter { font-size: 2.8rem; }
+  .illuminated-initial { width: 5rem; height: 5rem; }
+  .illuminated-initial__letter { font-size: 3.35rem; }
+  .illuminated-initial--chapter { width: 4rem; height: 4rem; }
+  .illuminated-initial--chapter .illuminated-initial__letter { font-size: 2.65rem; }
 }
-/* The chapter timestamp stays before its title, and the title stays together. */
-.illuminated-initial--chapter { float: none; vertical-align: middle; margin: .15rem .12rem .15rem .3rem; }
