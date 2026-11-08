@@ -1,0 +1,131 @@
+<!doctype html>
+<!-- Throwaway prototype for issue 164. Open this file directly in a browser, or run
+     `python3 -m http.server -d site 8164` and visit http://localhost:8164/prototype-claude.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="gitpa-episode" content="GitP/A/Session/26/11/06-Fri">
+<title>Infini Pad at the Crossfader · prototype initial (Claude)</title>
+<style>
+  :root {
+    color-scheme: light;
+    --text: #4c566a; --bg: #fafbfc; --surface: #eceff4; --link: #4c6f99;
+    --border: #d8dee9; --heading: #5e81ac; --muted: #6b7489;
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --text: #d8dee9; --bg: #2e3440; --surface: #3b4252; --link: #88c0d0;
+    --border: #4c566a; --heading: #88c0d0; --muted: #a3acbd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  }
+  .bench {
+    position: sticky; top: 0; z-index: 3; display: flex; flex-wrap: wrap; gap: .5rem;
+    align-items: center; padding: .55rem 1rem; background: var(--surface);
+    border-bottom: 1px solid var(--border); font: 13px/1.3 system-ui, sans-serif;
+  }
+  .bench strong { margin-right: auto; font-weight: 600; }
+  .bench button {
+    font: inherit; padding: .3rem .7rem; border: 1px solid var(--border); border-radius: 4px;
+    background: var(--bg); color: var(--text); cursor: pointer;
+  }
+  .bench button:hover { border-color: var(--heading); }
+  main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+  h1 { color: var(--heading); font-weight: 400; font-size: 2rem; margin: .5rem 0 .75rem; }
+  h2 { color: var(--heading); font-weight: 400; font-size: 1.35rem; margin: 2rem 0 .5rem; }
+  h3 { font-weight: 400; font-size: 1.15rem; margin: .5rem 0; }
+  h4 { font-weight: 600; font-size: .98rem; margin: .9rem 0 .2rem; cursor: default; }
+  h4 a, h3 > a:first-child { font-variant-numeric: tabular-nums; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  audio { width: 100%; margin: .25rem 0 .5rem; }
+  .acolyte { color: var(--muted); font-size: .92rem; }
+  h4.is-lit { color: var(--heading); }
+  .legend {
+    margin-top: 3rem; padding: 1rem 1.25rem; border: 1px dashed var(--border);
+    border-radius: 6px; font: 14px/1.5 system-ui, sans-serif;
+  }
+  .legend h2 { font: 600 14px system-ui, sans-serif; margin: 0 0 .5rem; color: var(--text); }
+  .legend dt { font-weight: 600; margin-top: .4rem; }
+  .legend dd { margin: 0 0 0 1rem; }
+</style>
+</head>
+<body>
+<div class="bench">
+  <strong>Issue 164 prototype · a garden that grows through the episode</strong>
+  <button id="regrow" type="button">Regrow the ink</button>
+  <button id="hand" type="button">Another hand</button>
+  <button id="theme" type="button">Dark / light</button>
+</div>
+
+<main>
+  <h1>Infini Pad at the Crossfader</h1>
+  <audio controls preload="none"
+    src="https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3"></audio>
+  <p>One pad, four loops, and a crossfader passing the signal between two pairs of them. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.</p>
+
+  <section>
+    <h2>Ceremonial Annotations</h2>
+    <ul>
+      <li>A single sound, <a href="#">Microfreak/Preset/259 Infini Pad</a>, is asked to be everything: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.</li>
+      <li>The loops sit on two sides of <a href="#">Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader</a>, layers 1A and 2A on one side and 1B and 2B on the other, and the crossfader decides which pair the room hears. Listen for the side changing, then for what stays when it does.</li>
+      <li>The music stays in C minor until 22:39, when a major third rises from the keys and briefly turns the light.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Chapters</h2>
+    <ul>
+      <li>
+        <h3><a href="#t=0">00:00</a> enter <a href="#">Microfreak/Preset/259 Infini Pad</a></h3>
+        <ul>
+          <li><h4><a href="#t=0">00:00</a> Keys into the sequencer</h4><div class="acolyte">The MicroFreak keys play quietly around C3, C4 and D4, and the Launchpad sequencer records them as they arrive.</div></li>
+          <li><h4><a href="#t=152">02:32</a> The crossfader wakes</h4><div class="acolyte">After a short dropout at 02:15, the crossfader swings hard toward the A side twice.</div></li>
+          <li><h4><a href="#t=189">03:09</a> Layer 2A arrives</h4></li>
+          <li><h4><a href="#t=320">05:20</a> Layer 2B and a high C</h4></li>
+          <li><h4><a href="#t=533">08:53</a> Low C under pressure</h4><div class="acolyte">The perfect fifth from C to G carries the bass through 21:00.</div></li>
+          <li><h4><a href="#t=640">10:40</a> Filter weather</h4></li>
+          <li><h4><a href="#t=727">12:07</a> Fold, Saturate, Noise</h4></li>
+          <li><h4><a href="#t=855">14:15</a> The high G</h4><div class="acolyte">A G5 sounds at 14:26 and the sequencer repeats it over the low fifths, a beacon above the forest.</div></li>
+          <li><h4><a href="#t=962">16:02</a> High melody</h4></li>
+          <li><h4><a href="#t=1020">17:00</a> Into the hush</h4><div class="acolyte">The recording fades and, from about 17:45 to 20:45, sits close to silence.</div></li>
+          <li><h4><a href="#t=1245">20:45</a> The bass returns</h4></li>
+          <li><h4><a href="#t=1359">22:39</a> A major third</h4><div class="acolyte">E3, G3 and C4 sound under full pressure: a C major chord, spelled one note at a time, against the C-minor loops.</div></li>
+          <li><h4><a href="#t=1410">23:30</a> Swells and trills</h4></li>
+          <li><h4><a href="#t=1600">26:40</a> Cutoff and resonance</h4></li>
+          <li><h4><a href="#t=1657">27:37</a> Crossing pans</h4></li>
+          <li><h4><a href="#t=1694">28:14</a> Afterword</h4><div class="acolyte">A second take: the sequencer keeps playing while codekiln reports on the session.</div></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ceremonial Artifacts</h2>
+    <p data-duration>32:00 · <a href="#">GitP/A/Session/26/11/06-Fri/Asset/Audio/Full/mp3</a></p>
+  </section>
+
+  <aside class="legend">
+    <h2>How the page grows its initial</h2>
+    <dl>
+      <dt>The vine is the episode</dt>
+      <dd>It roots at the lower left at 00:00 and grows clockwise; it closes at 32:00. Two strands braid around each other, the A and B sides of the crossfader.</dd>
+      <dt>Each chapter is a leaf</dt>
+      <dd>A leaf sprouts where its timestamp falls; longer chapters grow larger leaves. Hover a chapter to light its leaf, click its time to hear it.</dd>
+      <dt>Chapter titles call up spirits</dt>
+      <dd><em>hush</em> or <em>silence</em> thins the vine to a ghost line and leaves a wisp; <em>high</em> or <em>beacon</em> hangs a gilt star; <em>major</em> or <em>light</em> opens a gold flower; <em>afterword</em> or <em>spoken</em> grows a seed pod that broadcasts into the letter.</dd>
+      <dt>The ring is a tuning dial</dt>
+      <dd>Its ticks fall at chapter times. During playback a gold spark travels the vine.</dd>
+      <dt>Hand</dt>
+      <dd>The page id seeds the wobble, so the same episode returns with the same drawing. "Another hand" shows how a different seed would draw it.</dd>
+    </dl>
+  </aside>
+</main>
+<script src="prototype-claude.js"></script>
+</body>
+</html>
