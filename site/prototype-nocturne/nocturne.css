@@ -1,0 +1,21 @@
+/* PROTOTYPE: the night garden is an inset miniature with gilded ink. */
+.prototype-nocturne .illuminated-initial {
+  width: 6.1rem;
+  height: 6.1rem;
+  filter: drop-shadow(2px 3px 2px #11192655);
+}
+.prototype-nocturne .illuminated-initial__letter {
+  color: #f4e9c9;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px #714d48, 2px 2px #b08e59, -1px -1px #33404b;
+}
+.prototype-nocturne .illuminated-initial--chapter { width: 4.8rem; height: 4.8rem; }
+.prototype-nocturne .illuminated-initial--chapter .illuminated-initial__letter { font-size: 3.25rem; }
+@media (max-width: 480px) {
+  .prototype-nocturne .illuminated-initial { width: 4.8rem; height: 4.8rem; }
+  .prototype-nocturne .illuminated-initial__letter { font-size: 3.25rem; }
+  .prototype-nocturne .illuminated-initial--chapter { width: 3.8rem; height: 3.8rem; }
+  .prototype-nocturne .illuminated-initial--chapter .illuminated-initial__letter { font-size: 2.65rem; }
+}
