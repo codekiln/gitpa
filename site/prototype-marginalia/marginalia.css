@@ -1,0 +1,7 @@
+/* Prototype only; the leaves deliberately escape the parchment medallion. */
+.illuminated-initial { width: 6.1rem; height: 6.1rem; margin: -.18rem .55rem .15rem -.25rem; filter: none; }
+.illuminated-initial svg { overflow: visible; }
+.illuminated-initial__letter { font: 700 4rem/.9 Georgia, serif; color: #984c48; text-shadow: 1px 1px #f7efd9, 2px 2px #c8a369; transform: translate(-.05rem,.05rem); }
+.illuminated-initial--chapter { width: 4.7rem; height: 4.7rem; margin: .1rem .1rem .1rem .2rem; }
+.illuminated-initial--chapter .illuminated-initial__letter { font-size: 3rem; }
+@media (max-width:480px) { .illuminated-initial { width:5rem; height:5rem; } .illuminated-initial__letter { font-size:3.35rem; } .illuminated-initial--chapter { width:4rem; height:4rem; } .illuminated-initial--chapter .illuminated-initial__letter { font-size:2.65rem; } }
