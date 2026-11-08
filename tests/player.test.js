@@ -18,7 +18,8 @@ before(async () => {
     .replace("'./episode-player.js'", JSON.stringify(`data:text/javascript;base64,${Buffer.from(episodeSource).toString('base64')}`))
     .replace("'./navigation.js'", JSON.stringify(navURL))
     .replace("'./plugin-adapter.js'", JSON.stringify(site('plugin-adapter.js')))
-    .replace("'./header-sequence.js'", JSON.stringify(site('header-sequence.js')));
+    .replace("'./header-sequence.js'", JSON.stringify(site('header-sequence.js')))
+    .replace("'./illuminated-initials.js'", JSON.stringify(site('illuminated-initials.js')));
   ({ installSite } = await import(`data:text/javascript;base64,${Buffer.from(bootstrap).toString('base64')}`));
 });
 

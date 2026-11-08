@@ -1,0 +1,30 @@
+/* A little manuscript garden, kept legible in both Nord appearances. */
+.illuminated-initial {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  float: left;
+  width: 5.4rem;
+  height: 5.4rem;
+  margin: .15rem .75rem .25rem 0;
+  line-height: 1;
+  vertical-align: top;
+  filter: drop-shadow(2px 3px 1px #2e344033);
+}
+.illuminated-initial svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.illuminated-initial__letter {
+  position: relative;
+  color: #344d63;
+  font: 700 4rem/.9 Georgia, 'Times New Roman', serif;
+  text-shadow: 1px 1px #f7ecd1, 2px 2px #b28f56;
+}
+.illuminated-initial--chapter { width: 4.5rem; height: 4.5rem; margin-top: 0; }
+.illuminated-initial--chapter .illuminated-initial__letter { font-size: 3.3rem; }
+@media (max-width: 480px) {
+  .illuminated-initial { width: 4.5rem; height: 4.5rem; }
+  .illuminated-initial__letter { font-size: 3.3rem; }
+  .illuminated-initial--chapter { width: 3.8rem; height: 3.8rem; }
+  .illuminated-initial--chapter .illuminated-initial__letter { font-size: 2.8rem; }
+}
+/* The chapter timestamp stays before its title, and the title stays together. */
+.illuminated-initial--chapter { float: none; vertical-align: middle; margin: .15rem .12rem .15rem .3rem; }
