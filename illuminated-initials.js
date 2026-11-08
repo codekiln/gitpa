@@ -15,13 +15,16 @@ function seedFor(value) {
   for (const char of value) seed = Math.imul(seed ^ char.codePointAt(0), 16777619);
   return seed >>> 0;
 }
-function artwork(seed) {
-  const flowers = seed % 2
-    ? '<circle cx="16" cy="23" r="3"/><circle cx="83" cy="75" r="3"/><circle cx="77" cy="18" r="2"/>'
-    : '<path d="M13 25q-5-5 0-8 5 3 0 8Zm72 42q-6-5 0-9 6 4 0 9ZM74 16q-4-4 0-7 4 3 0 7Z"/>';
-  const spirit = seed % 3 === 0
-    ? '<path d="M76 82q-2-9 4-11 6 2 4 11l-2-2-2 3-2-3Z" fill="#efe4c8"/><circle cx="78.5" cy="76" r=".7" fill="#303f50" stroke="none"/><circle cx="81.5" cy="76" r=".7" fill="#303f50" stroke="none"/>' : '';
-  return `<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><rect x="3" y="3" width="94" height="94" rx="2" fill="#eee3ca" stroke="#334d5b" stroke-width="2"/><rect x="7" y="7" width="86" height="86" fill="#d9e4de" stroke="#a16a49" stroke-width=".8"/><path d="M10 89C32 73 16 50 11 35M90 11C68 27 85 50 90 65M12 12C29 24 25 30 20 38M88 88C70 76 75 68 80 61" fill="none" stroke="#526d61" stroke-width="1.5"/><g fill="#698377" stroke="#435e56" stroke-width=".8"><path d="M14 73q-10-2-7-10 8 0 10 8M16 57q-2-11 7-12 3 8-6 13M13 40q-9-3-6-9 7 0 8 8M85 27q10 2 7 10-8 0-10-8M84 43q2 11-7 12-3-8 6-13M87 60q9 3 6 9-7 0-8-8"/></g><g fill="#b77663" stroke="#794f4c" stroke-width=".7">${flowers}</g><g fill="#c2a35d"><circle cx="25" cy="14" r="1.5"/><circle cx="68" cy="87" r="1.5"/><circle cx="89" cy="48" r="1"/><circle cx="11" cy="50" r="1"/></g><g stroke="#435e56" stroke-width=".8">${spirit}</g></svg>`;
+export function artwork(seed) {
+  const palette = seed % 2 ? ['#ad594f', '#b78352'] : ['#a24c49', '#c29a55'];
+  const spirit = seed % 3 === 0 ? `<path d="M102 97 q-1-10 5-12 q7 2 5 12 l-3-2 -2 3 -2-3z" fill="#f5ecd4" stroke="#577477" stroke-width="1"/><circle cx="105" cy="91" r=".8" fill="#46545d"/><circle cx="109" cy="91" r=".8" fill="#46545d"/>` : `<path d="M103 91q3-7 9 0q-3 7-9 0z" fill="#e7d7a9" stroke="#8a7050"/><circle cx="107.5" cy="91" r="1.4" fill="#566a66"/>`;
+  return `<svg viewBox="0 0 130 130" aria-hidden="true" focusable="false"><path d="M37 22 Q57 8 88 19 Q106 35 100 84 Q89 109 53 108 Q30 101 27 71 Q24 40 37 22Z" fill="#f3ead5" stroke="#bd9a60" stroke-width="1.3"/>
+  <path d="M35 26 Q55 14 87 23 M35 29 Q60 18 90 26 M34 100 Q65 109 94 95" fill="none" stroke="#d5bd83" stroke-width=".8"/>
+  <g fill="none" stroke="#587267" stroke-linecap="round" stroke-width="1.4"><path d="M21 118 C49 103 3 83 20 55 S40 27 28 10"/><path d="M19 115 C5 104 7 91 11 83 M17 76 C8 69 7 59 11 53 M23 51 C34 45 37 37 34 30 M27 28 C18 22 19 15 20 10"/><path d="M90 108 C125 115 114 88 112 68 S116 39 126 25"/><path d="M112 83 C122 80 123 73 124 67 M112 66 C102 62 101 55 102 49 M116 44 C126 40 126 34 124 31"/></g>
+  <g fill="#78917e" stroke="#557364" stroke-width=".7"><path d="M18 104 Q2 101 6 92 Q17 91 18 104ZM17 90 Q27 78 31 88 Q29 96 17 94ZM17 68 Q4 67 7 58 Q17 57 17 68ZM24 54 Q36 42 39 50 Q37 58 24 57ZM27 35 Q17 27 16 22 Q26 22 28 33ZM113 90 Q125 83 127 90 Q124 98 113 94ZM112 73 Q100 69 102 61 Q112 61 114 72ZM115 53 Q126 47 128 54 Q123 61 114 57Z"/></g>
+  <g fill="${palette[0]}" stroke="#8e6055" stroke-width=".75"><path d="M14 52 C3 43 11 37 15 43 C21 36 27 44 18 52 L16 55Z"/><path d="M35 26 C26 18 32 12 36 17 C41 10 48 18 40 26 L37 28Z"/><path d="M125 67 C116 59 122 54 126 59 C131 54 136 60 128 67 L126 69Z"/></g>
+  <g fill="${palette[1]}"><circle cx="15.8" cy="46.5" r="1.9"/><circle cx="37" cy="20.5" r="1.9"/><circle cx="126" cy="62" r="1.9"/><circle cx="48" cy="19" r="1.4"/><circle cx="88" cy="104" r="1.4"/></g>
+  <g fill="none" stroke="#987c53" stroke-width=".9"><path d="M44 17l2-4 2 4 M92 96l2-4 2 4"/><path d="M14 113q6-3 9 1M9 117q8-2 12 2M103 16q7 1 10 7M103 12q11 1 15 10"/></g>${spirit}</svg>`;
 }
 
 function illuminate(container, seed, chapter = false) {
