@@ -2,9 +2,10 @@ import { createNavigator } from './navigation.js';
 import { createPluginAdapter } from './plugin-adapter.js';
 import episodePlayer from './episode-player.js';
 import headerSequence from './header-sequence.js';
+import illuminatedInitials from './illuminated-initials.js';
 
 const installations = new WeakMap();
-const createSitePlugins = document => createPluginAdapter(document, [episodePlayer, headerSequence]);
+const createSitePlugins = document => createPluginAdapter(document, [episodePlayer, headerSequence, illuminatedInitials]);
 
 /** Legacy site entry while Gardener's shared plugin host is being defined. */
 export function installSite(document, { createNavigation = createNavigator, createPlugins = createSitePlugins } = {}) {
