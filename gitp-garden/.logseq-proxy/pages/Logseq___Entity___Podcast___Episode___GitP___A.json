@@ -12,7 +12,9 @@
   ],
   "imports": {
     "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Podcast/Episode/GitP/A": {
-      "files": [],
+      "files": [
+        "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync"
+      ],
       "page": "Logseq/Entity/Podcast/Episode/GitP/A",
       "source_graph": "."
     }
