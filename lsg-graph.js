@@ -25,7 +25,7 @@ return h.toString(16).padStart(16, '0');
 const EDGE_SPACE = /^[^\S\uFEFF]|[^\S\uFEFF]$/;
 const foldable = title => !/[\\\p{Cc}]/u.test(title) && title.split('/').every(segment => segment && segment !== '.' && segment !== '..'
 && !EDGE_SPACE.test(segment) && new TextEncoder().encode(segment).length <= 255);
-const FOLDERS = new Map([]);
+const FOLDERS = new Map([["c74/m4l","c74/M4L"],["c74/m4l/obj","c74/M4L/obj"],["c74/m4l/obj/plugout~","c74/M4L/obj/plugout~"]]);
 const spelled = title => {
 const segments = title.split('/');
 for (let end = segments.length; end > 0; end--) {
@@ -93,7 +93,7 @@ return response[as]();
 });
 function simulator() {
 let worker = null, listener = null;
-return (message, next) => {
+const simulate = (message, next) => {
 if (!worker) {
 worker = new Worker(new URL('lsg-graph-worker.js', base));
 worker.onmessage = event => listener?.(event.data);
@@ -101,6 +101,8 @@ worker.onmessage = event => listener?.(event.data);
 if (next) listener = next;
 worker.postMessage(message);
 };
+simulate.stop = () => { worker?.terminate(); worker = null; };
+return simulate;
 }
 const dark = () => root.getAttribute('data-lsg-theme') === 'dark';
 const palette = () => dark()
@@ -639,6 +641,7 @@ if (Object.keys(config.forces).some(name => config.forces[name] !== state.forces
 graph.resize();
 fetchGraph();
 }
+let lastSimulator = null;
 async function pageGraph(body) {
 styles();
 const KEY = 'logseq-gardener-page-graph-journals';
@@ -653,7 +656,8 @@ here.search = '';
 let route = here.href.startsWith(base.href) ? here.href.slice(base.href.length).replace(/(^|\/)index\.html$/, '$1') : '';
 if (!route.endsWith('/') && !/^p-[0-9a-f]{16}\.html$/.test(route)) route = document.querySelector('.lsg-journal .journal-title')?.getAttribute('href') || '';
 const graph = Graph(box, { centre: true });
-const simulate = simulator();
+lastSimulator?.stop();
+const simulate = lastSimulator = simulator();
 if (!route) { graph.say('This view has no page to draw.'); return; }
 let whole;
 const missing = error => { if (!error.status) throw error; };

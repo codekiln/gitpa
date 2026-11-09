@@ -409,6 +409,9 @@ if (('#' + hash).startsWith(ZOOM)) return { type: 'block', route, block: decodeU
 if (path && (/^p-[\w-]+\.html$/.test(route) || link.matches('.page-reference a,a.page-ref,a.tag'))) return { type: 'page', route };
 return null;
 }
+window.logseqGardenerInitSidebar = () => {
+for (const section of sections.values()) if (section.card.type === 'graph' && section.filled) { section.filled = false; if (state.open) fill(section); }
+};
 window.logseqGardenerSidebar = request => {
 if (!desktop()) return;
 if (request === 'toggle') { state.open = !state.open; render(); return; }
