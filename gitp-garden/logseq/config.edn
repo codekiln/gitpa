@@ -288,6 +288,11 @@
  :publishing/page-properties? true
  :publishing/page-properties-collapsed? false
 
+ ;; Plugins that ship inside lsg (Logseq Gardener), which publishes this garden. Logseq ignores the key.
+ ;; podcast-episode keeps an episode's recording playing across pages, and its chapter
+ ;; headings, timestamp-led bullets under ## Chapters and dialogue lines seek it.
+ :lsg/plugins [:podcast-episode]
+
  ;; Graph view configuration.
  ;; Example usage:
  ;; :graph/settings

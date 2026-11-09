@@ -24,11 +24,9 @@ from audio_chapters import compile_episode
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
 QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
-SITE_FILES = ['bootstrap.js', 'player.js', 'player.css', 'navigation.js', 'plugin-adapter.js',
-              'episode-player.js', 'header-sequence.js', 'header-sequence.css',
-              'illuminated-initials.js', 'illuminated-initials.css']
-# Plugin modules that declare `export const manifest = {...};` as a JSON object.
-PLUGIN_MODULES = ['header-sequence.js', 'episode-player.js', 'illuminated-initials.js']
+# Gitpa's own browser plugins, which lsg's plugin host runs beside the podcast-episode
+# plugin that gitp-garden/logseq/config.edn turns on.
+PLUGINS = ['header-sequence', 'illuminated-initials']
 
 
 def normalized(name):
@@ -96,7 +94,7 @@ class PageRoutes:
     """
 
     def __init__(self, output):
-        self.output, self.routes, self.titles = output, {}, {}
+        self.output, self.routes = output, {}
         site = json.loads((output / 'lsg-site.json').read_text(encoding='utf-8'))
         if site.get('apiVersion') != 1:
             raise ValueError(f'Unsupported lsg-site.json apiVersion: {site.get("apiVersion")}')
@@ -104,7 +102,6 @@ class PageRoutes:
             # Stored pages and generated namespace pages; not the homepage or list routes.
             if page['kind'] in {'page', 'namespace'}:
                 self.routes[normalized(page['title'])] = page['url']
-                self.titles[page['url']] = page['title']
 
     def file(self, route):
         """The file of a route: a folder route's index.html, or a root file such as
@@ -112,13 +109,6 @@ class PageRoutes:
         if route.endswith('/'):
             return self.output / unquote(route) / 'index.html'
         return self.output / route
-
-    def documents(self):
-        """Every rendered HTML page, without the redirects Gardener writes at old
-        p-<digest>.html names."""
-        pages = {self.file(route) for route in self.titles}
-        lists = {path for path in self.output.glob('*.html') if not path.name.startswith('p-')}
-        return sorted(pages | lists)
 
 
 def install_homepage_query(output, result):
@@ -153,7 +143,11 @@ def install_homepage_query(output, result):
         if len(re.findall(rss_link, text)) != 1:
             raise ValueError('Expected one podcast RSS feed link')
         text = re.sub(rss_link, lambda match: match[0] + ' <button type="button" class="apple-podcasts-subscribe" data-copy-feed>Copy feed URL</button> <span role="status" data-copy-feed-status></span>', text)
-        path.write_text(text, encoding='utf-8')
+        if text.count('</head>') != 1:
+            raise ValueError('Expected one head on the homepage')
+        script = f'<script type="module" src="{urlsplit(SITE_URL).path}copy-feed.js"></script>'
+        path.write_text(text.replace('</head>', script + '</head>'), encoding='utf-8')
+    shutil.copyfile(ROOT / 'site/copy-feed.js', output / 'copy-feed.js')
 
 
 def public_pages(graph):
@@ -184,7 +178,6 @@ def public_pages(graph):
 
 
 def compile_episode_pages(graph):
-    episodes = {}
     for path in (graph / 'pages').glob('*.md'):
         text = path.read_text(encoding='utf-8')
         leading, _ = split_page(text)
@@ -193,84 +186,10 @@ def compile_episode_pages(graph):
                 or '[[Logseq/Entity/Podcast/Episode]]' not in props.get('logseq-entity', '')):
             continue
         try:
-            text, recording = compile_episode(text)
+            text, _ = compile_episode(text)
         except ValueError as error:
             raise ValueError(f'{path.name}: {error}') from error
         path.write_text(text, encoding='utf-8')
-        episodes[normalized(page_name(path))] = recording
-    return episodes
-
-
-def plugin_manifests():
-    """Read each plugin's manifest from its module so the build and the browser agree."""
-    manifests = []
-    for filename in PLUGIN_MODULES:
-        text = (ROOT / 'site' / filename).read_text(encoding='utf-8')
-        match = re.search(r'^export const manifest = (\{.*?^\});$', text, re.DOTALL | re.MULTILINE)
-        if not match:
-            raise ValueError(f'{filename} declares no manifest')
-        manifests.append(json.loads(match[1]))
-    return manifests
-
-
-def plugin_page_properties(graph, manifests):
-    """Requested property values of explicitly public pages, by normalized page name and plugin id."""
-    found = {}
-    for path in sorted((graph / 'pages').glob('*.md')):
-        name = page_name(path)
-        leading, _ = split_page(path.read_text(encoding='utf-8'))
-        props = properties(leading)
-        if props.get('public') != 'true':
-            continue
-        for manifest in manifests:
-            values = {key: props[key] for key in manifest.get('pageProperties', []) if key in props}
-            if values:
-                found.setdefault(normalized(name), {})[manifest['id']] = values
-    return found
-
-
-def install_plugin_metadata(output, metadata):
-    """Publish each plugin's requested page properties as a JSON script in that page's head."""
-    parser = PageRoutes(output)
-    for name, plugins in metadata.items():
-        route = parser.routes.get(name)
-        if not route:
-            continue
-        path = parser.file(route)
-        elements = ''
-        for plugin_id, values in sorted(plugins.items()):
-            # Escape < so a value cannot close the script element.
-            payload = json.dumps(values, sort_keys=True, ensure_ascii=False).replace('<', '\\u003c')
-            elements += f'<script type="application/json" data-gitpa-plugin="{plugin_id}">{payload}</script>'
-        path.write_text(path.read_text(encoding='utf-8').replace('</head>', elements + '</head>', 1), encoding='utf-8')
-
-
-def install_episode_player(output, episodes):
-    """Install persistent navigation everywhere and identify playable episodes."""
-    parser = PageRoutes(output)
-    base = urlsplit(SITE_URL).path
-    for name, recording in episodes.items():
-        route = parser.routes.get(name)
-        if not route:
-            raise ValueError(f'Published episode was not rendered: {name}')
-        path = parser.file(route)
-        text = path.read_text(encoding='utf-8')
-        sources = re.findall(r'<audio\b[^>]*\bsrc="([^"]+)"', text)
-        if len(sources) != 1 or html.unescape(sources[0]) != recording:
-            raise ValueError(f'Episode player needs exactly one full recording: {name}')
-        canonical = base + route
-        metadata = (f'<meta name="gitpa-episode" content="{html.escape(recording, quote=True)}">'
-                    f'<link rel="canonical" href="{html.escape(canonical, quote=True)}">')
-        path.write_text(text.replace('</head>', metadata + '</head>'), encoding='utf-8')
-    additions = (f'<link rel="stylesheet" href="{base}player.css">'
-                 f'<link rel="stylesheet" href="{base}header-sequence.css">'
-                 f'<link rel="stylesheet" href="{base}illuminated-initials.css">'
-                 f'<script type="module" src="{base}bootstrap.js"></script>')
-    for path in parser.documents():
-        text = path.read_text(encoding='utf-8')
-        path.write_text(text.replace('</head>', additions + '</head>'), encoding='utf-8')
-    for filename in SITE_FILES:
-        shutil.copyfile(ROOT / 'site' / filename, output / filename)
 
 
 def publish_feed(source, output, feed=None):
@@ -322,7 +241,7 @@ def publish(source, output, renderer, search=False):
         print(f'Validate homepage query: {time.perf_counter() - started:.2f}s', flush=True)
         query_result = json.loads(query.read_text(encoding='utf-8'))
         prepare_homepage(graph, query_result)
-        episodes = compile_episode_pages(graph)
+        compile_episode_pages(graph)
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
                 '--stylesheet', str(ROOT / 'site/theme.css'), '--format', 'json',
@@ -331,12 +250,13 @@ def publish(source, output, renderer, search=False):
                 '--readable-urls', '--redirect-old-urls']
         if search:
             args.append('--search')
+        for plugin in PLUGINS:
+            args.extend(['--plugin', str(ROOT / 'site' / f'{plugin}.lsg-plugin.json')])
         # Match the existing Logseq publishing policy: explicitly public pages.
         # Asset visibility and selected episode notes were resolved by prepare.
         names = public_pages(graph)
         for name in names:
             args.extend(['--include', name])
-        plugin_metadata = plugin_page_properties(graph, plugin_manifests())
         started = time.perf_counter()
         rendered = subprocess.run(args, stderr=subprocess.PIPE, text=True)
         sys.stderr.write(rendered.stderr)
@@ -345,8 +265,6 @@ def publish(source, output, renderer, search=False):
         print(f'Render garden: {time.perf_counter() - started:.2f}s', flush=True)
         started = time.perf_counter()
         install_homepage_query(output, query_result)
-        install_episode_player(output, episodes)
-        install_plugin_metadata(output, plugin_metadata)
         publish_feed(source, output)
         (output / '.nojekyll').touch()
         print(f'Package site: {time.perf_counter() - started:.2f}s', flush=True)

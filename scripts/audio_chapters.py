@@ -1,8 +1,14 @@
-"""Compile published episode timestamps against one complete recording."""
+"""Prepare published episode text around one complete recording.
+
+The podcast-episode plugin in lsg turns chapter timestamps into seek controls,
+so this module leaves timestamps as text. It checks for the one full recording,
+removes per-chapter media derived from it, and writes each audio-timestamp
+macro as its readable time.
+"""
 from __future__ import annotations
 
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit
 
 MACRO = re.compile(r'\{\{audio-timestamp\s+([^{}]+?)\s*\}\}')
 HEADING = re.compile(r'^(\s*)- (#{3,6}) (.+)$')
@@ -61,12 +67,6 @@ def timestamp_seconds(value):
         for i, part in enumerate(parts[1:]))
 
 
-def recording_fragment(recording, value):
-    parsed = urlsplit(recording)
-    return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query,
-                       f't={timestamp_seconds(value)}'))
-
-
 def generated_chapter_media(url, recording):
     """Recognize only derivatives of this exact full-recording filename."""
     media, full = urlsplit(url), urlsplit(recording)
@@ -112,17 +112,9 @@ def compile_episode(text):
             if chapter_indent is not None and indent <= chapter_indent:
                 chapter_indent = None
         heading = None if literal else HEADING.match(line.rstrip('\n'))
-        if heading:
-            level, content = heading[2], heading[3]
-            time = LEGACY_TIME.match(content)
-            if level == '###' and content.startswith('{{audio-timestamp'):
-                chapter_indent = indent
-            elif time:
-                if level == '###':
-                    chapter_indent = indent
-                value = time[1]
-                link = f'[{value}]({recording_fragment(recording, value)})'
-                line = line.replace(content, link + content[len(value):], 1)
+        if heading and heading[2] == '###' and (heading[3].startswith('{{audio-timestamp')
+                                                or LEGACY_TIME.match(heading[3])):
+            chapter_indent = indent
         media = None if literal else MEDIA.fullmatch(line.rstrip('\n'))
         if chapter_indent is not None and indent > chapter_indent and media:
             if generated_chapter_media(media[2], recording):
@@ -137,7 +129,7 @@ def compile_episode(text):
         def compile_prose(prose):
             prose = prose.replace('Chapter waveforms show synth above commentary; each chapter player combines both.',
                                   'Select a chapter timestamp to play from that point in the full recording.')
-            prose = MACRO.sub(lambda match: f'[{timestamp_label(match[1])}]({recording_fragment(recording, match[1])})', prose)
+            prose = MACRO.sub(lambda match: timestamp_label(match[1]), prose)
             if '{{audio-timestamp' in prose:
                 raise ValueError('Malformed audio-timestamp macro')
             return prose

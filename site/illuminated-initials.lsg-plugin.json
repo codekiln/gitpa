@@ -1,0 +1,8 @@
+{
+  "id": "illuminated-initials",
+  "apiVersion": 1,
+  "version": "1.0.0",
+  "module": "illuminated-initials.js",
+  "styles": ["illuminated-initials.css"],
+  "activation": "after-load"
+}

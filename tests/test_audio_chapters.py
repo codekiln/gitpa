@@ -1,12 +1,9 @@
 from pathlib import Path
 import sys
-import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from audio_chapters import compile_episode, timestamp_seconds
-from build_site import install_episode_player
-from site_fixture import write_site
 
 FULL = 'https://example.com/recording.mp3'
 HEADER = f'- # Episode\n\t- ![Full recording]({FULL})\n\t- ## Chapters\n'
@@ -20,21 +17,23 @@ class AudioChapterTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 timestamp_seconds(value)
 
-    def test_macro_and_existing_heading_ranges_seek_full_recording(self):
+    def test_headings_keep_timestamps_as_text_and_macros_become_times(self):
+        # lsg's podcast-episode plugin turns a heading's leading timestamp into a seek control.
         original = HEADER + '\t\t- ### {{audio-timestamp 14:42}} Adapters\n\t\t- ### 00:00–03:30 · Opening\n'
         text, recording = compile_episode(original)
         self.assertEqual(recording, FULL)
-        self.assertIn(f'### [14:42]({FULL}#t=882) Adapters', text)
-        self.assertIn(f'### [00:00]({FULL}#t=0)–03:30 · Opening', text)
+        self.assertIn('### 14:42 Adapters', text)
+        self.assertIn('### 00:00–03:30 · Opening', text)
+        self.assertNotIn('#t=', text)
         self.assertIn('{{audio-timestamp', original)
         self.assertNotIn('{{audio-timestamp', text)
 
     def test_integer_macro_gets_readable_time_and_spaces_indent_works(self):
         original = HEADER.replace('\t', '  ') + '    - ### {{audio-timestamp 882}} Adapters\n'
         text, _ = compile_episode(original)
-        self.assertIn(f'[14:42]({FULL}#t=882)', text)
+        self.assertIn('### 14:42 Adapters', text)
 
-    def test_subheading_timestamps_seek_and_preserve_parent_chapter_media_scope(self):
+    def test_subheading_timestamps_stay_text_and_preserve_parent_chapter_media_scope(self):
         original = HEADER + ('\t\t- ### 00:00 Opening\n'
             '\t\t\t- #### 03:07 Nested [[Link]]\n'
             '\t\t\t\t- ##### 04:12–05:00 Detail\n'
@@ -42,16 +41,15 @@ class AudioChapterTests(unittest.TestCase):
             '\t\t\t- ![Waveform](https://example.com/recording___0000-0540.png)\n'
             '\t\t- #### 06:01 Sibling\n')
         text, _ = compile_episode(original)
-        for heading, value, seconds in [('####', '03:07', 187), ('#####', '04:12', 252),
-                                         ('######', '1:02:03', 3723), ('####', '06:01', 361)]:
-            self.assertIn(f'{heading} [{value}]({FULL}#t={seconds})', text)
-        self.assertIn('–05:00 Detail', text)
+        for heading in ['#### 03:07 Nested [[Link]]', '##### 04:12–05:00 Detail',
+                        '###### 1:02:03 Deep detail', '#### 06:01 Sibling']:
+            self.assertIn(heading, text)
         self.assertNotIn('recording___0000-0540.png', text)
 
     def test_published_halloween_episode_subheading_timestamp(self):
         episode = Path(__file__).resolve().parents[1] / 'gitp-garden/pages/GitP___A___Session___26___10___29-Thu.md'
-        text, recording = compile_episode(episode.read_text())
-        self.assertIn(f'#### [03:07]({recording}#t=187) secondo strato', text)
+        text, _ = compile_episode(episode.read_text())
+        self.assertIn('#### 03:07 secondo strato', text)
 
     def test_fenced_and_inline_code_stays_literal(self):
         for fence in ['~~~', '```']:
@@ -66,7 +64,7 @@ class AudioChapterTests(unittest.TestCase):
             text, _ = compile_episode(HEADER + example + inline)
             self.assertIn(example, text)
             self.assertIn('`{{audio-timestamp nope}}` and ``{{audio-timestamp 62}}``', text)
-            self.assertIn(f'with [1:02]({FULL}#t=62)', text)
+            self.assertIn('with 1:02\n', text)
 
     def test_only_matching_derived_chapter_media_are_removed_and_notes_survive(self):
         original = HEADER + ('\t\t- ### 14:42 Adapters\n'
@@ -100,36 +98,6 @@ class AudioChapterTests(unittest.TestCase):
         text, _ = compile_episode(original)
         self.assertIn('Select a chapter timestamp', text)
         self.assertIn('Chapter waveforms', original)
-
-    def test_shell_loads_everywhere_but_only_episodes_have_recording_metadata(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            (root / 'pages.html').write_text('<head></head><body><a href="Episode/">Episode</a><a href="Asset/">Asset</a></body>')
-            write_site(root, [('Episode/', 'Episode'), ('Asset/', 'Asset')])
-            episode, asset = root / 'Episode/index.html', root / 'Asset/index.html'
-            for page in [episode, asset]:
-                page.parent.mkdir()
-                page.write_text(f'<head></head><body><audio src="{FULL}"></audio></body>')
-            # Gardener's redirect from an old address is not a page and gets no player.
-            (root / 'p-abc.html').write_text('<head></head>')
-            install_episode_player(root, {'episode': FULL})
-            text = episode.read_text()
-            self.assertIn('/gitpa/bootstrap.js', text)
-            self.assertIn('/gitpa/player.css', text)
-            self.assertIn('/gitpa/header-sequence.css', text)
-            self.assertIn('bootstrap.js', asset.read_text())
-            self.assertIn('bootstrap.js', (root / 'pages.html').read_text())
-            self.assertNotIn('bootstrap.js', (root / 'p-abc.html').read_text())
-            self.assertIn('name="gitpa-episode"', text)
-            self.assertIn('rel="canonical" href="/gitpa/Episode/"', text)
-            self.assertNotIn('name="gitpa-episode"', asset.read_text())
-            self.assertEqual(text.count('<audio'), 1)
-            self.assertTrue((root / 'player.js').is_file())
-            for filename in ['bootstrap.js', 'plugin-adapter.js', 'episode-player.js', 'header-sequence.js', 'header-sequence.css']:
-                self.assertTrue((root / filename).is_file())
-            episode.write_text(f'<head></head><audio src="{FULL}"></audio><audio src="{FULL}"></audio>')
-            with self.assertRaisesRegex(ValueError, 'exactly one'):
-                install_episode_player(root, {'episode': FULL})
 
 
 if __name__ == '__main__':

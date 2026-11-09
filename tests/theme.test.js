@@ -9,7 +9,7 @@ const luminance = hex => {
   return rgb[0] * .2126 + rgb[1] * .7152 + rgb[2] * .0722;
 };
 const contrast = (a, b) => (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
-test('Nord light and dark text, links and player controls remain readable on their surfaces', () => {
+test('Nord light and dark text, links and buttons remain readable on their surfaces', () => {
   const palettes = [...css.matchAll(/--lsg-text:\s*#[^}]+/g)];
   assert.equal(palettes.length, 3);
   for (const [declarations] of palettes) {
@@ -21,6 +21,5 @@ test('Nord light and dark text, links and player controls remain readable on the
     assert.ok(contrast(values['subscribe-text'], values['subscribe-background']) >= 4.5);
     assert.ok(contrast(values['subscribe-background'], values['lsg-background']) >= 3);
     assert.ok(contrast(values['gitpa-heading'], values['lsg-background']) >= 3);
-    assert.ok(contrast(values['gitpa-code-text'], values['gitpa-button-background']) >= 4.5);
   }
 });
