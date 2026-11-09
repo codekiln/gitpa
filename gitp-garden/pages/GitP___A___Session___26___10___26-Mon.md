@@ -5,9 +5,10 @@ podcast-guid:: gitpa20261026
 podcast-published-at:: 2026-10-27T07:40:30-04:00
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-26 Mon]]
+next:: [[GitP/A/Session/26/10/29-Thu]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F26-Mon
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___26-Mon.md
-logseq-proxy-last-sync-date:: [[2026-10-27]]
+logseq-proxy-last-sync-date:: [[2026-11-09]]
 
 - # NoiseBusters, Fight and TaBass
 	- A Ghost in the Patch session with three MicroFreak factory presets in layered takes: NoiseBusters opens as a hall of mirrors, Fight comes in as a lead with pad pressure, and TaBass enters near the end as a little thumper, with cycling-envelope and filter sweeps throughout.

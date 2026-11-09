@@ -1,14 +1,14 @@
 public:: true
 podcast-guid:: gitpa20261011
 podcast-published-at:: 2026-10-12T05:10:29-04:00
-logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
+logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/Proxy/Page]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-11 Sun]]
 prev:: [[GitP/A/Session/26/10/07-Wed]]
 next:: [[GitP/A/Session/26/10/18-Sun]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F11-Sun
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___11-Sun.md
-logseq-proxy-last-sync-date:: [[2026-10-23]]
+logseq-proxy-last-sync-date:: [[2026-11-09]]
 - # GitP.26.10.11
 	- A slow MicroFreak improvisation that moves from harmonic tones into a blurred, pitch-bent drone and closes with a virtual analog sound. Recorded in Ableton Live without spoken commentary.
 	- ![GitP.26.10.11 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___11-Sun___Asset___Synth___Full.mp3)
