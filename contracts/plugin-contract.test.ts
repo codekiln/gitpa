@@ -9,8 +9,8 @@ void id;
 view.pages.push({ id: 'new', title: 'new', url: '/new/' });
 // @ts-expect-error The projection exposes no raw graph/filesystem path.
 view.sourceRoot;
-const shipped: RuntimeManifest = { id: 'header-sequence', apiVersion: 1, version: '1.0.0', module: 'header-sequence.js',
-  styles: ['header-sequence.css'], activation: 'after-load', pageProperties: ['prev', 'next'] };
+const shipped: RuntimeManifest = { id: 'illuminated-initials', apiVersion: 1, version: '1.0.0',
+  module: 'illuminated-initials.js', styles: ['illuminated-initials.css'], activation: 'after-load' };
 void shipped;
 // @ts-expect-error An unsupported API major cannot satisfy the proposed manifest.
 const wrongVersion: RuntimeManifest = { id: 'test', apiVersion: 2, version: '1.0.0', module: 'test.js', activation: 'after-load' };

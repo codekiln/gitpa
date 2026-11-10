@@ -2,7 +2,7 @@
 
 Gitpa should supply its podcast behavior through an optional plugin contract. Gardener should own standard Logseq publication and the host lifecycle. The first migration is the existing episode player: keep its playback logic, give it a persistent place in the shell, and notify it when a new page is adopted.
 
-**Status: Gitpa runs on Gardener's plugin host.** The recording player is Gardener's first-party `podcast-episode` plugin, turned on with `:lsg/plugins [:podcast-episode]` in `gitp-garden/logseq/config.edn` ([Gitpa issue #159](https://github.com/codekiln/gitpa/issues/159)). Gitpa's own `header-sequence` and `illuminated-initials` plugins run on the same host through `lsg publish --plugin`. [Gitpa issue #93](https://github.com/codekiln/gitpa/issues/93) tracks the rest of the consumer adaptation.
+**Status: Gitpa runs on Gardener's plugin host.** The recording player is Gardener's first-party `podcast-episode` plugin, and the Previous and Next header links come from its `sequence-header` plugin, both turned on with `:lsg/plugins [:podcast-episode :sequence-header]` in `gitp-garden/logseq/config.edn` ([Gitpa issues #159](https://github.com/codekiln/gitpa/issues/159) and [#160](https://github.com/codekiln/gitpa/issues/160)). Gitpa's own `illuminated-initials` plugin runs on the same host through `lsg publish --plugin`. [Gitpa issue #93](https://github.com/codekiln/gitpa/issues/93) tracks the rest of the consumer adaptation.
 
 ## Gardener host proposal
 
@@ -77,12 +77,11 @@ Validate a manifest's API major and local asset URLs before import. Keep the plu
 
 ## What ships in Gitpa now
 
-Gardener's host owns navigation between pages and runs three plugins. `podcast-episode` ships inside `lsg`; [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) describes it. Gitpa's two plugins each have a manifest beside the module, which `scripts/build_site.py` passes with `--plugin`:
+Gardener's host owns navigation between pages and runs three plugins. `podcast-episode` and `sequence-header` ship inside `lsg`; [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) describes them. Gitpa's own plugin has a manifest beside the module, which `scripts/build_site.py` passes with `--plugin`:
 
-- `header-sequence` ([`site/header-sequence.js`](../site/header-sequence.js), [`site/header-sequence.lsg-plugin.json`](../site/header-sequence.lsg-plugin.json)) puts Previous and Next links in the header. [Gitpa issue #160](https://github.com/codekiln/gitpa/issues/160) replaces it with Gardener's `sequence-header`.
 - `illuminated-initials` ([`site/illuminated-initials.js`](../site/illuminated-initials.js), [`site/illuminated-initials.lsg-plugin.json`](../site/illuminated-initials.lsg-plugin.json)) decorates episode openings. A page is an episode when Gardener's page metadata has a `podcast-episode` entry.
 
-The homepage query insertion stays in `scripts/build_site.py` until #160.
+`lsg` renders the homepage query at build time.
 
 Run `npm ci --ignore-scripts` and `node --test tests/*.test.js`. These tests check the contract's types and Gitpa's plugins with a fake host.
 

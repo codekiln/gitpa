@@ -1,8 +1,7 @@
-"""Publish Gitpa with Logseq Gardener and the evaluated Logseq homepage query."""
+"""Publish Gitpa with Logseq Gardener."""
 from __future__ import annotations
 import argparse
 import json
-import html
 from pathlib import Path
 import re
 import shutil
@@ -23,66 +22,13 @@ from audio_chapters import compile_episode
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
-QUERY_PLACEHOLDER = 'GITPA-EVALUATED-HOMEPAGE-QUERY-RESULTS'
-# Gitpa's own browser plugins, which lsg's plugin host runs beside the podcast-episode
-# plugin that gitp-garden/logseq/config.edn turns on.
-PLUGINS = ['header-sequence', 'illuminated-initials']
+# Gitpa's own browser plugin, which lsg's plugin host runs beside the podcast-episode
+# and sequence-header plugins that gitp-garden/logseq/config.edn turns on.
+PLUGINS = ['illuminated-initials']
 
 
 def normalized(name):
     return unicodedata.normalize('NFC', name.strip().strip('/')).lower()
-
-
-def query_outline(result):
-    """Translate the evaluated homepage view into ordinary Logseq blocks."""
-    title, view = result['title'], result['view']
-    if not (isinstance(title, list) and len(title) == 2 and title[0] == 'h2'
-            and isinstance(title[1], str)):
-        raise ValueError('Expected an h2 query title')
-    if not (isinstance(view, list) and view and view[0] == 'ul'):
-        raise ValueError('Expected a list from the homepage query view')
-    lines = [f'- ## {title[1]}']
-    for item in view[1:]:
-        if not (isinstance(item, list) and len(item) == 2 and item[0] == 'li'):
-            raise ValueError('Expected a query list item')
-        link = item[1]
-        if not (isinstance(link, list) and len(link) == 3 and link[0] == 'a'
-                and isinstance(link[1], dict) and isinstance(link[2], str)):
-            raise ValueError('Expected a query page link')
-        href = link[1].get('href', '')
-        if not href.startswith('#/page/'):
-            raise ValueError('Expected a Logseq page route')
-        name = unquote(href[len('#/page/'):])
-        if any(c in name + link[2] for c in '\n\r[]|'):
-            raise ValueError('Invalid query page link')
-        if normalized(name) != normalized(link[2]):
-            raise ValueError('Expected the original page name as query link label')
-        lines.append(f'\t- [[{link[2]}]]')
-    return '\n'.join(lines) + '\n'
-
-
-def prepare_homepage(graph, result):
-    path = graph / 'pages' / f'{HOME}.md'
-    text = path.read_text(encoding='utf-8')
-    # The original query stays in the checked-in garden. Only the temporary
-    # publication graph receives its evaluated result.
-    pattern = r'(?ms)^- query-table::.*?^  #\+END_QUERY\s*$'
-    outline = query_outline(result)
-    visible = set()
-    for page in (graph / 'pages').glob('*.md'):
-        leading, _ = split_page(page.read_text(encoding='utf-8'))
-        if properties(leading).get('public') == 'true':
-            visible.add(normalized(page_name(page)))
-    for target in re.findall(r'\[\[([^\]]+)\]\]', outline):
-        if normalized(target) not in visible:
-            raise ValueError(f'Homepage query target is missing or unpublished: {target}')
-    # Evaluated rows are presentation, not authored references or search content.
-    placeholder = (f'- ## {result["title"][1]}\n\t- {QUERY_PLACEHOLDER}\n'
-                   '\t  search-exclude:: true\n')
-    text, count = re.subn(pattern, lambda _: placeholder, text)
-    if count != 1:
-        raise ValueError('Expected one homepage query')
-    path.write_text(text, encoding='utf-8')
 
 
 class PageRoutes:
@@ -111,33 +57,14 @@ class PageRoutes:
         return self.output / route
 
 
-def install_homepage_query(output, result):
-    """Insert validated query rows after Gardener has indexed authored references."""
-    query_outline(result)
+def install_copy_feed(output):
+    """Add the Copy feed URL button beside the homepage's podcast RSS feed link."""
     parser = PageRoutes(output)
-    rows = []
-    for item in result['view'][1:]:
-        label = item[1][2]
-        route = parser.routes.get(normalized(label))
-        if not route:
-            raise ValueError(f'Query target was not rendered: {label}')
-        # page-ref marks the row as a page link, as Gardener marks its own query results,
-        # so Shift-click opens it in the right sidebar.
-        rows.append(f'<li><a class="page-ref" href="{html.escape(route, quote=True)}">{html.escape(label)}</a></li>')
     home_route = parser.routes.get(normalized(HOME))
     if not home_route:
         raise ValueError('Rendered page list does not include the homepage')
     for path in [output / 'index.html', parser.file(home_route)]:
         text = path.read_text(encoding='utf-8')
-        bullet = '<a class="bullet" href="#"></a>'
-        markers = [(f'<li>{QUERY_PLACEHOLDER}</li>', ''),
-                   (f'<li>{bullet}{QUERY_PLACEHOLDER}</li>', bullet)]
-        matches = [(marker, prefix) for marker, prefix in markers if marker in text]
-        if text.count(QUERY_PLACEHOLDER) != 1 or len(matches) != 1:
-            raise ValueError('Expected one rendered homepage query placeholder')
-        marker, prefix = matches[0]
-        rendered_rows = ''.join(row.replace('<li>', f'<li>{prefix}', 1) for row in rows)
-        text = text.replace(marker, rendered_rows)
         # Gardener may add attributes such as class="external-link" to the link.
         rss_link = r'<a\b[^>]*\bhref="https://codekiln\.github\.io/gitpa/rss\.xml"[^>]*>podcast RSS feed</a>'
         if len(re.findall(rss_link, text)) != 1:
@@ -234,13 +161,6 @@ def publish(source, output, renderer, search=False):
         started = time.perf_counter()
         graph = prepare(source, temporary / 'graph')
         print(f'Prepare graph: {time.perf_counter() - started:.2f}s', flush=True)
-        query = temporary / 'homepage.json'
-        started = time.perf_counter()
-        subprocess.run(['nbb-logseq', str(ROOT / 'scripts/check_homepage.cljs'),
-                        str(graph), str(query), '--prepared'], cwd=ROOT, check=True)
-        print(f'Validate homepage query: {time.perf_counter() - started:.2f}s', flush=True)
-        query_result = json.loads(query.read_text(encoding='utf-8'))
-        prepare_homepage(graph, query_result)
         compile_episode_pages(graph)
         args = [str(renderer), 'publish', '--graph', str(graph), '--output', str(output),
                 '--filename-format', 'triple-lowbar', '--homepage', HOME,
@@ -264,7 +184,7 @@ def publish(source, output, renderer, search=False):
         check_property_names(rendered.stderr)
         print(f'Render garden: {time.perf_counter() - started:.2f}s', flush=True)
         started = time.perf_counter()
-        install_homepage_query(output, query_result)
+        install_copy_feed(output)
         publish_feed(source, output)
         (output / '.nojekyll').touch()
         print(f'Package site: {time.perf_counter() - started:.2f}s', flush=True)

@@ -10,7 +10,7 @@ python3 scripts/build_site.py --renderer "$(mise which lsg)" --output /private/t
 python3 -m http.server --directory /private/tmp/gitpa-preview 8765
 ```
 
-Open [the preview homepage](http://localhost:8765/gitpa/). The home page retains the introduction, subscription link, fly artwork, and Recent Ceremonies list. The build evaluates the authored Logseq query, result transform, and Hiccup view through the same parser used by `site:query:check`; the prepared publication graph receives ordinary links in the evaluated order. The source query stays in the garden. An unsupported query view or a result linking to a missing or unpublished page stops publication.
+Open [the preview homepage](http://localhost:8765/gitpa/). The home page retains the introduction, subscription link, fly artwork, and Recent Ceremonies list. `lsg` runs the authored Logseq query, result transform and Hiccup view at build time, as Logseq's published site does. `mise run site:query:check` runs the same query with the Logseq file parser; the homepage lists the same episodes in the same order.
 
 The light Nord stylesheet applies to the homepage, episode pages, and reference pages. Logseq Gardener renders page and block transclusions and recording controls. Episode preparation continues to select public notes and derive asset visibility from published episodes. The build includes explicitly public pages, copies the existing RSS, and adds the GitHub Pages `.nojekyll` marker. Each published page has a readable namespace URL such as `GitP/A/Session/26/10/20-Tue/`. RSS items link directly to these pages. Existing hashed page files and `#/page/...` links remain usable; generated navigation goes to namespace URLs. Recording controls retain native keyboard and seeking support. The original podcast artwork path is copied alongside the renderer’s assets so subscribed podcast clients keep a working image URL. Publication validates every RSS episode link against an emitted page.
 
@@ -30,7 +30,7 @@ The Publish workflow ignores the `lsg` entry in `mise.toml` (`MISE_DISABLE_TOOLS
 2. Set `GARDENER_SHA256` to the hash in that release's `logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256` file. `gh release download <tag> --repo codekiln/logseq-gardener --pattern '*x86_64-unknown-linux-gnu.tar.xz.sha256' --output -` prints it.
 3. Open a pull request. The build log shows the `lsg --version` output, and the uploaded `gitpa-website` preview shows the result of the new renderer.
 
-`scripts/build_site.py` finds rendered pages through Gardener's `lsg-site.json` route list, then edits the generated HTML for the homepage query, the Apple Podcasts button and the episode player. If a new release changes that output, the publish step stops with a message that names the missing page or link.
+`scripts/build_site.py` finds rendered pages through Gardener's `lsg-site.json` route list, then adds the Copy feed URL button beside the homepage's feed link. If a new release changes that output, the publish step stops with a message that names the missing page or link.
 
 ## Search
 
@@ -38,13 +38,13 @@ Search uses Gardener's shared static index and dialog. Open it from the header s
 
 Generate a search-enabled preview with `python3 scripts/build_site.py --renderer "$(mise which lsg)" --search --output /private/tmp/gitpa-search-preview/gitpa`. Search data loads on first opening, and subsequent opens reuse the current publication's prepared index. Loading errors offer retry and reload; search never reloads the page automatically.
 
-Only selected public source content enters the index. Evaluated homepage query rows, copied backlink/transclusion content, hidden properties and unresolved reference identities are excluded. This first index version searches original note text rather than page-property values or generated namespace titles. The authored homepage introduction remains searchable. The legacy route map loads only when a legacy page fragment is opened.
+Only selected public source content enters the index. Homepage query rows, copied backlink/transclusion content, hidden properties and unresolved reference identities are excluded. This first index version searches original note text rather than page-property values or generated namespace titles. The authored homepage introduction remains searchable. The legacy route map loads only when a legacy page fragment is opened.
 
 ## Previous and Next
 
 A page with `prev::` or `next::` page properties shows its previous page at the left of the header with a left arrow and its next page at the right with a right arrow, each with the page title. Below 640px the header shows only the arrows, and the title remains each link's accessible name. The links come from the rendered `prev` and `next` property rows, or from Gardener's `nav.page-sequence` links, and change with in-site navigation. The property rows stay on the page.
 
-`site/header-sequence.js` is a Gardener site plugin, styled by `site/header-sequence.css`. `scripts/build_site.py` passes its manifest, `site/header-sequence.lsg-plugin.json`, to `lsg publish --plugin`, and Gardener's plugin host runs it on every page.
+The links come from Gardener's first-party `sequence-header` plugin, turned on with `:lsg/plugins` in `gitp-garden/logseq/config.edn`. Gardener's plugin host loads it only on pages with `prev::` or `next::`.
 
 ## Illuminated initials
 

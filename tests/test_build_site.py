@@ -6,121 +6,38 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
-from build_site import (prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER,
-                        PLUGINS, check_property_names)
+from build_site import public_pages, install_copy_feed, PLUGINS, check_property_names
 
 
 class HomepageTests(unittest.TestCase):
-    def result(self):
-        return {'title': ['h2', 'Recent Ceremonies'], 'view': ['ul',
-                ['li', ['a', {'href': '#/page/gitp%2Fa%2Fsession%2Fnewest'}, 'GitP/A/Session/Newest']],
-                ['li', ['a', {'href': '#/page/gitp%2Fa%2Fsession%2Folder'}, 'GitP/A/Session/Older']]]}
-
-    def test_view_order_labels_and_targets_are_preserved(self):
-        self.assertEqual(query_outline(self.result()),
-                         '- ## Recent Ceremonies\n'
-                         '\t- [[GitP/A/Session/Newest]]\n'
-                         '\t- [[GitP/A/Session/Older]]\n')
-
-    def test_unexpected_view_fails_instead_of_silently_changing_results(self):
-        result = self.result()
-        result['view'][1][1][1]['href'] = 'https://example.com/'
-        with self.assertRaisesRegex(ValueError, 'page route'):
-            query_outline(result)
-
-    def test_replaces_query_only_in_prepared_copy(self):
-        original = Path(__file__).resolve().parents[1] / 'gitp-garden/pages/Ghost in the Patch.md'
-        before = original.read_text()
-        with tempfile.TemporaryDirectory() as directory:
-            graph = Path(directory)
-            (graph / 'pages').mkdir()
-            home = graph / 'pages/Ghost in the Patch.md'
-            home.write_text(before)
-            for name in ['Newest', 'Older']:
-                (graph / 'pages' / f'GitP___A___Session___{name}.md').write_text('public:: true\n- Episode\n')
-            prepare_homepage(graph, self.result())
-            after = home.read_text()
-            self.assertNotIn('#+BEGIN_QUERY', after)
-            self.assertIn('- ## Recent Ceremonies', after)
-            self.assertIn(QUERY_PLACEHOLDER, after)
-            self.assertIn(f'\t- {QUERY_PLACEHOLDER}\n\t  search-exclude:: true\n', after)
-            self.assertNotIn('[[GitP/A/Session/Newest]]', after)
-            self.assertNotIn('[[GitP/A/Session/Older]]', after)
-            self.assertIn('gitp_logo_raw_fly.JPG', after)
-            self.assertIn('https://codekiln.github.io/gitpa/rss.xml', after)
-            self.assertEqual(original.read_text(), before)
-
-    def test_evaluated_rows_are_inserted_only_after_authored_reference_indexing(self):
+    def test_copy_feed_button_follows_the_feed_link_on_both_homepage_files(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
-            write_site(output, [('p-aaa.html', 'Ghost in the Patch'),
-                                ('p-bbb.html', 'GitP/A/Session/Newest'),
-                                ('p-ccc.html', 'GitP/A/Session/Older')])
+            write_site(output, [('p-aaa.html', 'Ghost in the Patch')])
+            rows = '<ul><li><a href="p-bbb.html">GitP/A/Session/Newest</a></li></ul>'
             for name in ['index.html', 'p-aaa.html']:
                 (output / name).write_text('<head></head><main><a class="external-link" target="_blank" rel="noopener noreferrer" '
-                                           f'href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
-            install_homepage_query(output, self.result())
+                                           f'href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a>{rows}</main>')
+            install_copy_feed(output)
             text = (output / 'index.html').read_text()
-            # Shift-click opens a.page-ref links in Gardener's right sidebar.
-            self.assertIn('<a class="page-ref" href="p-bbb.html">GitP/A/Session/Newest</a>', text)
-            self.assertLess(text.index('Newest'), text.index('Older'))
-            self.assertIn('data-copy-feed>Copy feed URL</button>', text)
+            self.assertIn('podcast RSS feed</a> <button type="button" class="apple-podcasts-subscribe" data-copy-feed>Copy feed URL</button>', text)
             self.assertIn('<script type="module" src="/gitpa/copy-feed.js"></script></head>', text)
+            # lsg renders the homepage query; this step leaves its rows alone.
+            self.assertIn(rows, text)
             self.assertTrue((output / 'copy-feed.js').is_file())
-            self.assertNotIn(QUERY_PLACEHOLDER, text)
             self.assertEqual(text, (output / 'p-aaa.html').read_text())
-            with self.assertRaisesRegex(ValueError, 'placeholder'):
-                install_homepage_query(output, self.result())
 
-    def test_query_rows_find_targets_on_later_all_pages_screens(self):
+    def test_missing_feed_link_fails_the_build(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
-            # The first All pages screen lists only the homepage; routes come from lsg-site.json.
-            (output / 'pages.html').write_text('<a href="p-aaa.html">Ghost in the Patch</a>')
-            write_site(output, [('p-aaa.html', 'Ghost in the Patch'),
-                                ('p-bbb.html', 'GitP/A/Session/Newest'),
-                                ('p-ccc.html', 'GitP/A/Session/Older')])
+            write_site(output, [('p-aaa.html', 'Ghost in the Patch')])
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<head></head><a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul>')
-            install_homepage_query(output, self.result())
-            self.assertIn('href="p-bbb.html"', (output / 'index.html').read_text())
+                (output / name).write_text('<head></head><main></main>')
+            with self.assertRaisesRegex(ValueError, 'podcast RSS feed link'):
+                install_copy_feed(output)
 
-    def test_query_rows_preserve_shared_outline_bullets(self):
-        with tempfile.TemporaryDirectory() as directory:
-            output = Path(directory)
-            write_site(output, [('p-aaa.html', 'Ghost in the Patch'),
-                                ('p-bbb.html', 'GitP/A/Session/Newest'),
-                                ('p-ccc.html', 'GitP/A/Session/Older')])
-            bullet = '<a class="bullet" href="#"></a>'
-            for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<head></head><a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
-            install_homepage_query(output, self.result())
-            text = (output / 'index.html').read_text()
-            self.assertEqual(text.count(bullet), 2)
-            self.assertIn(f'<li>{bullet}<a class="page-ref" href="p-bbb.html">', text)
-            self.assertNotIn(QUERY_PLACEHOLDER, text)
 
-    def test_query_result_changes_change_publication(self):
-        result = self.result()
-        before = query_outline(result)
-        result['view'] = ['ul', result['view'][2]]
-        after = query_outline(result)
-        self.assertIn('Newest', before)
-        self.assertNotIn('Newest', after)
-        self.assertIn('Older', after)
-
-    def test_query_cannot_publish_missing_or_private_target(self):
-        for publication in [None, 'false']:
-            with self.subTest(publication=publication), tempfile.TemporaryDirectory() as directory:
-                graph = Path(directory)
-                (graph / 'pages').mkdir()
-                home = graph / 'pages/Ghost in the Patch.md'
-                home.write_text('- query-table:: false\n  #+BEGIN_QUERY\n  {}\n  #+END_QUERY\n')
-                if publication:
-                    (graph / 'pages/GitP___A___Session___Newest.md').write_text(f'public:: {publication}\n- Private\n')
-                with self.assertRaisesRegex(ValueError, 'missing or unpublished'):
-                    prepare_homepage(graph, self.result())
-
+class PublicationTests(unittest.TestCase):
     def test_public_parent_never_exposes_unmarked_child(self):
         with tempfile.TemporaryDirectory() as directory:
             graph = Path(directory)
