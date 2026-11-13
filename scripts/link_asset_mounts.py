@@ -47,6 +47,6 @@ def link(garden=GARDEN, locate=ghq_path):
 
 if __name__ == '__main__':
     try:
-        print('\n'.join(link()) or 'gitp-garden/asset-mounts.toml borrows no mounts')
+        print('\n'.join(link()) or 'gitp-garden borrows no mounts, so there is nothing to link')
     except (LinkError, MountError) as error:
         sys.exit(str(error))
