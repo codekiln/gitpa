@@ -42,6 +42,9 @@ Thumbs.db
 .python-version
 .worktrees/
 
+# 🗄️ Local copies of files in other gardens' asset mounts
+assets/.remote/
+
 # 🐍 Python cache files
 __pycache__/
 *.py[cod]

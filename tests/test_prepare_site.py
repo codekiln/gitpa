@@ -46,6 +46,35 @@ class VisibilityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Missing linked asset'):
             prepare(self.source, self.output)
         self.assertFalse(self.output.exists())
+    def mount(self, public=True):
+        line = 'public = "https://example.org/bucket"\n' if public else 'bucket = "bucket"\ndvc = "garden"\n'
+        (self.source / 'asset-mounts.toml').write_text('[mounts.garden]\npath = "assets/.remote/garden"\n'
+                                                       + ('source = "github.com/example/garden"\n' if public else '') + line)
+    def test_mounted_links_publish_public_urls(self):
+        self.mount()
+        self.session('Public', True)
+        (self.source / 'pages' / self.asset_file).write_text('public:: false\n- # Audio\n\t- ![Recording](../assets/.remote/garden/Full-mp3.mp3)\n')
+        (self.source / 'journals').mkdir()
+        (self.source / 'journals/2026_11_13.md').write_text('- ![Gate](<../assets/.remote/garden/Gate cv.png>)\n')
+        (self.source / 'assets/.remote/garden').mkdir(parents=True)
+        (self.source / 'assets/.remote/garden/Full-mp3.mp3').write_text('local copy')
+        (self.source / 'assets/logo.png').write_text('logo')
+        prepare(self.source, self.output)
+        self.assertIn('![Recording](https://example.org/bucket/Full-mp3.mp3)', self.asset())
+        self.assertIn('![Recording](https://example.org/bucket/Full-mp3.mp3)', (self.output / 'pages/Public.md').read_text())
+        self.assertIn('(<https://example.org/bucket/Gate%20cv.png>)', (self.output / 'journals/2026_11_13.md').read_text())
+        self.assertIn('../assets/.remote/garden/Full-mp3.mp3', (self.source / 'pages' / self.asset_file).read_text())
+        self.assertFalse((self.output / 'assets/.remote').exists())
+        self.assertTrue((self.output / 'assets/logo.png').exists())
+    def test_link_into_private_or_undeclared_mount_aborts_before_copy(self):
+        self.session('Public', True)
+        (self.source / 'pages' / self.asset_file).write_text('public:: false\n- # Audio\n\t- ![Recording](../assets/.remote/garden/Full-mp3.mp3)\n')
+        with self.assertRaisesRegex(ValueError, f'{self.name} links garden/Full-mp3.mp3.*declares no mounts.garden'):
+            prepare(self.source, self.output)
+        self.mount(public=False)
+        with self.assertRaisesRegex(ValueError, 'mounts.garden has no public URL'):
+            prepare(self.source, self.output)
+        self.assertFalse(self.output.exists())
     def test_output_inside_source_rejected(self):
         with self.assertRaisesRegex(ValueError, 'separate'):
             prepare(self.source, self.source / 'site')

@@ -7,6 +7,7 @@ import re
 import shutil
 from urllib.parse import urlparse
 from logseq_page import split_page, properties, page_path
+import asset_mounts
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -102,12 +103,14 @@ def prepare(source, output):
         raise ValueError('Website output must be separate from the source graph')
     if output.exists():
         raise ValueError(f'Website output already exists: {output}')
+    mounts = asset_mounts.load(source)
     pages = {}
     pending = []
     for path in (source / 'pages').glob('*.md'):
-        lines, body = split_page(path.read_text(encoding='utf-8'))
-        props = properties(lines)
         name = path.stem.replace('___', '/')
+        text = asset_mounts.public_links(path.read_text(encoding='utf-8'), mounts, name)
+        lines, body = split_page(text)
+        props = properties(lines)
         pages[name] = (lines, body)
         if props.get('public') == 'true' and '[[Logseq/Entity/Podcast/Episode]]' in props.get('logseq-entity', ''):
             pending.extend(asset_links(selected_body(body)))
@@ -151,9 +154,15 @@ def prepare(source, output):
             if fallback:
                 lines, body = split_page(changes[name])
                 changes[name] = ''.join(lines) + f'next:: {fallback}\n' + body
-    shutil.copytree(source, output)
+    journals = {path.relative_to(source): asset_mounts.public_links(path.read_text(encoding='utf-8'), mounts, path.stem)
+                for path in (source / 'journals').glob('*.md')}
+    # Local copies of mounted files stay out of the website; pages link their public URLs.
+    remote = source / 'assets'
+    shutil.copytree(source, output, ignore=lambda folder, names: ['.remote'] if Path(folder) == remote and '.remote' in names else [])
     for name, content in changes.items():
         page_path(output, name).write_text(content, encoding='utf-8')
+    for path, content in journals.items():
+        (output / path).write_text(content, encoding='utf-8')
     return output
 
 def main():

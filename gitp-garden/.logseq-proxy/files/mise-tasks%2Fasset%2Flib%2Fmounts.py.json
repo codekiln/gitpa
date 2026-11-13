@@ -1,0 +1,11 @@
+{
+  "destination": "mise-tasks/asset/lib/mounts.py",
+  "mode": 420,
+  "sha256": "5f65975ab8a25f363ac91ad5de0b82617862c0b7df4654ee93f8e9d076d190f5",
+  "source": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "mise-tasks/asset/lib/mounts.py"
+  ],
+  "version": 2
+}

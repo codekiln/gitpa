@@ -3,13 +3,13 @@ task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: logseq:entity:proxy:page:sync
 task-entrypoint:: mise-tasks/logseq/entity/proxy/page/sync
-task-files:: {"mise-tasks/logseq/entity/proxy/page/sync":"mise-tasks/logseq/entity/proxy/page/sync","mise-tasks/logseq/entity/proxy/page/lib/core.py":"mise-tasks/logseq/entity/proxy/page/lib/core.py","mise-tasks/logseq/entity/proxy/page/lib/task_imports.py":"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py","mise-tasks/logseq/entity/proxy/page/lib/records.py":"mise-tasks/logseq/entity/proxy/page/lib/records.py"}
+task-files:: {"mise-tasks/logseq/entity/proxy/page/sync":"mise-tasks/logseq/entity/proxy/page/sync","mise-tasks/logseq/entity/proxy/page/lib/core.py":"mise-tasks/logseq/entity/proxy/page/lib/core.py","mise-tasks/logseq/entity/proxy/page/lib/task_imports.py":"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py","mise-tasks/logseq/entity/proxy/page/lib/records.py":"mise-tasks/logseq/entity/proxy/page/lib/records.py","mise-tasks/asset/lib/mounts.py":"mise-tasks/asset/lib/mounts.py"}
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync
 see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 task-dependencies:: [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FProxy%2FPage%2Fmise%2FTask%2Fsync
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Proxy___Page___mise___Task___sync.md
-logseq-proxy-last-sync-date:: [[2026-10-19]]
+logseq-proxy-last-sync-date:: [[2026-11-13]]
 - # Sync a Proxy Page and Its Companion Tasks
 	- Copies a source page into another Logseq garden, together with its entity definitions, declared task references, executable files, helpers, and linked assets. Re-sync refreshes source changes and reports conflicting destination edits before applying changes.
 	- ## Invocation
@@ -39,7 +39,7 @@ logseq-proxy-last-sync-date:: [[2026-10-19]]
 		- Reads the source page and the entity definitions named by `logseq-entity::`. Definitions declare companion tasks with `entity-tasks::`; task references declare implementation paths and required task dependencies through [[Logseq/Entity/Mise/Task]].
 		- Copies pages under their source logical names, adds [[Logseq/Entity/Proxy/Page]] membership, and sets source URL, available code forge URL, and sync date. Source bodies replace destination bodies.
 		- On re-sync, page properties follow the source: new ones are added, changed ones updated, and ones the source dropped are removed. Properties explicitly listed in an entity definition’s `entity-proxy-source-properties::` follow the source even when another definition assigns them to the destination. Other destination-owned properties retain their values; `tags::` and the proxy keys remain protected. [[Logseq/Entity/Proxy/Page]] states the rule; the preview lists each property added, updated or removed.
-		- Copies linked `../assets/` files and explicitly mapped task files. Source implementation paths start at the repository root, even when the source graph occupies a subdirectory; destination paths start at the destination graph root.
+		- Copies linked `../assets/` files and explicitly mapped task files. When a page links a file under `../assets/.remote/<mount>/`, the sync leaves the file in the source garden's [[Asset/Mount]] and adds that mount's borrowed declaration to the destination's `asset-mounts.toml`. Source implementation paths start at the repository root, even when the source graph occupies a subdirectory; destination paths start at the destination graph root.
 		- Records each page in `.logseq-proxy/pages/` and each implementation output in `.logseq-proxy/files/`. A repeat run preserves unchanged records, dates, and source links.
 		- The page record keeps current source task declarations and path mappings for onward imports from a proxy garden.
 	- ## Side effects

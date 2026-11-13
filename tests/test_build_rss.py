@@ -56,6 +56,17 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(self.load()[0]["audio_url"], "https://example.org/audio.mp3")
         self.probe.assert_called_once_with("https://example.org/audio.mp3")
 
+    def test_mounted_recording_publishes_public_url(self):
+        (self.garden / 'asset-mounts.toml').write_text('[mounts.garden]\npath = "assets/.remote/garden"\npublic = "https://example.org/bucket"\nsource = "github.com/example/garden"\n')
+        self.asset.write_text('public:: true\n- # Recording\n\t- ![Listen](../assets/.remote/garden/Full-mp3.mp3)\n')
+        self.assertEqual(self.load()[0]['audio_url'], 'https://example.org/bucket/Full-mp3.mp3')
+        self.probe.assert_called_once_with('https://example.org/bucket/Full-mp3.mp3')
+    def test_mounted_recording_without_declared_mount_fails(self):
+        self.asset.write_text('public:: true\n- # Recording\n\t- ![Listen](../assets/.remote/garden/Full-mp3.mp3)\n')
+        with self.assertRaisesRegex(ValueError, 'GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3 links garden/Full-mp3.mp3'):
+            self.load()
+        self.probe.assert_not_called()
+
     def test_duplicate_recording_link_fails(self):
         self.page.write_text(self.props + self.body + "\t- ![Listen](https://example.org/audio.mp3)\n")
         with self.assertRaisesRegex(ValueError, "one MP3"):

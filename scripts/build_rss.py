@@ -12,6 +12,7 @@ import re
 
 from logseq_page import split_page, properties, page_path
 from site_routes import page_route
+import asset_mounts
 import xml.etree.ElementTree as ET
 
 
@@ -76,8 +77,13 @@ def episode_copy(body: str, path: Path) -> tuple[str, str]:
 def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
     episodes = []
     guids, audio_urls = set(), set()
+    mounts = asset_mounts.load(garden)
+
+    def read_with_public_links(path: Path) -> str:
+        return asset_mounts.public_links(path.read_text(encoding="utf-8"), mounts, path.stem.replace("___", "/"))
+
     for path in sorted((garden / "pages").glob("*.md")):
-        lines, body = split_page(path.read_text(encoding="utf-8"))
+        lines, body = split_page(read_with_public_links(path))
         props = properties(lines)
         if props.get("public") != "true":
             continue
@@ -97,7 +103,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         audio = re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", recording_blocks)
         for name in embeds:
             asset_path = page_path(garden, name)
-            _, asset_body = split_page(asset_path.read_text(encoding="utf-8"))
+            _, asset_body = split_page(read_with_public_links(asset_path))
             audio.extend(re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", asset_body))
         if len(audio) != 1:
             raise ValueError(f"{path}: expected one MP3 recording link")
