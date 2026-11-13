@@ -10,7 +10,9 @@
   ],
   "imports": {
     "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/10/18-Sun": {
-      "files": [],
+      "files": [
+        "mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync"
+      ],
       "page": "GitP/A/Session/26/10/18-Sun",
       "source_graph": "."
     }
