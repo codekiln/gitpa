@@ -30,9 +30,10 @@ def link(garden=GARDEN, locate=ghq_path):
     for name, mount in load(garden).items():
         if 'source' not in mount:
             continue
-        target = locate(mount['source']) / mount['path']
+        checkout = locate(mount['source'])
+        target = checkout / mount['path']
         if not target.is_dir():
-            raise LinkError(f'{target} is missing; run `mise run asset:fetch` in {mount["source"]} first')
+            raise LinkError(f'{target} is missing; run `mise run asset:fetch` in {checkout} first')
         link_path = garden / mount['path']
         if link_path.is_symlink() and link_path.resolve() == target.resolve():
             lines.append(f'{name}: {link_path} already links {target}')
