@@ -17,6 +17,10 @@ run = "uv run --no-project python scripts/build_rss.py --check"
 description = "Test podcast feed generation and website preparation"
 run = "uv run --no-project python -m unittest discover -s tests"
 
+[tasks."asset:mount:link"]
+description = "Link gitp-garden's borrowed asset mounts to the source gardens' local copies"
+run = "uv run --no-project python scripts/link_asset_mounts.py"
+
 [tasks."site:query:check"]
 description = "Validate the real homepage query against the graph"
 run = "nbb-logseq scripts/check_homepage.cljs"
