@@ -12,6 +12,7 @@ import re
 
 from logseq_page import split_page, properties, page_path
 from site_routes import page_route
+from prepare_site import selected_body
 import asset_mounts
 import xml.etree.ElementTree as ET
 
@@ -56,19 +57,30 @@ def audio_metadata(url: str) -> tuple[int, str]:
 
 
 def episode_copy(body: str, path: Path) -> tuple[str, str]:
-    """Return the H1 title and the first direct child of it that is not a media embed."""
-    lines = body.splitlines()
+    """Return the H1 title and the episode description.
+
+    The description is the first paragraph directly under the H1. When the
+    session opens with section headings instead, it is the first paragraph
+    directly under the earliest such heading. Media embeds are skipped, and
+    unpublished Notes sections are removed first so they never reach the feed.
+    """
+    lines = selected_body(body).splitlines()
     for index, line in enumerate(lines):
         match = re.match(r"^- # (.+)$", line)
         if not match:
             continue
+        under_heading = False
         for child in lines[index + 1:]:
             if not child.startswith("\t"):
                 break
-            if not child.startswith("\t- "):
+            if child.startswith("\t- "):
+                text = child[3:].strip()
+                under_heading = bool(re.match(r"#+ ", text))
+            elif under_heading and child.startswith("\t\t- "):
+                text = child[4:].strip()
+            else:
                 continue
-            text = child[3:].strip()
-            if text and not text.startswith(("![", "{{embed")):
+            if text and not re.match(r"#+ ", text) and not text.startswith(("![", "{{embed")):
                 return match[1], text
         break
     raise ValueError(f"{path}: expected an H1 followed by the episode description")
