@@ -1,4 +1,6 @@
-"""Asset mounts of a garden, read with the mounts.py the proxy page sync task brings into gitp-garden."""
+"""Import load, public_links and MountError from gitp-garden/mise-tasks/asset/lib/mounts.py.
+
+`mise run logseq:entity:proxy:page:sync` copies mounts.py from codekiln/logseq-encode-garden into gitp-garden."""
 from pathlib import Path
 import sys
 
