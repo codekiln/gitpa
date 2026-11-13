@@ -5,17 +5,18 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-11-06 Fri]]
 podcast-guid:: gitpa20261106
 podcast-published-at:: 2026-11-07T06:19:39-05:00
+next:: [[GitP/A/Session/26/11/07-Sat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F06-Fri
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___06-Fri.md
-logseq-proxy-last-sync-date:: [[2026-11-07]]
+logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # Infini Pad at the Crossfader
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
-	- One pad, four loops, and a crossfader passing the signal between two pairs of them. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
 	- ## Ceremonial Annotations
-		- A single sound, [[Microfreak/Preset/259 Infini Pad]], is asked to be everything: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.
-		- The loops sit on two sides of [[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]], layers 1A and 2A on one side and 1B and 2B on the other, and the crossfader decides which pair the room hears. Listen for the side changing, then for what stays when it does.
-		- The music stays in C minor until 22:39, when a major third rises from the keys and briefly turns the light.
+		- One pad, four loops, and a crossfader leaning the signal from one side to the other. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
+		- A single sound, [[Microfreak/Preset/259 Infini Pad]], plays every part: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.
+		- The loops sit on two sides of [[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]]: layers 1A and 2A on the A side, 1B and 2B on the B side. Layer 2B also passes through the A side on its way out, so it sounds loudest with the crossfader near the middle. Listen for the side changing, then for what stays when it does.
+		- The music stays in C minor until 22:39, when an E from the keys turns the chord to C major for under a minute.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/259 Infini Pad]]
 			- #### 00:00 Keys into the sequencer
@@ -58,7 +59,7 @@ logseq-proxy-last-sync-date:: [[2026-11-07]]
 					- The MIDI keeps going underneath. The sequencer returns to the C1–G2 bass at 18:36, and from 19:11 Fold, Saturate, Noise, the main envelope and the cycling envelope's Rise, Fall, [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Hold Sustain]] and Amount are all reshaped, with cutoff and filter amount at 20:33, out of earshot.
 			- #### 20:45 The bass returns
 				- Notes from [[GitP/Acolyte]]
-					- The crossfader slams to the B side and settles in the middle, and the low fifths return carrying the reshaped cycling envelope.
+					- The crossfader swings fully to the B side and settles in the middle, and the low fifths return carrying the reshaped cycling envelope.
 			- #### 22:39 A major third
 				- Notes from [[GitP/Acolyte]]
 					- On the MicroFreak keys, E3, G3 and C4 sound under full pressure: a C major chord, spelled one note at a time, against the C-minor loops. At 23:30 B♭3 and A♭3 lead back to minor.
@@ -96,13 +97,15 @@ logseq-proxy-last-sync-date:: [[2026-11-07]]
 	  collapsed:: true
 		- ### Recording
 			- 32:00 · [[GitP/A/Session/26/11/06-Fri/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
-			- Recorded on November 6, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]]. Four MicroFreak audio layers, 1A and 2A on the crossfader's A side and 1B and 2B on its B side, hold the takes; the crossfader was played from a Launchpad custom mode. [[Launchpad/UG/08 Custom Modes]]
+			- Recorded on November 6, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]]. Four MicroFreak audio layers hold the takes, and [[Person/codekiln]] played the crossfader from a Launchpad custom mode. [[Launchpad/UG/08 Custom Modes]]
 			- The mix keeps the recorded crossfader changes, volume rides, pans and reverb sends. The afterword at 28:14 is a second take placed after the first. The commentary under it is a machine transcription.
 			- [[Making/Music/Log/26/11/06-Fri]]
+		- ### Set
+			- [[GitP/A/Session/26/11/06-Fri/Set]] — the tracks, routing and crossfader assignments of the Ableton Live Set, with a screenshot of its Session View.
 		- ### Presets
 			- [[Microfreak/Preset/259 Infini Pad]] — the whole session. A paraphonic pad on the BASS oscillator with a slow attack; key pressure and the envelope open Fold and the filter.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
-			- A read of slot 259 on November 7, 2026 matched the October 25 export, so the slot still holds the factory sound and the download contains it. The knob changes in the chapters are in the session MIDI, not the preset.
+			- On November 7, 2026, slot 259 still held the factory sound saved on October 25, so the download plays the sound as it was before the session. The knob turns described in the chapters are in the session MIDI.
 		- ### MIDI
 			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid]]
 			- "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, including the sequencer playing back captured phrases; it keeps running under the afterword. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure and knob changes, all before 28:10.
