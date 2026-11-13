@@ -1,6 +1,7 @@
 {
   "body_sha256": "3bb40da51b9b93f29bc1d30c97df501b6ab3d636ab5ddbdc4fbe0aa12f712e49",
   "declarations": {
+    "entity-proxy-source-properties": "public",
     "logseq-entity": "[[Logseq/Entity/Definition]]"
   },
   "identity": [

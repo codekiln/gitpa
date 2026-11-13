@@ -6,7 +6,7 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # B-Aud-Out
   type:: audio
-  audio-from:: AudioIn/Track.48/TrackOut
-  audio-to:: AudioOut/External/M3
+  audio-from:: [[GitP/A/Session/26/11/06-Fri/Set/Track/3n4]] Post Mixer
+  audio-to:: Ext. Out 4
   monitor:: auto
   arm:: false

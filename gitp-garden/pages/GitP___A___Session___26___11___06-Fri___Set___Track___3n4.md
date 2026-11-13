@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # 3n4
   type:: audio
-  audio-from:: AudioIn/Master
-  audio-to:: AudioOut/Master
+  audio-from:: Resampling
+  audio-to:: Master
   monitor:: auto
   arm:: false
   devices:: Mastering - Make It Loud

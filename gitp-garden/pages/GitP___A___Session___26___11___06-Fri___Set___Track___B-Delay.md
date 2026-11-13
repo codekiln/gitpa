@@ -6,6 +6,6 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # B-Delay
   type:: return
-  audio-to:: AudioOut/Master
+  audio-to:: Master
   devices:: Delay
 	- Delay for 1A-Audio and 2B-Audio.

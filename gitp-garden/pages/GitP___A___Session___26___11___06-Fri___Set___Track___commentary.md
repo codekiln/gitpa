@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # commentary
   type:: audio
-  audio-from:: AudioIn/External/S0
-  audio-to:: AudioOut/Master
+  audio-from:: Ext. In 1/2
+  audio-to:: Master
   monitor:: auto
   arm:: true
   devices:: Multband & Limiter, Voice Enhancer

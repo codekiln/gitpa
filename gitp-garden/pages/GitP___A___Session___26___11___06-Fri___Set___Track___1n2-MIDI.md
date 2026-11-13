@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # 1n2-MIDI
   type:: midi
-  midi-from:: MidiIn/External.Dev:Arturia MicroFreak (unknown mididevice)/-1
-  midi-to:: MidiOut/External.Dev:Arturia MicroFreak (unknown mididevice)/0
+  midi-from:: Arturia MicroFreak (unknown mididevice) All Channels
+  midi-to:: Arturia MicroFreak (unknown mididevice) Ch. 1
   midi-channel:: all
   monitor:: auto
   arm:: false
