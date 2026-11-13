@@ -17,8 +17,10 @@ class LinkError(RuntimeError):
 def ghq_path(address):
     result = subprocess.run(['ghq', 'list', '--full-path', '--exact', address], capture_output=True, text=True)
     paths = result.stdout.split()
-    if result.returncode or len(paths) != 1:
-        raise LinkError(f'ghq finds no single checkout of {address}; clone it with `ghq get {address}`')
+    if result.returncode or not paths:
+        raise LinkError(f'ghq has no checkout of {address}; clone it with `ghq get {address}`')
+    if len(paths) > 1:
+        raise LinkError(f'ghq lists more than one checkout of {address}: {", ".join(paths)}')
     return Path(paths[0])
 
 
