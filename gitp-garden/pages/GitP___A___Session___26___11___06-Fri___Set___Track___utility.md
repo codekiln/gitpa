@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Ableton/Track/Group]], [[Logseq/Entity/Proxy/Page]]
+public:: true
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F06-Fri%2FSet%2FTrack%2Futility
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___06-Fri___Set___Track___utility.md
+logseq-proxy-last-sync-date:: [[2026-11-13]]
+
+- # utility
+  type:: group
+  audio-to:: AudioOut/Master
+	- {{embed [[GitP/A/Session/26/11/06-Fri/Set/Track/utility/LPP to MF]]}}
+	- {{embed [[GitP/A/Session/26/11/06-Fri/Set/Track/utility/MF to LPP]]}}
+	- {{embed [[GitP/A/Session/26/11/06-Fri/Set/Track/utility/SONOBUS BRIDGE]]}}

@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FAbleton%2FSet
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Ableton___Set.md
-logseq-proxy-last-sync-date:: [[2026-11-03]]
+logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # Ableton Set
 	- In this garden, **Ableton Set** pages model the [[Ableton/Live]] Set used for one performance: its tracks, groups and settings.
@@ -22,6 +22,11 @@ logseq-proxy-last-sync-date:: [[2026-11-03]]
 		- Setting names follow the Ableton Session declaration in [[GitP/A/Template/Pattern A and B]], such as `type::`, `midi-from::`, `midi-to::`, `audio-from::`, `monitor::` and `arm::`, written as block properties under the H1.
 		- A short line says what the track did in the performance, such as "holds layer A's audio loops".
 		- Embeds stop at two levels, as on [[Logseq/Entity/Book/Section]]: the Set embeds groups, and a group embeds its tracks. [[Ableton/Live/UG/18 Mixing/03 Group Tracks]] describes groups in Live.
+	- ## Import from a Set file
+		- `mise run ableton:set:import --als <file> --performance '<performance>'` reads a Live Set (`.als`) and prints the pages it would write: the Set page and one page per group and track, in Live's order. Add `--apply` to write them.
+		- It reads the Live version, tempo, time signature, track and group names and order, track type, routing, MIDI channel, monitoring, arm state and each track's devices.
+		- On a page that exists, it changes only the properties and embeds it owns and keeps every other line. Running it again on the same file changes nothing.
+		- A track name with `/` becomes `-` in its page name, and the H1 keeps the name from Live. The short line on what a track did in the performance is yours to write.
 	- ## Sources
 		- Settings come from the Set file, a screenshot, or codekiln's notes. A setting that no source shows stays off the page.
 	- ## Related
