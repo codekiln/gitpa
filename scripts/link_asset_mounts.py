@@ -33,15 +33,15 @@ def link(garden=GARDEN, locate=ghq_path):
         target = locate(mount['source']) / mount['path']
         if not target.is_dir():
             raise LinkError(f'{target} is missing; run `mise run asset:fetch` in {mount["source"]} first')
-        here = garden / mount['path']
-        if here.is_symlink() and here.resolve() == target.resolve():
-            lines.append(f'{name}: {here} already links {target}')
+        link_path = garden / mount['path']
+        if link_path.is_symlink() and link_path.resolve() == target.resolve():
+            lines.append(f'{name}: {link_path} already links {target}')
             continue
-        if here.is_symlink() or here.exists():
-            raise LinkError(f'{here} already exists and is not a link to {target}; move it aside and run again')
-        here.parent.mkdir(parents=True, exist_ok=True)
-        here.symlink_to(target, target_is_directory=True)
-        lines.append(f'{name}: linked {here} to {target}')
+        if link_path.is_symlink() or link_path.exists():
+            raise LinkError(f'{link_path} already exists and is not a link to {target}; move it aside and run again')
+        link_path.parent.mkdir(parents=True, exist_ok=True)
+        link_path.symlink_to(target, target_is_directory=True)
+        lines.append(f'{name}: linked {link_path} to {target}')
     return lines
 
 
