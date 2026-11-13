@@ -1,6 +1,6 @@
 """Link each mount that gitp-garden borrows to the same folder in the source garden's ghq checkout.
 
-Logseq on the Mac then reads a proxied page's ../assets/.remote/<mount>/<file> from the garden's local copy."""
+When a proxied page links ../assets/.remote/<mount>/<file>, Logseq on the Mac opens that file from the source garden's checkout."""
 from pathlib import Path
 import subprocess
 import sys
