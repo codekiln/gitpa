@@ -43,7 +43,7 @@ Thumbs.db
 .worktrees/
 
 # 🗄️ Local copies of files in other gardens' asset mounts
-assets/.remote/
+**/assets/.remote/
 
 # 🐍 Python cache files
 __pycache__/
