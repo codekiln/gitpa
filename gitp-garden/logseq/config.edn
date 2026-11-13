@@ -292,7 +292,9 @@
  ;; podcast-episode keeps an episode's recording playing across pages, and its chapter
  ;; headings, timestamp-led bullets under ## Chapters and dialogue lines seek it.
  ;; sequence-header puts the prev:: and next:: pages in the header.
- :lsg/plugins [:podcast-episode :sequence-header]
+ ;; ableton-set shows an Ableton Live Set page as a track view: one column per track, with
+ ;; its type, routing, monitor and arm state and devices.
+ :lsg/plugins [:ableton-set :podcast-episode :sequence-header]
 
  ;; Readers can save the pages they visit and read them again without a network
  ;; (More menu > Save pages for offline reading). Logseq ignores the key.

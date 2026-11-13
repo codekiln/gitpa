@@ -22,8 +22,8 @@ from audio_chapters import compile_episode
 
 ROOT = Path(__file__).resolve().parents[1]
 HOME = 'Ghost in the Patch'
-# Gitpa's own browser plugin, which lsg's plugin host runs beside the podcast-episode
-# and sequence-header plugins that gitp-garden/logseq/config.edn turns on.
+# Gitpa's own browser plugin, which lsg's plugin host runs beside the ableton-set,
+# podcast-episode and sequence-header plugins that gitp-garden/logseq/config.edn turns on.
 PLUGINS = ['illuminated-initials']
 
 

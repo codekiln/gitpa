@@ -1,0 +1,20 @@
+{
+  "body_sha256": "d4d87950f1b2c450d98dd15453c7344386936d533cfe2e1c7d5887a72ce9962b",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Ableton/Set]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "GitP/A/Session/26/11/06-Fri/Set"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/A/Session/26/11/06-Fri/Set": {
+      "files": [],
+      "page": "GitP/A/Session/26/11/06-Fri/Set",
+      "source_graph": "."
+    }
+  },
+  "page": "GitP/A/Session/26/11/06-Fri/Set",
+  "version": 2
+}
