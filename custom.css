@@ -13,10 +13,8 @@
   --gitpa-heading: #5e81ac;
   --gitpa-sidebar: #ebedf2;
   --gitpa-code-text: #3b4252;
-  --gitpa-button-background: #e5e9f0;
   --subscribe-background: #563a80;
   --subscribe-text: #ffffff;
-  --gitpa-player-shadow: #2e344014;
 }
 :root[data-lsg-theme="dark"] {
   color-scheme: dark;
@@ -32,10 +30,8 @@
   --gitpa-heading: #88c0d0;
   --gitpa-sidebar: #272c36;
   --gitpa-code-text: #eceff4;
-  --gitpa-button-background: #434c5e;
   --subscribe-background: #cbb6ec;
   --subscribe-text: #20132d;
-  --gitpa-player-shadow: #00000033;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-lsg-theme]) {
@@ -52,10 +48,8 @@
     --gitpa-heading: #88c0d0;
     --gitpa-sidebar: #272c36;
     --gitpa-code-text: #eceff4;
-    --gitpa-button-background: #434c5e;
   --subscribe-background: #cbb6ec;
   --subscribe-text: #20132d;
-    --gitpa-player-shadow: #00000033;
   }
 }
 body {
