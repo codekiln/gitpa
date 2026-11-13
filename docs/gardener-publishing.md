@@ -74,6 +74,14 @@ Chapter headings need only the full MP3 and their timestamps. Separate chapter M
 
 The homepage's Copy feed URL button is `site/copy-feed.js`, which `scripts/build_site.py` adds to the homepage beside the button.
 
+## Ableton Set track view
+
+A page typed `logseq-entity:: [[Logseq/Entity/Ableton/Set]]`, such as [GitP/A/Session/26/11/06-Fri/Set](https://codekiln.github.io/gitpa/GitP/A/Session/26/11/06-Fri/Set/), opens with a track view: one column per track, side by side as in Live's Session View, with a group's tracks inside the group's column. Each column shows the track's type, input and output routing, MIDI channel, monitor and arm state and devices in chain order, and its name links to the track's page. The row of tracks scrolls sideways. The page's outline, with the Set's notes and the embedded track pages, stays below.
+
+The view comes from Gardener's first-party `ableton-set` plugin, turned on with `:lsg/plugins` in `gitp-garden/logseq/config.edn`. At build time the plugin reads the settings written under each track page's heading, such as `type::`, `audio-from::`, `monitor::` and `devices::`, and Gardener's plugin host loads the view only on Set pages. [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) lists what the plugin reads.
+
+To publish a session's Set, mirror its Set page with the tracks it embeds, then set `public:: true` on the Set page and on every group and track page: `mise run logseq:entity:proxy:page:sync --source /path/to/logseq-encode-garden --destination gitp-garden --page 'GitP/A/Session/26/11/06-Fri/Set' --follow-embeds --apply`. A group or track page without `public:: true` has no column, and `tests/test_ableton_set.py` fails when a public Set embeds one. The garden's `ableton:set:import` task writes the Set pages from a `.als` file; [Logseq/Entity/Ableton/Set](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Ableton___Set.md) describes it.
+
 ## Roll back publication
 
 Before this migration, Gitpa main was [a464812 — publish Eonz](https://github.com/codekiln/gitpa/commit/a46481245680e60411930c966a562eda9a234622) and the deployed site was [92a53eb — previous published site](https://github.com/codekiln/gitpa/commit/92a53eb0763f8cda1dc4d06fe956a2997cbd9bb3). Revert the migration commit on main and run the Publish workflow to regenerate the Logseq SPA from the retained garden. The podcast RSS and episode GUIDs are unchanged by the renderer migration.

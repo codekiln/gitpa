@@ -77,7 +77,7 @@ Validate a manifest's API major and local asset URLs before import. Keep the plu
 
 ## What ships in Gitpa now
 
-Gardener's host owns navigation between pages and runs three plugins. `podcast-episode` and `sequence-header` ship inside `lsg`; [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) describes them. Gitpa's own plugin has a manifest beside the module, which `scripts/build_site.py` passes with `--plugin`:
+Gardener's host owns navigation between pages and runs four plugins. `ableton-set`, `podcast-episode` and `sequence-header` ship inside `lsg`; [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) describes them. Gitpa's own plugin has a manifest beside the module, which `scripts/build_site.py` passes with `--plugin`:
 
 - `illuminated-initials` ([`site/illuminated-initials.js`](../site/illuminated-initials.js), [`site/illuminated-initials.lsg-plugin.json`](../site/illuminated-initials.lsg-plugin.json)) decorates episode openings. A page is an episode when Gardener's page metadata has a `podcast-episode` entry.
 
