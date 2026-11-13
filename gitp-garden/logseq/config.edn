@@ -298,6 +298,10 @@
  ;; (More menu > Save pages for offline reading). Logseq ignores the key.
  :lsg/offline true
 
+ ;; Readers can install the published site as an app with this name and icon.
+ ;; The icon is cropped from the podcast artwork. Logseq ignores the key.
+ :lsg/install {:name "Ghost in the Patch" :short-name "GitP" :icon "assets/app-icon.png"}
+
  ;; Graph view configuration.
  ;; Example usage:
  ;; :graph/settings
