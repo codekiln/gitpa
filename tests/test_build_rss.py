@@ -48,6 +48,27 @@ class FeedTests(unittest.TestCase):
         self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n')
         with self.assertRaisesRegex(ValueError, "description"):
             self.load()
+    def test_description_under_first_section_heading(self):
+        self.asset.unlink()
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'
+                             '\t- ## Ceremonial Annotations\n\t\t- Music from a patch.\n\t\t- A second paragraph.\n'
+                             '\t- ## Chapters\n\t\t- ### 00:00 Opening\n\t\t\t- Chapter notes.\n')
+        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+    def test_opening_paragraph_wins_over_section_paragraph(self):
+        self.page.write_text(self.props + self.body + '\t- ## Ceremonial Annotations\n\t\t- Section text.\n')
+        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+    def test_unpublished_notes_never_become_description(self):
+        self.asset.unlink()
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'
+                             '\t- ## Notes\n\t\t- Private note.\n'
+                             '\t- ## Ceremonial Annotations\n\t\t- Music from a patch.\n')
+        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+    def test_chapter_headings_alone_do_not_supply_description(self):
+        self.asset.unlink()
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'
+                             '\t- ## Chapters\n\t\t- ### 00:00 Opening\n\t\t\t- Chapter notes.\n')
+        with self.assertRaisesRegex(ValueError, "description"):
+            self.load()
     def test_chapter_players_do_not_replace_full_recording(self):
         self.page.write_text(self.props + self.body +
                              "\t- ## Chapters\n\t\t- ### Opening\n"
