@@ -4,20 +4,28 @@ const { readFileSync } = require('node:fs');
 const { join } = require('node:path');
 const url = source => `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
 const site = name => readFileSync(join(__dirname, '../site', name), 'utf8');
-let headerSequence, sequenceLinks, createPluginAdapter, installSite;
+let headerSequence, sequenceLinks;
 before(async () => {
-  const sequenceModule = url(site('header-sequence.js'));
-  const adapterModule = url(site('plugin-adapter.js'));
-  ({ default: headerSequence, sequenceLinks } = await import(sequenceModule));
-  ({ createPluginAdapter } = await import(adapterModule));
-  const bootstrap = site('bootstrap.js')
-    .replace("'./episode-player.js'", JSON.stringify(url(site('episode-player.js').replace("'./player.js'", JSON.stringify(url(site('player.js')))))))
-    .replace("'./navigation.js'", JSON.stringify(url(site('navigation.js'))))
-    .replace("'./plugin-adapter.js'", JSON.stringify(adapterModule))
-    .replace("'./header-sequence.js'", JSON.stringify(sequenceModule))
-    .replace("'./illuminated-initials.js'", JSON.stringify(url('export default { id: \"illuminated-initials\", apiVersion: 1, version: \"1\", setup() {} };')));
-  ({ installSite } = await import(url(bootstrap)));
+  ({ default: headerSequence, sequenceLinks } = await import(url(site('header-sequence.js'))));
 });
+
+/**
+ * The part of lsg's plugin host this plugin uses: it adopts the current page when the plugin
+ * starts and again on `adopt()`, aborting the previous page's signal first.
+ */
+function startPlugin(document) {
+  let listener = null, controller = null;
+  const adopt = () => {
+    controller?.abort();
+    controller = new AbortController();
+    listener?.({ main: document.querySelector('main'), signal: controller.signal });
+  };
+  const cleanup = headerSequence.setup({
+    apiVersion: 1, document,
+    onPageAdopted(fn) { listener = fn; adopt(); return () => { listener = null; }; },
+  });
+  return { adopt, dispose() { controller?.abort(); cleanup(); } };
+}
 
 /** Just enough DOM for the header, page properties and Gardener's sequence nav. */
 class Element {
@@ -125,7 +133,7 @@ function navigate(document, main) {
 
 test('a two-sided sequence puts Previous left of the spacer and Next right of it', () => {
   const document = siteDocument(page('B', { properties: { tags: 'Episode', prev: 'A', next: 'C' } }));
-  const adapter = createPluginAdapter(document, [headerSequence], { baseURL: 'https://example.com/gitpa/' });
+  const plugin = startPlugin(document);
   assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/A/', 'space', 'next /gitpa/C/', 'Home', 'button']);
   const [previous, next] = document.querySelector('.lsg-header').querySelectorAll('.gitpa-sequence');
   assert.equal(previous.textContent, 'A');
@@ -140,24 +148,24 @@ test('a two-sided sequence puts Previous left of the spacer and Next right of it
     assert.equal(link.querySelector('.gitpa-sequence-title').textContent, link.textContent);
   }
   assert.equal(document.querySelector('main').querySelectorAll('.page-property').length, 3, 'property rows stay');
-  adapter.dispose();
+  plugin.dispose();
   assert.deepEqual(headerItems(document), ['button', 'space', 'Home', 'button']);
 });
 
 test('a one-sided sequence shows only the side it has', () => {
   const document = siteDocument(page('GitP/A/Session/26/10/26-Mon', { properties: { prev: 'GitP/A/Session/26/10/24-Sat' } }));
-  const adapter = createPluginAdapter(document, [headerSequence], { baseURL: 'https://example.com/gitpa/' });
+  const plugin = startPlugin(document);
   assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/GitP/A/Session/26/10/24-Sat/', 'space', 'Home', 'button']);
-  adapter.dispose();
+  plugin.dispose();
 });
 
 test('a page without a sequence leaves the header as rendered', () => {
   const document = siteDocument(page('Plain', { properties: { tags: 'Preset' } }));
-  const adapter = createPluginAdapter(document, [headerSequence], { baseURL: 'https://example.com/gitpa/' });
+  const plugin = startPlugin(document);
   assert.deepEqual(headerItems(document), ['button', 'space', 'Home', 'button']);
   assert.deepEqual(sequenceLinks(page('Bare')), {});
   assert.deepEqual(sequenceLinks(page('Odd', { properties: { toString: 'A', constructor: 'B' } })), {});
-  adapter.dispose();
+  plugin.dispose();
 });
 
 test("Gardener's page-sequence nav supplies a side the property rows lack", () => {
@@ -169,69 +177,27 @@ test("Gardener's page-sequence nav supplies a side the property rows lack", () =
   });
 });
 
-test('in-site navigation through the site entry renders the new page and clears the old one', () => {
+test('in-site navigation renders the new page and clears the old one', () => {
   const document = siteDocument(page('B', { properties: { prev: 'A', next: 'C' } }));
-  document.readyState = 'complete'; document.defaultView = {};
-  document.addEventListener = document.removeEventListener = () => {};
-  let onPage;
-  const installation = installSite(document, {
-    createPlugins: doc => createPluginAdapter(doc, [headerSequence]),
-    createNavigation: options => { onPage = options.onPage; return { dispose() {} }; },
-  });
+  const installation = startPlugin(document);
   assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/A/', 'space', 'next /gitpa/C/', 'Home', 'button']);
 
   navigate(document, page('C', { properties: { prev: 'B' } }));
-  onPage({ document });
+  installation.adopt();
   assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/B/', 'space', 'Home', 'button']);
 
   navigate(document, page('Plain'));
-  onPage({ document });
+  installation.adopt();
   assert.deepEqual(headerItems(document), ['button', 'space', 'Home', 'button']);
 
   // The navigator may replace the whole header with the fetched page's header.
   navigate(document, page('D', { sequence: { next: 'E' } }));
   const old = document.querySelector('.lsg-header');
   old.replaceWith(header());
-  onPage({ document });
+  installation.adopt();
   assert.deepEqual(headerItems(document), ['button', 'space', 'next /gitpa/E/', 'Home', 'button']);
   assert.equal(old.querySelectorAll('.gitpa-sequence').length, 0);
 
   installation.dispose();
   assert.deepEqual(headerItems(document), ['button', 'space', 'Home', 'button']);
-});
-
-test('page signals abort before the next adoption and after disposal', () => {
-  const document = siteDocument(page('A'));
-  const signals = [];
-  const adapter = createPluginAdapter(document, [{ id: 'probe', apiVersion: 1, version: '1.0.0', setup(host) {
-    assert.equal(host.apiVersion, 1);
-    assert.equal(host.baseURL, 'https://example.com/gitpa/');
-    host.onPageAdopted(({ page: current, main, metadata, signal }) => {
-      assert.equal(main, document.querySelector('main'));
-      assert.deepEqual(metadata, {});
-      signals.push([current.title, current.id, signal]);
-    });
-  } }]);
-  navigate(document, page('B/Two'));
-  adapter.adopt();
-  assert.deepEqual(signals.map(([title, id, signal]) => [title, id, signal.aborted]), [['A', 'a', true], ['B/Two', 'b/two', false]]);
-  adapter.dispose(); adapter.adopt();
-  assert.equal(signals.length, 2);
-  assert.equal(signals[1][2].aborted, true);
-});
-
-test('a failing plugin is reported and the others keep rendering', () => {
-  const document = siteDocument(page('B', { properties: { prev: 'A' } }));
-  const errors = [];
-  const adapter = createPluginAdapter(document, [
-    { id: 'old', apiVersion: 2, setup: () => assert.fail('must not run') },
-    { id: 'broken', apiVersion: 1, version: '1.0.0', setup() { throw new Error('setup failed'); } },
-    { id: 'flaky', apiVersion: 1, version: '1.0.0', setup(host) { host.onPageAdopted(() => { throw new Error('render failed'); }); } },
-    headerSequence,
-  ], { report: error => errors.push(error.message) });
-  navigate(document, page('C', { properties: { prev: 'B' } }));
-  adapter.adopt();
-  assert.deepEqual(headerItems(document), ['button', 'prev /gitpa/B/', 'space', 'Home', 'button']);
-  assert.deepEqual(errors, ['Plugin old does not support host API version 1.', 'setup failed', 'render failed', 'render failed']);
-  adapter.dispose();
 });

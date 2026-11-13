@@ -62,7 +62,7 @@ class SourcePublicationTests(unittest.TestCase):
                 prepared, full = compile_episode(target.read_text())
                 self.assertEqual(full, recording)
                 self.assertEqual(split_page(prepared)[1], split_page(compiled)[1])
-                self.assertEqual(prepared.count(recording + '#t='), 11)
+                self.assertNotIn(recording + '#t=', prepared)
                 snapshot = {str(p.relative_to(downstream)): p.read_bytes()
                     for p in downstream.rglob('*') if p.is_file()}
                 sync()

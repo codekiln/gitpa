@@ -1,0 +1,8 @@
+{
+  "id": "header-sequence",
+  "apiVersion": 1,
+  "version": "1.0.0",
+  "module": "header-sequence.js",
+  "styles": ["header-sequence.css"],
+  "activation": "after-load"
+}

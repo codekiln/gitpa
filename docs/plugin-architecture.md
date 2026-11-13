@@ -2,7 +2,7 @@
 
 Gitpa should supply its podcast behavior through an optional plugin contract. Gardener should own standard Logseq publication and the host lifecycle. The first migration is the existing episode player: keep its playback logic, give it a persistent place in the shell, and notify it when a new page is adopted.
 
-**Status: Gitpa's browser features run as plugins on Gitpa's own host; Gardener's host is still a proposal.** Gardener does not yet export the proposed API. Gitpa's `site/plugin-adapter.js` implements the part of the contract these plugins use, until Gitpa moves to Gardener's host. [Gitpa issue #93](https://github.com/codekiln/gitpa/issues/93) tracks the consumer adaptation; [Gardener issue #195](https://github.com/codekiln/logseq-gardener/issues/195) tracks the shared host.
+**Status: Gitpa runs on Gardener's plugin host.** The recording player is Gardener's first-party `podcast-episode` plugin, turned on with `:lsg/plugins [:podcast-episode]` in `gitp-garden/logseq/config.edn` ([Gitpa issue #159](https://github.com/codekiln/gitpa/issues/159)). Gitpa's own `header-sequence` and `illuminated-initials` plugins run on the same host through `lsg publish --plugin`. [Gitpa issue #93](https://github.com/codekiln/gitpa/issues/93) tracks the rest of the consumer adaptation.
 
 ## Gardener host proposal
 
@@ -77,22 +77,21 @@ Validate a manifest's API major and local asset URLs before import. Keep the plu
 
 ## What ships in Gitpa now
 
-[`site/plugin-adapter.js`](../site/plugin-adapter.js) runs two plugins, listed in [`site/bootstrap.js`](../site/bootstrap.js): `episode-player` ([`site/episode-player.js`](../site/episode-player.js)) and `header-sequence` ([`site/header-sequence.js`](../site/header-sequence.js)). Each module exports a `manifest` (`id`, `apiVersion`, `version`, `module`, `styles`, `activation`, `pageProperties`) shaped like `RuntimeManifest` in [`contracts/gardener-plugin.d.ts`](../contracts/gardener-plugin.d.ts), and a plugin with that manifest and a `setup(host)` function. The adapter skips a plugin with an invalid manifest, a repeated id, or an unsupported API version, and reports it.
+Gardener's host owns navigation between pages and runs three plugins. `podcast-episode` ships inside `lsg`; [lsg/Ref/First-Party Plugins](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md) describes it. Gitpa's two plugins each have a manifest beside the module, which `scripts/build_site.py` passes with `--plugin`:
 
-The build reads each manifest from its module. For every page with `public:: true`, it publishes the properties the manifest lists as `<script type="application/json" data-gitpa-plugin="<id>">` in the page head. A plugin receives them as `metadata` in `onPageAdopted`; the adapter drops any other key. The navigator swaps these scripts in with each page. `header-sequence` requests `prev` and `next`; `episode-player` requests none.
+- `header-sequence` ([`site/header-sequence.js`](../site/header-sequence.js), [`site/header-sequence.lsg-plugin.json`](../site/header-sequence.lsg-plugin.json)) puts Previous and Next links in the header. [Gitpa issue #160](https://github.com/codekiln/gitpa/issues/160) replaces it with Gardener's `sequence-header`.
+- `illuminated-initials` ([`site/illuminated-initials.js`](../site/illuminated-initials.js), [`site/illuminated-initials.lsg-plugin.json`](../site/illuminated-initials.lsg-plugin.json)) decorates episode openings. A page is an episode when Gardener's page metadata has a `podcast-episode` entry.
 
-The adapter's host offers `apiVersion`, `document`, `baseURL`, `onPageAdopted` and `persistentRegion`. The episode player creates its player on the first page adopted, moves the player's footer into a persistent region, and shows later pages through the same player, so playback continues across navigation. A plugin that throws in `setup` or on a page is reported with `console.error`; the page and the other plugins keep working.
+The homepage query insertion stays in `scripts/build_site.py` until #160.
 
-Gitpa still lacks Gardener's host: versioned manifest loading from `lsg-site.json`, plugin-scoped route and asset validation, and build-time presentation contributions. The homepage query insertion and the `gitpa-episode` marker stay in `scripts/build_site.py`. Importing `site/player.js` no longer starts anything, so the episode player plugin is the only thing that creates the player.
-
-Run `npm ci --ignore-scripts` and `node --test tests/*.test.js`. These tests check the contract's types, the adapter (metadata filtering, manifest validation, failure isolation, regions), the episode player plugin with a fake host, and the site entry.
+Run `npm ci --ignore-scripts` and `node --test tests/*.test.js`. These tests check the contract's types and Gitpa's plugins with a fake host.
 
 Retain the existing cancelable `lsg:media-seek` event and ordinary media links during this first migration. Claiming a seek must remain synchronous within the user gesture. Preserve original-anchor validation, copied-context isolation, explicit recording links and native fallback. The plugin owns episode/session policy; it does not redefine the meaning of a normal page reference.
 
 ## Migration and acceptance
 
 - **Shared host:** implement Gardener issue #195's versioned manifest, public route/metadata/assets boundary, persistent region and lifecycle; publish a tested contract/example. Resolve API differences with Gitpa issue #93 before freezing them.
-- **Player adaptation, Gitpa:** done on Gitpa's adapter. Moving to the shared host replaces `site/plugin-adapter.js` and the head rewriting in `scripts/build_site.py`. Keep query and route rewrites until their own structured replacements exist.
+- **Player adaptation, Gitpa:** done. Gitpa uses Gardener's `podcast-episode` plugin and host. Keep the query rewrite until its own structured replacement exists (#160).
 - **Build contributions, both:** replace query-marker and route-parsing assumptions in focused follow-ups, preserving selected-source indexing and legacy destinations.
 
 Measure an unchanged representative garden with zero plugins and the actual Gitpa site before and after migration. Zero plugins should request no plugin modules and preserve normal publication. Keep the existing startup and desktop/phone interaction budgets; compare transferred bytes, first-title work and cold/warm optional loading. Measure synchronous seek handling and repeated-navigation listener/heap behavior through the existing harness.

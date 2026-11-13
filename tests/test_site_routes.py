@@ -22,22 +22,15 @@ class PublicRoutesTests(unittest.TestCase):
             with self.subTest(title=title), self.assertRaises(ValueError):
                 page_route(title)
 
-    def test_page_routes_read_readable_urls_and_skip_old_url_redirects(self):
+    def test_page_routes_read_readable_urls_and_root_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             title = 'GitP/A/Session/26/10/20-Tue'
             write_site(root, [(page_route(title), title), ('p-00000000000000aa.html', 'Guide/A\\B')])
-            for path in [root / page_output(title), root / 'p-00000000000000aa.html',
-                         root / 'p-00000000000000bb.html', root / 'index.html', root / 'pages.html']:
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_text('<head></head>')
             routes = PageRoutes(root)
             self.assertEqual(routes.routes['gitp/a/session/26/10/20-tue'], page_route(title))
             self.assertEqual(routes.file(page_route(title)), root / page_output(title))
-            # p-00000000000000bb.html is a redirect to an old address, not a page.
-            self.assertEqual(routes.documents(), sorted([
-                root / page_output(title), root / 'p-00000000000000aa.html',
-                root / 'index.html', root / 'pages.html']))
+            self.assertEqual(routes.file(routes.routes['guide/a\\b']), root / 'p-00000000000000aa.html')
 
     def test_feed_targets_and_subscribed_artwork_exist(self):
         with tempfile.TemporaryDirectory() as directory:

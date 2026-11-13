@@ -70,19 +70,13 @@ export function renderSequence(document, main) {
   return added;
 }
 
-export const manifest = {
-  "id": "header-sequence",
-  "apiVersion": 1,
-  "version": "1.0.0",
-  "module": "header-sequence.js",
-  "styles": ["header-sequence.css"],
-  "activation": "after-load",
-  "pageProperties": ["prev", "next"]
-};
-
-/** Previous and Next links in the header for pages with `prev::` or `next::`. */
+/**
+ * Previous and Next links in the header for pages with `prev::` or `next::`.
+ * lsg's plugin host runs it; its manifest is header-sequence.lsg-plugin.json.
+ */
 export default {
-  ...manifest,
+  id: 'header-sequence',
+  apiVersion: 1,
   setup(host) {
     let shown = [];
     const remove = links => { for (const link of links) link.remove(); };

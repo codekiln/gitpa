@@ -11,7 +11,9 @@ function fixture() {
   let listener, episode = true;
   const elements = [];
   const document = {
-    querySelector: () => episode ? {} : null,
+    // lsg's page metadata: an episode page has an entry for the podcast-episode plugin.
+    querySelector: selector => selector === 'script[data-lsg-page]'
+      ? { textContent: JSON.stringify({ plugins: episode ? { 'podcast-episode': { recording: 'r.mp3' } } : {} }) } : null,
     createElement() {
       const element = { className: '', innerHTML: '', children: [],
         append(child) { this.children.push(child); },

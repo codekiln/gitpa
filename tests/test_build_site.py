@@ -1,3 +1,4 @@
+import json
 import sys
 from pathlib import Path
 import tempfile
@@ -6,7 +7,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from site_fixture import write_site
 from build_site import (prepare_homepage, public_pages, query_outline, install_homepage_query, QUERY_PLACEHOLDER,
-                        plugin_manifests, plugin_page_properties, install_plugin_metadata, check_property_names)
+                        PLUGINS, check_property_names)
 
 
 class HomepageTests(unittest.TestCase):
@@ -56,7 +57,7 @@ class HomepageTests(unittest.TestCase):
                                 ('p-bbb.html', 'GitP/A/Session/Newest'),
                                 ('p-ccc.html', 'GitP/A/Session/Older')])
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text('<main><a class="external-link" target="_blank" rel="noopener noreferrer" '
+                (output / name).write_text('<head></head><main><a class="external-link" target="_blank" rel="noopener noreferrer" '
                                            f'href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul></main>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
@@ -64,6 +65,8 @@ class HomepageTests(unittest.TestCase):
             self.assertIn('<a class="page-ref" href="p-bbb.html">GitP/A/Session/Newest</a>', text)
             self.assertLess(text.index('Newest'), text.index('Older'))
             self.assertIn('data-copy-feed>Copy feed URL</button>', text)
+            self.assertIn('<script type="module" src="/gitpa/copy-feed.js"></script></head>', text)
+            self.assertTrue((output / 'copy-feed.js').is_file())
             self.assertNotIn(QUERY_PLACEHOLDER, text)
             self.assertEqual(text, (output / 'p-aaa.html').read_text())
             with self.assertRaisesRegex(ValueError, 'placeholder'):
@@ -78,7 +81,7 @@ class HomepageTests(unittest.TestCase):
                                 ('p-bbb.html', 'GitP/A/Session/Newest'),
                                 ('p-ccc.html', 'GitP/A/Session/Older')])
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul>')
+                (output / name).write_text(f'<head></head><a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul><li>{QUERY_PLACEHOLDER}</li></ul>')
             install_homepage_query(output, self.result())
             self.assertIn('href="p-bbb.html"', (output / 'index.html').read_text())
 
@@ -90,7 +93,7 @@ class HomepageTests(unittest.TestCase):
                                 ('p-ccc.html', 'GitP/A/Session/Older')])
             bullet = '<a class="bullet" href="#"></a>'
             for name in ['index.html', 'p-aaa.html']:
-                (output / name).write_text(f'<a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
+                (output / name).write_text(f'<head></head><a href="https://codekiln.github.io/gitpa/rss.xml">podcast RSS feed</a><ul class="outline"><li>{bullet}{QUERY_PLACEHOLDER}</li></ul>')
             install_homepage_query(output, self.result())
             text = (output / 'index.html').read_text()
             self.assertEqual(text.count(bullet), 2)
@@ -153,34 +156,17 @@ class HomepageTests(unittest.TestCase):
             self.assertEqual(nested.read_text(), 'public:: false\n')
 
 
-class PluginMetadataTests(unittest.TestCase):
-    def test_manifests_come_from_the_plugin_modules(self):
-        manifests = {manifest['id']: manifest for manifest in plugin_manifests()}
-        self.assertEqual(manifests['header-sequence']['pageProperties'], ['prev', 'next'])
-        self.assertEqual(manifests['episode-player']['pageProperties'], [])
-
-    def test_only_requested_properties_of_public_pages_are_published(self):
-        manifests = [{'id': 'header-sequence', 'pageProperties': ['prev', 'next']}]
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            graph, output = root / 'graph', root / 'out'
-            (graph / 'pages').mkdir(parents=True)
-            output.mkdir()
-            (graph / 'pages/B.md').write_text('public:: true\nprev:: [[A]]\ntags:: secret\n- body\n')
-            (graph / 'pages/Plain.md').write_text('public:: true\ntags:: x\n- body\n')
-            (graph / 'pages/Hidden.md').write_text('public:: false\nprev:: [[Nope]]\n')
-            found = plugin_page_properties(graph, manifests)
-            self.assertEqual(found, {'b': {'header-sequence': {'prev': '[[A]]'}}})
-            write_site(output, [('B/', 'B'), ('Plain/', 'Plain')])
-            for name in ['B', 'Plain']:
-                (output / name).mkdir()
-                (output / name / 'index.html').write_text('<head></head><body></body>')
-            install_plugin_metadata(output, {'b': {'header-sequence': {'prev': '[[A]]</script><b>'}}})
-            text = (output / 'B/index.html').read_text()
-            self.assertIn('<script type="application/json" data-gitpa-plugin="header-sequence">', text)
-            self.assertIn('\\u003c/script>', text)
-            self.assertEqual(text.count('</script>'), 1)
-            self.assertNotIn('data-gitpa-plugin', (output / 'Plain/index.html').read_text())
+class PluginTests(unittest.TestCase):
+    def test_each_gitpa_plugin_manifest_names_its_module_and_id(self):
+        site = Path(__file__).resolve().parents[1] / 'site'
+        for plugin in PLUGINS:
+            with self.subTest(plugin=plugin):
+                manifest = json.loads((site / f'{plugin}.lsg-plugin.json').read_text())
+                self.assertEqual(manifest['id'], plugin)
+                module = (site / manifest['module']).read_text()
+                self.assertIn(f"id: '{plugin}',", module)
+                for stylesheet in manifest.get('styles', []):
+                    self.assertTrue((site / stylesheet).is_file())
 
 
 class PropertyNameTests(unittest.TestCase):

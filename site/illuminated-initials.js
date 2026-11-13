@@ -1,13 +1,3 @@
-export const manifest = {
-  "id": "illuminated-initials",
-  "apiVersion": 1,
-  "version": "1.0.0",
-  "module": "illuminated-initials.js",
-  "styles": ["illuminated-initials.css"],
-  "activation": "after-load",
-  "pageProperties": []
-};
-
 // A small ink garden is drawn anew in the browser. The page title seeds its
 // composition so returning to an episode brings back the same illumination.
 function seedFor(value) {
@@ -55,8 +45,22 @@ function illuminate(container, seed, chapter = false) {
   }
 }
 
+/**
+ * True on a page that lsg's podcast-episode plugin treats as an episode: the page
+ * metadata lsg writes for its plugin host has an entry for that plugin.
+ */
+export function isEpisode(document) {
+  try {
+    return Object.hasOwn(JSON.parse(document.querySelector('script[data-lsg-page]')?.textContent ?? '{}').plugins ?? {}, 'podcast-episode');
+  } catch {
+    return false;
+  }
+}
+
+// lsg's plugin host runs this plugin; its manifest is illuminated-initials.lsg-plugin.json.
 export default {
-  ...manifest,
+  id: 'illuminated-initials',
+  apiVersion: 1,
   setup(host) {
     let initials = [];
     const clear = () => {
@@ -65,7 +69,7 @@ export default {
     };
     const unsubscribe = host.onPageAdopted(({ main, page }) => {
       clear();
-      if (!main || !host.document.querySelector('meta[name="gitpa-episode"]')) return;
+      if (!main || !isEpisode(host.document)) return;
       const headings = [...main.querySelectorAll('h2')];
       const annotations = headings.find(h => h.textContent.trim().toLowerCase() === 'ceremonial annotations');
       const chapters = headings.find(h => h.textContent.trim().toLowerCase() === 'chapters');
