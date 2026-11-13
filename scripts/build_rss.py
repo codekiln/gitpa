@@ -79,11 +79,11 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
     guids, audio_urls = set(), set()
     mounts = asset_mounts.load(garden)
 
-    def read(path: Path) -> str:
+    def read_with_public_links(path: Path) -> str:
         return asset_mounts.public_links(path.read_text(encoding="utf-8"), mounts, path.stem.replace("___", "/"))
 
     for path in sorted((garden / "pages").glob("*.md")):
-        lines, body = split_page(read(path))
+        lines, body = split_page(read_with_public_links(path))
         props = properties(lines)
         if props.get("public") != "true":
             continue
@@ -103,7 +103,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         audio = re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", recording_blocks)
         for name in embeds:
             asset_path = page_path(garden, name)
-            _, asset_body = split_page(read(asset_path))
+            _, asset_body = split_page(read_with_public_links(asset_path))
             audio.extend(re.findall(r"!\[[^\]]*\]\((https://[^)]+\.mp3)\)", asset_body))
         if len(audio) != 1:
             raise ValueError(f"{path}: expected one MP3 recording link")
