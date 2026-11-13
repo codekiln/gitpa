@@ -294,6 +294,10 @@
  ;; sequence-header puts the prev:: and next:: pages in the header.
  :lsg/plugins [:podcast-episode :sequence-header]
 
+ ;; Readers can save the pages they visit and read them again without a network
+ ;; (More menu > Save pages for offline reading). Logseq ignores the key.
+ :lsg/offline true
+
  ;; Graph view configuration.
  ;; Example usage:
  ;; :graph/settings
