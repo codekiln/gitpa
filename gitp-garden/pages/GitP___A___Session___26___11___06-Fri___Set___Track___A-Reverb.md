@@ -6,6 +6,6 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # A-Reverb
   type:: return
-  audio-to:: AudioOut/Master
+  audio-to:: Master
   devices:: Reverb
 	- Reverb for 1B-Audio, 2B-Audio and commentary.

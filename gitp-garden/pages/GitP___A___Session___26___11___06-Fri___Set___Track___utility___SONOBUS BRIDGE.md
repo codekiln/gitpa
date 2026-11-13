@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # SONOBUS BRIDGE
   type:: audio
-  audio-from:: AudioIn/None
-  audio-to:: AudioOut/None
+  audio-from:: No Input
+  audio-to:: Sends Only
   monitor:: in
   arm:: false
   devices:: PluginDevice

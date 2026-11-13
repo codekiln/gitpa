@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # B-Aud-In
   type:: audio
-  audio-from:: AudioIn/External/M2
-  audio-to:: AudioOut/External/M3
+  audio-from:: Ext. In 3
+  audio-to:: Ext. Out 4
   monitor:: auto
   arm:: false
   devices:: Mastering - Make It Loud, Compressor2

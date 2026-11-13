@@ -1,7 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+entity-proxy-source-properties:: public
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FAbleton%2FTrack%2FTrack
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Ableton___Track___Track.md
-logseq-proxy-last-sync-date:: [[2026-11-02]]
+logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # Ableton Track
 	- In this garden, **Ableton Track** pages model one audio or MIDI track in an [[Logseq/Entity/Ableton/Set]].

@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # MF to LPP
   type:: midi
-  midi-from:: MidiIn/External.Dev:Arturia MicroFreak (unknown mididevice)/-1
-  midi-to:: MidiOut/External.Dev:Launchpad Pro MK3 (LPProMK3 MIDI)/0
+  midi-from:: Arturia MicroFreak (unknown mididevice) All Channels
+  midi-to:: Launchpad Pro MK3 (LPProMK3 MIDI) Ch. 1
   midi-channel:: all
   monitor:: auto
   arm:: true

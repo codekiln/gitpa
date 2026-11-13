@@ -6,8 +6,8 @@ logseq-proxy-last-sync-date:: [[2026-11-13]]
 
 - # 3A-Audio
   type:: audio
-  audio-from:: AudioIn/Track.23/TrackOut
-  audio-to:: AudioOut/Track.48/TrackIn
+  audio-from:: [[GitP/A/Session/26/11/06-Fri/Set/Track/1A-Audio]] Post Mixer
+  audio-to:: [[GitP/A/Session/26/11/06-Fri/Set/Track/3n4]] Track In
   monitor:: auto
   arm:: true
   devices:: Mastering - Make It Loud, Compressor2
