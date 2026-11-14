@@ -5,9 +5,10 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-29 Thu]]
 podcast-guid:: urn:uuid:644ffa28-ad6a-5b9e-b8cd-03e6360290be
 podcast-published-at:: 2026-10-30T00:38:25+00:00
+next:: [[GitP/A/Session/26/11/01-Sun]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F10%2F29-Thu
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___10___29-Thu.md
-logseq-proxy-last-sync-date:: [[2026-10-31]]
+logseq-proxy-last-sync-date:: [[2026-11-09]]
 
 - # Hallowed Speaking
 	- The ghost made a hot appearance here for a live fall fest. Speech patches caught the vibe, gave way to swelling pads, unstable tones and filtered noise, with phrases captured and returned as overlapping audio loops.
@@ -43,6 +44,7 @@ logseq-proxy-last-sync-date:: [[2026-10-31]]
 			- The MIDI contains no preset-program, bank-selection or oscillator-type messages. The preset order comes from the performance account; the chapter boundaries follow captures and gestures rather than verified preset switches. [[Microfreak/UG/21 Appendix D - CC Values]] gives the controller names.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/016 Voidom]]
+		  id:: 6ae46a2c-a94c-40bd-83ba-948dec2a18bd
 			- #### tentative invocation
 				- Low, warbled establishment. mostly checking sound.
 			- #### 03:07 secondo strato
