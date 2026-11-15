@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 alias:: [[Explanation Page]], [[Diataxis Explanation Page]], [[Diataxis Concept Page]]
 logseq-entity-hierarchy-type:: [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FDiataxis%2FExplanation
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Logseq___Entity___Diataxis___Explanation.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Diataxis___Explanation.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # Diataxis Explanation

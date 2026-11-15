@@ -5,7 +5,7 @@ midi-note:: 40
 prev:: [[Music/Note/2/D♯]]
 next:: [[Music/Note/2/F]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F2%2FE
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Music___Note___2___E.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Note___2___E.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # E2

@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Concept"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Concept": {
+      "files": [],
+      "page": "Logseq/Entity/Concept",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Concept",
   "version": 2
 }

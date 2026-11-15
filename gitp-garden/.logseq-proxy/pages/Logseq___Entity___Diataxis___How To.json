@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Diataxis/How To"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Diataxis/How To": {
+      "files": [],
+      "page": "Logseq/Entity/Diataxis/How To",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Diataxis/How To",
   "version": 2
 }

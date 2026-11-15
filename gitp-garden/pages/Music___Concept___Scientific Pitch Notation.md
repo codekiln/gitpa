@@ -4,7 +4,7 @@ tags:: [[Diataxis/Concept]]
 alias:: [[Scientific Pitch Notation]], [[American Standard Pitch Notation]]
 see-also:: [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range]], [[Ableton/Live/UG]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FConcept%2FScientific%20Pitch%20Notation
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Music___Concept___Scientific%20Pitch%20Notation.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Concept___Scientific%20Pitch%20Notation.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # Scientific pitch notation

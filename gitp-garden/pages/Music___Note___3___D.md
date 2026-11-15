@@ -5,7 +5,7 @@ midi-note:: 50
 prev:: [[Music/Note/3/C♯]]
 next:: [[Music/Note/3/D♯]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F3%2FD
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Music___Note___3___D.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Note___3___D.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # D3

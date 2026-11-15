@@ -6,7 +6,13 @@
     ".",
     "GitP/Ceremon/y/Fallveter"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::GitP/Ceremon/y/Fallveter": {
+      "files": [],
+      "page": "GitP/Ceremon/y/Fallveter",
+      "source_graph": "."
+    }
+  },
   "page": "GitP/Ceremon/y/Fallveter",
   "version": 2
 }

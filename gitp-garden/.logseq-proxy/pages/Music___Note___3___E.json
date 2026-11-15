@@ -8,7 +8,13 @@
     ".",
     "Music/Note/3/E"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/3/E": {
+      "files": [],
+      "page": "Music/Note/3/E",
+      "source_graph": "."
+    }
+  },
   "page": "Music/Note/3/E",
   "version": 2
 }

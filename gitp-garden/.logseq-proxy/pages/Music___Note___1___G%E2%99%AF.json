@@ -8,7 +8,13 @@
     ".",
     "Music/Note/1/G\u266f"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/1/G\u266f": {
+      "files": [],
+      "page": "Music/Note/1/G\u266f",
+      "source_graph": "."
+    }
+  },
   "page": "Music/Note/1/G\u266f",
   "version": 2
 }

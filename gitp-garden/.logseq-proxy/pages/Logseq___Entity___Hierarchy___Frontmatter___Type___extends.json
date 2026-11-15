@@ -6,7 +6,13 @@
     ".",
     "Logseq/Entity/Hierarchy/Frontmatter/Type/extends"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Hierarchy/Frontmatter/Type/extends": {
+      "files": [],
+      "page": "Logseq/Entity/Hierarchy/Frontmatter/Type/extends",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Hierarchy/Frontmatter/Type/extends",
   "version": 2
 }

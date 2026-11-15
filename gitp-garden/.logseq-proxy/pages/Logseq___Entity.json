@@ -6,7 +6,13 @@
     ".",
     "Logseq/Entity"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity": {
+      "files": [],
+      "page": "Logseq/Entity",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity",
   "version": 2
 }

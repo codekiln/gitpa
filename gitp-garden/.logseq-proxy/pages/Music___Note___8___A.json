@@ -8,7 +8,13 @@
     ".",
     "Music/Note/8/A"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/8/A": {
+      "files": [],
+      "page": "Music/Note/8/A",
+      "source_graph": "."
+    }
+  },
   "page": "Music/Note/8/A",
   "version": 2
 }

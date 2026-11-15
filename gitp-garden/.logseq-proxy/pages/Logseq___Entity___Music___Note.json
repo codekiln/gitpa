@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Music/Note"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Music/Note": {
+      "files": [],
+      "page": "Logseq/Entity/Music/Note",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Music/Note",
   "version": 2
 }

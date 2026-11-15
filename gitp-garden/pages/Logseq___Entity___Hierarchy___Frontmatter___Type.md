@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]], [[Logseq/Entity/Proxy/Page]]
 alias:: [[logseq-entity-hierarchy-type]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FHierarchy%2FFrontmatter%2FType
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Logseq___Entity___Hierarchy___Frontmatter___Type.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Hierarchy___Frontmatter___Type.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # `logseq-entity-hierarchy-type::` — how a child entity relates to its parent

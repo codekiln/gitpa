@@ -6,7 +6,13 @@
     ".",
     "Logseq/Frontmatter/alias"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Frontmatter/alias": {
+      "files": [],
+      "page": "Logseq/Frontmatter/alias",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Frontmatter/alias",
   "version": 2
 }

@@ -2,7 +2,7 @@ public:: true
 logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Music/Note]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FMusic%2FNote
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Logseq___Entity___Music___Note.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Music___Note.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # Music Note

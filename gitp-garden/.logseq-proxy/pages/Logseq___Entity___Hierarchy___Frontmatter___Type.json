@@ -8,7 +8,13 @@
     ".",
     "Logseq/Entity/Hierarchy/Frontmatter/Type"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Hierarchy/Frontmatter/Type": {
+      "files": [],
+      "page": "Logseq/Entity/Hierarchy/Frontmatter/Type",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Hierarchy/Frontmatter/Type",
   "version": 2
 }

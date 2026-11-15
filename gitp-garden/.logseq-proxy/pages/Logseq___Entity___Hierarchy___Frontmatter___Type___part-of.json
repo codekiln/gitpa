@@ -6,7 +6,13 @@
     ".",
     "Logseq/Entity/Hierarchy/Frontmatter/Type/part-of"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Hierarchy/Frontmatter/Type/part-of": {
+      "files": [],
+      "page": "Logseq/Entity/Hierarchy/Frontmatter/Type/part-of",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity/Hierarchy/Frontmatter/Type/part-of",
   "version": 2
 }

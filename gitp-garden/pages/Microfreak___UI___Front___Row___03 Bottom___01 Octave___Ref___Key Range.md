@@ -4,7 +4,7 @@ tags:: [[Diataxis/Reference]]
 up:: [[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]
 see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Microfreak/UI/Front/Row/05 Keys]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FUI%2FFront%2FRow%2F03%20Bottom%2F01%20Octave%2FRef%2FKey%20Range
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Microfreak___UI___Front___Row___03%20Bottom___01%20Octave___Ref___Key%20Range.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UI___Front___Row___03%20Bottom___01%20Octave___Ref___Key%20Range.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # Octave key range reference

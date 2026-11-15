@@ -5,7 +5,7 @@ midi-note:: 12
 prev:: [[Music/Note/-1/B]]
 next:: [[Music/Note/0/C♯]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F0%2FC
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Music___Note___0___C.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Note___0___C.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # C0

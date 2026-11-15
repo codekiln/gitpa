@@ -7,7 +7,7 @@ podcast-published-at:: 2026-11-08T06:38:57-05:00
 prev:: [[GitP/A/Session/26/11/06-Fri]]
 next:: [[GitP/A/Session/26/11/14-Sat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F07-Sat
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/GitP___A___Session___26___11___07-Sat.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___07-Sat.md
 logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # *four colors of inifini*
