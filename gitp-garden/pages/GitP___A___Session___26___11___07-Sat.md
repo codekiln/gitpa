@@ -5,9 +5,11 @@ date-created:: [[2026-11-07 Sat]]
 podcast-guid:: gitpa20261107
 podcast-published-at:: 2026-11-08T06:38:57-05:00
 prev:: [[GitP/A/Session/26/11/06-Fri]]
+next:: [[GitP/A/Session/26/11/14-Sat]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F07-Sat
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___07-Sat.md
-logseq-proxy-last-sync-date:: [[2026-11-09]]
+logseq-proxy-last-sync-date:: [[2026-11-14]]
+
 - # Ghost in the Patch - four colors of inifini
 	- Four sequencer tracks, four colors, and Infini Pad. The loops gather one at a time, then return in a changed sound.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3)
@@ -23,7 +25,7 @@ logseq-proxy-last-sync-date:: [[2026-11-09]]
 			- #### changes
 				- ##### fewer *audio* tracks into the garden
 					- [[My/Principle/Simplify]] to four [[Ableton Audio Track]]s
-					  each corresponding to and colored after a [[Launchpad/UI/5-Sequencer/Track]].
+					  each corresponding to and colored after a [[Launchpad/UI/Mode/5-Sequencer/Track]].
 						- odd-numbered tracks - crossfade A
 						- even numbered tracks - crossfade B
 				- ##### fewer *instrumental* tracks into the patch
@@ -38,16 +40,16 @@ logseq-proxy-last-sync-date:: [[2026-11-09]]
 		- ### theory - `1, 2, 4, 8`
 			- plan - invoke a 15-based **sequential** raga of `1 + 2 + 4 + 8`
 			- pulled by the concordance between sequencer tracks and audio tracks, ended up changing this to **parallel** invocation
-				- [[Launchpad/UI/5-Sequencer/Track/1-Orange]] - 1 whole note
-				- [[Launchpad/UI/5-Sequencer/Track/2-Violet]] - 2 whole notes
-				- [[Launchpad/UI/5-Sequencer/Track/3-Green]] - 4 whole notes
-				- [[Launchpad/UI/5-Sequencer/Track/4-Salmon]] - 8 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/1-Orange]] - 1 whole note
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/2-Violet]] - 2 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/3-Green]] - 4 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/4-Salmon]] - 8 whole notes
 		- ### technique - receive one sequencer track audio at a time
 			- #### [[Algo]]
-				- mute all [[Launchpad/UI/5-Sequencer/Track]]s
+				- mute all [[Launchpad/UI/Mode/5-Sequencer/Track]]s
 				- `for` track in `(1, 2, 3, 4):`
 					- unmute the sequencer track so it's MIDI flows into the [[Microfreak]]
-					- create sequence on [[Launchpad/UI/5-Sequencer/Track]]
+					- create sequence on [[Launchpad/UI/Mode/5-Sequencer/Track]]
 					- record track into equivalent  [[Ableton Audio Track]] in the [[Launchpad/UG/05 Session Mode]]
 					- mute track
 			- #### result
@@ -55,9 +57,9 @@ logseq-proxy-last-sync-date:: [[2026-11-09]]
 					- few spirits came in the beginning here; very low signal to boredom ratio
 						- long periods of unintentional silence
 			- [[Learned]]
-				- practical issue with [[Launchpad/UI/5-Sequencer/Track/1-Orange]] - 1 whole note
+				- practical issue with [[Launchpad/UI/Mode/5-Sequencer/Track/1-Orange]] - 1 whole note
 					- it's hard to see what the pulse is on [[Launchpad/UG/09 Sequencer]]
 					- ==best to keep the [[Launchpad/UG/09 Sequencer/05 Pattern Settings]] with length at least 2==
-				- [[Launchpad/UI/5-Sequencer]] is the best way to learn about what the pulse is in [[Ableton/Live]] when the click track is off.
+				- [[Launchpad/UI/Mode/5-Sequencer]] is the best way to learn about what the pulse is in [[Ableton/Live]] when the click track is off.
 	- ## Chapters
 		-
