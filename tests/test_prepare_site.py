@@ -169,6 +169,16 @@ class PresentationTests(unittest.TestCase):
         self.assertIn('[MicroFreak preset A](https://example.com/file.mfpz)', rendered)
         self.assertIn('[Microfreak MIDI](https://example.com/file.mid)', rendered)
         self.assertNotIn('{{embed', rendered)
+    def test_public_page_embed_stays_for_the_renderer(self):
+        pages = {'GitP/Ceremon/y/Fallveter': (['public:: true\n'], '# *fallveter*\n\t- ceremony whence\n')}
+        body = '- # Episode\n\t- {{embed [[GitP/Ceremon/y/Fallveter]]}}\n'
+        self.assertEqual(body, listener_body('Episode', body, pages))
+    def test_private_or_missing_page_embed_fails(self):
+        body = '- # Episode\n\t- {{embed [[GitP/Ceremon/y/Fallveter]]}}\n'
+        with self.assertRaisesRegex(ValueError, 'not public: GitP/Ceremon/y/Fallveter'):
+            listener_body('Episode', body, {'GitP/Ceremon/y/Fallveter': ([], '# *fallveter*\n')})
+        with self.assertRaisesRegex(ValueError, 'Missing embedded page: GitP/Ceremon/y/Fallveter'):
+            listener_body('Episode', body, {})
     def test_only_selected_notes_survive(self):
         body = '- # Episode\n\t- ## Notes\n\t\t- Private idea\n\t- ## Files\n\t\t- Download\n'
         self.assertNotIn('Private idea', listener_body('Episode', body, {}))

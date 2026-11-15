@@ -54,6 +54,17 @@ class FeedTests(unittest.TestCase):
                              '\t- ## Ceremonial Annotations\n\t\t- Music from a patch.\n\t\t- A second paragraph.\n'
                              '\t- ## Chapters\n\t\t- ### 00:00 Opening\n\t\t\t- Chapter notes.\n')
         self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+    def test_title_markup_becomes_plain_text(self):
+        self.page.write_text(self.props + self.body.replace('- # A session', '- # [[GitP/Ceremon/y/Fallveter]] - *Empty* [Hall]([[Place/Hall]])'))
+        self.assertEqual(self.load()[0]['episode_title'], 'Fallveter - Empty Hall')
+    def test_embedded_page_supplies_description(self):
+        (self.garden / 'pages/GitP___Ceremon___y___Fallveter.md').write_text(
+            'public:: true\n# *fallveter*\n\t- ceremony whence  \n\t  participants enlistened to \n\t  be empresented.\n')
+        self.page.write_text(self.props + '- # [[GitP/Ceremon/y/Fallveter]] - Empty Hall\n'
+                             '\t- {{embed [[GitP/Ceremon/y/Fallveter]]}}\n'
+                             '\t- {{embed [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]]}}\n'
+                             '\t- ## Ceremonial Annotations\n\t\t- Section text.\n')
+        self.assertEqual(self.load()[0]['description'], 'ceremony whence\nparticipants enlistened to\nbe empresented.')
     def test_opening_paragraph_wins_over_section_paragraph(self):
         self.page.write_text(self.props + self.body + '\t- ## Ceremonial Annotations\n\t\t- Section text.\n')
         self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
