@@ -12,7 +12,7 @@ Set `public:: true` on the episode page to release the episode on the website an
 
 The November and December 2024 recordings enter the feed with this release. Their publication times record that release; their recording dates remain on the session pages. The September 2026 episodes retain their existing feed identities and publication times.
 
-Run `mise run rss:build` and commit `rss.xml` with a publication PR. `mise run rss:check` checks the feed against the public pages and audio server; `mise run rss:test` runs offline tests. Merging a publication PR triggers the Pages workflow, which publishes the website and [podcast feed](https://codekiln.github.io/gitpa/rss.xml).
+Run `mise run rss:build` and commit `rss.xml` with a publication PR. `mise run rss:check` checks the feed against the public pages and audio server; `mise run rss:test` runs the Python tests offline, and `mise run test` runs every test the Pages workflow runs, after installing the npm packages they need. Merging a publication PR triggers the Pages workflow, which publishes the website and [podcast feed](https://codekiln.github.io/gitpa/rss.xml).
 
 Install the staged-file guard with `lefthook install`. It uses the machine's `mise run secrets:scan` task. GitHub Actions scans the public source before publishing.
 
