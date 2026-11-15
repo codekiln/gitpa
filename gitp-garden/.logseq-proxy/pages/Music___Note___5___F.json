@@ -1,0 +1,20 @@
+{
+  "body_sha256": "13d75b39beca1912703818c05fdda677c39ec9b5e4495e2bced97d3bcf37f967",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Note]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Note/5/F"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/5/F": {
+      "files": [],
+      "page": "Music/Note/5/F",
+      "source_graph": "."
+    }
+  },
+  "page": "Music/Note/5/F",
+  "version": 2
+}

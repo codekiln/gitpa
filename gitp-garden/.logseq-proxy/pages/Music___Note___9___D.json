@@ -1,0 +1,20 @@
+{
+  "body_sha256": "6c2f6c246cfec0679c9d0d3add816c2be7b73266fa140491bfb16633bba73509",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Note]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Note/9/D"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/9/D": {
+      "files": [],
+      "page": "Music/Note/9/D",
+      "source_graph": "."
+    }
+  },
+  "page": "Music/Note/9/D",
+  "version": 2
+}

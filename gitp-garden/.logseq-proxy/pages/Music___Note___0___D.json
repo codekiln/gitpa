@@ -1,0 +1,20 @@
+{
+  "body_sha256": "7750d988cd5a6c5b61273152fa96b27f5294ae70f6743b2b317848b3891d56de",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Note]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Note/0/D"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Note/0/D": {
+      "files": [],
+      "page": "Music/Note/0/D",
+      "source_graph": "."
+    }
+  },
+  "page": "Music/Note/0/D",
+  "version": 2
+}

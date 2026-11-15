@@ -1,0 +1,12 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Music/Note]], [[Logseq/Entity/Proxy/Page]]
+alias:: [[E1]]
+midi-note:: 28
+prev:: [[Music/Note/1/D♯]]
+next:: [[Music/Note/1/F]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F1%2FE
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Note___1___E.md
+logseq-proxy-last-sync-date:: [[2026-11-15]]
+
+- # E1
+	- MIDI note 28, about 41.20 Hz at A440. Ableton Live and Arturia name it E0.

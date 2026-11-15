@@ -10,16 +10,17 @@ prev:: [[Microfreak/Preset/398 Init]]
 next:: [[Microfreak/Preset/400 Init]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 56ad9ed9134424d81e00b1f841c072239e5cfbd5611f464941c90be07d0df519
-preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
+preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a9580872d57a51
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F399%20FireAlarmLoBat
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___399%20FireAlarmLoBat.md
-logseq-proxy-last-sync-date:: [[2026-11-14]]
+logseq-proxy-last-sync-date:: [[2026-11-15]]
 - # Notes
-	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for the [[Ghost in the Patch Ceremony]] *Foreveter* on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
+	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for [[GitP/Ceremon/y/Fallveter]] on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
 	- ## Sound
 		- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] with the waves set to sine.
-		- Each chirp is the highest G on the keyboard with octave +3 (G8), at the minimum sequencer gate length of 10 ms. Attack and decay are at zero.
+		- Each chirp is the highest G on the keyboard with octave +3, [[G7]], at the minimum sequencer gate length of 10 ms. Attack and decay are at zero.
+		- The chirps recorded in [[GitP/A/Session/26/11/14-Sat]] sound at about 3140 Hz, close to G7's 3136 Hz.
 	- ## Sequences
 		- Set the tempo to 60 BPM for the intervals below.
 		- Sequence A chirps once every 60 seconds.
@@ -28,7 +29,7 @@ logseq-proxy-last-sync-date:: [[2026-11-14]]
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 399 over USB on November 12, 2026 with `mise run microfreak:download --slot 399`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/399 FireAlarmLoBat/Asset/Device-Read-2026-11-12/bin]].
+		- [Download the slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/399 FireAlarmLoBat/Asset/Device-Read-2026-11-12/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 3 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.500. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.500.

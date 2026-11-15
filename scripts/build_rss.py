@@ -56,32 +56,76 @@ def audio_metadata(url: str) -> tuple[int, str]:
         return length, content_type
 
 
-def episode_copy(body: str, path: Path) -> tuple[str, str]:
+def plain(text: str) -> str:
+    """Logseq inline markup as listener text.
+
+    A labelled link keeps its label, a page link keeps the last part of the
+    page name, and emphasis markers are dropped.
+    """
+    text = re.sub(r"\[([^\]]*)\]\(\[\[[^\]]+\]\]\)", r"\1", text)
+    text = re.sub(r"\[\[([^\]]+)\]\]", lambda link: link[1].rsplit("/", 1)[-1], text)
+    return re.sub(r"(\*\*|\*)(\S(?:.*?\S)?)\1", r"\2", text)
+
+
+def outline(body: str) -> list[tuple[int, str]]:
+    """Return each block of a Logseq outline as its depth and text.
+
+    A block's continuation lines join its text on new lines; block properties
+    are left out. An unbulleted first line, such as a page's opening heading,
+    is a block at depth 0.
+    """
+    blocks: list[list] = []
+    for line in body.splitlines():
+        bullet = re.match(r"^(\t*)- ?(.*)$", line)
+        if bullet:
+            blocks.append([len(bullet[1]), bullet[2].strip()])
+        elif not line.strip() or re.match(r"^\s*[a-z][a-z0-9-]*:: ", line):
+            continue
+        elif blocks:
+            blocks[-1][1] += "\n" + line.strip()
+        else:
+            blocks.append([0, line.strip()])
+    return [(depth, text) for depth, text in blocks]
+
+
+def page_embed(text: str) -> str | None:
+    """The page an embed block shows, unless it is an asset page."""
+    embed = re.fullmatch(r"\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}", text)
+    return embed[1] if embed and "/Asset/" not in embed[1] else None
+
+
+def paragraph(text: str) -> bool:
+    return bool(text) and not re.match(r"#+ ", text) and not text.startswith(("![", "{{embed"))
+
+
+def episode_copy(body: str, path: Path, embedded=lambda name: "") -> tuple[str, str]:
     """Return the H1 title and the episode description.
 
     The description is the first paragraph directly under the H1. When the
     session opens with section headings instead, it is the first paragraph
-    directly under the earliest such heading. Media embeds are skipped, and
-    unpublished Notes sections are removed first so they never reach the feed.
+    directly under the earliest such heading. An embedded page, such as a
+    ceremony's poem, supplies its own first paragraph; media embeds are
+    skipped. Unpublished Notes sections are removed first so they never reach
+    the feed.
     """
-    lines = selected_body(body).splitlines()
-    for index, line in enumerate(lines):
-        match = re.match(r"^- # (.+)$", line)
-        if not match:
+    blocks = outline(selected_body(body))
+    for index, (depth, text) in enumerate(blocks):
+        match = re.match(r"^# (.+)$", text)
+        if depth != 0 or not match:
             continue
         under_heading = False
-        for child in lines[index + 1:]:
-            if not child.startswith("\t"):
+        for child_depth, child in blocks[index + 1:]:
+            if child_depth == 0:
                 break
-            if child.startswith("\t- "):
-                text = child[3:].strip()
-                under_heading = bool(re.match(r"#+ ", text))
-            elif under_heading and child.startswith("\t\t- "):
-                text = child[4:].strip()
-            else:
+            if child_depth == 1:
+                under_heading = bool(re.match(r"#+ ", child))
+            elif not (under_heading and child_depth == 2):
                 continue
-            if text and not re.match(r"#+ ", text) and not text.startswith(("![", "{{embed")):
-                return match[1], text
+            name = page_embed(child)
+            if name:
+                child = next((text for _, text in outline(embedded(name)) if paragraph(text)), "")
+            if paragraph(child):
+                return plain(match[1]), plain(child)
         break
     raise ValueError(f"{path}: expected an H1 followed by the episode description")
 
@@ -105,7 +149,9 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         published = datetime.fromisoformat(required(props, "podcast-published-at", path))
         if published.tzinfo is None or published.utcoffset() is None:
             raise ValueError(f"{path}: podcast-published-at needs a timezone offset")
-        title, description = episode_copy(body, path)
+        title, description = episode_copy(
+            body, path, lambda name: split_page(read_with_public_links(page_path(garden, name)))[1]
+        )
         # The episode recording is a direct child of its title. Chapter
         # players sit deeper in the outline and do not become RSS enclosures.
         recording_blocks = "\n".join(

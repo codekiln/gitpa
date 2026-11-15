@@ -1,0 +1,12 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Music/Note]], [[Logseq/Entity/Proxy/Page]]
+alias:: [[D♯-1]]
+midi-note:: 3
+prev:: [[Music/Note/-1/D]]
+next:: [[Music/Note/-1/E]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F-1%2FD%E2%99%AF
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Music___Note___-1___D%E2%99%AF.md
+logseq-proxy-last-sync-date:: [[2026-11-15]]
+
+- # D♯-1
+	- MIDI note 3, about 9.72 Hz at A440. Also spelled E♭-1. Ableton Live and Arturia name it D♯-2.

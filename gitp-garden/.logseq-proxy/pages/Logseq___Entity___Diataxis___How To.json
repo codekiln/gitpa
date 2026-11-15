@@ -1,0 +1,20 @@
+{
+  "body_sha256": "9f4b1f2ff65f812eefa0b52cdf0039fc7e27fad58f87585a04722645bbc4456f",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Diataxis/How To"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity/Diataxis/How To": {
+      "files": [],
+      "page": "Logseq/Entity/Diataxis/How To",
+      "source_graph": "."
+    }
+  },
+  "page": "Logseq/Entity/Diataxis/How To",
+  "version": 2
+}

@@ -1,12 +1,18 @@
 {
-  "body_sha256": "498983f1439f83710743c4e211d103c292b4b21a6a897220de18764d04e7fe26",
+  "body_sha256": "e1bd98cf29d3ac9519338ffed4fa3f1e2eb96acad61f71991626750e670cd855",
   "declarations": {},
   "identity": [
     "github.com/codekiln/logseq-encode-garden",
     ".",
     "Logseq/Entity"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Logseq/Entity": {
+      "files": [],
+      "page": "Logseq/Entity",
+      "source_graph": "."
+    }
+  },
   "page": "Logseq/Entity",
   "version": 2
 }

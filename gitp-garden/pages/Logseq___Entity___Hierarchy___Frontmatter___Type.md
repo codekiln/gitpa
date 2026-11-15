@@ -1,0 +1,15 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]], [[Logseq/Entity/Proxy/Page]]
+alias:: [[logseq-entity-hierarchy-type]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FHierarchy%2FFrontmatter%2FType
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Hierarchy___Frontmatter___Type.md
+logseq-proxy-last-sync-date:: [[2026-11-15]]
+
+- # `logseq-entity-hierarchy-type::` — how a child entity relates to its parent
+	- This property says whether a child entity is a kind of its parent or a part of it, and it goes on the child's definition page, the one whose name nests under the parent's. Every blog post is an article, so the [[Logseq/Entity/Article/Blog]] definition page, which nests under [[Logseq/Entity/Article]], would carry `logseq-entity-hierarchy-type:: [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]`.
+	- ## Permitted values
+		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]
+		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/part-of]]
+	- ## Notes
+		- Leave the property off a definition page whose parent has no definition page. [[Logseq/Entity/AI/Model]] carries none, because `Logseq/Entity/AI` is only a namespace.
+		- [[Logseq/Entity/Hierarchy/Discussion]] holds the dated discussion of how child and parent entities relate, including which markers one page may carry together.

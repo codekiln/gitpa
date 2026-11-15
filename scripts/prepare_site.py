@@ -54,11 +54,19 @@ def selected_body(body):
     return ''.join(result)
 
 def listener_body(name, body, pages):
-    """Resolve the selected recording, artwork, and download embeds."""
+    """Resolve the selected recording, artwork, and download embeds.
+
+    An embed of a public page that is not an asset, such as a ceremony's poem,
+    stays an embed for Logseq Gardener to render.
+    """
     def embed(match):
         asset_name = match[1]
         if '/Asset/' not in asset_name:
-            raise ValueError(f'Unsupported episode embed: {asset_name}')
+            if asset_name not in pages:
+                raise ValueError(f'Missing embedded page: {asset_name}')
+            if properties(pages[asset_name][0]).get('public') != 'true':
+                raise ValueError(f'Embedded page is not public: {asset_name}')
+            return match[0]
         _, asset_body = pages[asset_name]
         links = re.findall(r'!?\[([^\]]*)\]\((https://[^)]+)\)', asset_body)
         if len(links) != 1:

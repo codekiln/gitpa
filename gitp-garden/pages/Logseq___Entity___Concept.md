@@ -1,0 +1,37 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FConcept
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Concept.md
+logseq-proxy-last-sync-date:: [[2026-11-15]]
+
+- # Concept
+	- In this garden, **Concept** pages model understanding-oriented topics that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]): paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
+	- ## Examples in this garden
+		- [[Programming/Language/Func]]
+		- [[Programming/Language/Concept/Object-Oriented]]
+	- ## When we treat something as a concept entity
+		- Strong signals: the page’s purpose is **understanding**—what something is, why it matters, how it relates to neighboring ideas—not primarily a how-to, tutorial walkthrough, or lookup reference.
+		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
+	- ## Naming and links
+		- **Link shape:** `[[Topic/Concept/Idea]]` or `[[Topic/Explanation/Idea]]` when the topic has enough pages to want the segment, as on [[Programming/Language/Concept/Object-Oriented]] and [[herdr/Explanation/Where Input Box Text Comes From]].
+		- A concept that is the topic takes the topic's own name, as [[cybernetics]] does.
+	- ## Finding and deduplicating
+		- Search for an existing page before creating a new concept entity.
+		- Search order hints: exact title, alternate titles from frontmatter, normalized topic phrases, sibling pages in the same topic area.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all concept entities.
+		- Concept-specific tags may mirror the established Diataxis concept cluster when the page is new and that convention applies.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape (body)
+		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
+		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
+		- First heading after frontmatter: H1 matching the page’s primary topic.
+	- ## Combined with other types
+		- Concept stays first in `logseq-entity::`, and the other type follows it.
+		- [[Logseq/Entity/Trade-Off]] — a concept that weighs choices against each other: `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Trade-Off]]`. That page carries the page shape for the combination.
+		- [[Logseq/Entity/Term/Acronym]] — a concept whose page name is an acronym, as on [[TAM]].
+		- [[Logseq/Entity/Field of Study]] — a concept that is also a discipline, as on [[cybernetics]].
+	- ## Relationship to Diataxis
+		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
+		- [[Logseq/Entity/Diataxis/Explanation]] carries the quadrant's tag and writing guidance for concept pages.

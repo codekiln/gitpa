@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 alias:: [[Logseq Entities]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity
 logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity.md
-logseq-proxy-last-sync-date:: [[2026-10-08]]
+logseq-proxy-last-sync-date:: [[2026-11-15]]
 
 - # Logseq Entity
 	- This page is the general conceptual model for entities in this knowledge garden: what an entity is, how a page is marked as one, and how entity definition pages are named. The entity definitions are child pages of this page.
@@ -29,4 +29,4 @@ logseq-proxy-last-sync-date:: [[2026-10-08]]
 		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word names use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]].
 		- Exception: tools and executables that are conventionally lowercase (e.g. `tmux`, `git`) may stay lowercase *on their own topic pages*, but entity definition pages are modeling nouns and use Title Case, for example [[Logseq/Entity/Person]].
 		- Do **not** use kebab-case segments (e.g. `software-project`, `color-theme`) for entity definition page names.
-		- Plural or contextual reference forms belong in `alias::` on the entity definition page; instance naming follows [[Logseq/Frontmatter/alias]].
+		- Plural or contextual reference forms belong in `alias::` on the entity definition page when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]]; instance naming follows [[Logseq/Frontmatter/alias]].

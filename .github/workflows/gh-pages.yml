@@ -42,7 +42,7 @@ jobs:
       - name: Test publication preparation
         run: uv run --no-project python -m unittest discover -s tests
 
-      - name: Test episode player lifecycle
+      - name: Run the Node tests
         run: node --test tests/*.test.js
 
       # To upgrade, set GARDENER_VERSION to a newer release tag and GARDENER_SHA256
