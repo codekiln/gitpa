@@ -1,0 +1,20 @@
+{
+  "body_sha256": "61275e90626771418fc95bca77ef5db5f87fe7699e4f7cbf2257b03862a1f7fa",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Diataxis/Reference]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range": {
+      "files": [],
+      "page": "Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range",
+  "version": 2
+}

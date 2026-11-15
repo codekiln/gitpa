@@ -1,0 +1,20 @@
+{
+  "body_sha256": "9ed96ac11105960848a5b6a0e780c0e3cdd38a94e393166abded667e9fb09c75",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Concept]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Concept/Scientific Pitch Notation"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Music/Concept/Scientific Pitch Notation": {
+      "files": [],
+      "page": "Music/Concept/Scientific Pitch Notation",
+      "source_graph": "."
+    }
+  },
+  "page": "Music/Concept/Scientific Pitch Notation",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "3a276d088a10adf0d0680f20754d23d206c45e477624d8641743ba41c5208d54",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Frontmatter/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Music/Note/Frontmatter/midi-note"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Music/Note/Frontmatter/midi-note",
+  "version": 2
+}

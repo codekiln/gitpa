@@ -1,0 +1,12 @@
+public:: true
+logseq-entity:: [[Logseq/Entity/Music/Note]], [[Logseq/Entity/Proxy/Page]]
+alias:: [[A♯-1]]
+midi-note:: 10
+prev:: [[Music/Note/-1/A]]
+next:: [[Music/Note/-1/B]]
+logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Music%2FNote%2F-1%2FA%E2%99%AF
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-vibe-music-note/pages/Music___Note___-1___A%E2%99%AF.md
+logseq-proxy-last-sync-date:: [[2026-11-15]]
+
+- # A♯-1
+	- MIDI note 10, about 14.57 Hz at A440. Also spelled B♭-1. Ableton Live and Arturia name it A♯-2.

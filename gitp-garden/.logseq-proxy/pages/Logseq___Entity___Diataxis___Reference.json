@@ -1,0 +1,14 @@
+{
+  "body_sha256": "6ebabf8ce01f35ce7d29facf02f4d5f37dd4a0d2601ae7da2e997561923bc41d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Definition]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Logseq/Entity/Diataxis/Reference"
+  ],
+  "imports": {},
+  "page": "Logseq/Entity/Diataxis/Reference",
+  "version": 2
+}

@@ -1,0 +1,14 @@
+{
+  "body_sha256": "25899a487d962556ce7f02095970f799582d4c7f72f35829cef9267827682bfa",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Note]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Note/4/D"
+  ],
+  "imports": {},
+  "page": "Music/Note/4/D",
+  "version": 2
+}

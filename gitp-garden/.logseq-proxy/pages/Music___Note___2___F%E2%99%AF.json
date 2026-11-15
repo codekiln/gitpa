@@ -1,0 +1,13 @@
+{
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Music/Note]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Music/Note/2/F\u266f"
+  ],
+  "imports": {},
+  "page": "Music/Note/2/F\u266f",
+  "version": 2
+}
