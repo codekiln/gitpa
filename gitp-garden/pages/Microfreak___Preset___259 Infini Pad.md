@@ -13,8 +13,8 @@ preset-synth-microfreak-parameter-payload-sha256:: 9b2503974270c4796ded1ed0289d4
 preset-synth-file:: [Infini Pad — October 25 slot 259 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: fb4599873da27fceabd67a5108a96e95c33e0dcb0d07b3e52fe9164ee84cc1a7
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F259%20Infini%20Pad
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___259%20Infini%20Pad.md
-logseq-proxy-last-sync-date:: [[2026-11-07]]
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/Microfreak___Preset___259%20Infini%20Pad.md
+logseq-proxy-last-sync-date:: [[2026-11-14]]
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 259 over USB on October 25, 2026 with `mise run microfreak:download --slot 259`. Two consecutive reads returned the same file.
@@ -48,6 +48,7 @@ logseq-proxy-last-sync-date:: [[2026-11-07]]
 		- Held notes swell in slowly. The main envelope adds Fold (+0.968) and opens the cutoff (+0.328) as each note opens. Key pressure adds Saturate (+0.170), Fold (+0.486) and cutoff (+0.187) and lowers Noise through Assign 2 (−0.125); the synced sawtooth LFO adds Noise through Assign 1 (+0.203).
 		- The PRESSURE matrix row follows the instrument's global expression setting, which the export does not record.
 		- Turning [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) up raises Noise and makes the pad work as a noisy bass in the low register, as heard from 05:15 in [[GitP/A/Session/26/11/01-Sun]].
+		- In [[GitP/A/Session/26/11/14-Sat]], played live at a synth meetup, it was the only MicroFreak sound, played from a copy in slot 398 with its stored sequence cleared. It was played from the MicroFreak's keys and looped in Ableton Live: a held F, a chord on F with A♭ and E♭, G then F, and a low C under D and A. Key pressure shaped Fold, Saturate and cutoff through the saved matrix. The keys were not recorded as MIDI, so knob changes during the performance are unknown.
 		- In [[GitP/A/Session/26/11/06-Fri]] it was the only preset for the whole session: low C and G pedals swelled with key pressure, a high G5, and a C-major third at 22:39. Recorded knob changes covered Fold, Saturate, Noise, cutoff and resonance, filter amount, and the main and cycling envelopes. A read of slot 259 on November 7, 2026 again matched the October 25 export.
 		- In [[GitP/A/Session/26/11/01-Sun]] the Launchpad Pro played it from 00:00 to 18:17. Recorded knob changes covered the main and cycling envelopes, filter amount, Spice, LFO rate and the three oscillator controls, with brief cutoff and resonance changes. A read of slot 259 after the session matched the October 25 export, so the slot still holds the factory sound. The session MIDI holds those knob changes as controller messages.
 	- ## Evidence and interpretation

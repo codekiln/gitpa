@@ -1,0 +1,20 @@
+{
+  "body_sha256": "1faf271d6d8dd65f380334479fe569eb3e876b3e60ef5a6ee0f5344a0696410c",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/399 FireAlarmLoBat"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/399 FireAlarmLoBat": {
+      "files": [],
+      "page": "Microfreak/Preset/399 FireAlarmLoBat",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/399 FireAlarmLoBat",
+  "version": 2
+}
