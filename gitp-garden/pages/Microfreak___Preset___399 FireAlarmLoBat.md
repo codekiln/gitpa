@@ -13,7 +13,7 @@ preset-synth-microfreak-parameter-payload-sha256:: 56ad9ed9134424d81e00b1f841c07
 preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a9580872d57a51
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F399%20FireAlarmLoBat
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/Microfreak___Preset___399%20FireAlarmLoBat.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___399%20FireAlarmLoBat.md
 logseq-proxy-last-sync-date:: [[2026-11-14]]
 - # Notes
 	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for the [[Ghost in the Patch Ceremony]] *Foreveter* on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].

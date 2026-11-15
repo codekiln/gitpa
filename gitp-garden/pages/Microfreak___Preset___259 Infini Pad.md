@@ -13,7 +13,7 @@ preset-synth-microfreak-parameter-payload-sha256:: 9b2503974270c4796ded1ed0289d4
 preset-synth-file:: [Infini Pad — October 25 slot 259 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: fb4599873da27fceabd67a5108a96e95c33e0dcb0d07b3e52fe9164ee84cc1a7
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Microfreak%2FPreset%2F259%20Infini%20Pad
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/Microfreak___Preset___259%20Infini%20Pad.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___Preset___259%20Infini%20Pad.md
 logseq-proxy-last-sync-date:: [[2026-11-14]]
 - # Notes
 	- ## Saved export and provenance
