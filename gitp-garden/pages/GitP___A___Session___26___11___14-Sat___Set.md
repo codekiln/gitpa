@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Ableton/Set]], [[Logseq/Entity/Proxy/Page]]
 public:: true
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F14-Sat%2FSet
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/GitP___A___Session___26___11___14-Sat___Set.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___14-Sat___Set.md
 logseq-proxy-last-sync-date:: [[2026-11-14]]
 
 - # 26.11.14-Fallveter-04-perf-post
@@ -9,6 +9,8 @@ logseq-proxy-last-sync-date:: [[2026-11-14]]
   tempo:: 60
   time-signature:: 4/4
   source:: 26.11.14-Fallveter-04-perf-post.als
+	- ![Session View of the 26.11.14 Set](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Set___Asset___Image___Session-View.png)
+		- The Session View mixer of the copy saved after the performance, with the transport stopped at bar 71. MF AUDIO 1, POOL PIANO DRUMS, MF AUDIO 2 and Cueball Drums run left to right, followed by the folded END, rec archive and utility groups; the two return tracks and the Main track sit off the right edge.
 	- ## The performance and this copy
 		- Live saved the Set during the performance as `26.11.14-Fallveter-04-perf-pre.als`. It kept recording for about an hour; the performance is the first 4:40, between the locators "1" and "end". At 60 BPM a beat lasts one second, so beat numbers in the Arrangement read as seconds of the episode. [[Ableton/Live/UG/07 Session View/05 Recording Sessions into the Arrangement]]
 		- This page describes the copy saved afterwards, `26.11.14-Fallveter-04-perf-post.als`, which rendered the episode. In it, MF AUDIO 1 and MF AUDIO 2 are switched off and the rec archive tracks play to Master, so the MicroFreak comes from the archive recordings. The drums were raised by 4 dB, reverb sends were added to the archive tracks, and the Arrangement ends at 4:40.

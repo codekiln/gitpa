@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Ableton/Track/Track]], [[Logseq/Entity/Proxy/Page]]
 public:: true
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=GitP%2FA%2FSession%2F26%2F11%2F14-Sat%2FSet%2FTrack%2FMF%20AUDIO%202
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/GitP___A___Session___26___11___14-Sat___Set___Track___MF%20AUDIO%202.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Session___26___11___14-Sat___Set___Track___MF%20AUDIO%202.md
 logseq-proxy-last-sync-date:: [[2026-11-14]]
 
 - # MF AUDIO 2

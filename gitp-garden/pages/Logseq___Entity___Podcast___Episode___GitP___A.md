@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Definition]], [[Logseq/Entity/Proxy/Page]]
 entity-proxy-source-properties:: public
 entity-tasks:: [[Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators/sync]]
 logseq-proxy-url:: logseq://graph/logseq-encode-garden?page=Logseq%2FEntity%2FPodcast%2FEpisode%2FGitP%2FA
-logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/claude%2Fgitp-26-11-14-fallveter/pages/Logseq___Entity___Podcast___Episode___GitP___A.md
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Logseq___Entity___Podcast___Episode___GitP___A.md
 logseq-proxy-last-sync-date:: [[2026-11-14]]
 - # Ghost in the Patch Alpha Episode
 	- In this garden, **Ghost in the Patch Alpha Episode** pages model recordings prepared as episodes of [[GitP/A]].
