@@ -48,5 +48,5 @@ logseq-proxy-last-sync-date:: [[2026-10-29]]
 		- The October 25 capture establishes the saved factory baseline. Later knob movements, transport state and the global pressure-or-velocity choice remain unobserved by this export.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
-		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
+		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___CLI___Inspect%20a%20preset.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
 		- Matrix assignments follow the [Freakout live map](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_live_map.py). Mode, LFO shape, filter type and octave labels follow the [MicroFreak Reader definitions](https://github.com/francoisgeorgy/microfreak-reader/blob/master/src/model/index.js).
