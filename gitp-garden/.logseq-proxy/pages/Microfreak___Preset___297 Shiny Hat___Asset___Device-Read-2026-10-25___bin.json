@@ -1,0 +1,20 @@
+{
+  "body_sha256": "66b2567c40369e69ad831dea60efb848ba51a1cd57d73673005afaa47be48e1d",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/297 Shiny Hat/Asset/Device-Read-2026-10-25/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/297 Shiny Hat/Asset/Device-Read-2026-10-25/bin": {
+      "files": [],
+      "page": "Microfreak/Preset/297 Shiny Hat/Asset/Device-Read-2026-10-25/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/297 Shiny Hat/Asset/Device-Read-2026-10-25/bin",
+  "version": 2
+}

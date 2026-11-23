@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "e0b9cf9bd62fc608785428a3877f817c01bf3395dd7637fa5f9a66e4e312ab1a",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/295 Tactile Techno"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/295 Tactile Techno": {
+      "files": [],
+      "page": "Microfreak/Preset/295 Tactile Techno",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/295 Tactile Techno",
   "version": 2
 }
