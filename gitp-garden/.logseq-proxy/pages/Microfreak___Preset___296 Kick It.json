@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "e748b1a2dec9458d977637971221ce8551eb2cc4cd8ccb6ae31f5f11c0fd85cd",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/296 Kick It"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/296 Kick It": {
+      "files": [],
+      "page": "Microfreak/Preset/296 Kick It",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/296 Kick It",
   "version": 2
 }

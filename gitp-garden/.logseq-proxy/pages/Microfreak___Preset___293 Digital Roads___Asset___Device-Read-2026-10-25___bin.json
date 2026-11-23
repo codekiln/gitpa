@@ -1,0 +1,20 @@
+{
+  "body_sha256": "15fc4ba8f7447627d98e4ca29ca28fce72427f9dd55d24c7bea7080380a4f9c8",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/293 Digital Roads/Asset/Device-Read-2026-10-25/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/293 Digital Roads/Asset/Device-Read-2026-10-25/bin": {
+      "files": [],
+      "page": "Microfreak/Preset/293 Digital Roads/Asset/Device-Read-2026-10-25/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/293 Digital Roads/Asset/Device-Read-2026-10-25/bin",
+  "version": 2
+}

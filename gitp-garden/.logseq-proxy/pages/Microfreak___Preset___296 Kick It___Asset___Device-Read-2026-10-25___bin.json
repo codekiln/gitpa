@@ -1,0 +1,20 @@
+{
+  "body_sha256": "fd4e83eb99f212baddc6b94d03edccfa10a4f210b1752054efbb362f7cf30fa5",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/296 Kick It/Asset/Device-Read-2026-10-25/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/296 Kick It/Asset/Device-Read-2026-10-25/bin": {
+      "files": [],
+      "page": "Microfreak/Preset/296 Kick It/Asset/Device-Read-2026-10-25/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/296 Kick It/Asset/Device-Read-2026-10-25/bin",
+  "version": 2
+}

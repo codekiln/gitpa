@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "66a0748442f70499948845995af71af0b955d35c0df848e4e8b7171969ba9523",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/297 Shiny Hat"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/297 Shiny Hat": {
+      "files": [],
+      "page": "Microfreak/Preset/297 Shiny Hat",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/297 Shiny Hat",
   "version": 2
 }

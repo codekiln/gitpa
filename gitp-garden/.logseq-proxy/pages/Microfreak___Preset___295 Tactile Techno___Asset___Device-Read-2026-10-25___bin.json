@@ -1,0 +1,20 @@
+{
+  "body_sha256": "c0bfce3246f0aa8221745775074829d13c7c772547730218f20ef02bc7836847",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/295 Tactile Techno/Asset/Device-Read-2026-10-25/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/295 Tactile Techno/Asset/Device-Read-2026-10-25/bin": {
+      "files": [],
+      "page": "Microfreak/Preset/295 Tactile Techno/Asset/Device-Read-2026-10-25/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/295 Tactile Techno/Asset/Device-Read-2026-10-25/bin",
+  "version": 2
+}
