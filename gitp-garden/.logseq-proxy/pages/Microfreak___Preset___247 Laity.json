@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "1377b7410c124d057c92348b2f4e5a2c5a6c5fc4b1bf74eec5eee0059dfe8e39",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/247 Laity"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/247 Laity": {
+      "files": [],
+      "page": "Microfreak/Preset/247 Laity",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/247 Laity",
   "version": 2
 }
