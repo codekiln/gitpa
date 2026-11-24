@@ -1,0 +1,20 @@
+{
+  "body_sha256": "ad54755ce277406749dfb58813bfd325513f92e40a831a5f6d46e8dee968af76",
+  "declarations": {
+    "logseq-entity": "[[Logseq/Entity/Asset/B2]]"
+  },
+  "identity": [
+    "github.com/codekiln/logseq-encode-garden",
+    ".",
+    "Microfreak/Preset/247 Laity/Asset/Device-Read-2026-10-25/bin"
+  ],
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/247 Laity/Asset/Device-Read-2026-10-25/bin": {
+      "files": [],
+      "page": "Microfreak/Preset/247 Laity/Asset/Device-Read-2026-10-25/bin",
+      "source_graph": "."
+    }
+  },
+  "page": "Microfreak/Preset/247 Laity/Asset/Device-Read-2026-10-25/bin",
+  "version": 2
+}

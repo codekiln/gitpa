@@ -1,5 +1,5 @@
 {
-  "body_sha256": "8e3dfebe16b35c063c64c66ef3abc859c4ee3580d48c132098b53b02dbea16f1",
+  "body_sha256": "1395fa3c8cddbbb28353fcdf255d403037d0d25e3891f1565b965f1e034d140e",
   "declarations": {
     "logseq-entity": "[[Logseq/Entity/Preset/Synth/Microfreak]]"
   },
@@ -8,7 +8,13 @@
     ".",
     "Microfreak/Preset/248 GrowLing"
   ],
-  "imports": {},
+  "imports": {
+    "github.com/codekiln/logseq-encode-garden::.::Microfreak/Preset/248 GrowLing": {
+      "files": [],
+      "page": "Microfreak/Preset/248 GrowLing",
+      "source_graph": "."
+    }
+  },
   "page": "Microfreak/Preset/248 GrowLing",
   "version": 2
 }
