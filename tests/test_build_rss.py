@@ -53,7 +53,7 @@ class FeedTests(unittest.TestCase):
         self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'
                              '\t- ## Ceremonial Annotations\n\t\t- Music from a patch.\n\t\t- A second paragraph.\n'
                              '\t- ## Chapters\n\t\t- ### 00:00 Opening\n\t\t\t- Chapter notes.\n')
-        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+        self.assertEqual(self.load()[0]['description'], 'Music from a patch.\n\nA second paragraph.')
     def test_title_markup_becomes_plain_text(self):
         self.page.write_text(self.props + self.body.replace('- # A session', '- # [[GitP/Ceremon/y/Fallveter]] - *Empty* [Hall]([[Place/Hall]])'))
         self.assertEqual(self.load()[0]['episode_title'], 'Fallveter - Empty Hall')
@@ -63,11 +63,28 @@ class FeedTests(unittest.TestCase):
         self.page.write_text(self.props + '- # [[GitP/Ceremon/y/Fallveter]] - Empty Hall\n'
                              '\t- {{embed [[GitP/Ceremon/y/Fallveter]]}}\n'
                              '\t- {{embed [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]]}}\n'
-                             '\t- ## Ceremonial Annotations\n\t\t- Section text.\n')
+                             '\t- ## Chapters\n\t\t- ### 00:00 Opening\n')
         self.assertEqual(self.load()[0]['description'], 'ceremony whence\nparticipants enlistened to\nbe empresented.')
-    def test_opening_paragraph_wins_over_section_paragraph(self):
+    def test_ceremonial_annotations_win_over_opening_paragraph(self):
         self.page.write_text(self.props + self.body + '\t- ## Ceremonial Annotations\n\t\t- Section text.\n')
-        self.assertEqual(self.load()[0]['description'], 'Music from a patch.')
+        self.assertEqual(self.load()[0]['description'], 'Section text.')
+    def test_whole_annotations_section_becomes_feed_notes(self):
+        self.asset.unlink()
+        (self.garden / 'pages/Microfreak___Preset___1 Pad.md').write_text('public:: true\n- # Pad\n')
+        (self.garden / 'pages/GitP___Acolyte.md').write_text('- # Acolyte\n')
+        self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'
+                             '\t- ## Ceremonial Annotations\n\t\t- [[My Notes]]\n\t\t\t- a poem line\n\t\t\t  and the next & last\n'
+                             '\t\t- Notes from [[GitP/Acolyte]]\n\t\t\t- ### the pad\n\t\t\t\t- [[Microfreak/Preset/1 Pad]] plays, per [the manual](https://example.org/m).\n'
+                             '\t- ## Chapters\n\t\t- ### 00:00 Opening\n\t\t\t- Chapter notes.\n')
+        episode = self.load()[0]
+        self.assertEqual(episode['description'], 'My Notes\n\na poem line\nand the next & last\n\nNotes from Acolyte\n\nthe pad\n\n1 Pad plays, per the manual.')
+        self.assertEqual(episode['description_html'],
+                         '<p>My Notes</p><p>a poem line<br>and the next &amp; last</p><p>Notes from Acolyte</p><p>the pad</p>'
+                         '<p><a href="https://codekiln.github.io/gitpa/Microfreak/Preset/1%20Pad/">1 Pad</a> plays, per '
+                         '<a href="https://example.org/m">the manual</a>.</p>')
+        feed = render_feed([episode])
+        self.assertIn(b'<description>&lt;p&gt;My Notes&lt;/p&gt;', feed)
+        self.assertIn(b'<itunes:summary>My Notes\n\na poem line', feed)
     def test_unpublished_notes_never_become_description(self):
         self.asset.unlink()
         self.page.write_text(self.props + '- # A session\n\t- ![Episode recording](https://example.org/audio.mp3)\n'

@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 import re
+from html import escape
 
 from logseq_page import split_page, properties, page_path
 from site_routes import page_route
@@ -59,10 +60,13 @@ def audio_metadata(url: str) -> tuple[int, str]:
 def plain(text: str) -> str:
     """Logseq inline markup as listener text.
 
-    A labelled link keeps its label, a page link keeps the last part of the
-    page name, and emphasis markers are dropped.
+    A labelled link or web link keeps its label, code keeps its text, a
+    page link keeps the last part of the page name, and emphasis markers
+    are dropped.
     """
     text = re.sub(r"\[([^\]]*)\]\(\[\[[^\]]+\]\]\)", r"\1", text)
+    text = re.sub(r"\[([^\]]*)\]\((https?://[^)\s]+)\)", r"\1", text)
+    text = re.sub(r"`([^`]*)`", r"\1", text)
     text = re.sub(r"\[\[([^\]]+)\]\]", lambda link: link[1].rsplit("/", 1)[-1], text)
     return re.sub(r"(\*\*|\*)(\S(?:.*?\S)?)\1", r"\2", text)
 
@@ -98,21 +102,90 @@ def paragraph(text: str) -> bool:
     return bool(text) and not re.match(r"#+ ", text) and not text.startswith(("![", "{{embed"))
 
 
-def episode_copy(body: str, path: Path, embedded=lambda name: "") -> tuple[str, str]:
-    """Return the H1 title and the episode description.
+def link_name(name: str) -> str:
+    return name.rsplit("/", 1)[-1]
 
-    The description is the first paragraph directly under the H1. When the
-    session opens with section headings instead, it is the first paragraph
-    directly under the earliest such heading. An embedded page, such as a
-    ceremony's poem, supplies its own first paragraph; media embeds are
-    skipped. Unpublished Notes sections are removed first so they never reach
-    the feed.
+
+def inline_html(text: str, public_url) -> str:
+    """Logseq inline markup as feed HTML.
+
+    A page link becomes a link to its page on the website when that page is
+    public there, and plain text otherwise. Web links keep their targets;
+    emphasis and code markers are dropped.
+    """
+    token = re.compile(
+        r"\[([^\]]*)\]\(\[\[([^\]]+)\]\]\)"   # [label]([[Page]])
+        r"|\[([^\]]*)\]\((https?://[^)\s]+)\)"    # [label](https://...)
+        r"|\[\[([^\]]+)\]\]"                      # [[Page]]
+        r"|`([^`]*)`"                                   # `code`
+        r"|(\*\*|\*)(\S(?:.*?\S)?)\7"            # *emphasis*
+    )
+    out, last = [], 0
+
+    def page(label: str, name: str) -> str:
+        url = public_url(name)
+        return f'<a href="{escape(url)}">{escape(label)}</a>' if url else escape(label)
+
+    for match in token.finditer(text):
+        out.append(escape(text[last:match.start()]))
+        if match[2]:
+            out.append(page(match[1], match[2]))
+        elif match[4]:
+            out.append(f'<a href="{escape(match[4])}">{escape(match[3])}</a>')
+        elif match[5]:
+            out.append(page(link_name(match[5]), match[5]))
+        elif match[6] is not None:
+            out.append(escape(match[6]))
+        else:
+            out.append(escape(match[8]))
+        last = match.end()
+    out.append(escape(text[last:]))
+    return "<br>".join(line.strip() for line in "".join(out).split("\n"))
+
+
+def section_blocks(blocks: list[tuple[int, str]], start: int, embedded) -> list[str]:
+    """The text blocks beneath the block at start, with embeds expanded."""
+    texts = []
+    for depth, text in blocks[start + 1:]:
+        if depth <= blocks[start][0]:
+            break
+        name = page_embed(text)
+        if name:
+            texts.extend(t for _, t in outline(embedded(name)) if paragraph(t))
+            continue
+        text = re.sub(r"^#+ ", "", text)
+        if text and not text.startswith(("![", "{{")):
+            texts.append(text)
+    return texts
+
+
+def episode_copy(body: str, path: Path, embedded=lambda name: "", public_url=lambda name: None) -> tuple[str, str, str]:
+    """Return the H1 title and the episode notes as plain text and HTML.
+
+    The notes are the whole Ceremonial Annotations section under the H1.
+    Without that section, they are the first paragraph directly under the
+    H1, or else the first paragraph directly under the earliest section
+    heading. An embedded page, such as a ceremony's poem, supplies its own
+    paragraphs; media embeds are skipped. Unpublished Notes sections are
+    removed first so they never reach the feed.
     """
     blocks = outline(selected_body(body))
+
+    def copy(title: str, texts: list[str]) -> tuple[str, str, str]:
+        return (plain(title), "\n\n".join(plain(t) for t in texts),
+                "".join(f"<p>{inline_html(t, public_url)}</p>" for t in texts))
+
     for index, (depth, text) in enumerate(blocks):
         match = re.match(r"^# (.+)$", text)
         if depth != 0 or not match:
             continue
+        for offset, (child_depth, child) in enumerate(blocks[index + 1:], index + 1):
+            if child_depth == 0:
+                break
+            if child_depth == 1 and re.fullmatch(r"## Ceremonial Annotations", child):
+                texts = section_blocks(blocks, offset, embedded)
+                if texts:
+                    return copy(match[1], texts)
         under_heading = False
         for child_depth, child in blocks[index + 1:]:
             if child_depth == 0:
@@ -125,7 +198,7 @@ def episode_copy(body: str, path: Path, embedded=lambda name: "") -> tuple[str, 
             if name:
                 child = next((text for _, text in outline(embedded(name)) if paragraph(text)), "")
             if paragraph(child):
-                return plain(match[1]), plain(child)
+                return copy(match[1], [child])
         break
     raise ValueError(f"{path}: expected an H1 followed by the episode description")
 
@@ -138,6 +211,18 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
     def read_with_public_links(path: Path) -> str:
         return asset_mounts.public_links(path.read_text(encoding="utf-8"), mounts, path.stem.replace("___", "/"))
 
+    def public_url(name: str) -> str | None:
+        try:
+            target = page_path(garden, name)
+        except ValueError:
+            return None
+        if not target.is_file():
+            return None
+        props = properties(split_page(target.read_text(encoding="utf-8"))[0])
+        if props.get("public") != "true":
+            return None
+        return SITE_URL + page_route(props.get("title", name))
+
     for path in sorted((garden / "pages").glob("*.md")):
         lines, body = split_page(read_with_public_links(path))
         props = properties(lines)
@@ -149,8 +234,9 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         published = datetime.fromisoformat(required(props, "podcast-published-at", path))
         if published.tzinfo is None or published.utcoffset() is None:
             raise ValueError(f"{path}: podcast-published-at needs a timezone offset")
-        title, description = episode_copy(
-            body, path, lambda name: split_page(read_with_public_links(page_path(garden, name)))[1]
+        title, description, description_html = episode_copy(
+            body, path, lambda name: split_page(read_with_public_links(page_path(garden, name)))[1],
+            public_url,
         )
         # The episode recording is a direct child of its title. Chapter
         # players sit deeper in the outline and do not become RSS enclosures.
@@ -176,6 +262,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
         page_name = path.stem.replace("___", "/")
         episodes.append({
             "episode_title": title, "description": description,
+            "description_html": description_html,
             "guid": guid, "_published_at": published,
             "page_url": SITE_URL + page_route(props.get('title', page_name)),
             "audio_url": url, "audio_length": length, "audio_type": content_type,
@@ -213,7 +300,7 @@ def render_feed(episodes: list[dict]) -> bytes:
         item = ET.SubElement(channel, "item")
         add(item, "title", episode["episode_title"])
         add(item, "link", episode["page_url"])
-        add(item, "description", episode["description"])
+        add(item, "description", episode.get("description_html") or episode["description"])
         add(item, f"{{{ITUNES}}}author", "Codekiln")
         add(item, f"{{{ITUNES}}}summary", episode["description"])
         add(item, "pubDate", format_datetime(episode["_published_at"]))

@@ -10,7 +10,6 @@ logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/bl
 logseq-proxy-last-sync-date:: [[2026-11-25]]
 
 - # Undertow
-	- A held tone on the first track, then a sub bass that sits under everything that follows. Three sequencer tracks trade loops at 58 BPM while the knobs reshape each new voice, and a growling bass takes the floor for the second half.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___23-Mon___Asset___Audio___Episode___v2.mp3)
 	- ## Ceremonial Annotations
 		- [[My Notes]]
