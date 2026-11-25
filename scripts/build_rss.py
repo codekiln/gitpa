@@ -140,7 +140,7 @@ def inline_html(text: str, public_url) -> str:
             out.append(escape(match[8]))
         last = match.end()
     out.append(escape(text[last:]))
-    return "<br>".join(line.strip() for line in "".join(out).split("\n"))
+    return "\n".join(line.strip() for line in "".join(out).split("\n"))
 
 
 def section_blocks(blocks: list[tuple[int, str]], start: int, embedded) -> list[str]:
@@ -173,7 +173,8 @@ def episode_copy(body: str, path: Path, embedded=lambda name: "", public_url=lam
 
     def copy(title: str, texts: list[str]) -> tuple[str, str, str]:
         return (plain(title), "\n\n".join(plain(t) for t in texts),
-                "".join(f"<p>{inline_html(t, public_url)}</p>" for t in texts))
+                "".join(f"<p>{line}</p>" for t in texts
+                        for line in inline_html(t, public_url).split("\n") if line))
 
     for index, (depth, text) in enumerate(blocks):
         match = re.match(r"^# (.+)$", text)
@@ -201,6 +202,34 @@ def episode_copy(body: str, path: Path, embedded=lambda name: "", public_url=lam
                 return copy(match[1], [child])
         break
     raise ValueError(f"{path}: expected an H1 followed by the episode description")
+
+
+NOTES_LIMIT = 4000
+NOTES_TAGS = {"p", "a", "ul", "ol", "li"}
+
+
+def check_notes(html: str, text: str, path: Path) -> None:
+    """Keep show notes inside what every podcast app documents accepting.
+
+    Apple Podcasts allows p, ol, ul, li and a in an episode description and
+    Spotify allows those too, with https links only; the Podcast Standards
+    Project limits the description to 4000 characters. The plain-text summary
+    carries no markup.
+    """
+    for tag in re.finditer(r"<(/?)([A-Za-z][A-Za-z0-9]*)([^>]*)>", html):
+        name, attributes = tag[2].lower(), tag[3]
+        if name not in NOTES_TAGS:
+            raise ValueError(f"{path}: show notes use <{name}>, outside {sorted(NOTES_TAGS)}")
+        if tag[1] or name != "a":
+            if attributes.strip():
+                raise ValueError(f"{path}: show notes give <{tag[1]}{name}> attributes")
+        elif not re.fullmatch(r' href="https://[^"\s]+"', attributes):
+            raise ValueError(f"{path}: show-notes link is not a single https href: {tag[0]}")
+    if re.search(r"<[A-Za-z/!]", text):
+        raise ValueError(f"{path}: plain-text summary contains markup")
+    for label, value in (("show notes", html), ("summary", text)):
+        if len(value) > NOTES_LIMIT:
+            raise ValueError(f"{path}: {label} run to {len(value)} characters, over {NOTES_LIMIT}")
 
 
 def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
@@ -238,6 +267,7 @@ def load_episodes(garden: Path = GARDEN, probe=audio_metadata) -> list[dict]:
             body, path, lambda name: split_page(read_with_public_links(page_path(garden, name)))[1],
             public_url,
         )
+        check_notes(description_html, description, path)
         # The episode recording is a direct child of its title. Chapter
         # players sit deeper in the outline and do not become RSS enclosures.
         recording_blocks = "\n".join(

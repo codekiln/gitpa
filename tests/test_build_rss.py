@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from build_rss import load_episodes, render_feed, audio_metadata
+from build_rss import load_episodes, render_feed, audio_metadata, check_notes
+import xml.etree.ElementTree as ET
 
 class FeedTests(unittest.TestCase):
     def setUp(self):
@@ -79,7 +80,7 @@ class FeedTests(unittest.TestCase):
         episode = self.load()[0]
         self.assertEqual(episode['description'], 'My Notes\n\na poem line\nand the next & last\n\nNotes from Acolyte\n\nthe pad\n\n1 Pad plays, per the manual.')
         self.assertEqual(episode['description_html'],
-                         '<p>My Notes</p><p>a poem line<br>and the next &amp; last</p><p>Notes from Acolyte</p><p>the pad</p>'
+                         '<p>My Notes</p><p>a poem line</p><p>and the next &amp; last</p><p>Notes from Acolyte</p><p>the pad</p>'
                          '<p><a href="https://codekiln.github.io/gitpa/Microfreak/Preset/1%20Pad/">1 Pad</a> plays, per '
                          '<a href="https://example.org/m">the manual</a>.</p>')
         feed = render_feed([episode])
@@ -160,3 +161,30 @@ class FeedTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class ShowNotesTests(unittest.TestCase):
+    path = Path('episode.md')
+    def test_safe_notes_pass(self):
+        check_notes('<p>a <a href="https://example.org/x">link</a></p><ul><li>one</li></ul>', 'a link', self.path)
+    def test_tag_outside_safe_set_fails(self):
+        with self.assertRaisesRegex(ValueError, '<br>'):
+            check_notes('<p>a<br>b</p>', 'a b', self.path)
+    def test_plain_http_link_fails(self):
+        with self.assertRaisesRegex(ValueError, 'https'):
+            check_notes('<p><a href="http://example.org">x</a></p>', 'x', self.path)
+    def test_attributes_on_paragraph_fail(self):
+        with self.assertRaisesRegex(ValueError, 'attributes'):
+            check_notes('<p class="x">a</p>', 'a', self.path)
+    def test_markup_in_summary_fails(self):
+        with self.assertRaisesRegex(ValueError, 'summary'):
+            check_notes('<p>a</p>', '<p>a</p>', self.path)
+    def test_long_notes_fail(self):
+        with self.assertRaisesRegex(ValueError, '4000'):
+            check_notes('<p>' + 'a' * 4000 + '</p>', 'a', self.path)
+    def test_published_feed_notes_are_safe(self):
+        feed = ET.parse(Path(__file__).resolve().parents[1] / 'rss.xml').getroot()
+        summary = '{http://www.itunes.com/dtds/podcast-1.0.dtd}summary'
+        for item in feed.iter('item'):
+            with self.subTest(item.findtext('title')):
+                check_notes(item.findtext('description'), item.findtext(summary), Path(item.findtext('title')))
